@@ -1,9 +1,9 @@
-# Cloudpdf Python Library
+# CloudPDF Python SDK
 
 [![fern shield](https://img.shields.io/badge/%F0%9F%8C%BF-Built%20with%20Fern-brightgreen)](https://buildwithfern.com?utm_source=github&utm_medium=github&utm_campaign=readme&utm_source=Cloudpdf%2FPython)
 [![pypi](https://img.shields.io/pypi/v/cloudpdf)](https://pypi.python.org/pypi/cloudpdf)
 
-The Cloudpdf Python library provides convenient access to the Cloudpdf APIs from Python.
+The official Python SDK for the CloudPDF API.
 
 ## Table of Contents
 
@@ -34,9 +34,9 @@ A full reference for this library is available [here](./reference.md).
 Instantiate and use the client with the following:
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -53,9 +53,9 @@ The SDK also exports an `async` client so that you can make non-blocking calls t
 ```python
 import asyncio
 
-from cloudpdf import AsyncCloudpdfApi
+from cloudpdf import AsyncCloudPDFClient
 
-client = AsyncCloudpdfApi(
+client = AsyncCloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -93,9 +93,9 @@ The SDK provides access to raw response data, including headers, through the `.w
 The `.with_raw_response` property returns a "raw" client that can be used to access the `.headers` and `.data` attributes.
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(...)
+client = CloudPDFClient(...)
 response = client.tenants.with_raw_response.create(...)
 print(response.headers)  # access the response headers
 print(response.status_code)  # access the response status code
@@ -137,9 +137,9 @@ client.tenants.create(..., request_options={
 The SDK defaults to a 60 second timeout. You can configure this with a timeout option at the client or request level.
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(..., timeout=20.0)
+client = CloudPDFClient(..., timeout=20.0)
 
 # Override timeout for a specific method
 client.tenants.create(..., request_options={
@@ -154,9 +154,9 @@ and transports.
 
 ```python
 import httpx
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     ...,
     httpx_client=httpx.Client(
         proxy="http://my.test.proxy.example.com",

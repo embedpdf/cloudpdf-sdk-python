@@ -39,9 +39,9 @@ class DeploymentClient:
 
         Examples
         --------
-        from cloudpdf import CloudpdfApi
+        from cloudpdf import CloudPDFClient
 
-        client = CloudpdfApi(
+        client = CloudPDFClient(
             token="YOUR_TOKEN",
             base_url="https://yourhost.com/path/to/api",
         )
@@ -84,9 +84,9 @@ class AsyncDeploymentClient:
         --------
         import asyncio
 
-        from cloudpdf import AsyncCloudpdfApi
+        from cloudpdf import AsyncCloudPDFClient
 
-        client = AsyncCloudpdfApi(
+        client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
             base_url="https://yourhost.com/path/to/api",
         )

@@ -16,7 +16,7 @@ if typing.TYPE_CHECKING:
     from .tokens.client import AsyncTokensClient, TokensClient
 
 
-class CloudpdfApi:
+class CloudPDFClient:
     """
     Use this class to access the different functions within the SDK. You can instantiate any number of clients with different configuration that will propagate to these functions.
 
@@ -52,9 +52,9 @@ class CloudpdfApi:
 
     Examples
     --------
-    from cloudpdf import CloudpdfApi
+    from cloudpdf import CloudPDFClient
 
-    client = CloudpdfApi(
+    client = CloudPDFClient(
         token="YOUR_TOKEN",
         base_url="https://yourhost.com/path/to/api",
     )
@@ -156,7 +156,7 @@ def _make_default_async_client(
     return httpx.AsyncClient(timeout=timeout)
 
 
-class AsyncCloudpdfApi:
+class AsyncCloudPDFClient:
     """
     Use this class to access the different functions within the SDK. You can instantiate any number of clients with different configuration that will propagate to these functions.
 
@@ -195,9 +195,9 @@ class AsyncCloudpdfApi:
 
     Examples
     --------
-    from cloudpdf import AsyncCloudpdfApi
+    from cloudpdf import AsyncCloudPDFClient
 
-    client = AsyncCloudpdfApi(
+    client = AsyncCloudPDFClient(
         token="YOUR_TOKEN",
         base_url="https://yourhost.com/path/to/api",
     )
