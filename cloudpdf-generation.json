@@ -6,7 +6,7 @@
     "repository": "embedpdf/embed-pdf-viewer",
     "openapi": "cloudpdf/contract/openapi.json",
     "openapiSha256": "6858ce7912e9063d8fb171ade95fc473db01c5971a3af241a612dda79cc05100",
-    "gitCommit": "232d5e0240d5673a73c9ea7c7ae9e7b937fdd5b3",
+    "gitCommit": "a0adb9e77ef16feaef2358d71b247b4f5a98fd23",
     "gitCommitIsDirty": false
   },
   "fern": {

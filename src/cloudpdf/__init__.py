@@ -2169,15 +2169,15 @@ if typing.TYPE_CHECKING:
     from .errors import BadRequestError, ForbiddenError, NotFoundError
     from . import deployment, doc, documents, tenants, tokens
     from ._default_clients import DefaultAioHttpClient, DefaultAsyncHttpxClient
-    from .client import AsyncCloudpdfApi, CloudpdfApi
+    from .client import AsyncCloudPDFClient, CloudPDFClient
     from .documents import DocumentsInitRequestDedupMode, ListDocumentsRequestState
     from .version import __version__
 _dynamic_imports: typing.Dict[str, str] = {
     "AdminErrorPayload": ".types",
     "AdminErrorPayloadError": ".types",
-    "AsyncCloudpdfApi": ".client",
+    "AsyncCloudPDFClient": ".client",
     "BadRequestError": ".errors",
-    "CloudpdfApi": ".client",
+    "CloudPDFClient": ".client",
     "DefaultAioHttpClient": "._default_clients",
     "DefaultAsyncHttpxClient": "._default_clients",
     "DeploymentLicenseStatusResponse": ".types",
@@ -4373,9 +4373,9 @@ def __dir__():
 __all__ = [
     "AdminErrorPayload",
     "AdminErrorPayloadError",
-    "AsyncCloudpdfApi",
+    "AsyncCloudPDFClient",
     "BadRequestError",
-    "CloudpdfApi",
+    "CloudPDFClient",
     "DefaultAioHttpClient",
     "DefaultAsyncHttpxClient",
     "DeploymentLicenseStatusResponse",

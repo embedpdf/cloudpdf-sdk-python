@@ -13,9 +13,9 @@
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -62,9 +62,9 @@ client.deployment.license_status()
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -128,9 +128,9 @@ client.doc.head(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -203,9 +203,9 @@ client.doc.download(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -292,9 +292,9 @@ Render parameters (viewport, format) pass as flat dotted query keys, e.g. `?view
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -376,9 +376,9 @@ client.doc.render(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -461,9 +461,9 @@ client.doc.text(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -525,9 +525,9 @@ client.tenants.list()
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -591,9 +591,9 @@ client.tenants.create(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -663,9 +663,9 @@ Destroys the tenant and everything in its namespace — documents, layers, store
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -722,9 +722,9 @@ client.tenants.delete(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -804,9 +804,9 @@ client.documents.list(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -871,9 +871,9 @@ client.documents.get(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -938,9 +938,9 @@ client.documents.delete(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -1014,9 +1014,9 @@ client.documents.commit(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -1081,9 +1081,9 @@ client.documents.download(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -1212,9 +1212,9 @@ client.documents.upload_direct(...)
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -1343,9 +1343,9 @@ kind "tenant" requires the API token — authority mints only downward. Mounted 
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi, TokensIssueRequest_Doc
+from cloudpdf import CloudPDFClient, TokensIssueRequest_Doc
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -1431,9 +1431,9 @@ Mounted only when the deployment enables token revocation.
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -1515,9 +1515,9 @@ client.tokens.revoke(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -1613,9 +1613,9 @@ Doc JWTs may instead carry collab scopes (annotations:create:self, …) that ref
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -1708,9 +1708,9 @@ client.doc.annotations.create(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -1801,9 +1801,9 @@ client.doc.annotations.delete(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -1906,9 +1906,9 @@ client.doc.annotations.update(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -1981,9 +1981,9 @@ client.doc.forms.get(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -2064,9 +2064,9 @@ client.doc.forms.export_data(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -2150,9 +2150,9 @@ client.doc.forms.import_data(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -2234,9 +2234,9 @@ client.doc.forms.reset(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -2330,9 +2330,9 @@ client.doc.forms.set_value(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -2406,9 +2406,9 @@ client.doc.metadata.get(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -2492,9 +2492,9 @@ client.doc.pages.delete(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -2578,9 +2578,9 @@ client.doc.pages.flatten(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -2664,9 +2664,9 @@ client.doc.pages.move(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
@@ -2751,9 +2751,9 @@ client.doc.pages.rotate(
 <dd>
 
 ```python
-from cloudpdf import CloudpdfApi
+from cloudpdf import CloudPDFClient
 
-client = CloudpdfApi(
+client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
