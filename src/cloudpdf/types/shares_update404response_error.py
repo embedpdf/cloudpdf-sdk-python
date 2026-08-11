@@ -6,8 +6,9 @@ import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 
 
-class DocumentsUploadDirect200Response(UniversalBaseModel):
-    sha256: str
+class SharesUpdate404ResponseError(UniversalBaseModel):
+    code: str
+    message: str
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

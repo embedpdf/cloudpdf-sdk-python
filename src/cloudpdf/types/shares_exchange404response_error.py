@@ -6,9 +6,9 @@ import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 
 
-class DocumentsInit200ResponseCreatedUploadDirect(UniversalBaseModel):
-    url: str
-    key: str
+class SharesExchange404ResponseError(UniversalBaseModel):
+    code: str
+    message: str
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
