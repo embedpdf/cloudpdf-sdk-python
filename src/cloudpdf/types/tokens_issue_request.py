@@ -29,6 +29,7 @@ class TokensIssueRequest_Doc(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
     groups: typing.Optional[typing.List[str]] = None
+    origins: typing.Optional[typing.List[str]] = None
     expires_in: typing_extensions.Annotated[int, FieldMetadata(alias="expiresIn"), pydantic.Field(alias="expiresIn")]
 
     if IS_PYDANTIC_V2:

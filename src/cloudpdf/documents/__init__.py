@@ -6,9 +6,10 @@ import typing
 from importlib import import_module
 
 if typing.TYPE_CHECKING:
-    from .types import DocumentsInitRequestDedupMode, ListDocumentsRequestState
+    from .types import DocumentsInitRequestDedupMode, DocumentsInitRequestUploadPreference, ListDocumentsRequestState
 _dynamic_imports: typing.Dict[str, str] = {
     "DocumentsInitRequestDedupMode": ".types",
+    "DocumentsInitRequestUploadPreference": ".types",
     "ListDocumentsRequestState": ".types",
 }
 
@@ -34,4 +35,4 @@ def __dir__():
     return sorted(lazy_attrs)
 
 
-__all__ = ["DocumentsInitRequestDedupMode", "ListDocumentsRequestState"]
+__all__ = ["DocumentsInitRequestDedupMode", "DocumentsInitRequestUploadPreference", "ListDocumentsRequestState"]

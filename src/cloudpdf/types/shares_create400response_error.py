@@ -4,11 +4,11 @@ import typing
 
 import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
-from .documents_upload_direct400response_error import DocumentsUploadDirect400ResponseError
 
 
-class DocumentsUploadDirect400Response(UniversalBaseModel):
-    error: DocumentsUploadDirect400ResponseError
+class SharesCreate400ResponseError(UniversalBaseModel):
+    code: str
+    message: str
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

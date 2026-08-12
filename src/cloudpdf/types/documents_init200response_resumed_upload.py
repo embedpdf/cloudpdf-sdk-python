@@ -27,8 +27,8 @@ class DocumentsInit200ResponseResumedUpload_Presigned(UniversalBaseModel):
             extra = pydantic.Extra.allow
 
 
-class DocumentsInit200ResponseResumedUpload_Direct(UniversalBaseModel):
-    kind: typing.Literal["direct"] = "direct"
+class DocumentsInit200ResponseResumedUpload_Proxy(UniversalBaseModel):
+    kind: typing.Literal["proxy"] = "proxy"
     url: str
     key: str
 
@@ -43,6 +43,6 @@ class DocumentsInit200ResponseResumedUpload_Direct(UniversalBaseModel):
 
 
 DocumentsInit200ResponseResumedUpload = typing_extensions.Annotated[
-    typing.Union[DocumentsInit200ResponseResumedUpload_Presigned, DocumentsInit200ResponseResumedUpload_Direct],
+    typing.Union[DocumentsInit200ResponseResumedUpload_Presigned, DocumentsInit200ResponseResumedUpload_Proxy],
     pydantic.Field(discriminator="kind"),
 ]
