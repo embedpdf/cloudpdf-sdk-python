@@ -4,7 +4,7 @@ dynamic = ["version"]
 
 [tool.poetry]
 name = "cloudpdf"
-version = "3.0.0a1"
+version = "3.0.0a4"
 description = "The official Python SDK for the CloudPDF API."
 readme = "README.md"
 authors = ["CloudPDF <hello@cloudpdf.com>"]

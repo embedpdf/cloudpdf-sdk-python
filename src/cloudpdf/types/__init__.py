@@ -292,6 +292,9 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list200response_annotations_item_caret_reply_type import (
         DocAnnotationsList200ResponseAnnotationsItemCaretReplyType,
     )
+    from .doc_annotations_list200response_annotations_item_caret_unrotated_rect import (
+        DocAnnotationsList200ResponseAnnotationsItemCaretUnrotatedRect,
+    )
     from .doc_annotations_list200response_annotations_item_circle import (
         DocAnnotationsList200ResponseAnnotationsItemCircle,
     )
@@ -5265,10 +5268,9 @@ if typing.TYPE_CHECKING:
     )
     from .documents_init200response_created_upload import (
         DocumentsInit200ResponseCreatedUpload,
-        DocumentsInit200ResponseCreatedUpload_Direct,
         DocumentsInit200ResponseCreatedUpload_Presigned,
+        DocumentsInit200ResponseCreatedUpload_Proxy,
     )
-    from .documents_init200response_created_upload_direct import DocumentsInit200ResponseCreatedUploadDirect
     from .documents_init200response_created_upload_presigned import DocumentsInit200ResponseCreatedUploadPresigned
     from .documents_init200response_created_upload_presigned_presigned import (
         DocumentsInit200ResponseCreatedUploadPresignedPresigned,
@@ -5276,6 +5278,7 @@ if typing.TYPE_CHECKING:
     from .documents_init200response_created_upload_presigned_presigned_method import (
         DocumentsInit200ResponseCreatedUploadPresignedPresignedMethod,
     )
+    from .documents_init200response_created_upload_proxy import DocumentsInit200ResponseCreatedUploadProxy
     from .documents_init200response_deduped import DocumentsInit200ResponseDeduped
     from .documents_init200response_deduped_document import DocumentsInit200ResponseDedupedDocument
     from .documents_init200response_deduped_document_state import DocumentsInit200ResponseDedupedDocumentState
@@ -5290,10 +5293,9 @@ if typing.TYPE_CHECKING:
     )
     from .documents_init200response_resumed_upload import (
         DocumentsInit200ResponseResumedUpload,
-        DocumentsInit200ResponseResumedUpload_Direct,
         DocumentsInit200ResponseResumedUpload_Presigned,
+        DocumentsInit200ResponseResumedUpload_Proxy,
     )
-    from .documents_init200response_resumed_upload_direct import DocumentsInit200ResponseResumedUploadDirect
     from .documents_init200response_resumed_upload_presigned import DocumentsInit200ResponseResumedUploadPresigned
     from .documents_init200response_resumed_upload_presigned_presigned import (
         DocumentsInit200ResponseResumedUploadPresignedPresigned,
@@ -5301,6 +5303,7 @@ if typing.TYPE_CHECKING:
     from .documents_init200response_resumed_upload_presigned_presigned_method import (
         DocumentsInit200ResponseResumedUploadPresignedPresignedMethod,
     )
+    from .documents_init200response_resumed_upload_proxy import DocumentsInit200ResponseResumedUploadProxy
     from .documents_init400response import DocumentsInit400Response
     from .documents_init400response_error import DocumentsInit400ResponseError
     from .documents_list200response import DocumentsList200Response
@@ -5313,26 +5316,76 @@ if typing.TYPE_CHECKING:
     from .documents_list400response_error import DocumentsList400ResponseError
     from .documents_thumbnail_response import DocumentsThumbnailResponse
     from .documents_thumbnail_response_error import DocumentsThumbnailResponseError
-    from .documents_upload_direct200response import DocumentsUploadDirect200Response
-    from .documents_upload_direct400response import DocumentsUploadDirect400Response
-    from .documents_upload_direct400response_error import DocumentsUploadDirect400ResponseError
+    from .documents_upload_proxy200response import DocumentsUploadProxy200Response
+    from .documents_upload_proxy400response import DocumentsUploadProxy400Response
+    from .documents_upload_proxy400response_error import DocumentsUploadProxy400ResponseError
+    from .documents_upload_proxy409response import DocumentsUploadProxy409Response
+    from .documents_upload_proxy409response_error import DocumentsUploadProxy409ResponseError
     from .engine_error_payload import EngineErrorPayload
     from .engine_error_payload_code import EngineErrorPayloadCode
     from .engine_error_payload_name import EngineErrorPayloadName
+    from .shares_create200response import SharesCreate200Response
+    from .shares_create200response_share import SharesCreate200ResponseShare
+    from .shares_create400response import SharesCreate400Response
+    from .shares_create400response_error import SharesCreate400ResponseError
+    from .shares_create403response import SharesCreate403Response
+    from .shares_create403response_error import SharesCreate403ResponseError
+    from .shares_create404response import SharesCreate404Response
+    from .shares_create404response_error import SharesCreate404ResponseError
+    from .shares_delete_response import SharesDeleteResponse
+    from .shares_delete_response_error import SharesDeleteResponseError
+    from .shares_exchange200response import SharesExchange200Response
+    from .shares_exchange400response import SharesExchange400Response
+    from .shares_exchange400response_error import SharesExchange400ResponseError
+    from .shares_exchange403response import SharesExchange403Response
+    from .shares_exchange403response_error import SharesExchange403ResponseError
+    from .shares_exchange404response import SharesExchange404Response
+    from .shares_exchange404response_error import SharesExchange404ResponseError
+    from .shares_exchange410response import SharesExchange410Response
+    from .shares_exchange410response_error import SharesExchange410ResponseError
+    from .shares_exchange422response import SharesExchange422Response
+    from .shares_exchange422response_error import SharesExchange422ResponseError
+    from .shares_get200response import SharesGet200Response
+    from .shares_get200response_share import SharesGet200ResponseShare
+    from .shares_get404response import SharesGet404Response
+    from .shares_get404response_error import SharesGet404ResponseError
+    from .shares_list200response import SharesList200Response
+    from .shares_list200response_shares_item import SharesList200ResponseSharesItem
+    from .shares_list400response import SharesList400Response
+    from .shares_list400response_error import SharesList400ResponseError
+    from .shares_update200response import SharesUpdate200Response
+    from .shares_update200response_share import SharesUpdate200ResponseShare
+    from .shares_update400response import SharesUpdate400Response
+    from .shares_update400response_error import SharesUpdate400ResponseError
+    from .shares_update404response import SharesUpdate404Response
+    from .shares_update404response_error import SharesUpdate404ResponseError
     from .tenants_create200response import TenantsCreate200Response
     from .tenants_create200response_tenant import TenantsCreate200ResponseTenant
+    from .tenants_create200response_tenant_status import TenantsCreate200ResponseTenantStatus
     from .tenants_create400response import TenantsCreate400Response
     from .tenants_create400response_error import TenantsCreate400ResponseError
     from .tenants_delete_response import TenantsDeleteResponse
     from .tenants_delete_response_error import TenantsDeleteResponseError
     from .tenants_get200response import TenantsGet200Response
     from .tenants_get200response_tenant import TenantsGet200ResponseTenant
+    from .tenants_get200response_tenant_status import TenantsGet200ResponseTenantStatus
     from .tenants_get404response import TenantsGet404Response
     from .tenants_get404response_error import TenantsGet404ResponseError
     from .tenants_list200response import TenantsList200Response
     from .tenants_list200response_tenants_item import TenantsList200ResponseTenantsItem
+    from .tenants_list200response_tenants_item_status import TenantsList200ResponseTenantsItemStatus
     from .tenants_list400response import TenantsList400Response
     from .tenants_list400response_error import TenantsList400ResponseError
+    from .tenants_resume_response import TenantsResumeResponse
+    from .tenants_resume_response_error import TenantsResumeResponseError
+    from .tenants_suspend_response import TenantsSuspendResponse
+    from .tenants_suspend_response_error import TenantsSuspendResponseError
+    from .tenants_usage200response import TenantsUsage200Response
+    from .tenants_usage200response_metrics import TenantsUsage200ResponseMetrics
+    from .tenants_usage400response import TenantsUsage400Response
+    from .tenants_usage400response_error import TenantsUsage400ResponseError
+    from .tenants_usage404response import TenantsUsage404Response
+    from .tenants_usage404response_error import TenantsUsage404ResponseError
     from .tokens_issue200response import TokensIssue200Response
     from .tokens_issue400response import TokensIssue400Response
     from .tokens_issue400response_error import TokensIssue400ResponseError
@@ -5458,6 +5511,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemCaretRef_Nm": ".doc_annotations_list200response_annotations_item_caret_ref",
     "DocAnnotationsList200ResponseAnnotationsItemCaretRef_ObjectNumber": ".doc_annotations_list200response_annotations_item_caret_ref",
     "DocAnnotationsList200ResponseAnnotationsItemCaretReplyType": ".doc_annotations_list200response_annotations_item_caret_reply_type",
+    "DocAnnotationsList200ResponseAnnotationsItemCaretUnrotatedRect": ".doc_annotations_list200response_annotations_item_caret_unrotated_rect",
     "DocAnnotationsList200ResponseAnnotationsItemCircle": ".doc_annotations_list200response_annotations_item_circle",
     "DocAnnotationsList200ResponseAnnotationsItemCircleActions": ".doc_annotations_list200response_annotations_item_circle_actions",
     "DocAnnotationsList200ResponseAnnotationsItemCircleActionsActivate": ".doc_annotations_list200response_annotations_item_circle_actions_activate",
@@ -7436,12 +7490,12 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocumentsInit200ResponseCreatedDocumentState": ".documents_init200response_created_document_state",
     "DocumentsInit200ResponseCreatedDocumentThumbnailState": ".documents_init200response_created_document_thumbnail_state",
     "DocumentsInit200ResponseCreatedUpload": ".documents_init200response_created_upload",
-    "DocumentsInit200ResponseCreatedUploadDirect": ".documents_init200response_created_upload_direct",
     "DocumentsInit200ResponseCreatedUploadPresigned": ".documents_init200response_created_upload_presigned",
     "DocumentsInit200ResponseCreatedUploadPresignedPresigned": ".documents_init200response_created_upload_presigned_presigned",
     "DocumentsInit200ResponseCreatedUploadPresignedPresignedMethod": ".documents_init200response_created_upload_presigned_presigned_method",
-    "DocumentsInit200ResponseCreatedUpload_Direct": ".documents_init200response_created_upload",
+    "DocumentsInit200ResponseCreatedUploadProxy": ".documents_init200response_created_upload_proxy",
     "DocumentsInit200ResponseCreatedUpload_Presigned": ".documents_init200response_created_upload",
+    "DocumentsInit200ResponseCreatedUpload_Proxy": ".documents_init200response_created_upload",
     "DocumentsInit200ResponseDeduped": ".documents_init200response_deduped",
     "DocumentsInit200ResponseDedupedDocument": ".documents_init200response_deduped_document",
     "DocumentsInit200ResponseDedupedDocumentState": ".documents_init200response_deduped_document_state",
@@ -7451,12 +7505,12 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocumentsInit200ResponseResumedDocumentState": ".documents_init200response_resumed_document_state",
     "DocumentsInit200ResponseResumedDocumentThumbnailState": ".documents_init200response_resumed_document_thumbnail_state",
     "DocumentsInit200ResponseResumedUpload": ".documents_init200response_resumed_upload",
-    "DocumentsInit200ResponseResumedUploadDirect": ".documents_init200response_resumed_upload_direct",
     "DocumentsInit200ResponseResumedUploadPresigned": ".documents_init200response_resumed_upload_presigned",
     "DocumentsInit200ResponseResumedUploadPresignedPresigned": ".documents_init200response_resumed_upload_presigned_presigned",
     "DocumentsInit200ResponseResumedUploadPresignedPresignedMethod": ".documents_init200response_resumed_upload_presigned_presigned_method",
-    "DocumentsInit200ResponseResumedUpload_Direct": ".documents_init200response_resumed_upload",
+    "DocumentsInit200ResponseResumedUploadProxy": ".documents_init200response_resumed_upload_proxy",
     "DocumentsInit200ResponseResumedUpload_Presigned": ".documents_init200response_resumed_upload",
+    "DocumentsInit200ResponseResumedUpload_Proxy": ".documents_init200response_resumed_upload",
     "DocumentsInit200Response_Created": ".documents_init200response",
     "DocumentsInit200Response_Deduped": ".documents_init200response",
     "DocumentsInit200Response_Resumed": ".documents_init200response",
@@ -7470,26 +7524,76 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocumentsList400ResponseError": ".documents_list400response_error",
     "DocumentsThumbnailResponse": ".documents_thumbnail_response",
     "DocumentsThumbnailResponseError": ".documents_thumbnail_response_error",
-    "DocumentsUploadDirect200Response": ".documents_upload_direct200response",
-    "DocumentsUploadDirect400Response": ".documents_upload_direct400response",
-    "DocumentsUploadDirect400ResponseError": ".documents_upload_direct400response_error",
+    "DocumentsUploadProxy200Response": ".documents_upload_proxy200response",
+    "DocumentsUploadProxy400Response": ".documents_upload_proxy400response",
+    "DocumentsUploadProxy400ResponseError": ".documents_upload_proxy400response_error",
+    "DocumentsUploadProxy409Response": ".documents_upload_proxy409response",
+    "DocumentsUploadProxy409ResponseError": ".documents_upload_proxy409response_error",
     "EngineErrorPayload": ".engine_error_payload",
     "EngineErrorPayloadCode": ".engine_error_payload_code",
     "EngineErrorPayloadName": ".engine_error_payload_name",
+    "SharesCreate200Response": ".shares_create200response",
+    "SharesCreate200ResponseShare": ".shares_create200response_share",
+    "SharesCreate400Response": ".shares_create400response",
+    "SharesCreate400ResponseError": ".shares_create400response_error",
+    "SharesCreate403Response": ".shares_create403response",
+    "SharesCreate403ResponseError": ".shares_create403response_error",
+    "SharesCreate404Response": ".shares_create404response",
+    "SharesCreate404ResponseError": ".shares_create404response_error",
+    "SharesDeleteResponse": ".shares_delete_response",
+    "SharesDeleteResponseError": ".shares_delete_response_error",
+    "SharesExchange200Response": ".shares_exchange200response",
+    "SharesExchange400Response": ".shares_exchange400response",
+    "SharesExchange400ResponseError": ".shares_exchange400response_error",
+    "SharesExchange403Response": ".shares_exchange403response",
+    "SharesExchange403ResponseError": ".shares_exchange403response_error",
+    "SharesExchange404Response": ".shares_exchange404response",
+    "SharesExchange404ResponseError": ".shares_exchange404response_error",
+    "SharesExchange410Response": ".shares_exchange410response",
+    "SharesExchange410ResponseError": ".shares_exchange410response_error",
+    "SharesExchange422Response": ".shares_exchange422response",
+    "SharesExchange422ResponseError": ".shares_exchange422response_error",
+    "SharesGet200Response": ".shares_get200response",
+    "SharesGet200ResponseShare": ".shares_get200response_share",
+    "SharesGet404Response": ".shares_get404response",
+    "SharesGet404ResponseError": ".shares_get404response_error",
+    "SharesList200Response": ".shares_list200response",
+    "SharesList200ResponseSharesItem": ".shares_list200response_shares_item",
+    "SharesList400Response": ".shares_list400response",
+    "SharesList400ResponseError": ".shares_list400response_error",
+    "SharesUpdate200Response": ".shares_update200response",
+    "SharesUpdate200ResponseShare": ".shares_update200response_share",
+    "SharesUpdate400Response": ".shares_update400response",
+    "SharesUpdate400ResponseError": ".shares_update400response_error",
+    "SharesUpdate404Response": ".shares_update404response",
+    "SharesUpdate404ResponseError": ".shares_update404response_error",
     "TenantsCreate200Response": ".tenants_create200response",
     "TenantsCreate200ResponseTenant": ".tenants_create200response_tenant",
+    "TenantsCreate200ResponseTenantStatus": ".tenants_create200response_tenant_status",
     "TenantsCreate400Response": ".tenants_create400response",
     "TenantsCreate400ResponseError": ".tenants_create400response_error",
     "TenantsDeleteResponse": ".tenants_delete_response",
     "TenantsDeleteResponseError": ".tenants_delete_response_error",
     "TenantsGet200Response": ".tenants_get200response",
     "TenantsGet200ResponseTenant": ".tenants_get200response_tenant",
+    "TenantsGet200ResponseTenantStatus": ".tenants_get200response_tenant_status",
     "TenantsGet404Response": ".tenants_get404response",
     "TenantsGet404ResponseError": ".tenants_get404response_error",
     "TenantsList200Response": ".tenants_list200response",
     "TenantsList200ResponseTenantsItem": ".tenants_list200response_tenants_item",
+    "TenantsList200ResponseTenantsItemStatus": ".tenants_list200response_tenants_item_status",
     "TenantsList400Response": ".tenants_list400response",
     "TenantsList400ResponseError": ".tenants_list400response_error",
+    "TenantsResumeResponse": ".tenants_resume_response",
+    "TenantsResumeResponseError": ".tenants_resume_response_error",
+    "TenantsSuspendResponse": ".tenants_suspend_response",
+    "TenantsSuspendResponseError": ".tenants_suspend_response_error",
+    "TenantsUsage200Response": ".tenants_usage200response",
+    "TenantsUsage200ResponseMetrics": ".tenants_usage200response_metrics",
+    "TenantsUsage400Response": ".tenants_usage400response",
+    "TenantsUsage400ResponseError": ".tenants_usage400response_error",
+    "TenantsUsage404Response": ".tenants_usage404response",
+    "TenantsUsage404ResponseError": ".tenants_usage404response_error",
     "TokensIssue200Response": ".tokens_issue200response",
     "TokensIssue400Response": ".tokens_issue400response",
     "TokensIssue400ResponseError": ".tokens_issue400response_error",
@@ -7641,6 +7745,7 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemCaretRef_Nm",
     "DocAnnotationsList200ResponseAnnotationsItemCaretRef_ObjectNumber",
     "DocAnnotationsList200ResponseAnnotationsItemCaretReplyType",
+    "DocAnnotationsList200ResponseAnnotationsItemCaretUnrotatedRect",
     "DocAnnotationsList200ResponseAnnotationsItemCircle",
     "DocAnnotationsList200ResponseAnnotationsItemCircleActions",
     "DocAnnotationsList200ResponseAnnotationsItemCircleActionsActivate",
@@ -9619,12 +9724,12 @@ __all__ = [
     "DocumentsInit200ResponseCreatedDocumentState",
     "DocumentsInit200ResponseCreatedDocumentThumbnailState",
     "DocumentsInit200ResponseCreatedUpload",
-    "DocumentsInit200ResponseCreatedUploadDirect",
     "DocumentsInit200ResponseCreatedUploadPresigned",
     "DocumentsInit200ResponseCreatedUploadPresignedPresigned",
     "DocumentsInit200ResponseCreatedUploadPresignedPresignedMethod",
-    "DocumentsInit200ResponseCreatedUpload_Direct",
+    "DocumentsInit200ResponseCreatedUploadProxy",
     "DocumentsInit200ResponseCreatedUpload_Presigned",
+    "DocumentsInit200ResponseCreatedUpload_Proxy",
     "DocumentsInit200ResponseDeduped",
     "DocumentsInit200ResponseDedupedDocument",
     "DocumentsInit200ResponseDedupedDocumentState",
@@ -9634,12 +9739,12 @@ __all__ = [
     "DocumentsInit200ResponseResumedDocumentState",
     "DocumentsInit200ResponseResumedDocumentThumbnailState",
     "DocumentsInit200ResponseResumedUpload",
-    "DocumentsInit200ResponseResumedUploadDirect",
     "DocumentsInit200ResponseResumedUploadPresigned",
     "DocumentsInit200ResponseResumedUploadPresignedPresigned",
     "DocumentsInit200ResponseResumedUploadPresignedPresignedMethod",
-    "DocumentsInit200ResponseResumedUpload_Direct",
+    "DocumentsInit200ResponseResumedUploadProxy",
     "DocumentsInit200ResponseResumedUpload_Presigned",
+    "DocumentsInit200ResponseResumedUpload_Proxy",
     "DocumentsInit200Response_Created",
     "DocumentsInit200Response_Deduped",
     "DocumentsInit200Response_Resumed",
@@ -9653,26 +9758,76 @@ __all__ = [
     "DocumentsList400ResponseError",
     "DocumentsThumbnailResponse",
     "DocumentsThumbnailResponseError",
-    "DocumentsUploadDirect200Response",
-    "DocumentsUploadDirect400Response",
-    "DocumentsUploadDirect400ResponseError",
+    "DocumentsUploadProxy200Response",
+    "DocumentsUploadProxy400Response",
+    "DocumentsUploadProxy400ResponseError",
+    "DocumentsUploadProxy409Response",
+    "DocumentsUploadProxy409ResponseError",
     "EngineErrorPayload",
     "EngineErrorPayloadCode",
     "EngineErrorPayloadName",
+    "SharesCreate200Response",
+    "SharesCreate200ResponseShare",
+    "SharesCreate400Response",
+    "SharesCreate400ResponseError",
+    "SharesCreate403Response",
+    "SharesCreate403ResponseError",
+    "SharesCreate404Response",
+    "SharesCreate404ResponseError",
+    "SharesDeleteResponse",
+    "SharesDeleteResponseError",
+    "SharesExchange200Response",
+    "SharesExchange400Response",
+    "SharesExchange400ResponseError",
+    "SharesExchange403Response",
+    "SharesExchange403ResponseError",
+    "SharesExchange404Response",
+    "SharesExchange404ResponseError",
+    "SharesExchange410Response",
+    "SharesExchange410ResponseError",
+    "SharesExchange422Response",
+    "SharesExchange422ResponseError",
+    "SharesGet200Response",
+    "SharesGet200ResponseShare",
+    "SharesGet404Response",
+    "SharesGet404ResponseError",
+    "SharesList200Response",
+    "SharesList200ResponseSharesItem",
+    "SharesList400Response",
+    "SharesList400ResponseError",
+    "SharesUpdate200Response",
+    "SharesUpdate200ResponseShare",
+    "SharesUpdate400Response",
+    "SharesUpdate400ResponseError",
+    "SharesUpdate404Response",
+    "SharesUpdate404ResponseError",
     "TenantsCreate200Response",
     "TenantsCreate200ResponseTenant",
+    "TenantsCreate200ResponseTenantStatus",
     "TenantsCreate400Response",
     "TenantsCreate400ResponseError",
     "TenantsDeleteResponse",
     "TenantsDeleteResponseError",
     "TenantsGet200Response",
     "TenantsGet200ResponseTenant",
+    "TenantsGet200ResponseTenantStatus",
     "TenantsGet404Response",
     "TenantsGet404ResponseError",
     "TenantsList200Response",
     "TenantsList200ResponseTenantsItem",
+    "TenantsList200ResponseTenantsItemStatus",
     "TenantsList400Response",
     "TenantsList400ResponseError",
+    "TenantsResumeResponse",
+    "TenantsResumeResponseError",
+    "TenantsSuspendResponse",
+    "TenantsSuspendResponseError",
+    "TenantsUsage200Response",
+    "TenantsUsage200ResponseMetrics",
+    "TenantsUsage400Response",
+    "TenantsUsage400ResponseError",
+    "TenantsUsage404Response",
+    "TenantsUsage404ResponseError",
     "TokensIssue200Response",
     "TokensIssue400Response",
     "TokensIssue400ResponseError",

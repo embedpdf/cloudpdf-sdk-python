@@ -6,7 +6,7 @@ import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 
 
-class DocumentsUploadDirect400ResponseError(UniversalBaseModel):
+class SharesExchange400ResponseError(UniversalBaseModel):
     code: str
     message: str
 

@@ -10,6 +10,7 @@ DocRenderResponseCode = typing.Union[
         "DocOpenFailed",
         "DocPasswordRequired",
         "DocPasswordIncorrect",
+        "SharePasswordRequired",
         "Aborted",
         "Network",
         "Unauthenticated",

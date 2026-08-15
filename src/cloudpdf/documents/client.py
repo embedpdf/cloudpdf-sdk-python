@@ -2,15 +2,17 @@
 
 import typing
 
+from .. import core
 from ..core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ..core.request_options import RequestOptions
 from ..types.documents_commit200response import DocumentsCommit200Response
 from ..types.documents_get200response import DocumentsGet200Response
 from ..types.documents_init200response import DocumentsInit200Response
 from ..types.documents_list200response import DocumentsList200Response
-from ..types.documents_upload_direct200response import DocumentsUploadDirect200Response
+from ..types.documents_upload_proxy200response import DocumentsUploadProxy200Response
 from .raw_client import AsyncRawDocumentsClient, RawDocumentsClient
 from .types.documents_init_request_dedup_mode import DocumentsInitRequestDedupMode
+from .types.documents_init_request_upload_preference import DocumentsInitRequestUploadPreference
 from .types.list_documents_request_state import ListDocumentsRequestState
 
 # this is used as the default value for optional parameters
@@ -247,32 +249,43 @@ class DocumentsClient:
         with self._raw_client.thumbnail(tenant_id, id, request_options=request_options) as r:
             yield from r.data
 
-    def upload_direct(
-        self,
-        tenant_id: str,
-        id: str,
-        *,
-        request: typing.Union[bytes, typing.Iterator[bytes], typing.AsyncIterator[bytes]],
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocumentsUploadDirect200Response:
+    def upload_proxy(
+        self, tenant_id: str, id: str, *, file: core.File, request_options: typing.Optional[RequestOptions] = None
+    ) -> DocumentsUploadProxy200Response:
         """
+        This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available.
+
         Parameters
         ----------
         tenant_id : str
 
         id : str
 
-        request : typing.Union[bytes, typing.Iterator[bytes], typing.AsyncIterator[bytes]]
+        file : core.File
+            See core.File for more documentation
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        DocumentsUploadDirect200Response
+        DocumentsUploadProxy200Response
             OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.documents.upload_proxy(
+            tenant_id="tenantId",
+            id="id",
+        )
         """
-        _response = self._raw_client.upload_direct(tenant_id, id, request=request, request_options=request_options)
+        _response = self._raw_client.upload_proxy(tenant_id, id, file=file, request_options=request_options)
         return _response.data
 
     def init(
@@ -286,6 +299,7 @@ class DocumentsClient:
         dedup_mode: typing.Optional[DocumentsInitRequestDedupMode] = OMIT,
         doc_id: typing.Optional[str] = OMIT,
         upload_ttl_sec: typing.Optional[float] = OMIT,
+        upload_preference: typing.Optional[DocumentsInitRequestUploadPreference] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocumentsInit200Response:
         """
@@ -306,6 +320,8 @@ class DocumentsClient:
         doc_id : typing.Optional[str]
 
         upload_ttl_sec : typing.Optional[float]
+
+        upload_preference : typing.Optional[DocumentsInitRequestUploadPreference]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -338,6 +354,7 @@ class DocumentsClient:
             dedup_mode=dedup_mode,
             doc_id=doc_id,
             upload_ttl_sec=upload_ttl_sec,
+            upload_preference=upload_preference,
             request_options=request_options,
         )
         return _response.data
@@ -623,34 +640,51 @@ class AsyncDocumentsClient:
             async for _chunk in r.data:
                 yield _chunk
 
-    async def upload_direct(
-        self,
-        tenant_id: str,
-        id: str,
-        *,
-        request: typing.Union[bytes, typing.Iterator[bytes], typing.AsyncIterator[bytes]],
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocumentsUploadDirect200Response:
+    async def upload_proxy(
+        self, tenant_id: str, id: str, *, file: core.File, request_options: typing.Optional[RequestOptions] = None
+    ) -> DocumentsUploadProxy200Response:
         """
+        This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available.
+
         Parameters
         ----------
         tenant_id : str
 
         id : str
 
-        request : typing.Union[bytes, typing.Iterator[bytes], typing.AsyncIterator[bytes]]
+        file : core.File
+            See core.File for more documentation
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        DocumentsUploadDirect200Response
+        DocumentsUploadProxy200Response
             OK
-        """
-        _response = await self._raw_client.upload_direct(
-            tenant_id, id, request=request, request_options=request_options
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
         )
+
+
+        async def main() -> None:
+            await client.documents.upload_proxy(
+                tenant_id="tenantId",
+                id="id",
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.upload_proxy(tenant_id, id, file=file, request_options=request_options)
         return _response.data
 
     async def init(
@@ -664,6 +698,7 @@ class AsyncDocumentsClient:
         dedup_mode: typing.Optional[DocumentsInitRequestDedupMode] = OMIT,
         doc_id: typing.Optional[str] = OMIT,
         upload_ttl_sec: typing.Optional[float] = OMIT,
+        upload_preference: typing.Optional[DocumentsInitRequestUploadPreference] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocumentsInit200Response:
         """
@@ -684,6 +719,8 @@ class AsyncDocumentsClient:
         doc_id : typing.Optional[str]
 
         upload_ttl_sec : typing.Optional[float]
+
+        upload_preference : typing.Optional[DocumentsInitRequestUploadPreference]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -724,6 +761,7 @@ class AsyncDocumentsClient:
             dedup_mode=dedup_mode,
             doc_id=doc_id,
             upload_ttl_sec=upload_ttl_sec,
+            upload_preference=upload_preference,
             request_options=request_options,
         )
         return _response.data

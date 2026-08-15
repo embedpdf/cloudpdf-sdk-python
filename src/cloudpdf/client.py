@@ -12,6 +12,7 @@ if typing.TYPE_CHECKING:
     from .deployment.client import AsyncDeploymentClient, DeploymentClient
     from .doc.client import AsyncDocClient, DocClient
     from .documents.client import AsyncDocumentsClient, DocumentsClient
+    from .shares.client import AsyncSharesClient, SharesClient
     from .tenants.client import AsyncTenantsClient, TenantsClient
     from .tokens.client import AsyncTokensClient, TokensClient
 
@@ -25,7 +26,7 @@ class CloudPDFClient:
     base_url : str
         The base url to use for requests from the client.
 
-    token : typing.Union[str, typing.Callable[[], str]]
+    token : typing.Optional[typing.Union[str, typing.Callable[[], str]]]
     headers : typing.Optional[typing.Dict[str, str]]
         Additional headers to send with every request.
 
@@ -64,7 +65,7 @@ class CloudPDFClient:
         self,
         *,
         base_url: str,
-        token: typing.Union[str, typing.Callable[[], str]],
+        token: typing.Optional[typing.Union[str, typing.Callable[[], str]]] = None,
         headers: typing.Optional[typing.Dict[str, str]] = None,
         timeout: typing.Optional[float] = None,
         max_retries: typing.Optional[int] = None,
@@ -93,6 +94,7 @@ class CloudPDFClient:
         )
         self._deployment: typing.Optional[DeploymentClient] = None
         self._doc: typing.Optional[DocClient] = None
+        self._shares: typing.Optional[SharesClient] = None
         self._tenants: typing.Optional[TenantsClient] = None
         self._documents: typing.Optional[DocumentsClient] = None
         self._tokens: typing.Optional[TokensClient] = None
@@ -112,6 +114,14 @@ class CloudPDFClient:
 
             self._doc = DocClient(client_wrapper=self._client_wrapper)
         return self._doc
+
+    @property
+    def shares(self):
+        if self._shares is None:
+            from .shares.client import SharesClient  # noqa: E402
+
+            self._shares = SharesClient(client_wrapper=self._client_wrapper)
+        return self._shares
 
     @property
     def tenants(self):
@@ -165,7 +175,7 @@ class AsyncCloudPDFClient:
     base_url : str
         The base url to use for requests from the client.
 
-    token : typing.Union[str, typing.Callable[[], str]]
+    token : typing.Optional[typing.Union[str, typing.Callable[[], str]]]
     headers : typing.Optional[typing.Dict[str, str]]
         Additional headers to send with every request.
 
@@ -207,7 +217,7 @@ class AsyncCloudPDFClient:
         self,
         *,
         base_url: str,
-        token: typing.Union[str, typing.Callable[[], str]],
+        token: typing.Optional[typing.Union[str, typing.Callable[[], str]]] = None,
         headers: typing.Optional[typing.Dict[str, str]] = None,
         async_token: typing.Optional[typing.Callable[[], typing.Awaitable[str]]] = None,
         timeout: typing.Optional[float] = None,
@@ -236,6 +246,7 @@ class AsyncCloudPDFClient:
         )
         self._deployment: typing.Optional[AsyncDeploymentClient] = None
         self._doc: typing.Optional[AsyncDocClient] = None
+        self._shares: typing.Optional[AsyncSharesClient] = None
         self._tenants: typing.Optional[AsyncTenantsClient] = None
         self._documents: typing.Optional[AsyncDocumentsClient] = None
         self._tokens: typing.Optional[AsyncTokensClient] = None
@@ -255,6 +266,14 @@ class AsyncCloudPDFClient:
 
             self._doc = AsyncDocClient(client_wrapper=self._client_wrapper)
         return self._doc
+
+    @property
+    def shares(self):
+        if self._shares is None:
+            from .shares.client import AsyncSharesClient  # noqa: E402
+
+            self._shares = AsyncSharesClient(client_wrapper=self._client_wrapper)
+        return self._shares
 
     @property
     def tenants(self):
