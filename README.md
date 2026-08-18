@@ -41,8 +41,8 @@ client = CloudPDFClient(
     base_url="https://yourhost.com/path/to/api",
 )
 
-client.tenants.create(
-    id="id",
+client.shares.exchange(
+    share_token="shareToken",
 )
 ```
 
@@ -62,8 +62,8 @@ client = AsyncCloudPDFClient(
 
 
 async def main() -> None:
-    await client.tenants.create(
-        id="id",
+    await client.shares.exchange(
+        share_token="shareToken",
     )
 
 
@@ -79,7 +79,7 @@ will be thrown.
 from cloudpdf.core.api_error import ApiError
 
 try:
-    client.tenants.create(...)
+    client.shares.exchange(...)
 except ApiError as e:
     print(e.status_code)
     print(e.body)
@@ -96,7 +96,7 @@ The `.with_raw_response` property returns a "raw" client that can be used to acc
 from cloudpdf import CloudPDFClient
 
 client = CloudPDFClient(...)
-response = client.tenants.with_raw_response.create(...)
+response = client.shares.with_raw_response.exchange(...)
 print(response.headers)  # access the response headers
 print(response.status_code)  # access the response status code
 print(response.data)  # access the underlying object
@@ -127,7 +127,7 @@ Which status codes are retried depends on the `retryStatusCodes` generator confi
 Use the `max_retries` request option to configure this behavior.
 
 ```python
-client.tenants.create(..., request_options={
+client.shares.exchange(..., request_options={
     "max_retries": 1
 })
 ```
@@ -142,7 +142,7 @@ from cloudpdf import CloudPDFClient
 client = CloudPDFClient(..., timeout=20.0)
 
 # Override timeout for a specific method
-client.tenants.create(..., request_options={
+client.shares.exchange(..., request_options={
     "timeout": 1
 })
 ```

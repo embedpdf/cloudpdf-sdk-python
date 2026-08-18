@@ -42,6 +42,9 @@ from .doc_annotations_list200response_annotations_item_caret_ref import (
 from .doc_annotations_list200response_annotations_item_caret_reply_type import (
     DocAnnotationsList200ResponseAnnotationsItemCaretReplyType,
 )
+from .doc_annotations_list200response_annotations_item_caret_unrotated_rect import (
+    DocAnnotationsList200ResponseAnnotationsItemCaretUnrotatedRect,
+)
 from .doc_annotations_list200response_annotations_item_circle_actions import (
     DocAnnotationsList200ResponseAnnotationsItemCircleActions,
 )
@@ -1672,6 +1675,12 @@ class DocAnnotationsList200ResponseAnnotationsItem_Caret(UniversalBaseModel):
         typing.Optional[DocAnnotationsList200ResponseAnnotationsItemCaretRectDifferences],
         FieldMetadata(alias="rectDifferences"),
         pydantic.Field(alias="rectDifferences"),
+    ] = None
+    rotation: typing.Optional[float] = None
+    unrotated_rect: typing_extensions.Annotated[
+        typing.Optional[DocAnnotationsList200ResponseAnnotationsItemCaretUnrotatedRect],
+        FieldMetadata(alias="unrotatedRect"),
+        pydantic.Field(alias="unrotatedRect"),
     ] = None
 
     if IS_PYDANTIC_V2:
