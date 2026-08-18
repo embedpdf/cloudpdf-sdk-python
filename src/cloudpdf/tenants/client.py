@@ -7,6 +7,7 @@ from ..core.request_options import RequestOptions
 from ..types.tenants_create200response import TenantsCreate200Response
 from ..types.tenants_get200response import TenantsGet200Response
 from ..types.tenants_list200response import TenantsList200Response
+from ..types.tenants_usage200response import TenantsUsage200Response
 from .raw_client import AsyncRawTenantsClient, RawTenantsClient
 
 # this is used as the default value for optional parameters
@@ -153,6 +154,111 @@ class TenantsClient:
         )
         """
         _response = self._raw_client.delete(tenant_id, request_options=request_options)
+        return _response.data
+
+    def resume(self, tenant_id: str, *, request_options: typing.Optional[RequestOptions] = None) -> None:
+        """
+        Parameters
+        ----------
+        tenant_id : str
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        None
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.tenants.resume(
+            tenant_id="tenantId",
+        )
+        """
+        _response = self._raw_client.resume(tenant_id, request_options=request_options)
+        return _response.data
+
+    def suspend(
+        self,
+        tenant_id: str,
+        *,
+        reason: typing.Optional[str] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> None:
+        """
+        Instantly reversible with resume. The API token is exempt, so a suspended tenant can still be inspected, exported, resumed, or deleted.
+
+        Parameters
+        ----------
+        tenant_id : str
+
+        reason : typing.Optional[str]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        None
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.tenants.suspend(
+            tenant_id="tenantId",
+        )
+        """
+        _response = self._raw_client.suspend(tenant_id, reason=reason, request_options=request_options)
+        return _response.data
+
+    def usage(
+        self,
+        tenant_id: str,
+        *,
+        period: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> TenantsUsage200Response:
+        """
+        Facts only — no limits or billing state. Views count share exchanges plus authorized /v1/access grants, deduplicated across the two.
+
+        Parameters
+        ----------
+        tenant_id : str
+
+        period : typing.Optional[str]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        TenantsUsage200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.tenants.usage(
+            tenant_id="tenantId",
+        )
+        """
+        _response = self._raw_client.usage(tenant_id, period=period, request_options=request_options)
         return _response.data
 
 
@@ -330,4 +436,133 @@ class AsyncTenantsClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.delete(tenant_id, request_options=request_options)
+        return _response.data
+
+    async def resume(self, tenant_id: str, *, request_options: typing.Optional[RequestOptions] = None) -> None:
+        """
+        Parameters
+        ----------
+        tenant_id : str
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        None
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.tenants.resume(
+                tenant_id="tenantId",
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.resume(tenant_id, request_options=request_options)
+        return _response.data
+
+    async def suspend(
+        self,
+        tenant_id: str,
+        *,
+        reason: typing.Optional[str] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> None:
+        """
+        Instantly reversible with resume. The API token is exempt, so a suspended tenant can still be inspected, exported, resumed, or deleted.
+
+        Parameters
+        ----------
+        tenant_id : str
+
+        reason : typing.Optional[str]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        None
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.tenants.suspend(
+                tenant_id="tenantId",
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.suspend(tenant_id, reason=reason, request_options=request_options)
+        return _response.data
+
+    async def usage(
+        self,
+        tenant_id: str,
+        *,
+        period: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> TenantsUsage200Response:
+        """
+        Facts only — no limits or billing state. Views count share exchanges plus authorized /v1/access grants, deduplicated across the two.
+
+        Parameters
+        ----------
+        tenant_id : str
+
+        period : typing.Optional[str]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        TenantsUsage200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.tenants.usage(
+                tenant_id="tenantId",
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.usage(tenant_id, period=period, request_options=request_options)
         return _response.data

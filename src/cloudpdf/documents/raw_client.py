@@ -4,6 +4,7 @@ import contextlib
 import typing
 from json.decoder import JSONDecodeError
 
+from .. import core
 from ..core.api_error import ApiError
 from ..core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ..core.http_response import AsyncHttpResponse, HttpResponse
@@ -12,14 +13,17 @@ from ..core.parse_error import ParsingError
 from ..core.pydantic_utilities import parse_obj_as
 from ..core.request_options import RequestOptions
 from ..errors.bad_request_error import BadRequestError
+from ..errors.conflict_error import ConflictError
 from ..errors.forbidden_error import ForbiddenError
 from ..errors.not_found_error import NotFoundError
 from ..types.documents_commit200response import DocumentsCommit200Response
 from ..types.documents_get200response import DocumentsGet200Response
 from ..types.documents_init200response import DocumentsInit200Response
 from ..types.documents_list200response import DocumentsList200Response
-from ..types.documents_upload_direct200response import DocumentsUploadDirect200Response
+from ..types.documents_upload_proxy200response import DocumentsUploadProxy200Response
+from ..types.documents_upload_proxy409response import DocumentsUploadProxy409Response
 from .types.documents_init_request_dedup_mode import DocumentsInitRequestDedupMode
+from .types.documents_init_request_upload_preference import DocumentsInitRequestUploadPreference
 from .types.list_documents_request_state import ListDocumentsRequestState
 from pydantic import ValidationError
 
@@ -423,47 +427,46 @@ class RawDocumentsClient:
 
             yield _stream()
 
-    def upload_direct(
-        self,
-        tenant_id: str,
-        id: str,
-        *,
-        request: typing.Union[bytes, typing.Iterator[bytes], typing.AsyncIterator[bytes]],
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocumentsUploadDirect200Response]:
+    def upload_proxy(
+        self, tenant_id: str, id: str, *, file: core.File, request_options: typing.Optional[RequestOptions] = None
+    ) -> HttpResponse[DocumentsUploadProxy200Response]:
         """
+        This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available.
+
         Parameters
         ----------
         tenant_id : str
 
         id : str
 
-        request : typing.Union[bytes, typing.Iterator[bytes], typing.AsyncIterator[bytes]]
+        file : core.File
+            See core.File for more documentation
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        HttpResponse[DocumentsUploadDirect200Response]
+        HttpResponse[DocumentsUploadProxy200Response]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}/upload-direct",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}/upload-proxy",
             method="POST",
-            content=request,
-            headers={
-                "content-type": "application/pdf",
+            data={},
+            files={
+                "file": file,
             },
             request_options=request_options,
             omit=OMIT,
+            force_multipart=True,
         )
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocumentsUploadDirect200Response,
+                    DocumentsUploadProxy200Response,
                     parse_obj_as(
-                        type_=DocumentsUploadDirect200Response,  # type: ignore
+                        type_=DocumentsUploadProxy200Response,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -475,6 +478,17 @@ class RawDocumentsClient:
                         typing.Any,
                         parse_obj_as(
                             type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 409:
+                raise ConflictError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        DocumentsUploadProxy409Response,
+                        parse_obj_as(
+                            type_=DocumentsUploadProxy409Response,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -499,6 +513,7 @@ class RawDocumentsClient:
         dedup_mode: typing.Optional[DocumentsInitRequestDedupMode] = OMIT,
         doc_id: typing.Optional[str] = OMIT,
         upload_ttl_sec: typing.Optional[float] = OMIT,
+        upload_preference: typing.Optional[DocumentsInitRequestUploadPreference] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocumentsInit200Response]:
         """
@@ -520,6 +535,8 @@ class RawDocumentsClient:
 
         upload_ttl_sec : typing.Optional[float]
 
+        upload_preference : typing.Optional[DocumentsInitRequestUploadPreference]
+
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
@@ -539,6 +556,7 @@ class RawDocumentsClient:
                 "dedupMode": dedup_mode,
                 "docId": doc_id,
                 "uploadTtlSec": upload_ttl_sec,
+                "uploadPreference": upload_preference,
             },
             headers={
                 "content-type": "application/json",
@@ -975,47 +993,46 @@ class AsyncRawDocumentsClient:
 
             yield await _stream()
 
-    async def upload_direct(
-        self,
-        tenant_id: str,
-        id: str,
-        *,
-        request: typing.Union[bytes, typing.Iterator[bytes], typing.AsyncIterator[bytes]],
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocumentsUploadDirect200Response]:
+    async def upload_proxy(
+        self, tenant_id: str, id: str, *, file: core.File, request_options: typing.Optional[RequestOptions] = None
+    ) -> AsyncHttpResponse[DocumentsUploadProxy200Response]:
         """
+        This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available.
+
         Parameters
         ----------
         tenant_id : str
 
         id : str
 
-        request : typing.Union[bytes, typing.Iterator[bytes], typing.AsyncIterator[bytes]]
+        file : core.File
+            See core.File for more documentation
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        AsyncHttpResponse[DocumentsUploadDirect200Response]
+        AsyncHttpResponse[DocumentsUploadProxy200Response]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}/upload-direct",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}/upload-proxy",
             method="POST",
-            content=request,
-            headers={
-                "content-type": "application/pdf",
+            data={},
+            files={
+                "file": file,
             },
             request_options=request_options,
             omit=OMIT,
+            force_multipart=True,
         )
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocumentsUploadDirect200Response,
+                    DocumentsUploadProxy200Response,
                     parse_obj_as(
-                        type_=DocumentsUploadDirect200Response,  # type: ignore
+                        type_=DocumentsUploadProxy200Response,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1027,6 +1044,17 @@ class AsyncRawDocumentsClient:
                         typing.Any,
                         parse_obj_as(
                             type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 409:
+                raise ConflictError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        DocumentsUploadProxy409Response,
+                        parse_obj_as(
+                            type_=DocumentsUploadProxy409Response,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1051,6 +1079,7 @@ class AsyncRawDocumentsClient:
         dedup_mode: typing.Optional[DocumentsInitRequestDedupMode] = OMIT,
         doc_id: typing.Optional[str] = OMIT,
         upload_ttl_sec: typing.Optional[float] = OMIT,
+        upload_preference: typing.Optional[DocumentsInitRequestUploadPreference] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocumentsInit200Response]:
         """
@@ -1072,6 +1101,8 @@ class AsyncRawDocumentsClient:
 
         upload_ttl_sec : typing.Optional[float]
 
+        upload_preference : typing.Optional[DocumentsInitRequestUploadPreference]
+
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
@@ -1091,6 +1122,7 @@ class AsyncRawDocumentsClient:
                 "dedupMode": dedup_mode,
                 "docId": doc_id,
                 "uploadTtlSec": upload_ttl_sec,
+                "uploadPreference": upload_preference,
             },
             headers={
                 "content-type": "application/json",

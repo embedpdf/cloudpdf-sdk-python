@@ -10,6 +10,7 @@ DocAnnotationsDelete404ResponseCode = typing.Union[
         "DocOpenFailed",
         "DocPasswordRequired",
         "DocPasswordIncorrect",
+        "SharePasswordRequired",
         "Aborted",
         "Network",
         "Unauthenticated",
