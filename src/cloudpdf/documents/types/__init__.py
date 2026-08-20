@@ -6,10 +6,28 @@ import typing
 from importlib import import_module
 
 if typing.TYPE_CHECKING:
+    from .documents_import_from_request_dedup_mode import DocumentsImportFromRequestDedupMode
+    from .documents_import_from_request_expected import DocumentsImportFromRequestExpected
+    from .documents_import_from_request_mode import DocumentsImportFromRequestMode
+    from .documents_import_from_request_source import (
+        DocumentsImportFromRequestSource,
+        DocumentsImportFromRequestSource_Connection,
+        DocumentsImportFromRequestSource_Url,
+    )
+    from .documents_import_from_request_source_connection import DocumentsImportFromRequestSourceConnection
+    from .documents_import_from_request_source_url import DocumentsImportFromRequestSourceUrl
     from .documents_init_request_dedup_mode import DocumentsInitRequestDedupMode
     from .documents_init_request_upload_preference import DocumentsInitRequestUploadPreference
     from .list_documents_request_state import ListDocumentsRequestState
 _dynamic_imports: typing.Dict[str, str] = {
+    "DocumentsImportFromRequestDedupMode": ".documents_import_from_request_dedup_mode",
+    "DocumentsImportFromRequestExpected": ".documents_import_from_request_expected",
+    "DocumentsImportFromRequestMode": ".documents_import_from_request_mode",
+    "DocumentsImportFromRequestSource": ".documents_import_from_request_source",
+    "DocumentsImportFromRequestSourceConnection": ".documents_import_from_request_source_connection",
+    "DocumentsImportFromRequestSourceUrl": ".documents_import_from_request_source_url",
+    "DocumentsImportFromRequestSource_Connection": ".documents_import_from_request_source",
+    "DocumentsImportFromRequestSource_Url": ".documents_import_from_request_source",
     "DocumentsInitRequestDedupMode": ".documents_init_request_dedup_mode",
     "DocumentsInitRequestUploadPreference": ".documents_init_request_upload_preference",
     "ListDocumentsRequestState": ".list_documents_request_state",
@@ -37,4 +55,16 @@ def __dir__():
     return sorted(lazy_attrs)
 
 
-__all__ = ["DocumentsInitRequestDedupMode", "DocumentsInitRequestUploadPreference", "ListDocumentsRequestState"]
+__all__ = [
+    "DocumentsImportFromRequestDedupMode",
+    "DocumentsImportFromRequestExpected",
+    "DocumentsImportFromRequestMode",
+    "DocumentsImportFromRequestSource",
+    "DocumentsImportFromRequestSourceConnection",
+    "DocumentsImportFromRequestSourceUrl",
+    "DocumentsImportFromRequestSource_Connection",
+    "DocumentsImportFromRequestSource_Url",
+    "DocumentsInitRequestDedupMode",
+    "DocumentsInitRequestUploadPreference",
+    "ListDocumentsRequestState",
+]

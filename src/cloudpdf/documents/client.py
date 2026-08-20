@@ -7,10 +7,15 @@ from ..core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ..core.request_options import RequestOptions
 from ..types.documents_commit200response import DocumentsCommit200Response
 from ..types.documents_get200response import DocumentsGet200Response
+from ..types.documents_import_from200response import DocumentsImportFrom200Response
 from ..types.documents_init200response import DocumentsInit200Response
 from ..types.documents_list200response import DocumentsList200Response
 from ..types.documents_upload_proxy200response import DocumentsUploadProxy200Response
 from .raw_client import AsyncRawDocumentsClient, RawDocumentsClient
+from .types.documents_import_from_request_dedup_mode import DocumentsImportFromRequestDedupMode
+from .types.documents_import_from_request_expected import DocumentsImportFromRequestExpected
+from .types.documents_import_from_request_mode import DocumentsImportFromRequestMode
+from .types.documents_import_from_request_source import DocumentsImportFromRequestSource
 from .types.documents_init_request_dedup_mode import DocumentsInitRequestDedupMode
 from .types.documents_init_request_upload_preference import DocumentsInitRequestUploadPreference
 from .types.list_documents_request_state import ListDocumentsRequestState
@@ -286,6 +291,77 @@ class DocumentsClient:
         )
         """
         _response = self._raw_client.upload_proxy(tenant_id, id, file=file, request_options=request_options)
+        return _response.data
+
+    def import_from(
+        self,
+        tenant_id: str,
+        *,
+        source: DocumentsImportFromRequestSource,
+        expected: typing.Optional[DocumentsImportFromRequestExpected] = OMIT,
+        metadata: typing.Optional[typing.Dict[str, typing.Any]] = OMIT,
+        idempotency_key: typing.Optional[str] = OMIT,
+        dedup_mode: typing.Optional[DocumentsImportFromRequestDedupMode] = OMIT,
+        doc_id: typing.Optional[str] = OMIT,
+        mode: typing.Optional[DocumentsImportFromRequestMode] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocumentsImportFrom200Response:
+        """
+        Default mode is synchronous and bounded: the response returns only after the transfer verified and committed (or failed). mode=async (connection sources only) answers 202 immediately and an in-process worker performs the transfer with leased, fenced retries; poll the document until ready/failed. The deployment import policy gates scheme, network range, and size; sources must declare a length. CloudPDF copies and owns the bytes — the source is never referenced in place. A 502 marks a retryable upstream failure: retry with the same idempotencyKey to resume the same document. URL sources are capabilities and never echoed back. Connection sources name operator-registered storage (bucket/prefix scope, allowed credential classes, and tenant bindings are deployment configuration); `revision` is provider-interpreted (S3 VersionId, GCS generation, Azure version id).
+
+        Parameters
+        ----------
+        tenant_id : str
+
+        source : DocumentsImportFromRequestSource
+
+        expected : typing.Optional[DocumentsImportFromRequestExpected]
+
+        metadata : typing.Optional[typing.Dict[str, typing.Any]]
+
+        idempotency_key : typing.Optional[str]
+
+        dedup_mode : typing.Optional[DocumentsImportFromRequestDedupMode]
+
+        doc_id : typing.Optional[str]
+
+        mode : typing.Optional[DocumentsImportFromRequestMode]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocumentsImportFrom200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+        from cloudpdf.documents import DocumentsImportFromRequestSource_Url
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.documents.import_from(
+            tenant_id="tenantId",
+            source=DocumentsImportFromRequestSource_Url(
+                url="url",
+            ),
+        )
+        """
+        _response = self._raw_client.import_from(
+            tenant_id,
+            source=source,
+            expected=expected,
+            metadata=metadata,
+            idempotency_key=idempotency_key,
+            dedup_mode=dedup_mode,
+            doc_id=doc_id,
+            mode=mode,
+            request_options=request_options,
+        )
         return _response.data
 
     def init(
@@ -685,6 +761,85 @@ class AsyncDocumentsClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.upload_proxy(tenant_id, id, file=file, request_options=request_options)
+        return _response.data
+
+    async def import_from(
+        self,
+        tenant_id: str,
+        *,
+        source: DocumentsImportFromRequestSource,
+        expected: typing.Optional[DocumentsImportFromRequestExpected] = OMIT,
+        metadata: typing.Optional[typing.Dict[str, typing.Any]] = OMIT,
+        idempotency_key: typing.Optional[str] = OMIT,
+        dedup_mode: typing.Optional[DocumentsImportFromRequestDedupMode] = OMIT,
+        doc_id: typing.Optional[str] = OMIT,
+        mode: typing.Optional[DocumentsImportFromRequestMode] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocumentsImportFrom200Response:
+        """
+        Default mode is synchronous and bounded: the response returns only after the transfer verified and committed (or failed). mode=async (connection sources only) answers 202 immediately and an in-process worker performs the transfer with leased, fenced retries; poll the document until ready/failed. The deployment import policy gates scheme, network range, and size; sources must declare a length. CloudPDF copies and owns the bytes — the source is never referenced in place. A 502 marks a retryable upstream failure: retry with the same idempotencyKey to resume the same document. URL sources are capabilities and never echoed back. Connection sources name operator-registered storage (bucket/prefix scope, allowed credential classes, and tenant bindings are deployment configuration); `revision` is provider-interpreted (S3 VersionId, GCS generation, Azure version id).
+
+        Parameters
+        ----------
+        tenant_id : str
+
+        source : DocumentsImportFromRequestSource
+
+        expected : typing.Optional[DocumentsImportFromRequestExpected]
+
+        metadata : typing.Optional[typing.Dict[str, typing.Any]]
+
+        idempotency_key : typing.Optional[str]
+
+        dedup_mode : typing.Optional[DocumentsImportFromRequestDedupMode]
+
+        doc_id : typing.Optional[str]
+
+        mode : typing.Optional[DocumentsImportFromRequestMode]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocumentsImportFrom200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+        from cloudpdf.documents import DocumentsImportFromRequestSource_Url
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.documents.import_from(
+                tenant_id="tenantId",
+                source=DocumentsImportFromRequestSource_Url(
+                    url="url",
+                ),
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.import_from(
+            tenant_id,
+            source=source,
+            expected=expected,
+            metadata=metadata,
+            idempotency_key=idempotency_key,
+            dedup_mode=dedup_mode,
+            doc_id=doc_id,
+            mode=mode,
+            request_options=request_options,
+        )
         return _response.data
 
     async def init(

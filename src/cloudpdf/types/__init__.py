@@ -5254,6 +5254,26 @@ if typing.TYPE_CHECKING:
     from .documents_get403response_error import DocumentsGet403ResponseError
     from .documents_get404response import DocumentsGet404Response
     from .documents_get404response_error import DocumentsGet404ResponseError
+    from .documents_import_from200response import DocumentsImportFrom200Response
+    from .documents_import_from200response_document import DocumentsImportFrom200ResponseDocument
+    from .documents_import_from200response_document_state import DocumentsImportFrom200ResponseDocumentState
+    from .documents_import_from200response_document_thumbnail_state import (
+        DocumentsImportFrom200ResponseDocumentThumbnailState,
+    )
+    from .documents_import_from200response_tag import DocumentsImportFrom200ResponseTag
+    from .documents_import_from202response import DocumentsImportFrom202Response
+    from .documents_import_from202response_document import DocumentsImportFrom202ResponseDocument
+    from .documents_import_from202response_document_state import DocumentsImportFrom202ResponseDocumentState
+    from .documents_import_from202response_document_thumbnail_state import (
+        DocumentsImportFrom202ResponseDocumentThumbnailState,
+    )
+    from .documents_import_from202response_tag import DocumentsImportFrom202ResponseTag
+    from .documents_import_from400response import DocumentsImportFrom400Response
+    from .documents_import_from400response_error import DocumentsImportFrom400ResponseError
+    from .documents_import_from403response import DocumentsImportFrom403Response
+    from .documents_import_from403response_error import DocumentsImportFrom403ResponseError
+    from .documents_import_from502response import DocumentsImportFrom502Response
+    from .documents_import_from502response_error import DocumentsImportFrom502ResponseError
     from .documents_init200response import (
         DocumentsInit200Response,
         DocumentsInit200Response_Created,
@@ -7484,6 +7504,22 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocumentsGet403ResponseError": ".documents_get403response_error",
     "DocumentsGet404Response": ".documents_get404response",
     "DocumentsGet404ResponseError": ".documents_get404response_error",
+    "DocumentsImportFrom200Response": ".documents_import_from200response",
+    "DocumentsImportFrom200ResponseDocument": ".documents_import_from200response_document",
+    "DocumentsImportFrom200ResponseDocumentState": ".documents_import_from200response_document_state",
+    "DocumentsImportFrom200ResponseDocumentThumbnailState": ".documents_import_from200response_document_thumbnail_state",
+    "DocumentsImportFrom200ResponseTag": ".documents_import_from200response_tag",
+    "DocumentsImportFrom202Response": ".documents_import_from202response",
+    "DocumentsImportFrom202ResponseDocument": ".documents_import_from202response_document",
+    "DocumentsImportFrom202ResponseDocumentState": ".documents_import_from202response_document_state",
+    "DocumentsImportFrom202ResponseDocumentThumbnailState": ".documents_import_from202response_document_thumbnail_state",
+    "DocumentsImportFrom202ResponseTag": ".documents_import_from202response_tag",
+    "DocumentsImportFrom400Response": ".documents_import_from400response",
+    "DocumentsImportFrom400ResponseError": ".documents_import_from400response_error",
+    "DocumentsImportFrom403Response": ".documents_import_from403response",
+    "DocumentsImportFrom403ResponseError": ".documents_import_from403response_error",
+    "DocumentsImportFrom502Response": ".documents_import_from502response",
+    "DocumentsImportFrom502ResponseError": ".documents_import_from502response_error",
     "DocumentsInit200Response": ".documents_init200response",
     "DocumentsInit200ResponseCreated": ".documents_init200response_created",
     "DocumentsInit200ResponseCreatedDocument": ".documents_init200response_created_document",
@@ -9718,6 +9754,22 @@ __all__ = [
     "DocumentsGet403ResponseError",
     "DocumentsGet404Response",
     "DocumentsGet404ResponseError",
+    "DocumentsImportFrom200Response",
+    "DocumentsImportFrom200ResponseDocument",
+    "DocumentsImportFrom200ResponseDocumentState",
+    "DocumentsImportFrom200ResponseDocumentThumbnailState",
+    "DocumentsImportFrom200ResponseTag",
+    "DocumentsImportFrom202Response",
+    "DocumentsImportFrom202ResponseDocument",
+    "DocumentsImportFrom202ResponseDocumentState",
+    "DocumentsImportFrom202ResponseDocumentThumbnailState",
+    "DocumentsImportFrom202ResponseTag",
+    "DocumentsImportFrom400Response",
+    "DocumentsImportFrom400ResponseError",
+    "DocumentsImportFrom403Response",
+    "DocumentsImportFrom403ResponseError",
+    "DocumentsImportFrom502Response",
+    "DocumentsImportFrom502ResponseError",
     "DocumentsInit200Response",
     "DocumentsInit200ResponseCreated",
     "DocumentsInit200ResponseCreatedDocument",

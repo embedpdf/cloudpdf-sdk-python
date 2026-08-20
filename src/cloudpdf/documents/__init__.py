@@ -6,8 +6,28 @@ import typing
 from importlib import import_module
 
 if typing.TYPE_CHECKING:
-    from .types import DocumentsInitRequestDedupMode, DocumentsInitRequestUploadPreference, ListDocumentsRequestState
+    from .types import (
+        DocumentsImportFromRequestDedupMode,
+        DocumentsImportFromRequestExpected,
+        DocumentsImportFromRequestMode,
+        DocumentsImportFromRequestSource,
+        DocumentsImportFromRequestSourceConnection,
+        DocumentsImportFromRequestSourceUrl,
+        DocumentsImportFromRequestSource_Connection,
+        DocumentsImportFromRequestSource_Url,
+        DocumentsInitRequestDedupMode,
+        DocumentsInitRequestUploadPreference,
+        ListDocumentsRequestState,
+    )
 _dynamic_imports: typing.Dict[str, str] = {
+    "DocumentsImportFromRequestDedupMode": ".types",
+    "DocumentsImportFromRequestExpected": ".types",
+    "DocumentsImportFromRequestMode": ".types",
+    "DocumentsImportFromRequestSource": ".types",
+    "DocumentsImportFromRequestSourceConnection": ".types",
+    "DocumentsImportFromRequestSourceUrl": ".types",
+    "DocumentsImportFromRequestSource_Connection": ".types",
+    "DocumentsImportFromRequestSource_Url": ".types",
     "DocumentsInitRequestDedupMode": ".types",
     "DocumentsInitRequestUploadPreference": ".types",
     "ListDocumentsRequestState": ".types",
@@ -35,4 +55,16 @@ def __dir__():
     return sorted(lazy_attrs)
 
 
-__all__ = ["DocumentsInitRequestDedupMode", "DocumentsInitRequestUploadPreference", "ListDocumentsRequestState"]
+__all__ = [
+    "DocumentsImportFromRequestDedupMode",
+    "DocumentsImportFromRequestExpected",
+    "DocumentsImportFromRequestMode",
+    "DocumentsImportFromRequestSource",
+    "DocumentsImportFromRequestSourceConnection",
+    "DocumentsImportFromRequestSourceUrl",
+    "DocumentsImportFromRequestSource_Connection",
+    "DocumentsImportFromRequestSource_Url",
+    "DocumentsInitRequestDedupMode",
+    "DocumentsInitRequestUploadPreference",
+    "ListDocumentsRequestState",
+]

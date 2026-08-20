@@ -33,12 +33,12 @@ class BaseClientWrapper:
         import platform
 
         headers: typing.Dict[str, str] = {
-            "User-Agent": "cloudpdf/3.0.0a5",
+            "User-Agent": "cloudpdf/3.0.0a6",
             "X-Fern-Language": "Python",
             "X-Fern-Runtime": f"python/{platform.python_version()}",
             "X-Fern-Platform": f"{platform.system().lower()}/{platform.release()}",
             "X-Fern-SDK-Name": "cloudpdf",
-            "X-Fern-SDK-Version": "3.0.0a5",
+            "X-Fern-SDK-Version": "3.0.0a6",
             **(self.get_custom_headers() or {}),
         }
         token = self._get_token()
