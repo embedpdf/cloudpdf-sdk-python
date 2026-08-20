@@ -12,16 +12,24 @@ from ..core.jsonable_encoder import encode_path_param
 from ..core.parse_error import ParsingError
 from ..core.pydantic_utilities import parse_obj_as
 from ..core.request_options import RequestOptions
+from ..core.serialization import convert_and_respect_annotation_metadata
+from ..errors.bad_gateway_error import BadGatewayError
 from ..errors.bad_request_error import BadRequestError
 from ..errors.conflict_error import ConflictError
 from ..errors.forbidden_error import ForbiddenError
 from ..errors.not_found_error import NotFoundError
 from ..types.documents_commit200response import DocumentsCommit200Response
 from ..types.documents_get200response import DocumentsGet200Response
+from ..types.documents_import_from200response import DocumentsImportFrom200Response
+from ..types.documents_import_from502response import DocumentsImportFrom502Response
 from ..types.documents_init200response import DocumentsInit200Response
 from ..types.documents_list200response import DocumentsList200Response
 from ..types.documents_upload_proxy200response import DocumentsUploadProxy200Response
 from ..types.documents_upload_proxy409response import DocumentsUploadProxy409Response
+from .types.documents_import_from_request_dedup_mode import DocumentsImportFromRequestDedupMode
+from .types.documents_import_from_request_expected import DocumentsImportFromRequestExpected
+from .types.documents_import_from_request_mode import DocumentsImportFromRequestMode
+from .types.documents_import_from_request_source import DocumentsImportFromRequestSource
 from .types.documents_init_request_dedup_mode import DocumentsInitRequestDedupMode
 from .types.documents_init_request_upload_preference import DocumentsInitRequestUploadPreference
 from .types.list_documents_request_state import ListDocumentsRequestState
@@ -489,6 +497,122 @@ class RawDocumentsClient:
                         DocumentsUploadProxy409Response,
                         parse_obj_as(
                             type_=DocumentsUploadProxy409Response,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    def import_from(
+        self,
+        tenant_id: str,
+        *,
+        source: DocumentsImportFromRequestSource,
+        expected: typing.Optional[DocumentsImportFromRequestExpected] = OMIT,
+        metadata: typing.Optional[typing.Dict[str, typing.Any]] = OMIT,
+        idempotency_key: typing.Optional[str] = OMIT,
+        dedup_mode: typing.Optional[DocumentsImportFromRequestDedupMode] = OMIT,
+        doc_id: typing.Optional[str] = OMIT,
+        mode: typing.Optional[DocumentsImportFromRequestMode] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> HttpResponse[DocumentsImportFrom200Response]:
+        """
+        Default mode is synchronous and bounded: the response returns only after the transfer verified and committed (or failed). mode=async (connection sources only) answers 202 immediately and an in-process worker performs the transfer with leased, fenced retries; poll the document until ready/failed. The deployment import policy gates scheme, network range, and size; sources must declare a length. CloudPDF copies and owns the bytes — the source is never referenced in place. A 502 marks a retryable upstream failure: retry with the same idempotencyKey to resume the same document. URL sources are capabilities and never echoed back. Connection sources name operator-registered storage (bucket/prefix scope, allowed credential classes, and tenant bindings are deployment configuration); `revision` is provider-interpreted (S3 VersionId, GCS generation, Azure version id).
+
+        Parameters
+        ----------
+        tenant_id : str
+
+        source : DocumentsImportFromRequestSource
+
+        expected : typing.Optional[DocumentsImportFromRequestExpected]
+
+        metadata : typing.Optional[typing.Dict[str, typing.Any]]
+
+        idempotency_key : typing.Optional[str]
+
+        dedup_mode : typing.Optional[DocumentsImportFromRequestDedupMode]
+
+        doc_id : typing.Optional[str]
+
+        mode : typing.Optional[DocumentsImportFromRequestMode]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        HttpResponse[DocumentsImportFrom200Response]
+            OK
+        """
+        _response = self._client_wrapper.httpx_client.request(
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/import",
+            method="POST",
+            json={
+                "source": convert_and_respect_annotation_metadata(
+                    object_=source, annotation=DocumentsImportFromRequestSource, direction="write"
+                ),
+                "expected": convert_and_respect_annotation_metadata(
+                    object_=expected, annotation=DocumentsImportFromRequestExpected, direction="write"
+                ),
+                "metadata": metadata,
+                "idempotencyKey": idempotency_key,
+                "dedupMode": dedup_mode,
+                "docId": doc_id,
+                "mode": mode,
+            },
+            headers={
+                "content-type": "application/json",
+            },
+            request_options=request_options,
+            omit=OMIT,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocumentsImportFrom200Response,
+                    parse_obj_as(
+                        type_=DocumentsImportFrom200Response,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return HttpResponse(response=_response, data=_data)
+            if _response.status_code == 400:
+                raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 403:
+                raise ForbiddenError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 502:
+                raise BadGatewayError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        DocumentsImportFrom502Response,
+                        parse_obj_as(
+                            type_=DocumentsImportFrom502Response,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1055,6 +1179,122 @@ class AsyncRawDocumentsClient:
                         DocumentsUploadProxy409Response,
                         parse_obj_as(
                             type_=DocumentsUploadProxy409Response,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    async def import_from(
+        self,
+        tenant_id: str,
+        *,
+        source: DocumentsImportFromRequestSource,
+        expected: typing.Optional[DocumentsImportFromRequestExpected] = OMIT,
+        metadata: typing.Optional[typing.Dict[str, typing.Any]] = OMIT,
+        idempotency_key: typing.Optional[str] = OMIT,
+        dedup_mode: typing.Optional[DocumentsImportFromRequestDedupMode] = OMIT,
+        doc_id: typing.Optional[str] = OMIT,
+        mode: typing.Optional[DocumentsImportFromRequestMode] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> AsyncHttpResponse[DocumentsImportFrom200Response]:
+        """
+        Default mode is synchronous and bounded: the response returns only after the transfer verified and committed (or failed). mode=async (connection sources only) answers 202 immediately and an in-process worker performs the transfer with leased, fenced retries; poll the document until ready/failed. The deployment import policy gates scheme, network range, and size; sources must declare a length. CloudPDF copies and owns the bytes — the source is never referenced in place. A 502 marks a retryable upstream failure: retry with the same idempotencyKey to resume the same document. URL sources are capabilities and never echoed back. Connection sources name operator-registered storage (bucket/prefix scope, allowed credential classes, and tenant bindings are deployment configuration); `revision` is provider-interpreted (S3 VersionId, GCS generation, Azure version id).
+
+        Parameters
+        ----------
+        tenant_id : str
+
+        source : DocumentsImportFromRequestSource
+
+        expected : typing.Optional[DocumentsImportFromRequestExpected]
+
+        metadata : typing.Optional[typing.Dict[str, typing.Any]]
+
+        idempotency_key : typing.Optional[str]
+
+        dedup_mode : typing.Optional[DocumentsImportFromRequestDedupMode]
+
+        doc_id : typing.Optional[str]
+
+        mode : typing.Optional[DocumentsImportFromRequestMode]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        AsyncHttpResponse[DocumentsImportFrom200Response]
+            OK
+        """
+        _response = await self._client_wrapper.httpx_client.request(
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/import",
+            method="POST",
+            json={
+                "source": convert_and_respect_annotation_metadata(
+                    object_=source, annotation=DocumentsImportFromRequestSource, direction="write"
+                ),
+                "expected": convert_and_respect_annotation_metadata(
+                    object_=expected, annotation=DocumentsImportFromRequestExpected, direction="write"
+                ),
+                "metadata": metadata,
+                "idempotencyKey": idempotency_key,
+                "dedupMode": dedup_mode,
+                "docId": doc_id,
+                "mode": mode,
+            },
+            headers={
+                "content-type": "application/json",
+            },
+            request_options=request_options,
+            omit=OMIT,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocumentsImportFrom200Response,
+                    parse_obj_as(
+                        type_=DocumentsImportFrom200Response,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return AsyncHttpResponse(response=_response, data=_data)
+            if _response.status_code == 400:
+                raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 403:
+                raise ForbiddenError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 502:
+                raise BadGatewayError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        DocumentsImportFrom502Response,
+                        parse_obj_as(
+                            type_=DocumentsImportFrom502Response,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

@@ -1987,6 +1987,138 @@ client.documents.upload_proxy(
 </dl>
 </details>
 
+<details><summary><code>client.documents.<a href="src/cloudpdf/documents/client.py">import_from</a>(...) -> DocumentsImportFrom200Response</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Default mode is synchronous and bounded: the response returns only after the transfer verified and committed (or failed). mode=async (connection sources only) answers 202 immediately and an in-process worker performs the transfer with leased, fenced retries; poll the document until ready/failed. The deployment import policy gates scheme, network range, and size; sources must declare a length. CloudPDF copies and owns the bytes — the source is never referenced in place. A 502 marks a retryable upstream failure: retry with the same idempotencyKey to resume the same document. URL sources are capabilities and never echoed back. Connection sources name operator-registered storage (bucket/prefix scope, allowed credential classes, and tenant bindings are deployment configuration); `revision` is provider-interpreted (S3 VersionId, GCS generation, Azure version id).
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+from cloudpdf.documents import DocumentsImportFromRequestSource_Url
+
+client = CloudPDFClient(
+    token="<token>",
+    base_url="https://yourhost.com/path/to/api",
+)
+
+client.documents.import_from(
+    tenant_id="tenantId",
+    source=DocumentsImportFromRequestSource_Url(
+        url="url",
+    ),
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**tenant_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**source:** `DocumentsImportFromRequestSource` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**expected:** `typing.Optional[DocumentsImportFromRequestExpected]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**metadata:** `typing.Optional[typing.Dict[str, typing.Any]]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**idempotency_key:** `typing.Optional[str]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**dedup_mode:** `typing.Optional[DocumentsImportFromRequestDedupMode]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**doc_id:** `typing.Optional[str]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**mode:** `typing.Optional[DocumentsImportFromRequestMode]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 <details><summary><code>client.documents.<a href="src/cloudpdf/documents/client.py">init</a>(...) -> DocumentsInit200Response</code></summary>
 <dl>
 <dd>

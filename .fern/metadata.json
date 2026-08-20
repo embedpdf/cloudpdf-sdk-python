@@ -7,9 +7,9 @@
     "client_class_name": "CloudPDFClient",
     "environment_class_name": "CloudPDFEnvironment"
   },
-  "originGitCommit": "81e6a2097d2997ef713a3013668e5eae0e748575",
+  "originGitCommit": "32635f40577b214f6a6b3189a2271425c3a574fd",
   "originGitCommitIsDirty": false,
   "invokedBy": "ci",
-  "requestedVersion": "3.0.0a5",
+  "requestedVersion": "3.0.0a6",
   "ciProvider": "github"
 }
