@@ -2051,7 +2051,7 @@ client.documents.import_from(
 <dl>
 <dd>
 
-**source:** `DocumentsImportFromRequestSource` 
+**source:** `DocumentsImportFromRequestSource` — Where CloudPDF pulls the bytes from. The two shapes differ in WHO supplies the authority to read, not in which storage vendor holds the file.
     
 </dd>
 </dl>
@@ -2059,7 +2059,7 @@ client.documents.import_from(
 <dl>
 <dd>
 
-**expected:** `typing.Optional[DocumentsImportFromRequestExpected]` 
+**expected:** `typing.Optional[DocumentsImportFromRequestExpected]` — Integrity pins, enforced when present. When absent, the server-observed values become authoritative.
     
 </dd>
 </dl>
@@ -2075,7 +2075,7 @@ client.documents.import_from(
 <dl>
 <dd>
 
-**idempotency_key:** `typing.Optional[str]` 
+**idempotency_key:** `typing.Optional[str]` — Retrying with the same key resumes the same document rather than importing a second copy — including after a 502.
     
 </dd>
 </dl>
@@ -2083,7 +2083,7 @@ client.documents.import_from(
 <dl>
 <dd>
 
-**dedup_mode:** `typing.Optional[DocumentsImportFromRequestDedupMode]` 
+**dedup_mode:** `typing.Optional[DocumentsImportFromRequestDedupMode]` — always-create (default) creates a new document every time. reuse-existing returns a document that already holds the same content instead of storing it twice.
     
 </dd>
 </dl>
@@ -2099,7 +2099,7 @@ client.documents.import_from(
 <dl>
 <dd>
 
-**mode:** `typing.Optional[DocumentsImportFromRequestMode]` 
+**mode:** `typing.Optional[DocumentsImportFromRequestMode]` — sync (default) holds the response open for the whole transfer. async answers 202 with the document pending and transfers in the background; it requires a connection source, and filesystem connections additionally require expected.sha256.
     
 </dd>
 </dl>
@@ -2199,7 +2199,7 @@ client.documents.init(
 <dl>
 <dd>
 
-**dedup_mode:** `typing.Optional[DocumentsInitRequestDedupMode]` 
+**dedup_mode:** `typing.Optional[DocumentsInitRequestDedupMode]` — always-create (default) creates a new document every time. reuse-existing returns a document that already holds the same content instead of storing it twice.
     
 </dd>
 </dl>
