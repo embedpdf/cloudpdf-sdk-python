@@ -314,18 +314,23 @@ class DocumentsClient:
         tenant_id : str
 
         source : DocumentsImportFromRequestSource
+            Where CloudPDF pulls the bytes from. The two shapes differ in WHO supplies the authority to read, not in which storage vendor holds the file.
 
         expected : typing.Optional[DocumentsImportFromRequestExpected]
+            Integrity pins, enforced when present. When absent, the server-observed values become authoritative.
 
         metadata : typing.Optional[typing.Dict[str, typing.Any]]
 
         idempotency_key : typing.Optional[str]
+            Retrying with the same key resumes the same document rather than importing a second copy — including after a 502.
 
         dedup_mode : typing.Optional[DocumentsImportFromRequestDedupMode]
+            always-create (default) creates a new document every time. reuse-existing returns a document that already holds the same content instead of storing it twice.
 
         doc_id : typing.Optional[str]
 
         mode : typing.Optional[DocumentsImportFromRequestMode]
+            sync (default) holds the response open for the whole transfer. async answers 202 with the document pending and transfers in the background; it requires a connection source, and filesystem connections additionally require expected.sha256.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -392,6 +397,7 @@ class DocumentsClient:
         idempotency_key : typing.Optional[str]
 
         dedup_mode : typing.Optional[DocumentsInitRequestDedupMode]
+            always-create (default) creates a new document every time. reuse-existing returns a document that already holds the same content instead of storing it twice.
 
         doc_id : typing.Optional[str]
 
@@ -784,18 +790,23 @@ class AsyncDocumentsClient:
         tenant_id : str
 
         source : DocumentsImportFromRequestSource
+            Where CloudPDF pulls the bytes from. The two shapes differ in WHO supplies the authority to read, not in which storage vendor holds the file.
 
         expected : typing.Optional[DocumentsImportFromRequestExpected]
+            Integrity pins, enforced when present. When absent, the server-observed values become authoritative.
 
         metadata : typing.Optional[typing.Dict[str, typing.Any]]
 
         idempotency_key : typing.Optional[str]
+            Retrying with the same key resumes the same document rather than importing a second copy — including after a 502.
 
         dedup_mode : typing.Optional[DocumentsImportFromRequestDedupMode]
+            always-create (default) creates a new document every time. reuse-existing returns a document that already holds the same content instead of storing it twice.
 
         doc_id : typing.Optional[str]
 
         mode : typing.Optional[DocumentsImportFromRequestMode]
+            sync (default) holds the response open for the whole transfer. async answers 202 with the document pending and transfers in the background; it requires a connection source, and filesystem connections additionally require expected.sha256.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -870,6 +881,7 @@ class AsyncDocumentsClient:
         idempotency_key : typing.Optional[str]
 
         dedup_mode : typing.Optional[DocumentsInitRequestDedupMode]
+            always-create (default) creates a new document every time. reuse-existing returns a document that already holds the same content instead of storing it twice.
 
         doc_id : typing.Optional[str]
 
