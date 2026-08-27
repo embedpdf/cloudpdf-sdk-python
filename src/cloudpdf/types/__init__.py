@@ -5099,6 +5099,13 @@ if typing.TYPE_CHECKING:
     from .doc_pages_delete404response_code import DocPagesDelete404ResponseCode
     from .doc_pages_delete404response_name import DocPagesDelete404ResponseName
     from .doc_pages_delete_request import DocPagesDeleteRequest
+    from .doc_pages_extract400response import DocPagesExtract400Response
+    from .doc_pages_extract400response_code import DocPagesExtract400ResponseCode
+    from .doc_pages_extract400response_name import DocPagesExtract400ResponseName
+    from .doc_pages_extract404response import DocPagesExtract404Response
+    from .doc_pages_extract404response_code import DocPagesExtract404ResponseCode
+    from .doc_pages_extract404response_name import DocPagesExtract404ResponseName
+    from .doc_pages_extract_request import DocPagesExtractRequest
     from .doc_pages_flatten200response import DocPagesFlatten200Response
     from .doc_pages_flatten200response_meta import DocPagesFlatten200ResponseMeta
     from .doc_pages_flatten200response_meta_affected_pages_item import DocPagesFlatten200ResponseMetaAffectedPagesItem
@@ -5130,6 +5137,69 @@ if typing.TYPE_CHECKING:
     from .doc_pages_flatten404response_code import DocPagesFlatten404ResponseCode
     from .doc_pages_flatten404response_name import DocPagesFlatten404ResponseName
     from .doc_pages_flatten_request import DocPagesFlattenRequest
+    from .doc_pages_insert200response import DocPagesInsert200Response
+    from .doc_pages_insert200response_meta import DocPagesInsert200ResponseMeta
+    from .doc_pages_insert200response_meta_affected_pages_item import DocPagesInsert200ResponseMetaAffectedPagesItem
+    from .doc_pages_insert200response_meta_affected_pages_item_revision import (
+        DocPagesInsert200ResponseMetaAffectedPagesItemRevision,
+    )
+    from .doc_pages_insert200response_meta_affected_pages_item_weak_annotation_state import (
+        DocPagesInsert200ResponseMetaAffectedPagesItemWeakAnnotationState,
+        DocPagesInsert200ResponseMetaAffectedPagesItemWeakAnnotationState_Known,
+        DocPagesInsert200ResponseMetaAffectedPagesItemWeakAnnotationState_Unknown,
+    )
+    from .doc_pages_insert200response_meta_affected_pages_item_weak_annotation_state_known import (
+        DocPagesInsert200ResponseMetaAffectedPagesItemWeakAnnotationStateKnown,
+    )
+    from .doc_pages_insert200response_meta_affected_pages_item_weak_annotation_state_unknown import (
+        DocPagesInsert200ResponseMetaAffectedPagesItemWeakAnnotationStateUnknown,
+    )
+    from .doc_pages_insert200response_meta_cache_delta import DocPagesInsert200ResponseMetaCacheDelta
+    from .doc_pages_insert200response_meta_cache_delta_pages_item import (
+        DocPagesInsert200ResponseMetaCacheDeltaPagesItem,
+    )
+    from .doc_pages_insert200response_meta_cache_delta_pages_item_cache import (
+        DocPagesInsert200ResponseMetaCacheDeltaPagesItemCache,
+    )
+    from .doc_pages_insert400response import DocPagesInsert400Response
+    from .doc_pages_insert400response_code import DocPagesInsert400ResponseCode
+    from .doc_pages_insert400response_name import DocPagesInsert400ResponseName
+    from .doc_pages_insert404response import DocPagesInsert404Response
+    from .doc_pages_insert404response_code import DocPagesInsert404ResponseCode
+    from .doc_pages_insert404response_name import DocPagesInsert404ResponseName
+    from .doc_pages_insert_blank200response import DocPagesInsertBlank200Response
+    from .doc_pages_insert_blank200response_meta import DocPagesInsertBlank200ResponseMeta
+    from .doc_pages_insert_blank200response_meta_affected_pages_item import (
+        DocPagesInsertBlank200ResponseMetaAffectedPagesItem,
+    )
+    from .doc_pages_insert_blank200response_meta_affected_pages_item_revision import (
+        DocPagesInsertBlank200ResponseMetaAffectedPagesItemRevision,
+    )
+    from .doc_pages_insert_blank200response_meta_affected_pages_item_weak_annotation_state import (
+        DocPagesInsertBlank200ResponseMetaAffectedPagesItemWeakAnnotationState,
+        DocPagesInsertBlank200ResponseMetaAffectedPagesItemWeakAnnotationState_Known,
+        DocPagesInsertBlank200ResponseMetaAffectedPagesItemWeakAnnotationState_Unknown,
+    )
+    from .doc_pages_insert_blank200response_meta_affected_pages_item_weak_annotation_state_known import (
+        DocPagesInsertBlank200ResponseMetaAffectedPagesItemWeakAnnotationStateKnown,
+    )
+    from .doc_pages_insert_blank200response_meta_affected_pages_item_weak_annotation_state_unknown import (
+        DocPagesInsertBlank200ResponseMetaAffectedPagesItemWeakAnnotationStateUnknown,
+    )
+    from .doc_pages_insert_blank200response_meta_cache_delta import DocPagesInsertBlank200ResponseMetaCacheDelta
+    from .doc_pages_insert_blank200response_meta_cache_delta_pages_item import (
+        DocPagesInsertBlank200ResponseMetaCacheDeltaPagesItem,
+    )
+    from .doc_pages_insert_blank200response_meta_cache_delta_pages_item_cache import (
+        DocPagesInsertBlank200ResponseMetaCacheDeltaPagesItemCache,
+    )
+    from .doc_pages_insert_blank400response import DocPagesInsertBlank400Response
+    from .doc_pages_insert_blank400response_code import DocPagesInsertBlank400ResponseCode
+    from .doc_pages_insert_blank400response_name import DocPagesInsertBlank400ResponseName
+    from .doc_pages_insert_blank404response import DocPagesInsertBlank404Response
+    from .doc_pages_insert_blank404response_code import DocPagesInsertBlank404ResponseCode
+    from .doc_pages_insert_blank404response_name import DocPagesInsertBlank404ResponseName
+    from .doc_pages_insert_blank_request import DocPagesInsertBlankRequest
     from .doc_pages_move200response import DocPagesMove200Response
     from .doc_pages_move200response_meta import DocPagesMove200ResponseMeta
     from .doc_pages_move200response_meta_affected_pages_item import DocPagesMove200ResponseMetaAffectedPagesItem
@@ -7397,6 +7467,13 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocPagesDelete404ResponseCode": ".doc_pages_delete404response_code",
     "DocPagesDelete404ResponseName": ".doc_pages_delete404response_name",
     "DocPagesDeleteRequest": ".doc_pages_delete_request",
+    "DocPagesExtract400Response": ".doc_pages_extract400response",
+    "DocPagesExtract400ResponseCode": ".doc_pages_extract400response_code",
+    "DocPagesExtract400ResponseName": ".doc_pages_extract400response_name",
+    "DocPagesExtract404Response": ".doc_pages_extract404response",
+    "DocPagesExtract404ResponseCode": ".doc_pages_extract404response_code",
+    "DocPagesExtract404ResponseName": ".doc_pages_extract404response_name",
+    "DocPagesExtractRequest": ".doc_pages_extract_request",
     "DocPagesFlatten200Response": ".doc_pages_flatten200response",
     "DocPagesFlatten200ResponseMeta": ".doc_pages_flatten200response_meta",
     "DocPagesFlatten200ResponseMetaAffectedPagesItem": ".doc_pages_flatten200response_meta_affected_pages_item",
@@ -7416,6 +7493,43 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocPagesFlatten404ResponseCode": ".doc_pages_flatten404response_code",
     "DocPagesFlatten404ResponseName": ".doc_pages_flatten404response_name",
     "DocPagesFlattenRequest": ".doc_pages_flatten_request",
+    "DocPagesInsert200Response": ".doc_pages_insert200response",
+    "DocPagesInsert200ResponseMeta": ".doc_pages_insert200response_meta",
+    "DocPagesInsert200ResponseMetaAffectedPagesItem": ".doc_pages_insert200response_meta_affected_pages_item",
+    "DocPagesInsert200ResponseMetaAffectedPagesItemRevision": ".doc_pages_insert200response_meta_affected_pages_item_revision",
+    "DocPagesInsert200ResponseMetaAffectedPagesItemWeakAnnotationState": ".doc_pages_insert200response_meta_affected_pages_item_weak_annotation_state",
+    "DocPagesInsert200ResponseMetaAffectedPagesItemWeakAnnotationStateKnown": ".doc_pages_insert200response_meta_affected_pages_item_weak_annotation_state_known",
+    "DocPagesInsert200ResponseMetaAffectedPagesItemWeakAnnotationStateUnknown": ".doc_pages_insert200response_meta_affected_pages_item_weak_annotation_state_unknown",
+    "DocPagesInsert200ResponseMetaAffectedPagesItemWeakAnnotationState_Known": ".doc_pages_insert200response_meta_affected_pages_item_weak_annotation_state",
+    "DocPagesInsert200ResponseMetaAffectedPagesItemWeakAnnotationState_Unknown": ".doc_pages_insert200response_meta_affected_pages_item_weak_annotation_state",
+    "DocPagesInsert200ResponseMetaCacheDelta": ".doc_pages_insert200response_meta_cache_delta",
+    "DocPagesInsert200ResponseMetaCacheDeltaPagesItem": ".doc_pages_insert200response_meta_cache_delta_pages_item",
+    "DocPagesInsert200ResponseMetaCacheDeltaPagesItemCache": ".doc_pages_insert200response_meta_cache_delta_pages_item_cache",
+    "DocPagesInsert400Response": ".doc_pages_insert400response",
+    "DocPagesInsert400ResponseCode": ".doc_pages_insert400response_code",
+    "DocPagesInsert400ResponseName": ".doc_pages_insert400response_name",
+    "DocPagesInsert404Response": ".doc_pages_insert404response",
+    "DocPagesInsert404ResponseCode": ".doc_pages_insert404response_code",
+    "DocPagesInsert404ResponseName": ".doc_pages_insert404response_name",
+    "DocPagesInsertBlank200Response": ".doc_pages_insert_blank200response",
+    "DocPagesInsertBlank200ResponseMeta": ".doc_pages_insert_blank200response_meta",
+    "DocPagesInsertBlank200ResponseMetaAffectedPagesItem": ".doc_pages_insert_blank200response_meta_affected_pages_item",
+    "DocPagesInsertBlank200ResponseMetaAffectedPagesItemRevision": ".doc_pages_insert_blank200response_meta_affected_pages_item_revision",
+    "DocPagesInsertBlank200ResponseMetaAffectedPagesItemWeakAnnotationState": ".doc_pages_insert_blank200response_meta_affected_pages_item_weak_annotation_state",
+    "DocPagesInsertBlank200ResponseMetaAffectedPagesItemWeakAnnotationStateKnown": ".doc_pages_insert_blank200response_meta_affected_pages_item_weak_annotation_state_known",
+    "DocPagesInsertBlank200ResponseMetaAffectedPagesItemWeakAnnotationStateUnknown": ".doc_pages_insert_blank200response_meta_affected_pages_item_weak_annotation_state_unknown",
+    "DocPagesInsertBlank200ResponseMetaAffectedPagesItemWeakAnnotationState_Known": ".doc_pages_insert_blank200response_meta_affected_pages_item_weak_annotation_state",
+    "DocPagesInsertBlank200ResponseMetaAffectedPagesItemWeakAnnotationState_Unknown": ".doc_pages_insert_blank200response_meta_affected_pages_item_weak_annotation_state",
+    "DocPagesInsertBlank200ResponseMetaCacheDelta": ".doc_pages_insert_blank200response_meta_cache_delta",
+    "DocPagesInsertBlank200ResponseMetaCacheDeltaPagesItem": ".doc_pages_insert_blank200response_meta_cache_delta_pages_item",
+    "DocPagesInsertBlank200ResponseMetaCacheDeltaPagesItemCache": ".doc_pages_insert_blank200response_meta_cache_delta_pages_item_cache",
+    "DocPagesInsertBlank400Response": ".doc_pages_insert_blank400response",
+    "DocPagesInsertBlank400ResponseCode": ".doc_pages_insert_blank400response_code",
+    "DocPagesInsertBlank400ResponseName": ".doc_pages_insert_blank400response_name",
+    "DocPagesInsertBlank404Response": ".doc_pages_insert_blank404response",
+    "DocPagesInsertBlank404ResponseCode": ".doc_pages_insert_blank404response_code",
+    "DocPagesInsertBlank404ResponseName": ".doc_pages_insert_blank404response_name",
+    "DocPagesInsertBlankRequest": ".doc_pages_insert_blank_request",
     "DocPagesMove200Response": ".doc_pages_move200response",
     "DocPagesMove200ResponseMeta": ".doc_pages_move200response_meta",
     "DocPagesMove200ResponseMetaAffectedPagesItem": ".doc_pages_move200response_meta_affected_pages_item",
@@ -9647,6 +9761,13 @@ __all__ = [
     "DocPagesDelete404ResponseCode",
     "DocPagesDelete404ResponseName",
     "DocPagesDeleteRequest",
+    "DocPagesExtract400Response",
+    "DocPagesExtract400ResponseCode",
+    "DocPagesExtract400ResponseName",
+    "DocPagesExtract404Response",
+    "DocPagesExtract404ResponseCode",
+    "DocPagesExtract404ResponseName",
+    "DocPagesExtractRequest",
     "DocPagesFlatten200Response",
     "DocPagesFlatten200ResponseMeta",
     "DocPagesFlatten200ResponseMetaAffectedPagesItem",
@@ -9666,6 +9787,43 @@ __all__ = [
     "DocPagesFlatten404ResponseCode",
     "DocPagesFlatten404ResponseName",
     "DocPagesFlattenRequest",
+    "DocPagesInsert200Response",
+    "DocPagesInsert200ResponseMeta",
+    "DocPagesInsert200ResponseMetaAffectedPagesItem",
+    "DocPagesInsert200ResponseMetaAffectedPagesItemRevision",
+    "DocPagesInsert200ResponseMetaAffectedPagesItemWeakAnnotationState",
+    "DocPagesInsert200ResponseMetaAffectedPagesItemWeakAnnotationStateKnown",
+    "DocPagesInsert200ResponseMetaAffectedPagesItemWeakAnnotationStateUnknown",
+    "DocPagesInsert200ResponseMetaAffectedPagesItemWeakAnnotationState_Known",
+    "DocPagesInsert200ResponseMetaAffectedPagesItemWeakAnnotationState_Unknown",
+    "DocPagesInsert200ResponseMetaCacheDelta",
+    "DocPagesInsert200ResponseMetaCacheDeltaPagesItem",
+    "DocPagesInsert200ResponseMetaCacheDeltaPagesItemCache",
+    "DocPagesInsert400Response",
+    "DocPagesInsert400ResponseCode",
+    "DocPagesInsert400ResponseName",
+    "DocPagesInsert404Response",
+    "DocPagesInsert404ResponseCode",
+    "DocPagesInsert404ResponseName",
+    "DocPagesInsertBlank200Response",
+    "DocPagesInsertBlank200ResponseMeta",
+    "DocPagesInsertBlank200ResponseMetaAffectedPagesItem",
+    "DocPagesInsertBlank200ResponseMetaAffectedPagesItemRevision",
+    "DocPagesInsertBlank200ResponseMetaAffectedPagesItemWeakAnnotationState",
+    "DocPagesInsertBlank200ResponseMetaAffectedPagesItemWeakAnnotationStateKnown",
+    "DocPagesInsertBlank200ResponseMetaAffectedPagesItemWeakAnnotationStateUnknown",
+    "DocPagesInsertBlank200ResponseMetaAffectedPagesItemWeakAnnotationState_Known",
+    "DocPagesInsertBlank200ResponseMetaAffectedPagesItemWeakAnnotationState_Unknown",
+    "DocPagesInsertBlank200ResponseMetaCacheDelta",
+    "DocPagesInsertBlank200ResponseMetaCacheDeltaPagesItem",
+    "DocPagesInsertBlank200ResponseMetaCacheDeltaPagesItemCache",
+    "DocPagesInsertBlank400Response",
+    "DocPagesInsertBlank400ResponseCode",
+    "DocPagesInsertBlank400ResponseName",
+    "DocPagesInsertBlank404Response",
+    "DocPagesInsertBlank404ResponseCode",
+    "DocPagesInsertBlank404ResponseName",
+    "DocPagesInsertBlankRequest",
     "DocPagesMove200Response",
     "DocPagesMove200ResponseMeta",
     "DocPagesMove200ResponseMetaAffectedPagesItem",

@@ -2,12 +2,17 @@
 
 import typing
 
+from ... import core
 from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
 from ...types.doc_pages_delete200response import DocPagesDelete200Response
 from ...types.doc_pages_delete_request import DocPagesDeleteRequest
+from ...types.doc_pages_extract_request import DocPagesExtractRequest
 from ...types.doc_pages_flatten200response import DocPagesFlatten200Response
 from ...types.doc_pages_flatten_request import DocPagesFlattenRequest
+from ...types.doc_pages_insert200response import DocPagesInsert200Response
+from ...types.doc_pages_insert_blank200response import DocPagesInsertBlank200Response
+from ...types.doc_pages_insert_blank_request import DocPagesInsertBlankRequest
 from ...types.doc_pages_move200response import DocPagesMove200Response
 from ...types.doc_pages_move_request import DocPagesMoveRequest
 from ...types.doc_pages_rotate200response import DocPagesRotate200Response
@@ -81,6 +86,56 @@ class PagesClient:
         )
         return _response.data
 
+    def extract(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        request: DocPagesExtractRequest,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> typing.Iterator[bytes]:
+        """
+        A read, not a mutation: the source document is untouched and no event is published. Body is `{"pageObjectNumbers": number[]}`; the response body is the new PDF.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        request : DocPagesExtractRequest
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
+
+        Returns
+        -------
+        typing.Iterator[bytes]
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.pages.extract(
+            doc_id="docId",
+            layer_name="layerName",
+            request={"string": {"key": "value"}},
+        )
+        """
+        with self._raw_client.extract(
+            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+        ) as r:
+            yield from r.data
+
     def flatten(
         self,
         doc_id: str,
@@ -125,6 +180,106 @@ class PagesClient:
         )
         """
         _response = self._raw_client.flatten(
+            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+        )
+        return _response.data
+
+    def insert(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        file: core.File,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocPagesInsert200Response:
+        """
+        Multipart mutation envelope: a `body` field holding `{"destIndex"?: number}` (omitted → append) plus a `resource:source` file part carrying the standalone PDF whose pages are copied in. The inserted copies get fresh page object numbers, returned in insertion order.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        file : core.File
+            See core.File for more documentation
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocPagesInsert200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.pages.insert(
+            doc_id="docId",
+            layer_name="layerName",
+        )
+        """
+        _response = self._raw_client.insert(
+            doc_id, layer_name, file=file, document_password=document_password, request_options=request_options
+        )
+        return _response.data
+
+    def insert_blank(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        request: DocPagesInsertBlankRequest,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocPagesInsertBlank200Response:
+        """
+        Body is `{"size": {"width", "height"}, "count"?, "destIndex"?}` — size in PDF points, count in [1, 100], destIndex omitted → append.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        request : DocPagesInsertBlankRequest
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocPagesInsertBlank200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.pages.insert_blank(
+            doc_id="docId",
+            layer_name="layerName",
+            request={"key": "value"},
+        )
+        """
+        _response = self._raw_client.insert_blank(
             doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
         )
         return _response.data
@@ -297,6 +452,65 @@ class AsyncPagesClient:
         )
         return _response.data
 
+    async def extract(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        request: DocPagesExtractRequest,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> typing.AsyncIterator[bytes]:
+        """
+        A read, not a mutation: the source document is untouched and no event is published. Body is `{"pageObjectNumbers": number[]}`; the response body is the new PDF.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        request : DocPagesExtractRequest
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
+
+        Returns
+        -------
+        typing.AsyncIterator[bytes]
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.pages.extract(
+                doc_id="docId",
+                layer_name="layerName",
+                request={"string": {"key": "value"}},
+            )
+
+
+        asyncio.run(main())
+        """
+        async with self._raw_client.extract(
+            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+        ) as r:
+            async for _chunk in r.data:
+                yield _chunk
+
     async def flatten(
         self,
         doc_id: str,
@@ -349,6 +563,122 @@ class AsyncPagesClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.flatten(
+            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+        )
+        return _response.data
+
+    async def insert(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        file: core.File,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocPagesInsert200Response:
+        """
+        Multipart mutation envelope: a `body` field holding `{"destIndex"?: number}` (omitted → append) plus a `resource:source` file part carrying the standalone PDF whose pages are copied in. The inserted copies get fresh page object numbers, returned in insertion order.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        file : core.File
+            See core.File for more documentation
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocPagesInsert200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.pages.insert(
+                doc_id="docId",
+                layer_name="layerName",
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.insert(
+            doc_id, layer_name, file=file, document_password=document_password, request_options=request_options
+        )
+        return _response.data
+
+    async def insert_blank(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        request: DocPagesInsertBlankRequest,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocPagesInsertBlank200Response:
+        """
+        Body is `{"size": {"width", "height"}, "count"?, "destIndex"?}` — size in PDF points, count in [1, 100], destIndex omitted → append.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        request : DocPagesInsertBlankRequest
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocPagesInsertBlank200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.pages.insert_blank(
+                doc_id="docId",
+                layer_name="layerName",
+                request={"key": "value"},
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.insert_blank(
             doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
         )
         return _response.data

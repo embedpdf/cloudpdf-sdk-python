@@ -1,12 +1,12 @@
 {
   "language": "python",
-  "canonicalVersion": "3.0.0-next.8",
-  "sdkVersion": "3.0.0a8",
+  "canonicalVersion": "3.0.0-next.9",
+  "sdkVersion": "3.0.0a9",
   "source": {
     "repository": "embedpdf/embed-pdf-viewer",
     "openapi": "cloudpdf/contract/openapi.json",
-    "openapiSha256": "e997d51317662fe0666e6582916ded9b17a8bcd225c178548e1ff226e4d01c6d",
-    "gitCommit": "20cebe429411ef5019c9e31fc7841d72b7fb98a8",
+    "openapiSha256": "4ee27900dbb0b13408ce00a0e80d606444ab81e9d5a76186fa984c8c8dfe09fe",
+    "gitCommit": "e5cd0731cb3a1f2ed5821f8d60191bd58934c3dd",
     "gitCommitIsDirty": false
   },
   "fern": {
