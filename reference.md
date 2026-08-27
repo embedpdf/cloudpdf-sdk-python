@@ -3407,6 +3407,106 @@ client.doc.pages.delete(
 </dl>
 </details>
 
+<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">extract</a>(...) -> typing.Iterator[bytes]</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+A read, not a mutation: the source document is untouched and no event is published. Body is `{"pageObjectNumbers": number[]}`; the response body is the new PDF.
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+
+client = CloudPDFClient(
+    token="<token>",
+    base_url="https://yourhost.com/path/to/api",
+)
+
+client.doc.pages.extract(
+    doc_id="docId",
+    layer_name="layerName",
+    request={
+        "string": {"key": "value"}
+    },
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**doc_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**layer_name:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request:** `DocPagesExtractRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 <details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">flatten</a>(...) -> DocPagesFlatten200Response</code></summary>
 <dl>
 <dd>
@@ -3466,6 +3566,204 @@ client.doc.pages.flatten(
 <dd>
 
 **request:** `DocPagesFlattenRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">insert</a>(...) -> DocPagesInsert200Response</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Multipart mutation envelope: a `body` field holding `{"destIndex"?: number}` (omitted → append) plus a `resource:source` file part carrying the standalone PDF whose pages are copied in. The inserted copies get fresh page object numbers, returned in insertion order.
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+
+client = CloudPDFClient(
+    token="<token>",
+    base_url="https://yourhost.com/path/to/api",
+)
+
+client.doc.pages.insert(
+    doc_id="docId",
+    layer_name="layerName",
+    file="example_file",
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**doc_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**layer_name:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**file:** `core.File` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">insert_blank</a>(...) -> DocPagesInsertBlank200Response</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Body is `{"size": {"width", "height"}, "count"?, "destIndex"?}` — size in PDF points, count in [1, 100], destIndex omitted → append.
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+
+client = CloudPDFClient(
+    token="<token>",
+    base_url="https://yourhost.com/path/to/api",
+)
+
+client.doc.pages.insert_blank(
+    doc_id="docId",
+    layer_name="layerName",
+    request={
+        "key": "value"
+    },
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**doc_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**layer_name:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request:** `DocPagesInsertBlankRequest` 
     
 </dd>
 </dl>
