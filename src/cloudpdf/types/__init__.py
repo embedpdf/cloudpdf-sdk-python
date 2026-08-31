@@ -4047,6 +4047,3998 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list404response import DocAnnotationsList404Response
     from .doc_annotations_list404response_code import DocAnnotationsList404ResponseCode
     from .doc_annotations_list404response_name import DocAnnotationsList404ResponseName
+    from .doc_annotations_list_all200response import DocAnnotationsListAll200Response
+    from .doc_annotations_list_all200response_pages_item import DocAnnotationsListAll200ResponsePagesItem
+    from .doc_annotations_list_all200response_pages_item_annotations_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Caret,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Circle,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_FileAttachment,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_FreeText,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Highlight,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Ink,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Line,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Link,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Polygon,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Polyline,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Redact,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Square,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Squiggly,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Stamp,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Strikeout,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Text,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Underline,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Unsupported,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Widget,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaret,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_intent import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretIntent,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_rect_differences import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRectDifferences,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_unrotated_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretUnrotatedRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircle,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_border_style import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleBorderStyle,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_interior_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInteriorColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_rect_differences import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRectDifferences,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_unrotated_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleUnrotatedRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachment,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_file import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentFile,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_icon import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentIcon,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeText,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_border_style import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextBorderStyle,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_font_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFontColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_font_family import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFontFamily,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_intent import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextIntent,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_interior_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInteriorColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_line_ending import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextLineEnding,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rect_differences import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRectDifferences,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_text_align import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextTextAlign,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_unrotated_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextUnrotatedRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlight,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_quad_points_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightQuadPointsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_quad_points_item_p1 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightQuadPointsItemP1,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_quad_points_item_p2 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightQuadPointsItemP2,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_quad_points_item_p3 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightQuadPointsItemP3,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_quad_points_item_p4 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightQuadPointsItemP4,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInk,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_border_style import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkBorderStyle,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_ink_list_item_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInkListItemItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_intent import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkIntent,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLine,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_border_style import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBorderStyle,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_interior_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInteriorColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_line_endings import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndings,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_line_endings_end import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndingsEnd,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_line_endings_start import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndingsStart,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_line_points import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePoints,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_line_points_end import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePointsEnd,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_line_points_start import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePointsStart,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLink,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Goto,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_GotoRemote,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Javascript,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Launch,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Named,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Unsupported,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Uri,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGoto,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_Fit,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitB,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitBh,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitBv,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitH,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitR,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitV,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_Xyz,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_b import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitB,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_bh import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitBh,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_bv import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitBv,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_h import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitH,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_r import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitR,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_v import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitV,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_xyz import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationXyz,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_remote import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoRemote,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_javascript import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetJavascript,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_launch import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetLaunch,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_named import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetNamed,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_unsupported import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetUnsupported,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_uri import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetUri,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygon,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_border_style import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBorderStyle,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_interior_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInteriorColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_vertices_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonVerticesItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolyline,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_border_style import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBorderStyle,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_interior_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInteriorColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_line_endings import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndings,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_line_endings_end import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndingsEnd,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_line_endings_start import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndingsStart,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_vertices_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineVerticesItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedact,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_font_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactFontColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_font_family import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactFontFamily,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_interior_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInteriorColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_quad_points_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_quad_points_item_p1 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItemP1,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_quad_points_item_p2 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItemP2,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_quad_points_item_p3 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItemP3,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_quad_points_item_p4 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItemP4,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_text_align import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactTextAlign,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquare,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_border_style import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareBorderStyle,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_interior_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInteriorColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_rect_differences import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRectDifferences,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_square_unrotated_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareUnrotatedRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquiggly,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_quad_points_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyQuadPointsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_quad_points_item_p1 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyQuadPointsItemP1,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_quad_points_item_p2 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyQuadPointsItemP2,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_quad_points_item_p3 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyQuadPointsItemP3,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_quad_points_item_p4 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyQuadPointsItemP4,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStamp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_unrotated_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampUnrotatedRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeout,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_intent import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutIntent,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_quad_points_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutQuadPointsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_quad_points_item_p1 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutQuadPointsItemP1,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_quad_points_item_p2 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutQuadPointsItemP2,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_quad_points_item_p3 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutQuadPointsItemP3,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_quad_points_item_p4 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutQuadPointsItemP4,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemText,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_icon import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextIcon,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_text_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderline,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_quad_points_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineQuadPointsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_quad_points_item_p1 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineQuadPointsItemP1,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_quad_points_item_p2 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineQuadPointsItemP2,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_quad_points_item_p3 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineQuadPointsItemP3,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_quad_points_item_p4 import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineQuadPointsItemP4,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupported,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidget,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActions,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_activate import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivate,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_activate_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_activate_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_activate_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_blur import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlur,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_blur_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_blur_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_blur_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_enter import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnter,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_enter_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_enter_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_enter_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_exit import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExit,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_exit_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_exit_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_exit_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_focus import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocus,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_focus_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_focus_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_focus_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_down import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_down_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_down_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_down_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_up import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUp,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_up_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_up_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_up_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_close import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageClose,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_close_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_close_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_close_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_invisible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_invisible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_invisible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_invisible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_open import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpen,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_open_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_open_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_open_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_visible import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisible,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_visible_root import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleRoot,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_visible_root_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleRootType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_visible_warnings_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleWarningsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_blend_mode import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetBlendMode,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_border_style import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetBorderStyle,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_field_family import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetFieldFamily,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_flags import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetFlags,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_font_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetFontColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_font_family import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetFontFamily,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_identity_quality import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetIdentityQuality,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_in_reply_to import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyTo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyTo_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyTo_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyTo_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_in_reply_to_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyToIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_in_reply_to_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyToIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_in_reply_to_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyToNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_in_reply_to_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyToObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_interior_color import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInteriorColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_rect import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRect,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_ref import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRef,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRef_Index,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRef_Nm,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRef_ObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_ref_index import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRefIndex,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_ref_index_revision import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRefIndexRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_ref_nm import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRefNm,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_ref_object_number import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRefObjectNumber,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_reply_type import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_text_align import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetTextAlign,
+    )
+    from .doc_annotations_list_all200response_pages_item_page_state import (
+        DocAnnotationsListAll200ResponsePagesItemPageState,
+    )
+    from .doc_annotations_list_all200response_pages_item_page_state_revision import (
+        DocAnnotationsListAll200ResponsePagesItemPageStateRevision,
+    )
+    from .doc_annotations_list_all200response_pages_item_page_state_weak_annotation_state import (
+        DocAnnotationsListAll200ResponsePagesItemPageStateWeakAnnotationState,
+        DocAnnotationsListAll200ResponsePagesItemPageStateWeakAnnotationState_Known,
+        DocAnnotationsListAll200ResponsePagesItemPageStateWeakAnnotationState_Unknown,
+    )
+    from .doc_annotations_list_all200response_pages_item_page_state_weak_annotation_state_known import (
+        DocAnnotationsListAll200ResponsePagesItemPageStateWeakAnnotationStateKnown,
+    )
+    from .doc_annotations_list_all200response_pages_item_page_state_weak_annotation_state_unknown import (
+        DocAnnotationsListAll200ResponsePagesItemPageStateWeakAnnotationStateUnknown,
+    )
+    from .doc_annotations_list_all404response import DocAnnotationsListAll404Response
+    from .doc_annotations_list_all404response_code import DocAnnotationsListAll404ResponseCode
+    from .doc_annotations_list_all404response_name import DocAnnotationsListAll404ResponseName
+    from .doc_annotations_list_all409response import DocAnnotationsListAll409Response
+    from .doc_annotations_list_all409response_code import DocAnnotationsListAll409ResponseCode
+    from .doc_annotations_list_all409response_name import DocAnnotationsListAll409ResponseName
     from .doc_annotations_update200response import DocAnnotationsUpdate200Response
     from .doc_annotations_update200response_meta import DocAnnotationsUpdate200ResponseMeta
     from .doc_annotations_update200response_meta_affected_pages_item import (
@@ -6961,6 +10953,1442 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList404Response": ".doc_annotations_list404response",
     "DocAnnotationsList404ResponseCode": ".doc_annotations_list404response_code",
     "DocAnnotationsList404ResponseName": ".doc_annotations_list404response_name",
+    "DocAnnotationsListAll200Response": ".doc_annotations_list_all200response",
+    "DocAnnotationsListAll200ResponsePagesItem": ".doc_annotations_list_all200response_pages_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaret": ".doc_annotations_list_all200response_pages_item_annotations_item_caret",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActions": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretColor": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretIntent": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_intent",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRect": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRectDifferences": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_rect_differences",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRef": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretUnrotatedRect": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_unrotated_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircle": ".doc_annotations_list_all200response_pages_item_annotations_item_circle",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActions": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_border_style",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleColor": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInteriorColor": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_interior_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRect": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRectDifferences": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_rect_differences",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRef": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleUnrotatedRect": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_unrotated_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachment": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActions": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentColor": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentFile": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_file",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentIcon": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_icon",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRect": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRef": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeText": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActions": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_border_style",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextColor": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFontColor": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_font_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFontFamily": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_font_family",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextIntent": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_intent",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInteriorColor": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_interior_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextLineEnding": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_line_ending",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRect": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRectDifferences": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rect_differences",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRef": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextTextAlign": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_text_align",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextUnrotatedRect": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_unrotated_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlight": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActions": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightColor": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightQuadPointsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_quad_points_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightQuadPointsItemP1": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_quad_points_item_p1",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightQuadPointsItemP2": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_quad_points_item_p2",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightQuadPointsItemP3": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_quad_points_item_p3",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightQuadPointsItemP4": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_quad_points_item_p4",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRect": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRef": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInk": ".doc_annotations_list_all200response_pages_item_annotations_item_ink",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActions": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_border_style",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkColor": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInkListItemItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_ink_list_item_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkIntent": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_intent",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRect": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRef": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLine": ".doc_annotations_list_all200response_pages_item_annotations_item_line",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActions": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_line_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_line_border_style",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineColor": ".doc_annotations_list_all200response_pages_item_annotations_item_line_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_line_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_line_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInteriorColor": ".doc_annotations_list_all200response_pages_item_annotations_item_line_interior_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndings": ".doc_annotations_list_all200response_pages_item_annotations_item_line_line_endings",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndingsEnd": ".doc_annotations_list_all200response_pages_item_annotations_item_line_line_endings_end",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndingsStart": ".doc_annotations_list_all200response_pages_item_annotations_item_line_line_endings_start",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePoints": ".doc_annotations_list_all200response_pages_item_annotations_item_line_line_points",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePointsEnd": ".doc_annotations_list_all200response_pages_item_annotations_item_line_line_points_end",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePointsStart": ".doc_annotations_list_all200response_pages_item_annotations_item_line_line_points_start",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRect": ".doc_annotations_list_all200response_pages_item_annotations_item_line_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef": ".doc_annotations_list_all200response_pages_item_annotations_item_line_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_line_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_line_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_line_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_line_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_line_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_line_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_line_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLink": ".doc_annotations_list_all200response_pages_item_annotations_item_link",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActions": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_link_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_link_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_link_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_link_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_link_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_link_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_link_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_link_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_link_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_link_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_link_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRect": ".doc_annotations_list_all200response_pages_item_annotations_item_link_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRef": ".doc_annotations_list_all200response_pages_item_annotations_item_link_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_link_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_link_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_link_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_link_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_link_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_link_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_link_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGoto": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFit": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitB": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_b",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitBh": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_bh",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitBv": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_bv",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitH": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_h",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitR": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_r",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitV": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_v",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationXyz": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_xyz",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_Fit": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitB": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitBh": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitBv": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitH": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitR": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitV": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_Xyz": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoRemote": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_remote",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetJavascript": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_javascript",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetLaunch": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_launch",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetNamed": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_named",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetUnsupported": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_unsupported",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetUri": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_uri",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Goto": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_GotoRemote": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Javascript": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Launch": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Named": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Unsupported": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Uri": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygon": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActions": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_border_style",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonColor": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInteriorColor": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_interior_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRect": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRef": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonVerticesItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_vertices_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolyline": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActions": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_border_style",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineColor": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInteriorColor": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_interior_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndings": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_line_endings",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndingsEnd": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_line_endings_end",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndingsStart": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_line_endings_start",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRect": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRef": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineVerticesItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_vertices_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedact": ".doc_annotations_list_all200response_pages_item_annotations_item_redact",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActions": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactColor": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactFontColor": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_font_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactFontFamily": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_font_family",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInteriorColor": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_interior_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_quad_points_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItemP1": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_quad_points_item_p1",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItemP2": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_quad_points_item_p2",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItemP3": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_quad_points_item_p3",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItemP4": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_quad_points_item_p4",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRect": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRef": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactTextAlign": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_text_align",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquare": ".doc_annotations_list_all200response_pages_item_annotations_item_square",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActions": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_square_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_square_border_style",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareColor": ".doc_annotations_list_all200response_pages_item_annotations_item_square_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_square_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_square_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_square_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_square_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_square_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_square_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_square_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_square_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_square_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_square_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInteriorColor": ".doc_annotations_list_all200response_pages_item_annotations_item_square_interior_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRect": ".doc_annotations_list_all200response_pages_item_annotations_item_square_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRectDifferences": ".doc_annotations_list_all200response_pages_item_annotations_item_square_rect_differences",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRef": ".doc_annotations_list_all200response_pages_item_annotations_item_square_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_square_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_square_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_square_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_square_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_square_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_square_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_square_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareUnrotatedRect": ".doc_annotations_list_all200response_pages_item_annotations_item_square_unrotated_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquiggly": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActions": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyColor": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyQuadPointsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_quad_points_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyQuadPointsItemP1": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_quad_points_item_p1",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyQuadPointsItemP2": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_quad_points_item_p2",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyQuadPointsItemP3": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_quad_points_item_p3",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyQuadPointsItemP4": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_quad_points_item_p4",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRect": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRef": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStamp": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActions": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRect": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRef": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampUnrotatedRect": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_unrotated_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeout": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActions": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutColor": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutIntent": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_intent",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutQuadPointsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_quad_points_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutQuadPointsItemP1": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_quad_points_item_p1",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutQuadPointsItemP2": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_quad_points_item_p2",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutQuadPointsItemP3": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_quad_points_item_p3",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutQuadPointsItemP4": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_quad_points_item_p4",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRect": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRef": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemText": ".doc_annotations_list_all200response_pages_item_annotations_item_text",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActions": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_text_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextColor": ".doc_annotations_list_all200response_pages_item_annotations_item_text_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_text_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextIcon": ".doc_annotations_list_all200response_pages_item_annotations_item_text_icon",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_text_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_text_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_text_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_text_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_text_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_text_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_text_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_text_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_text_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRect": ".doc_annotations_list_all200response_pages_item_annotations_item_text_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRef": ".doc_annotations_list_all200response_pages_item_annotations_item_text_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_text_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_text_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_text_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_text_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_text_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_text_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_text_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderline": ".doc_annotations_list_all200response_pages_item_annotations_item_underline",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActions": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineColor": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineQuadPointsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_quad_points_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineQuadPointsItemP1": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_quad_points_item_p1",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineQuadPointsItemP2": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_quad_points_item_p2",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineQuadPointsItemP3": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_quad_points_item_p3",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineQuadPointsItemP4": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_quad_points_item_p4",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRect": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRef": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupported": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActions": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRect": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRef": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidget": ".doc_annotations_list_all200response_pages_item_annotations_item_widget",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActions": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_activate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_activate_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_activate_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_activate_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_blur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_blur_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_blur_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_blur_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_enter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_enter_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_enter_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_enter_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_exit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_exit_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_exit_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_exit_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_focus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_focus_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_focus_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_focus_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_down",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_down_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_down_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_down_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_up",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_up_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_up_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_up_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_close",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_close_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_close_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_close_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_invisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_invisible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_invisible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_invisible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_open",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_open_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_open_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_open_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_visible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_visible_root",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_visible_root_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_visible_warnings_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_blend_mode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_border_style",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetColor": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetFieldFamily": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_field_family",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_flags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetFontColor": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_font_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetFontFamily": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_font_family",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_identity_quality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_in_reply_to_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyToIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_in_reply_to_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyToNm": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_in_reply_to_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyToObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_in_reply_to_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInteriorColor": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_interior_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRect": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_rect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRef": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_ref_index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRefIndexRevision": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_ref_index_revision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRefNm": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_ref_nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRefObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_ref_object_number",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRef_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_ref",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetTextAlign": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_text_align",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Caret": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Circle": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_FileAttachment": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_FreeText": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Highlight": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Ink": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Line": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Link": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Polygon": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Polyline": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Redact": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Square": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Squiggly": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Stamp": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Strikeout": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Text": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Underline": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Unsupported": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Widget": ".doc_annotations_list_all200response_pages_item_annotations_item",
+    "DocAnnotationsListAll200ResponsePagesItemPageState": ".doc_annotations_list_all200response_pages_item_page_state",
+    "DocAnnotationsListAll200ResponsePagesItemPageStateRevision": ".doc_annotations_list_all200response_pages_item_page_state_revision",
+    "DocAnnotationsListAll200ResponsePagesItemPageStateWeakAnnotationState": ".doc_annotations_list_all200response_pages_item_page_state_weak_annotation_state",
+    "DocAnnotationsListAll200ResponsePagesItemPageStateWeakAnnotationStateKnown": ".doc_annotations_list_all200response_pages_item_page_state_weak_annotation_state_known",
+    "DocAnnotationsListAll200ResponsePagesItemPageStateWeakAnnotationStateUnknown": ".doc_annotations_list_all200response_pages_item_page_state_weak_annotation_state_unknown",
+    "DocAnnotationsListAll200ResponsePagesItemPageStateWeakAnnotationState_Known": ".doc_annotations_list_all200response_pages_item_page_state_weak_annotation_state",
+    "DocAnnotationsListAll200ResponsePagesItemPageStateWeakAnnotationState_Unknown": ".doc_annotations_list_all200response_pages_item_page_state_weak_annotation_state",
+    "DocAnnotationsListAll404Response": ".doc_annotations_list_all404response",
+    "DocAnnotationsListAll404ResponseCode": ".doc_annotations_list_all404response_code",
+    "DocAnnotationsListAll404ResponseName": ".doc_annotations_list_all404response_name",
+    "DocAnnotationsListAll409Response": ".doc_annotations_list_all409response",
+    "DocAnnotationsListAll409ResponseCode": ".doc_annotations_list_all409response_code",
+    "DocAnnotationsListAll409ResponseName": ".doc_annotations_list_all409response_name",
     "DocAnnotationsUpdate200Response": ".doc_annotations_update200response",
     "DocAnnotationsUpdate200ResponseMeta": ".doc_annotations_update200response_meta",
     "DocAnnotationsUpdate200ResponseMetaAffectedPagesItem": ".doc_annotations_update200response_meta_affected_pages_item",
@@ -9255,6 +14683,1442 @@ __all__ = [
     "DocAnnotationsList404Response",
     "DocAnnotationsList404ResponseCode",
     "DocAnnotationsList404ResponseName",
+    "DocAnnotationsListAll200Response",
+    "DocAnnotationsListAll200ResponsePagesItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaret",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretIntent",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRectDifferences",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretUnrotatedRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircle",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleBorderStyle",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleInteriorColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRectDifferences",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleUnrotatedRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachment",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentFile",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentIcon",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeText",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextBorderStyle",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFontColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFontFamily",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextIntent",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInteriorColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextLineEnding",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRectDifferences",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextTextAlign",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextUnrotatedRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlight",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightQuadPointsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightQuadPointsItemP1",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightQuadPointsItemP2",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightQuadPointsItemP3",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightQuadPointsItemP4",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInk",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkBorderStyle",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkInkListItemItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkIntent",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLine",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBorderStyle",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInteriorColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndings",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndingsEnd",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndingsStart",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePoints",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePointsEnd",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePointsStart",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLink",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGoto",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitB",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitBh",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitBv",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitH",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitR",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitV",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationXyz",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_Fit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitB",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitBh",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitBv",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitH",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitR",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitV",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_Xyz",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoRemote",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetJavascript",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetLaunch",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetNamed",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetUnsupported",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetUri",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Goto",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_GotoRemote",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Javascript",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Launch",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Named",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Unsupported",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Uri",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygon",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBorderStyle",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInteriorColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonVerticesItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolyline",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBorderStyle",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInteriorColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndings",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndingsEnd",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndingsStart",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineVerticesItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedact",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactFontColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactFontFamily",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactInteriorColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItemP1",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItemP2",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItemP3",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItemP4",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactTextAlign",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquare",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareBorderStyle",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareInteriorColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRectDifferences",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareUnrotatedRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquiggly",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyQuadPointsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyQuadPointsItemP1",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyQuadPointsItemP2",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyQuadPointsItemP3",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyQuadPointsItemP4",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStamp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampUnrotatedRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeout",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutIntent",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutQuadPointsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutQuadPointsItemP1",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutQuadPointsItemP2",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutQuadPointsItemP3",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutQuadPointsItemP4",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemText",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextIcon",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderline",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineQuadPointsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineQuadPointsItemP1",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineQuadPointsItemP2",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineQuadPointsItemP3",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineQuadPointsItemP4",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupported",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidget",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActions",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivate",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlur",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnter",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExit",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocus",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageClose",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpen",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisible",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleRoot",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleRootType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleWarningsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetBlendMode",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetBorderStyle",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetFieldFamily",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetFlags",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetFontColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetFontFamily",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetIdentityQuality",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyTo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyToIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyToIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyToNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyToObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyTo_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyTo_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInteriorColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRect",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRef",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRefIndex",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRefIndexRevision",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRefNm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRefObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRef_Index",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRef_Nm",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetRef_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetTextAlign",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Caret",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Circle",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_FileAttachment",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_FreeText",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Highlight",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Ink",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Line",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Link",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Polygon",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Polyline",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Redact",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Square",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Squiggly",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Stamp",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Strikeout",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Text",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Underline",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Unsupported",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Widget",
+    "DocAnnotationsListAll200ResponsePagesItemPageState",
+    "DocAnnotationsListAll200ResponsePagesItemPageStateRevision",
+    "DocAnnotationsListAll200ResponsePagesItemPageStateWeakAnnotationState",
+    "DocAnnotationsListAll200ResponsePagesItemPageStateWeakAnnotationStateKnown",
+    "DocAnnotationsListAll200ResponsePagesItemPageStateWeakAnnotationStateUnknown",
+    "DocAnnotationsListAll200ResponsePagesItemPageStateWeakAnnotationState_Known",
+    "DocAnnotationsListAll200ResponsePagesItemPageStateWeakAnnotationState_Unknown",
+    "DocAnnotationsListAll404Response",
+    "DocAnnotationsListAll404ResponseCode",
+    "DocAnnotationsListAll404ResponseName",
+    "DocAnnotationsListAll409Response",
+    "DocAnnotationsListAll409ResponseCode",
+    "DocAnnotationsListAll409ResponseName",
     "DocAnnotationsUpdate200Response",
     "DocAnnotationsUpdate200ResponseMeta",
     "DocAnnotationsUpdate200ResponseMetaAffectedPagesItem",

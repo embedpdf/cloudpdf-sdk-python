@@ -54,6 +54,7 @@ class DocAnnotationsList200ResponseAnnotationsItemText(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemTextFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemTextRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -88,6 +89,10 @@ class DocAnnotationsList200ResponseAnnotationsItemText(UniversalBaseModel):
     color: DocAnnotationsList200ResponseAnnotationsItemTextColor
     opacity: float
     icon: DocAnnotationsList200ResponseAnnotationsItemTextIcon
+    state: typing.Optional[str] = None
+    state_model: typing_extensions.Annotated[
+        typing.Optional[str], FieldMetadata(alias="stateModel"), pydantic.Field(alias="stateModel")
+    ] = None
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

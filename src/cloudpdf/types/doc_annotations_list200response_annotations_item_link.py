@@ -51,6 +51,7 @@ class DocAnnotationsList200ResponseAnnotationsItemLink(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemLinkFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemLinkRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None

@@ -25,7 +25,6 @@ from ..types.documents_import_from502response import DocumentsImportFrom502Respo
 from ..types.documents_init200response import DocumentsInit200Response
 from ..types.documents_list200response import DocumentsList200Response
 from ..types.documents_upload_proxy200response import DocumentsUploadProxy200Response
-from ..types.documents_upload_proxy409response import DocumentsUploadProxy409Response
 from .types.documents_import_from_request_dedup_mode import DocumentsImportFromRequestDedupMode
 from .types.documents_import_from_request_expected import DocumentsImportFromRequestExpected
 from .types.documents_import_from_request_mode import DocumentsImportFromRequestMode
@@ -494,9 +493,9 @@ class RawDocumentsClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        DocumentsUploadProxy409Response,
+                        typing.Any,
                         parse_obj_as(
-                            type_=DocumentsUploadProxy409Response,  # type: ignore
+                            type_=typing.Any,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1182,9 +1181,9 @@ class AsyncRawDocumentsClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        DocumentsUploadProxy409Response,
+                        typing.Any,
                         parse_obj_as(
-                            type_=DocumentsUploadProxy409Response,  # type: ignore
+                            type_=typing.Any,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

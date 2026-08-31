@@ -8,6 +8,7 @@ from ...types.doc_annotations_create200response import DocAnnotationsCreate200Re
 from ...types.doc_annotations_create_request import DocAnnotationsCreateRequest
 from ...types.doc_annotations_delete200response import DocAnnotationsDelete200Response
 from ...types.doc_annotations_list200response import DocAnnotationsList200Response
+from ...types.doc_annotations_list_all200response import DocAnnotationsListAll200Response
 from ...types.doc_annotations_update200response import DocAnnotationsUpdate200Response
 from ...types.doc_annotations_update_request import DocAnnotationsUpdateRequest
 from .raw_client import AsyncRawAnnotationsClient, RawAnnotationsClient
@@ -30,6 +31,52 @@ class AnnotationsClient:
         RawAnnotationsClient
         """
         return self._raw_client
+
+    def list_all(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocAnnotationsListAll200Response:
+        """
+        Returns one entry per page plus the audit-log cursor for reconciling subsequent document events. Page order is unspecified; join by `pageState.pageObjectNumber` when display order matters.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocAnnotationsListAll200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.annotations.list_all(
+            doc_id="docId",
+            layer_name="layerName",
+        )
+        """
+        _response = self._raw_client.list_all(
+            doc_id, layer_name, document_password=document_password, request_options=request_options
+        )
+        return _response.data
 
     def list(
         self,
@@ -267,6 +314,60 @@ class AsyncAnnotationsClient:
         AsyncRawAnnotationsClient
         """
         return self._raw_client
+
+    async def list_all(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocAnnotationsListAll200Response:
+        """
+        Returns one entry per page plus the audit-log cursor for reconciling subsequent document events. Page order is unspecified; join by `pageState.pageObjectNumber` when display order matters.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocAnnotationsListAll200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.annotations.list_all(
+                doc_id="docId",
+                layer_name="layerName",
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.list_all(
+            doc_id, layer_name, document_password=document_password, request_options=request_options
+        )
+        return _response.data
 
     async def list(
         self,
