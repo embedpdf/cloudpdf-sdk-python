@@ -63,6 +63,7 @@ class DocAnnotationsList200ResponseAnnotationsItemPolyline(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemPolylineFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemPolylineRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None

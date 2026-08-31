@@ -24,6 +24,9 @@ class DocManifest200Response(UniversalBaseModel):
     attachments_version: typing_extensions.Annotated[
         typing.Optional[int], FieldMetadata(alias="attachmentsVersion"), pydantic.Field(alias="attachmentsVersion")
     ] = None
+    annotations_version: typing_extensions.Annotated[
+        typing.Optional[int], FieldMetadata(alias="annotationsVersion"), pydantic.Field(alias="annotationsVersion")
+    ] = None
     audit_head: typing_extensions.Annotated[int, FieldMetadata(alias="auditHead"), pydantic.Field(alias="auditHead")]
     base_sha: typing_extensions.Annotated[str, FieldMetadata(alias="baseSha"), pydantic.Field(alias="baseSha")]
     scopes: typing.Optional[DocManifest200ResponseScopes] = None

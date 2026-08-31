@@ -54,6 +54,7 @@ class DocAnnotationsList200ResponseAnnotationsItemUnderline(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemUnderlineFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemUnderlineRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None

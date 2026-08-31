@@ -57,6 +57,7 @@ class DocAnnotationsList200ResponseAnnotationsItemStrikeout(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemStrikeoutFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemStrikeoutRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None

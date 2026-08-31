@@ -63,6 +63,7 @@ class DocAnnotationsList200ResponseAnnotationsItemSquare(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemSquareFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemSquareRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None

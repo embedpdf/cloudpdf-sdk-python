@@ -694,6 +694,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Highlight(UniversalBaseModel)
     flags: DocAnnotationsList200ResponseAnnotationsItemHighlightFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemHighlightRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -759,6 +760,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Underline(UniversalBaseModel)
     flags: DocAnnotationsList200ResponseAnnotationsItemUnderlineFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemUnderlineRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -824,6 +826,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Squiggly(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemSquigglyFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemSquigglyRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -889,6 +892,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Strikeout(UniversalBaseModel)
     flags: DocAnnotationsList200ResponseAnnotationsItemStrikeoutFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemStrikeoutRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -955,6 +959,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Circle(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemCircleFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemCircleRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -1045,6 +1050,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Square(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemSquareFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemSquareRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -1135,6 +1141,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Polygon(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemPolygonFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemPolygonRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -1216,6 +1223,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Polyline(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemPolylineFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemPolylineRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -1299,6 +1307,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Line(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemLineFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemLineRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -1386,6 +1395,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Link(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemLinkFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemLinkRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -1445,6 +1455,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Ink(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemInkFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemInkRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -1523,6 +1534,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_FreeText(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemFreeTextFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemFreeTextRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -1637,6 +1649,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Caret(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemCaretFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemCaretRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -1709,6 +1722,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Text(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemTextFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemTextRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -1743,6 +1757,10 @@ class DocAnnotationsList200ResponseAnnotationsItem_Text(UniversalBaseModel):
     color: DocAnnotationsList200ResponseAnnotationsItemTextColor
     opacity: float
     icon: DocAnnotationsList200ResponseAnnotationsItemTextIcon
+    state: typing.Optional[str] = None
+    state_model: typing_extensions.Annotated[
+        typing.Optional[str], FieldMetadata(alias="stateModel"), pydantic.Field(alias="stateModel")
+    ] = None
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
@@ -1770,6 +1788,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Stamp(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemStampFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemStampRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -1835,6 +1854,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_FileAttachment(UniversalBaseM
     flags: DocAnnotationsList200ResponseAnnotationsItemFileAttachmentFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemFileAttachmentRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -1897,6 +1917,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Widget(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemWidgetFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemWidgetRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -1995,6 +2016,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Redact(UniversalBaseModel):
     flags: DocAnnotationsList200ResponseAnnotationsItemRedactFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemRedactRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None
@@ -2085,6 +2107,7 @@ class DocAnnotationsList200ResponseAnnotationsItem_Unsupported(UniversalBaseMode
     flags: DocAnnotationsList200ResponseAnnotationsItemUnsupportedFlags
     rect: DocAnnotationsList200ResponseAnnotationsItemUnsupportedRect
     contents: typing.Optional[str] = None
+    subject: typing.Optional[str] = None
     author: typing.Optional[str] = None
     created: typing.Optional[dt.datetime] = None
     modified: typing.Optional[dt.datetime] = None

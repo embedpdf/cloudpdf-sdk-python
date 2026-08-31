@@ -16,6 +16,9 @@ class DocAnnotationsCreate200ResponseMetaCacheDelta(UniversalBaseModel):
         int, FieldMetadata(alias="previousDocVersion"), pydantic.Field(alias="previousDocVersion")
     ]
     doc_version: typing_extensions.Annotated[int, FieldMetadata(alias="docVersion"), pydantic.Field(alias="docVersion")]
+    annotations_version: typing_extensions.Annotated[
+        typing.Optional[int], FieldMetadata(alias="annotationsVersion"), pydantic.Field(alias="annotationsVersion")
+    ] = None
     pages: typing.List[DocAnnotationsCreate200ResponseMetaCacheDeltaPagesItem]
 
     if IS_PYDANTIC_V2:
