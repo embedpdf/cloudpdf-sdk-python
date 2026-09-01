@@ -6,7 +6,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_forms_get200response_fields_item_combobox_actions import DocFormsGet200ResponseFieldsItemComboboxActions
 from .doc_forms_get200response_fields_item_combobox_default_value_entry import (
     DocFormsGet200ResponseFieldsItemComboboxDefaultValueEntry,
 )
@@ -22,6 +21,7 @@ from .doc_forms_get200response_fields_item_combobox_value_entry import (
 from .doc_forms_get200response_fields_item_combobox_widgets_item import (
     DocFormsGet200ResponseFieldsItemComboboxWidgetsItem,
 )
+from .pdf_field_actions import PdfFieldActions
 
 
 class DocFormsGet200ResponseFieldsItemCombobox(UniversalBaseModel):
@@ -48,7 +48,7 @@ class DocFormsGet200ResponseFieldsItemCombobox(UniversalBaseModel):
         FieldMetadata(alias="defaultValueEntry"),
         pydantic.Field(alias="defaultValueEntry"),
     ]
-    actions: typing.Optional[DocFormsGet200ResponseFieldsItemComboboxActions] = None
+    actions: typing.Optional[PdfFieldActions] = None
     widgets: typing.List[DocFormsGet200ResponseFieldsItemComboboxWidgetsItem]
     value: str
     default_value: typing_extensions.Annotated[

@@ -7,9 +7,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_annotations_list200response_annotations_item_stamp_actions import (
-    DocAnnotationsList200ResponseAnnotationsItemStampActions,
-)
 from .doc_annotations_list200response_annotations_item_stamp_blend_mode import (
     DocAnnotationsList200ResponseAnnotationsItemStampBlendMode,
 )
@@ -34,6 +31,7 @@ from .doc_annotations_list200response_annotations_item_stamp_reply_type import (
 from .doc_annotations_list200response_annotations_item_stamp_unrotated_rect import (
     DocAnnotationsList200ResponseAnnotationsItemStampUnrotatedRect,
 )
+from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsList200ResponseAnnotationsItemStamp(UniversalBaseModel):
@@ -82,7 +80,7 @@ class DocAnnotationsList200ResponseAnnotationsItemStamp(UniversalBaseModel):
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemStampActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     name: typing.Optional[str] = None
     rotation: typing.Optional[float] = None
     unrotated_rect: typing_extensions.Annotated[

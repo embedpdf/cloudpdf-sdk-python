@@ -6,7 +6,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_forms_get200response_fields_item_unknown_actions import DocFormsGet200ResponseFieldsItemUnknownActions
 from .doc_forms_get200response_fields_item_unknown_default_value_entry import (
     DocFormsGet200ResponseFieldsItemUnknownDefaultValueEntry,
 )
@@ -17,6 +16,7 @@ from .doc_forms_get200response_fields_item_unknown_value_entry import DocFormsGe
 from .doc_forms_get200response_fields_item_unknown_widgets_item import (
     DocFormsGet200ResponseFieldsItemUnknownWidgetsItem,
 )
+from .pdf_field_actions import PdfFieldActions
 
 
 class DocFormsGet200ResponseFieldsItemUnknown(UniversalBaseModel):
@@ -43,7 +43,7 @@ class DocFormsGet200ResponseFieldsItemUnknown(UniversalBaseModel):
         FieldMetadata(alias="defaultValueEntry"),
         pydantic.Field(alias="defaultValueEntry"),
     ]
-    actions: typing.Optional[DocFormsGet200ResponseFieldsItemUnknownActions] = None
+    actions: typing.Optional[PdfFieldActions] = None
     widgets: typing.List[DocFormsGet200ResponseFieldsItemUnknownWidgetsItem]
     raw_value: typing_extensions.Annotated[str, FieldMetadata(alias="rawValue"), pydantic.Field(alias="rawValue")]
 

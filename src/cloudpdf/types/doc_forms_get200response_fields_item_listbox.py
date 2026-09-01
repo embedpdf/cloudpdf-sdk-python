@@ -6,7 +6,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_forms_get200response_fields_item_listbox_actions import DocFormsGet200ResponseFieldsItemListboxActions
 from .doc_forms_get200response_fields_item_listbox_default_value_entry import (
     DocFormsGet200ResponseFieldsItemListboxDefaultValueEntry,
 )
@@ -20,6 +19,7 @@ from .doc_forms_get200response_fields_item_listbox_value_entry import DocFormsGe
 from .doc_forms_get200response_fields_item_listbox_widgets_item import (
     DocFormsGet200ResponseFieldsItemListboxWidgetsItem,
 )
+from .pdf_field_actions import PdfFieldActions
 
 
 class DocFormsGet200ResponseFieldsItemListbox(UniversalBaseModel):
@@ -46,7 +46,7 @@ class DocFormsGet200ResponseFieldsItemListbox(UniversalBaseModel):
         FieldMetadata(alias="defaultValueEntry"),
         pydantic.Field(alias="defaultValueEntry"),
     ]
-    actions: typing.Optional[DocFormsGet200ResponseFieldsItemListboxActions] = None
+    actions: typing.Optional[PdfFieldActions] = None
     widgets: typing.List[DocFormsGet200ResponseFieldsItemListboxWidgetsItem]
     selected_values: typing_extensions.Annotated[
         typing.List[str], FieldMetadata(alias="selectedValues"), pydantic.Field(alias="selectedValues")

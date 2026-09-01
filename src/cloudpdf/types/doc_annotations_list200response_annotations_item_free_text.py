@@ -7,9 +7,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_annotations_list200response_annotations_item_free_text_actions import (
-    DocAnnotationsList200ResponseAnnotationsItemFreeTextActions,
-)
 from .doc_annotations_list200response_annotations_item_free_text_blend_mode import (
     DocAnnotationsList200ResponseAnnotationsItemFreeTextBlendMode,
 )
@@ -61,6 +58,7 @@ from .doc_annotations_list200response_annotations_item_free_text_text_align impo
 from .doc_annotations_list200response_annotations_item_free_text_unrotated_rect import (
     DocAnnotationsList200ResponseAnnotationsItemFreeTextUnrotatedRect,
 )
+from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsList200ResponseAnnotationsItemFreeText(UniversalBaseModel):
@@ -109,7 +107,7 @@ class DocAnnotationsList200ResponseAnnotationsItemFreeText(UniversalBaseModel):
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemFreeTextActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     intent: DocAnnotationsList200ResponseAnnotationsItemFreeTextIntent
     font_family: typing_extensions.Annotated[
         DocAnnotationsList200ResponseAnnotationsItemFreeTextFontFamily,

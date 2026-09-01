@@ -7,14 +7,12 @@ import typing
 import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
-from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination,
-)
+from .pdf_destination import PdfDestination
 
 
 class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Goto(UniversalBaseModel):
     kind: typing.Literal["goto"] = "goto"
-    destination: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination
+    destination: PdfDestination
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

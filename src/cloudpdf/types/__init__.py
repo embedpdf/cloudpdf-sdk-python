@@ -97,141 +97,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list200response_annotations_item_caret import (
         DocAnnotationsList200ResponseAnnotationsItemCaret,
     )
-    from .doc_annotations_list200response_annotations_item_caret_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActions,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_caret_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list200response_annotations_item_caret_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemCaretBlendMode,
     )
@@ -297,141 +162,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list200response_annotations_item_circle import (
         DocAnnotationsList200ResponseAnnotationsItemCircle,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActions,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_circle_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list200response_annotations_item_circle_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemCircleBlendMode,
@@ -502,141 +232,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list200response_annotations_item_file_attachment import (
         DocAnnotationsList200ResponseAnnotationsItemFileAttachment,
     )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActions,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_file_attachment_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list200response_annotations_item_file_attachment_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemFileAttachmentBlendMode,
     )
@@ -699,141 +294,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list200response_annotations_item_free_text import (
         DocAnnotationsList200ResponseAnnotationsItemFreeText,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActions,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_free_text_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list200response_annotations_item_free_text_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemFreeTextBlendMode,
@@ -919,141 +379,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list200response_annotations_item_highlight import (
         DocAnnotationsList200ResponseAnnotationsItemHighlight,
     )
-    from .doc_annotations_list200response_annotations_item_highlight_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActions,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_highlight_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list200response_annotations_item_highlight_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemHighlightBlendMode,
     )
@@ -1124,141 +449,6 @@ if typing.TYPE_CHECKING:
         DocAnnotationsList200ResponseAnnotationsItemHighlightReplyType,
     )
     from .doc_annotations_list200response_annotations_item_ink import DocAnnotationsList200ResponseAnnotationsItemInk
-    from .doc_annotations_list200response_annotations_item_ink_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActions,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_ink_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemInkActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list200response_annotations_item_ink_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemInkBlendMode,
     )
@@ -1323,141 +513,6 @@ if typing.TYPE_CHECKING:
         DocAnnotationsList200ResponseAnnotationsItemInkReplyType,
     )
     from .doc_annotations_list200response_annotations_item_line import DocAnnotationsList200ResponseAnnotationsItemLine
-    from .doc_annotations_list200response_annotations_item_line_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActions,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_line_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLineActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list200response_annotations_item_line_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemLineBlendMode,
     )
@@ -1537,141 +592,6 @@ if typing.TYPE_CHECKING:
         DocAnnotationsList200ResponseAnnotationsItemLineReplyType,
     )
     from .doc_annotations_list200response_annotations_item_link import DocAnnotationsList200ResponseAnnotationsItemLink
-    from .doc_annotations_list200response_annotations_item_link_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActions,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_link_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list200response_annotations_item_link_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemLinkBlendMode,
     )
@@ -1736,41 +656,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list200response_annotations_item_link_target_goto import (
         DocAnnotationsList200ResponseAnnotationsItemLinkTargetGoto,
     )
-    from .doc_annotations_list200response_annotations_item_link_target_goto_destination import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination,
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_Fit,
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitB,
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitBh,
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitBv,
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitH,
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitR,
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitV,
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_Xyz,
-    )
-    from .doc_annotations_list200response_annotations_item_link_target_goto_destination_fit import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFit,
-    )
-    from .doc_annotations_list200response_annotations_item_link_target_goto_destination_fit_b import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitB,
-    )
-    from .doc_annotations_list200response_annotations_item_link_target_goto_destination_fit_bh import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitBh,
-    )
-    from .doc_annotations_list200response_annotations_item_link_target_goto_destination_fit_bv import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitBv,
-    )
-    from .doc_annotations_list200response_annotations_item_link_target_goto_destination_fit_h import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitH,
-    )
-    from .doc_annotations_list200response_annotations_item_link_target_goto_destination_fit_r import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitR,
-    )
-    from .doc_annotations_list200response_annotations_item_link_target_goto_destination_fit_v import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitV,
-    )
-    from .doc_annotations_list200response_annotations_item_link_target_goto_destination_xyz import (
-        DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationXyz,
-    )
     from .doc_annotations_list200response_annotations_item_link_target_goto_remote import (
         DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoRemote,
     )
@@ -1791,141 +676,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list200response_annotations_item_polygon import (
         DocAnnotationsList200ResponseAnnotationsItemPolygon,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActions,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polygon_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list200response_annotations_item_polygon_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemPolygonBlendMode,
@@ -1992,141 +742,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list200response_annotations_item_polyline import (
         DocAnnotationsList200ResponseAnnotationsItemPolyline,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActions,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_polyline_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list200response_annotations_item_polyline_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemPolylineBlendMode,
@@ -2202,141 +817,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list200response_annotations_item_redact import (
         DocAnnotationsList200ResponseAnnotationsItemRedact,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActions,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_redact_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list200response_annotations_item_redact_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemRedactBlendMode,
@@ -2422,141 +902,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list200response_annotations_item_square import (
         DocAnnotationsList200ResponseAnnotationsItemSquare,
     )
-    from .doc_annotations_list200response_annotations_item_square_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActions,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_square_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list200response_annotations_item_square_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemSquareBlendMode,
     )
@@ -2625,141 +970,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list200response_annotations_item_squiggly import (
         DocAnnotationsList200ResponseAnnotationsItemSquiggly,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActions,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_squiggly_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list200response_annotations_item_squiggly_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemSquigglyBlendMode,
@@ -2833,141 +1043,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list200response_annotations_item_stamp import (
         DocAnnotationsList200ResponseAnnotationsItemStamp,
     )
-    from .doc_annotations_list200response_annotations_item_stamp_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActions,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_stamp_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStampActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list200response_annotations_item_stamp_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemStampBlendMode,
     )
@@ -3024,141 +1099,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list200response_annotations_item_strikeout import (
         DocAnnotationsList200ResponseAnnotationsItemStrikeout,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActions,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_strikeout_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list200response_annotations_item_strikeout_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemStrikeoutBlendMode,
@@ -3233,141 +1173,6 @@ if typing.TYPE_CHECKING:
         DocAnnotationsList200ResponseAnnotationsItemStrikeoutReplyType,
     )
     from .doc_annotations_list200response_annotations_item_text import DocAnnotationsList200ResponseAnnotationsItemText
-    from .doc_annotations_list200response_annotations_item_text_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActions,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_text_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemTextActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list200response_annotations_item_text_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemTextBlendMode,
     )
@@ -3427,141 +1232,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list200response_annotations_item_underline import (
         DocAnnotationsList200ResponseAnnotationsItemUnderline,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActions,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_underline_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list200response_annotations_item_underline_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemUnderlineBlendMode,
@@ -3635,141 +1305,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list200response_annotations_item_unsupported import (
         DocAnnotationsList200ResponseAnnotationsItemUnsupported,
     )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActions,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_unsupported_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list200response_annotations_item_unsupported_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemUnsupportedBlendMode,
     )
@@ -3823,141 +1358,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list200response_annotations_item_widget import (
         DocAnnotationsList200ResponseAnnotationsItemWidget,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActions,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_activate import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsActivate,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_activate_root import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsActivateRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_activate_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsActivateRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_activate_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_blur import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsBlur,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_blur_root import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsBlurRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_blur_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsBlurRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_blur_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_cursor_enter import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorEnter,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_cursor_enter_root import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_cursor_enter_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_cursor_enter_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_cursor_exit import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorExit,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_cursor_exit_root import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorExitRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_cursor_exit_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorExitRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_cursor_exit_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_focus import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsFocus,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_focus_root import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsFocusRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_focus_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsFocusRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_focus_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_mouse_down import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseDown,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_mouse_down_root import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseDownRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_mouse_down_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseDownRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_mouse_down_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_mouse_up import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseUp,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_mouse_up_root import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseUpRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_mouse_up_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseUpRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_mouse_up_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_page_close import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageClose,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_page_close_root import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageCloseRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_page_close_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageCloseRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_page_close_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_page_invisible import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageInvisible,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_page_invisible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_page_invisible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_page_invisible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_page_open import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageOpen,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_page_open_root import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageOpenRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_page_open_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageOpenRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_page_open_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_page_visible import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageVisible,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_page_visible_root import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_page_visible_root_type import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list200response_annotations_item_widget_actions_page_visible_warnings_item import (
-        DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list200response_annotations_item_widget_blend_mode import (
         DocAnnotationsList200ResponseAnnotationsItemWidgetBlendMode,
@@ -4074,141 +1474,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_caret import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaret,
     )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_caret_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretBlendMode,
     )
@@ -4274,141 +1539,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_circle import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircle,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_circle_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleBlendMode,
@@ -4479,141 +1609,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachment,
     )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentBlendMode,
     )
@@ -4676,141 +1671,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_free_text import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeText,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextBlendMode,
@@ -4896,141 +1756,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_highlight import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlight,
     )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightBlendMode,
     )
@@ -5103,141 +1828,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_ink import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInk,
     )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_ink_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkBlendMode,
     )
@@ -5303,141 +1893,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_line import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLine,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_line_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBlendMode,
@@ -5520,141 +1975,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_link import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLink,
     )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_link_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkBlendMode,
     )
@@ -5719,41 +2039,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGoto,
     )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination,
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_Fit,
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitB,
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitBh,
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitBv,
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitH,
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitR,
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitV,
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_Xyz,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_b import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitB,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_bh import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitBh,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_bv import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitBv,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_h import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitH,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_r import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitR,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_v import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitV,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_xyz import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationXyz,
-    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_remote import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoRemote,
     )
@@ -5774,141 +2059,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_polygon import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygon,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBlendMode,
@@ -5975,141 +2125,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_polyline import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolyline,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBlendMode,
@@ -6185,141 +2200,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_redact import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedact,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_redact_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactBlendMode,
@@ -6405,141 +2285,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_square import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquare,
     )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_square_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareBlendMode,
     )
@@ -6608,141 +2353,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquiggly,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyBlendMode,
@@ -6816,141 +2426,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_stamp import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStamp,
     )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampBlendMode,
     )
@@ -7007,141 +2482,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeout,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutBlendMode,
@@ -7218,141 +2558,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_text import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemText,
     )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_text_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextBlendMode,
     )
@@ -7412,141 +2617,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_underline import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderline,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_underline_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineBlendMode,
@@ -7620,141 +2690,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupported,
     )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleWarningsItem,
-    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedBlendMode,
     )
@@ -7808,141 +2743,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_widget import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidget,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActions,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_activate import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivate,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_activate_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_activate_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_activate_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_blur import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlur,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_blur_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_blur_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_blur_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_enter import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnter,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_enter_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_enter_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_enter_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_exit import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExit,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_exit_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_exit_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_exit_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_focus import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocus,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_focus_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_focus_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_focus_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_down import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDown,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_down_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_down_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_down_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_up import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUp,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_up_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_up_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_up_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_close import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageClose,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_close_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_close_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_close_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_invisible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_invisible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_invisible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_invisible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_open import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpen,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_open_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_open_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_open_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenWarningsItem,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_visible import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisible,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_visible_root import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleRoot,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_visible_root_type import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleRootType,
-    )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_visible_warnings_item import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleWarningsItem,
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_widget_blend_mode import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetBlendMode,
@@ -8100,55 +2900,6 @@ if typing.TYPE_CHECKING:
         DocFormsGet200ResponseFieldsItem_Unknown,
     )
     from .doc_forms_get200response_fields_item_checkbox import DocFormsGet200ResponseFieldsItemCheckbox
-    from .doc_forms_get200response_fields_item_checkbox_actions import DocFormsGet200ResponseFieldsItemCheckboxActions
-    from .doc_forms_get200response_fields_item_checkbox_actions_calculate import (
-        DocFormsGet200ResponseFieldsItemCheckboxActionsCalculate,
-    )
-    from .doc_forms_get200response_fields_item_checkbox_actions_calculate_root import (
-        DocFormsGet200ResponseFieldsItemCheckboxActionsCalculateRoot,
-    )
-    from .doc_forms_get200response_fields_item_checkbox_actions_calculate_root_type import (
-        DocFormsGet200ResponseFieldsItemCheckboxActionsCalculateRootType,
-    )
-    from .doc_forms_get200response_fields_item_checkbox_actions_calculate_warnings_item import (
-        DocFormsGet200ResponseFieldsItemCheckboxActionsCalculateWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_checkbox_actions_format import (
-        DocFormsGet200ResponseFieldsItemCheckboxActionsFormat,
-    )
-    from .doc_forms_get200response_fields_item_checkbox_actions_format_root import (
-        DocFormsGet200ResponseFieldsItemCheckboxActionsFormatRoot,
-    )
-    from .doc_forms_get200response_fields_item_checkbox_actions_format_root_type import (
-        DocFormsGet200ResponseFieldsItemCheckboxActionsFormatRootType,
-    )
-    from .doc_forms_get200response_fields_item_checkbox_actions_format_warnings_item import (
-        DocFormsGet200ResponseFieldsItemCheckboxActionsFormatWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_checkbox_actions_keystroke import (
-        DocFormsGet200ResponseFieldsItemCheckboxActionsKeystroke,
-    )
-    from .doc_forms_get200response_fields_item_checkbox_actions_keystroke_root import (
-        DocFormsGet200ResponseFieldsItemCheckboxActionsKeystrokeRoot,
-    )
-    from .doc_forms_get200response_fields_item_checkbox_actions_keystroke_root_type import (
-        DocFormsGet200ResponseFieldsItemCheckboxActionsKeystrokeRootType,
-    )
-    from .doc_forms_get200response_fields_item_checkbox_actions_keystroke_warnings_item import (
-        DocFormsGet200ResponseFieldsItemCheckboxActionsKeystrokeWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_checkbox_actions_validate import (
-        DocFormsGet200ResponseFieldsItemCheckboxActionsValidate,
-    )
-    from .doc_forms_get200response_fields_item_checkbox_actions_validate_root import (
-        DocFormsGet200ResponseFieldsItemCheckboxActionsValidateRoot,
-    )
-    from .doc_forms_get200response_fields_item_checkbox_actions_validate_root_type import (
-        DocFormsGet200ResponseFieldsItemCheckboxActionsValidateRootType,
-    )
-    from .doc_forms_get200response_fields_item_checkbox_actions_validate_warnings_item import (
-        DocFormsGet200ResponseFieldsItemCheckboxActionsValidateWarningsItem,
-    )
     from .doc_forms_get200response_fields_item_checkbox_default_value_entry import (
         DocFormsGet200ResponseFieldsItemCheckboxDefaultValueEntry,
         DocFormsGet200ResponseFieldsItemCheckboxDefaultValueEntry_Array,
@@ -8202,55 +2953,6 @@ if typing.TYPE_CHECKING:
         DocFormsGet200ResponseFieldsItemCheckboxWidgetsItem,
     )
     from .doc_forms_get200response_fields_item_combobox import DocFormsGet200ResponseFieldsItemCombobox
-    from .doc_forms_get200response_fields_item_combobox_actions import DocFormsGet200ResponseFieldsItemComboboxActions
-    from .doc_forms_get200response_fields_item_combobox_actions_calculate import (
-        DocFormsGet200ResponseFieldsItemComboboxActionsCalculate,
-    )
-    from .doc_forms_get200response_fields_item_combobox_actions_calculate_root import (
-        DocFormsGet200ResponseFieldsItemComboboxActionsCalculateRoot,
-    )
-    from .doc_forms_get200response_fields_item_combobox_actions_calculate_root_type import (
-        DocFormsGet200ResponseFieldsItemComboboxActionsCalculateRootType,
-    )
-    from .doc_forms_get200response_fields_item_combobox_actions_calculate_warnings_item import (
-        DocFormsGet200ResponseFieldsItemComboboxActionsCalculateWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_combobox_actions_format import (
-        DocFormsGet200ResponseFieldsItemComboboxActionsFormat,
-    )
-    from .doc_forms_get200response_fields_item_combobox_actions_format_root import (
-        DocFormsGet200ResponseFieldsItemComboboxActionsFormatRoot,
-    )
-    from .doc_forms_get200response_fields_item_combobox_actions_format_root_type import (
-        DocFormsGet200ResponseFieldsItemComboboxActionsFormatRootType,
-    )
-    from .doc_forms_get200response_fields_item_combobox_actions_format_warnings_item import (
-        DocFormsGet200ResponseFieldsItemComboboxActionsFormatWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_combobox_actions_keystroke import (
-        DocFormsGet200ResponseFieldsItemComboboxActionsKeystroke,
-    )
-    from .doc_forms_get200response_fields_item_combobox_actions_keystroke_root import (
-        DocFormsGet200ResponseFieldsItemComboboxActionsKeystrokeRoot,
-    )
-    from .doc_forms_get200response_fields_item_combobox_actions_keystroke_root_type import (
-        DocFormsGet200ResponseFieldsItemComboboxActionsKeystrokeRootType,
-    )
-    from .doc_forms_get200response_fields_item_combobox_actions_keystroke_warnings_item import (
-        DocFormsGet200ResponseFieldsItemComboboxActionsKeystrokeWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_combobox_actions_validate import (
-        DocFormsGet200ResponseFieldsItemComboboxActionsValidate,
-    )
-    from .doc_forms_get200response_fields_item_combobox_actions_validate_root import (
-        DocFormsGet200ResponseFieldsItemComboboxActionsValidateRoot,
-    )
-    from .doc_forms_get200response_fields_item_combobox_actions_validate_root_type import (
-        DocFormsGet200ResponseFieldsItemComboboxActionsValidateRootType,
-    )
-    from .doc_forms_get200response_fields_item_combobox_actions_validate_warnings_item import (
-        DocFormsGet200ResponseFieldsItemComboboxActionsValidateWarningsItem,
-    )
     from .doc_forms_get200response_fields_item_combobox_default_value_entry import (
         DocFormsGet200ResponseFieldsItemComboboxDefaultValueEntry,
         DocFormsGet200ResponseFieldsItemComboboxDefaultValueEntry_Array,
@@ -8307,55 +3009,6 @@ if typing.TYPE_CHECKING:
         DocFormsGet200ResponseFieldsItemComboboxWidgetsItem,
     )
     from .doc_forms_get200response_fields_item_listbox import DocFormsGet200ResponseFieldsItemListbox
-    from .doc_forms_get200response_fields_item_listbox_actions import DocFormsGet200ResponseFieldsItemListboxActions
-    from .doc_forms_get200response_fields_item_listbox_actions_calculate import (
-        DocFormsGet200ResponseFieldsItemListboxActionsCalculate,
-    )
-    from .doc_forms_get200response_fields_item_listbox_actions_calculate_root import (
-        DocFormsGet200ResponseFieldsItemListboxActionsCalculateRoot,
-    )
-    from .doc_forms_get200response_fields_item_listbox_actions_calculate_root_type import (
-        DocFormsGet200ResponseFieldsItemListboxActionsCalculateRootType,
-    )
-    from .doc_forms_get200response_fields_item_listbox_actions_calculate_warnings_item import (
-        DocFormsGet200ResponseFieldsItemListboxActionsCalculateWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_listbox_actions_format import (
-        DocFormsGet200ResponseFieldsItemListboxActionsFormat,
-    )
-    from .doc_forms_get200response_fields_item_listbox_actions_format_root import (
-        DocFormsGet200ResponseFieldsItemListboxActionsFormatRoot,
-    )
-    from .doc_forms_get200response_fields_item_listbox_actions_format_root_type import (
-        DocFormsGet200ResponseFieldsItemListboxActionsFormatRootType,
-    )
-    from .doc_forms_get200response_fields_item_listbox_actions_format_warnings_item import (
-        DocFormsGet200ResponseFieldsItemListboxActionsFormatWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_listbox_actions_keystroke import (
-        DocFormsGet200ResponseFieldsItemListboxActionsKeystroke,
-    )
-    from .doc_forms_get200response_fields_item_listbox_actions_keystroke_root import (
-        DocFormsGet200ResponseFieldsItemListboxActionsKeystrokeRoot,
-    )
-    from .doc_forms_get200response_fields_item_listbox_actions_keystroke_root_type import (
-        DocFormsGet200ResponseFieldsItemListboxActionsKeystrokeRootType,
-    )
-    from .doc_forms_get200response_fields_item_listbox_actions_keystroke_warnings_item import (
-        DocFormsGet200ResponseFieldsItemListboxActionsKeystrokeWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_listbox_actions_validate import (
-        DocFormsGet200ResponseFieldsItemListboxActionsValidate,
-    )
-    from .doc_forms_get200response_fields_item_listbox_actions_validate_root import (
-        DocFormsGet200ResponseFieldsItemListboxActionsValidateRoot,
-    )
-    from .doc_forms_get200response_fields_item_listbox_actions_validate_root_type import (
-        DocFormsGet200ResponseFieldsItemListboxActionsValidateRootType,
-    )
-    from .doc_forms_get200response_fields_item_listbox_actions_validate_warnings_item import (
-        DocFormsGet200ResponseFieldsItemListboxActionsValidateWarningsItem,
-    )
     from .doc_forms_get200response_fields_item_listbox_default_value_entry import (
         DocFormsGet200ResponseFieldsItemListboxDefaultValueEntry,
         DocFormsGet200ResponseFieldsItemListboxDefaultValueEntry_Array,
@@ -8412,57 +3065,6 @@ if typing.TYPE_CHECKING:
         DocFormsGet200ResponseFieldsItemListboxWidgetsItem,
     )
     from .doc_forms_get200response_fields_item_pushbutton import DocFormsGet200ResponseFieldsItemPushbutton
-    from .doc_forms_get200response_fields_item_pushbutton_actions import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActions,
-    )
-    from .doc_forms_get200response_fields_item_pushbutton_actions_calculate import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActionsCalculate,
-    )
-    from .doc_forms_get200response_fields_item_pushbutton_actions_calculate_root import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActionsCalculateRoot,
-    )
-    from .doc_forms_get200response_fields_item_pushbutton_actions_calculate_root_type import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActionsCalculateRootType,
-    )
-    from .doc_forms_get200response_fields_item_pushbutton_actions_calculate_warnings_item import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActionsCalculateWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_pushbutton_actions_format import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActionsFormat,
-    )
-    from .doc_forms_get200response_fields_item_pushbutton_actions_format_root import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActionsFormatRoot,
-    )
-    from .doc_forms_get200response_fields_item_pushbutton_actions_format_root_type import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActionsFormatRootType,
-    )
-    from .doc_forms_get200response_fields_item_pushbutton_actions_format_warnings_item import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActionsFormatWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_pushbutton_actions_keystroke import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActionsKeystroke,
-    )
-    from .doc_forms_get200response_fields_item_pushbutton_actions_keystroke_root import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActionsKeystrokeRoot,
-    )
-    from .doc_forms_get200response_fields_item_pushbutton_actions_keystroke_root_type import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActionsKeystrokeRootType,
-    )
-    from .doc_forms_get200response_fields_item_pushbutton_actions_keystroke_warnings_item import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActionsKeystrokeWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_pushbutton_actions_validate import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActionsValidate,
-    )
-    from .doc_forms_get200response_fields_item_pushbutton_actions_validate_root import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActionsValidateRoot,
-    )
-    from .doc_forms_get200response_fields_item_pushbutton_actions_validate_root_type import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActionsValidateRootType,
-    )
-    from .doc_forms_get200response_fields_item_pushbutton_actions_validate_warnings_item import (
-        DocFormsGet200ResponseFieldsItemPushbuttonActionsValidateWarningsItem,
-    )
     from .doc_forms_get200response_fields_item_pushbutton_default_value_entry import (
         DocFormsGet200ResponseFieldsItemPushbuttonDefaultValueEntry,
         DocFormsGet200ResponseFieldsItemPushbuttonDefaultValueEntry_Array,
@@ -8518,55 +3120,6 @@ if typing.TYPE_CHECKING:
         DocFormsGet200ResponseFieldsItemPushbuttonWidgetsItem,
     )
     from .doc_forms_get200response_fields_item_radio import DocFormsGet200ResponseFieldsItemRadio
-    from .doc_forms_get200response_fields_item_radio_actions import DocFormsGet200ResponseFieldsItemRadioActions
-    from .doc_forms_get200response_fields_item_radio_actions_calculate import (
-        DocFormsGet200ResponseFieldsItemRadioActionsCalculate,
-    )
-    from .doc_forms_get200response_fields_item_radio_actions_calculate_root import (
-        DocFormsGet200ResponseFieldsItemRadioActionsCalculateRoot,
-    )
-    from .doc_forms_get200response_fields_item_radio_actions_calculate_root_type import (
-        DocFormsGet200ResponseFieldsItemRadioActionsCalculateRootType,
-    )
-    from .doc_forms_get200response_fields_item_radio_actions_calculate_warnings_item import (
-        DocFormsGet200ResponseFieldsItemRadioActionsCalculateWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_radio_actions_format import (
-        DocFormsGet200ResponseFieldsItemRadioActionsFormat,
-    )
-    from .doc_forms_get200response_fields_item_radio_actions_format_root import (
-        DocFormsGet200ResponseFieldsItemRadioActionsFormatRoot,
-    )
-    from .doc_forms_get200response_fields_item_radio_actions_format_root_type import (
-        DocFormsGet200ResponseFieldsItemRadioActionsFormatRootType,
-    )
-    from .doc_forms_get200response_fields_item_radio_actions_format_warnings_item import (
-        DocFormsGet200ResponseFieldsItemRadioActionsFormatWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_radio_actions_keystroke import (
-        DocFormsGet200ResponseFieldsItemRadioActionsKeystroke,
-    )
-    from .doc_forms_get200response_fields_item_radio_actions_keystroke_root import (
-        DocFormsGet200ResponseFieldsItemRadioActionsKeystrokeRoot,
-    )
-    from .doc_forms_get200response_fields_item_radio_actions_keystroke_root_type import (
-        DocFormsGet200ResponseFieldsItemRadioActionsKeystrokeRootType,
-    )
-    from .doc_forms_get200response_fields_item_radio_actions_keystroke_warnings_item import (
-        DocFormsGet200ResponseFieldsItemRadioActionsKeystrokeWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_radio_actions_validate import (
-        DocFormsGet200ResponseFieldsItemRadioActionsValidate,
-    )
-    from .doc_forms_get200response_fields_item_radio_actions_validate_root import (
-        DocFormsGet200ResponseFieldsItemRadioActionsValidateRoot,
-    )
-    from .doc_forms_get200response_fields_item_radio_actions_validate_root_type import (
-        DocFormsGet200ResponseFieldsItemRadioActionsValidateRootType,
-    )
-    from .doc_forms_get200response_fields_item_radio_actions_validate_warnings_item import (
-        DocFormsGet200ResponseFieldsItemRadioActionsValidateWarningsItem,
-    )
     from .doc_forms_get200response_fields_item_radio_default_value_entry import (
         DocFormsGet200ResponseFieldsItemRadioDefaultValueEntry,
         DocFormsGet200ResponseFieldsItemRadioDefaultValueEntry_Array,
@@ -8620,55 +3173,6 @@ if typing.TYPE_CHECKING:
         DocFormsGet200ResponseFieldsItemRadioWidgetsItem,
     )
     from .doc_forms_get200response_fields_item_signature import DocFormsGet200ResponseFieldsItemSignature
-    from .doc_forms_get200response_fields_item_signature_actions import DocFormsGet200ResponseFieldsItemSignatureActions
-    from .doc_forms_get200response_fields_item_signature_actions_calculate import (
-        DocFormsGet200ResponseFieldsItemSignatureActionsCalculate,
-    )
-    from .doc_forms_get200response_fields_item_signature_actions_calculate_root import (
-        DocFormsGet200ResponseFieldsItemSignatureActionsCalculateRoot,
-    )
-    from .doc_forms_get200response_fields_item_signature_actions_calculate_root_type import (
-        DocFormsGet200ResponseFieldsItemSignatureActionsCalculateRootType,
-    )
-    from .doc_forms_get200response_fields_item_signature_actions_calculate_warnings_item import (
-        DocFormsGet200ResponseFieldsItemSignatureActionsCalculateWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_signature_actions_format import (
-        DocFormsGet200ResponseFieldsItemSignatureActionsFormat,
-    )
-    from .doc_forms_get200response_fields_item_signature_actions_format_root import (
-        DocFormsGet200ResponseFieldsItemSignatureActionsFormatRoot,
-    )
-    from .doc_forms_get200response_fields_item_signature_actions_format_root_type import (
-        DocFormsGet200ResponseFieldsItemSignatureActionsFormatRootType,
-    )
-    from .doc_forms_get200response_fields_item_signature_actions_format_warnings_item import (
-        DocFormsGet200ResponseFieldsItemSignatureActionsFormatWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_signature_actions_keystroke import (
-        DocFormsGet200ResponseFieldsItemSignatureActionsKeystroke,
-    )
-    from .doc_forms_get200response_fields_item_signature_actions_keystroke_root import (
-        DocFormsGet200ResponseFieldsItemSignatureActionsKeystrokeRoot,
-    )
-    from .doc_forms_get200response_fields_item_signature_actions_keystroke_root_type import (
-        DocFormsGet200ResponseFieldsItemSignatureActionsKeystrokeRootType,
-    )
-    from .doc_forms_get200response_fields_item_signature_actions_keystroke_warnings_item import (
-        DocFormsGet200ResponseFieldsItemSignatureActionsKeystrokeWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_signature_actions_validate import (
-        DocFormsGet200ResponseFieldsItemSignatureActionsValidate,
-    )
-    from .doc_forms_get200response_fields_item_signature_actions_validate_root import (
-        DocFormsGet200ResponseFieldsItemSignatureActionsValidateRoot,
-    )
-    from .doc_forms_get200response_fields_item_signature_actions_validate_root_type import (
-        DocFormsGet200ResponseFieldsItemSignatureActionsValidateRootType,
-    )
-    from .doc_forms_get200response_fields_item_signature_actions_validate_warnings_item import (
-        DocFormsGet200ResponseFieldsItemSignatureActionsValidateWarningsItem,
-    )
     from .doc_forms_get200response_fields_item_signature_default_value_entry import (
         DocFormsGet200ResponseFieldsItemSignatureDefaultValueEntry,
         DocFormsGet200ResponseFieldsItemSignatureDefaultValueEntry_Array,
@@ -8722,55 +3226,6 @@ if typing.TYPE_CHECKING:
         DocFormsGet200ResponseFieldsItemSignatureWidgetsItem,
     )
     from .doc_forms_get200response_fields_item_text import DocFormsGet200ResponseFieldsItemText
-    from .doc_forms_get200response_fields_item_text_actions import DocFormsGet200ResponseFieldsItemTextActions
-    from .doc_forms_get200response_fields_item_text_actions_calculate import (
-        DocFormsGet200ResponseFieldsItemTextActionsCalculate,
-    )
-    from .doc_forms_get200response_fields_item_text_actions_calculate_root import (
-        DocFormsGet200ResponseFieldsItemTextActionsCalculateRoot,
-    )
-    from .doc_forms_get200response_fields_item_text_actions_calculate_root_type import (
-        DocFormsGet200ResponseFieldsItemTextActionsCalculateRootType,
-    )
-    from .doc_forms_get200response_fields_item_text_actions_calculate_warnings_item import (
-        DocFormsGet200ResponseFieldsItemTextActionsCalculateWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_text_actions_format import (
-        DocFormsGet200ResponseFieldsItemTextActionsFormat,
-    )
-    from .doc_forms_get200response_fields_item_text_actions_format_root import (
-        DocFormsGet200ResponseFieldsItemTextActionsFormatRoot,
-    )
-    from .doc_forms_get200response_fields_item_text_actions_format_root_type import (
-        DocFormsGet200ResponseFieldsItemTextActionsFormatRootType,
-    )
-    from .doc_forms_get200response_fields_item_text_actions_format_warnings_item import (
-        DocFormsGet200ResponseFieldsItemTextActionsFormatWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_text_actions_keystroke import (
-        DocFormsGet200ResponseFieldsItemTextActionsKeystroke,
-    )
-    from .doc_forms_get200response_fields_item_text_actions_keystroke_root import (
-        DocFormsGet200ResponseFieldsItemTextActionsKeystrokeRoot,
-    )
-    from .doc_forms_get200response_fields_item_text_actions_keystroke_root_type import (
-        DocFormsGet200ResponseFieldsItemTextActionsKeystrokeRootType,
-    )
-    from .doc_forms_get200response_fields_item_text_actions_keystroke_warnings_item import (
-        DocFormsGet200ResponseFieldsItemTextActionsKeystrokeWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_text_actions_validate import (
-        DocFormsGet200ResponseFieldsItemTextActionsValidate,
-    )
-    from .doc_forms_get200response_fields_item_text_actions_validate_root import (
-        DocFormsGet200ResponseFieldsItemTextActionsValidateRoot,
-    )
-    from .doc_forms_get200response_fields_item_text_actions_validate_root_type import (
-        DocFormsGet200ResponseFieldsItemTextActionsValidateRootType,
-    )
-    from .doc_forms_get200response_fields_item_text_actions_validate_warnings_item import (
-        DocFormsGet200ResponseFieldsItemTextActionsValidateWarningsItem,
-    )
     from .doc_forms_get200response_fields_item_text_default_value_entry import (
         DocFormsGet200ResponseFieldsItemTextDefaultValueEntry,
         DocFormsGet200ResponseFieldsItemTextDefaultValueEntry_Array,
@@ -8822,55 +3277,6 @@ if typing.TYPE_CHECKING:
     )
     from .doc_forms_get200response_fields_item_text_widgets_item import DocFormsGet200ResponseFieldsItemTextWidgetsItem
     from .doc_forms_get200response_fields_item_unknown import DocFormsGet200ResponseFieldsItemUnknown
-    from .doc_forms_get200response_fields_item_unknown_actions import DocFormsGet200ResponseFieldsItemUnknownActions
-    from .doc_forms_get200response_fields_item_unknown_actions_calculate import (
-        DocFormsGet200ResponseFieldsItemUnknownActionsCalculate,
-    )
-    from .doc_forms_get200response_fields_item_unknown_actions_calculate_root import (
-        DocFormsGet200ResponseFieldsItemUnknownActionsCalculateRoot,
-    )
-    from .doc_forms_get200response_fields_item_unknown_actions_calculate_root_type import (
-        DocFormsGet200ResponseFieldsItemUnknownActionsCalculateRootType,
-    )
-    from .doc_forms_get200response_fields_item_unknown_actions_calculate_warnings_item import (
-        DocFormsGet200ResponseFieldsItemUnknownActionsCalculateWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_unknown_actions_format import (
-        DocFormsGet200ResponseFieldsItemUnknownActionsFormat,
-    )
-    from .doc_forms_get200response_fields_item_unknown_actions_format_root import (
-        DocFormsGet200ResponseFieldsItemUnknownActionsFormatRoot,
-    )
-    from .doc_forms_get200response_fields_item_unknown_actions_format_root_type import (
-        DocFormsGet200ResponseFieldsItemUnknownActionsFormatRootType,
-    )
-    from .doc_forms_get200response_fields_item_unknown_actions_format_warnings_item import (
-        DocFormsGet200ResponseFieldsItemUnknownActionsFormatWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_unknown_actions_keystroke import (
-        DocFormsGet200ResponseFieldsItemUnknownActionsKeystroke,
-    )
-    from .doc_forms_get200response_fields_item_unknown_actions_keystroke_root import (
-        DocFormsGet200ResponseFieldsItemUnknownActionsKeystrokeRoot,
-    )
-    from .doc_forms_get200response_fields_item_unknown_actions_keystroke_root_type import (
-        DocFormsGet200ResponseFieldsItemUnknownActionsKeystrokeRootType,
-    )
-    from .doc_forms_get200response_fields_item_unknown_actions_keystroke_warnings_item import (
-        DocFormsGet200ResponseFieldsItemUnknownActionsKeystrokeWarningsItem,
-    )
-    from .doc_forms_get200response_fields_item_unknown_actions_validate import (
-        DocFormsGet200ResponseFieldsItemUnknownActionsValidate,
-    )
-    from .doc_forms_get200response_fields_item_unknown_actions_validate_root import (
-        DocFormsGet200ResponseFieldsItemUnknownActionsValidateRoot,
-    )
-    from .doc_forms_get200response_fields_item_unknown_actions_validate_root_type import (
-        DocFormsGet200ResponseFieldsItemUnknownActionsValidateRootType,
-    )
-    from .doc_forms_get200response_fields_item_unknown_actions_validate_warnings_item import (
-        DocFormsGet200ResponseFieldsItemUnknownActionsValidateWarningsItem,
-    )
     from .doc_forms_get200response_fields_item_unknown_default_value_entry import (
         DocFormsGet200ResponseFieldsItemUnknownDefaultValueEntry,
         DocFormsGet200ResponseFieldsItemUnknownDefaultValueEntry_Array,
@@ -9292,6 +3698,8 @@ if typing.TYPE_CHECKING:
     from .doc_text404response import DocText404Response
     from .doc_text404response_code import DocText404ResponseCode
     from .doc_text404response_name import DocText404ResponseName
+    from .document_actions_snapshot import DocumentActionsSnapshot
+    from .document_actions_snapshot_name_tree_scripts_item import DocumentActionsSnapshotNameTreeScriptsItem
     from .documents_commit200response import DocumentsCommit200Response
     from .documents_commit200response_document import DocumentsCommit200ResponseDocument
     from .documents_commit200response_document_state import DocumentsCommit200ResponseDocumentState
@@ -9406,6 +3814,78 @@ if typing.TYPE_CHECKING:
     from .engine_error_payload import EngineErrorPayload
     from .engine_error_payload_code import EngineErrorPayloadCode
     from .engine_error_payload_name import EngineErrorPayloadName
+    from .pdf_action_node import (
+        PdfActionNode,
+        PdfActionNode_Goto,
+        PdfActionNode_Goto3DView,
+        PdfActionNode_GotoEmbedded,
+        PdfActionNode_GotoRemote,
+        PdfActionNode_Hide,
+        PdfActionNode_ImportData,
+        PdfActionNode_Javascript,
+        PdfActionNode_Launch,
+        PdfActionNode_Movie,
+        PdfActionNode_Named,
+        PdfActionNode_Rendition,
+        PdfActionNode_ResetForm,
+        PdfActionNode_SetOcgState,
+        PdfActionNode_Sound,
+        PdfActionNode_SubmitForm,
+        PdfActionNode_Thread,
+        PdfActionNode_Transition,
+        PdfActionNode_Unknown,
+        PdfActionNode_Uri,
+    )
+    from .pdf_action_node_goto import PdfActionNodeGoto
+    from .pdf_action_node_goto3d_view import PdfActionNodeGoto3DView
+    from .pdf_action_node_goto_embedded import PdfActionNodeGotoEmbedded
+    from .pdf_action_node_goto_remote import PdfActionNodeGotoRemote
+    from .pdf_action_node_hide import PdfActionNodeHide
+    from .pdf_action_node_import_data import PdfActionNodeImportData
+    from .pdf_action_node_javascript import PdfActionNodeJavascript
+    from .pdf_action_node_launch import PdfActionNodeLaunch
+    from .pdf_action_node_movie import PdfActionNodeMovie
+    from .pdf_action_node_named import PdfActionNodeNamed
+    from .pdf_action_node_rendition import PdfActionNodeRendition
+    from .pdf_action_node_reset_form import PdfActionNodeResetForm
+    from .pdf_action_node_set_ocg_state import PdfActionNodeSetOcgState
+    from .pdf_action_node_sound import PdfActionNodeSound
+    from .pdf_action_node_submit_form import PdfActionNodeSubmitForm
+    from .pdf_action_node_submit_form_payload import PdfActionNodeSubmitFormPayload
+    from .pdf_action_node_submit_form_payload_flags import PdfActionNodeSubmitFormPayloadFlags
+    from .pdf_action_node_submit_form_payload_flags_format import PdfActionNodeSubmitFormPayloadFlagsFormat
+    from .pdf_action_node_submit_form_payload_flags_method import PdfActionNodeSubmitFormPayloadFlagsMethod
+    from .pdf_action_node_thread import PdfActionNodeThread
+    from .pdf_action_node_transition import PdfActionNodeTransition
+    from .pdf_action_node_unknown import PdfActionNodeUnknown
+    from .pdf_action_node_uri import PdfActionNodeUri
+    from .pdf_action_target_ref import PdfActionTargetRef, PdfActionTargetRef_Name, PdfActionTargetRef_ObjectNumber
+    from .pdf_action_target_ref_name import PdfActionTargetRefName
+    from .pdf_action_target_ref_object_number import PdfActionTargetRefObjectNumber
+    from .pdf_action_tree import PdfActionTree
+    from .pdf_action_tree_warnings_item import PdfActionTreeWarningsItem
+    from .pdf_annotation_actions import PdfAnnotationActions
+    from .pdf_destination import (
+        PdfDestination,
+        PdfDestination_Fit,
+        PdfDestination_FitB,
+        PdfDestination_FitBh,
+        PdfDestination_FitBv,
+        PdfDestination_FitH,
+        PdfDestination_FitR,
+        PdfDestination_FitV,
+        PdfDestination_Xyz,
+    )
+    from .pdf_destination_fit import PdfDestinationFit
+    from .pdf_destination_fit_b import PdfDestinationFitB
+    from .pdf_destination_fit_bh import PdfDestinationFitBh
+    from .pdf_destination_fit_bv import PdfDestinationFitBv
+    from .pdf_destination_fit_h import PdfDestinationFitH
+    from .pdf_destination_fit_r import PdfDestinationFitR
+    from .pdf_destination_fit_v import PdfDestinationFitV
+    from .pdf_destination_xyz import PdfDestinationXyz
+    from .pdf_field_actions import PdfFieldActions
+    from .pdf_page_actions import PdfPageActions
     from .shares_create200response import SharesCreate200Response
     from .shares_create200response_share import SharesCreate200ResponseShare
     from .shares_create400response import SharesCreate400Response
@@ -9524,51 +4004,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200Response": ".doc_annotations_list200response",
     "DocAnnotationsList200ResponseAnnotationsItem": ".doc_annotations_list200response_annotations_item",
     "DocAnnotationsList200ResponseAnnotationsItemCaret": ".doc_annotations_list200response_annotations_item_caret",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActions": ".doc_annotations_list200response_annotations_item_caret_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsActivate": ".doc_annotations_list200response_annotations_item_caret_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsActivateRoot": ".doc_annotations_list200response_annotations_item_caret_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsActivateRootType": ".doc_annotations_list200response_annotations_item_caret_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_caret_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsBlur": ".doc_annotations_list200response_annotations_item_caret_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsBlurRoot": ".doc_annotations_list200response_annotations_item_caret_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsBlurRootType": ".doc_annotations_list200response_annotations_item_caret_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_caret_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorEnter": ".doc_annotations_list200response_annotations_item_caret_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_caret_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_caret_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_caret_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorExit": ".doc_annotations_list200response_annotations_item_caret_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_caret_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_caret_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_caret_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsFocus": ".doc_annotations_list200response_annotations_item_caret_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsFocusRoot": ".doc_annotations_list200response_annotations_item_caret_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsFocusRootType": ".doc_annotations_list200response_annotations_item_caret_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_caret_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseDown": ".doc_annotations_list200response_annotations_item_caret_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_caret_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_caret_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_caret_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseUp": ".doc_annotations_list200response_annotations_item_caret_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_caret_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_caret_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_caret_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageClose": ".doc_annotations_list200response_annotations_item_caret_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_caret_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_caret_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_caret_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageInvisible": ".doc_annotations_list200response_annotations_item_caret_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_caret_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_caret_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_caret_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageOpen": ".doc_annotations_list200response_annotations_item_caret_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_caret_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_caret_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_caret_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageVisible": ".doc_annotations_list200response_annotations_item_caret_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_caret_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_caret_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_caret_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemCaretBlendMode": ".doc_annotations_list200response_annotations_item_caret_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemCaretColor": ".doc_annotations_list200response_annotations_item_caret_color",
     "DocAnnotationsList200ResponseAnnotationsItemCaretFlags": ".doc_annotations_list200response_annotations_item_caret_flags",
@@ -9595,51 +4030,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemCaretReplyType": ".doc_annotations_list200response_annotations_item_caret_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemCaretUnrotatedRect": ".doc_annotations_list200response_annotations_item_caret_unrotated_rect",
     "DocAnnotationsList200ResponseAnnotationsItemCircle": ".doc_annotations_list200response_annotations_item_circle",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActions": ".doc_annotations_list200response_annotations_item_circle_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsActivate": ".doc_annotations_list200response_annotations_item_circle_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsActivateRoot": ".doc_annotations_list200response_annotations_item_circle_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsActivateRootType": ".doc_annotations_list200response_annotations_item_circle_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_circle_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsBlur": ".doc_annotations_list200response_annotations_item_circle_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsBlurRoot": ".doc_annotations_list200response_annotations_item_circle_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsBlurRootType": ".doc_annotations_list200response_annotations_item_circle_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_circle_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorEnter": ".doc_annotations_list200response_annotations_item_circle_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_circle_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_circle_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_circle_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorExit": ".doc_annotations_list200response_annotations_item_circle_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_circle_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_circle_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_circle_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsFocus": ".doc_annotations_list200response_annotations_item_circle_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsFocusRoot": ".doc_annotations_list200response_annotations_item_circle_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsFocusRootType": ".doc_annotations_list200response_annotations_item_circle_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_circle_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseDown": ".doc_annotations_list200response_annotations_item_circle_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_circle_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_circle_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_circle_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseUp": ".doc_annotations_list200response_annotations_item_circle_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_circle_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_circle_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_circle_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageClose": ".doc_annotations_list200response_annotations_item_circle_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_circle_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_circle_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_circle_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageInvisible": ".doc_annotations_list200response_annotations_item_circle_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_circle_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_circle_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_circle_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageOpen": ".doc_annotations_list200response_annotations_item_circle_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_circle_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_circle_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_circle_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageVisible": ".doc_annotations_list200response_annotations_item_circle_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_circle_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_circle_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_circle_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemCircleBlendMode": ".doc_annotations_list200response_annotations_item_circle_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemCircleBorderStyle": ".doc_annotations_list200response_annotations_item_circle_border_style",
     "DocAnnotationsList200ResponseAnnotationsItemCircleColor": ".doc_annotations_list200response_annotations_item_circle_color",
@@ -9667,51 +4057,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemCircleReplyType": ".doc_annotations_list200response_annotations_item_circle_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemCircleUnrotatedRect": ".doc_annotations_list200response_annotations_item_circle_unrotated_rect",
     "DocAnnotationsList200ResponseAnnotationsItemFileAttachment": ".doc_annotations_list200response_annotations_item_file_attachment",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActions": ".doc_annotations_list200response_annotations_item_file_attachment_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsActivate": ".doc_annotations_list200response_annotations_item_file_attachment_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsActivateRoot": ".doc_annotations_list200response_annotations_item_file_attachment_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsActivateRootType": ".doc_annotations_list200response_annotations_item_file_attachment_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_file_attachment_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsBlur": ".doc_annotations_list200response_annotations_item_file_attachment_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsBlurRoot": ".doc_annotations_list200response_annotations_item_file_attachment_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsBlurRootType": ".doc_annotations_list200response_annotations_item_file_attachment_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_file_attachment_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorEnter": ".doc_annotations_list200response_annotations_item_file_attachment_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_file_attachment_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_file_attachment_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_file_attachment_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorExit": ".doc_annotations_list200response_annotations_item_file_attachment_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_file_attachment_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_file_attachment_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_file_attachment_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsFocus": ".doc_annotations_list200response_annotations_item_file_attachment_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsFocusRoot": ".doc_annotations_list200response_annotations_item_file_attachment_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsFocusRootType": ".doc_annotations_list200response_annotations_item_file_attachment_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_file_attachment_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseDown": ".doc_annotations_list200response_annotations_item_file_attachment_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_file_attachment_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_file_attachment_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_file_attachment_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseUp": ".doc_annotations_list200response_annotations_item_file_attachment_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_file_attachment_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_file_attachment_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_file_attachment_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageClose": ".doc_annotations_list200response_annotations_item_file_attachment_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_file_attachment_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_file_attachment_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_file_attachment_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageInvisible": ".doc_annotations_list200response_annotations_item_file_attachment_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_file_attachment_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_file_attachment_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_file_attachment_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageOpen": ".doc_annotations_list200response_annotations_item_file_attachment_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_file_attachment_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_file_attachment_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_file_attachment_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageVisible": ".doc_annotations_list200response_annotations_item_file_attachment_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_file_attachment_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_file_attachment_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_file_attachment_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentBlendMode": ".doc_annotations_list200response_annotations_item_file_attachment_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentColor": ".doc_annotations_list200response_annotations_item_file_attachment_color",
     "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentFile": ".doc_annotations_list200response_annotations_item_file_attachment_file",
@@ -9737,51 +4082,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentRef_ObjectNumber": ".doc_annotations_list200response_annotations_item_file_attachment_ref",
     "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentReplyType": ".doc_annotations_list200response_annotations_item_file_attachment_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemFreeText": ".doc_annotations_list200response_annotations_item_free_text",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActions": ".doc_annotations_list200response_annotations_item_free_text_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsActivate": ".doc_annotations_list200response_annotations_item_free_text_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsActivateRoot": ".doc_annotations_list200response_annotations_item_free_text_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsActivateRootType": ".doc_annotations_list200response_annotations_item_free_text_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_free_text_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsBlur": ".doc_annotations_list200response_annotations_item_free_text_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsBlurRoot": ".doc_annotations_list200response_annotations_item_free_text_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsBlurRootType": ".doc_annotations_list200response_annotations_item_free_text_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_free_text_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorEnter": ".doc_annotations_list200response_annotations_item_free_text_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_free_text_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_free_text_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_free_text_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorExit": ".doc_annotations_list200response_annotations_item_free_text_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_free_text_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_free_text_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_free_text_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsFocus": ".doc_annotations_list200response_annotations_item_free_text_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsFocusRoot": ".doc_annotations_list200response_annotations_item_free_text_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsFocusRootType": ".doc_annotations_list200response_annotations_item_free_text_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_free_text_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseDown": ".doc_annotations_list200response_annotations_item_free_text_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_free_text_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_free_text_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_free_text_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseUp": ".doc_annotations_list200response_annotations_item_free_text_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_free_text_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_free_text_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_free_text_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageClose": ".doc_annotations_list200response_annotations_item_free_text_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_free_text_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_free_text_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_free_text_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageInvisible": ".doc_annotations_list200response_annotations_item_free_text_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_free_text_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_free_text_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_free_text_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageOpen": ".doc_annotations_list200response_annotations_item_free_text_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_free_text_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_free_text_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_free_text_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageVisible": ".doc_annotations_list200response_annotations_item_free_text_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_free_text_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_free_text_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_free_text_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextBlendMode": ".doc_annotations_list200response_annotations_item_free_text_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextBorderStyle": ".doc_annotations_list200response_annotations_item_free_text_border_style",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextColor": ".doc_annotations_list200response_annotations_item_free_text_color",
@@ -9814,51 +4114,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextTextAlign": ".doc_annotations_list200response_annotations_item_free_text_text_align",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextUnrotatedRect": ".doc_annotations_list200response_annotations_item_free_text_unrotated_rect",
     "DocAnnotationsList200ResponseAnnotationsItemHighlight": ".doc_annotations_list200response_annotations_item_highlight",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActions": ".doc_annotations_list200response_annotations_item_highlight_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsActivate": ".doc_annotations_list200response_annotations_item_highlight_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsActivateRoot": ".doc_annotations_list200response_annotations_item_highlight_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsActivateRootType": ".doc_annotations_list200response_annotations_item_highlight_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_highlight_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsBlur": ".doc_annotations_list200response_annotations_item_highlight_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsBlurRoot": ".doc_annotations_list200response_annotations_item_highlight_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsBlurRootType": ".doc_annotations_list200response_annotations_item_highlight_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_highlight_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorEnter": ".doc_annotations_list200response_annotations_item_highlight_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_highlight_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_highlight_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_highlight_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorExit": ".doc_annotations_list200response_annotations_item_highlight_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_highlight_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_highlight_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_highlight_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsFocus": ".doc_annotations_list200response_annotations_item_highlight_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsFocusRoot": ".doc_annotations_list200response_annotations_item_highlight_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsFocusRootType": ".doc_annotations_list200response_annotations_item_highlight_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_highlight_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseDown": ".doc_annotations_list200response_annotations_item_highlight_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_highlight_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_highlight_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_highlight_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseUp": ".doc_annotations_list200response_annotations_item_highlight_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_highlight_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_highlight_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_highlight_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageClose": ".doc_annotations_list200response_annotations_item_highlight_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_highlight_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_highlight_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_highlight_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageInvisible": ".doc_annotations_list200response_annotations_item_highlight_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_highlight_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_highlight_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_highlight_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageOpen": ".doc_annotations_list200response_annotations_item_highlight_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_highlight_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_highlight_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_highlight_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageVisible": ".doc_annotations_list200response_annotations_item_highlight_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_highlight_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_highlight_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_highlight_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemHighlightBlendMode": ".doc_annotations_list200response_annotations_item_highlight_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemHighlightColor": ".doc_annotations_list200response_annotations_item_highlight_color",
     "DocAnnotationsList200ResponseAnnotationsItemHighlightFlags": ".doc_annotations_list200response_annotations_item_highlight_flags",
@@ -9887,51 +4142,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemHighlightRef_ObjectNumber": ".doc_annotations_list200response_annotations_item_highlight_ref",
     "DocAnnotationsList200ResponseAnnotationsItemHighlightReplyType": ".doc_annotations_list200response_annotations_item_highlight_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemInk": ".doc_annotations_list200response_annotations_item_ink",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActions": ".doc_annotations_list200response_annotations_item_ink_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsActivate": ".doc_annotations_list200response_annotations_item_ink_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsActivateRoot": ".doc_annotations_list200response_annotations_item_ink_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsActivateRootType": ".doc_annotations_list200response_annotations_item_ink_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_ink_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsBlur": ".doc_annotations_list200response_annotations_item_ink_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsBlurRoot": ".doc_annotations_list200response_annotations_item_ink_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsBlurRootType": ".doc_annotations_list200response_annotations_item_ink_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_ink_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorEnter": ".doc_annotations_list200response_annotations_item_ink_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_ink_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_ink_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_ink_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorExit": ".doc_annotations_list200response_annotations_item_ink_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_ink_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_ink_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_ink_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsFocus": ".doc_annotations_list200response_annotations_item_ink_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsFocusRoot": ".doc_annotations_list200response_annotations_item_ink_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsFocusRootType": ".doc_annotations_list200response_annotations_item_ink_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_ink_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseDown": ".doc_annotations_list200response_annotations_item_ink_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_ink_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_ink_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_ink_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseUp": ".doc_annotations_list200response_annotations_item_ink_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_ink_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_ink_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_ink_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageClose": ".doc_annotations_list200response_annotations_item_ink_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_ink_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_ink_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_ink_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageInvisible": ".doc_annotations_list200response_annotations_item_ink_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_ink_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_ink_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_ink_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageOpen": ".doc_annotations_list200response_annotations_item_ink_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_ink_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_ink_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_ink_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageVisible": ".doc_annotations_list200response_annotations_item_ink_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_ink_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_ink_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_ink_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemInkBlendMode": ".doc_annotations_list200response_annotations_item_ink_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemInkBorderStyle": ".doc_annotations_list200response_annotations_item_ink_border_style",
     "DocAnnotationsList200ResponseAnnotationsItemInkColor": ".doc_annotations_list200response_annotations_item_ink_color",
@@ -9958,51 +4168,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemInkRef_ObjectNumber": ".doc_annotations_list200response_annotations_item_ink_ref",
     "DocAnnotationsList200ResponseAnnotationsItemInkReplyType": ".doc_annotations_list200response_annotations_item_ink_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemLine": ".doc_annotations_list200response_annotations_item_line",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActions": ".doc_annotations_list200response_annotations_item_line_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsActivate": ".doc_annotations_list200response_annotations_item_line_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsActivateRoot": ".doc_annotations_list200response_annotations_item_line_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsActivateRootType": ".doc_annotations_list200response_annotations_item_line_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_line_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsBlur": ".doc_annotations_list200response_annotations_item_line_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsBlurRoot": ".doc_annotations_list200response_annotations_item_line_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsBlurRootType": ".doc_annotations_list200response_annotations_item_line_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_line_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorEnter": ".doc_annotations_list200response_annotations_item_line_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_line_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_line_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_line_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorExit": ".doc_annotations_list200response_annotations_item_line_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_line_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_line_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_line_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsFocus": ".doc_annotations_list200response_annotations_item_line_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsFocusRoot": ".doc_annotations_list200response_annotations_item_line_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsFocusRootType": ".doc_annotations_list200response_annotations_item_line_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_line_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseDown": ".doc_annotations_list200response_annotations_item_line_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_line_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_line_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_line_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseUp": ".doc_annotations_list200response_annotations_item_line_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_line_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_line_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_line_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageClose": ".doc_annotations_list200response_annotations_item_line_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_line_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_line_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_line_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageInvisible": ".doc_annotations_list200response_annotations_item_line_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_line_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_line_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_line_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageOpen": ".doc_annotations_list200response_annotations_item_line_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_line_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_line_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_line_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageVisible": ".doc_annotations_list200response_annotations_item_line_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_line_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_line_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_line_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemLineBlendMode": ".doc_annotations_list200response_annotations_item_line_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemLineBorderStyle": ".doc_annotations_list200response_annotations_item_line_border_style",
     "DocAnnotationsList200ResponseAnnotationsItemLineColor": ".doc_annotations_list200response_annotations_item_line_color",
@@ -10034,51 +4199,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemLineRef_ObjectNumber": ".doc_annotations_list200response_annotations_item_line_ref",
     "DocAnnotationsList200ResponseAnnotationsItemLineReplyType": ".doc_annotations_list200response_annotations_item_line_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemLink": ".doc_annotations_list200response_annotations_item_link",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActions": ".doc_annotations_list200response_annotations_item_link_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsActivate": ".doc_annotations_list200response_annotations_item_link_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsActivateRoot": ".doc_annotations_list200response_annotations_item_link_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsActivateRootType": ".doc_annotations_list200response_annotations_item_link_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_link_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsBlur": ".doc_annotations_list200response_annotations_item_link_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsBlurRoot": ".doc_annotations_list200response_annotations_item_link_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsBlurRootType": ".doc_annotations_list200response_annotations_item_link_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_link_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorEnter": ".doc_annotations_list200response_annotations_item_link_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_link_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_link_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_link_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorExit": ".doc_annotations_list200response_annotations_item_link_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_link_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_link_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_link_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsFocus": ".doc_annotations_list200response_annotations_item_link_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsFocusRoot": ".doc_annotations_list200response_annotations_item_link_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsFocusRootType": ".doc_annotations_list200response_annotations_item_link_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_link_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseDown": ".doc_annotations_list200response_annotations_item_link_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_link_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_link_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_link_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseUp": ".doc_annotations_list200response_annotations_item_link_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_link_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_link_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_link_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageClose": ".doc_annotations_list200response_annotations_item_link_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_link_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_link_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_link_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageInvisible": ".doc_annotations_list200response_annotations_item_link_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_link_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_link_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_link_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageOpen": ".doc_annotations_list200response_annotations_item_link_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_link_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_link_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_link_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageVisible": ".doc_annotations_list200response_annotations_item_link_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_link_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_link_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_link_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemLinkBlendMode": ".doc_annotations_list200response_annotations_item_link_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemLinkFlags": ".doc_annotations_list200response_annotations_item_link_flags",
     "DocAnnotationsList200ResponseAnnotationsItemLinkIdentityQuality": ".doc_annotations_list200response_annotations_item_link_identity_quality",
@@ -10102,23 +4222,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemLinkReplyType": ".doc_annotations_list200response_annotations_item_link_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemLinkTarget": ".doc_annotations_list200response_annotations_item_link_target",
     "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGoto": ".doc_annotations_list200response_annotations_item_link_target_goto",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination": ".doc_annotations_list200response_annotations_item_link_target_goto_destination",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFit": ".doc_annotations_list200response_annotations_item_link_target_goto_destination_fit",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitB": ".doc_annotations_list200response_annotations_item_link_target_goto_destination_fit_b",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitBh": ".doc_annotations_list200response_annotations_item_link_target_goto_destination_fit_bh",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitBv": ".doc_annotations_list200response_annotations_item_link_target_goto_destination_fit_bv",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitH": ".doc_annotations_list200response_annotations_item_link_target_goto_destination_fit_h",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitR": ".doc_annotations_list200response_annotations_item_link_target_goto_destination_fit_r",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitV": ".doc_annotations_list200response_annotations_item_link_target_goto_destination_fit_v",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationXyz": ".doc_annotations_list200response_annotations_item_link_target_goto_destination_xyz",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_Fit": ".doc_annotations_list200response_annotations_item_link_target_goto_destination",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitB": ".doc_annotations_list200response_annotations_item_link_target_goto_destination",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitBh": ".doc_annotations_list200response_annotations_item_link_target_goto_destination",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitBv": ".doc_annotations_list200response_annotations_item_link_target_goto_destination",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitH": ".doc_annotations_list200response_annotations_item_link_target_goto_destination",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitR": ".doc_annotations_list200response_annotations_item_link_target_goto_destination",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitV": ".doc_annotations_list200response_annotations_item_link_target_goto_destination",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_Xyz": ".doc_annotations_list200response_annotations_item_link_target_goto_destination",
     "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoRemote": ".doc_annotations_list200response_annotations_item_link_target_goto_remote",
     "DocAnnotationsList200ResponseAnnotationsItemLinkTargetJavascript": ".doc_annotations_list200response_annotations_item_link_target_javascript",
     "DocAnnotationsList200ResponseAnnotationsItemLinkTargetLaunch": ".doc_annotations_list200response_annotations_item_link_target_launch",
@@ -10133,51 +4236,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemLinkTarget_Unsupported": ".doc_annotations_list200response_annotations_item_link_target",
     "DocAnnotationsList200ResponseAnnotationsItemLinkTarget_Uri": ".doc_annotations_list200response_annotations_item_link_target",
     "DocAnnotationsList200ResponseAnnotationsItemPolygon": ".doc_annotations_list200response_annotations_item_polygon",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActions": ".doc_annotations_list200response_annotations_item_polygon_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsActivate": ".doc_annotations_list200response_annotations_item_polygon_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsActivateRoot": ".doc_annotations_list200response_annotations_item_polygon_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsActivateRootType": ".doc_annotations_list200response_annotations_item_polygon_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_polygon_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsBlur": ".doc_annotations_list200response_annotations_item_polygon_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsBlurRoot": ".doc_annotations_list200response_annotations_item_polygon_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsBlurRootType": ".doc_annotations_list200response_annotations_item_polygon_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_polygon_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorEnter": ".doc_annotations_list200response_annotations_item_polygon_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_polygon_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_polygon_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_polygon_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorExit": ".doc_annotations_list200response_annotations_item_polygon_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_polygon_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_polygon_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_polygon_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsFocus": ".doc_annotations_list200response_annotations_item_polygon_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsFocusRoot": ".doc_annotations_list200response_annotations_item_polygon_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsFocusRootType": ".doc_annotations_list200response_annotations_item_polygon_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_polygon_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseDown": ".doc_annotations_list200response_annotations_item_polygon_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_polygon_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_polygon_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_polygon_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseUp": ".doc_annotations_list200response_annotations_item_polygon_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_polygon_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_polygon_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_polygon_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageClose": ".doc_annotations_list200response_annotations_item_polygon_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_polygon_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_polygon_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_polygon_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageInvisible": ".doc_annotations_list200response_annotations_item_polygon_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_polygon_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_polygon_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_polygon_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageOpen": ".doc_annotations_list200response_annotations_item_polygon_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_polygon_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_polygon_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_polygon_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageVisible": ".doc_annotations_list200response_annotations_item_polygon_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_polygon_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_polygon_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_polygon_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonBlendMode": ".doc_annotations_list200response_annotations_item_polygon_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonBorderStyle": ".doc_annotations_list200response_annotations_item_polygon_border_style",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonColor": ".doc_annotations_list200response_annotations_item_polygon_color",
@@ -10204,51 +4262,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemPolygonReplyType": ".doc_annotations_list200response_annotations_item_polygon_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonVerticesItem": ".doc_annotations_list200response_annotations_item_polygon_vertices_item",
     "DocAnnotationsList200ResponseAnnotationsItemPolyline": ".doc_annotations_list200response_annotations_item_polyline",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActions": ".doc_annotations_list200response_annotations_item_polyline_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsActivate": ".doc_annotations_list200response_annotations_item_polyline_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsActivateRoot": ".doc_annotations_list200response_annotations_item_polyline_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsActivateRootType": ".doc_annotations_list200response_annotations_item_polyline_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_polyline_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsBlur": ".doc_annotations_list200response_annotations_item_polyline_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsBlurRoot": ".doc_annotations_list200response_annotations_item_polyline_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsBlurRootType": ".doc_annotations_list200response_annotations_item_polyline_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_polyline_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorEnter": ".doc_annotations_list200response_annotations_item_polyline_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_polyline_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_polyline_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_polyline_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorExit": ".doc_annotations_list200response_annotations_item_polyline_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_polyline_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_polyline_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_polyline_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsFocus": ".doc_annotations_list200response_annotations_item_polyline_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsFocusRoot": ".doc_annotations_list200response_annotations_item_polyline_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsFocusRootType": ".doc_annotations_list200response_annotations_item_polyline_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_polyline_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseDown": ".doc_annotations_list200response_annotations_item_polyline_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_polyline_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_polyline_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_polyline_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseUp": ".doc_annotations_list200response_annotations_item_polyline_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_polyline_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_polyline_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_polyline_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageClose": ".doc_annotations_list200response_annotations_item_polyline_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_polyline_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_polyline_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_polyline_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageInvisible": ".doc_annotations_list200response_annotations_item_polyline_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_polyline_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_polyline_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_polyline_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageOpen": ".doc_annotations_list200response_annotations_item_polyline_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_polyline_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_polyline_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_polyline_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageVisible": ".doc_annotations_list200response_annotations_item_polyline_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_polyline_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_polyline_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_polyline_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineBlendMode": ".doc_annotations_list200response_annotations_item_polyline_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineBorderStyle": ".doc_annotations_list200response_annotations_item_polyline_border_style",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineColor": ".doc_annotations_list200response_annotations_item_polyline_color",
@@ -10278,51 +4291,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemPolylineReplyType": ".doc_annotations_list200response_annotations_item_polyline_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineVerticesItem": ".doc_annotations_list200response_annotations_item_polyline_vertices_item",
     "DocAnnotationsList200ResponseAnnotationsItemRedact": ".doc_annotations_list200response_annotations_item_redact",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActions": ".doc_annotations_list200response_annotations_item_redact_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsActivate": ".doc_annotations_list200response_annotations_item_redact_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsActivateRoot": ".doc_annotations_list200response_annotations_item_redact_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsActivateRootType": ".doc_annotations_list200response_annotations_item_redact_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_redact_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsBlur": ".doc_annotations_list200response_annotations_item_redact_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsBlurRoot": ".doc_annotations_list200response_annotations_item_redact_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsBlurRootType": ".doc_annotations_list200response_annotations_item_redact_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_redact_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorEnter": ".doc_annotations_list200response_annotations_item_redact_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_redact_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_redact_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_redact_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorExit": ".doc_annotations_list200response_annotations_item_redact_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_redact_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_redact_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_redact_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsFocus": ".doc_annotations_list200response_annotations_item_redact_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsFocusRoot": ".doc_annotations_list200response_annotations_item_redact_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsFocusRootType": ".doc_annotations_list200response_annotations_item_redact_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_redact_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseDown": ".doc_annotations_list200response_annotations_item_redact_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_redact_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_redact_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_redact_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseUp": ".doc_annotations_list200response_annotations_item_redact_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_redact_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_redact_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_redact_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageClose": ".doc_annotations_list200response_annotations_item_redact_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_redact_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_redact_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_redact_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageInvisible": ".doc_annotations_list200response_annotations_item_redact_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_redact_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_redact_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_redact_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageOpen": ".doc_annotations_list200response_annotations_item_redact_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_redact_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_redact_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_redact_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageVisible": ".doc_annotations_list200response_annotations_item_redact_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_redact_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_redact_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_redact_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemRedactBlendMode": ".doc_annotations_list200response_annotations_item_redact_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemRedactColor": ".doc_annotations_list200response_annotations_item_redact_color",
     "DocAnnotationsList200ResponseAnnotationsItemRedactFlags": ".doc_annotations_list200response_annotations_item_redact_flags",
@@ -10355,51 +4323,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemRedactReplyType": ".doc_annotations_list200response_annotations_item_redact_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemRedactTextAlign": ".doc_annotations_list200response_annotations_item_redact_text_align",
     "DocAnnotationsList200ResponseAnnotationsItemSquare": ".doc_annotations_list200response_annotations_item_square",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActions": ".doc_annotations_list200response_annotations_item_square_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsActivate": ".doc_annotations_list200response_annotations_item_square_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsActivateRoot": ".doc_annotations_list200response_annotations_item_square_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsActivateRootType": ".doc_annotations_list200response_annotations_item_square_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_square_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsBlur": ".doc_annotations_list200response_annotations_item_square_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsBlurRoot": ".doc_annotations_list200response_annotations_item_square_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsBlurRootType": ".doc_annotations_list200response_annotations_item_square_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_square_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorEnter": ".doc_annotations_list200response_annotations_item_square_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_square_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_square_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_square_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorExit": ".doc_annotations_list200response_annotations_item_square_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_square_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_square_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_square_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsFocus": ".doc_annotations_list200response_annotations_item_square_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsFocusRoot": ".doc_annotations_list200response_annotations_item_square_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsFocusRootType": ".doc_annotations_list200response_annotations_item_square_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_square_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseDown": ".doc_annotations_list200response_annotations_item_square_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_square_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_square_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_square_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseUp": ".doc_annotations_list200response_annotations_item_square_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_square_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_square_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_square_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageClose": ".doc_annotations_list200response_annotations_item_square_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_square_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_square_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_square_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageInvisible": ".doc_annotations_list200response_annotations_item_square_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_square_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_square_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_square_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageOpen": ".doc_annotations_list200response_annotations_item_square_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_square_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_square_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_square_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageVisible": ".doc_annotations_list200response_annotations_item_square_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_square_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_square_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_square_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemSquareBlendMode": ".doc_annotations_list200response_annotations_item_square_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemSquareBorderStyle": ".doc_annotations_list200response_annotations_item_square_border_style",
     "DocAnnotationsList200ResponseAnnotationsItemSquareColor": ".doc_annotations_list200response_annotations_item_square_color",
@@ -10427,51 +4350,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemSquareReplyType": ".doc_annotations_list200response_annotations_item_square_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemSquareUnrotatedRect": ".doc_annotations_list200response_annotations_item_square_unrotated_rect",
     "DocAnnotationsList200ResponseAnnotationsItemSquiggly": ".doc_annotations_list200response_annotations_item_squiggly",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActions": ".doc_annotations_list200response_annotations_item_squiggly_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsActivate": ".doc_annotations_list200response_annotations_item_squiggly_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsActivateRoot": ".doc_annotations_list200response_annotations_item_squiggly_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsActivateRootType": ".doc_annotations_list200response_annotations_item_squiggly_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_squiggly_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsBlur": ".doc_annotations_list200response_annotations_item_squiggly_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsBlurRoot": ".doc_annotations_list200response_annotations_item_squiggly_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsBlurRootType": ".doc_annotations_list200response_annotations_item_squiggly_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_squiggly_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorEnter": ".doc_annotations_list200response_annotations_item_squiggly_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_squiggly_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_squiggly_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_squiggly_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorExit": ".doc_annotations_list200response_annotations_item_squiggly_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_squiggly_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_squiggly_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_squiggly_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsFocus": ".doc_annotations_list200response_annotations_item_squiggly_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsFocusRoot": ".doc_annotations_list200response_annotations_item_squiggly_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsFocusRootType": ".doc_annotations_list200response_annotations_item_squiggly_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_squiggly_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseDown": ".doc_annotations_list200response_annotations_item_squiggly_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_squiggly_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_squiggly_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_squiggly_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseUp": ".doc_annotations_list200response_annotations_item_squiggly_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_squiggly_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_squiggly_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_squiggly_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageClose": ".doc_annotations_list200response_annotations_item_squiggly_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_squiggly_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_squiggly_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_squiggly_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageInvisible": ".doc_annotations_list200response_annotations_item_squiggly_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_squiggly_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_squiggly_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_squiggly_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageOpen": ".doc_annotations_list200response_annotations_item_squiggly_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_squiggly_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_squiggly_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_squiggly_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageVisible": ".doc_annotations_list200response_annotations_item_squiggly_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_squiggly_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_squiggly_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_squiggly_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemSquigglyBlendMode": ".doc_annotations_list200response_annotations_item_squiggly_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemSquigglyColor": ".doc_annotations_list200response_annotations_item_squiggly_color",
     "DocAnnotationsList200ResponseAnnotationsItemSquigglyFlags": ".doc_annotations_list200response_annotations_item_squiggly_flags",
@@ -10500,51 +4378,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemSquigglyRef_ObjectNumber": ".doc_annotations_list200response_annotations_item_squiggly_ref",
     "DocAnnotationsList200ResponseAnnotationsItemSquigglyReplyType": ".doc_annotations_list200response_annotations_item_squiggly_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemStamp": ".doc_annotations_list200response_annotations_item_stamp",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActions": ".doc_annotations_list200response_annotations_item_stamp_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsActivate": ".doc_annotations_list200response_annotations_item_stamp_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsActivateRoot": ".doc_annotations_list200response_annotations_item_stamp_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsActivateRootType": ".doc_annotations_list200response_annotations_item_stamp_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_stamp_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsBlur": ".doc_annotations_list200response_annotations_item_stamp_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsBlurRoot": ".doc_annotations_list200response_annotations_item_stamp_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsBlurRootType": ".doc_annotations_list200response_annotations_item_stamp_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_stamp_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorEnter": ".doc_annotations_list200response_annotations_item_stamp_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_stamp_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_stamp_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_stamp_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorExit": ".doc_annotations_list200response_annotations_item_stamp_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_stamp_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_stamp_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_stamp_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsFocus": ".doc_annotations_list200response_annotations_item_stamp_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsFocusRoot": ".doc_annotations_list200response_annotations_item_stamp_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsFocusRootType": ".doc_annotations_list200response_annotations_item_stamp_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_stamp_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseDown": ".doc_annotations_list200response_annotations_item_stamp_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_stamp_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_stamp_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_stamp_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseUp": ".doc_annotations_list200response_annotations_item_stamp_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_stamp_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_stamp_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_stamp_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageClose": ".doc_annotations_list200response_annotations_item_stamp_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_stamp_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_stamp_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_stamp_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageInvisible": ".doc_annotations_list200response_annotations_item_stamp_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_stamp_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_stamp_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_stamp_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageOpen": ".doc_annotations_list200response_annotations_item_stamp_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_stamp_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_stamp_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_stamp_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageVisible": ".doc_annotations_list200response_annotations_item_stamp_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_stamp_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_stamp_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_stamp_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemStampBlendMode": ".doc_annotations_list200response_annotations_item_stamp_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemStampFlags": ".doc_annotations_list200response_annotations_item_stamp_flags",
     "DocAnnotationsList200ResponseAnnotationsItemStampIdentityQuality": ".doc_annotations_list200response_annotations_item_stamp_identity_quality",
@@ -10568,51 +4401,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemStampReplyType": ".doc_annotations_list200response_annotations_item_stamp_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemStampUnrotatedRect": ".doc_annotations_list200response_annotations_item_stamp_unrotated_rect",
     "DocAnnotationsList200ResponseAnnotationsItemStrikeout": ".doc_annotations_list200response_annotations_item_strikeout",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActions": ".doc_annotations_list200response_annotations_item_strikeout_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsActivate": ".doc_annotations_list200response_annotations_item_strikeout_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsActivateRoot": ".doc_annotations_list200response_annotations_item_strikeout_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsActivateRootType": ".doc_annotations_list200response_annotations_item_strikeout_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_strikeout_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsBlur": ".doc_annotations_list200response_annotations_item_strikeout_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsBlurRoot": ".doc_annotations_list200response_annotations_item_strikeout_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsBlurRootType": ".doc_annotations_list200response_annotations_item_strikeout_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_strikeout_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorEnter": ".doc_annotations_list200response_annotations_item_strikeout_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_strikeout_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_strikeout_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_strikeout_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorExit": ".doc_annotations_list200response_annotations_item_strikeout_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_strikeout_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_strikeout_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_strikeout_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsFocus": ".doc_annotations_list200response_annotations_item_strikeout_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsFocusRoot": ".doc_annotations_list200response_annotations_item_strikeout_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsFocusRootType": ".doc_annotations_list200response_annotations_item_strikeout_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_strikeout_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseDown": ".doc_annotations_list200response_annotations_item_strikeout_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_strikeout_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_strikeout_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_strikeout_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseUp": ".doc_annotations_list200response_annotations_item_strikeout_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_strikeout_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_strikeout_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_strikeout_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageClose": ".doc_annotations_list200response_annotations_item_strikeout_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_strikeout_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_strikeout_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_strikeout_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageInvisible": ".doc_annotations_list200response_annotations_item_strikeout_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_strikeout_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_strikeout_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_strikeout_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageOpen": ".doc_annotations_list200response_annotations_item_strikeout_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_strikeout_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_strikeout_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_strikeout_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageVisible": ".doc_annotations_list200response_annotations_item_strikeout_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_strikeout_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_strikeout_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_strikeout_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemStrikeoutBlendMode": ".doc_annotations_list200response_annotations_item_strikeout_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemStrikeoutColor": ".doc_annotations_list200response_annotations_item_strikeout_color",
     "DocAnnotationsList200ResponseAnnotationsItemStrikeoutFlags": ".doc_annotations_list200response_annotations_item_strikeout_flags",
@@ -10642,51 +4430,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemStrikeoutRef_ObjectNumber": ".doc_annotations_list200response_annotations_item_strikeout_ref",
     "DocAnnotationsList200ResponseAnnotationsItemStrikeoutReplyType": ".doc_annotations_list200response_annotations_item_strikeout_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemText": ".doc_annotations_list200response_annotations_item_text",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActions": ".doc_annotations_list200response_annotations_item_text_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsActivate": ".doc_annotations_list200response_annotations_item_text_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsActivateRoot": ".doc_annotations_list200response_annotations_item_text_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsActivateRootType": ".doc_annotations_list200response_annotations_item_text_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_text_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsBlur": ".doc_annotations_list200response_annotations_item_text_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsBlurRoot": ".doc_annotations_list200response_annotations_item_text_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsBlurRootType": ".doc_annotations_list200response_annotations_item_text_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_text_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorEnter": ".doc_annotations_list200response_annotations_item_text_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_text_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_text_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_text_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorExit": ".doc_annotations_list200response_annotations_item_text_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_text_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_text_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_text_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsFocus": ".doc_annotations_list200response_annotations_item_text_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsFocusRoot": ".doc_annotations_list200response_annotations_item_text_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsFocusRootType": ".doc_annotations_list200response_annotations_item_text_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_text_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseDown": ".doc_annotations_list200response_annotations_item_text_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_text_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_text_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_text_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseUp": ".doc_annotations_list200response_annotations_item_text_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_text_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_text_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_text_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageClose": ".doc_annotations_list200response_annotations_item_text_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_text_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_text_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_text_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageInvisible": ".doc_annotations_list200response_annotations_item_text_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_text_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_text_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_text_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageOpen": ".doc_annotations_list200response_annotations_item_text_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_text_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_text_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_text_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageVisible": ".doc_annotations_list200response_annotations_item_text_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_text_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_text_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_text_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemTextBlendMode": ".doc_annotations_list200response_annotations_item_text_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemTextColor": ".doc_annotations_list200response_annotations_item_text_color",
     "DocAnnotationsList200ResponseAnnotationsItemTextFlags": ".doc_annotations_list200response_annotations_item_text_flags",
@@ -10711,51 +4454,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemTextRef_ObjectNumber": ".doc_annotations_list200response_annotations_item_text_ref",
     "DocAnnotationsList200ResponseAnnotationsItemTextReplyType": ".doc_annotations_list200response_annotations_item_text_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemUnderline": ".doc_annotations_list200response_annotations_item_underline",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActions": ".doc_annotations_list200response_annotations_item_underline_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsActivate": ".doc_annotations_list200response_annotations_item_underline_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsActivateRoot": ".doc_annotations_list200response_annotations_item_underline_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsActivateRootType": ".doc_annotations_list200response_annotations_item_underline_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_underline_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsBlur": ".doc_annotations_list200response_annotations_item_underline_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsBlurRoot": ".doc_annotations_list200response_annotations_item_underline_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsBlurRootType": ".doc_annotations_list200response_annotations_item_underline_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_underline_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorEnter": ".doc_annotations_list200response_annotations_item_underline_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_underline_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_underline_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_underline_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorExit": ".doc_annotations_list200response_annotations_item_underline_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_underline_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_underline_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_underline_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsFocus": ".doc_annotations_list200response_annotations_item_underline_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsFocusRoot": ".doc_annotations_list200response_annotations_item_underline_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsFocusRootType": ".doc_annotations_list200response_annotations_item_underline_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_underline_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseDown": ".doc_annotations_list200response_annotations_item_underline_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_underline_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_underline_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_underline_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseUp": ".doc_annotations_list200response_annotations_item_underline_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_underline_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_underline_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_underline_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageClose": ".doc_annotations_list200response_annotations_item_underline_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_underline_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_underline_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_underline_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageInvisible": ".doc_annotations_list200response_annotations_item_underline_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_underline_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_underline_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_underline_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageOpen": ".doc_annotations_list200response_annotations_item_underline_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_underline_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_underline_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_underline_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageVisible": ".doc_annotations_list200response_annotations_item_underline_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_underline_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_underline_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_underline_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemUnderlineBlendMode": ".doc_annotations_list200response_annotations_item_underline_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemUnderlineColor": ".doc_annotations_list200response_annotations_item_underline_color",
     "DocAnnotationsList200ResponseAnnotationsItemUnderlineFlags": ".doc_annotations_list200response_annotations_item_underline_flags",
@@ -10784,51 +4482,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemUnderlineRef_ObjectNumber": ".doc_annotations_list200response_annotations_item_underline_ref",
     "DocAnnotationsList200ResponseAnnotationsItemUnderlineReplyType": ".doc_annotations_list200response_annotations_item_underline_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemUnsupported": ".doc_annotations_list200response_annotations_item_unsupported",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActions": ".doc_annotations_list200response_annotations_item_unsupported_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsActivate": ".doc_annotations_list200response_annotations_item_unsupported_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsActivateRoot": ".doc_annotations_list200response_annotations_item_unsupported_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsActivateRootType": ".doc_annotations_list200response_annotations_item_unsupported_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_unsupported_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsBlur": ".doc_annotations_list200response_annotations_item_unsupported_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsBlurRoot": ".doc_annotations_list200response_annotations_item_unsupported_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsBlurRootType": ".doc_annotations_list200response_annotations_item_unsupported_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_unsupported_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorEnter": ".doc_annotations_list200response_annotations_item_unsupported_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_unsupported_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_unsupported_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_unsupported_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorExit": ".doc_annotations_list200response_annotations_item_unsupported_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_unsupported_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_unsupported_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_unsupported_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsFocus": ".doc_annotations_list200response_annotations_item_unsupported_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsFocusRoot": ".doc_annotations_list200response_annotations_item_unsupported_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsFocusRootType": ".doc_annotations_list200response_annotations_item_unsupported_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_unsupported_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseDown": ".doc_annotations_list200response_annotations_item_unsupported_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_unsupported_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_unsupported_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_unsupported_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseUp": ".doc_annotations_list200response_annotations_item_unsupported_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_unsupported_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_unsupported_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_unsupported_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageClose": ".doc_annotations_list200response_annotations_item_unsupported_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_unsupported_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_unsupported_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_unsupported_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageInvisible": ".doc_annotations_list200response_annotations_item_unsupported_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_unsupported_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_unsupported_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_unsupported_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageOpen": ".doc_annotations_list200response_annotations_item_unsupported_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_unsupported_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_unsupported_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_unsupported_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageVisible": ".doc_annotations_list200response_annotations_item_unsupported_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_unsupported_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_unsupported_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_unsupported_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemUnsupportedBlendMode": ".doc_annotations_list200response_annotations_item_unsupported_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemUnsupportedFlags": ".doc_annotations_list200response_annotations_item_unsupported_flags",
     "DocAnnotationsList200ResponseAnnotationsItemUnsupportedIdentityQuality": ".doc_annotations_list200response_annotations_item_unsupported_identity_quality",
@@ -10851,51 +4504,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemUnsupportedRef_ObjectNumber": ".doc_annotations_list200response_annotations_item_unsupported_ref",
     "DocAnnotationsList200ResponseAnnotationsItemUnsupportedReplyType": ".doc_annotations_list200response_annotations_item_unsupported_reply_type",
     "DocAnnotationsList200ResponseAnnotationsItemWidget": ".doc_annotations_list200response_annotations_item_widget",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActions": ".doc_annotations_list200response_annotations_item_widget_actions",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsActivate": ".doc_annotations_list200response_annotations_item_widget_actions_activate",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsActivateRoot": ".doc_annotations_list200response_annotations_item_widget_actions_activate_root",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsActivateRootType": ".doc_annotations_list200response_annotations_item_widget_actions_activate_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsActivateWarningsItem": ".doc_annotations_list200response_annotations_item_widget_actions_activate_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsBlur": ".doc_annotations_list200response_annotations_item_widget_actions_blur",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsBlurRoot": ".doc_annotations_list200response_annotations_item_widget_actions_blur_root",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsBlurRootType": ".doc_annotations_list200response_annotations_item_widget_actions_blur_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsBlurWarningsItem": ".doc_annotations_list200response_annotations_item_widget_actions_blur_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorEnter": ".doc_annotations_list200response_annotations_item_widget_actions_cursor_enter",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorEnterRoot": ".doc_annotations_list200response_annotations_item_widget_actions_cursor_enter_root",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorEnterRootType": ".doc_annotations_list200response_annotations_item_widget_actions_cursor_enter_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorEnterWarningsItem": ".doc_annotations_list200response_annotations_item_widget_actions_cursor_enter_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorExit": ".doc_annotations_list200response_annotations_item_widget_actions_cursor_exit",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorExitRoot": ".doc_annotations_list200response_annotations_item_widget_actions_cursor_exit_root",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorExitRootType": ".doc_annotations_list200response_annotations_item_widget_actions_cursor_exit_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorExitWarningsItem": ".doc_annotations_list200response_annotations_item_widget_actions_cursor_exit_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsFocus": ".doc_annotations_list200response_annotations_item_widget_actions_focus",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsFocusRoot": ".doc_annotations_list200response_annotations_item_widget_actions_focus_root",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsFocusRootType": ".doc_annotations_list200response_annotations_item_widget_actions_focus_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsFocusWarningsItem": ".doc_annotations_list200response_annotations_item_widget_actions_focus_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseDown": ".doc_annotations_list200response_annotations_item_widget_actions_mouse_down",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseDownRoot": ".doc_annotations_list200response_annotations_item_widget_actions_mouse_down_root",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseDownRootType": ".doc_annotations_list200response_annotations_item_widget_actions_mouse_down_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseDownWarningsItem": ".doc_annotations_list200response_annotations_item_widget_actions_mouse_down_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseUp": ".doc_annotations_list200response_annotations_item_widget_actions_mouse_up",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseUpRoot": ".doc_annotations_list200response_annotations_item_widget_actions_mouse_up_root",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseUpRootType": ".doc_annotations_list200response_annotations_item_widget_actions_mouse_up_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseUpWarningsItem": ".doc_annotations_list200response_annotations_item_widget_actions_mouse_up_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageClose": ".doc_annotations_list200response_annotations_item_widget_actions_page_close",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageCloseRoot": ".doc_annotations_list200response_annotations_item_widget_actions_page_close_root",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageCloseRootType": ".doc_annotations_list200response_annotations_item_widget_actions_page_close_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageCloseWarningsItem": ".doc_annotations_list200response_annotations_item_widget_actions_page_close_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageInvisible": ".doc_annotations_list200response_annotations_item_widget_actions_page_invisible",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageInvisibleRoot": ".doc_annotations_list200response_annotations_item_widget_actions_page_invisible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageInvisibleRootType": ".doc_annotations_list200response_annotations_item_widget_actions_page_invisible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageInvisibleWarningsItem": ".doc_annotations_list200response_annotations_item_widget_actions_page_invisible_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageOpen": ".doc_annotations_list200response_annotations_item_widget_actions_page_open",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageOpenRoot": ".doc_annotations_list200response_annotations_item_widget_actions_page_open_root",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageOpenRootType": ".doc_annotations_list200response_annotations_item_widget_actions_page_open_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageOpenWarningsItem": ".doc_annotations_list200response_annotations_item_widget_actions_page_open_warnings_item",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageVisible": ".doc_annotations_list200response_annotations_item_widget_actions_page_visible",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageVisibleRoot": ".doc_annotations_list200response_annotations_item_widget_actions_page_visible_root",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageVisibleRootType": ".doc_annotations_list200response_annotations_item_widget_actions_page_visible_root_type",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageVisibleWarningsItem": ".doc_annotations_list200response_annotations_item_widget_actions_page_visible_warnings_item",
     "DocAnnotationsList200ResponseAnnotationsItemWidgetBlendMode": ".doc_annotations_list200response_annotations_item_widget_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemWidgetBorderStyle": ".doc_annotations_list200response_annotations_item_widget_border_style",
     "DocAnnotationsList200ResponseAnnotationsItemWidgetColor": ".doc_annotations_list200response_annotations_item_widget_color",
@@ -10957,51 +4565,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItem": ".doc_annotations_list_all200response_pages_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem": ".doc_annotations_list_all200response_pages_item_annotations_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaret": ".doc_annotations_list_all200response_pages_item_annotations_item_caret",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActions": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretColor": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_color",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_flags",
@@ -11028,51 +4591,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretUnrotatedRect": ".doc_annotations_list_all200response_pages_item_annotations_item_caret_unrotated_rect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircle": ".doc_annotations_list_all200response_pages_item_annotations_item_circle",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActions": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_border_style",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleColor": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_color",
@@ -11100,51 +4618,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleUnrotatedRect": ".doc_annotations_list_all200response_pages_item_annotations_item_circle_unrotated_rect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachment": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActions": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentColor": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_color",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentFile": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_file",
@@ -11170,51 +4643,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_ref",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeText": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActions": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_border_style",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextColor": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_color",
@@ -11247,51 +4675,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextTextAlign": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_text_align",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextUnrotatedRect": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_unrotated_rect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlight": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActions": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightColor": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_color",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_flags",
@@ -11320,51 +4703,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_ref",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInk": ".doc_annotations_list_all200response_pages_item_annotations_item_ink",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActions": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_border_style",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkColor": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_color",
@@ -11391,51 +4729,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_ref",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_ink_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLine": ".doc_annotations_list_all200response_pages_item_annotations_item_line",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActions": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_line_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_line_border_style",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineColor": ".doc_annotations_list_all200response_pages_item_annotations_item_line_color",
@@ -11467,51 +4760,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_line_ref",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_line_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLink": ".doc_annotations_list_all200response_pages_item_annotations_item_link",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActions": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_link_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_link_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_link_flags",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_link_identity_quality",
@@ -11535,23 +4783,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_link_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGoto": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFit": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitB": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_b",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitBh": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_bh",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitBv": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_bv",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitH": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_h",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitR": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_r",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitV": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_fit_v",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationXyz": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination_xyz",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_Fit": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitB": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitBh": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitBv": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitH": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitR": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitV": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_Xyz": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_destination",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoRemote": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_goto_remote",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetJavascript": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_javascript",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetLaunch": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target_launch",
@@ -11566,51 +4797,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Unsupported": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Uri": ".doc_annotations_list_all200response_pages_item_annotations_item_link_target",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygon": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActions": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_border_style",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonColor": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_color",
@@ -11637,51 +4823,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonVerticesItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_vertices_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolyline": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActions": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_border_style",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineColor": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_color",
@@ -11711,51 +4852,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineVerticesItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_vertices_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedact": ".doc_annotations_list_all200response_pages_item_annotations_item_redact",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActions": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactColor": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_color",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_flags",
@@ -11788,51 +4884,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactTextAlign": ".doc_annotations_list_all200response_pages_item_annotations_item_redact_text_align",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquare": ".doc_annotations_list_all200response_pages_item_annotations_item_square",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActions": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_square_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_square_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_square_border_style",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareColor": ".doc_annotations_list_all200response_pages_item_annotations_item_square_color",
@@ -11860,51 +4911,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_square_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareUnrotatedRect": ".doc_annotations_list_all200response_pages_item_annotations_item_square_unrotated_rect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquiggly": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActions": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyColor": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_color",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_flags",
@@ -11933,51 +4939,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_ref",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_squiggly_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStamp": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActions": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_flags",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_identity_quality",
@@ -12001,51 +4962,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampUnrotatedRect": ".doc_annotations_list_all200response_pages_item_annotations_item_stamp_unrotated_rect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeout": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActions": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutColor": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_color",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_flags",
@@ -12075,51 +4991,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_ref",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_strikeout_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemText": ".doc_annotations_list_all200response_pages_item_annotations_item_text",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActions": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_text_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_text_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextColor": ".doc_annotations_list_all200response_pages_item_annotations_item_text_color",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_text_flags",
@@ -12144,51 +5015,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_text_ref",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_text_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderline": ".doc_annotations_list_all200response_pages_item_annotations_item_underline",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActions": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineColor": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_color",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_flags",
@@ -12217,51 +5043,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_ref",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_underline_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupported": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActions": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_flags",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_identity_quality",
@@ -12284,51 +5065,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_ref",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_unsupported_reply_type",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidget": ".doc_annotations_list_all200response_pages_item_annotations_item_widget",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActions": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivate": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_activate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_activate_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_activate_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_activate_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlur": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_blur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_blur_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_blur_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_blur_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnter": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_enter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_enter_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_enter_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_enter_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExit": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_exit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_exit_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_exit_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_cursor_exit_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocus": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_focus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_focus_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_focus_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_focus_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDown": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_down",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_down_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_down_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_down_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUp": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_up",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_up_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_up_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_mouse_up_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageClose": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_close",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_close_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_close_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_close_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisible": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_invisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_invisible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_invisible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_invisible_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpen": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_open",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_open_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_open_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_open_warnings_item",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisible": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_visible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleRoot": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_visible_root",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleRootType": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_visible_root_type",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleWarningsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_actions_page_visible_warnings_item",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_border_style",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetColor": ".doc_annotations_list_all200response_pages_item_annotations_item_widget_color",
@@ -12422,23 +5158,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocFormsGet200ResponseCalculationOrderItem_ObjectNumber": ".doc_forms_get200response_calculation_order_item",
     "DocFormsGet200ResponseFieldsItem": ".doc_forms_get200response_fields_item",
     "DocFormsGet200ResponseFieldsItemCheckbox": ".doc_forms_get200response_fields_item_checkbox",
-    "DocFormsGet200ResponseFieldsItemCheckboxActions": ".doc_forms_get200response_fields_item_checkbox_actions",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsCalculate": ".doc_forms_get200response_fields_item_checkbox_actions_calculate",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsCalculateRoot": ".doc_forms_get200response_fields_item_checkbox_actions_calculate_root",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsCalculateRootType": ".doc_forms_get200response_fields_item_checkbox_actions_calculate_root_type",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsCalculateWarningsItem": ".doc_forms_get200response_fields_item_checkbox_actions_calculate_warnings_item",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsFormat": ".doc_forms_get200response_fields_item_checkbox_actions_format",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsFormatRoot": ".doc_forms_get200response_fields_item_checkbox_actions_format_root",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsFormatRootType": ".doc_forms_get200response_fields_item_checkbox_actions_format_root_type",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsFormatWarningsItem": ".doc_forms_get200response_fields_item_checkbox_actions_format_warnings_item",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsKeystroke": ".doc_forms_get200response_fields_item_checkbox_actions_keystroke",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsKeystrokeRoot": ".doc_forms_get200response_fields_item_checkbox_actions_keystroke_root",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsKeystrokeRootType": ".doc_forms_get200response_fields_item_checkbox_actions_keystroke_root_type",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsKeystrokeWarningsItem": ".doc_forms_get200response_fields_item_checkbox_actions_keystroke_warnings_item",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsValidate": ".doc_forms_get200response_fields_item_checkbox_actions_validate",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsValidateRoot": ".doc_forms_get200response_fields_item_checkbox_actions_validate_root",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsValidateRootType": ".doc_forms_get200response_fields_item_checkbox_actions_validate_root_type",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsValidateWarningsItem": ".doc_forms_get200response_fields_item_checkbox_actions_validate_warnings_item",
     "DocFormsGet200ResponseFieldsItemCheckboxDefaultValueEntry": ".doc_forms_get200response_fields_item_checkbox_default_value_entry",
     "DocFormsGet200ResponseFieldsItemCheckboxDefaultValueEntryArray": ".doc_forms_get200response_fields_item_checkbox_default_value_entry_array",
     "DocFormsGet200ResponseFieldsItemCheckboxDefaultValueEntryNone": ".doc_forms_get200response_fields_item_checkbox_default_value_entry_none",
@@ -12466,23 +5185,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocFormsGet200ResponseFieldsItemCheckboxValueEntry_Unsupported": ".doc_forms_get200response_fields_item_checkbox_value_entry",
     "DocFormsGet200ResponseFieldsItemCheckboxWidgetsItem": ".doc_forms_get200response_fields_item_checkbox_widgets_item",
     "DocFormsGet200ResponseFieldsItemCombobox": ".doc_forms_get200response_fields_item_combobox",
-    "DocFormsGet200ResponseFieldsItemComboboxActions": ".doc_forms_get200response_fields_item_combobox_actions",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsCalculate": ".doc_forms_get200response_fields_item_combobox_actions_calculate",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsCalculateRoot": ".doc_forms_get200response_fields_item_combobox_actions_calculate_root",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsCalculateRootType": ".doc_forms_get200response_fields_item_combobox_actions_calculate_root_type",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsCalculateWarningsItem": ".doc_forms_get200response_fields_item_combobox_actions_calculate_warnings_item",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsFormat": ".doc_forms_get200response_fields_item_combobox_actions_format",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsFormatRoot": ".doc_forms_get200response_fields_item_combobox_actions_format_root",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsFormatRootType": ".doc_forms_get200response_fields_item_combobox_actions_format_root_type",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsFormatWarningsItem": ".doc_forms_get200response_fields_item_combobox_actions_format_warnings_item",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsKeystroke": ".doc_forms_get200response_fields_item_combobox_actions_keystroke",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsKeystrokeRoot": ".doc_forms_get200response_fields_item_combobox_actions_keystroke_root",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsKeystrokeRootType": ".doc_forms_get200response_fields_item_combobox_actions_keystroke_root_type",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsKeystrokeWarningsItem": ".doc_forms_get200response_fields_item_combobox_actions_keystroke_warnings_item",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsValidate": ".doc_forms_get200response_fields_item_combobox_actions_validate",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsValidateRoot": ".doc_forms_get200response_fields_item_combobox_actions_validate_root",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsValidateRootType": ".doc_forms_get200response_fields_item_combobox_actions_validate_root_type",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsValidateWarningsItem": ".doc_forms_get200response_fields_item_combobox_actions_validate_warnings_item",
     "DocFormsGet200ResponseFieldsItemComboboxDefaultValueEntry": ".doc_forms_get200response_fields_item_combobox_default_value_entry",
     "DocFormsGet200ResponseFieldsItemComboboxDefaultValueEntryArray": ".doc_forms_get200response_fields_item_combobox_default_value_entry_array",
     "DocFormsGet200ResponseFieldsItemComboboxDefaultValueEntryNone": ".doc_forms_get200response_fields_item_combobox_default_value_entry_none",
@@ -12511,23 +5213,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocFormsGet200ResponseFieldsItemComboboxValueEntry_Unsupported": ".doc_forms_get200response_fields_item_combobox_value_entry",
     "DocFormsGet200ResponseFieldsItemComboboxWidgetsItem": ".doc_forms_get200response_fields_item_combobox_widgets_item",
     "DocFormsGet200ResponseFieldsItemListbox": ".doc_forms_get200response_fields_item_listbox",
-    "DocFormsGet200ResponseFieldsItemListboxActions": ".doc_forms_get200response_fields_item_listbox_actions",
-    "DocFormsGet200ResponseFieldsItemListboxActionsCalculate": ".doc_forms_get200response_fields_item_listbox_actions_calculate",
-    "DocFormsGet200ResponseFieldsItemListboxActionsCalculateRoot": ".doc_forms_get200response_fields_item_listbox_actions_calculate_root",
-    "DocFormsGet200ResponseFieldsItemListboxActionsCalculateRootType": ".doc_forms_get200response_fields_item_listbox_actions_calculate_root_type",
-    "DocFormsGet200ResponseFieldsItemListboxActionsCalculateWarningsItem": ".doc_forms_get200response_fields_item_listbox_actions_calculate_warnings_item",
-    "DocFormsGet200ResponseFieldsItemListboxActionsFormat": ".doc_forms_get200response_fields_item_listbox_actions_format",
-    "DocFormsGet200ResponseFieldsItemListboxActionsFormatRoot": ".doc_forms_get200response_fields_item_listbox_actions_format_root",
-    "DocFormsGet200ResponseFieldsItemListboxActionsFormatRootType": ".doc_forms_get200response_fields_item_listbox_actions_format_root_type",
-    "DocFormsGet200ResponseFieldsItemListboxActionsFormatWarningsItem": ".doc_forms_get200response_fields_item_listbox_actions_format_warnings_item",
-    "DocFormsGet200ResponseFieldsItemListboxActionsKeystroke": ".doc_forms_get200response_fields_item_listbox_actions_keystroke",
-    "DocFormsGet200ResponseFieldsItemListboxActionsKeystrokeRoot": ".doc_forms_get200response_fields_item_listbox_actions_keystroke_root",
-    "DocFormsGet200ResponseFieldsItemListboxActionsKeystrokeRootType": ".doc_forms_get200response_fields_item_listbox_actions_keystroke_root_type",
-    "DocFormsGet200ResponseFieldsItemListboxActionsKeystrokeWarningsItem": ".doc_forms_get200response_fields_item_listbox_actions_keystroke_warnings_item",
-    "DocFormsGet200ResponseFieldsItemListboxActionsValidate": ".doc_forms_get200response_fields_item_listbox_actions_validate",
-    "DocFormsGet200ResponseFieldsItemListboxActionsValidateRoot": ".doc_forms_get200response_fields_item_listbox_actions_validate_root",
-    "DocFormsGet200ResponseFieldsItemListboxActionsValidateRootType": ".doc_forms_get200response_fields_item_listbox_actions_validate_root_type",
-    "DocFormsGet200ResponseFieldsItemListboxActionsValidateWarningsItem": ".doc_forms_get200response_fields_item_listbox_actions_validate_warnings_item",
     "DocFormsGet200ResponseFieldsItemListboxDefaultValueEntry": ".doc_forms_get200response_fields_item_listbox_default_value_entry",
     "DocFormsGet200ResponseFieldsItemListboxDefaultValueEntryArray": ".doc_forms_get200response_fields_item_listbox_default_value_entry_array",
     "DocFormsGet200ResponseFieldsItemListboxDefaultValueEntryNone": ".doc_forms_get200response_fields_item_listbox_default_value_entry_none",
@@ -12556,23 +5241,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocFormsGet200ResponseFieldsItemListboxValueEntry_Unsupported": ".doc_forms_get200response_fields_item_listbox_value_entry",
     "DocFormsGet200ResponseFieldsItemListboxWidgetsItem": ".doc_forms_get200response_fields_item_listbox_widgets_item",
     "DocFormsGet200ResponseFieldsItemPushbutton": ".doc_forms_get200response_fields_item_pushbutton",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActions": ".doc_forms_get200response_fields_item_pushbutton_actions",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsCalculate": ".doc_forms_get200response_fields_item_pushbutton_actions_calculate",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsCalculateRoot": ".doc_forms_get200response_fields_item_pushbutton_actions_calculate_root",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsCalculateRootType": ".doc_forms_get200response_fields_item_pushbutton_actions_calculate_root_type",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsCalculateWarningsItem": ".doc_forms_get200response_fields_item_pushbutton_actions_calculate_warnings_item",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsFormat": ".doc_forms_get200response_fields_item_pushbutton_actions_format",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsFormatRoot": ".doc_forms_get200response_fields_item_pushbutton_actions_format_root",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsFormatRootType": ".doc_forms_get200response_fields_item_pushbutton_actions_format_root_type",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsFormatWarningsItem": ".doc_forms_get200response_fields_item_pushbutton_actions_format_warnings_item",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsKeystroke": ".doc_forms_get200response_fields_item_pushbutton_actions_keystroke",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsKeystrokeRoot": ".doc_forms_get200response_fields_item_pushbutton_actions_keystroke_root",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsKeystrokeRootType": ".doc_forms_get200response_fields_item_pushbutton_actions_keystroke_root_type",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsKeystrokeWarningsItem": ".doc_forms_get200response_fields_item_pushbutton_actions_keystroke_warnings_item",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsValidate": ".doc_forms_get200response_fields_item_pushbutton_actions_validate",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsValidateRoot": ".doc_forms_get200response_fields_item_pushbutton_actions_validate_root",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsValidateRootType": ".doc_forms_get200response_fields_item_pushbutton_actions_validate_root_type",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsValidateWarningsItem": ".doc_forms_get200response_fields_item_pushbutton_actions_validate_warnings_item",
     "DocFormsGet200ResponseFieldsItemPushbuttonDefaultValueEntry": ".doc_forms_get200response_fields_item_pushbutton_default_value_entry",
     "DocFormsGet200ResponseFieldsItemPushbuttonDefaultValueEntryArray": ".doc_forms_get200response_fields_item_pushbutton_default_value_entry_array",
     "DocFormsGet200ResponseFieldsItemPushbuttonDefaultValueEntryNone": ".doc_forms_get200response_fields_item_pushbutton_default_value_entry_none",
@@ -12600,23 +5268,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocFormsGet200ResponseFieldsItemPushbuttonValueEntry_Unsupported": ".doc_forms_get200response_fields_item_pushbutton_value_entry",
     "DocFormsGet200ResponseFieldsItemPushbuttonWidgetsItem": ".doc_forms_get200response_fields_item_pushbutton_widgets_item",
     "DocFormsGet200ResponseFieldsItemRadio": ".doc_forms_get200response_fields_item_radio",
-    "DocFormsGet200ResponseFieldsItemRadioActions": ".doc_forms_get200response_fields_item_radio_actions",
-    "DocFormsGet200ResponseFieldsItemRadioActionsCalculate": ".doc_forms_get200response_fields_item_radio_actions_calculate",
-    "DocFormsGet200ResponseFieldsItemRadioActionsCalculateRoot": ".doc_forms_get200response_fields_item_radio_actions_calculate_root",
-    "DocFormsGet200ResponseFieldsItemRadioActionsCalculateRootType": ".doc_forms_get200response_fields_item_radio_actions_calculate_root_type",
-    "DocFormsGet200ResponseFieldsItemRadioActionsCalculateWarningsItem": ".doc_forms_get200response_fields_item_radio_actions_calculate_warnings_item",
-    "DocFormsGet200ResponseFieldsItemRadioActionsFormat": ".doc_forms_get200response_fields_item_radio_actions_format",
-    "DocFormsGet200ResponseFieldsItemRadioActionsFormatRoot": ".doc_forms_get200response_fields_item_radio_actions_format_root",
-    "DocFormsGet200ResponseFieldsItemRadioActionsFormatRootType": ".doc_forms_get200response_fields_item_radio_actions_format_root_type",
-    "DocFormsGet200ResponseFieldsItemRadioActionsFormatWarningsItem": ".doc_forms_get200response_fields_item_radio_actions_format_warnings_item",
-    "DocFormsGet200ResponseFieldsItemRadioActionsKeystroke": ".doc_forms_get200response_fields_item_radio_actions_keystroke",
-    "DocFormsGet200ResponseFieldsItemRadioActionsKeystrokeRoot": ".doc_forms_get200response_fields_item_radio_actions_keystroke_root",
-    "DocFormsGet200ResponseFieldsItemRadioActionsKeystrokeRootType": ".doc_forms_get200response_fields_item_radio_actions_keystroke_root_type",
-    "DocFormsGet200ResponseFieldsItemRadioActionsKeystrokeWarningsItem": ".doc_forms_get200response_fields_item_radio_actions_keystroke_warnings_item",
-    "DocFormsGet200ResponseFieldsItemRadioActionsValidate": ".doc_forms_get200response_fields_item_radio_actions_validate",
-    "DocFormsGet200ResponseFieldsItemRadioActionsValidateRoot": ".doc_forms_get200response_fields_item_radio_actions_validate_root",
-    "DocFormsGet200ResponseFieldsItemRadioActionsValidateRootType": ".doc_forms_get200response_fields_item_radio_actions_validate_root_type",
-    "DocFormsGet200ResponseFieldsItemRadioActionsValidateWarningsItem": ".doc_forms_get200response_fields_item_radio_actions_validate_warnings_item",
     "DocFormsGet200ResponseFieldsItemRadioDefaultValueEntry": ".doc_forms_get200response_fields_item_radio_default_value_entry",
     "DocFormsGet200ResponseFieldsItemRadioDefaultValueEntryArray": ".doc_forms_get200response_fields_item_radio_default_value_entry_array",
     "DocFormsGet200ResponseFieldsItemRadioDefaultValueEntryNone": ".doc_forms_get200response_fields_item_radio_default_value_entry_none",
@@ -12644,23 +5295,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocFormsGet200ResponseFieldsItemRadioValueEntry_Unsupported": ".doc_forms_get200response_fields_item_radio_value_entry",
     "DocFormsGet200ResponseFieldsItemRadioWidgetsItem": ".doc_forms_get200response_fields_item_radio_widgets_item",
     "DocFormsGet200ResponseFieldsItemSignature": ".doc_forms_get200response_fields_item_signature",
-    "DocFormsGet200ResponseFieldsItemSignatureActions": ".doc_forms_get200response_fields_item_signature_actions",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsCalculate": ".doc_forms_get200response_fields_item_signature_actions_calculate",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsCalculateRoot": ".doc_forms_get200response_fields_item_signature_actions_calculate_root",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsCalculateRootType": ".doc_forms_get200response_fields_item_signature_actions_calculate_root_type",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsCalculateWarningsItem": ".doc_forms_get200response_fields_item_signature_actions_calculate_warnings_item",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsFormat": ".doc_forms_get200response_fields_item_signature_actions_format",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsFormatRoot": ".doc_forms_get200response_fields_item_signature_actions_format_root",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsFormatRootType": ".doc_forms_get200response_fields_item_signature_actions_format_root_type",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsFormatWarningsItem": ".doc_forms_get200response_fields_item_signature_actions_format_warnings_item",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsKeystroke": ".doc_forms_get200response_fields_item_signature_actions_keystroke",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsKeystrokeRoot": ".doc_forms_get200response_fields_item_signature_actions_keystroke_root",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsKeystrokeRootType": ".doc_forms_get200response_fields_item_signature_actions_keystroke_root_type",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsKeystrokeWarningsItem": ".doc_forms_get200response_fields_item_signature_actions_keystroke_warnings_item",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsValidate": ".doc_forms_get200response_fields_item_signature_actions_validate",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsValidateRoot": ".doc_forms_get200response_fields_item_signature_actions_validate_root",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsValidateRootType": ".doc_forms_get200response_fields_item_signature_actions_validate_root_type",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsValidateWarningsItem": ".doc_forms_get200response_fields_item_signature_actions_validate_warnings_item",
     "DocFormsGet200ResponseFieldsItemSignatureDefaultValueEntry": ".doc_forms_get200response_fields_item_signature_default_value_entry",
     "DocFormsGet200ResponseFieldsItemSignatureDefaultValueEntryArray": ".doc_forms_get200response_fields_item_signature_default_value_entry_array",
     "DocFormsGet200ResponseFieldsItemSignatureDefaultValueEntryNone": ".doc_forms_get200response_fields_item_signature_default_value_entry_none",
@@ -12688,23 +5322,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocFormsGet200ResponseFieldsItemSignatureValueEntry_Unsupported": ".doc_forms_get200response_fields_item_signature_value_entry",
     "DocFormsGet200ResponseFieldsItemSignatureWidgetsItem": ".doc_forms_get200response_fields_item_signature_widgets_item",
     "DocFormsGet200ResponseFieldsItemText": ".doc_forms_get200response_fields_item_text",
-    "DocFormsGet200ResponseFieldsItemTextActions": ".doc_forms_get200response_fields_item_text_actions",
-    "DocFormsGet200ResponseFieldsItemTextActionsCalculate": ".doc_forms_get200response_fields_item_text_actions_calculate",
-    "DocFormsGet200ResponseFieldsItemTextActionsCalculateRoot": ".doc_forms_get200response_fields_item_text_actions_calculate_root",
-    "DocFormsGet200ResponseFieldsItemTextActionsCalculateRootType": ".doc_forms_get200response_fields_item_text_actions_calculate_root_type",
-    "DocFormsGet200ResponseFieldsItemTextActionsCalculateWarningsItem": ".doc_forms_get200response_fields_item_text_actions_calculate_warnings_item",
-    "DocFormsGet200ResponseFieldsItemTextActionsFormat": ".doc_forms_get200response_fields_item_text_actions_format",
-    "DocFormsGet200ResponseFieldsItemTextActionsFormatRoot": ".doc_forms_get200response_fields_item_text_actions_format_root",
-    "DocFormsGet200ResponseFieldsItemTextActionsFormatRootType": ".doc_forms_get200response_fields_item_text_actions_format_root_type",
-    "DocFormsGet200ResponseFieldsItemTextActionsFormatWarningsItem": ".doc_forms_get200response_fields_item_text_actions_format_warnings_item",
-    "DocFormsGet200ResponseFieldsItemTextActionsKeystroke": ".doc_forms_get200response_fields_item_text_actions_keystroke",
-    "DocFormsGet200ResponseFieldsItemTextActionsKeystrokeRoot": ".doc_forms_get200response_fields_item_text_actions_keystroke_root",
-    "DocFormsGet200ResponseFieldsItemTextActionsKeystrokeRootType": ".doc_forms_get200response_fields_item_text_actions_keystroke_root_type",
-    "DocFormsGet200ResponseFieldsItemTextActionsKeystrokeWarningsItem": ".doc_forms_get200response_fields_item_text_actions_keystroke_warnings_item",
-    "DocFormsGet200ResponseFieldsItemTextActionsValidate": ".doc_forms_get200response_fields_item_text_actions_validate",
-    "DocFormsGet200ResponseFieldsItemTextActionsValidateRoot": ".doc_forms_get200response_fields_item_text_actions_validate_root",
-    "DocFormsGet200ResponseFieldsItemTextActionsValidateRootType": ".doc_forms_get200response_fields_item_text_actions_validate_root_type",
-    "DocFormsGet200ResponseFieldsItemTextActionsValidateWarningsItem": ".doc_forms_get200response_fields_item_text_actions_validate_warnings_item",
     "DocFormsGet200ResponseFieldsItemTextDefaultValueEntry": ".doc_forms_get200response_fields_item_text_default_value_entry",
     "DocFormsGet200ResponseFieldsItemTextDefaultValueEntryArray": ".doc_forms_get200response_fields_item_text_default_value_entry_array",
     "DocFormsGet200ResponseFieldsItemTextDefaultValueEntryNone": ".doc_forms_get200response_fields_item_text_default_value_entry_none",
@@ -12732,23 +5349,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocFormsGet200ResponseFieldsItemTextValueEntry_Unsupported": ".doc_forms_get200response_fields_item_text_value_entry",
     "DocFormsGet200ResponseFieldsItemTextWidgetsItem": ".doc_forms_get200response_fields_item_text_widgets_item",
     "DocFormsGet200ResponseFieldsItemUnknown": ".doc_forms_get200response_fields_item_unknown",
-    "DocFormsGet200ResponseFieldsItemUnknownActions": ".doc_forms_get200response_fields_item_unknown_actions",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsCalculate": ".doc_forms_get200response_fields_item_unknown_actions_calculate",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsCalculateRoot": ".doc_forms_get200response_fields_item_unknown_actions_calculate_root",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsCalculateRootType": ".doc_forms_get200response_fields_item_unknown_actions_calculate_root_type",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsCalculateWarningsItem": ".doc_forms_get200response_fields_item_unknown_actions_calculate_warnings_item",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsFormat": ".doc_forms_get200response_fields_item_unknown_actions_format",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsFormatRoot": ".doc_forms_get200response_fields_item_unknown_actions_format_root",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsFormatRootType": ".doc_forms_get200response_fields_item_unknown_actions_format_root_type",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsFormatWarningsItem": ".doc_forms_get200response_fields_item_unknown_actions_format_warnings_item",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsKeystroke": ".doc_forms_get200response_fields_item_unknown_actions_keystroke",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsKeystrokeRoot": ".doc_forms_get200response_fields_item_unknown_actions_keystroke_root",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsKeystrokeRootType": ".doc_forms_get200response_fields_item_unknown_actions_keystroke_root_type",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsKeystrokeWarningsItem": ".doc_forms_get200response_fields_item_unknown_actions_keystroke_warnings_item",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsValidate": ".doc_forms_get200response_fields_item_unknown_actions_validate",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsValidateRoot": ".doc_forms_get200response_fields_item_unknown_actions_validate_root",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsValidateRootType": ".doc_forms_get200response_fields_item_unknown_actions_validate_root_type",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsValidateWarningsItem": ".doc_forms_get200response_fields_item_unknown_actions_validate_warnings_item",
     "DocFormsGet200ResponseFieldsItemUnknownDefaultValueEntry": ".doc_forms_get200response_fields_item_unknown_default_value_entry",
     "DocFormsGet200ResponseFieldsItemUnknownDefaultValueEntryArray": ".doc_forms_get200response_fields_item_unknown_default_value_entry_array",
     "DocFormsGet200ResponseFieldsItemUnknownDefaultValueEntryNone": ".doc_forms_get200response_fields_item_unknown_default_value_entry_none",
@@ -13022,6 +5622,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocText404Response": ".doc_text404response",
     "DocText404ResponseCode": ".doc_text404response_code",
     "DocText404ResponseName": ".doc_text404response_name",
+    "DocumentActionsSnapshot": ".document_actions_snapshot",
+    "DocumentActionsSnapshotNameTreeScriptsItem": ".document_actions_snapshot_name_tree_scripts_item",
     "DocumentsCommit200Response": ".documents_commit200response",
     "DocumentsCommit200ResponseDocument": ".documents_commit200response_document",
     "DocumentsCommit200ResponseDocumentState": ".documents_commit200response_document_state",
@@ -13110,6 +5712,76 @@ _dynamic_imports: typing.Dict[str, str] = {
     "EngineErrorPayload": ".engine_error_payload",
     "EngineErrorPayloadCode": ".engine_error_payload_code",
     "EngineErrorPayloadName": ".engine_error_payload_name",
+    "PdfActionNode": ".pdf_action_node",
+    "PdfActionNodeGoto": ".pdf_action_node_goto",
+    "PdfActionNodeGoto3DView": ".pdf_action_node_goto3d_view",
+    "PdfActionNodeGotoEmbedded": ".pdf_action_node_goto_embedded",
+    "PdfActionNodeGotoRemote": ".pdf_action_node_goto_remote",
+    "PdfActionNodeHide": ".pdf_action_node_hide",
+    "PdfActionNodeImportData": ".pdf_action_node_import_data",
+    "PdfActionNodeJavascript": ".pdf_action_node_javascript",
+    "PdfActionNodeLaunch": ".pdf_action_node_launch",
+    "PdfActionNodeMovie": ".pdf_action_node_movie",
+    "PdfActionNodeNamed": ".pdf_action_node_named",
+    "PdfActionNodeRendition": ".pdf_action_node_rendition",
+    "PdfActionNodeResetForm": ".pdf_action_node_reset_form",
+    "PdfActionNodeSetOcgState": ".pdf_action_node_set_ocg_state",
+    "PdfActionNodeSound": ".pdf_action_node_sound",
+    "PdfActionNodeSubmitForm": ".pdf_action_node_submit_form",
+    "PdfActionNodeSubmitFormPayload": ".pdf_action_node_submit_form_payload",
+    "PdfActionNodeSubmitFormPayloadFlags": ".pdf_action_node_submit_form_payload_flags",
+    "PdfActionNodeSubmitFormPayloadFlagsFormat": ".pdf_action_node_submit_form_payload_flags_format",
+    "PdfActionNodeSubmitFormPayloadFlagsMethod": ".pdf_action_node_submit_form_payload_flags_method",
+    "PdfActionNodeThread": ".pdf_action_node_thread",
+    "PdfActionNodeTransition": ".pdf_action_node_transition",
+    "PdfActionNodeUnknown": ".pdf_action_node_unknown",
+    "PdfActionNodeUri": ".pdf_action_node_uri",
+    "PdfActionNode_Goto": ".pdf_action_node",
+    "PdfActionNode_Goto3DView": ".pdf_action_node",
+    "PdfActionNode_GotoEmbedded": ".pdf_action_node",
+    "PdfActionNode_GotoRemote": ".pdf_action_node",
+    "PdfActionNode_Hide": ".pdf_action_node",
+    "PdfActionNode_ImportData": ".pdf_action_node",
+    "PdfActionNode_Javascript": ".pdf_action_node",
+    "PdfActionNode_Launch": ".pdf_action_node",
+    "PdfActionNode_Movie": ".pdf_action_node",
+    "PdfActionNode_Named": ".pdf_action_node",
+    "PdfActionNode_Rendition": ".pdf_action_node",
+    "PdfActionNode_ResetForm": ".pdf_action_node",
+    "PdfActionNode_SetOcgState": ".pdf_action_node",
+    "PdfActionNode_Sound": ".pdf_action_node",
+    "PdfActionNode_SubmitForm": ".pdf_action_node",
+    "PdfActionNode_Thread": ".pdf_action_node",
+    "PdfActionNode_Transition": ".pdf_action_node",
+    "PdfActionNode_Unknown": ".pdf_action_node",
+    "PdfActionNode_Uri": ".pdf_action_node",
+    "PdfActionTargetRef": ".pdf_action_target_ref",
+    "PdfActionTargetRefName": ".pdf_action_target_ref_name",
+    "PdfActionTargetRefObjectNumber": ".pdf_action_target_ref_object_number",
+    "PdfActionTargetRef_Name": ".pdf_action_target_ref",
+    "PdfActionTargetRef_ObjectNumber": ".pdf_action_target_ref",
+    "PdfActionTree": ".pdf_action_tree",
+    "PdfActionTreeWarningsItem": ".pdf_action_tree_warnings_item",
+    "PdfAnnotationActions": ".pdf_annotation_actions",
+    "PdfDestination": ".pdf_destination",
+    "PdfDestinationFit": ".pdf_destination_fit",
+    "PdfDestinationFitB": ".pdf_destination_fit_b",
+    "PdfDestinationFitBh": ".pdf_destination_fit_bh",
+    "PdfDestinationFitBv": ".pdf_destination_fit_bv",
+    "PdfDestinationFitH": ".pdf_destination_fit_h",
+    "PdfDestinationFitR": ".pdf_destination_fit_r",
+    "PdfDestinationFitV": ".pdf_destination_fit_v",
+    "PdfDestinationXyz": ".pdf_destination_xyz",
+    "PdfDestination_Fit": ".pdf_destination",
+    "PdfDestination_FitB": ".pdf_destination",
+    "PdfDestination_FitBh": ".pdf_destination",
+    "PdfDestination_FitBv": ".pdf_destination",
+    "PdfDestination_FitH": ".pdf_destination",
+    "PdfDestination_FitR": ".pdf_destination",
+    "PdfDestination_FitV": ".pdf_destination",
+    "PdfDestination_Xyz": ".pdf_destination",
+    "PdfFieldActions": ".pdf_field_actions",
+    "PdfPageActions": ".pdf_page_actions",
     "SharesCreate200Response": ".shares_create200response",
     "SharesCreate200ResponseShare": ".shares_create200response_share",
     "SharesCreate400Response": ".shares_create400response",
@@ -13254,51 +5926,6 @@ __all__ = [
     "DocAnnotationsList200Response",
     "DocAnnotationsList200ResponseAnnotationsItem",
     "DocAnnotationsList200ResponseAnnotationsItemCaret",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActions",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCaretActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemCaretBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemCaretColor",
     "DocAnnotationsList200ResponseAnnotationsItemCaretFlags",
@@ -13325,51 +5952,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemCaretReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemCaretUnrotatedRect",
     "DocAnnotationsList200ResponseAnnotationsItemCircle",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActions",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemCircleActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemCircleBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemCircleBorderStyle",
     "DocAnnotationsList200ResponseAnnotationsItemCircleColor",
@@ -13397,51 +5979,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemCircleReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemCircleUnrotatedRect",
     "DocAnnotationsList200ResponseAnnotationsItemFileAttachment",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActions",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentColor",
     "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentFile",
@@ -13467,51 +6004,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentRef_ObjectNumber",
     "DocAnnotationsList200ResponseAnnotationsItemFileAttachmentReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemFreeText",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActions",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextBorderStyle",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextColor",
@@ -13544,51 +6036,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextTextAlign",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextUnrotatedRect",
     "DocAnnotationsList200ResponseAnnotationsItemHighlight",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActions",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemHighlightActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemHighlightBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemHighlightColor",
     "DocAnnotationsList200ResponseAnnotationsItemHighlightFlags",
@@ -13617,51 +6064,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemHighlightRef_ObjectNumber",
     "DocAnnotationsList200ResponseAnnotationsItemHighlightReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemInk",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActions",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemInkActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemInkBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemInkBorderStyle",
     "DocAnnotationsList200ResponseAnnotationsItemInkColor",
@@ -13688,51 +6090,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemInkRef_ObjectNumber",
     "DocAnnotationsList200ResponseAnnotationsItemInkReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemLine",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActions",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLineActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemLineBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemLineBorderStyle",
     "DocAnnotationsList200ResponseAnnotationsItemLineColor",
@@ -13764,51 +6121,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemLineRef_ObjectNumber",
     "DocAnnotationsList200ResponseAnnotationsItemLineReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemLink",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActions",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemLinkBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemLinkFlags",
     "DocAnnotationsList200ResponseAnnotationsItemLinkIdentityQuality",
@@ -13832,23 +6144,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemLinkReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemLinkTarget",
     "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGoto",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFit",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitB",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitBh",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitBv",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitH",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitR",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationFitV",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestinationXyz",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_Fit",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitB",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitBh",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitBv",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitH",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitR",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_FitV",
-    "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoDestination_Xyz",
     "DocAnnotationsList200ResponseAnnotationsItemLinkTargetGotoRemote",
     "DocAnnotationsList200ResponseAnnotationsItemLinkTargetJavascript",
     "DocAnnotationsList200ResponseAnnotationsItemLinkTargetLaunch",
@@ -13863,51 +6158,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemLinkTarget_Unsupported",
     "DocAnnotationsList200ResponseAnnotationsItemLinkTarget_Uri",
     "DocAnnotationsList200ResponseAnnotationsItemPolygon",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActions",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolygonActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonBorderStyle",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonColor",
@@ -13934,51 +6184,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemPolygonReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonVerticesItem",
     "DocAnnotationsList200ResponseAnnotationsItemPolyline",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActions",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemPolylineActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineBorderStyle",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineColor",
@@ -14008,51 +6213,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemPolylineReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineVerticesItem",
     "DocAnnotationsList200ResponseAnnotationsItemRedact",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActions",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemRedactActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemRedactBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemRedactColor",
     "DocAnnotationsList200ResponseAnnotationsItemRedactFlags",
@@ -14085,51 +6245,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemRedactReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemRedactTextAlign",
     "DocAnnotationsList200ResponseAnnotationsItemSquare",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActions",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquareActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemSquareBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemSquareBorderStyle",
     "DocAnnotationsList200ResponseAnnotationsItemSquareColor",
@@ -14157,51 +6272,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemSquareReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemSquareUnrotatedRect",
     "DocAnnotationsList200ResponseAnnotationsItemSquiggly",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActions",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemSquigglyActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemSquigglyBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemSquigglyColor",
     "DocAnnotationsList200ResponseAnnotationsItemSquigglyFlags",
@@ -14230,51 +6300,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemSquigglyRef_ObjectNumber",
     "DocAnnotationsList200ResponseAnnotationsItemSquigglyReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemStamp",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActions",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStampActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemStampBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemStampFlags",
     "DocAnnotationsList200ResponseAnnotationsItemStampIdentityQuality",
@@ -14298,51 +6323,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemStampReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemStampUnrotatedRect",
     "DocAnnotationsList200ResponseAnnotationsItemStrikeout",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActions",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemStrikeoutActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemStrikeoutBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemStrikeoutColor",
     "DocAnnotationsList200ResponseAnnotationsItemStrikeoutFlags",
@@ -14372,51 +6352,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemStrikeoutRef_ObjectNumber",
     "DocAnnotationsList200ResponseAnnotationsItemStrikeoutReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemText",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActions",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemTextActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemTextBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemTextColor",
     "DocAnnotationsList200ResponseAnnotationsItemTextFlags",
@@ -14441,51 +6376,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemTextRef_ObjectNumber",
     "DocAnnotationsList200ResponseAnnotationsItemTextReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemUnderline",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActions",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnderlineActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemUnderlineBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemUnderlineColor",
     "DocAnnotationsList200ResponseAnnotationsItemUnderlineFlags",
@@ -14514,51 +6404,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemUnderlineRef_ObjectNumber",
     "DocAnnotationsList200ResponseAnnotationsItemUnderlineReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemUnsupported",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActions",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemUnsupportedActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemUnsupportedBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemUnsupportedFlags",
     "DocAnnotationsList200ResponseAnnotationsItemUnsupportedIdentityQuality",
@@ -14581,51 +6426,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemUnsupportedRef_ObjectNumber",
     "DocAnnotationsList200ResponseAnnotationsItemUnsupportedReplyType",
     "DocAnnotationsList200ResponseAnnotationsItemWidget",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActions",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsActivate",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsActivateRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsActivateRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsActivateWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsBlur",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsBlurRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsBlurRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsBlurWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorEnter",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorEnterRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorEnterRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorEnterWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorExit",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorExitRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorExitRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsCursorExitWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsFocus",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsFocusRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsFocusRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsFocusWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseDown",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseDownRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseDownRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseDownWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseUp",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseUpRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseUpRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsMouseUpWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageClose",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageCloseRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageCloseRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageCloseWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageInvisible",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageInvisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageInvisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageInvisibleWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageOpen",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageOpenRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageOpenRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageOpenWarningsItem",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageVisible",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageVisibleRoot",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageVisibleRootType",
-    "DocAnnotationsList200ResponseAnnotationsItemWidgetActionsPageVisibleWarningsItem",
     "DocAnnotationsList200ResponseAnnotationsItemWidgetBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemWidgetBorderStyle",
     "DocAnnotationsList200ResponseAnnotationsItemWidgetColor",
@@ -14687,51 +6487,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaret",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretColor",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretFlags",
@@ -14758,51 +6513,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretUnrotatedRect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircle",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleBorderStyle",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleColor",
@@ -14830,51 +6540,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleUnrotatedRect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachment",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentColor",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentFile",
@@ -14900,51 +6565,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentRef_ObjectNumber",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeText",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextBorderStyle",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextColor",
@@ -14977,51 +6597,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextTextAlign",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextUnrotatedRect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlight",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightColor",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightFlags",
@@ -15050,51 +6625,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightRef_ObjectNumber",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInk",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkBorderStyle",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkColor",
@@ -15121,51 +6651,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkRef_ObjectNumber",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLine",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBorderStyle",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineColor",
@@ -15197,51 +6682,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef_ObjectNumber",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLink",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkFlags",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkIdentityQuality",
@@ -15265,23 +6705,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGoto",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitB",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitBh",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitBv",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitH",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitR",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationFitV",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestinationXyz",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_Fit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitB",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitBh",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitBv",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitH",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitR",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_FitV",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoDestination_Xyz",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetGotoRemote",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetJavascript",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTargetLaunch",
@@ -15296,51 +6719,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Unsupported",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget_Uri",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygon",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBorderStyle",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonColor",
@@ -15367,51 +6745,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonVerticesItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolyline",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBorderStyle",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineColor",
@@ -15441,51 +6774,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineVerticesItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedact",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactColor",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactFlags",
@@ -15518,51 +6806,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactTextAlign",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquare",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareBorderStyle",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareColor",
@@ -15590,51 +6833,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareUnrotatedRect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquiggly",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyColor",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyFlags",
@@ -15663,51 +6861,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyRef_ObjectNumber",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStamp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampFlags",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampIdentityQuality",
@@ -15731,51 +6884,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampUnrotatedRect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeout",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutColor",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutFlags",
@@ -15805,51 +6913,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutRef_ObjectNumber",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemText",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextColor",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextFlags",
@@ -15874,51 +6937,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextRef_ObjectNumber",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderline",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineColor",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineFlags",
@@ -15947,51 +6965,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineRef_ObjectNumber",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupported",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedFlags",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedIdentityQuality",
@@ -16014,51 +6987,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedRef_ObjectNumber",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedReplyType",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidget",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActions",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivate",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsActivateWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlur",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsBlurWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnter",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorEnterWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExit",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsCursorExitWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocus",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsFocusWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDown",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseDownWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUp",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsMouseUpWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageClose",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageCloseWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageInvisibleWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpen",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageOpenWarningsItem",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisible",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleRoot",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleRootType",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActionsPageVisibleWarningsItem",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetBorderStyle",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetColor",
@@ -16152,23 +7080,6 @@ __all__ = [
     "DocFormsGet200ResponseCalculationOrderItem_ObjectNumber",
     "DocFormsGet200ResponseFieldsItem",
     "DocFormsGet200ResponseFieldsItemCheckbox",
-    "DocFormsGet200ResponseFieldsItemCheckboxActions",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsCalculate",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsCalculateRoot",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsCalculateRootType",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsCalculateWarningsItem",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsFormat",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsFormatRoot",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsFormatRootType",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsFormatWarningsItem",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsKeystroke",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsKeystrokeRoot",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsKeystrokeRootType",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsKeystrokeWarningsItem",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsValidate",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsValidateRoot",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsValidateRootType",
-    "DocFormsGet200ResponseFieldsItemCheckboxActionsValidateWarningsItem",
     "DocFormsGet200ResponseFieldsItemCheckboxDefaultValueEntry",
     "DocFormsGet200ResponseFieldsItemCheckboxDefaultValueEntryArray",
     "DocFormsGet200ResponseFieldsItemCheckboxDefaultValueEntryNone",
@@ -16196,23 +7107,6 @@ __all__ = [
     "DocFormsGet200ResponseFieldsItemCheckboxValueEntry_Unsupported",
     "DocFormsGet200ResponseFieldsItemCheckboxWidgetsItem",
     "DocFormsGet200ResponseFieldsItemCombobox",
-    "DocFormsGet200ResponseFieldsItemComboboxActions",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsCalculate",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsCalculateRoot",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsCalculateRootType",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsCalculateWarningsItem",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsFormat",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsFormatRoot",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsFormatRootType",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsFormatWarningsItem",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsKeystroke",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsKeystrokeRoot",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsKeystrokeRootType",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsKeystrokeWarningsItem",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsValidate",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsValidateRoot",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsValidateRootType",
-    "DocFormsGet200ResponseFieldsItemComboboxActionsValidateWarningsItem",
     "DocFormsGet200ResponseFieldsItemComboboxDefaultValueEntry",
     "DocFormsGet200ResponseFieldsItemComboboxDefaultValueEntryArray",
     "DocFormsGet200ResponseFieldsItemComboboxDefaultValueEntryNone",
@@ -16241,23 +7135,6 @@ __all__ = [
     "DocFormsGet200ResponseFieldsItemComboboxValueEntry_Unsupported",
     "DocFormsGet200ResponseFieldsItemComboboxWidgetsItem",
     "DocFormsGet200ResponseFieldsItemListbox",
-    "DocFormsGet200ResponseFieldsItemListboxActions",
-    "DocFormsGet200ResponseFieldsItemListboxActionsCalculate",
-    "DocFormsGet200ResponseFieldsItemListboxActionsCalculateRoot",
-    "DocFormsGet200ResponseFieldsItemListboxActionsCalculateRootType",
-    "DocFormsGet200ResponseFieldsItemListboxActionsCalculateWarningsItem",
-    "DocFormsGet200ResponseFieldsItemListboxActionsFormat",
-    "DocFormsGet200ResponseFieldsItemListboxActionsFormatRoot",
-    "DocFormsGet200ResponseFieldsItemListboxActionsFormatRootType",
-    "DocFormsGet200ResponseFieldsItemListboxActionsFormatWarningsItem",
-    "DocFormsGet200ResponseFieldsItemListboxActionsKeystroke",
-    "DocFormsGet200ResponseFieldsItemListboxActionsKeystrokeRoot",
-    "DocFormsGet200ResponseFieldsItemListboxActionsKeystrokeRootType",
-    "DocFormsGet200ResponseFieldsItemListboxActionsKeystrokeWarningsItem",
-    "DocFormsGet200ResponseFieldsItemListboxActionsValidate",
-    "DocFormsGet200ResponseFieldsItemListboxActionsValidateRoot",
-    "DocFormsGet200ResponseFieldsItemListboxActionsValidateRootType",
-    "DocFormsGet200ResponseFieldsItemListboxActionsValidateWarningsItem",
     "DocFormsGet200ResponseFieldsItemListboxDefaultValueEntry",
     "DocFormsGet200ResponseFieldsItemListboxDefaultValueEntryArray",
     "DocFormsGet200ResponseFieldsItemListboxDefaultValueEntryNone",
@@ -16286,23 +7163,6 @@ __all__ = [
     "DocFormsGet200ResponseFieldsItemListboxValueEntry_Unsupported",
     "DocFormsGet200ResponseFieldsItemListboxWidgetsItem",
     "DocFormsGet200ResponseFieldsItemPushbutton",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActions",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsCalculate",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsCalculateRoot",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsCalculateRootType",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsCalculateWarningsItem",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsFormat",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsFormatRoot",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsFormatRootType",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsFormatWarningsItem",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsKeystroke",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsKeystrokeRoot",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsKeystrokeRootType",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsKeystrokeWarningsItem",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsValidate",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsValidateRoot",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsValidateRootType",
-    "DocFormsGet200ResponseFieldsItemPushbuttonActionsValidateWarningsItem",
     "DocFormsGet200ResponseFieldsItemPushbuttonDefaultValueEntry",
     "DocFormsGet200ResponseFieldsItemPushbuttonDefaultValueEntryArray",
     "DocFormsGet200ResponseFieldsItemPushbuttonDefaultValueEntryNone",
@@ -16330,23 +7190,6 @@ __all__ = [
     "DocFormsGet200ResponseFieldsItemPushbuttonValueEntry_Unsupported",
     "DocFormsGet200ResponseFieldsItemPushbuttonWidgetsItem",
     "DocFormsGet200ResponseFieldsItemRadio",
-    "DocFormsGet200ResponseFieldsItemRadioActions",
-    "DocFormsGet200ResponseFieldsItemRadioActionsCalculate",
-    "DocFormsGet200ResponseFieldsItemRadioActionsCalculateRoot",
-    "DocFormsGet200ResponseFieldsItemRadioActionsCalculateRootType",
-    "DocFormsGet200ResponseFieldsItemRadioActionsCalculateWarningsItem",
-    "DocFormsGet200ResponseFieldsItemRadioActionsFormat",
-    "DocFormsGet200ResponseFieldsItemRadioActionsFormatRoot",
-    "DocFormsGet200ResponseFieldsItemRadioActionsFormatRootType",
-    "DocFormsGet200ResponseFieldsItemRadioActionsFormatWarningsItem",
-    "DocFormsGet200ResponseFieldsItemRadioActionsKeystroke",
-    "DocFormsGet200ResponseFieldsItemRadioActionsKeystrokeRoot",
-    "DocFormsGet200ResponseFieldsItemRadioActionsKeystrokeRootType",
-    "DocFormsGet200ResponseFieldsItemRadioActionsKeystrokeWarningsItem",
-    "DocFormsGet200ResponseFieldsItemRadioActionsValidate",
-    "DocFormsGet200ResponseFieldsItemRadioActionsValidateRoot",
-    "DocFormsGet200ResponseFieldsItemRadioActionsValidateRootType",
-    "DocFormsGet200ResponseFieldsItemRadioActionsValidateWarningsItem",
     "DocFormsGet200ResponseFieldsItemRadioDefaultValueEntry",
     "DocFormsGet200ResponseFieldsItemRadioDefaultValueEntryArray",
     "DocFormsGet200ResponseFieldsItemRadioDefaultValueEntryNone",
@@ -16374,23 +7217,6 @@ __all__ = [
     "DocFormsGet200ResponseFieldsItemRadioValueEntry_Unsupported",
     "DocFormsGet200ResponseFieldsItemRadioWidgetsItem",
     "DocFormsGet200ResponseFieldsItemSignature",
-    "DocFormsGet200ResponseFieldsItemSignatureActions",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsCalculate",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsCalculateRoot",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsCalculateRootType",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsCalculateWarningsItem",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsFormat",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsFormatRoot",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsFormatRootType",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsFormatWarningsItem",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsKeystroke",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsKeystrokeRoot",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsKeystrokeRootType",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsKeystrokeWarningsItem",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsValidate",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsValidateRoot",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsValidateRootType",
-    "DocFormsGet200ResponseFieldsItemSignatureActionsValidateWarningsItem",
     "DocFormsGet200ResponseFieldsItemSignatureDefaultValueEntry",
     "DocFormsGet200ResponseFieldsItemSignatureDefaultValueEntryArray",
     "DocFormsGet200ResponseFieldsItemSignatureDefaultValueEntryNone",
@@ -16418,23 +7244,6 @@ __all__ = [
     "DocFormsGet200ResponseFieldsItemSignatureValueEntry_Unsupported",
     "DocFormsGet200ResponseFieldsItemSignatureWidgetsItem",
     "DocFormsGet200ResponseFieldsItemText",
-    "DocFormsGet200ResponseFieldsItemTextActions",
-    "DocFormsGet200ResponseFieldsItemTextActionsCalculate",
-    "DocFormsGet200ResponseFieldsItemTextActionsCalculateRoot",
-    "DocFormsGet200ResponseFieldsItemTextActionsCalculateRootType",
-    "DocFormsGet200ResponseFieldsItemTextActionsCalculateWarningsItem",
-    "DocFormsGet200ResponseFieldsItemTextActionsFormat",
-    "DocFormsGet200ResponseFieldsItemTextActionsFormatRoot",
-    "DocFormsGet200ResponseFieldsItemTextActionsFormatRootType",
-    "DocFormsGet200ResponseFieldsItemTextActionsFormatWarningsItem",
-    "DocFormsGet200ResponseFieldsItemTextActionsKeystroke",
-    "DocFormsGet200ResponseFieldsItemTextActionsKeystrokeRoot",
-    "DocFormsGet200ResponseFieldsItemTextActionsKeystrokeRootType",
-    "DocFormsGet200ResponseFieldsItemTextActionsKeystrokeWarningsItem",
-    "DocFormsGet200ResponseFieldsItemTextActionsValidate",
-    "DocFormsGet200ResponseFieldsItemTextActionsValidateRoot",
-    "DocFormsGet200ResponseFieldsItemTextActionsValidateRootType",
-    "DocFormsGet200ResponseFieldsItemTextActionsValidateWarningsItem",
     "DocFormsGet200ResponseFieldsItemTextDefaultValueEntry",
     "DocFormsGet200ResponseFieldsItemTextDefaultValueEntryArray",
     "DocFormsGet200ResponseFieldsItemTextDefaultValueEntryNone",
@@ -16462,23 +7271,6 @@ __all__ = [
     "DocFormsGet200ResponseFieldsItemTextValueEntry_Unsupported",
     "DocFormsGet200ResponseFieldsItemTextWidgetsItem",
     "DocFormsGet200ResponseFieldsItemUnknown",
-    "DocFormsGet200ResponseFieldsItemUnknownActions",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsCalculate",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsCalculateRoot",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsCalculateRootType",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsCalculateWarningsItem",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsFormat",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsFormatRoot",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsFormatRootType",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsFormatWarningsItem",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsKeystroke",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsKeystrokeRoot",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsKeystrokeRootType",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsKeystrokeWarningsItem",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsValidate",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsValidateRoot",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsValidateRootType",
-    "DocFormsGet200ResponseFieldsItemUnknownActionsValidateWarningsItem",
     "DocFormsGet200ResponseFieldsItemUnknownDefaultValueEntry",
     "DocFormsGet200ResponseFieldsItemUnknownDefaultValueEntryArray",
     "DocFormsGet200ResponseFieldsItemUnknownDefaultValueEntryNone",
@@ -16752,6 +7544,8 @@ __all__ = [
     "DocText404Response",
     "DocText404ResponseCode",
     "DocText404ResponseName",
+    "DocumentActionsSnapshot",
+    "DocumentActionsSnapshotNameTreeScriptsItem",
     "DocumentsCommit200Response",
     "DocumentsCommit200ResponseDocument",
     "DocumentsCommit200ResponseDocumentState",
@@ -16840,6 +7634,76 @@ __all__ = [
     "EngineErrorPayload",
     "EngineErrorPayloadCode",
     "EngineErrorPayloadName",
+    "PdfActionNode",
+    "PdfActionNodeGoto",
+    "PdfActionNodeGoto3DView",
+    "PdfActionNodeGotoEmbedded",
+    "PdfActionNodeGotoRemote",
+    "PdfActionNodeHide",
+    "PdfActionNodeImportData",
+    "PdfActionNodeJavascript",
+    "PdfActionNodeLaunch",
+    "PdfActionNodeMovie",
+    "PdfActionNodeNamed",
+    "PdfActionNodeRendition",
+    "PdfActionNodeResetForm",
+    "PdfActionNodeSetOcgState",
+    "PdfActionNodeSound",
+    "PdfActionNodeSubmitForm",
+    "PdfActionNodeSubmitFormPayload",
+    "PdfActionNodeSubmitFormPayloadFlags",
+    "PdfActionNodeSubmitFormPayloadFlagsFormat",
+    "PdfActionNodeSubmitFormPayloadFlagsMethod",
+    "PdfActionNodeThread",
+    "PdfActionNodeTransition",
+    "PdfActionNodeUnknown",
+    "PdfActionNodeUri",
+    "PdfActionNode_Goto",
+    "PdfActionNode_Goto3DView",
+    "PdfActionNode_GotoEmbedded",
+    "PdfActionNode_GotoRemote",
+    "PdfActionNode_Hide",
+    "PdfActionNode_ImportData",
+    "PdfActionNode_Javascript",
+    "PdfActionNode_Launch",
+    "PdfActionNode_Movie",
+    "PdfActionNode_Named",
+    "PdfActionNode_Rendition",
+    "PdfActionNode_ResetForm",
+    "PdfActionNode_SetOcgState",
+    "PdfActionNode_Sound",
+    "PdfActionNode_SubmitForm",
+    "PdfActionNode_Thread",
+    "PdfActionNode_Transition",
+    "PdfActionNode_Unknown",
+    "PdfActionNode_Uri",
+    "PdfActionTargetRef",
+    "PdfActionTargetRefName",
+    "PdfActionTargetRefObjectNumber",
+    "PdfActionTargetRef_Name",
+    "PdfActionTargetRef_ObjectNumber",
+    "PdfActionTree",
+    "PdfActionTreeWarningsItem",
+    "PdfAnnotationActions",
+    "PdfDestination",
+    "PdfDestinationFit",
+    "PdfDestinationFitB",
+    "PdfDestinationFitBh",
+    "PdfDestinationFitBv",
+    "PdfDestinationFitH",
+    "PdfDestinationFitR",
+    "PdfDestinationFitV",
+    "PdfDestinationXyz",
+    "PdfDestination_Fit",
+    "PdfDestination_FitB",
+    "PdfDestination_FitBh",
+    "PdfDestination_FitBv",
+    "PdfDestination_FitH",
+    "PdfDestination_FitR",
+    "PdfDestination_FitV",
+    "PdfDestination_Xyz",
+    "PdfFieldActions",
+    "PdfPageActions",
     "SharesCreate200Response",
     "SharesCreate200ResponseShare",
     "SharesCreate400Response",

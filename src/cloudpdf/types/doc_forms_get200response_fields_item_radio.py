@@ -6,7 +6,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_forms_get200response_fields_item_radio_actions import DocFormsGet200ResponseFieldsItemRadioActions
 from .doc_forms_get200response_fields_item_radio_default_value_entry import (
     DocFormsGet200ResponseFieldsItemRadioDefaultValueEntry,
 )
@@ -15,6 +14,7 @@ from .doc_forms_get200response_fields_item_radio_origin import DocFormsGet200Res
 from .doc_forms_get200response_fields_item_radio_ref import DocFormsGet200ResponseFieldsItemRadioRef
 from .doc_forms_get200response_fields_item_radio_value_entry import DocFormsGet200ResponseFieldsItemRadioValueEntry
 from .doc_forms_get200response_fields_item_radio_widgets_item import DocFormsGet200ResponseFieldsItemRadioWidgetsItem
+from .pdf_field_actions import PdfFieldActions
 
 
 class DocFormsGet200ResponseFieldsItemRadio(UniversalBaseModel):
@@ -41,7 +41,7 @@ class DocFormsGet200ResponseFieldsItemRadio(UniversalBaseModel):
         FieldMetadata(alias="defaultValueEntry"),
         pydantic.Field(alias="defaultValueEntry"),
     ]
-    actions: typing.Optional[DocFormsGet200ResponseFieldsItemRadioActions] = None
+    actions: typing.Optional[PdfFieldActions] = None
     widgets: typing.List[DocFormsGet200ResponseFieldsItemRadioWidgetsItem]
     value: str
     radios_in_unison: typing_extensions.Annotated[

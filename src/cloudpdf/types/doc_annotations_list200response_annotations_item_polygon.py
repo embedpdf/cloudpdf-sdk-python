@@ -7,9 +7,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_annotations_list200response_annotations_item_polygon_actions import (
-    DocAnnotationsList200ResponseAnnotationsItemPolygonActions,
-)
 from .doc_annotations_list200response_annotations_item_polygon_blend_mode import (
     DocAnnotationsList200ResponseAnnotationsItemPolygonBlendMode,
 )
@@ -43,6 +40,7 @@ from .doc_annotations_list200response_annotations_item_polygon_reply_type import
 from .doc_annotations_list200response_annotations_item_polygon_vertices_item import (
     DocAnnotationsList200ResponseAnnotationsItemPolygonVerticesItem,
 )
+from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsList200ResponseAnnotationsItemPolygon(UniversalBaseModel):
@@ -91,7 +89,7 @@ class DocAnnotationsList200ResponseAnnotationsItemPolygon(UniversalBaseModel):
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemPolygonActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsList200ResponseAnnotationsItemPolygonColor
     opacity: float
     stroke_width: typing_extensions.Annotated[

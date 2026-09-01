@@ -7,9 +7,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActions,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentBlendMode,
 )
@@ -40,6 +37,7 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_file_attac
 from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_reply_type import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentReplyType,
 )
+from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachment(UniversalBaseModel):
@@ -88,7 +86,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachment(Uni
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentColor
     opacity: float
     icon: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentIcon

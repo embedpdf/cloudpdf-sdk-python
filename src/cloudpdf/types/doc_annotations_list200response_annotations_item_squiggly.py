@@ -7,9 +7,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_annotations_list200response_annotations_item_squiggly_actions import (
-    DocAnnotationsList200ResponseAnnotationsItemSquigglyActions,
-)
 from .doc_annotations_list200response_annotations_item_squiggly_blend_mode import (
     DocAnnotationsList200ResponseAnnotationsItemSquigglyBlendMode,
 )
@@ -37,6 +34,7 @@ from .doc_annotations_list200response_annotations_item_squiggly_ref import (
 from .doc_annotations_list200response_annotations_item_squiggly_reply_type import (
     DocAnnotationsList200ResponseAnnotationsItemSquigglyReplyType,
 )
+from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsList200ResponseAnnotationsItemSquiggly(UniversalBaseModel):
@@ -85,7 +83,7 @@ class DocAnnotationsList200ResponseAnnotationsItemSquiggly(UniversalBaseModel):
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemSquigglyActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsList200ResponseAnnotationsItemSquigglyColor
     opacity: float
     quad_points: typing_extensions.Annotated[

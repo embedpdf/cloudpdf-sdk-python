@@ -7,9 +7,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActions,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_circle_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleBlendMode,
 )
@@ -46,6 +43,7 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_circle_rep
 from .doc_annotations_list_all200response_pages_item_annotations_item_circle_unrotated_rect import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleUnrotatedRect,
 )
+from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircle(UniversalBaseModel):
@@ -94,7 +92,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircle(UniversalBa
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleColor
     opacity: float
     stroke_width: typing_extensions.Annotated[

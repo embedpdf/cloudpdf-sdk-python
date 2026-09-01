@@ -6,7 +6,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_forms_get200response_fields_item_signature_actions import DocFormsGet200ResponseFieldsItemSignatureActions
 from .doc_forms_get200response_fields_item_signature_default_value_entry import (
     DocFormsGet200ResponseFieldsItemSignatureDefaultValueEntry,
 )
@@ -19,6 +18,7 @@ from .doc_forms_get200response_fields_item_signature_value_entry import (
 from .doc_forms_get200response_fields_item_signature_widgets_item import (
     DocFormsGet200ResponseFieldsItemSignatureWidgetsItem,
 )
+from .pdf_field_actions import PdfFieldActions
 
 
 class DocFormsGet200ResponseFieldsItemSignature(UniversalBaseModel):
@@ -45,7 +45,7 @@ class DocFormsGet200ResponseFieldsItemSignature(UniversalBaseModel):
         FieldMetadata(alias="defaultValueEntry"),
         pydantic.Field(alias="defaultValueEntry"),
     ]
-    actions: typing.Optional[DocFormsGet200ResponseFieldsItemSignatureActions] = None
+    actions: typing.Optional[PdfFieldActions] = None
     widgets: typing.List[DocFormsGet200ResponseFieldsItemSignatureWidgetsItem]
 
     if IS_PYDANTIC_V2:
