@@ -7,9 +7,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActions,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_redact_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactBlendMode,
 )
@@ -49,6 +46,7 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_redact_rep
 from .doc_annotations_list_all200response_pages_item_annotations_item_redact_text_align import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactTextAlign,
 )
+from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedact(UniversalBaseModel):
@@ -97,7 +95,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedact(UniversalBa
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     quad_points: typing_extensions.Annotated[
         typing.List[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItem],
         FieldMetadata(alias="quadPoints"),

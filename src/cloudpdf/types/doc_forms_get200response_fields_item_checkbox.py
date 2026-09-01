@@ -6,7 +6,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_forms_get200response_fields_item_checkbox_actions import DocFormsGet200ResponseFieldsItemCheckboxActions
 from .doc_forms_get200response_fields_item_checkbox_default_value_entry import (
     DocFormsGet200ResponseFieldsItemCheckboxDefaultValueEntry,
 )
@@ -19,6 +18,7 @@ from .doc_forms_get200response_fields_item_checkbox_value_entry import (
 from .doc_forms_get200response_fields_item_checkbox_widgets_item import (
     DocFormsGet200ResponseFieldsItemCheckboxWidgetsItem,
 )
+from .pdf_field_actions import PdfFieldActions
 
 
 class DocFormsGet200ResponseFieldsItemCheckbox(UniversalBaseModel):
@@ -45,7 +45,7 @@ class DocFormsGet200ResponseFieldsItemCheckbox(UniversalBaseModel):
         FieldMetadata(alias="defaultValueEntry"),
         pydantic.Field(alias="defaultValueEntry"),
     ]
-    actions: typing.Optional[DocFormsGet200ResponseFieldsItemCheckboxActions] = None
+    actions: typing.Optional[PdfFieldActions] = None
     widgets: typing.List[DocFormsGet200ResponseFieldsItemCheckboxWidgetsItem]
     checked: bool
     export_value: typing_extensions.Annotated[

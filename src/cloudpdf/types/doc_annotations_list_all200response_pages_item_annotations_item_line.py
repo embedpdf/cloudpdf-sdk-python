@@ -7,9 +7,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActions,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_line_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBlendMode,
 )
@@ -46,6 +43,7 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_line_ref i
 from .doc_annotations_list_all200response_pages_item_annotations_item_line_reply_type import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineReplyType,
 )
+from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLine(UniversalBaseModel):
@@ -94,7 +92,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLine(UniversalBase
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineColor
     opacity: float
     stroke_width: typing_extensions.Annotated[

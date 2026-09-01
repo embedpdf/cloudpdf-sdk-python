@@ -8,7 +8,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_forms_get200response_fields_item_checkbox_actions import DocFormsGet200ResponseFieldsItemCheckboxActions
 from .doc_forms_get200response_fields_item_checkbox_default_value_entry import (
     DocFormsGet200ResponseFieldsItemCheckboxDefaultValueEntry,
 )
@@ -21,7 +20,6 @@ from .doc_forms_get200response_fields_item_checkbox_value_entry import (
 from .doc_forms_get200response_fields_item_checkbox_widgets_item import (
     DocFormsGet200ResponseFieldsItemCheckboxWidgetsItem,
 )
-from .doc_forms_get200response_fields_item_combobox_actions import DocFormsGet200ResponseFieldsItemComboboxActions
 from .doc_forms_get200response_fields_item_combobox_default_value_entry import (
     DocFormsGet200ResponseFieldsItemComboboxDefaultValueEntry,
 )
@@ -37,7 +35,6 @@ from .doc_forms_get200response_fields_item_combobox_value_entry import (
 from .doc_forms_get200response_fields_item_combobox_widgets_item import (
     DocFormsGet200ResponseFieldsItemComboboxWidgetsItem,
 )
-from .doc_forms_get200response_fields_item_listbox_actions import DocFormsGet200ResponseFieldsItemListboxActions
 from .doc_forms_get200response_fields_item_listbox_default_value_entry import (
     DocFormsGet200ResponseFieldsItemListboxDefaultValueEntry,
 )
@@ -51,7 +48,6 @@ from .doc_forms_get200response_fields_item_listbox_value_entry import DocFormsGe
 from .doc_forms_get200response_fields_item_listbox_widgets_item import (
     DocFormsGet200ResponseFieldsItemListboxWidgetsItem,
 )
-from .doc_forms_get200response_fields_item_pushbutton_actions import DocFormsGet200ResponseFieldsItemPushbuttonActions
 from .doc_forms_get200response_fields_item_pushbutton_default_value_entry import (
     DocFormsGet200ResponseFieldsItemPushbuttonDefaultValueEntry,
 )
@@ -64,7 +60,6 @@ from .doc_forms_get200response_fields_item_pushbutton_value_entry import (
 from .doc_forms_get200response_fields_item_pushbutton_widgets_item import (
     DocFormsGet200ResponseFieldsItemPushbuttonWidgetsItem,
 )
-from .doc_forms_get200response_fields_item_radio_actions import DocFormsGet200ResponseFieldsItemRadioActions
 from .doc_forms_get200response_fields_item_radio_default_value_entry import (
     DocFormsGet200ResponseFieldsItemRadioDefaultValueEntry,
 )
@@ -73,7 +68,6 @@ from .doc_forms_get200response_fields_item_radio_origin import DocFormsGet200Res
 from .doc_forms_get200response_fields_item_radio_ref import DocFormsGet200ResponseFieldsItemRadioRef
 from .doc_forms_get200response_fields_item_radio_value_entry import DocFormsGet200ResponseFieldsItemRadioValueEntry
 from .doc_forms_get200response_fields_item_radio_widgets_item import DocFormsGet200ResponseFieldsItemRadioWidgetsItem
-from .doc_forms_get200response_fields_item_signature_actions import DocFormsGet200ResponseFieldsItemSignatureActions
 from .doc_forms_get200response_fields_item_signature_default_value_entry import (
     DocFormsGet200ResponseFieldsItemSignatureDefaultValueEntry,
 )
@@ -86,7 +80,6 @@ from .doc_forms_get200response_fields_item_signature_value_entry import (
 from .doc_forms_get200response_fields_item_signature_widgets_item import (
     DocFormsGet200ResponseFieldsItemSignatureWidgetsItem,
 )
-from .doc_forms_get200response_fields_item_text_actions import DocFormsGet200ResponseFieldsItemTextActions
 from .doc_forms_get200response_fields_item_text_default_value_entry import (
     DocFormsGet200ResponseFieldsItemTextDefaultValueEntry,
 )
@@ -95,7 +88,6 @@ from .doc_forms_get200response_fields_item_text_origin import DocFormsGet200Resp
 from .doc_forms_get200response_fields_item_text_ref import DocFormsGet200ResponseFieldsItemTextRef
 from .doc_forms_get200response_fields_item_text_value_entry import DocFormsGet200ResponseFieldsItemTextValueEntry
 from .doc_forms_get200response_fields_item_text_widgets_item import DocFormsGet200ResponseFieldsItemTextWidgetsItem
-from .doc_forms_get200response_fields_item_unknown_actions import DocFormsGet200ResponseFieldsItemUnknownActions
 from .doc_forms_get200response_fields_item_unknown_default_value_entry import (
     DocFormsGet200ResponseFieldsItemUnknownDefaultValueEntry,
 )
@@ -106,6 +98,7 @@ from .doc_forms_get200response_fields_item_unknown_value_entry import DocFormsGe
 from .doc_forms_get200response_fields_item_unknown_widgets_item import (
     DocFormsGet200ResponseFieldsItemUnknownWidgetsItem,
 )
+from .pdf_field_actions import PdfFieldActions
 
 
 class DocFormsGet200ResponseFieldsItem_Text(UniversalBaseModel):
@@ -133,7 +126,7 @@ class DocFormsGet200ResponseFieldsItem_Text(UniversalBaseModel):
         FieldMetadata(alias="defaultValueEntry"),
         pydantic.Field(alias="defaultValueEntry"),
     ]
-    actions: typing.Optional[DocFormsGet200ResponseFieldsItemTextActions] = None
+    actions: typing.Optional[PdfFieldActions] = None
     widgets: typing.List[DocFormsGet200ResponseFieldsItemTextWidgetsItem]
     value: str
     default_value: typing_extensions.Annotated[
@@ -181,7 +174,7 @@ class DocFormsGet200ResponseFieldsItem_Checkbox(UniversalBaseModel):
         FieldMetadata(alias="defaultValueEntry"),
         pydantic.Field(alias="defaultValueEntry"),
     ]
-    actions: typing.Optional[DocFormsGet200ResponseFieldsItemCheckboxActions] = None
+    actions: typing.Optional[PdfFieldActions] = None
     widgets: typing.List[DocFormsGet200ResponseFieldsItemCheckboxWidgetsItem]
     checked: bool
     export_value: typing_extensions.Annotated[
@@ -223,7 +216,7 @@ class DocFormsGet200ResponseFieldsItem_Radio(UniversalBaseModel):
         FieldMetadata(alias="defaultValueEntry"),
         pydantic.Field(alias="defaultValueEntry"),
     ]
-    actions: typing.Optional[DocFormsGet200ResponseFieldsItemRadioActions] = None
+    actions: typing.Optional[PdfFieldActions] = None
     widgets: typing.List[DocFormsGet200ResponseFieldsItemRadioWidgetsItem]
     value: str
     radios_in_unison: typing_extensions.Annotated[
@@ -268,7 +261,7 @@ class DocFormsGet200ResponseFieldsItem_Combobox(UniversalBaseModel):
         FieldMetadata(alias="defaultValueEntry"),
         pydantic.Field(alias="defaultValueEntry"),
     ]
-    actions: typing.Optional[DocFormsGet200ResponseFieldsItemComboboxActions] = None
+    actions: typing.Optional[PdfFieldActions] = None
     widgets: typing.List[DocFormsGet200ResponseFieldsItemComboboxWidgetsItem]
     value: str
     default_value: typing_extensions.Annotated[
@@ -312,7 +305,7 @@ class DocFormsGet200ResponseFieldsItem_Listbox(UniversalBaseModel):
         FieldMetadata(alias="defaultValueEntry"),
         pydantic.Field(alias="defaultValueEntry"),
     ]
-    actions: typing.Optional[DocFormsGet200ResponseFieldsItemListboxActions] = None
+    actions: typing.Optional[PdfFieldActions] = None
     widgets: typing.List[DocFormsGet200ResponseFieldsItemListboxWidgetsItem]
     selected_values: typing_extensions.Annotated[
         typing.List[str], FieldMetadata(alias="selectedValues"), pydantic.Field(alias="selectedValues")
@@ -357,7 +350,7 @@ class DocFormsGet200ResponseFieldsItem_Pushbutton(UniversalBaseModel):
         FieldMetadata(alias="defaultValueEntry"),
         pydantic.Field(alias="defaultValueEntry"),
     ]
-    actions: typing.Optional[DocFormsGet200ResponseFieldsItemPushbuttonActions] = None
+    actions: typing.Optional[PdfFieldActions] = None
     widgets: typing.List[DocFormsGet200ResponseFieldsItemPushbuttonWidgetsItem]
 
     if IS_PYDANTIC_V2:
@@ -395,7 +388,7 @@ class DocFormsGet200ResponseFieldsItem_Signature(UniversalBaseModel):
         FieldMetadata(alias="defaultValueEntry"),
         pydantic.Field(alias="defaultValueEntry"),
     ]
-    actions: typing.Optional[DocFormsGet200ResponseFieldsItemSignatureActions] = None
+    actions: typing.Optional[PdfFieldActions] = None
     widgets: typing.List[DocFormsGet200ResponseFieldsItemSignatureWidgetsItem]
 
     if IS_PYDANTIC_V2:
@@ -433,7 +426,7 @@ class DocFormsGet200ResponseFieldsItem_Unknown(UniversalBaseModel):
         FieldMetadata(alias="defaultValueEntry"),
         pydantic.Field(alias="defaultValueEntry"),
     ]
-    actions: typing.Optional[DocFormsGet200ResponseFieldsItemUnknownActions] = None
+    actions: typing.Optional[PdfFieldActions] = None
     widgets: typing.List[DocFormsGet200ResponseFieldsItemUnknownWidgetsItem]
     raw_value: typing_extensions.Annotated[str, FieldMetadata(alias="rawValue"), pydantic.Field(alias="rawValue")]
 

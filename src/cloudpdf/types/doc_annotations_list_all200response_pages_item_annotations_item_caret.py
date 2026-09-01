@@ -7,9 +7,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActions,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_caret_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretBlendMode,
 )
@@ -43,6 +40,7 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_caret_repl
 from .doc_annotations_list_all200response_pages_item_annotations_item_caret_unrotated_rect import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretUnrotatedRect,
 )
+from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaret(UniversalBaseModel):
@@ -91,7 +89,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaret(UniversalBas
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretColor
     opacity: float
     intent: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretIntent] = None

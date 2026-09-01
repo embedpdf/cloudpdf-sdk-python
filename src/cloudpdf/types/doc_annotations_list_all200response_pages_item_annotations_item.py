@@ -9,9 +9,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_annotations_list_all200response_pages_item_annotations_item_caret_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActions,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_caret_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretBlendMode,
 )
@@ -44,9 +41,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_caret_repl
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_caret_unrotated_rect import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretUnrotatedRect,
-)
-from .doc_annotations_list_all200response_pages_item_annotations_item_circle_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActions,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_circle_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleBlendMode,
@@ -84,9 +78,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_circle_rep
 from .doc_annotations_list_all200response_pages_item_annotations_item_circle_unrotated_rect import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleUnrotatedRect,
 )
-from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActions,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentBlendMode,
 )
@@ -116,9 +107,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_file_attac
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_file_attachment_reply_type import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentReplyType,
-)
-from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActions,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextBlendMode,
@@ -171,9 +159,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_
 from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_unrotated_rect import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextUnrotatedRect,
 )
-from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActions,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightBlendMode,
 )
@@ -200,9 +185,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_highlight_reply_type import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightReplyType,
-)
-from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActions,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_ink_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkBlendMode,
@@ -236,9 +218,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_ink_ref im
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_ink_reply_type import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkReplyType,
-)
-from .doc_annotations_list_all200response_pages_item_annotations_item_line_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActions,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_line_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBlendMode,
@@ -276,9 +255,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_line_ref i
 from .doc_annotations_list_all200response_pages_item_annotations_item_line_reply_type import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineReplyType,
 )
-from .doc_annotations_list_all200response_pages_item_annotations_item_link_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActions,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_link_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkBlendMode,
 )
@@ -302,9 +278,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_link_reply
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_link_target import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget,
-)
-from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActions,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBlendMode,
@@ -338,9 +311,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_re
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_vertices_item import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonVerticesItem,
-)
-from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActions,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBlendMode,
@@ -377,9 +347,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_r
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_vertices_item import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineVerticesItem,
-)
-from .doc_annotations_list_all200response_pages_item_annotations_item_redact_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActions,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_redact_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactBlendMode,
@@ -420,9 +387,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_redact_rep
 from .doc_annotations_list_all200response_pages_item_annotations_item_redact_text_align import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactTextAlign,
 )
-from .doc_annotations_list_all200response_pages_item_annotations_item_square_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActions,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_square_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareBlendMode,
 )
@@ -459,9 +423,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_square_rep
 from .doc_annotations_list_all200response_pages_item_annotations_item_square_unrotated_rect import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareUnrotatedRect,
 )
-from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActions,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyBlendMode,
 )
@@ -489,9 +450,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_r
 from .doc_annotations_list_all200response_pages_item_annotations_item_squiggly_reply_type import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyReplyType,
 )
-from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActions,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampBlendMode,
 )
@@ -515,9 +473,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_repl
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_stamp_unrotated_rect import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampUnrotatedRect,
-)
-from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActions,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutBlendMode,
@@ -549,9 +504,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_
 from .doc_annotations_list_all200response_pages_item_annotations_item_strikeout_reply_type import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutReplyType,
 )
-from .doc_annotations_list_all200response_pages_item_annotations_item_text_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActions,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_text_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextBlendMode,
 )
@@ -578,9 +530,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_text_ref i
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_text_reply_type import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextReplyType,
-)
-from .doc_annotations_list_all200response_pages_item_annotations_item_underline_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActions,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_underline_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineBlendMode,
@@ -609,9 +558,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_underline_
 from .doc_annotations_list_all200response_pages_item_annotations_item_underline_reply_type import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineReplyType,
 )
-from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActions,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedBlendMode,
 )
@@ -632,9 +578,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_unsupporte
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_unsupported_reply_type import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedReplyType,
-)
-from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActions,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_widget_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetBlendMode,
@@ -678,6 +621,7 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_widget_rep
 from .doc_annotations_list_all200response_pages_item_annotations_item_widget_text_align import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetTextAlign,
 )
+from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Highlight(UniversalBaseModel):
@@ -727,7 +671,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Highlight(Univers
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlightColor
     opacity: float
     quad_points: typing_extensions.Annotated[
@@ -793,7 +737,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Underline(Univers
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnderlineColor
     opacity: float
     quad_points: typing_extensions.Annotated[
@@ -859,7 +803,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Squiggly(Universa
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquigglyColor
     opacity: float
     quad_points: typing_extensions.Annotated[
@@ -925,7 +869,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Strikeout(Univers
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStrikeoutColor
     opacity: float
     quad_points: typing_extensions.Annotated[
@@ -992,7 +936,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Circle(UniversalB
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCircleColor
     opacity: float
     stroke_width: typing_extensions.Annotated[
@@ -1083,7 +1027,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Square(UniversalB
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemSquareColor
     opacity: float
     stroke_width: typing_extensions.Annotated[
@@ -1174,7 +1118,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Polygon(Universal
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonColor
     opacity: float
     stroke_width: typing_extensions.Annotated[
@@ -1256,7 +1200,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Polyline(Universa
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineColor
     opacity: float
     stroke_width: typing_extensions.Annotated[
@@ -1340,7 +1284,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Line(UniversalBas
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineColor
     opacity: float
     stroke_width: typing_extensions.Annotated[
@@ -1428,7 +1372,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Link(UniversalBas
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     target: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLinkTarget] = None
 
     if IS_PYDANTIC_V2:
@@ -1488,7 +1432,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Ink(UniversalBase
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkColor
     opacity: float
     stroke_width: typing_extensions.Annotated[
@@ -1567,7 +1511,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_FreeText(Universa
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     intent: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextIntent
     font_family: typing_extensions.Annotated[
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFontFamily,
@@ -1682,7 +1626,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Caret(UniversalBa
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretColor
     opacity: float
     intent: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemCaretIntent] = None
@@ -1755,7 +1699,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Text(UniversalBas
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextColor
     opacity: float
     icon: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemTextIcon
@@ -1821,7 +1765,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Stamp(UniversalBa
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemStampActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     name: typing.Optional[str] = None
     rotation: typing.Optional[float] = None
     unrotated_rect: typing_extensions.Annotated[
@@ -1887,7 +1831,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_FileAttachment(Un
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentColor
     opacity: float
     icon: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFileAttachmentIcon
@@ -1950,7 +1894,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Widget(UniversalB
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetColor] = None
     interior_color: typing_extensions.Annotated[
         typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInteriorColor],
@@ -2049,7 +1993,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Redact(UniversalB
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     quad_points: typing_extensions.Annotated[
         typing.List[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemRedactQuadPointsItem],
         FieldMetadata(alias="quadPoints"),
@@ -2140,7 +2084,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_Unsupported(Unive
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemUnsupportedActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     raw_subtype_code: typing_extensions.Annotated[
         int, FieldMetadata(alias="rawSubtypeCode"), pydantic.Field(alias="rawSubtypeCode")
     ]

@@ -7,9 +7,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_annotations_list200response_annotations_item_link_actions import (
-    DocAnnotationsList200ResponseAnnotationsItemLinkActions,
-)
 from .doc_annotations_list200response_annotations_item_link_blend_mode import (
     DocAnnotationsList200ResponseAnnotationsItemLinkBlendMode,
 )
@@ -34,6 +31,7 @@ from .doc_annotations_list200response_annotations_item_link_reply_type import (
 from .doc_annotations_list200response_annotations_item_link_target import (
     DocAnnotationsList200ResponseAnnotationsItemLinkTarget,
 )
+from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsList200ResponseAnnotationsItemLink(UniversalBaseModel):
@@ -82,7 +80,7 @@ class DocAnnotationsList200ResponseAnnotationsItemLink(UniversalBaseModel):
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemLinkActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     target: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemLinkTarget] = None
 
     if IS_PYDANTIC_V2:

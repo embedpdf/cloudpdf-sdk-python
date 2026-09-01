@@ -7,9 +7,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_annotations_list200response_annotations_item_file_attachment_actions import (
-    DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActions,
-)
 from .doc_annotations_list200response_annotations_item_file_attachment_blend_mode import (
     DocAnnotationsList200ResponseAnnotationsItemFileAttachmentBlendMode,
 )
@@ -40,6 +37,7 @@ from .doc_annotations_list200response_annotations_item_file_attachment_ref impor
 from .doc_annotations_list200response_annotations_item_file_attachment_reply_type import (
     DocAnnotationsList200ResponseAnnotationsItemFileAttachmentReplyType,
 )
+from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsList200ResponseAnnotationsItemFileAttachment(UniversalBaseModel):
@@ -88,7 +86,7 @@ class DocAnnotationsList200ResponseAnnotationsItemFileAttachment(UniversalBaseMo
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemFileAttachmentActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsList200ResponseAnnotationsItemFileAttachmentColor
     opacity: float
     icon: DocAnnotationsList200ResponseAnnotationsItemFileAttachmentIcon

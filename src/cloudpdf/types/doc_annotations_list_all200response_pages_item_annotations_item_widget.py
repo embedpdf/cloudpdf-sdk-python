@@ -7,9 +7,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_annotations_list_all200response_pages_item_annotations_item_widget_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActions,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_widget_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetBlendMode,
 )
@@ -52,6 +49,7 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_widget_rep
 from .doc_annotations_list_all200response_pages_item_annotations_item_widget_text_align import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetTextAlign,
 )
+from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidget(UniversalBaseModel):
@@ -100,7 +98,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidget(UniversalBa
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetColor] = None
     interior_color: typing_extensions.Annotated[
         typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemWidgetInteriorColor],

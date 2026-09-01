@@ -6,7 +6,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_forms_get200response_fields_item_pushbutton_actions import DocFormsGet200ResponseFieldsItemPushbuttonActions
 from .doc_forms_get200response_fields_item_pushbutton_default_value_entry import (
     DocFormsGet200ResponseFieldsItemPushbuttonDefaultValueEntry,
 )
@@ -19,6 +18,7 @@ from .doc_forms_get200response_fields_item_pushbutton_value_entry import (
 from .doc_forms_get200response_fields_item_pushbutton_widgets_item import (
     DocFormsGet200ResponseFieldsItemPushbuttonWidgetsItem,
 )
+from .pdf_field_actions import PdfFieldActions
 
 
 class DocFormsGet200ResponseFieldsItemPushbutton(UniversalBaseModel):
@@ -45,7 +45,7 @@ class DocFormsGet200ResponseFieldsItemPushbutton(UniversalBaseModel):
         FieldMetadata(alias="defaultValueEntry"),
         pydantic.Field(alias="defaultValueEntry"),
     ]
-    actions: typing.Optional[DocFormsGet200ResponseFieldsItemPushbuttonActions] = None
+    actions: typing.Optional[PdfFieldActions] = None
     widgets: typing.List[DocFormsGet200ResponseFieldsItemPushbuttonWidgetsItem]
 
     if IS_PYDANTIC_V2:

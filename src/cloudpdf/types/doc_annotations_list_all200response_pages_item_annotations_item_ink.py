@@ -7,9 +7,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_annotations_list_all200response_pages_item_annotations_item_ink_actions import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActions,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_ink_blend_mode import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkBlendMode,
 )
@@ -43,6 +40,7 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_ink_ref im
 from .doc_annotations_list_all200response_pages_item_annotations_item_ink_reply_type import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkReplyType,
 )
+from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInk(UniversalBaseModel):
@@ -91,7 +89,7 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInk(UniversalBaseM
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemInkColor
     opacity: float
     stroke_width: typing_extensions.Annotated[

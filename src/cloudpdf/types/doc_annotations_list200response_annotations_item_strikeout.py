@@ -7,9 +7,6 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .doc_annotations_list200response_annotations_item_strikeout_actions import (
-    DocAnnotationsList200ResponseAnnotationsItemStrikeoutActions,
-)
 from .doc_annotations_list200response_annotations_item_strikeout_blend_mode import (
     DocAnnotationsList200ResponseAnnotationsItemStrikeoutBlendMode,
 )
@@ -40,6 +37,7 @@ from .doc_annotations_list200response_annotations_item_strikeout_ref import (
 from .doc_annotations_list200response_annotations_item_strikeout_reply_type import (
     DocAnnotationsList200ResponseAnnotationsItemStrikeoutReplyType,
 )
+from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsList200ResponseAnnotationsItemStrikeout(UniversalBaseModel):
@@ -88,7 +86,7 @@ class DocAnnotationsList200ResponseAnnotationsItemStrikeout(UniversalBaseModel):
     updated_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="updatedBy"), pydantic.Field(alias="updatedBy")
     ] = None
-    actions: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemStrikeoutActions] = None
+    actions: typing.Optional[PdfAnnotationActions] = None
     color: DocAnnotationsList200ResponseAnnotationsItemStrikeoutColor
     opacity: float
     quad_points: typing_extensions.Annotated[
