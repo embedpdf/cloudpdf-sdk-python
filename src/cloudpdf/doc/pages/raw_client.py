@@ -24,8 +24,12 @@ from ...types.doc_pages_insert_blank200response import DocPagesInsertBlank200Res
 from ...types.doc_pages_insert_blank_request import DocPagesInsertBlankRequest
 from ...types.doc_pages_move200response import DocPagesMove200Response
 from ...types.doc_pages_move_request import DocPagesMoveRequest
+from ...types.doc_pages_remove_name200response import DocPagesRemoveName200Response
+from ...types.doc_pages_remove_name_request import DocPagesRemoveNameRequest
 from ...types.doc_pages_rotate200response import DocPagesRotate200Response
 from ...types.doc_pages_rotate_request import DocPagesRotateRequest
+from ...types.doc_pages_set_name200response import DocPagesSetName200Response
+from ...types.doc_pages_set_name_request import DocPagesSetNameRequest
 from pydantic import ValidationError
 
 # this is used as the default value for optional parameters
@@ -504,6 +508,168 @@ class RawPagesClient:
                     DocPagesMove200Response,
                     parse_obj_as(
                         type_=DocPagesMove200Response,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return HttpResponse(response=_response, data=_data)
+            if _response.status_code == 400:
+                raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    def set_name(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        request: DocPagesSetNameRequest,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> HttpResponse[DocPagesSetName200Response]:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        request : DocPagesSetNameRequest
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        HttpResponse[DocPagesSetName200Response]
+            OK
+        """
+        _response = self._client_wrapper.httpx_client.request(
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/pages/names",
+            method="POST",
+            json=request,
+            headers={
+                "content-type": "application/json",
+                "X-Document-Password": str(document_password) if document_password is not None else None,
+            },
+            request_options=request_options,
+            omit=OMIT,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocPagesSetName200Response,
+                    parse_obj_as(
+                        type_=DocPagesSetName200Response,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return HttpResponse(response=_response, data=_data)
+            if _response.status_code == 400:
+                raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    def remove_name(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        request: DocPagesRemoveNameRequest,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> HttpResponse[DocPagesRemoveName200Response]:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        request : DocPagesRemoveNameRequest
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        HttpResponse[DocPagesRemoveName200Response]
+            OK
+        """
+        _response = self._client_wrapper.httpx_client.request(
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/pages/names/delete",
+            method="POST",
+            json=request,
+            headers={
+                "content-type": "application/json",
+                "X-Document-Password": str(document_password) if document_password is not None else None,
+            },
+            request_options=request_options,
+            omit=OMIT,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocPagesRemoveName200Response,
+                    parse_obj_as(
+                        type_=DocPagesRemoveName200Response,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1094,6 +1260,168 @@ class AsyncRawPagesClient:
                     DocPagesMove200Response,
                     parse_obj_as(
                         type_=DocPagesMove200Response,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return AsyncHttpResponse(response=_response, data=_data)
+            if _response.status_code == 400:
+                raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    async def set_name(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        request: DocPagesSetNameRequest,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> AsyncHttpResponse[DocPagesSetName200Response]:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        request : DocPagesSetNameRequest
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        AsyncHttpResponse[DocPagesSetName200Response]
+            OK
+        """
+        _response = await self._client_wrapper.httpx_client.request(
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/pages/names",
+            method="POST",
+            json=request,
+            headers={
+                "content-type": "application/json",
+                "X-Document-Password": str(document_password) if document_password is not None else None,
+            },
+            request_options=request_options,
+            omit=OMIT,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocPagesSetName200Response,
+                    parse_obj_as(
+                        type_=DocPagesSetName200Response,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return AsyncHttpResponse(response=_response, data=_data)
+            if _response.status_code == 400:
+                raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    async def remove_name(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        request: DocPagesRemoveNameRequest,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> AsyncHttpResponse[DocPagesRemoveName200Response]:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        request : DocPagesRemoveNameRequest
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        AsyncHttpResponse[DocPagesRemoveName200Response]
+            OK
+        """
+        _response = await self._client_wrapper.httpx_client.request(
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/pages/names/delete",
+            method="POST",
+            json=request,
+            headers={
+                "content-type": "application/json",
+                "X-Document-Password": str(document_password) if document_password is not None else None,
+            },
+            request_options=request_options,
+            omit=OMIT,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocPagesRemoveName200Response,
+                    parse_obj_as(
+                        type_=DocPagesRemoveName200Response,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
