@@ -7,6 +7,9 @@ from ...core.request_options import RequestOptions
 from ...types.doc_annotations_create200response import DocAnnotationsCreate200Response
 from ...types.doc_annotations_create_request import DocAnnotationsCreateRequest
 from ...types.doc_annotations_delete200response import DocAnnotationsDelete200Response
+from ...types.doc_annotations_export_appearance_request import DocAnnotationsExportAppearanceRequest
+from ...types.doc_annotations_flatten200response import DocAnnotationsFlatten200Response
+from ...types.doc_annotations_flatten_request import DocAnnotationsFlattenRequest
 from ...types.doc_annotations_list200response import DocAnnotationsList200Response
 from ...types.doc_annotations_list_all200response import DocAnnotationsListAll200Response
 from ...types.doc_annotations_update200response import DocAnnotationsUpdate200Response
@@ -293,6 +296,120 @@ class AnnotationsClient:
             layer_name,
             pon,
             annot_key,
+            request=request,
+            document_password=document_password,
+            request_options=request_options,
+        )
+        return _response.data
+
+    def export_appearance(
+        self,
+        doc_id: str,
+        layer_name: str,
+        pon: int,
+        *,
+        request: DocAnnotationsExportAppearanceRequest,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> typing.Iterator[bytes]:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        pon : int
+
+        request : DocAnnotationsExportAppearanceRequest
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
+
+        Returns
+        -------
+        typing.Iterator[bytes]
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.annotations.export_appearance(
+            doc_id="docId",
+            layer_name="layerName",
+            pon=1,
+            request={"string": {"key": "value"}},
+        )
+        """
+        with self._raw_client.export_appearance(
+            doc_id,
+            layer_name,
+            pon,
+            request=request,
+            document_password=document_password,
+            request_options=request_options,
+        ) as r:
+            yield from r.data
+
+    def flatten(
+        self,
+        doc_id: str,
+        layer_name: str,
+        pon: int,
+        *,
+        request: DocAnnotationsFlattenRequest,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocAnnotationsFlatten200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        pon : int
+
+        request : DocAnnotationsFlattenRequest
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocAnnotationsFlatten200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.annotations.flatten(
+            doc_id="docId",
+            layer_name="layerName",
+            pon=1,
+            request={"key": "value"},
+        )
+        """
+        _response = self._raw_client.flatten(
+            doc_id,
+            layer_name,
+            pon,
             request=request,
             document_password=document_password,
             request_options=request_options,
@@ -616,6 +733,137 @@ class AsyncAnnotationsClient:
             layer_name,
             pon,
             annot_key,
+            request=request,
+            document_password=document_password,
+            request_options=request_options,
+        )
+        return _response.data
+
+    async def export_appearance(
+        self,
+        doc_id: str,
+        layer_name: str,
+        pon: int,
+        *,
+        request: DocAnnotationsExportAppearanceRequest,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> typing.AsyncIterator[bytes]:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        pon : int
+
+        request : DocAnnotationsExportAppearanceRequest
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
+
+        Returns
+        -------
+        typing.AsyncIterator[bytes]
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.annotations.export_appearance(
+                doc_id="docId",
+                layer_name="layerName",
+                pon=1,
+                request={"string": {"key": "value"}},
+            )
+
+
+        asyncio.run(main())
+        """
+        async with self._raw_client.export_appearance(
+            doc_id,
+            layer_name,
+            pon,
+            request=request,
+            document_password=document_password,
+            request_options=request_options,
+        ) as r:
+            async for _chunk in r.data:
+                yield _chunk
+
+    async def flatten(
+        self,
+        doc_id: str,
+        layer_name: str,
+        pon: int,
+        *,
+        request: DocAnnotationsFlattenRequest,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocAnnotationsFlatten200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        pon : int
+
+        request : DocAnnotationsFlattenRequest
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocAnnotationsFlatten200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.annotations.flatten(
+                doc_id="docId",
+                layer_name="layerName",
+                pon=1,
+                request={"key": "value"},
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.flatten(
+            doc_id,
+            layer_name,
+            pon,
             request=request,
             document_password=document_password,
             request_options=request_options,

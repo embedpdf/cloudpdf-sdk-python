@@ -15,8 +15,12 @@ from ...types.doc_pages_insert_blank200response import DocPagesInsertBlank200Res
 from ...types.doc_pages_insert_blank_request import DocPagesInsertBlankRequest
 from ...types.doc_pages_move200response import DocPagesMove200Response
 from ...types.doc_pages_move_request import DocPagesMoveRequest
+from ...types.doc_pages_remove_name200response import DocPagesRemoveName200Response
+from ...types.doc_pages_remove_name_request import DocPagesRemoveNameRequest
 from ...types.doc_pages_rotate200response import DocPagesRotate200Response
 from ...types.doc_pages_rotate_request import DocPagesRotateRequest
+from ...types.doc_pages_set_name200response import DocPagesSetName200Response
+from ...types.doc_pages_set_name_request import DocPagesSetNameRequest
 from .raw_client import AsyncRawPagesClient, RawPagesClient
 
 # this is used as the default value for optional parameters
@@ -328,6 +332,102 @@ class PagesClient:
         )
         """
         _response = self._raw_client.move(
+            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+        )
+        return _response.data
+
+    def set_name(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        request: DocPagesSetNameRequest,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocPagesSetName200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        request : DocPagesSetNameRequest
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocPagesSetName200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.pages.set_name(
+            doc_id="docId",
+            layer_name="layerName",
+            request={"key": "value"},
+        )
+        """
+        _response = self._raw_client.set_name(
+            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+        )
+        return _response.data
+
+    def remove_name(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        request: DocPagesRemoveNameRequest,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocPagesRemoveName200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        request : DocPagesRemoveNameRequest
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocPagesRemoveName200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.pages.remove_name(
+            doc_id="docId",
+            layer_name="layerName",
+            request={"key": "value"},
+        )
+        """
+        _response = self._raw_client.remove_name(
             doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
         )
         return _response.data
@@ -735,6 +835,118 @@ class AsyncPagesClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.move(
+            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+        )
+        return _response.data
+
+    async def set_name(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        request: DocPagesSetNameRequest,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocPagesSetName200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        request : DocPagesSetNameRequest
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocPagesSetName200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.pages.set_name(
+                doc_id="docId",
+                layer_name="layerName",
+                request={"key": "value"},
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.set_name(
+            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+        )
+        return _response.data
+
+    async def remove_name(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        request: DocPagesRemoveNameRequest,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocPagesRemoveName200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        request : DocPagesRemoveNameRequest
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocPagesRemoveName200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.pages.remove_name(
+                doc_id="docId",
+                layer_name="layerName",
+                request={"key": "value"},
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.remove_name(
             doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
         )
         return _response.data
