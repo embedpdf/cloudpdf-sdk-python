@@ -17,6 +17,8 @@ if typing.TYPE_CHECKING:
     from .metadata.client import AsyncMetadataClient, MetadataClient
     from .pages.client import AsyncPagesClient, PagesClient
     from .redactions.client import AsyncRedactionsClient, RedactionsClient
+    from .signatures.client import AsyncSignaturesClient, SignaturesClient
+    from .versions.client import AsyncVersionsClient, VersionsClient
 
 
 class DocClient:
@@ -28,6 +30,8 @@ class DocClient:
         self._metadata: typing.Optional[MetadataClient] = None
         self._pages: typing.Optional[PagesClient] = None
         self._redactions: typing.Optional[RedactionsClient] = None
+        self._signatures: typing.Optional[SignaturesClient] = None
+        self._versions: typing.Optional[VersionsClient] = None
 
     @property
     def with_raw_response(self) -> RawDocClient:
@@ -304,6 +308,22 @@ class DocClient:
             self._redactions = RedactionsClient(client_wrapper=self._client_wrapper)
         return self._redactions
 
+    @property
+    def signatures(self):
+        if self._signatures is None:
+            from .signatures.client import SignaturesClient  # noqa: E402
+
+            self._signatures = SignaturesClient(client_wrapper=self._client_wrapper)
+        return self._signatures
+
+    @property
+    def versions(self):
+        if self._versions is None:
+            from .versions.client import VersionsClient  # noqa: E402
+
+            self._versions = VersionsClient(client_wrapper=self._client_wrapper)
+        return self._versions
+
 
 class AsyncDocClient:
     def __init__(self, *, client_wrapper: AsyncClientWrapper):
@@ -314,6 +334,8 @@ class AsyncDocClient:
         self._metadata: typing.Optional[AsyncMetadataClient] = None
         self._pages: typing.Optional[AsyncPagesClient] = None
         self._redactions: typing.Optional[AsyncRedactionsClient] = None
+        self._signatures: typing.Optional[AsyncSignaturesClient] = None
+        self._versions: typing.Optional[AsyncVersionsClient] = None
 
     @property
     def with_raw_response(self) -> AsyncRawDocClient:
@@ -633,3 +655,19 @@ class AsyncDocClient:
 
             self._redactions = AsyncRedactionsClient(client_wrapper=self._client_wrapper)
         return self._redactions
+
+    @property
+    def signatures(self):
+        if self._signatures is None:
+            from .signatures.client import AsyncSignaturesClient  # noqa: E402
+
+            self._signatures = AsyncSignaturesClient(client_wrapper=self._client_wrapper)
+        return self._signatures
+
+    @property
+    def versions(self):
+        if self._versions is None:
+            from .versions.client import AsyncVersionsClient  # noqa: E402
+
+            self._versions = AsyncVersionsClient(client_wrapper=self._client_wrapper)
+        return self._versions

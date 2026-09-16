@@ -123,9 +123,6 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_
 from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_font_color import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFontColor,
 )
-from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_font_family import (
-    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFontFamily,
-)
 from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_identity_quality import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextIdentityQuality,
 )
@@ -152,6 +149,9 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_reply_type import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextReplyType,
+)
+from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text import (
+    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichText,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_text_align import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextTextAlign,
@@ -1513,16 +1513,17 @@ class DocAnnotationsListAll200ResponsePagesItemAnnotationsItem_FreeText(Universa
     ] = None
     actions: typing.Optional[PdfAnnotationActions] = None
     intent: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextIntent
-    font_family: typing_extensions.Annotated[
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFontFamily,
-        FieldMetadata(alias="fontFamily"),
-        pydantic.Field(alias="fontFamily"),
-    ]
+    font_family: typing_extensions.Annotated[str, FieldMetadata(alias="fontFamily"), pydantic.Field(alias="fontFamily")]
     font_size: typing_extensions.Annotated[float, FieldMetadata(alias="fontSize"), pydantic.Field(alias="fontSize")]
     text_align: typing_extensions.Annotated[
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextTextAlign,
         FieldMetadata(alias="textAlign"),
         pydantic.Field(alias="textAlign"),
+    ]
+    rich_text: typing_extensions.Annotated[
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichText,
+        FieldMetadata(alias="richText"),
+        pydantic.Field(alias="richText"),
     ]
     color: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextColor
     font_color: typing_extensions.Annotated[

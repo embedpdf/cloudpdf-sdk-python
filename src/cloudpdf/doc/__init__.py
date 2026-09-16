@@ -6,15 +6,23 @@ import typing
 from importlib import import_module
 
 if typing.TYPE_CHECKING:
-    from . import annotations, forms, metadata, pages, redactions
+    from . import annotations, forms, metadata, pages, redactions, signatures, versions
     from .forms import ExportDataFormsRequestFormat
+    from .signatures import AnalysisSignaturesRequestLevel, DocSignaturesCompleteRequestExpectedVersion
+    from .versions import AnalysisVersionsRequestLevel, SignatureDigestVersionsRequestAlgorithm
 _dynamic_imports: typing.Dict[str, str] = {
+    "AnalysisSignaturesRequestLevel": ".signatures",
+    "AnalysisVersionsRequestLevel": ".versions",
+    "DocSignaturesCompleteRequestExpectedVersion": ".signatures",
     "ExportDataFormsRequestFormat": ".forms",
+    "SignatureDigestVersionsRequestAlgorithm": ".versions",
     "annotations": ".annotations",
     "forms": ".forms",
     "metadata": ".metadata",
     "pages": ".pages",
     "redactions": ".redactions",
+    "signatures": ".signatures",
+    "versions": ".versions",
 }
 
 
@@ -39,4 +47,17 @@ def __dir__():
     return sorted(lazy_attrs)
 
 
-__all__ = ["ExportDataFormsRequestFormat", "annotations", "forms", "metadata", "pages", "redactions"]
+__all__ = [
+    "AnalysisSignaturesRequestLevel",
+    "AnalysisVersionsRequestLevel",
+    "DocSignaturesCompleteRequestExpectedVersion",
+    "ExportDataFormsRequestFormat",
+    "SignatureDigestVersionsRequestAlgorithm",
+    "annotations",
+    "forms",
+    "metadata",
+    "pages",
+    "redactions",
+    "signatures",
+    "versions",
+]

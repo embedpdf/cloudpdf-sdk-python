@@ -29,6 +29,13 @@ class DocManifest200Response(UniversalBaseModel):
     ] = None
     audit_head: typing_extensions.Annotated[int, FieldMetadata(alias="auditHead"), pydantic.Field(alias="auditHead")]
     base_sha: typing_extensions.Annotated[str, FieldMetadata(alias="baseSha"), pydantic.Field(alias="baseSha")]
+    layer_version: typing_extensions.Annotated[
+        typing.Optional[int], FieldMetadata(alias="layerVersion"), pydantic.Field(alias="layerVersion")
+    ] = None
+    working: typing.Optional[bool] = None
+    base_byte_length: typing_extensions.Annotated[
+        typing.Optional[int], FieldMetadata(alias="baseByteLength"), pydantic.Field(alias="baseByteLength")
+    ] = None
     scopes: typing.Optional[DocManifest200ResponseScopes] = None
     pages: typing.List[DocManifest200ResponsePagesItem]
 
