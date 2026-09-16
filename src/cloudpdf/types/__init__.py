@@ -350,9 +350,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list200response_annotations_item_free_text_font_color import (
         DocAnnotationsList200ResponseAnnotationsItemFreeTextFontColor,
     )
-    from .doc_annotations_list200response_annotations_item_free_text_font_family import (
-        DocAnnotationsList200ResponseAnnotationsItemFreeTextFontFamily,
-    )
     from .doc_annotations_list200response_annotations_item_free_text_identity_quality import (
         DocAnnotationsList200ResponseAnnotationsItemFreeTextIdentityQuality,
     )
@@ -409,6 +406,51 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list200response_annotations_item_free_text_reply_type import (
         DocAnnotationsList200ResponseAnnotationsItemFreeTextReplyType,
+    )
+    from .doc_annotations_list200response_annotations_item_free_text_rich_text import (
+        DocAnnotationsList200ResponseAnnotationsItemFreeTextRichText,
+    )
+    from .doc_annotations_list200response_annotations_item_free_text_rich_text_body import (
+        DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBody,
+    )
+    from .doc_annotations_list200response_annotations_item_free_text_rich_text_body_align import (
+        DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBodyAlign,
+    )
+    from .doc_annotations_list200response_annotations_item_free_text_rich_text_body_decoration_item import (
+        DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBodyDecorationItem,
+    )
+    from .doc_annotations_list200response_annotations_item_free_text_rich_text_body_dir import (
+        DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBodyDir,
+    )
+    from .doc_annotations_list200response_annotations_item_free_text_rich_text_body_margins import (
+        DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBodyMargins,
+    )
+    from .doc_annotations_list200response_annotations_item_free_text_rich_text_body_script import (
+        DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBodyScript,
+    )
+    from .doc_annotations_list200response_annotations_item_free_text_rich_text_paragraphs_item import (
+        DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItem,
+    )
+    from .doc_annotations_list200response_annotations_item_free_text_rich_text_paragraphs_item_align import (
+        DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemAlign,
+    )
+    from .doc_annotations_list200response_annotations_item_free_text_rich_text_paragraphs_item_dir import (
+        DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemDir,
+    )
+    from .doc_annotations_list200response_annotations_item_free_text_rich_text_paragraphs_item_margins import (
+        DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemMargins,
+    )
+    from .doc_annotations_list200response_annotations_item_free_text_rich_text_paragraphs_item_runs_item import (
+        DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemRunsItem,
+    )
+    from .doc_annotations_list200response_annotations_item_free_text_rich_text_paragraphs_item_runs_item_style import (
+        DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyle,
+    )
+    from .doc_annotations_list200response_annotations_item_free_text_rich_text_paragraphs_item_runs_item_style_decoration_item import (
+        DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyleDecorationItem,
+    )
+    from .doc_annotations_list200response_annotations_item_free_text_rich_text_paragraphs_item_runs_item_style_script import (
+        DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyleScript,
     )
     from .doc_annotations_list200response_annotations_item_free_text_text_align import (
         DocAnnotationsList200ResponseAnnotationsItemFreeTextTextAlign,
@@ -1727,9 +1769,6 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_font_color import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFontColor,
     )
-    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_font_family import (
-        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFontFamily,
-    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_identity_quality import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextIdentityQuality,
     )
@@ -1786,6 +1825,51 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_reply_type import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextReplyType,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichText,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_body import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBody,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_body_align import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBodyAlign,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_body_decoration_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBodyDecorationItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_body_dir import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBodyDir,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_body_margins import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBodyMargins,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_body_script import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBodyScript,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_paragraphs_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_paragraphs_item_align import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemAlign,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_paragraphs_item_dir import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemDir,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_paragraphs_item_margins import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemMargins,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_paragraphs_item_runs_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemRunsItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_paragraphs_item_runs_item_style import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyle,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_paragraphs_item_runs_item_style_decoration_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyleDecorationItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_paragraphs_item_runs_item_style_script import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyleScript,
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_free_text_text_align import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextTextAlign,
@@ -3798,10 +3882,314 @@ if typing.TYPE_CHECKING:
     from .doc_render_response import DocRenderResponse
     from .doc_render_response_code import DocRenderResponseCode
     from .doc_render_response_name import DocRenderResponseName
+    from .doc_signatures_abort200response import DocSignaturesAbort200Response
+    from .doc_signatures_abort200response_status import DocSignaturesAbort200ResponseStatus
+    from .doc_signatures_abort404response import DocSignaturesAbort404Response
+    from .doc_signatures_abort404response_code import DocSignaturesAbort404ResponseCode
+    from .doc_signatures_abort404response_name import DocSignaturesAbort404ResponseName
+    from .doc_signatures_analysis200response import DocSignaturesAnalysis200Response
+    from .doc_signatures_analysis200response_basis import DocSignaturesAnalysis200ResponseBasis
+    from .doc_signatures_analysis200response_basis_source import DocSignaturesAnalysis200ResponseBasisSource
+    from .doc_signatures_analysis200response_basis_version import DocSignaturesAnalysis200ResponseBasisVersion
+    from .doc_signatures_analysis200response_current import DocSignaturesAnalysis200ResponseCurrent
+    from .doc_signatures_analysis200response_current_findings_item import (
+        DocSignaturesAnalysis200ResponseCurrentFindingsItem,
+    )
+    from .doc_signatures_analysis200response_current_findings_item_verdict import (
+        DocSignaturesAnalysis200ResponseCurrentFindingsItemVerdict,
+    )
+    from .doc_signatures_analysis200response_current_method import DocSignaturesAnalysis200ResponseCurrentMethod
+    from .doc_signatures_analysis200response_current_primary import DocSignaturesAnalysis200ResponseCurrentPrimary
+    from .doc_signatures_analysis200response_current_primary_verdict import (
+        DocSignaturesAnalysis200ResponseCurrentPrimaryVerdict,
+    )
+    from .doc_signatures_analysis200response_current_verdict import DocSignaturesAnalysis200ResponseCurrentVerdict
+    from .doc_signatures_analysis200response_later import DocSignaturesAnalysis200ResponseLater
+    from .doc_signatures_analysis200response_mode import DocSignaturesAnalysis200ResponseMode
+    from .doc_signatures_analysis200response_restrictions_item import DocSignaturesAnalysis200ResponseRestrictionsItem
+    from .doc_signatures_analysis200response_restrictions_item_source import (
+        DocSignaturesAnalysis200ResponseRestrictionsItemSource,
+    )
+    from .doc_signatures_analysis200response_since import DocSignaturesAnalysis200ResponseSince
+    from .doc_signatures_analysis200response_until import DocSignaturesAnalysis200ResponseUntil
+    from .doc_signatures_analysis200response_verdict import DocSignaturesAnalysis200ResponseVerdict
+    from .doc_signatures_analysis400response import DocSignaturesAnalysis400Response
+    from .doc_signatures_analysis400response_code import DocSignaturesAnalysis400ResponseCode
+    from .doc_signatures_analysis400response_name import DocSignaturesAnalysis400ResponseName
+    from .doc_signatures_analysis404response import DocSignaturesAnalysis404Response
+    from .doc_signatures_analysis404response_code import DocSignaturesAnalysis404ResponseCode
+    from .doc_signatures_analysis404response_name import DocSignaturesAnalysis404ResponseName
+    from .doc_signatures_complete200response import DocSignaturesComplete200Response
+    from .doc_signatures_complete200response_meta import DocSignaturesComplete200ResponseMeta
+    from .doc_signatures_complete200response_meta_affected_pages_item import (
+        DocSignaturesComplete200ResponseMetaAffectedPagesItem,
+    )
+    from .doc_signatures_complete200response_meta_affected_pages_item_revision import (
+        DocSignaturesComplete200ResponseMetaAffectedPagesItemRevision,
+    )
+    from .doc_signatures_complete200response_meta_affected_pages_item_weak_annotation_state import (
+        DocSignaturesComplete200ResponseMetaAffectedPagesItemWeakAnnotationState,
+        DocSignaturesComplete200ResponseMetaAffectedPagesItemWeakAnnotationState_Known,
+        DocSignaturesComplete200ResponseMetaAffectedPagesItemWeakAnnotationState_Unknown,
+    )
+    from .doc_signatures_complete200response_meta_affected_pages_item_weak_annotation_state_known import (
+        DocSignaturesComplete200ResponseMetaAffectedPagesItemWeakAnnotationStateKnown,
+    )
+    from .doc_signatures_complete200response_meta_affected_pages_item_weak_annotation_state_unknown import (
+        DocSignaturesComplete200ResponseMetaAffectedPagesItemWeakAnnotationStateUnknown,
+    )
+    from .doc_signatures_complete200response_meta_cache_delta import DocSignaturesComplete200ResponseMetaCacheDelta
+    from .doc_signatures_complete200response_meta_cache_delta_pages_item import (
+        DocSignaturesComplete200ResponseMetaCacheDeltaPagesItem,
+    )
+    from .doc_signatures_complete200response_meta_cache_delta_pages_item_cache import (
+        DocSignaturesComplete200ResponseMetaCacheDeltaPagesItemCache,
+    )
+    from .doc_signatures_complete200response_previous import DocSignaturesComplete200ResponsePrevious
+    from .doc_signatures_complete200response_protection import DocSignaturesComplete200ResponseProtection
+    from .doc_signatures_complete200response_protection_certification import (
+        DocSignaturesComplete200ResponseProtectionCertification,
+    )
+    from .doc_signatures_complete200response_protection_enforced import (
+        DocSignaturesComplete200ResponseProtectionEnforced,
+    )
+    from .doc_signatures_complete200response_protection_field_locks_item import (
+        DocSignaturesComplete200ResponseProtectionFieldLocksItem,
+    )
+    from .doc_signatures_complete200response_protection_field_locks_item_source import (
+        DocSignaturesComplete200ResponseProtectionFieldLocksItemSource,
+    )
+    from .doc_signatures_complete200response_protection_field_locks_item_spec import (
+        DocSignaturesComplete200ResponseProtectionFieldLocksItemSpec,
+    )
+    from .doc_signatures_complete200response_protection_field_locks_item_spec_action import (
+        DocSignaturesComplete200ResponseProtectionFieldLocksItemSpecAction,
+    )
+    from .doc_signatures_complete200response_protection_judged import DocSignaturesComplete200ResponseProtectionJudged
+    from .doc_signatures_complete200response_signature import DocSignaturesComplete200ResponseSignature
+    from .doc_signatures_complete200response_signature_coverage import DocSignaturesComplete200ResponseSignatureCoverage
+    from .doc_signatures_complete200response_signature_field import (
+        DocSignaturesComplete200ResponseSignatureField,
+        DocSignaturesComplete200ResponseSignatureField_Fqn,
+        DocSignaturesComplete200ResponseSignatureField_ObjectNumber,
+    )
+    from .doc_signatures_complete200response_signature_field_fqn import (
+        DocSignaturesComplete200ResponseSignatureFieldFqn,
+    )
+    from .doc_signatures_complete200response_signature_field_mdp import (
+        DocSignaturesComplete200ResponseSignatureFieldMdp,
+    )
+    from .doc_signatures_complete200response_signature_field_mdp_action import (
+        DocSignaturesComplete200ResponseSignatureFieldMdpAction,
+    )
+    from .doc_signatures_complete200response_signature_field_object_number import (
+        DocSignaturesComplete200ResponseSignatureFieldObjectNumber,
+    )
+    from .doc_signatures_complete200response_signature_kind import DocSignaturesComplete200ResponseSignatureKind
+    from .doc_signatures_complete200response_signature_lock import DocSignaturesComplete200ResponseSignatureLock
+    from .doc_signatures_complete200response_signature_lock_action import (
+        DocSignaturesComplete200ResponseSignatureLockAction,
+    )
+    from .doc_signatures_complete200response_signature_seed_value import (
+        DocSignaturesComplete200ResponseSignatureSeedValue,
+    )
+    from .doc_signatures_complete200response_signature_signer import DocSignaturesComplete200ResponseSignatureSigner
+    from .doc_signatures_complete200response_signature_widget import DocSignaturesComplete200ResponseSignatureWidget
+    from .doc_signatures_complete200response_status import DocSignaturesComplete200ResponseStatus
+    from .doc_signatures_complete200response_version import DocSignaturesComplete200ResponseVersion
+    from .doc_signatures_complete400response import DocSignaturesComplete400Response
+    from .doc_signatures_complete400response_code import DocSignaturesComplete400ResponseCode
+    from .doc_signatures_complete400response_name import DocSignaturesComplete400ResponseName
+    from .doc_signatures_complete404response import DocSignaturesComplete404Response
+    from .doc_signatures_complete404response_code import DocSignaturesComplete404ResponseCode
+    from .doc_signatures_complete404response_name import DocSignaturesComplete404ResponseName
+    from .doc_signatures_complete409response import DocSignaturesComplete409Response
+    from .doc_signatures_complete409response_code import DocSignaturesComplete409ResponseCode
+    from .doc_signatures_complete409response_name import DocSignaturesComplete409ResponseName
+    from .doc_signatures_list200response import DocSignaturesList200Response
+    from .doc_signatures_list200response_protection import DocSignaturesList200ResponseProtection
+    from .doc_signatures_list200response_protection_certification import (
+        DocSignaturesList200ResponseProtectionCertification,
+    )
+    from .doc_signatures_list200response_protection_enforced import DocSignaturesList200ResponseProtectionEnforced
+    from .doc_signatures_list200response_protection_field_locks_item import (
+        DocSignaturesList200ResponseProtectionFieldLocksItem,
+    )
+    from .doc_signatures_list200response_protection_field_locks_item_source import (
+        DocSignaturesList200ResponseProtectionFieldLocksItemSource,
+    )
+    from .doc_signatures_list200response_protection_field_locks_item_spec import (
+        DocSignaturesList200ResponseProtectionFieldLocksItemSpec,
+    )
+    from .doc_signatures_list200response_protection_field_locks_item_spec_action import (
+        DocSignaturesList200ResponseProtectionFieldLocksItemSpecAction,
+    )
+    from .doc_signatures_list200response_protection_judged import DocSignaturesList200ResponseProtectionJudged
+    from .doc_signatures_list200response_revisions_item import DocSignaturesList200ResponseRevisionsItem
+    from .doc_signatures_list200response_signatures_item import DocSignaturesList200ResponseSignaturesItem
+    from .doc_signatures_list200response_signatures_item_coverage import (
+        DocSignaturesList200ResponseSignaturesItemCoverage,
+    )
+    from .doc_signatures_list200response_signatures_item_field import (
+        DocSignaturesList200ResponseSignaturesItemField,
+        DocSignaturesList200ResponseSignaturesItemField_Fqn,
+        DocSignaturesList200ResponseSignaturesItemField_ObjectNumber,
+    )
+    from .doc_signatures_list200response_signatures_item_field_fqn import (
+        DocSignaturesList200ResponseSignaturesItemFieldFqn,
+    )
+    from .doc_signatures_list200response_signatures_item_field_mdp import (
+        DocSignaturesList200ResponseSignaturesItemFieldMdp,
+    )
+    from .doc_signatures_list200response_signatures_item_field_mdp_action import (
+        DocSignaturesList200ResponseSignaturesItemFieldMdpAction,
+    )
+    from .doc_signatures_list200response_signatures_item_field_object_number import (
+        DocSignaturesList200ResponseSignaturesItemFieldObjectNumber,
+    )
+    from .doc_signatures_list200response_signatures_item_kind import DocSignaturesList200ResponseSignaturesItemKind
+    from .doc_signatures_list200response_signatures_item_lock import DocSignaturesList200ResponseSignaturesItemLock
+    from .doc_signatures_list200response_signatures_item_lock_action import (
+        DocSignaturesList200ResponseSignaturesItemLockAction,
+    )
+    from .doc_signatures_list200response_signatures_item_seed_value import (
+        DocSignaturesList200ResponseSignaturesItemSeedValue,
+    )
+    from .doc_signatures_list200response_signatures_item_signer import DocSignaturesList200ResponseSignaturesItemSigner
+    from .doc_signatures_list200response_signatures_item_widget import DocSignaturesList200ResponseSignaturesItemWidget
+    from .doc_signatures_list404response import DocSignaturesList404Response
+    from .doc_signatures_list404response_code import DocSignaturesList404ResponseCode
+    from .doc_signatures_list404response_name import DocSignaturesList404ResponseName
+    from .doc_signatures_prepare200response import DocSignaturesPrepare200Response
+    from .doc_signatures_prepare200response_algorithm import DocSignaturesPrepare200ResponseAlgorithm
+    from .doc_signatures_prepare200response_expected_version import DocSignaturesPrepare200ResponseExpectedVersion
+    from .doc_signatures_prepare400response import DocSignaturesPrepare400Response
+    from .doc_signatures_prepare400response_code import DocSignaturesPrepare400ResponseCode
+    from .doc_signatures_prepare400response_name import DocSignaturesPrepare400ResponseName
+    from .doc_signatures_prepare404response import DocSignaturesPrepare404Response
+    from .doc_signatures_prepare404response_code import DocSignaturesPrepare404ResponseCode
+    from .doc_signatures_prepare404response_name import DocSignaturesPrepare404ResponseName
+    from .doc_signatures_prepare409response import DocSignaturesPrepare409Response
+    from .doc_signatures_prepare409response_code import DocSignaturesPrepare409ResponseCode
+    from .doc_signatures_prepare409response_name import DocSignaturesPrepare409ResponseName
     from .doc_text200response import DocText200Response
     from .doc_text404response import DocText404Response
     from .doc_text404response_code import DocText404ResponseCode
     from .doc_text404response_name import DocText404ResponseName
+    from .doc_versions_analysis200response import DocVersionsAnalysis200Response
+    from .doc_versions_analysis200response_basis import DocVersionsAnalysis200ResponseBasis
+    from .doc_versions_analysis200response_basis_source import DocVersionsAnalysis200ResponseBasisSource
+    from .doc_versions_analysis200response_basis_version import DocVersionsAnalysis200ResponseBasisVersion
+    from .doc_versions_analysis200response_current import DocVersionsAnalysis200ResponseCurrent
+    from .doc_versions_analysis200response_current_findings_item import (
+        DocVersionsAnalysis200ResponseCurrentFindingsItem,
+    )
+    from .doc_versions_analysis200response_current_findings_item_verdict import (
+        DocVersionsAnalysis200ResponseCurrentFindingsItemVerdict,
+    )
+    from .doc_versions_analysis200response_current_method import DocVersionsAnalysis200ResponseCurrentMethod
+    from .doc_versions_analysis200response_current_primary import DocVersionsAnalysis200ResponseCurrentPrimary
+    from .doc_versions_analysis200response_current_primary_verdict import (
+        DocVersionsAnalysis200ResponseCurrentPrimaryVerdict,
+    )
+    from .doc_versions_analysis200response_current_verdict import DocVersionsAnalysis200ResponseCurrentVerdict
+    from .doc_versions_analysis200response_later import DocVersionsAnalysis200ResponseLater
+    from .doc_versions_analysis200response_mode import DocVersionsAnalysis200ResponseMode
+    from .doc_versions_analysis200response_restrictions_item import DocVersionsAnalysis200ResponseRestrictionsItem
+    from .doc_versions_analysis200response_restrictions_item_source import (
+        DocVersionsAnalysis200ResponseRestrictionsItemSource,
+    )
+    from .doc_versions_analysis200response_since import DocVersionsAnalysis200ResponseSince
+    from .doc_versions_analysis200response_until import DocVersionsAnalysis200ResponseUntil
+    from .doc_versions_analysis200response_verdict import DocVersionsAnalysis200ResponseVerdict
+    from .doc_versions_analysis400response import DocVersionsAnalysis400Response
+    from .doc_versions_analysis400response_code import DocVersionsAnalysis400ResponseCode
+    from .doc_versions_analysis400response_name import DocVersionsAnalysis400ResponseName
+    from .doc_versions_analysis404response import DocVersionsAnalysis404Response
+    from .doc_versions_analysis404response_code import DocVersionsAnalysis404ResponseCode
+    from .doc_versions_analysis404response_name import DocVersionsAnalysis404ResponseName
+    from .doc_versions_download_response import DocVersionsDownloadResponse
+    from .doc_versions_download_response_code import DocVersionsDownloadResponseCode
+    from .doc_versions_download_response_name import DocVersionsDownloadResponseName
+    from .doc_versions_list200response import DocVersionsList200Response
+    from .doc_versions_list200response_versions_item import DocVersionsList200ResponseVersionsItem
+    from .doc_versions_list200response_versions_item_producer import DocVersionsList200ResponseVersionsItemProducer
+    from .doc_versions_list404response import DocVersionsList404Response
+    from .doc_versions_list404response_code import DocVersionsList404ResponseCode
+    from .doc_versions_list404response_name import DocVersionsList404ResponseName
+    from .doc_versions_revision_response import DocVersionsRevisionResponse
+    from .doc_versions_revision_response_code import DocVersionsRevisionResponseCode
+    from .doc_versions_revision_response_name import DocVersionsRevisionResponseName
+    from .doc_versions_signature_contents_response import DocVersionsSignatureContentsResponse
+    from .doc_versions_signature_contents_response_code import DocVersionsSignatureContentsResponseCode
+    from .doc_versions_signature_contents_response_name import DocVersionsSignatureContentsResponseName
+    from .doc_versions_signature_digest_response import DocVersionsSignatureDigestResponse
+    from .doc_versions_signature_digest_response_code import DocVersionsSignatureDigestResponseCode
+    from .doc_versions_signature_digest_response_name import DocVersionsSignatureDigestResponseName
+    from .doc_versions_signatures200response import DocVersionsSignatures200Response
+    from .doc_versions_signatures200response_protection import DocVersionsSignatures200ResponseProtection
+    from .doc_versions_signatures200response_protection_certification import (
+        DocVersionsSignatures200ResponseProtectionCertification,
+    )
+    from .doc_versions_signatures200response_protection_enforced import (
+        DocVersionsSignatures200ResponseProtectionEnforced,
+    )
+    from .doc_versions_signatures200response_protection_field_locks_item import (
+        DocVersionsSignatures200ResponseProtectionFieldLocksItem,
+    )
+    from .doc_versions_signatures200response_protection_field_locks_item_source import (
+        DocVersionsSignatures200ResponseProtectionFieldLocksItemSource,
+    )
+    from .doc_versions_signatures200response_protection_field_locks_item_spec import (
+        DocVersionsSignatures200ResponseProtectionFieldLocksItemSpec,
+    )
+    from .doc_versions_signatures200response_protection_field_locks_item_spec_action import (
+        DocVersionsSignatures200ResponseProtectionFieldLocksItemSpecAction,
+    )
+    from .doc_versions_signatures200response_protection_judged import DocVersionsSignatures200ResponseProtectionJudged
+    from .doc_versions_signatures200response_revisions_item import DocVersionsSignatures200ResponseRevisionsItem
+    from .doc_versions_signatures200response_signatures_item import DocVersionsSignatures200ResponseSignaturesItem
+    from .doc_versions_signatures200response_signatures_item_coverage import (
+        DocVersionsSignatures200ResponseSignaturesItemCoverage,
+    )
+    from .doc_versions_signatures200response_signatures_item_field import (
+        DocVersionsSignatures200ResponseSignaturesItemField,
+        DocVersionsSignatures200ResponseSignaturesItemField_Fqn,
+        DocVersionsSignatures200ResponseSignaturesItemField_ObjectNumber,
+    )
+    from .doc_versions_signatures200response_signatures_item_field_fqn import (
+        DocVersionsSignatures200ResponseSignaturesItemFieldFqn,
+    )
+    from .doc_versions_signatures200response_signatures_item_field_mdp import (
+        DocVersionsSignatures200ResponseSignaturesItemFieldMdp,
+    )
+    from .doc_versions_signatures200response_signatures_item_field_mdp_action import (
+        DocVersionsSignatures200ResponseSignaturesItemFieldMdpAction,
+    )
+    from .doc_versions_signatures200response_signatures_item_field_object_number import (
+        DocVersionsSignatures200ResponseSignaturesItemFieldObjectNumber,
+    )
+    from .doc_versions_signatures200response_signatures_item_kind import (
+        DocVersionsSignatures200ResponseSignaturesItemKind,
+    )
+    from .doc_versions_signatures200response_signatures_item_lock import (
+        DocVersionsSignatures200ResponseSignaturesItemLock,
+    )
+    from .doc_versions_signatures200response_signatures_item_lock_action import (
+        DocVersionsSignatures200ResponseSignaturesItemLockAction,
+    )
+    from .doc_versions_signatures200response_signatures_item_seed_value import (
+        DocVersionsSignatures200ResponseSignaturesItemSeedValue,
+    )
+    from .doc_versions_signatures200response_signatures_item_signer import (
+        DocVersionsSignatures200ResponseSignaturesItemSigner,
+    )
+    from .doc_versions_signatures200response_signatures_item_widget import (
+        DocVersionsSignatures200ResponseSignaturesItemWidget,
+    )
+    from .doc_versions_signatures404response import DocVersionsSignatures404Response
+    from .doc_versions_signatures404response_code import DocVersionsSignatures404ResponseCode
+    from .doc_versions_signatures404response_name import DocVersionsSignatures404ResponseName
     from .document_actions_snapshot import DocumentActionsSnapshot
     from .document_actions_snapshot_name_tree_scripts_item import DocumentActionsSnapshotNameTreeScriptsItem
     from .documents_commit200response import DocumentsCommit200Response
@@ -4217,7 +4605,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextColor": ".doc_annotations_list200response_annotations_item_free_text_color",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextFlags": ".doc_annotations_list200response_annotations_item_free_text_flags",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextFontColor": ".doc_annotations_list200response_annotations_item_free_text_font_color",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextFontFamily": ".doc_annotations_list200response_annotations_item_free_text_font_family",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextIdentityQuality": ".doc_annotations_list200response_annotations_item_free_text_identity_quality",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextInReplyTo": ".doc_annotations_list200response_annotations_item_free_text_in_reply_to",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextInReplyToIndex": ".doc_annotations_list200response_annotations_item_free_text_in_reply_to_index",
@@ -4241,6 +4628,21 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextRef_Nm": ".doc_annotations_list200response_annotations_item_free_text_ref",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextRef_ObjectNumber": ".doc_annotations_list200response_annotations_item_free_text_ref",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextReplyType": ".doc_annotations_list200response_annotations_item_free_text_reply_type",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichText": ".doc_annotations_list200response_annotations_item_free_text_rich_text",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBody": ".doc_annotations_list200response_annotations_item_free_text_rich_text_body",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBodyAlign": ".doc_annotations_list200response_annotations_item_free_text_rich_text_body_align",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBodyDecorationItem": ".doc_annotations_list200response_annotations_item_free_text_rich_text_body_decoration_item",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBodyDir": ".doc_annotations_list200response_annotations_item_free_text_rich_text_body_dir",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBodyMargins": ".doc_annotations_list200response_annotations_item_free_text_rich_text_body_margins",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBodyScript": ".doc_annotations_list200response_annotations_item_free_text_rich_text_body_script",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItem": ".doc_annotations_list200response_annotations_item_free_text_rich_text_paragraphs_item",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemAlign": ".doc_annotations_list200response_annotations_item_free_text_rich_text_paragraphs_item_align",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemDir": ".doc_annotations_list200response_annotations_item_free_text_rich_text_paragraphs_item_dir",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemMargins": ".doc_annotations_list200response_annotations_item_free_text_rich_text_paragraphs_item_margins",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemRunsItem": ".doc_annotations_list200response_annotations_item_free_text_rich_text_paragraphs_item_runs_item",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyle": ".doc_annotations_list200response_annotations_item_free_text_rich_text_paragraphs_item_runs_item_style",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyleDecorationItem": ".doc_annotations_list200response_annotations_item_free_text_rich_text_paragraphs_item_runs_item_style_decoration_item",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyleScript": ".doc_annotations_list200response_annotations_item_free_text_rich_text_paragraphs_item_runs_item_style_script",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextTextAlign": ".doc_annotations_list200response_annotations_item_free_text_text_align",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextUnrotatedRect": ".doc_annotations_list200response_annotations_item_free_text_unrotated_rect",
     "DocAnnotationsList200ResponseAnnotationsItemHighlight": ".doc_annotations_list200response_annotations_item_highlight",
@@ -4778,7 +5180,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextColor": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_color",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_flags",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFontColor": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_font_color",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFontFamily": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_font_family",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_identity_quality",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyTo": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_in_reply_to",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyToIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_in_reply_to_index",
@@ -4802,6 +5203,21 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRef_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_ref",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRef_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_ref",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextReplyType": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_reply_type",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichText": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBody": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_body",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBodyAlign": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_body_align",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBodyDecorationItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_body_decoration_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBodyDir": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_body_dir",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBodyMargins": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_body_margins",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBodyScript": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_body_script",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_paragraphs_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemAlign": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_paragraphs_item_align",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemDir": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_paragraphs_item_dir",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemMargins": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_paragraphs_item_margins",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemRunsItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_paragraphs_item_runs_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_paragraphs_item_runs_item_style",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyleDecorationItem": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_paragraphs_item_runs_item_style_decoration_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyleScript": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_rich_text_paragraphs_item_runs_item_style_script",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextTextAlign": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_text_align",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextUnrotatedRect": ".doc_annotations_list_all200response_pages_item_annotations_item_free_text_unrotated_rect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlight": ".doc_annotations_list_all200response_pages_item_annotations_item_highlight",
@@ -5786,10 +6202,196 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocRenderResponse": ".doc_render_response",
     "DocRenderResponseCode": ".doc_render_response_code",
     "DocRenderResponseName": ".doc_render_response_name",
+    "DocSignaturesAbort200Response": ".doc_signatures_abort200response",
+    "DocSignaturesAbort200ResponseStatus": ".doc_signatures_abort200response_status",
+    "DocSignaturesAbort404Response": ".doc_signatures_abort404response",
+    "DocSignaturesAbort404ResponseCode": ".doc_signatures_abort404response_code",
+    "DocSignaturesAbort404ResponseName": ".doc_signatures_abort404response_name",
+    "DocSignaturesAnalysis200Response": ".doc_signatures_analysis200response",
+    "DocSignaturesAnalysis200ResponseBasis": ".doc_signatures_analysis200response_basis",
+    "DocSignaturesAnalysis200ResponseBasisSource": ".doc_signatures_analysis200response_basis_source",
+    "DocSignaturesAnalysis200ResponseBasisVersion": ".doc_signatures_analysis200response_basis_version",
+    "DocSignaturesAnalysis200ResponseCurrent": ".doc_signatures_analysis200response_current",
+    "DocSignaturesAnalysis200ResponseCurrentFindingsItem": ".doc_signatures_analysis200response_current_findings_item",
+    "DocSignaturesAnalysis200ResponseCurrentFindingsItemVerdict": ".doc_signatures_analysis200response_current_findings_item_verdict",
+    "DocSignaturesAnalysis200ResponseCurrentMethod": ".doc_signatures_analysis200response_current_method",
+    "DocSignaturesAnalysis200ResponseCurrentPrimary": ".doc_signatures_analysis200response_current_primary",
+    "DocSignaturesAnalysis200ResponseCurrentPrimaryVerdict": ".doc_signatures_analysis200response_current_primary_verdict",
+    "DocSignaturesAnalysis200ResponseCurrentVerdict": ".doc_signatures_analysis200response_current_verdict",
+    "DocSignaturesAnalysis200ResponseLater": ".doc_signatures_analysis200response_later",
+    "DocSignaturesAnalysis200ResponseMode": ".doc_signatures_analysis200response_mode",
+    "DocSignaturesAnalysis200ResponseRestrictionsItem": ".doc_signatures_analysis200response_restrictions_item",
+    "DocSignaturesAnalysis200ResponseRestrictionsItemSource": ".doc_signatures_analysis200response_restrictions_item_source",
+    "DocSignaturesAnalysis200ResponseSince": ".doc_signatures_analysis200response_since",
+    "DocSignaturesAnalysis200ResponseUntil": ".doc_signatures_analysis200response_until",
+    "DocSignaturesAnalysis200ResponseVerdict": ".doc_signatures_analysis200response_verdict",
+    "DocSignaturesAnalysis400Response": ".doc_signatures_analysis400response",
+    "DocSignaturesAnalysis400ResponseCode": ".doc_signatures_analysis400response_code",
+    "DocSignaturesAnalysis400ResponseName": ".doc_signatures_analysis400response_name",
+    "DocSignaturesAnalysis404Response": ".doc_signatures_analysis404response",
+    "DocSignaturesAnalysis404ResponseCode": ".doc_signatures_analysis404response_code",
+    "DocSignaturesAnalysis404ResponseName": ".doc_signatures_analysis404response_name",
+    "DocSignaturesComplete200Response": ".doc_signatures_complete200response",
+    "DocSignaturesComplete200ResponseMeta": ".doc_signatures_complete200response_meta",
+    "DocSignaturesComplete200ResponseMetaAffectedPagesItem": ".doc_signatures_complete200response_meta_affected_pages_item",
+    "DocSignaturesComplete200ResponseMetaAffectedPagesItemRevision": ".doc_signatures_complete200response_meta_affected_pages_item_revision",
+    "DocSignaturesComplete200ResponseMetaAffectedPagesItemWeakAnnotationState": ".doc_signatures_complete200response_meta_affected_pages_item_weak_annotation_state",
+    "DocSignaturesComplete200ResponseMetaAffectedPagesItemWeakAnnotationStateKnown": ".doc_signatures_complete200response_meta_affected_pages_item_weak_annotation_state_known",
+    "DocSignaturesComplete200ResponseMetaAffectedPagesItemWeakAnnotationStateUnknown": ".doc_signatures_complete200response_meta_affected_pages_item_weak_annotation_state_unknown",
+    "DocSignaturesComplete200ResponseMetaAffectedPagesItemWeakAnnotationState_Known": ".doc_signatures_complete200response_meta_affected_pages_item_weak_annotation_state",
+    "DocSignaturesComplete200ResponseMetaAffectedPagesItemWeakAnnotationState_Unknown": ".doc_signatures_complete200response_meta_affected_pages_item_weak_annotation_state",
+    "DocSignaturesComplete200ResponseMetaCacheDelta": ".doc_signatures_complete200response_meta_cache_delta",
+    "DocSignaturesComplete200ResponseMetaCacheDeltaPagesItem": ".doc_signatures_complete200response_meta_cache_delta_pages_item",
+    "DocSignaturesComplete200ResponseMetaCacheDeltaPagesItemCache": ".doc_signatures_complete200response_meta_cache_delta_pages_item_cache",
+    "DocSignaturesComplete200ResponsePrevious": ".doc_signatures_complete200response_previous",
+    "DocSignaturesComplete200ResponseProtection": ".doc_signatures_complete200response_protection",
+    "DocSignaturesComplete200ResponseProtectionCertification": ".doc_signatures_complete200response_protection_certification",
+    "DocSignaturesComplete200ResponseProtectionEnforced": ".doc_signatures_complete200response_protection_enforced",
+    "DocSignaturesComplete200ResponseProtectionFieldLocksItem": ".doc_signatures_complete200response_protection_field_locks_item",
+    "DocSignaturesComplete200ResponseProtectionFieldLocksItemSource": ".doc_signatures_complete200response_protection_field_locks_item_source",
+    "DocSignaturesComplete200ResponseProtectionFieldLocksItemSpec": ".doc_signatures_complete200response_protection_field_locks_item_spec",
+    "DocSignaturesComplete200ResponseProtectionFieldLocksItemSpecAction": ".doc_signatures_complete200response_protection_field_locks_item_spec_action",
+    "DocSignaturesComplete200ResponseProtectionJudged": ".doc_signatures_complete200response_protection_judged",
+    "DocSignaturesComplete200ResponseSignature": ".doc_signatures_complete200response_signature",
+    "DocSignaturesComplete200ResponseSignatureCoverage": ".doc_signatures_complete200response_signature_coverage",
+    "DocSignaturesComplete200ResponseSignatureField": ".doc_signatures_complete200response_signature_field",
+    "DocSignaturesComplete200ResponseSignatureFieldFqn": ".doc_signatures_complete200response_signature_field_fqn",
+    "DocSignaturesComplete200ResponseSignatureFieldMdp": ".doc_signatures_complete200response_signature_field_mdp",
+    "DocSignaturesComplete200ResponseSignatureFieldMdpAction": ".doc_signatures_complete200response_signature_field_mdp_action",
+    "DocSignaturesComplete200ResponseSignatureFieldObjectNumber": ".doc_signatures_complete200response_signature_field_object_number",
+    "DocSignaturesComplete200ResponseSignatureField_Fqn": ".doc_signatures_complete200response_signature_field",
+    "DocSignaturesComplete200ResponseSignatureField_ObjectNumber": ".doc_signatures_complete200response_signature_field",
+    "DocSignaturesComplete200ResponseSignatureKind": ".doc_signatures_complete200response_signature_kind",
+    "DocSignaturesComplete200ResponseSignatureLock": ".doc_signatures_complete200response_signature_lock",
+    "DocSignaturesComplete200ResponseSignatureLockAction": ".doc_signatures_complete200response_signature_lock_action",
+    "DocSignaturesComplete200ResponseSignatureSeedValue": ".doc_signatures_complete200response_signature_seed_value",
+    "DocSignaturesComplete200ResponseSignatureSigner": ".doc_signatures_complete200response_signature_signer",
+    "DocSignaturesComplete200ResponseSignatureWidget": ".doc_signatures_complete200response_signature_widget",
+    "DocSignaturesComplete200ResponseStatus": ".doc_signatures_complete200response_status",
+    "DocSignaturesComplete200ResponseVersion": ".doc_signatures_complete200response_version",
+    "DocSignaturesComplete400Response": ".doc_signatures_complete400response",
+    "DocSignaturesComplete400ResponseCode": ".doc_signatures_complete400response_code",
+    "DocSignaturesComplete400ResponseName": ".doc_signatures_complete400response_name",
+    "DocSignaturesComplete404Response": ".doc_signatures_complete404response",
+    "DocSignaturesComplete404ResponseCode": ".doc_signatures_complete404response_code",
+    "DocSignaturesComplete404ResponseName": ".doc_signatures_complete404response_name",
+    "DocSignaturesComplete409Response": ".doc_signatures_complete409response",
+    "DocSignaturesComplete409ResponseCode": ".doc_signatures_complete409response_code",
+    "DocSignaturesComplete409ResponseName": ".doc_signatures_complete409response_name",
+    "DocSignaturesList200Response": ".doc_signatures_list200response",
+    "DocSignaturesList200ResponseProtection": ".doc_signatures_list200response_protection",
+    "DocSignaturesList200ResponseProtectionCertification": ".doc_signatures_list200response_protection_certification",
+    "DocSignaturesList200ResponseProtectionEnforced": ".doc_signatures_list200response_protection_enforced",
+    "DocSignaturesList200ResponseProtectionFieldLocksItem": ".doc_signatures_list200response_protection_field_locks_item",
+    "DocSignaturesList200ResponseProtectionFieldLocksItemSource": ".doc_signatures_list200response_protection_field_locks_item_source",
+    "DocSignaturesList200ResponseProtectionFieldLocksItemSpec": ".doc_signatures_list200response_protection_field_locks_item_spec",
+    "DocSignaturesList200ResponseProtectionFieldLocksItemSpecAction": ".doc_signatures_list200response_protection_field_locks_item_spec_action",
+    "DocSignaturesList200ResponseProtectionJudged": ".doc_signatures_list200response_protection_judged",
+    "DocSignaturesList200ResponseRevisionsItem": ".doc_signatures_list200response_revisions_item",
+    "DocSignaturesList200ResponseSignaturesItem": ".doc_signatures_list200response_signatures_item",
+    "DocSignaturesList200ResponseSignaturesItemCoverage": ".doc_signatures_list200response_signatures_item_coverage",
+    "DocSignaturesList200ResponseSignaturesItemField": ".doc_signatures_list200response_signatures_item_field",
+    "DocSignaturesList200ResponseSignaturesItemFieldFqn": ".doc_signatures_list200response_signatures_item_field_fqn",
+    "DocSignaturesList200ResponseSignaturesItemFieldMdp": ".doc_signatures_list200response_signatures_item_field_mdp",
+    "DocSignaturesList200ResponseSignaturesItemFieldMdpAction": ".doc_signatures_list200response_signatures_item_field_mdp_action",
+    "DocSignaturesList200ResponseSignaturesItemFieldObjectNumber": ".doc_signatures_list200response_signatures_item_field_object_number",
+    "DocSignaturesList200ResponseSignaturesItemField_Fqn": ".doc_signatures_list200response_signatures_item_field",
+    "DocSignaturesList200ResponseSignaturesItemField_ObjectNumber": ".doc_signatures_list200response_signatures_item_field",
+    "DocSignaturesList200ResponseSignaturesItemKind": ".doc_signatures_list200response_signatures_item_kind",
+    "DocSignaturesList200ResponseSignaturesItemLock": ".doc_signatures_list200response_signatures_item_lock",
+    "DocSignaturesList200ResponseSignaturesItemLockAction": ".doc_signatures_list200response_signatures_item_lock_action",
+    "DocSignaturesList200ResponseSignaturesItemSeedValue": ".doc_signatures_list200response_signatures_item_seed_value",
+    "DocSignaturesList200ResponseSignaturesItemSigner": ".doc_signatures_list200response_signatures_item_signer",
+    "DocSignaturesList200ResponseSignaturesItemWidget": ".doc_signatures_list200response_signatures_item_widget",
+    "DocSignaturesList404Response": ".doc_signatures_list404response",
+    "DocSignaturesList404ResponseCode": ".doc_signatures_list404response_code",
+    "DocSignaturesList404ResponseName": ".doc_signatures_list404response_name",
+    "DocSignaturesPrepare200Response": ".doc_signatures_prepare200response",
+    "DocSignaturesPrepare200ResponseAlgorithm": ".doc_signatures_prepare200response_algorithm",
+    "DocSignaturesPrepare200ResponseExpectedVersion": ".doc_signatures_prepare200response_expected_version",
+    "DocSignaturesPrepare400Response": ".doc_signatures_prepare400response",
+    "DocSignaturesPrepare400ResponseCode": ".doc_signatures_prepare400response_code",
+    "DocSignaturesPrepare400ResponseName": ".doc_signatures_prepare400response_name",
+    "DocSignaturesPrepare404Response": ".doc_signatures_prepare404response",
+    "DocSignaturesPrepare404ResponseCode": ".doc_signatures_prepare404response_code",
+    "DocSignaturesPrepare404ResponseName": ".doc_signatures_prepare404response_name",
+    "DocSignaturesPrepare409Response": ".doc_signatures_prepare409response",
+    "DocSignaturesPrepare409ResponseCode": ".doc_signatures_prepare409response_code",
+    "DocSignaturesPrepare409ResponseName": ".doc_signatures_prepare409response_name",
     "DocText200Response": ".doc_text200response",
     "DocText404Response": ".doc_text404response",
     "DocText404ResponseCode": ".doc_text404response_code",
     "DocText404ResponseName": ".doc_text404response_name",
+    "DocVersionsAnalysis200Response": ".doc_versions_analysis200response",
+    "DocVersionsAnalysis200ResponseBasis": ".doc_versions_analysis200response_basis",
+    "DocVersionsAnalysis200ResponseBasisSource": ".doc_versions_analysis200response_basis_source",
+    "DocVersionsAnalysis200ResponseBasisVersion": ".doc_versions_analysis200response_basis_version",
+    "DocVersionsAnalysis200ResponseCurrent": ".doc_versions_analysis200response_current",
+    "DocVersionsAnalysis200ResponseCurrentFindingsItem": ".doc_versions_analysis200response_current_findings_item",
+    "DocVersionsAnalysis200ResponseCurrentFindingsItemVerdict": ".doc_versions_analysis200response_current_findings_item_verdict",
+    "DocVersionsAnalysis200ResponseCurrentMethod": ".doc_versions_analysis200response_current_method",
+    "DocVersionsAnalysis200ResponseCurrentPrimary": ".doc_versions_analysis200response_current_primary",
+    "DocVersionsAnalysis200ResponseCurrentPrimaryVerdict": ".doc_versions_analysis200response_current_primary_verdict",
+    "DocVersionsAnalysis200ResponseCurrentVerdict": ".doc_versions_analysis200response_current_verdict",
+    "DocVersionsAnalysis200ResponseLater": ".doc_versions_analysis200response_later",
+    "DocVersionsAnalysis200ResponseMode": ".doc_versions_analysis200response_mode",
+    "DocVersionsAnalysis200ResponseRestrictionsItem": ".doc_versions_analysis200response_restrictions_item",
+    "DocVersionsAnalysis200ResponseRestrictionsItemSource": ".doc_versions_analysis200response_restrictions_item_source",
+    "DocVersionsAnalysis200ResponseSince": ".doc_versions_analysis200response_since",
+    "DocVersionsAnalysis200ResponseUntil": ".doc_versions_analysis200response_until",
+    "DocVersionsAnalysis200ResponseVerdict": ".doc_versions_analysis200response_verdict",
+    "DocVersionsAnalysis400Response": ".doc_versions_analysis400response",
+    "DocVersionsAnalysis400ResponseCode": ".doc_versions_analysis400response_code",
+    "DocVersionsAnalysis400ResponseName": ".doc_versions_analysis400response_name",
+    "DocVersionsAnalysis404Response": ".doc_versions_analysis404response",
+    "DocVersionsAnalysis404ResponseCode": ".doc_versions_analysis404response_code",
+    "DocVersionsAnalysis404ResponseName": ".doc_versions_analysis404response_name",
+    "DocVersionsDownloadResponse": ".doc_versions_download_response",
+    "DocVersionsDownloadResponseCode": ".doc_versions_download_response_code",
+    "DocVersionsDownloadResponseName": ".doc_versions_download_response_name",
+    "DocVersionsList200Response": ".doc_versions_list200response",
+    "DocVersionsList200ResponseVersionsItem": ".doc_versions_list200response_versions_item",
+    "DocVersionsList200ResponseVersionsItemProducer": ".doc_versions_list200response_versions_item_producer",
+    "DocVersionsList404Response": ".doc_versions_list404response",
+    "DocVersionsList404ResponseCode": ".doc_versions_list404response_code",
+    "DocVersionsList404ResponseName": ".doc_versions_list404response_name",
+    "DocVersionsRevisionResponse": ".doc_versions_revision_response",
+    "DocVersionsRevisionResponseCode": ".doc_versions_revision_response_code",
+    "DocVersionsRevisionResponseName": ".doc_versions_revision_response_name",
+    "DocVersionsSignatureContentsResponse": ".doc_versions_signature_contents_response",
+    "DocVersionsSignatureContentsResponseCode": ".doc_versions_signature_contents_response_code",
+    "DocVersionsSignatureContentsResponseName": ".doc_versions_signature_contents_response_name",
+    "DocVersionsSignatureDigestResponse": ".doc_versions_signature_digest_response",
+    "DocVersionsSignatureDigestResponseCode": ".doc_versions_signature_digest_response_code",
+    "DocVersionsSignatureDigestResponseName": ".doc_versions_signature_digest_response_name",
+    "DocVersionsSignatures200Response": ".doc_versions_signatures200response",
+    "DocVersionsSignatures200ResponseProtection": ".doc_versions_signatures200response_protection",
+    "DocVersionsSignatures200ResponseProtectionCertification": ".doc_versions_signatures200response_protection_certification",
+    "DocVersionsSignatures200ResponseProtectionEnforced": ".doc_versions_signatures200response_protection_enforced",
+    "DocVersionsSignatures200ResponseProtectionFieldLocksItem": ".doc_versions_signatures200response_protection_field_locks_item",
+    "DocVersionsSignatures200ResponseProtectionFieldLocksItemSource": ".doc_versions_signatures200response_protection_field_locks_item_source",
+    "DocVersionsSignatures200ResponseProtectionFieldLocksItemSpec": ".doc_versions_signatures200response_protection_field_locks_item_spec",
+    "DocVersionsSignatures200ResponseProtectionFieldLocksItemSpecAction": ".doc_versions_signatures200response_protection_field_locks_item_spec_action",
+    "DocVersionsSignatures200ResponseProtectionJudged": ".doc_versions_signatures200response_protection_judged",
+    "DocVersionsSignatures200ResponseRevisionsItem": ".doc_versions_signatures200response_revisions_item",
+    "DocVersionsSignatures200ResponseSignaturesItem": ".doc_versions_signatures200response_signatures_item",
+    "DocVersionsSignatures200ResponseSignaturesItemCoverage": ".doc_versions_signatures200response_signatures_item_coverage",
+    "DocVersionsSignatures200ResponseSignaturesItemField": ".doc_versions_signatures200response_signatures_item_field",
+    "DocVersionsSignatures200ResponseSignaturesItemFieldFqn": ".doc_versions_signatures200response_signatures_item_field_fqn",
+    "DocVersionsSignatures200ResponseSignaturesItemFieldMdp": ".doc_versions_signatures200response_signatures_item_field_mdp",
+    "DocVersionsSignatures200ResponseSignaturesItemFieldMdpAction": ".doc_versions_signatures200response_signatures_item_field_mdp_action",
+    "DocVersionsSignatures200ResponseSignaturesItemFieldObjectNumber": ".doc_versions_signatures200response_signatures_item_field_object_number",
+    "DocVersionsSignatures200ResponseSignaturesItemField_Fqn": ".doc_versions_signatures200response_signatures_item_field",
+    "DocVersionsSignatures200ResponseSignaturesItemField_ObjectNumber": ".doc_versions_signatures200response_signatures_item_field",
+    "DocVersionsSignatures200ResponseSignaturesItemKind": ".doc_versions_signatures200response_signatures_item_kind",
+    "DocVersionsSignatures200ResponseSignaturesItemLock": ".doc_versions_signatures200response_signatures_item_lock",
+    "DocVersionsSignatures200ResponseSignaturesItemLockAction": ".doc_versions_signatures200response_signatures_item_lock_action",
+    "DocVersionsSignatures200ResponseSignaturesItemSeedValue": ".doc_versions_signatures200response_signatures_item_seed_value",
+    "DocVersionsSignatures200ResponseSignaturesItemSigner": ".doc_versions_signatures200response_signatures_item_signer",
+    "DocVersionsSignatures200ResponseSignaturesItemWidget": ".doc_versions_signatures200response_signatures_item_widget",
+    "DocVersionsSignatures404Response": ".doc_versions_signatures404response",
+    "DocVersionsSignatures404ResponseCode": ".doc_versions_signatures404response_code",
+    "DocVersionsSignatures404ResponseName": ".doc_versions_signatures404response_name",
     "DocumentActionsSnapshot": ".document_actions_snapshot",
     "DocumentActionsSnapshotNameTreeScriptsItem": ".document_actions_snapshot_name_tree_scripts_item",
     "DocumentsCommit200Response": ".documents_commit200response",
@@ -6203,7 +6805,6 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextColor",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextFlags",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextFontColor",
-    "DocAnnotationsList200ResponseAnnotationsItemFreeTextFontFamily",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextIdentityQuality",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextInReplyTo",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextInReplyToIndex",
@@ -6227,6 +6828,21 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextRef_Nm",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextRef_ObjectNumber",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextReplyType",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichText",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBody",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBodyAlign",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBodyDecorationItem",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBodyDir",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBodyMargins",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextBodyScript",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItem",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemAlign",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemDir",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemMargins",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemRunsItem",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyle",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyleDecorationItem",
+    "DocAnnotationsList200ResponseAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyleScript",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextTextAlign",
     "DocAnnotationsList200ResponseAnnotationsItemFreeTextUnrotatedRect",
     "DocAnnotationsList200ResponseAnnotationsItemHighlight",
@@ -6764,7 +7380,6 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextColor",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFlags",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFontColor",
-    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextFontFamily",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextIdentityQuality",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyTo",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextInReplyToIndex",
@@ -6788,6 +7403,21 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRef_Nm",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRef_ObjectNumber",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextReplyType",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichText",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBody",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBodyAlign",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBodyDecorationItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBodyDir",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBodyMargins",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextBodyScript",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemAlign",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemDir",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemMargins",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemRunsItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyle",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyleDecorationItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextRichTextParagraphsItemRunsItemStyleScript",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextTextAlign",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemFreeTextUnrotatedRect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemHighlight",
@@ -7772,10 +8402,196 @@ __all__ = [
     "DocRenderResponse",
     "DocRenderResponseCode",
     "DocRenderResponseName",
+    "DocSignaturesAbort200Response",
+    "DocSignaturesAbort200ResponseStatus",
+    "DocSignaturesAbort404Response",
+    "DocSignaturesAbort404ResponseCode",
+    "DocSignaturesAbort404ResponseName",
+    "DocSignaturesAnalysis200Response",
+    "DocSignaturesAnalysis200ResponseBasis",
+    "DocSignaturesAnalysis200ResponseBasisSource",
+    "DocSignaturesAnalysis200ResponseBasisVersion",
+    "DocSignaturesAnalysis200ResponseCurrent",
+    "DocSignaturesAnalysis200ResponseCurrentFindingsItem",
+    "DocSignaturesAnalysis200ResponseCurrentFindingsItemVerdict",
+    "DocSignaturesAnalysis200ResponseCurrentMethod",
+    "DocSignaturesAnalysis200ResponseCurrentPrimary",
+    "DocSignaturesAnalysis200ResponseCurrentPrimaryVerdict",
+    "DocSignaturesAnalysis200ResponseCurrentVerdict",
+    "DocSignaturesAnalysis200ResponseLater",
+    "DocSignaturesAnalysis200ResponseMode",
+    "DocSignaturesAnalysis200ResponseRestrictionsItem",
+    "DocSignaturesAnalysis200ResponseRestrictionsItemSource",
+    "DocSignaturesAnalysis200ResponseSince",
+    "DocSignaturesAnalysis200ResponseUntil",
+    "DocSignaturesAnalysis200ResponseVerdict",
+    "DocSignaturesAnalysis400Response",
+    "DocSignaturesAnalysis400ResponseCode",
+    "DocSignaturesAnalysis400ResponseName",
+    "DocSignaturesAnalysis404Response",
+    "DocSignaturesAnalysis404ResponseCode",
+    "DocSignaturesAnalysis404ResponseName",
+    "DocSignaturesComplete200Response",
+    "DocSignaturesComplete200ResponseMeta",
+    "DocSignaturesComplete200ResponseMetaAffectedPagesItem",
+    "DocSignaturesComplete200ResponseMetaAffectedPagesItemRevision",
+    "DocSignaturesComplete200ResponseMetaAffectedPagesItemWeakAnnotationState",
+    "DocSignaturesComplete200ResponseMetaAffectedPagesItemWeakAnnotationStateKnown",
+    "DocSignaturesComplete200ResponseMetaAffectedPagesItemWeakAnnotationStateUnknown",
+    "DocSignaturesComplete200ResponseMetaAffectedPagesItemWeakAnnotationState_Known",
+    "DocSignaturesComplete200ResponseMetaAffectedPagesItemWeakAnnotationState_Unknown",
+    "DocSignaturesComplete200ResponseMetaCacheDelta",
+    "DocSignaturesComplete200ResponseMetaCacheDeltaPagesItem",
+    "DocSignaturesComplete200ResponseMetaCacheDeltaPagesItemCache",
+    "DocSignaturesComplete200ResponsePrevious",
+    "DocSignaturesComplete200ResponseProtection",
+    "DocSignaturesComplete200ResponseProtectionCertification",
+    "DocSignaturesComplete200ResponseProtectionEnforced",
+    "DocSignaturesComplete200ResponseProtectionFieldLocksItem",
+    "DocSignaturesComplete200ResponseProtectionFieldLocksItemSource",
+    "DocSignaturesComplete200ResponseProtectionFieldLocksItemSpec",
+    "DocSignaturesComplete200ResponseProtectionFieldLocksItemSpecAction",
+    "DocSignaturesComplete200ResponseProtectionJudged",
+    "DocSignaturesComplete200ResponseSignature",
+    "DocSignaturesComplete200ResponseSignatureCoverage",
+    "DocSignaturesComplete200ResponseSignatureField",
+    "DocSignaturesComplete200ResponseSignatureFieldFqn",
+    "DocSignaturesComplete200ResponseSignatureFieldMdp",
+    "DocSignaturesComplete200ResponseSignatureFieldMdpAction",
+    "DocSignaturesComplete200ResponseSignatureFieldObjectNumber",
+    "DocSignaturesComplete200ResponseSignatureField_Fqn",
+    "DocSignaturesComplete200ResponseSignatureField_ObjectNumber",
+    "DocSignaturesComplete200ResponseSignatureKind",
+    "DocSignaturesComplete200ResponseSignatureLock",
+    "DocSignaturesComplete200ResponseSignatureLockAction",
+    "DocSignaturesComplete200ResponseSignatureSeedValue",
+    "DocSignaturesComplete200ResponseSignatureSigner",
+    "DocSignaturesComplete200ResponseSignatureWidget",
+    "DocSignaturesComplete200ResponseStatus",
+    "DocSignaturesComplete200ResponseVersion",
+    "DocSignaturesComplete400Response",
+    "DocSignaturesComplete400ResponseCode",
+    "DocSignaturesComplete400ResponseName",
+    "DocSignaturesComplete404Response",
+    "DocSignaturesComplete404ResponseCode",
+    "DocSignaturesComplete404ResponseName",
+    "DocSignaturesComplete409Response",
+    "DocSignaturesComplete409ResponseCode",
+    "DocSignaturesComplete409ResponseName",
+    "DocSignaturesList200Response",
+    "DocSignaturesList200ResponseProtection",
+    "DocSignaturesList200ResponseProtectionCertification",
+    "DocSignaturesList200ResponseProtectionEnforced",
+    "DocSignaturesList200ResponseProtectionFieldLocksItem",
+    "DocSignaturesList200ResponseProtectionFieldLocksItemSource",
+    "DocSignaturesList200ResponseProtectionFieldLocksItemSpec",
+    "DocSignaturesList200ResponseProtectionFieldLocksItemSpecAction",
+    "DocSignaturesList200ResponseProtectionJudged",
+    "DocSignaturesList200ResponseRevisionsItem",
+    "DocSignaturesList200ResponseSignaturesItem",
+    "DocSignaturesList200ResponseSignaturesItemCoverage",
+    "DocSignaturesList200ResponseSignaturesItemField",
+    "DocSignaturesList200ResponseSignaturesItemFieldFqn",
+    "DocSignaturesList200ResponseSignaturesItemFieldMdp",
+    "DocSignaturesList200ResponseSignaturesItemFieldMdpAction",
+    "DocSignaturesList200ResponseSignaturesItemFieldObjectNumber",
+    "DocSignaturesList200ResponseSignaturesItemField_Fqn",
+    "DocSignaturesList200ResponseSignaturesItemField_ObjectNumber",
+    "DocSignaturesList200ResponseSignaturesItemKind",
+    "DocSignaturesList200ResponseSignaturesItemLock",
+    "DocSignaturesList200ResponseSignaturesItemLockAction",
+    "DocSignaturesList200ResponseSignaturesItemSeedValue",
+    "DocSignaturesList200ResponseSignaturesItemSigner",
+    "DocSignaturesList200ResponseSignaturesItemWidget",
+    "DocSignaturesList404Response",
+    "DocSignaturesList404ResponseCode",
+    "DocSignaturesList404ResponseName",
+    "DocSignaturesPrepare200Response",
+    "DocSignaturesPrepare200ResponseAlgorithm",
+    "DocSignaturesPrepare200ResponseExpectedVersion",
+    "DocSignaturesPrepare400Response",
+    "DocSignaturesPrepare400ResponseCode",
+    "DocSignaturesPrepare400ResponseName",
+    "DocSignaturesPrepare404Response",
+    "DocSignaturesPrepare404ResponseCode",
+    "DocSignaturesPrepare404ResponseName",
+    "DocSignaturesPrepare409Response",
+    "DocSignaturesPrepare409ResponseCode",
+    "DocSignaturesPrepare409ResponseName",
     "DocText200Response",
     "DocText404Response",
     "DocText404ResponseCode",
     "DocText404ResponseName",
+    "DocVersionsAnalysis200Response",
+    "DocVersionsAnalysis200ResponseBasis",
+    "DocVersionsAnalysis200ResponseBasisSource",
+    "DocVersionsAnalysis200ResponseBasisVersion",
+    "DocVersionsAnalysis200ResponseCurrent",
+    "DocVersionsAnalysis200ResponseCurrentFindingsItem",
+    "DocVersionsAnalysis200ResponseCurrentFindingsItemVerdict",
+    "DocVersionsAnalysis200ResponseCurrentMethod",
+    "DocVersionsAnalysis200ResponseCurrentPrimary",
+    "DocVersionsAnalysis200ResponseCurrentPrimaryVerdict",
+    "DocVersionsAnalysis200ResponseCurrentVerdict",
+    "DocVersionsAnalysis200ResponseLater",
+    "DocVersionsAnalysis200ResponseMode",
+    "DocVersionsAnalysis200ResponseRestrictionsItem",
+    "DocVersionsAnalysis200ResponseRestrictionsItemSource",
+    "DocVersionsAnalysis200ResponseSince",
+    "DocVersionsAnalysis200ResponseUntil",
+    "DocVersionsAnalysis200ResponseVerdict",
+    "DocVersionsAnalysis400Response",
+    "DocVersionsAnalysis400ResponseCode",
+    "DocVersionsAnalysis400ResponseName",
+    "DocVersionsAnalysis404Response",
+    "DocVersionsAnalysis404ResponseCode",
+    "DocVersionsAnalysis404ResponseName",
+    "DocVersionsDownloadResponse",
+    "DocVersionsDownloadResponseCode",
+    "DocVersionsDownloadResponseName",
+    "DocVersionsList200Response",
+    "DocVersionsList200ResponseVersionsItem",
+    "DocVersionsList200ResponseVersionsItemProducer",
+    "DocVersionsList404Response",
+    "DocVersionsList404ResponseCode",
+    "DocVersionsList404ResponseName",
+    "DocVersionsRevisionResponse",
+    "DocVersionsRevisionResponseCode",
+    "DocVersionsRevisionResponseName",
+    "DocVersionsSignatureContentsResponse",
+    "DocVersionsSignatureContentsResponseCode",
+    "DocVersionsSignatureContentsResponseName",
+    "DocVersionsSignatureDigestResponse",
+    "DocVersionsSignatureDigestResponseCode",
+    "DocVersionsSignatureDigestResponseName",
+    "DocVersionsSignatures200Response",
+    "DocVersionsSignatures200ResponseProtection",
+    "DocVersionsSignatures200ResponseProtectionCertification",
+    "DocVersionsSignatures200ResponseProtectionEnforced",
+    "DocVersionsSignatures200ResponseProtectionFieldLocksItem",
+    "DocVersionsSignatures200ResponseProtectionFieldLocksItemSource",
+    "DocVersionsSignatures200ResponseProtectionFieldLocksItemSpec",
+    "DocVersionsSignatures200ResponseProtectionFieldLocksItemSpecAction",
+    "DocVersionsSignatures200ResponseProtectionJudged",
+    "DocVersionsSignatures200ResponseRevisionsItem",
+    "DocVersionsSignatures200ResponseSignaturesItem",
+    "DocVersionsSignatures200ResponseSignaturesItemCoverage",
+    "DocVersionsSignatures200ResponseSignaturesItemField",
+    "DocVersionsSignatures200ResponseSignaturesItemFieldFqn",
+    "DocVersionsSignatures200ResponseSignaturesItemFieldMdp",
+    "DocVersionsSignatures200ResponseSignaturesItemFieldMdpAction",
+    "DocVersionsSignatures200ResponseSignaturesItemFieldObjectNumber",
+    "DocVersionsSignatures200ResponseSignaturesItemField_Fqn",
+    "DocVersionsSignatures200ResponseSignaturesItemField_ObjectNumber",
+    "DocVersionsSignatures200ResponseSignaturesItemKind",
+    "DocVersionsSignatures200ResponseSignaturesItemLock",
+    "DocVersionsSignatures200ResponseSignaturesItemLockAction",
+    "DocVersionsSignatures200ResponseSignaturesItemSeedValue",
+    "DocVersionsSignatures200ResponseSignaturesItemSigner",
+    "DocVersionsSignatures200ResponseSignaturesItemWidget",
+    "DocVersionsSignatures404Response",
+    "DocVersionsSignatures404ResponseCode",
+    "DocVersionsSignatures404ResponseName",
     "DocumentActionsSnapshot",
     "DocumentActionsSnapshotNameTreeScriptsItem",
     "DocumentsCommit200Response",

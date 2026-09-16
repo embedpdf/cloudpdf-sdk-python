@@ -23,6 +23,12 @@ DocPagesRemoveName400ResponseCode = typing.Union[
         "LayerVersionConflict",
         "NotImplemented",
         "MalformedPdf",
+        "SigningPending",
+        "SigningExpired",
+        "SigningVersionMismatch",
+        "SignatureRefused",
+        "ProtectedDocument",
+        "StaleBase",
     ],
     typing.Any,
 ]
