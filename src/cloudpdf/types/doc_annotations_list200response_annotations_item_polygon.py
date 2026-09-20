@@ -13,6 +13,9 @@ from .doc_annotations_list200response_annotations_item_polygon_blend_mode import
 from .doc_annotations_list200response_annotations_item_polygon_border_style import (
     DocAnnotationsList200ResponseAnnotationsItemPolygonBorderStyle,
 )
+from .doc_annotations_list200response_annotations_item_polygon_caption import (
+    DocAnnotationsList200ResponseAnnotationsItemPolygonCaption,
+)
 from .doc_annotations_list200response_annotations_item_polygon_color import (
     DocAnnotationsList200ResponseAnnotationsItemPolygonColor,
 )
@@ -25,8 +28,14 @@ from .doc_annotations_list200response_annotations_item_polygon_identity_quality 
 from .doc_annotations_list200response_annotations_item_polygon_in_reply_to import (
     DocAnnotationsList200ResponseAnnotationsItemPolygonInReplyTo,
 )
+from .doc_annotations_list200response_annotations_item_polygon_intent import (
+    DocAnnotationsList200ResponseAnnotationsItemPolygonIntent,
+)
 from .doc_annotations_list200response_annotations_item_polygon_interior_color import (
     DocAnnotationsList200ResponseAnnotationsItemPolygonInteriorColor,
+)
+from .doc_annotations_list200response_annotations_item_polygon_measure import (
+    DocAnnotationsList200ResponseAnnotationsItemPolygonMeasure,
 )
 from .doc_annotations_list200response_annotations_item_polygon_rect import (
     DocAnnotationsList200ResponseAnnotationsItemPolygonRect,
@@ -44,6 +53,9 @@ from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsList200ResponseAnnotationsItemPolygon(UniversalBaseModel):
+    intent: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemPolygonIntent] = None
+    measure: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemPolygonMeasure] = None
+    caption: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemPolygonCaption] = None
     ref: DocAnnotationsList200ResponseAnnotationsItemPolygonRef
     page_object_number: typing_extensions.Annotated[
         int, FieldMetadata(alias="pageObjectNumber"), pydantic.Field(alias="pageObjectNumber")

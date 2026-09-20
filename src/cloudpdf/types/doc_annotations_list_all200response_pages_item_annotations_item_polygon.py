@@ -13,6 +13,9 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_bl
 from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_border_style import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBorderStyle,
 )
+from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_caption import (
+    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonCaption,
+)
 from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_color import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonColor,
 )
@@ -25,8 +28,14 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_id
 from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo,
 )
+from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_intent import (
+    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonIntent,
+)
 from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_interior_color import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInteriorColor,
+)
+from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure import (
+    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasure,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_rect import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRect,
@@ -44,6 +53,9 @@ from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygon(UniversalBaseModel):
+    intent: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonIntent] = None
+    measure: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasure] = None
+    caption: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonCaption] = None
     ref: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRef
     page_object_number: typing_extensions.Annotated[
         int, FieldMetadata(alias="pageObjectNumber"), pydantic.Field(alias="pageObjectNumber")

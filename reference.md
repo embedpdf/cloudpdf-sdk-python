@@ -3600,6 +3600,182 @@ client.doc.metadata.get(
 </details>
 
 ## Doc Pages
+<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">set_scale</a>(...) -> DocPagesSetScale200Response</code></summary>
+<dl>
+<dd>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+
+client = CloudPDFClient(
+    token="<token>",
+    base_url="https://yourhost.com/path/to/api",
+)
+
+client.doc.pages.set_scale(
+    doc_id="docId",
+    layer_name="layerName",
+    pon=1,
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**doc_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**layer_name:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**pon:** `int` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**measure:** `typing.Optional[DocPagesSetScaleRequestMeasure]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">viewports</a>(...) -> DocPagesViewports200Response</code></summary>
+<dl>
+<dd>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+
+client = CloudPDFClient(
+    token="<token>",
+    base_url="https://yourhost.com/path/to/api",
+)
+
+client.doc.pages.viewports(
+    doc_id="docId",
+    layer_name="layerName",
+    pon=1,
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**doc_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**layer_name:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**pon:** `int` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 <details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">delete</a>(...) -> DocPagesDelete200Response</code></summary>
 <dl>
 <dd>

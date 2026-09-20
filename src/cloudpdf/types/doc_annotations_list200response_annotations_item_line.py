@@ -13,6 +13,9 @@ from .doc_annotations_list200response_annotations_item_line_blend_mode import (
 from .doc_annotations_list200response_annotations_item_line_border_style import (
     DocAnnotationsList200ResponseAnnotationsItemLineBorderStyle,
 )
+from .doc_annotations_list200response_annotations_item_line_caption import (
+    DocAnnotationsList200ResponseAnnotationsItemLineCaption,
+)
 from .doc_annotations_list200response_annotations_item_line_color import (
     DocAnnotationsList200ResponseAnnotationsItemLineColor,
 )
@@ -25,14 +28,23 @@ from .doc_annotations_list200response_annotations_item_line_identity_quality imp
 from .doc_annotations_list200response_annotations_item_line_in_reply_to import (
     DocAnnotationsList200ResponseAnnotationsItemLineInReplyTo,
 )
+from .doc_annotations_list200response_annotations_item_line_intent import (
+    DocAnnotationsList200ResponseAnnotationsItemLineIntent,
+)
 from .doc_annotations_list200response_annotations_item_line_interior_color import (
     DocAnnotationsList200ResponseAnnotationsItemLineInteriorColor,
+)
+from .doc_annotations_list200response_annotations_item_line_leader import (
+    DocAnnotationsList200ResponseAnnotationsItemLineLeader,
 )
 from .doc_annotations_list200response_annotations_item_line_line_endings import (
     DocAnnotationsList200ResponseAnnotationsItemLineLineEndings,
 )
 from .doc_annotations_list200response_annotations_item_line_line_points import (
     DocAnnotationsList200ResponseAnnotationsItemLineLinePoints,
+)
+from .doc_annotations_list200response_annotations_item_line_measure import (
+    DocAnnotationsList200ResponseAnnotationsItemLineMeasure,
 )
 from .doc_annotations_list200response_annotations_item_line_rect import (
     DocAnnotationsList200ResponseAnnotationsItemLineRect,
@@ -47,6 +59,10 @@ from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsList200ResponseAnnotationsItemLine(UniversalBaseModel):
+    intent: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemLineIntent] = None
+    measure: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemLineMeasure] = None
+    caption: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemLineCaption] = None
+    leader: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemLineLeader] = None
     ref: DocAnnotationsList200ResponseAnnotationsItemLineRef
     page_object_number: typing_extensions.Annotated[
         int, FieldMetadata(alias="pageObjectNumber"), pydantic.Field(alias="pageObjectNumber")

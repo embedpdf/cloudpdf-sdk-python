@@ -13,6 +13,9 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_b
 from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_border_style import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBorderStyle,
 )
+from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_caption import (
+    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineCaption,
+)
 from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_color import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineColor,
 )
@@ -25,11 +28,17 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_i
 from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo,
 )
+from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_intent import (
+    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineIntent,
+)
 from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_interior_color import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInteriorColor,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_line_endings import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndings,
+)
+from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure import (
+    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasure,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_rect import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRect,
@@ -47,6 +56,9 @@ from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolyline(UniversalBaseModel):
+    intent: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineIntent] = None
+    measure: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasure] = None
+    caption: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineCaption] = None
     ref: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRef
     page_object_number: typing_extensions.Annotated[
         int, FieldMetadata(alias="pageObjectNumber"), pydantic.Field(alias="pageObjectNumber")
