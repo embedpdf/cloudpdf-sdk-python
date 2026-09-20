@@ -13,6 +13,9 @@ from .doc_annotations_list200response_annotations_item_polyline_blend_mode impor
 from .doc_annotations_list200response_annotations_item_polyline_border_style import (
     DocAnnotationsList200ResponseAnnotationsItemPolylineBorderStyle,
 )
+from .doc_annotations_list200response_annotations_item_polyline_caption import (
+    DocAnnotationsList200ResponseAnnotationsItemPolylineCaption,
+)
 from .doc_annotations_list200response_annotations_item_polyline_color import (
     DocAnnotationsList200ResponseAnnotationsItemPolylineColor,
 )
@@ -25,11 +28,17 @@ from .doc_annotations_list200response_annotations_item_polyline_identity_quality
 from .doc_annotations_list200response_annotations_item_polyline_in_reply_to import (
     DocAnnotationsList200ResponseAnnotationsItemPolylineInReplyTo,
 )
+from .doc_annotations_list200response_annotations_item_polyline_intent import (
+    DocAnnotationsList200ResponseAnnotationsItemPolylineIntent,
+)
 from .doc_annotations_list200response_annotations_item_polyline_interior_color import (
     DocAnnotationsList200ResponseAnnotationsItemPolylineInteriorColor,
 )
 from .doc_annotations_list200response_annotations_item_polyline_line_endings import (
     DocAnnotationsList200ResponseAnnotationsItemPolylineLineEndings,
+)
+from .doc_annotations_list200response_annotations_item_polyline_measure import (
+    DocAnnotationsList200ResponseAnnotationsItemPolylineMeasure,
 )
 from .doc_annotations_list200response_annotations_item_polyline_rect import (
     DocAnnotationsList200ResponseAnnotationsItemPolylineRect,
@@ -47,6 +56,9 @@ from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsList200ResponseAnnotationsItemPolyline(UniversalBaseModel):
+    intent: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemPolylineIntent] = None
+    measure: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemPolylineMeasure] = None
+    caption: typing.Optional[DocAnnotationsList200ResponseAnnotationsItemPolylineCaption] = None
     ref: DocAnnotationsList200ResponseAnnotationsItemPolylineRef
     page_object_number: typing_extensions.Annotated[
         int, FieldMetadata(alias="pageObjectNumber"), pydantic.Field(alias="pageObjectNumber")

@@ -601,6 +601,15 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list200response_annotations_item_line_border_style import (
         DocAnnotationsList200ResponseAnnotationsItemLineBorderStyle,
     )
+    from .doc_annotations_list200response_annotations_item_line_caption import (
+        DocAnnotationsList200ResponseAnnotationsItemLineCaption,
+    )
+    from .doc_annotations_list200response_annotations_item_line_caption_offset import (
+        DocAnnotationsList200ResponseAnnotationsItemLineCaptionOffset,
+    )
+    from .doc_annotations_list200response_annotations_item_line_caption_position import (
+        DocAnnotationsList200ResponseAnnotationsItemLineCaptionPosition,
+    )
     from .doc_annotations_list200response_annotations_item_line_color import (
         DocAnnotationsList200ResponseAnnotationsItemLineColor,
     )
@@ -628,8 +637,14 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list200response_annotations_item_line_in_reply_to_object_number import (
         DocAnnotationsList200ResponseAnnotationsItemLineInReplyToObjectNumber,
     )
+    from .doc_annotations_list200response_annotations_item_line_intent import (
+        DocAnnotationsList200ResponseAnnotationsItemLineIntent,
+    )
     from .doc_annotations_list200response_annotations_item_line_interior_color import (
         DocAnnotationsList200ResponseAnnotationsItemLineInteriorColor,
+    )
+    from .doc_annotations_list200response_annotations_item_line_leader import (
+        DocAnnotationsList200ResponseAnnotationsItemLineLeader,
     )
     from .doc_annotations_list200response_annotations_item_line_line_endings import (
         DocAnnotationsList200ResponseAnnotationsItemLineLineEndings,
@@ -648,6 +663,78 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list200response_annotations_item_line_line_points_start import (
         DocAnnotationsList200ResponseAnnotationsItemLineLinePointsStart,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasure,
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasure_Geo,
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasure_Rl,
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasure_Unknown,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_geo import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureGeo,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRl,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_angle_item import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAngleItem,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_angle_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAngleItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_angle_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAngleItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_area_item import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAreaItem,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_area_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAreaItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_area_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAreaItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_distance_item import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlDistanceItem,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_distance_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlDistanceItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_distance_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlDistanceItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_origin import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlOrigin,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_slope_item import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlSlopeItem,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_slope_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlSlopeItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_slope_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlSlopeItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_x_item import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlXItem,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_x_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlXItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_x_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlXItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_y_item import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlYItem,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_y_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlYItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_rl_y_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlYItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_line_measure_unknown import (
+        DocAnnotationsList200ResponseAnnotationsItemLineMeasureUnknown,
     )
     from .doc_annotations_list200response_annotations_item_line_rect import (
         DocAnnotationsList200ResponseAnnotationsItemLineRect,
@@ -765,6 +852,12 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list200response_annotations_item_polygon_border_style import (
         DocAnnotationsList200ResponseAnnotationsItemPolygonBorderStyle,
     )
+    from .doc_annotations_list200response_annotations_item_polygon_caption import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonCaption,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_caption_center import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonCaptionCenter,
+    )
     from .doc_annotations_list200response_annotations_item_polygon_color import (
         DocAnnotationsList200ResponseAnnotationsItemPolygonColor,
     )
@@ -792,8 +885,83 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list200response_annotations_item_polygon_in_reply_to_object_number import (
         DocAnnotationsList200ResponseAnnotationsItemPolygonInReplyToObjectNumber,
     )
+    from .doc_annotations_list200response_annotations_item_polygon_intent import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonIntent,
+    )
     from .doc_annotations_list200response_annotations_item_polygon_interior_color import (
         DocAnnotationsList200ResponseAnnotationsItemPolygonInteriorColor,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasure,
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasure_Geo,
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasure_Rl,
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasure_Unknown,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_geo import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureGeo,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRl,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_angle_item import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAngleItem,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_angle_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAngleItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_angle_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAngleItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_area_item import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAreaItem,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_area_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAreaItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_area_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAreaItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_distance_item import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlDistanceItem,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_distance_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlDistanceItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_distance_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlDistanceItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_origin import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlOrigin,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_slope_item import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlSlopeItem,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_slope_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlSlopeItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_slope_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlSlopeItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_x_item import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlXItem,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_x_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlXItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_x_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlXItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_y_item import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlYItem,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_y_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlYItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_rl_y_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlYItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_polygon_measure_unknown import (
+        DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureUnknown,
     )
     from .doc_annotations_list200response_annotations_item_polygon_rect import (
         DocAnnotationsList200ResponseAnnotationsItemPolygonRect,
@@ -831,6 +999,12 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list200response_annotations_item_polyline_border_style import (
         DocAnnotationsList200ResponseAnnotationsItemPolylineBorderStyle,
     )
+    from .doc_annotations_list200response_annotations_item_polyline_caption import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineCaption,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_caption_center import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineCaptionCenter,
+    )
     from .doc_annotations_list200response_annotations_item_polyline_color import (
         DocAnnotationsList200ResponseAnnotationsItemPolylineColor,
     )
@@ -858,6 +1032,9 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list200response_annotations_item_polyline_in_reply_to_object_number import (
         DocAnnotationsList200ResponseAnnotationsItemPolylineInReplyToObjectNumber,
     )
+    from .doc_annotations_list200response_annotations_item_polyline_intent import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineIntent,
+    )
     from .doc_annotations_list200response_annotations_item_polyline_interior_color import (
         DocAnnotationsList200ResponseAnnotationsItemPolylineInteriorColor,
     )
@@ -869,6 +1046,78 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list200response_annotations_item_polyline_line_endings_start import (
         DocAnnotationsList200ResponseAnnotationsItemPolylineLineEndingsStart,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasure,
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasure_Geo,
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasure_Rl,
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasure_Unknown,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_geo import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureGeo,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRl,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_angle_item import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAngleItem,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_angle_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAngleItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_angle_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAngleItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_area_item import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAreaItem,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_area_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAreaItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_area_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAreaItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_distance_item import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlDistanceItem,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_distance_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlDistanceItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_distance_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlDistanceItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_origin import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlOrigin,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_slope_item import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlSlopeItem,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_slope_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlSlopeItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_slope_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlSlopeItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_x_item import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlXItem,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_x_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlXItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_x_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlXItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_y_item import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlYItem,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_y_item_fraction import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlYItemFraction,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_rl_y_item_label_position import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlYItemLabelPosition,
+    )
+    from .doc_annotations_list200response_annotations_item_polyline_measure_unknown import (
+        DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureUnknown,
     )
     from .doc_annotations_list200response_annotations_item_polyline_rect import (
         DocAnnotationsList200ResponseAnnotationsItemPolylineRect,
@@ -2024,6 +2273,15 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_line_border_style import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBorderStyle,
     )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_caption import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineCaption,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_caption_offset import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineCaptionOffset,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_caption_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineCaptionPosition,
+    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_line_color import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineColor,
     )
@@ -2051,8 +2309,14 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to_object_number import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyToObjectNumber,
     )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_intent import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineIntent,
+    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_line_interior_color import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInteriorColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_leader import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLeader,
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_line_line_endings import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndings,
@@ -2071,6 +2335,78 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_line_line_points_start import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePointsStart,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasure,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasure_Geo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasure_Rl,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasure_Unknown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_geo import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureGeo,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRl,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_angle_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAngleItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_angle_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAngleItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_angle_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAngleItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_area_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAreaItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_area_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAreaItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_area_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAreaItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_distance_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlDistanceItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_distance_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlDistanceItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_distance_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlDistanceItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_origin import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlOrigin,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_slope_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlSlopeItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_slope_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlSlopeItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_slope_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlSlopeItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_x_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlXItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_x_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlXItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_x_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlXItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_y_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlYItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_y_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlYItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_y_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlYItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure_unknown import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureUnknown,
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_line_rect import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRect,
@@ -2190,6 +2526,12 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_border_style import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBorderStyle,
     )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_caption import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonCaption,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_caption_center import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonCaptionCenter,
+    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_color import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonColor,
     )
@@ -2217,8 +2559,83 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to_object_number import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyToObjectNumber,
     )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_intent import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonIntent,
+    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_interior_color import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInteriorColor,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasure,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasure_Geo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasure_Rl,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasure_Unknown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_geo import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureGeo,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRl,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_angle_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAngleItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_angle_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAngleItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_angle_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAngleItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_area_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAreaItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_area_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAreaItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_area_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAreaItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_distance_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlDistanceItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_distance_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlDistanceItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_distance_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlDistanceItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_origin import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlOrigin,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_slope_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlSlopeItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_slope_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlSlopeItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_slope_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlSlopeItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_x_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlXItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_x_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlXItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_x_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlXItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_y_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlYItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_y_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlYItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_y_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlYItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_unknown import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureUnknown,
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_polygon_rect import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRect,
@@ -2256,6 +2673,12 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_border_style import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBorderStyle,
     )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_caption import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineCaption,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_caption_center import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineCaptionCenter,
+    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_color import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineColor,
     )
@@ -2283,6 +2706,9 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to_object_number import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyToObjectNumber,
     )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_intent import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineIntent,
+    )
     from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_interior_color import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInteriorColor,
     )
@@ -2294,6 +2720,78 @@ if typing.TYPE_CHECKING:
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_line_endings_start import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndingsStart,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasure,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasure_Geo,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasure_Rl,
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasure_Unknown,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_geo import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureGeo,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRl,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_angle_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAngleItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_angle_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAngleItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_angle_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAngleItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_area_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAreaItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_area_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAreaItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_area_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAreaItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_distance_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlDistanceItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_distance_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlDistanceItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_distance_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlDistanceItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_origin import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlOrigin,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_slope_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlSlopeItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_slope_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlSlopeItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_slope_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlSlopeItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_x_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlXItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_x_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlXItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_x_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlXItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_y_item import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlYItem,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_y_item_fraction import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlYItemFraction,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_y_item_label_position import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlYItemLabelPosition,
+    )
+    from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_unknown import (
+        DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureUnknown,
     )
     from .doc_annotations_list_all200response_pages_item_annotations_item_polyline_rect import (
         DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRect,
@@ -3846,6 +4344,104 @@ if typing.TYPE_CHECKING:
     from .doc_pages_set_name404response_code import DocPagesSetName404ResponseCode
     from .doc_pages_set_name404response_name import DocPagesSetName404ResponseName
     from .doc_pages_set_name_request import DocPagesSetNameRequest
+    from .doc_pages_set_scale200response import DocPagesSetScale200Response
+    from .doc_pages_set_scale200response_meta import DocPagesSetScale200ResponseMeta
+    from .doc_pages_set_scale200response_meta_affected_pages_item import (
+        DocPagesSetScale200ResponseMetaAffectedPagesItem,
+    )
+    from .doc_pages_set_scale200response_meta_affected_pages_item_revision import (
+        DocPagesSetScale200ResponseMetaAffectedPagesItemRevision,
+    )
+    from .doc_pages_set_scale200response_meta_affected_pages_item_weak_annotation_state import (
+        DocPagesSetScale200ResponseMetaAffectedPagesItemWeakAnnotationState,
+        DocPagesSetScale200ResponseMetaAffectedPagesItemWeakAnnotationState_Known,
+        DocPagesSetScale200ResponseMetaAffectedPagesItemWeakAnnotationState_Unknown,
+    )
+    from .doc_pages_set_scale200response_meta_affected_pages_item_weak_annotation_state_known import (
+        DocPagesSetScale200ResponseMetaAffectedPagesItemWeakAnnotationStateKnown,
+    )
+    from .doc_pages_set_scale200response_meta_affected_pages_item_weak_annotation_state_unknown import (
+        DocPagesSetScale200ResponseMetaAffectedPagesItemWeakAnnotationStateUnknown,
+    )
+    from .doc_pages_set_scale200response_meta_cache_delta import DocPagesSetScale200ResponseMetaCacheDelta
+    from .doc_pages_set_scale200response_meta_cache_delta_pages_item import (
+        DocPagesSetScale200ResponseMetaCacheDeltaPagesItem,
+    )
+    from .doc_pages_set_scale200response_meta_cache_delta_pages_item_cache import (
+        DocPagesSetScale200ResponseMetaCacheDeltaPagesItemCache,
+    )
+    from .doc_pages_set_scale400response import DocPagesSetScale400Response
+    from .doc_pages_set_scale400response_code import DocPagesSetScale400ResponseCode
+    from .doc_pages_set_scale400response_name import DocPagesSetScale400ResponseName
+    from .doc_pages_set_scale404response import DocPagesSetScale404Response
+    from .doc_pages_set_scale404response_code import DocPagesSetScale404ResponseCode
+    from .doc_pages_set_scale404response_name import DocPagesSetScale404ResponseName
+    from .doc_pages_viewports200response import DocPagesViewports200Response
+    from .doc_pages_viewports200response_item import DocPagesViewports200ResponseItem
+    from .doc_pages_viewports200response_item_bbox import DocPagesViewports200ResponseItemBbox
+    from .doc_pages_viewports200response_item_measure import (
+        DocPagesViewports200ResponseItemMeasure,
+        DocPagesViewports200ResponseItemMeasure_Geo,
+        DocPagesViewports200ResponseItemMeasure_Rl,
+        DocPagesViewports200ResponseItemMeasure_Unknown,
+    )
+    from .doc_pages_viewports200response_item_measure_geo import DocPagesViewports200ResponseItemMeasureGeo
+    from .doc_pages_viewports200response_item_measure_rl import DocPagesViewports200ResponseItemMeasureRl
+    from .doc_pages_viewports200response_item_measure_rl_angle_item import (
+        DocPagesViewports200ResponseItemMeasureRlAngleItem,
+    )
+    from .doc_pages_viewports200response_item_measure_rl_angle_item_fraction import (
+        DocPagesViewports200ResponseItemMeasureRlAngleItemFraction,
+    )
+    from .doc_pages_viewports200response_item_measure_rl_angle_item_label_position import (
+        DocPagesViewports200ResponseItemMeasureRlAngleItemLabelPosition,
+    )
+    from .doc_pages_viewports200response_item_measure_rl_area_item import (
+        DocPagesViewports200ResponseItemMeasureRlAreaItem,
+    )
+    from .doc_pages_viewports200response_item_measure_rl_area_item_fraction import (
+        DocPagesViewports200ResponseItemMeasureRlAreaItemFraction,
+    )
+    from .doc_pages_viewports200response_item_measure_rl_area_item_label_position import (
+        DocPagesViewports200ResponseItemMeasureRlAreaItemLabelPosition,
+    )
+    from .doc_pages_viewports200response_item_measure_rl_distance_item import (
+        DocPagesViewports200ResponseItemMeasureRlDistanceItem,
+    )
+    from .doc_pages_viewports200response_item_measure_rl_distance_item_fraction import (
+        DocPagesViewports200ResponseItemMeasureRlDistanceItemFraction,
+    )
+    from .doc_pages_viewports200response_item_measure_rl_distance_item_label_position import (
+        DocPagesViewports200ResponseItemMeasureRlDistanceItemLabelPosition,
+    )
+    from .doc_pages_viewports200response_item_measure_rl_origin import DocPagesViewports200ResponseItemMeasureRlOrigin
+    from .doc_pages_viewports200response_item_measure_rl_slope_item import (
+        DocPagesViewports200ResponseItemMeasureRlSlopeItem,
+    )
+    from .doc_pages_viewports200response_item_measure_rl_slope_item_fraction import (
+        DocPagesViewports200ResponseItemMeasureRlSlopeItemFraction,
+    )
+    from .doc_pages_viewports200response_item_measure_rl_slope_item_label_position import (
+        DocPagesViewports200ResponseItemMeasureRlSlopeItemLabelPosition,
+    )
+    from .doc_pages_viewports200response_item_measure_rl_x_item import DocPagesViewports200ResponseItemMeasureRlXItem
+    from .doc_pages_viewports200response_item_measure_rl_x_item_fraction import (
+        DocPagesViewports200ResponseItemMeasureRlXItemFraction,
+    )
+    from .doc_pages_viewports200response_item_measure_rl_x_item_label_position import (
+        DocPagesViewports200ResponseItemMeasureRlXItemLabelPosition,
+    )
+    from .doc_pages_viewports200response_item_measure_rl_y_item import DocPagesViewports200ResponseItemMeasureRlYItem
+    from .doc_pages_viewports200response_item_measure_rl_y_item_fraction import (
+        DocPagesViewports200ResponseItemMeasureRlYItemFraction,
+    )
+    from .doc_pages_viewports200response_item_measure_rl_y_item_label_position import (
+        DocPagesViewports200ResponseItemMeasureRlYItemLabelPosition,
+    )
+    from .doc_pages_viewports200response_item_measure_unknown import DocPagesViewports200ResponseItemMeasureUnknown
+    from .doc_pages_viewports404response import DocPagesViewports404Response
+    from .doc_pages_viewports404response_code import DocPagesViewports404ResponseCode
+    from .doc_pages_viewports404response_name import DocPagesViewports404ResponseName
     from .doc_redactions_apply200response import DocRedactionsApply200Response
     from .doc_redactions_apply200response_meta import DocRedactionsApply200ResponseMeta
     from .doc_redactions_apply200response_meta_affected_pages_item import (
@@ -4702,6 +5298,9 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemLine": ".doc_annotations_list200response_annotations_item_line",
     "DocAnnotationsList200ResponseAnnotationsItemLineBlendMode": ".doc_annotations_list200response_annotations_item_line_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemLineBorderStyle": ".doc_annotations_list200response_annotations_item_line_border_style",
+    "DocAnnotationsList200ResponseAnnotationsItemLineCaption": ".doc_annotations_list200response_annotations_item_line_caption",
+    "DocAnnotationsList200ResponseAnnotationsItemLineCaptionOffset": ".doc_annotations_list200response_annotations_item_line_caption_offset",
+    "DocAnnotationsList200ResponseAnnotationsItemLineCaptionPosition": ".doc_annotations_list200response_annotations_item_line_caption_position",
     "DocAnnotationsList200ResponseAnnotationsItemLineColor": ".doc_annotations_list200response_annotations_item_line_color",
     "DocAnnotationsList200ResponseAnnotationsItemLineFlags": ".doc_annotations_list200response_annotations_item_line_flags",
     "DocAnnotationsList200ResponseAnnotationsItemLineIdentityQuality": ".doc_annotations_list200response_annotations_item_line_identity_quality",
@@ -4713,13 +5312,41 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemLineInReplyTo_Index": ".doc_annotations_list200response_annotations_item_line_in_reply_to",
     "DocAnnotationsList200ResponseAnnotationsItemLineInReplyTo_Nm": ".doc_annotations_list200response_annotations_item_line_in_reply_to",
     "DocAnnotationsList200ResponseAnnotationsItemLineInReplyTo_ObjectNumber": ".doc_annotations_list200response_annotations_item_line_in_reply_to",
+    "DocAnnotationsList200ResponseAnnotationsItemLineIntent": ".doc_annotations_list200response_annotations_item_line_intent",
     "DocAnnotationsList200ResponseAnnotationsItemLineInteriorColor": ".doc_annotations_list200response_annotations_item_line_interior_color",
+    "DocAnnotationsList200ResponseAnnotationsItemLineLeader": ".doc_annotations_list200response_annotations_item_line_leader",
     "DocAnnotationsList200ResponseAnnotationsItemLineLineEndings": ".doc_annotations_list200response_annotations_item_line_line_endings",
     "DocAnnotationsList200ResponseAnnotationsItemLineLineEndingsEnd": ".doc_annotations_list200response_annotations_item_line_line_endings_end",
     "DocAnnotationsList200ResponseAnnotationsItemLineLineEndingsStart": ".doc_annotations_list200response_annotations_item_line_line_endings_start",
     "DocAnnotationsList200ResponseAnnotationsItemLineLinePoints": ".doc_annotations_list200response_annotations_item_line_line_points",
     "DocAnnotationsList200ResponseAnnotationsItemLineLinePointsEnd": ".doc_annotations_list200response_annotations_item_line_line_points_end",
     "DocAnnotationsList200ResponseAnnotationsItemLineLinePointsStart": ".doc_annotations_list200response_annotations_item_line_line_points_start",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasure": ".doc_annotations_list200response_annotations_item_line_measure",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureGeo": ".doc_annotations_list200response_annotations_item_line_measure_geo",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRl": ".doc_annotations_list200response_annotations_item_line_measure_rl",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAngleItem": ".doc_annotations_list200response_annotations_item_line_measure_rl_angle_item",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAngleItemFraction": ".doc_annotations_list200response_annotations_item_line_measure_rl_angle_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAngleItemLabelPosition": ".doc_annotations_list200response_annotations_item_line_measure_rl_angle_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAreaItem": ".doc_annotations_list200response_annotations_item_line_measure_rl_area_item",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAreaItemFraction": ".doc_annotations_list200response_annotations_item_line_measure_rl_area_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAreaItemLabelPosition": ".doc_annotations_list200response_annotations_item_line_measure_rl_area_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlDistanceItem": ".doc_annotations_list200response_annotations_item_line_measure_rl_distance_item",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlDistanceItemFraction": ".doc_annotations_list200response_annotations_item_line_measure_rl_distance_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlDistanceItemLabelPosition": ".doc_annotations_list200response_annotations_item_line_measure_rl_distance_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlOrigin": ".doc_annotations_list200response_annotations_item_line_measure_rl_origin",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlSlopeItem": ".doc_annotations_list200response_annotations_item_line_measure_rl_slope_item",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlSlopeItemFraction": ".doc_annotations_list200response_annotations_item_line_measure_rl_slope_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlSlopeItemLabelPosition": ".doc_annotations_list200response_annotations_item_line_measure_rl_slope_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlXItem": ".doc_annotations_list200response_annotations_item_line_measure_rl_x_item",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlXItemFraction": ".doc_annotations_list200response_annotations_item_line_measure_rl_x_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlXItemLabelPosition": ".doc_annotations_list200response_annotations_item_line_measure_rl_x_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlYItem": ".doc_annotations_list200response_annotations_item_line_measure_rl_y_item",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlYItemFraction": ".doc_annotations_list200response_annotations_item_line_measure_rl_y_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlYItemLabelPosition": ".doc_annotations_list200response_annotations_item_line_measure_rl_y_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureUnknown": ".doc_annotations_list200response_annotations_item_line_measure_unknown",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasure_Geo": ".doc_annotations_list200response_annotations_item_line_measure",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasure_Rl": ".doc_annotations_list200response_annotations_item_line_measure",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasure_Unknown": ".doc_annotations_list200response_annotations_item_line_measure",
     "DocAnnotationsList200ResponseAnnotationsItemLineRect": ".doc_annotations_list200response_annotations_item_line_rect",
     "DocAnnotationsList200ResponseAnnotationsItemLineRef": ".doc_annotations_list200response_annotations_item_line_ref",
     "DocAnnotationsList200ResponseAnnotationsItemLineRefIndex": ".doc_annotations_list200response_annotations_item_line_ref_index",
@@ -4770,6 +5397,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemPolygon": ".doc_annotations_list200response_annotations_item_polygon",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonBlendMode": ".doc_annotations_list200response_annotations_item_polygon_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonBorderStyle": ".doc_annotations_list200response_annotations_item_polygon_border_style",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonCaption": ".doc_annotations_list200response_annotations_item_polygon_caption",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonCaptionCenter": ".doc_annotations_list200response_annotations_item_polygon_caption_center",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonColor": ".doc_annotations_list200response_annotations_item_polygon_color",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonFlags": ".doc_annotations_list200response_annotations_item_polygon_flags",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonIdentityQuality": ".doc_annotations_list200response_annotations_item_polygon_identity_quality",
@@ -4781,7 +5410,34 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemPolygonInReplyTo_Index": ".doc_annotations_list200response_annotations_item_polygon_in_reply_to",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonInReplyTo_Nm": ".doc_annotations_list200response_annotations_item_polygon_in_reply_to",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonInReplyTo_ObjectNumber": ".doc_annotations_list200response_annotations_item_polygon_in_reply_to",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonIntent": ".doc_annotations_list200response_annotations_item_polygon_intent",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonInteriorColor": ".doc_annotations_list200response_annotations_item_polygon_interior_color",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasure": ".doc_annotations_list200response_annotations_item_polygon_measure",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureGeo": ".doc_annotations_list200response_annotations_item_polygon_measure_geo",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRl": ".doc_annotations_list200response_annotations_item_polygon_measure_rl",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAngleItem": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_angle_item",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAngleItemFraction": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_angle_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAngleItemLabelPosition": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_angle_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAreaItem": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_area_item",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAreaItemFraction": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_area_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAreaItemLabelPosition": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_area_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlDistanceItem": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_distance_item",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlDistanceItemFraction": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_distance_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlDistanceItemLabelPosition": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_distance_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlOrigin": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_origin",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlSlopeItem": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_slope_item",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlSlopeItemFraction": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_slope_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlSlopeItemLabelPosition": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_slope_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlXItem": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_x_item",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlXItemFraction": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_x_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlXItemLabelPosition": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_x_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlYItem": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_y_item",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlYItemFraction": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_y_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlYItemLabelPosition": ".doc_annotations_list200response_annotations_item_polygon_measure_rl_y_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureUnknown": ".doc_annotations_list200response_annotations_item_polygon_measure_unknown",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasure_Geo": ".doc_annotations_list200response_annotations_item_polygon_measure",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasure_Rl": ".doc_annotations_list200response_annotations_item_polygon_measure",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasure_Unknown": ".doc_annotations_list200response_annotations_item_polygon_measure",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonRect": ".doc_annotations_list200response_annotations_item_polygon_rect",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonRef": ".doc_annotations_list200response_annotations_item_polygon_ref",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonRefIndex": ".doc_annotations_list200response_annotations_item_polygon_ref_index",
@@ -4796,6 +5452,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemPolyline": ".doc_annotations_list200response_annotations_item_polyline",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineBlendMode": ".doc_annotations_list200response_annotations_item_polyline_blend_mode",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineBorderStyle": ".doc_annotations_list200response_annotations_item_polyline_border_style",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineCaption": ".doc_annotations_list200response_annotations_item_polyline_caption",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineCaptionCenter": ".doc_annotations_list200response_annotations_item_polyline_caption_center",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineColor": ".doc_annotations_list200response_annotations_item_polyline_color",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineFlags": ".doc_annotations_list200response_annotations_item_polyline_flags",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineIdentityQuality": ".doc_annotations_list200response_annotations_item_polyline_identity_quality",
@@ -4807,10 +5465,37 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsList200ResponseAnnotationsItemPolylineInReplyTo_Index": ".doc_annotations_list200response_annotations_item_polyline_in_reply_to",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineInReplyTo_Nm": ".doc_annotations_list200response_annotations_item_polyline_in_reply_to",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineInReplyTo_ObjectNumber": ".doc_annotations_list200response_annotations_item_polyline_in_reply_to",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineIntent": ".doc_annotations_list200response_annotations_item_polyline_intent",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineInteriorColor": ".doc_annotations_list200response_annotations_item_polyline_interior_color",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineLineEndings": ".doc_annotations_list200response_annotations_item_polyline_line_endings",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineLineEndingsEnd": ".doc_annotations_list200response_annotations_item_polyline_line_endings_end",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineLineEndingsStart": ".doc_annotations_list200response_annotations_item_polyline_line_endings_start",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasure": ".doc_annotations_list200response_annotations_item_polyline_measure",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureGeo": ".doc_annotations_list200response_annotations_item_polyline_measure_geo",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRl": ".doc_annotations_list200response_annotations_item_polyline_measure_rl",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAngleItem": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_angle_item",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAngleItemFraction": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_angle_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAngleItemLabelPosition": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_angle_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAreaItem": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_area_item",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAreaItemFraction": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_area_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAreaItemLabelPosition": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_area_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlDistanceItem": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_distance_item",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlDistanceItemFraction": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_distance_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlDistanceItemLabelPosition": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_distance_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlOrigin": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_origin",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlSlopeItem": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_slope_item",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlSlopeItemFraction": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_slope_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlSlopeItemLabelPosition": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_slope_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlXItem": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_x_item",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlXItemFraction": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_x_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlXItemLabelPosition": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_x_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlYItem": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_y_item",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlYItemFraction": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_y_item_fraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlYItemLabelPosition": ".doc_annotations_list200response_annotations_item_polyline_measure_rl_y_item_label_position",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureUnknown": ".doc_annotations_list200response_annotations_item_polyline_measure_unknown",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasure_Geo": ".doc_annotations_list200response_annotations_item_polyline_measure",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasure_Rl": ".doc_annotations_list200response_annotations_item_polyline_measure",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasure_Unknown": ".doc_annotations_list200response_annotations_item_polyline_measure",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineRect": ".doc_annotations_list200response_annotations_item_polyline_rect",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineRef": ".doc_annotations_list200response_annotations_item_polyline_ref",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineRefIndex": ".doc_annotations_list200response_annotations_item_polyline_ref_index",
@@ -5277,6 +5962,9 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLine": ".doc_annotations_list_all200response_pages_item_annotations_item_line",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_line_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_line_border_style",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineCaption": ".doc_annotations_list_all200response_pages_item_annotations_item_line_caption",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineCaptionOffset": ".doc_annotations_list_all200response_pages_item_annotations_item_line_caption_offset",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineCaptionPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_line_caption_position",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineColor": ".doc_annotations_list_all200response_pages_item_annotations_item_line_color",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_line_flags",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_line_identity_quality",
@@ -5288,13 +5976,41 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineIntent": ".doc_annotations_list_all200response_pages_item_annotations_item_line_intent",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInteriorColor": ".doc_annotations_list_all200response_pages_item_annotations_item_line_interior_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLeader": ".doc_annotations_list_all200response_pages_item_annotations_item_line_leader",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndings": ".doc_annotations_list_all200response_pages_item_annotations_item_line_line_endings",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndingsEnd": ".doc_annotations_list_all200response_pages_item_annotations_item_line_line_endings_end",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndingsStart": ".doc_annotations_list_all200response_pages_item_annotations_item_line_line_endings_start",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePoints": ".doc_annotations_list_all200response_pages_item_annotations_item_line_line_points",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePointsEnd": ".doc_annotations_list_all200response_pages_item_annotations_item_line_line_points_end",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePointsStart": ".doc_annotations_list_all200response_pages_item_annotations_item_line_line_points_start",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasure": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureGeo": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_geo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRl": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAngleItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_angle_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAngleItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_angle_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAngleItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_angle_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAreaItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_area_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAreaItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_area_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAreaItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_area_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlDistanceItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_distance_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlDistanceItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_distance_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlDistanceItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_distance_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlOrigin": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_origin",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlSlopeItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_slope_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlSlopeItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_slope_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlSlopeItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_slope_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlXItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_x_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlXItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_x_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlXItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_x_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlYItem": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_y_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlYItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_y_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlYItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_rl_y_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureUnknown": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure_unknown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasure_Geo": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasure_Rl": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasure_Unknown": ".doc_annotations_list_all200response_pages_item_annotations_item_line_measure",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRect": ".doc_annotations_list_all200response_pages_item_annotations_item_line_rect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef": ".doc_annotations_list_all200response_pages_item_annotations_item_line_ref",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_line_ref_index",
@@ -5345,6 +6061,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygon": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_border_style",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonCaption": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_caption",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonCaptionCenter": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_caption_center",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonColor": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_color",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_flags",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_identity_quality",
@@ -5356,7 +6074,34 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonIntent": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_intent",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInteriorColor": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_interior_color",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasure": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureGeo": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_geo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRl": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAngleItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_angle_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAngleItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_angle_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAngleItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_angle_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAreaItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_area_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAreaItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_area_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAreaItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_area_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlDistanceItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_distance_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlDistanceItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_distance_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlDistanceItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_distance_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlOrigin": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_origin",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlSlopeItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_slope_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlSlopeItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_slope_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlSlopeItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_slope_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlXItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_x_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlXItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_x_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlXItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_x_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlYItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_y_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlYItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_y_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlYItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_rl_y_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureUnknown": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure_unknown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasure_Geo": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasure_Rl": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasure_Unknown": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_measure",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRect": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_rect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRef": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_ref",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_polygon_ref_index",
@@ -5371,6 +6116,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolyline": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBlendMode": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_blend_mode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBorderStyle": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_border_style",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineCaption": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_caption",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineCaptionCenter": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_caption_center",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineColor": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_color",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineFlags": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_flags",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineIdentityQuality": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_identity_quality",
@@ -5382,10 +6129,37 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo_Index": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo_Nm": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo_ObjectNumber": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_in_reply_to",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineIntent": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_intent",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInteriorColor": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_interior_color",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndings": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_line_endings",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndingsEnd": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_line_endings_end",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndingsStart": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_line_endings_start",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasure": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureGeo": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_geo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRl": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAngleItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_angle_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAngleItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_angle_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAngleItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_angle_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAreaItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_area_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAreaItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_area_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAreaItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_area_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlDistanceItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_distance_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlDistanceItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_distance_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlDistanceItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_distance_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlOrigin": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_origin",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlSlopeItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_slope_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlSlopeItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_slope_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlSlopeItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_slope_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlXItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_x_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlXItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_x_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlXItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_x_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlYItem": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_y_item",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlYItemFraction": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_y_item_fraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlYItemLabelPosition": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_rl_y_item_label_position",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureUnknown": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure_unknown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasure_Geo": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasure_Rl": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasure_Unknown": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_measure",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRect": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_rect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRef": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_ref",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRefIndex": ".doc_annotations_list_all200response_pages_item_annotations_item_polyline_ref_index",
@@ -6180,6 +6954,56 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocPagesSetName404ResponseCode": ".doc_pages_set_name404response_code",
     "DocPagesSetName404ResponseName": ".doc_pages_set_name404response_name",
     "DocPagesSetNameRequest": ".doc_pages_set_name_request",
+    "DocPagesSetScale200Response": ".doc_pages_set_scale200response",
+    "DocPagesSetScale200ResponseMeta": ".doc_pages_set_scale200response_meta",
+    "DocPagesSetScale200ResponseMetaAffectedPagesItem": ".doc_pages_set_scale200response_meta_affected_pages_item",
+    "DocPagesSetScale200ResponseMetaAffectedPagesItemRevision": ".doc_pages_set_scale200response_meta_affected_pages_item_revision",
+    "DocPagesSetScale200ResponseMetaAffectedPagesItemWeakAnnotationState": ".doc_pages_set_scale200response_meta_affected_pages_item_weak_annotation_state",
+    "DocPagesSetScale200ResponseMetaAffectedPagesItemWeakAnnotationStateKnown": ".doc_pages_set_scale200response_meta_affected_pages_item_weak_annotation_state_known",
+    "DocPagesSetScale200ResponseMetaAffectedPagesItemWeakAnnotationStateUnknown": ".doc_pages_set_scale200response_meta_affected_pages_item_weak_annotation_state_unknown",
+    "DocPagesSetScale200ResponseMetaAffectedPagesItemWeakAnnotationState_Known": ".doc_pages_set_scale200response_meta_affected_pages_item_weak_annotation_state",
+    "DocPagesSetScale200ResponseMetaAffectedPagesItemWeakAnnotationState_Unknown": ".doc_pages_set_scale200response_meta_affected_pages_item_weak_annotation_state",
+    "DocPagesSetScale200ResponseMetaCacheDelta": ".doc_pages_set_scale200response_meta_cache_delta",
+    "DocPagesSetScale200ResponseMetaCacheDeltaPagesItem": ".doc_pages_set_scale200response_meta_cache_delta_pages_item",
+    "DocPagesSetScale200ResponseMetaCacheDeltaPagesItemCache": ".doc_pages_set_scale200response_meta_cache_delta_pages_item_cache",
+    "DocPagesSetScale400Response": ".doc_pages_set_scale400response",
+    "DocPagesSetScale400ResponseCode": ".doc_pages_set_scale400response_code",
+    "DocPagesSetScale400ResponseName": ".doc_pages_set_scale400response_name",
+    "DocPagesSetScale404Response": ".doc_pages_set_scale404response",
+    "DocPagesSetScale404ResponseCode": ".doc_pages_set_scale404response_code",
+    "DocPagesSetScale404ResponseName": ".doc_pages_set_scale404response_name",
+    "DocPagesViewports200Response": ".doc_pages_viewports200response",
+    "DocPagesViewports200ResponseItem": ".doc_pages_viewports200response_item",
+    "DocPagesViewports200ResponseItemBbox": ".doc_pages_viewports200response_item_bbox",
+    "DocPagesViewports200ResponseItemMeasure": ".doc_pages_viewports200response_item_measure",
+    "DocPagesViewports200ResponseItemMeasureGeo": ".doc_pages_viewports200response_item_measure_geo",
+    "DocPagesViewports200ResponseItemMeasureRl": ".doc_pages_viewports200response_item_measure_rl",
+    "DocPagesViewports200ResponseItemMeasureRlAngleItem": ".doc_pages_viewports200response_item_measure_rl_angle_item",
+    "DocPagesViewports200ResponseItemMeasureRlAngleItemFraction": ".doc_pages_viewports200response_item_measure_rl_angle_item_fraction",
+    "DocPagesViewports200ResponseItemMeasureRlAngleItemLabelPosition": ".doc_pages_viewports200response_item_measure_rl_angle_item_label_position",
+    "DocPagesViewports200ResponseItemMeasureRlAreaItem": ".doc_pages_viewports200response_item_measure_rl_area_item",
+    "DocPagesViewports200ResponseItemMeasureRlAreaItemFraction": ".doc_pages_viewports200response_item_measure_rl_area_item_fraction",
+    "DocPagesViewports200ResponseItemMeasureRlAreaItemLabelPosition": ".doc_pages_viewports200response_item_measure_rl_area_item_label_position",
+    "DocPagesViewports200ResponseItemMeasureRlDistanceItem": ".doc_pages_viewports200response_item_measure_rl_distance_item",
+    "DocPagesViewports200ResponseItemMeasureRlDistanceItemFraction": ".doc_pages_viewports200response_item_measure_rl_distance_item_fraction",
+    "DocPagesViewports200ResponseItemMeasureRlDistanceItemLabelPosition": ".doc_pages_viewports200response_item_measure_rl_distance_item_label_position",
+    "DocPagesViewports200ResponseItemMeasureRlOrigin": ".doc_pages_viewports200response_item_measure_rl_origin",
+    "DocPagesViewports200ResponseItemMeasureRlSlopeItem": ".doc_pages_viewports200response_item_measure_rl_slope_item",
+    "DocPagesViewports200ResponseItemMeasureRlSlopeItemFraction": ".doc_pages_viewports200response_item_measure_rl_slope_item_fraction",
+    "DocPagesViewports200ResponseItemMeasureRlSlopeItemLabelPosition": ".doc_pages_viewports200response_item_measure_rl_slope_item_label_position",
+    "DocPagesViewports200ResponseItemMeasureRlXItem": ".doc_pages_viewports200response_item_measure_rl_x_item",
+    "DocPagesViewports200ResponseItemMeasureRlXItemFraction": ".doc_pages_viewports200response_item_measure_rl_x_item_fraction",
+    "DocPagesViewports200ResponseItemMeasureRlXItemLabelPosition": ".doc_pages_viewports200response_item_measure_rl_x_item_label_position",
+    "DocPagesViewports200ResponseItemMeasureRlYItem": ".doc_pages_viewports200response_item_measure_rl_y_item",
+    "DocPagesViewports200ResponseItemMeasureRlYItemFraction": ".doc_pages_viewports200response_item_measure_rl_y_item_fraction",
+    "DocPagesViewports200ResponseItemMeasureRlYItemLabelPosition": ".doc_pages_viewports200response_item_measure_rl_y_item_label_position",
+    "DocPagesViewports200ResponseItemMeasureUnknown": ".doc_pages_viewports200response_item_measure_unknown",
+    "DocPagesViewports200ResponseItemMeasure_Geo": ".doc_pages_viewports200response_item_measure",
+    "DocPagesViewports200ResponseItemMeasure_Rl": ".doc_pages_viewports200response_item_measure",
+    "DocPagesViewports200ResponseItemMeasure_Unknown": ".doc_pages_viewports200response_item_measure",
+    "DocPagesViewports404Response": ".doc_pages_viewports404response",
+    "DocPagesViewports404ResponseCode": ".doc_pages_viewports404response_code",
+    "DocPagesViewports404ResponseName": ".doc_pages_viewports404response_name",
     "DocRedactionsApply200Response": ".doc_redactions_apply200response",
     "DocRedactionsApply200ResponseMeta": ".doc_redactions_apply200response_meta",
     "DocRedactionsApply200ResponseMetaAffectedPagesItem": ".doc_redactions_apply200response_meta_affected_pages_item",
@@ -6902,6 +7726,9 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemLine",
     "DocAnnotationsList200ResponseAnnotationsItemLineBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemLineBorderStyle",
+    "DocAnnotationsList200ResponseAnnotationsItemLineCaption",
+    "DocAnnotationsList200ResponseAnnotationsItemLineCaptionOffset",
+    "DocAnnotationsList200ResponseAnnotationsItemLineCaptionPosition",
     "DocAnnotationsList200ResponseAnnotationsItemLineColor",
     "DocAnnotationsList200ResponseAnnotationsItemLineFlags",
     "DocAnnotationsList200ResponseAnnotationsItemLineIdentityQuality",
@@ -6913,13 +7740,41 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemLineInReplyTo_Index",
     "DocAnnotationsList200ResponseAnnotationsItemLineInReplyTo_Nm",
     "DocAnnotationsList200ResponseAnnotationsItemLineInReplyTo_ObjectNumber",
+    "DocAnnotationsList200ResponseAnnotationsItemLineIntent",
     "DocAnnotationsList200ResponseAnnotationsItemLineInteriorColor",
+    "DocAnnotationsList200ResponseAnnotationsItemLineLeader",
     "DocAnnotationsList200ResponseAnnotationsItemLineLineEndings",
     "DocAnnotationsList200ResponseAnnotationsItemLineLineEndingsEnd",
     "DocAnnotationsList200ResponseAnnotationsItemLineLineEndingsStart",
     "DocAnnotationsList200ResponseAnnotationsItemLineLinePoints",
     "DocAnnotationsList200ResponseAnnotationsItemLineLinePointsEnd",
     "DocAnnotationsList200ResponseAnnotationsItemLineLinePointsStart",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasure",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureGeo",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRl",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAngleItem",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAngleItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAngleItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAreaItem",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAreaItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlAreaItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlDistanceItem",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlDistanceItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlDistanceItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlOrigin",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlSlopeItem",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlSlopeItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlSlopeItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlXItem",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlXItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlXItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlYItem",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlYItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureRlYItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasureUnknown",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasure_Geo",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasure_Rl",
+    "DocAnnotationsList200ResponseAnnotationsItemLineMeasure_Unknown",
     "DocAnnotationsList200ResponseAnnotationsItemLineRect",
     "DocAnnotationsList200ResponseAnnotationsItemLineRef",
     "DocAnnotationsList200ResponseAnnotationsItemLineRefIndex",
@@ -6970,6 +7825,8 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemPolygon",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonBorderStyle",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonCaption",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonCaptionCenter",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonColor",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonFlags",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonIdentityQuality",
@@ -6981,7 +7838,34 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemPolygonInReplyTo_Index",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonInReplyTo_Nm",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonInReplyTo_ObjectNumber",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonIntent",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonInteriorColor",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasure",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureGeo",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRl",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAngleItem",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAngleItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAngleItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAreaItem",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAreaItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlAreaItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlDistanceItem",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlDistanceItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlDistanceItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlOrigin",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlSlopeItem",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlSlopeItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlSlopeItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlXItem",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlXItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlXItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlYItem",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlYItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureRlYItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasureUnknown",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasure_Geo",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasure_Rl",
+    "DocAnnotationsList200ResponseAnnotationsItemPolygonMeasure_Unknown",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonRect",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonRef",
     "DocAnnotationsList200ResponseAnnotationsItemPolygonRefIndex",
@@ -6996,6 +7880,8 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemPolyline",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineBlendMode",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineBorderStyle",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineCaption",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineCaptionCenter",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineColor",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineFlags",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineIdentityQuality",
@@ -7007,10 +7893,37 @@ __all__ = [
     "DocAnnotationsList200ResponseAnnotationsItemPolylineInReplyTo_Index",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineInReplyTo_Nm",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineInReplyTo_ObjectNumber",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineIntent",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineInteriorColor",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineLineEndings",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineLineEndingsEnd",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineLineEndingsStart",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasure",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureGeo",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRl",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAngleItem",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAngleItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAngleItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAreaItem",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAreaItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlAreaItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlDistanceItem",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlDistanceItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlDistanceItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlOrigin",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlSlopeItem",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlSlopeItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlSlopeItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlXItem",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlXItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlXItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlYItem",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlYItemFraction",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureRlYItemLabelPosition",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasureUnknown",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasure_Geo",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasure_Rl",
+    "DocAnnotationsList200ResponseAnnotationsItemPolylineMeasure_Unknown",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineRect",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineRef",
     "DocAnnotationsList200ResponseAnnotationsItemPolylineRefIndex",
@@ -7477,6 +8390,9 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLine",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBorderStyle",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineCaption",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineCaptionOffset",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineCaptionPosition",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineColor",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineFlags",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineIdentityQuality",
@@ -7488,13 +8404,41 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo_Index",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo_Nm",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineIntent",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInteriorColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLeader",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndings",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndingsEnd",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndingsStart",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePoints",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePointsEnd",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePointsStart",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasure",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureGeo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRl",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAngleItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAngleItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAngleItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAreaItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAreaItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlAreaItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlDistanceItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlDistanceItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlDistanceItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlOrigin",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlSlopeItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlSlopeItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlSlopeItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlXItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlXItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlXItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlYItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlYItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureRlYItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasureUnknown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasure_Geo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasure_Rl",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasure_Unknown",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRefIndex",
@@ -7545,6 +8489,8 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygon",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonBorderStyle",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonCaption",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonCaptionCenter",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonColor",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonFlags",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonIdentityQuality",
@@ -7556,7 +8502,34 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo_Index",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo_Nm",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonIntent",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonInteriorColor",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasure",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureGeo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRl",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAngleItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAngleItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAngleItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAreaItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAreaItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlAreaItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlDistanceItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlDistanceItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlDistanceItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlOrigin",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlSlopeItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlSlopeItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlSlopeItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlXItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlXItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlXItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlYItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlYItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureRlYItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasureUnknown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasure_Geo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasure_Rl",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonMeasure_Unknown",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRef",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolygonRefIndex",
@@ -7571,6 +8544,8 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolyline",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBlendMode",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineBorderStyle",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineCaption",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineCaptionCenter",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineColor",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineFlags",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineIdentityQuality",
@@ -7582,10 +8557,37 @@ __all__ = [
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo_Index",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo_Nm",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInReplyTo_ObjectNumber",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineIntent",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineInteriorColor",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndings",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndingsEnd",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineLineEndingsStart",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasure",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureGeo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRl",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAngleItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAngleItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAngleItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAreaItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAreaItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlAreaItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlDistanceItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlDistanceItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlDistanceItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlOrigin",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlSlopeItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlSlopeItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlSlopeItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlXItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlXItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlXItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlYItem",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlYItemFraction",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureRlYItemLabelPosition",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasureUnknown",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasure_Geo",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasure_Rl",
+    "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineMeasure_Unknown",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRect",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRef",
     "DocAnnotationsListAll200ResponsePagesItemAnnotationsItemPolylineRefIndex",
@@ -8380,6 +9382,56 @@ __all__ = [
     "DocPagesSetName404ResponseCode",
     "DocPagesSetName404ResponseName",
     "DocPagesSetNameRequest",
+    "DocPagesSetScale200Response",
+    "DocPagesSetScale200ResponseMeta",
+    "DocPagesSetScale200ResponseMetaAffectedPagesItem",
+    "DocPagesSetScale200ResponseMetaAffectedPagesItemRevision",
+    "DocPagesSetScale200ResponseMetaAffectedPagesItemWeakAnnotationState",
+    "DocPagesSetScale200ResponseMetaAffectedPagesItemWeakAnnotationStateKnown",
+    "DocPagesSetScale200ResponseMetaAffectedPagesItemWeakAnnotationStateUnknown",
+    "DocPagesSetScale200ResponseMetaAffectedPagesItemWeakAnnotationState_Known",
+    "DocPagesSetScale200ResponseMetaAffectedPagesItemWeakAnnotationState_Unknown",
+    "DocPagesSetScale200ResponseMetaCacheDelta",
+    "DocPagesSetScale200ResponseMetaCacheDeltaPagesItem",
+    "DocPagesSetScale200ResponseMetaCacheDeltaPagesItemCache",
+    "DocPagesSetScale400Response",
+    "DocPagesSetScale400ResponseCode",
+    "DocPagesSetScale400ResponseName",
+    "DocPagesSetScale404Response",
+    "DocPagesSetScale404ResponseCode",
+    "DocPagesSetScale404ResponseName",
+    "DocPagesViewports200Response",
+    "DocPagesViewports200ResponseItem",
+    "DocPagesViewports200ResponseItemBbox",
+    "DocPagesViewports200ResponseItemMeasure",
+    "DocPagesViewports200ResponseItemMeasureGeo",
+    "DocPagesViewports200ResponseItemMeasureRl",
+    "DocPagesViewports200ResponseItemMeasureRlAngleItem",
+    "DocPagesViewports200ResponseItemMeasureRlAngleItemFraction",
+    "DocPagesViewports200ResponseItemMeasureRlAngleItemLabelPosition",
+    "DocPagesViewports200ResponseItemMeasureRlAreaItem",
+    "DocPagesViewports200ResponseItemMeasureRlAreaItemFraction",
+    "DocPagesViewports200ResponseItemMeasureRlAreaItemLabelPosition",
+    "DocPagesViewports200ResponseItemMeasureRlDistanceItem",
+    "DocPagesViewports200ResponseItemMeasureRlDistanceItemFraction",
+    "DocPagesViewports200ResponseItemMeasureRlDistanceItemLabelPosition",
+    "DocPagesViewports200ResponseItemMeasureRlOrigin",
+    "DocPagesViewports200ResponseItemMeasureRlSlopeItem",
+    "DocPagesViewports200ResponseItemMeasureRlSlopeItemFraction",
+    "DocPagesViewports200ResponseItemMeasureRlSlopeItemLabelPosition",
+    "DocPagesViewports200ResponseItemMeasureRlXItem",
+    "DocPagesViewports200ResponseItemMeasureRlXItemFraction",
+    "DocPagesViewports200ResponseItemMeasureRlXItemLabelPosition",
+    "DocPagesViewports200ResponseItemMeasureRlYItem",
+    "DocPagesViewports200ResponseItemMeasureRlYItemFraction",
+    "DocPagesViewports200ResponseItemMeasureRlYItemLabelPosition",
+    "DocPagesViewports200ResponseItemMeasureUnknown",
+    "DocPagesViewports200ResponseItemMeasure_Geo",
+    "DocPagesViewports200ResponseItemMeasure_Rl",
+    "DocPagesViewports200ResponseItemMeasure_Unknown",
+    "DocPagesViewports404Response",
+    "DocPagesViewports404ResponseCode",
+    "DocPagesViewports404ResponseName",
     "DocRedactionsApply200Response",
     "DocRedactionsApply200ResponseMeta",
     "DocRedactionsApply200ResponseMetaAffectedPagesItem",

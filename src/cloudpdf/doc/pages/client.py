@@ -21,7 +21,10 @@ from ...types.doc_pages_rotate200response import DocPagesRotate200Response
 from ...types.doc_pages_rotate_request import DocPagesRotateRequest
 from ...types.doc_pages_set_name200response import DocPagesSetName200Response
 from ...types.doc_pages_set_name_request import DocPagesSetNameRequest
+from ...types.doc_pages_set_scale200response import DocPagesSetScale200Response
+from ...types.doc_pages_viewports200response import DocPagesViewports200Response
 from .raw_client import AsyncRawPagesClient, RawPagesClient
+from .types.doc_pages_set_scale_request_measure import DocPagesSetScaleRequestMeasure
 
 # this is used as the default value for optional parameters
 OMIT = typing.cast(typing.Any, ...)
@@ -41,6 +44,110 @@ class PagesClient:
         RawPagesClient
         """
         return self._raw_client
+
+    def set_scale(
+        self,
+        doc_id: str,
+        layer_name: str,
+        pon: int,
+        *,
+        document_password: typing.Optional[str] = None,
+        measure: typing.Optional[DocPagesSetScaleRequestMeasure] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocPagesSetScale200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        pon : int
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        measure : typing.Optional[DocPagesSetScaleRequestMeasure]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocPagesSetScale200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.pages.set_scale(
+            doc_id="docId",
+            layer_name="layerName",
+            pon=1,
+        )
+        """
+        _response = self._raw_client.set_scale(
+            doc_id,
+            layer_name,
+            pon,
+            document_password=document_password,
+            measure=measure,
+            request_options=request_options,
+        )
+        return _response.data
+
+    def viewports(
+        self,
+        doc_id: str,
+        layer_name: str,
+        pon: int,
+        *,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocPagesViewports200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        pon : int
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocPagesViewports200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.pages.viewports(
+            doc_id="docId",
+            layer_name="layerName",
+            pon=1,
+        )
+        """
+        _response = self._raw_client.viewports(
+            doc_id, layer_name, pon, document_password=document_password, request_options=request_options
+        )
+        return _response.data
 
     def delete(
         self,
@@ -495,6 +602,126 @@ class AsyncPagesClient:
         AsyncRawPagesClient
         """
         return self._raw_client
+
+    async def set_scale(
+        self,
+        doc_id: str,
+        layer_name: str,
+        pon: int,
+        *,
+        document_password: typing.Optional[str] = None,
+        measure: typing.Optional[DocPagesSetScaleRequestMeasure] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocPagesSetScale200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        pon : int
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        measure : typing.Optional[DocPagesSetScaleRequestMeasure]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocPagesSetScale200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.pages.set_scale(
+                doc_id="docId",
+                layer_name="layerName",
+                pon=1,
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.set_scale(
+            doc_id,
+            layer_name,
+            pon,
+            document_password=document_password,
+            measure=measure,
+            request_options=request_options,
+        )
+        return _response.data
+
+    async def viewports(
+        self,
+        doc_id: str,
+        layer_name: str,
+        pon: int,
+        *,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocPagesViewports200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        pon : int
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocPagesViewports200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.pages.viewports(
+                doc_id="docId",
+                layer_name="layerName",
+                pon=1,
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.viewports(
+            doc_id, layer_name, pon, document_password=document_password, request_options=request_options
+        )
+        return _response.data
 
     async def delete(
         self,

@@ -13,6 +13,9 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_line_blend
 from .doc_annotations_list_all200response_pages_item_annotations_item_line_border_style import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineBorderStyle,
 )
+from .doc_annotations_list_all200response_pages_item_annotations_item_line_caption import (
+    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineCaption,
+)
 from .doc_annotations_list_all200response_pages_item_annotations_item_line_color import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineColor,
 )
@@ -25,14 +28,23 @@ from .doc_annotations_list_all200response_pages_item_annotations_item_line_ident
 from .doc_annotations_list_all200response_pages_item_annotations_item_line_in_reply_to import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInReplyTo,
 )
+from .doc_annotations_list_all200response_pages_item_annotations_item_line_intent import (
+    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineIntent,
+)
 from .doc_annotations_list_all200response_pages_item_annotations_item_line_interior_color import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineInteriorColor,
+)
+from .doc_annotations_list_all200response_pages_item_annotations_item_line_leader import (
+    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLeader,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_line_line_endings import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLineEndings,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_line_line_points import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLinePoints,
+)
+from .doc_annotations_list_all200response_pages_item_annotations_item_line_measure import (
+    DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasure,
 )
 from .doc_annotations_list_all200response_pages_item_annotations_item_line_rect import (
     DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRect,
@@ -47,6 +59,10 @@ from .pdf_annotation_actions import PdfAnnotationActions
 
 
 class DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLine(UniversalBaseModel):
+    intent: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineIntent] = None
+    measure: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineMeasure] = None
+    caption: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineCaption] = None
+    leader: typing.Optional[DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineLeader] = None
     ref: DocAnnotationsListAll200ResponsePagesItemAnnotationsItemLineRef
     page_object_number: typing_extensions.Annotated[
         int, FieldMetadata(alias="pageObjectNumber"), pydantic.Field(alias="pageObjectNumber")
