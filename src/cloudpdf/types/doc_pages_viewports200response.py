@@ -2,6 +2,19 @@
 
 import typing
 
-from .doc_pages_viewports200response_item import DocPagesViewports200ResponseItem
+import pydantic
+from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
+from .doc_pages_viewports200response_viewports_item import DocPagesViewports200ResponseViewportsItem
 
-DocPagesViewports200Response = typing.List[DocPagesViewports200ResponseItem]
+
+class DocPagesViewports200Response(UniversalBaseModel):
+    viewports: typing.List[DocPagesViewports200ResponseViewportsItem]
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow

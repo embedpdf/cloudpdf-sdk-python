@@ -225,7 +225,7 @@ class RawSharesClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[SharesCreate200Response]:
         """
-        The returned share id IS the public share token. Mounted only when the deployment can sign (HS256 mode) — exchange mints session JWTs, so grants exist only where minting does.
+        The returned share id is the public share token. Mounted only when the deployment can sign (HS256 mode) — exchange mints session JWTs, so grants exist only where minting does.
 
         Parameters
         ----------
@@ -717,7 +717,7 @@ class AsyncRawSharesClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[SharesCreate200Response]:
         """
-        The returned share id IS the public share token. Mounted only when the deployment can sign (HS256 mode) — exchange mints session JWTs, so grants exist only where minting does.
+        The returned share id is the public share token. Mounted only when the deployment can sign (HS256 mode) — exchange mints session JWTs, so grants exist only where minting does.
 
         Parameters
         ----------

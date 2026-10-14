@@ -3,17 +3,14 @@
 import typing
 
 import pydantic
-import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
-from ..core.serialization import FieldMetadata
-from .doc_pages_set_scale200response_meta import DocPagesSetScale200ResponseMeta
+from .mutation_meta import MutationMeta
+from .page_ref import PageRef
 
 
 class DocPagesSetScale200Response(UniversalBaseModel):
-    page_object_number: typing_extensions.Annotated[
-        int, FieldMetadata(alias="pageObjectNumber"), pydantic.Field(alias="pageObjectNumber")
-    ]
-    meta: DocPagesSetScale200ResponseMeta
+    page: PageRef
+    meta: MutationMeta
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

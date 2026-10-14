@@ -15,6 +15,9 @@ class DocManifest200ResponsePagesItemCache(UniversalBaseModel):
     annotation_version: typing_extensions.Annotated[
         int, FieldMetadata(alias="annotationVersion"), pydantic.Field(alias="annotationVersion")
     ]
+    widget_version: typing_extensions.Annotated[
+        int, FieldMetadata(alias="widgetVersion"), pydantic.Field(alias="widgetVersion")
+    ]
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

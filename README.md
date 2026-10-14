@@ -35,14 +35,21 @@ Instantiate and use the client with the following:
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.doc import DocChangesRequestChangesItem
 
 client = CloudPDFClient(
     token="<token>",
     base_url="https://yourhost.com/path/to/api",
 )
 
-client.shares.exchange(
-    share_token="shareToken",
+client.doc.changes(
+    doc_id="docId",
+    layer_name="layerName",
+    changes=[
+        DocChangesRequestChangesItem(
+            op_id="opId",
+        )
+    ],
 )
 ```
 
@@ -52,6 +59,7 @@ The SDK also exports an `async` client so that you can make non-blocking calls t
 
 ```python
 import asyncio
+from cloudpdf.doc import DocChangesRequestChangesItem
 
 from cloudpdf import AsyncCloudPDFClient
 
@@ -62,8 +70,14 @@ client = AsyncCloudPDFClient(
 
 
 async def main() -> None:
-    await client.shares.exchange(
-        share_token="shareToken",
+    await client.doc.changes(
+        doc_id="docId",
+        layer_name="layerName",
+        changes=[
+            DocChangesRequestChangesItem(
+                op_id="opId",
+            )
+        ],
     )
 
 
@@ -79,7 +93,7 @@ will be thrown.
 from cloudpdf.core.api_error import ApiError
 
 try:
-    client.shares.exchange(...)
+    client.doc.changes(...)
 except ApiError as e:
     print(e.status_code)
     print(e.body)
@@ -96,7 +110,7 @@ The `.with_raw_response` property returns a "raw" client that can be used to acc
 from cloudpdf import CloudPDFClient
 
 client = CloudPDFClient(...)
-response = client.shares.with_raw_response.exchange(...)
+response = client.doc.with_raw_response.changes(...)
 print(response.headers)  # access the response headers
 print(response.status_code)  # access the response status code
 print(response.data)  # access the underlying object
@@ -127,7 +141,7 @@ Which status codes are retried depends on the `retryStatusCodes` generator confi
 Use the `max_retries` request option to configure this behavior.
 
 ```python
-client.shares.exchange(..., request_options={
+client.doc.changes(..., request_options={
     "max_retries": 1
 })
 ```
@@ -142,7 +156,7 @@ from cloudpdf import CloudPDFClient
 client = CloudPDFClient(..., timeout=20.0)
 
 # Override timeout for a specific method
-client.shares.exchange(..., request_options={
+client.doc.changes(..., request_options={
     "timeout": 1
 })
 ```

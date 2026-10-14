@@ -6,8 +6,8 @@ import typing
 from importlib import import_module
 
 if typing.TYPE_CHECKING:
+    from .types import DocChangesRequestChangesItem
     from . import annotations, forms, metadata, pages, redactions, signatures, versions
-    from .forms import ExportDataFormsRequestFormat
     from .pages import (
         DocPagesSetScaleRequestMeasure,
         DocPagesSetScaleRequestMeasureAngleItem,
@@ -36,6 +36,7 @@ if typing.TYPE_CHECKING:
 _dynamic_imports: typing.Dict[str, str] = {
     "AnalysisSignaturesRequestLevel": ".signatures",
     "AnalysisVersionsRequestLevel": ".versions",
+    "DocChangesRequestChangesItem": ".types",
     "DocPagesSetScaleRequestMeasure": ".pages",
     "DocPagesSetScaleRequestMeasureAngleItem": ".pages",
     "DocPagesSetScaleRequestMeasureAngleItemFraction": ".pages",
@@ -58,7 +59,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocPagesSetScaleRequestMeasureYItemFraction": ".pages",
     "DocPagesSetScaleRequestMeasureYItemLabelPosition": ".pages",
     "DocSignaturesCompleteRequestExpectedVersion": ".signatures",
-    "ExportDataFormsRequestFormat": ".forms",
     "SignatureDigestVersionsRequestAlgorithm": ".versions",
     "annotations": ".annotations",
     "forms": ".forms",
@@ -94,6 +94,7 @@ def __dir__():
 __all__ = [
     "AnalysisSignaturesRequestLevel",
     "AnalysisVersionsRequestLevel",
+    "DocChangesRequestChangesItem",
     "DocPagesSetScaleRequestMeasure",
     "DocPagesSetScaleRequestMeasureAngleItem",
     "DocPagesSetScaleRequestMeasureAngleItemFraction",
@@ -116,7 +117,6 @@ __all__ = [
     "DocPagesSetScaleRequestMeasureYItemFraction",
     "DocPagesSetScaleRequestMeasureYItemLabelPosition",
     "DocSignaturesCompleteRequestExpectedVersion",
-    "ExportDataFormsRequestFormat",
     "SignatureDigestVersionsRequestAlgorithm",
     "annotations",
     "forms",

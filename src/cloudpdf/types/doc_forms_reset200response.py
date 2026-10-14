@@ -4,11 +4,15 @@ import typing
 
 import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
-from .doc_forms_reset200response_meta import DocFormsReset200ResponseMeta
+from .form_field import FormField
+from .form_mutation_meta import FormMutationMeta
+from .widget_annotation import WidgetAnnotation
 
 
 class DocFormsReset200Response(UniversalBaseModel):
-    meta: DocFormsReset200ResponseMeta
+    fields: typing.List[FormField]
+    widgets: typing.List[WidgetAnnotation]
+    meta: FormMutationMeta
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

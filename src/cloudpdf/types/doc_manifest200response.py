@@ -7,6 +7,7 @@ import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
 from .doc_manifest200response_pages_item import DocManifest200ResponsePagesItem
+from .doc_manifest200response_protection import DocManifest200ResponseProtection
 from .doc_manifest200response_scopes import DocManifest200ResponseScopes
 
 
@@ -27,6 +28,9 @@ class DocManifest200Response(UniversalBaseModel):
     annotations_version: typing_extensions.Annotated[
         typing.Optional[int], FieldMetadata(alias="annotationsVersion"), pydantic.Field(alias="annotationsVersion")
     ] = None
+    forms_version: typing_extensions.Annotated[
+        typing.Optional[int], FieldMetadata(alias="formsVersion"), pydantic.Field(alias="formsVersion")
+    ] = None
     audit_head: typing_extensions.Annotated[int, FieldMetadata(alias="auditHead"), pydantic.Field(alias="auditHead")]
     base_sha: typing_extensions.Annotated[str, FieldMetadata(alias="baseSha"), pydantic.Field(alias="baseSha")]
     layer_version: typing_extensions.Annotated[
@@ -37,6 +41,7 @@ class DocManifest200Response(UniversalBaseModel):
         typing.Optional[int], FieldMetadata(alias="baseByteLength"), pydantic.Field(alias="baseByteLength")
     ] = None
     scopes: typing.Optional[DocManifest200ResponseScopes] = None
+    protection: typing.Optional[DocManifest200ResponseProtection] = None
     pages: typing.List[DocManifest200ResponsePagesItem]
 
     if IS_PYDANTIC_V2:

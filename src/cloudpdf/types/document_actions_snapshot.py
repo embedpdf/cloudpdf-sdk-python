@@ -7,8 +7,8 @@ import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
 from .document_actions_snapshot_name_tree_scripts_item import DocumentActionsSnapshotNameTreeScriptsItem
+from .page_destination import PageDestination
 from .pdf_action_tree import PdfActionTree
-from .pdf_destination import PdfDestination
 
 
 class DocumentActionsSnapshot(UniversalBaseModel):
@@ -21,7 +21,9 @@ class DocumentActionsSnapshot(UniversalBaseModel):
         typing.Optional[PdfActionTree], FieldMetadata(alias="openAction"), pydantic.Field(alias="openAction")
     ] = None
     open_destination: typing_extensions.Annotated[
-        typing.Optional[PdfDestination], FieldMetadata(alias="openDestination"), pydantic.Field(alias="openDestination")
+        typing.Optional[PageDestination],
+        FieldMetadata(alias="openDestination"),
+        pydantic.Field(alias="openDestination"),
     ] = None
     will_close: typing_extensions.Annotated[
         typing.Optional[PdfActionTree], FieldMetadata(alias="willClose"), pydantic.Field(alias="willClose")

@@ -13,16 +13,17 @@ from ...types.doc_pages_flatten_request import DocPagesFlattenRequest
 from ...types.doc_pages_insert200response import DocPagesInsert200Response
 from ...types.doc_pages_insert_blank200response import DocPagesInsertBlank200Response
 from ...types.doc_pages_insert_blank_request import DocPagesInsertBlankRequest
-from ...types.doc_pages_move200response import DocPagesMove200Response
-from ...types.doc_pages_move_request import DocPagesMoveRequest
 from ...types.doc_pages_remove_name200response import DocPagesRemoveName200Response
 from ...types.doc_pages_remove_name_request import DocPagesRemoveNameRequest
+from ...types.doc_pages_reorder200response import DocPagesReorder200Response
 from ...types.doc_pages_rotate200response import DocPagesRotate200Response
 from ...types.doc_pages_rotate_request import DocPagesRotateRequest
 from ...types.doc_pages_set_name200response import DocPagesSetName200Response
 from ...types.doc_pages_set_name_request import DocPagesSetNameRequest
 from ...types.doc_pages_set_scale200response import DocPagesSetScale200Response
 from ...types.doc_pages_viewports200response import DocPagesViewports200Response
+from ...types.page_position import PagePosition
+from ...types.page_ref import PageRef
 from .raw_client import AsyncRawPagesClient, RawPagesClient
 from .types.doc_pages_set_scale_request_measure import DocPagesSetScaleRequestMeasure
 
@@ -49,9 +50,10 @@ class PagesClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         measure: typing.Optional[DocPagesSetScaleRequestMeasure] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocPagesSetScale200Response:
@@ -62,10 +64,14 @@ class PagesClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         measure : typing.Optional[DocPagesSetScaleRequestMeasure]
 
@@ -88,14 +94,15 @@ class PagesClient:
         client.doc.pages.set_scale(
             doc_id="docId",
             layer_name="layerName",
-            pon=1,
+            page_key="pageKey",
         )
         """
         _response = self._raw_client.set_scale(
             doc_id,
             layer_name,
-            pon,
+            page_key,
             document_password=document_password,
+            idempotency_key=idempotency_key,
             measure=measure,
             request_options=request_options,
         )
@@ -105,7 +112,7 @@ class PagesClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -117,7 +124,8 @@ class PagesClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -141,11 +149,11 @@ class PagesClient:
         client.doc.pages.viewports(
             doc_id="docId",
             layer_name="layerName",
-            pon=1,
+            page_key="pageKey",
         )
         """
         _response = self._raw_client.viewports(
-            doc_id, layer_name, pon, document_password=document_password, request_options=request_options
+            doc_id, layer_name, page_key, document_password=document_password, request_options=request_options
         )
         return _response.data
 
@@ -156,6 +164,7 @@ class PagesClient:
         *,
         request: DocPagesDeleteRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocPagesDelete200Response:
         """
@@ -169,6 +178,9 @@ class PagesClient:
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -193,7 +205,12 @@ class PagesClient:
         )
         """
         _response = self._raw_client.delete(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            request=request,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
         )
         return _response.data
 
@@ -207,7 +224,7 @@ class PagesClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> typing.Iterator[bytes]:
         """
-        A read, not a mutation: the source document is untouched and no event is published. Body is `{"pageObjectNumbers": number[]}`; the response body is the new PDF.
+        A read, not a mutation: the source document is untouched and no event is published. Body is `{"pages": PageRef[]}`; the response body is the new PDF.
 
         Parameters
         ----------
@@ -254,6 +271,7 @@ class PagesClient:
         *,
         request: DocPagesFlattenRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocPagesFlatten200Response:
         """
@@ -267,6 +285,9 @@ class PagesClient:
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -291,7 +312,12 @@ class PagesClient:
         )
         """
         _response = self._raw_client.flatten(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            request=request,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
         )
         return _response.data
 
@@ -302,10 +328,11 @@ class PagesClient:
         *,
         file: core.File,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocPagesInsert200Response:
         """
-        Multipart mutation envelope: a `body` field holding `{"destIndex"?: number}` (omitted → append) plus a `resource:source` file part carrying the standalone PDF whose pages are copied in. The inserted copies get fresh page object numbers, returned in insertion order.
+        Multipart: a JSON `body` part `{"position"?: PagePosition, "resources": {"source": "<key>"}}` (position omitted → the end), and the standalone PDF whose pages are copied in as the part `resource:<key>`. The inserted copies get fresh page object numbers, returned in insertion order.
 
         Parameters
         ----------
@@ -318,6 +345,9 @@ class PagesClient:
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -341,7 +371,12 @@ class PagesClient:
         )
         """
         _response = self._raw_client.insert(
-            doc_id, layer_name, file=file, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            file=file,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
         )
         return _response.data
 
@@ -352,10 +387,11 @@ class PagesClient:
         *,
         request: DocPagesInsertBlankRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocPagesInsertBlank200Response:
         """
-        Body is `{"size": {"width", "height"}, "count"?, "destIndex"?}` — size in PDF points, count in [1, 100], destIndex omitted → append.
+        Body is `{"size": {"width", "height"}, "count"?, "position"?}` — size in PDF points, count in [1, 100], `position` a `PagePosition` (omitted → the end).
 
         Parameters
         ----------
@@ -367,6 +403,9 @@ class PagesClient:
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -391,55 +430,12 @@ class PagesClient:
         )
         """
         _response = self._raw_client.insert_blank(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
-        )
-        return _response.data
-
-    def move(
-        self,
-        doc_id: str,
-        layer_name: str,
-        *,
-        request: DocPagesMoveRequest,
-        document_password: typing.Optional[str] = None,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesMove200Response:
-        """
-        Parameters
-        ----------
-        doc_id : str
-
-        layer_name : str
-
-        request : DocPagesMoveRequest
-
-        document_password : typing.Optional[str]
-            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-
-        request_options : typing.Optional[RequestOptions]
-            Request-specific configuration.
-
-        Returns
-        -------
-        DocPagesMove200Response
-            OK
-
-        Examples
-        --------
-        from cloudpdf import CloudPDFClient
-
-        client = CloudPDFClient(
-            token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
-        )
-        client.doc.pages.move(
-            doc_id="docId",
-            layer_name="layerName",
-            request={"key": "value"},
-        )
-        """
-        _response = self._raw_client.move(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            request=request,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
         )
         return _response.data
 
@@ -450,6 +446,7 @@ class PagesClient:
         *,
         request: DocPagesSetNameRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocPagesSetName200Response:
         """
@@ -463,6 +460,9 @@ class PagesClient:
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -487,7 +487,12 @@ class PagesClient:
         )
         """
         _response = self._raw_client.set_name(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            request=request,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
         )
         return _response.data
 
@@ -498,6 +503,7 @@ class PagesClient:
         *,
         request: DocPagesRemoveNameRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocPagesRemoveName200Response:
         """
@@ -511,6 +517,9 @@ class PagesClient:
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -535,7 +544,79 @@ class PagesClient:
         )
         """
         _response = self._raw_client.remove_name(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            request=request,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
+        )
+        return _response.data
+
+    def reorder(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        pages: typing.Sequence[PageRef],
+        position: PagePosition,
+        document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocPagesReorder200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        pages : typing.Sequence[PageRef]
+
+        position : PagePosition
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocPagesReorder200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient, PageRef
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.pages.reorder(
+            doc_id="docId",
+            layer_name="layerName",
+            pages=[
+                PageRef(
+                    kind="objectNumber",
+                    object_number=1,
+                )
+            ],
+            position="start",
+        )
+        """
+        _response = self._raw_client.reorder(
+            doc_id,
+            layer_name,
+            pages=pages,
+            position=position,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
         )
         return _response.data
 
@@ -546,6 +627,7 @@ class PagesClient:
         *,
         request: DocPagesRotateRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocPagesRotate200Response:
         """
@@ -559,6 +641,9 @@ class PagesClient:
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -583,7 +668,12 @@ class PagesClient:
         )
         """
         _response = self._raw_client.rotate(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            request=request,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
         )
         return _response.data
 
@@ -607,9 +697,10 @@ class AsyncPagesClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         measure: typing.Optional[DocPagesSetScaleRequestMeasure] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocPagesSetScale200Response:
@@ -620,10 +711,14 @@ class AsyncPagesClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         measure : typing.Optional[DocPagesSetScaleRequestMeasure]
 
@@ -651,7 +746,7 @@ class AsyncPagesClient:
             await client.doc.pages.set_scale(
                 doc_id="docId",
                 layer_name="layerName",
-                pon=1,
+                page_key="pageKey",
             )
 
 
@@ -660,8 +755,9 @@ class AsyncPagesClient:
         _response = await self._raw_client.set_scale(
             doc_id,
             layer_name,
-            pon,
+            page_key,
             document_password=document_password,
+            idempotency_key=idempotency_key,
             measure=measure,
             request_options=request_options,
         )
@@ -671,7 +767,7 @@ class AsyncPagesClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -683,7 +779,8 @@ class AsyncPagesClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -712,14 +809,14 @@ class AsyncPagesClient:
             await client.doc.pages.viewports(
                 doc_id="docId",
                 layer_name="layerName",
-                pon=1,
+                page_key="pageKey",
             )
 
 
         asyncio.run(main())
         """
         _response = await self._raw_client.viewports(
-            doc_id, layer_name, pon, document_password=document_password, request_options=request_options
+            doc_id, layer_name, page_key, document_password=document_password, request_options=request_options
         )
         return _response.data
 
@@ -730,6 +827,7 @@ class AsyncPagesClient:
         *,
         request: DocPagesDeleteRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocPagesDelete200Response:
         """
@@ -743,6 +841,9 @@ class AsyncPagesClient:
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -775,7 +876,12 @@ class AsyncPagesClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.delete(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            request=request,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
         )
         return _response.data
 
@@ -789,7 +895,7 @@ class AsyncPagesClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> typing.AsyncIterator[bytes]:
         """
-        A read, not a mutation: the source document is untouched and no event is published. Body is `{"pageObjectNumbers": number[]}`; the response body is the new PDF.
+        A read, not a mutation: the source document is untouched and no event is published. Body is `{"pages": PageRef[]}`; the response body is the new PDF.
 
         Parameters
         ----------
@@ -845,6 +951,7 @@ class AsyncPagesClient:
         *,
         request: DocPagesFlattenRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocPagesFlatten200Response:
         """
@@ -858,6 +965,9 @@ class AsyncPagesClient:
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -890,7 +1000,12 @@ class AsyncPagesClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.flatten(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            request=request,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
         )
         return _response.data
 
@@ -901,10 +1016,11 @@ class AsyncPagesClient:
         *,
         file: core.File,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocPagesInsert200Response:
         """
-        Multipart mutation envelope: a `body` field holding `{"destIndex"?: number}` (omitted → append) plus a `resource:source` file part carrying the standalone PDF whose pages are copied in. The inserted copies get fresh page object numbers, returned in insertion order.
+        Multipart: a JSON `body` part `{"position"?: PagePosition, "resources": {"source": "<key>"}}` (position omitted → the end), and the standalone PDF whose pages are copied in as the part `resource:<key>`. The inserted copies get fresh page object numbers, returned in insertion order.
 
         Parameters
         ----------
@@ -917,6 +1033,9 @@ class AsyncPagesClient:
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -948,7 +1067,12 @@ class AsyncPagesClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.insert(
-            doc_id, layer_name, file=file, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            file=file,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
         )
         return _response.data
 
@@ -959,10 +1083,11 @@ class AsyncPagesClient:
         *,
         request: DocPagesInsertBlankRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocPagesInsertBlank200Response:
         """
-        Body is `{"size": {"width", "height"}, "count"?, "destIndex"?}` — size in PDF points, count in [1, 100], destIndex omitted → append.
+        Body is `{"size": {"width", "height"}, "count"?, "position"?}` — size in PDF points, count in [1, 100], `position` a `PagePosition` (omitted → the end).
 
         Parameters
         ----------
@@ -974,6 +1099,9 @@ class AsyncPagesClient:
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -1006,63 +1134,12 @@ class AsyncPagesClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.insert_blank(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
-        )
-        return _response.data
-
-    async def move(
-        self,
-        doc_id: str,
-        layer_name: str,
-        *,
-        request: DocPagesMoveRequest,
-        document_password: typing.Optional[str] = None,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesMove200Response:
-        """
-        Parameters
-        ----------
-        doc_id : str
-
-        layer_name : str
-
-        request : DocPagesMoveRequest
-
-        document_password : typing.Optional[str]
-            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-
-        request_options : typing.Optional[RequestOptions]
-            Request-specific configuration.
-
-        Returns
-        -------
-        DocPagesMove200Response
-            OK
-
-        Examples
-        --------
-        import asyncio
-
-        from cloudpdf import AsyncCloudPDFClient
-
-        client = AsyncCloudPDFClient(
-            token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
-        )
-
-
-        async def main() -> None:
-            await client.doc.pages.move(
-                doc_id="docId",
-                layer_name="layerName",
-                request={"key": "value"},
-            )
-
-
-        asyncio.run(main())
-        """
-        _response = await self._raw_client.move(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            request=request,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
         )
         return _response.data
 
@@ -1073,6 +1150,7 @@ class AsyncPagesClient:
         *,
         request: DocPagesSetNameRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocPagesSetName200Response:
         """
@@ -1086,6 +1164,9 @@ class AsyncPagesClient:
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -1118,7 +1199,12 @@ class AsyncPagesClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.set_name(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            request=request,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
         )
         return _response.data
 
@@ -1129,6 +1215,7 @@ class AsyncPagesClient:
         *,
         request: DocPagesRemoveNameRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocPagesRemoveName200Response:
         """
@@ -1142,6 +1229,9 @@ class AsyncPagesClient:
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -1174,7 +1264,87 @@ class AsyncPagesClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.remove_name(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            request=request,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
+        )
+        return _response.data
+
+    async def reorder(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        pages: typing.Sequence[PageRef],
+        position: PagePosition,
+        document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocPagesReorder200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        pages : typing.Sequence[PageRef]
+
+        position : PagePosition
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocPagesReorder200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient, PageRef
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.pages.reorder(
+                doc_id="docId",
+                layer_name="layerName",
+                pages=[
+                    PageRef(
+                        kind="objectNumber",
+                        object_number=1,
+                    )
+                ],
+                position="start",
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.reorder(
+            doc_id,
+            layer_name,
+            pages=pages,
+            position=position,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
         )
         return _response.data
 
@@ -1185,6 +1355,7 @@ class AsyncPagesClient:
         *,
         request: DocPagesRotateRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocPagesRotate200Response:
         """
@@ -1198,6 +1369,9 @@ class AsyncPagesClient:
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -1230,6 +1404,11 @@ class AsyncPagesClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.rotate(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            request=request,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
         )
         return _response.data

@@ -7,7 +7,6 @@ import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
 from .doc_signatures_list200response_signatures_item_coverage import DocSignaturesList200ResponseSignaturesItemCoverage
-from .doc_signatures_list200response_signatures_item_field import DocSignaturesList200ResponseSignaturesItemField
 from .doc_signatures_list200response_signatures_item_field_mdp import DocSignaturesList200ResponseSignaturesItemFieldMdp
 from .doc_signatures_list200response_signatures_item_kind import DocSignaturesList200ResponseSignaturesItemKind
 from .doc_signatures_list200response_signatures_item_lock import DocSignaturesList200ResponseSignaturesItemLock
@@ -15,14 +14,15 @@ from .doc_signatures_list200response_signatures_item_seed_value import (
     DocSignaturesList200ResponseSignaturesItemSeedValue,
 )
 from .doc_signatures_list200response_signatures_item_signer import DocSignaturesList200ResponseSignaturesItemSigner
-from .doc_signatures_list200response_signatures_item_widget import DocSignaturesList200ResponseSignaturesItemWidget
+from .form_field_ref import FormFieldRef
+from .form_widget import FormWidget
 
 
 class DocSignaturesList200ResponseSignaturesItem(UniversalBaseModel):
     index: int
-    field: DocSignaturesList200ResponseSignaturesItemField
+    field: FormFieldRef
     field_name: typing_extensions.Annotated[str, FieldMetadata(alias="fieldName"), pydantic.Field(alias="fieldName")]
-    widget: typing.Optional[DocSignaturesList200ResponseSignaturesItemWidget] = None
+    widget: typing.Optional[FormWidget] = None
     signed: bool
     kind: DocSignaturesList200ResponseSignaturesItemKind
     filter: typing.Optional[str] = None

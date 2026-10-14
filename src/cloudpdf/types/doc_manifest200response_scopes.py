@@ -8,6 +8,7 @@ from .doc_manifest200response_scopes_actions import DocManifest200ResponseScopes
 from .doc_manifest200response_scopes_annotations import DocManifest200ResponseScopesAnnotations
 from .doc_manifest200response_scopes_attachments import DocManifest200ResponseScopesAttachments
 from .doc_manifest200response_scopes_content import DocManifest200ResponseScopesContent
+from .doc_manifest200response_scopes_forms import DocManifest200ResponseScopesForms
 from .doc_manifest200response_scopes_layout import DocManifest200ResponseScopesLayout
 from .doc_manifest200response_scopes_metadata import DocManifest200ResponseScopesMetadata
 
@@ -15,6 +16,7 @@ from .doc_manifest200response_scopes_metadata import DocManifest200ResponseScope
 class DocManifest200ResponseScopes(UniversalBaseModel):
     content: DocManifest200ResponseScopesContent
     annotations: DocManifest200ResponseScopesAnnotations
+    forms: DocManifest200ResponseScopesForms
     layout: DocManifest200ResponseScopesLayout
     attachments: DocManifest200ResponseScopesAttachments
     metadata: DocManifest200ResponseScopesMetadata

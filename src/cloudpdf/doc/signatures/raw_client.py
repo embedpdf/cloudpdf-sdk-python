@@ -15,8 +15,8 @@ from ...core.serialization import convert_and_respect_annotation_metadata
 from ...errors.bad_request_error import BadRequestError
 from ...errors.conflict_error import ConflictError
 from ...errors.not_found_error import NotFoundError
-from ...types.doc_signatures_abort200response import DocSignaturesAbort200Response
 from ...types.doc_signatures_analysis200response import DocSignaturesAnalysis200Response
+from ...types.doc_signatures_cancel200response import DocSignaturesCancel200Response
 from ...types.doc_signatures_complete200response import DocSignaturesComplete200Response
 from ...types.doc_signatures_list200response import DocSignaturesList200Response
 from ...types.doc_signatures_prepare200response import DocSignaturesPrepare200Response
@@ -98,7 +98,7 @@ class RawSignaturesClient:
             )
         raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
-    def abort(
+    def cancel(
         self,
         doc_id: str,
         layer_name: str,
@@ -106,7 +106,7 @@ class RawSignaturesClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocSignaturesAbort200Response]:
+    ) -> HttpResponse[DocSignaturesCancel200Response]:
         """
         Parameters
         ----------
@@ -124,7 +124,7 @@ class RawSignaturesClient:
 
         Returns
         -------
-        HttpResponse[DocSignaturesAbort200Response]
+        HttpResponse[DocSignaturesCancel200Response]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -138,9 +138,9 @@ class RawSignaturesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocSignaturesAbort200Response,
+                    DocSignaturesCancel200Response,
                     parse_obj_as(
-                        type_=DocSignaturesAbort200Response,  # type: ignore
+                        type_=DocSignaturesCancel200Response,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -371,7 +371,7 @@ class RawSignaturesClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocSignaturesPrepare200Response]:
         """
-        The multipart envelope: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock, appearance) and an optional `resource:<key>` PDF part the body's `appearance.resource` names. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is aborted, or expires (15 minutes). A layer behind the document head cannot sign (StaleBase).
+        Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock), naming the appearance PDF it may carry as `resources: { appearance: '<key>' }`, and that PDF as the part `resource:<key>`. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is cancelled, or expires (15 minutes). A layer behind the document head cannot sign (StaleBase).
 
         Parameters
         ----------
@@ -530,7 +530,7 @@ class AsyncRawSignaturesClient:
             )
         raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
-    async def abort(
+    async def cancel(
         self,
         doc_id: str,
         layer_name: str,
@@ -538,7 +538,7 @@ class AsyncRawSignaturesClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocSignaturesAbort200Response]:
+    ) -> AsyncHttpResponse[DocSignaturesCancel200Response]:
         """
         Parameters
         ----------
@@ -556,7 +556,7 @@ class AsyncRawSignaturesClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocSignaturesAbort200Response]
+        AsyncHttpResponse[DocSignaturesCancel200Response]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -570,9 +570,9 @@ class AsyncRawSignaturesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocSignaturesAbort200Response,
+                    DocSignaturesCancel200Response,
                     parse_obj_as(
-                        type_=DocSignaturesAbort200Response,  # type: ignore
+                        type_=DocSignaturesCancel200Response,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -803,7 +803,7 @@ class AsyncRawSignaturesClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocSignaturesPrepare200Response]:
         """
-        The multipart envelope: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock, appearance) and an optional `resource:<key>` PDF part the body's `appearance.resource` names. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is aborted, or expires (15 minutes). A layer behind the document head cannot sign (StaleBase).
+        Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock), naming the appearance PDF it may carry as `resources: { appearance: '<key>' }`, and that PDF as the part `resource:<key>`. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is cancelled, or expires (15 minutes). A layer behind the document head cannot sign (StaleBase).
 
         Parameters
         ----------

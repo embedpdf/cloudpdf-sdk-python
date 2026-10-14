@@ -2,4 +2,4 @@
 
 import typing
 
-DocPagesSetScaleRequestMeasureSubtype = typing.Union[typing.Literal["RL"], typing.Any]
+DocPagesSetScaleRequestMeasureSubtype = typing.Union[typing.Literal["rectilinear"], typing.Any]

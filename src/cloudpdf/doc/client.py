@@ -6,10 +6,12 @@ import typing
 
 from ..core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ..core.request_options import RequestOptions
+from ..types.doc_changes200response import DocChanges200Response
 from ..types.doc_head200response import DocHead200Response
 from ..types.doc_manifest200response import DocManifest200Response
 from ..types.doc_text200response import DocText200Response
 from .raw_client import AsyncRawDocClient, RawDocClient
+from .types.doc_changes_request_changes_item import DocChangesRequestChangesItem
 
 if typing.TYPE_CHECKING:
     from .annotations.client import AnnotationsClient, AsyncAnnotationsClient
@@ -19,6 +21,8 @@ if typing.TYPE_CHECKING:
     from .redactions.client import AsyncRedactionsClient, RedactionsClient
     from .signatures.client import AsyncSignaturesClient, SignaturesClient
     from .versions.client import AsyncVersionsClient, VersionsClient
+# this is used as the default value for optional parameters
+OMIT = typing.cast(typing.Any, ...)
 
 
 class DocClient:
@@ -80,6 +84,61 @@ class DocClient:
         )
         """
         _response = self._raw_client.head(doc_id, document_password=document_password, request_options=request_options)
+        return _response.data
+
+    def changes(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        changes: typing.Sequence[DocChangesRequestChangesItem],
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocChanges200Response:
+        """
+        Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        changes : typing.Sequence[DocChangesRequestChangesItem]
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocChanges200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+        from cloudpdf.doc import DocChangesRequestChangesItem
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.changes(
+            doc_id="docId",
+            layer_name="layerName",
+            changes=[
+                DocChangesRequestChangesItem(
+                    op_id="opId",
+                )
+            ],
+        )
+        """
+        _response = self._raw_client.changes(
+            doc_id, layer_name, changes=changes, document_password=document_password, request_options=request_options
+        )
         return _response.data
 
     def download(
@@ -174,7 +233,7 @@ class DocClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -188,7 +247,8 @@ class DocClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -212,11 +272,11 @@ class DocClient:
         client.doc.render(
             doc_id="docId",
             layer_name="layerName",
-            pon=1,
+            page_key="pageKey",
         )
         """
         with self._raw_client.render(
-            doc_id, layer_name, pon, document_password=document_password, request_options=request_options
+            doc_id, layer_name, page_key, document_password=document_password, request_options=request_options
         ) as r:
             yield from r.data
 
@@ -224,7 +284,7 @@ class DocClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -236,7 +296,8 @@ class DocClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -260,11 +321,11 @@ class DocClient:
         client.doc.text(
             doc_id="docId",
             layer_name="layerName",
-            pon=1,
+            page_key="pageKey",
         )
         """
         _response = self._raw_client.text(
-            doc_id, layer_name, pon, document_password=document_password, request_options=request_options
+            doc_id, layer_name, page_key, document_password=document_password, request_options=request_options
         )
         return _response.data
 
@@ -396,6 +457,69 @@ class AsyncDocClient:
         )
         return _response.data
 
+    async def changes(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        changes: typing.Sequence[DocChangesRequestChangesItem],
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocChanges200Response:
+        """
+        Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        changes : typing.Sequence[DocChangesRequestChangesItem]
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocChanges200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+        from cloudpdf.doc import DocChangesRequestChangesItem
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.changes(
+                doc_id="docId",
+                layer_name="layerName",
+                changes=[
+                    DocChangesRequestChangesItem(
+                        op_id="opId",
+                    )
+                ],
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.changes(
+            doc_id, layer_name, changes=changes, document_password=document_password, request_options=request_options
+        )
+        return _response.data
+
     async def download(
         self,
         doc_id: str,
@@ -505,7 +629,7 @@ class AsyncDocClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -519,7 +643,8 @@ class AsyncDocClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -548,14 +673,14 @@ class AsyncDocClient:
             await client.doc.render(
                 doc_id="docId",
                 layer_name="layerName",
-                pon=1,
+                page_key="pageKey",
             )
 
 
         asyncio.run(main())
         """
         async with self._raw_client.render(
-            doc_id, layer_name, pon, document_password=document_password, request_options=request_options
+            doc_id, layer_name, page_key, document_password=document_password, request_options=request_options
         ) as r:
             async for _chunk in r.data:
                 yield _chunk
@@ -564,7 +689,7 @@ class AsyncDocClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -576,7 +701,8 @@ class AsyncDocClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -605,14 +731,14 @@ class AsyncDocClient:
             await client.doc.text(
                 doc_id="docId",
                 layer_name="layerName",
-                pon=1,
+                page_key="pageKey",
             )
 
 
         asyncio.run(main())
         """
         _response = await self._raw_client.text(
-            doc_id, layer_name, pon, document_password=document_password, request_options=request_options
+            doc_id, layer_name, page_key, document_password=document_password, request_options=request_options
         )
         return _response.data
 

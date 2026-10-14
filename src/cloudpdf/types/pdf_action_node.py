@@ -8,9 +8,9 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
+from .page_destination import PageDestination
 from .pdf_action_node_submit_form_payload import PdfActionNodeSubmitFormPayload
 from .pdf_action_target_ref import PdfActionTargetRef
-from .pdf_destination import PdfDestination
 
 
 class PdfActionNode_Javascript(UniversalBaseModel):
@@ -33,7 +33,7 @@ class PdfActionNode_Goto(UniversalBaseModel):
     type: typing.Literal["goto"] = "goto"
     subtype: str
     next: typing.List[typing.Any]
-    destination: PdfDestination
+    destination: PageDestination
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

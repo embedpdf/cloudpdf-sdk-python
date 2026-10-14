@@ -4,11 +4,13 @@ import typing
 
 import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
-from .doc_pages_rotate200response_meta import DocPagesRotate200ResponseMeta
+from .doc_pages_rotate200response_layout import DocPagesRotate200ResponseLayout
+from .mutation_meta import MutationMeta
 
 
 class DocPagesRotate200Response(UniversalBaseModel):
-    meta: DocPagesRotate200ResponseMeta
+    layout: DocPagesRotate200ResponseLayout
+    meta: MutationMeta
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

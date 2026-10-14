@@ -5,8 +5,8 @@ import typing
 from ... import core
 from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
-from ...types.doc_signatures_abort200response import DocSignaturesAbort200Response
 from ...types.doc_signatures_analysis200response import DocSignaturesAnalysis200Response
+from ...types.doc_signatures_cancel200response import DocSignaturesCancel200Response
 from ...types.doc_signatures_complete200response import DocSignaturesComplete200Response
 from ...types.doc_signatures_list200response import DocSignaturesList200Response
 from ...types.doc_signatures_prepare200response import DocSignaturesPrepare200Response
@@ -79,7 +79,7 @@ class SignaturesClient:
         )
         return _response.data
 
-    def abort(
+    def cancel(
         self,
         doc_id: str,
         layer_name: str,
@@ -87,7 +87,7 @@ class SignaturesClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocSignaturesAbort200Response:
+    ) -> DocSignaturesCancel200Response:
         """
         Parameters
         ----------
@@ -105,7 +105,7 @@ class SignaturesClient:
 
         Returns
         -------
-        DocSignaturesAbort200Response
+        DocSignaturesCancel200Response
             OK
 
         Examples
@@ -116,13 +116,13 @@ class SignaturesClient:
             token="YOUR_TOKEN",
             base_url="https://yourhost.com/path/to/api",
         )
-        client.doc.signatures.abort(
+        client.doc.signatures.cancel(
             doc_id="docId",
             layer_name="layerName",
             signing_id="signingId",
         )
         """
-        _response = self._raw_client.abort(
+        _response = self._raw_client.cancel(
             doc_id, layer_name, signing_id, document_password=document_password, request_options=request_options
         )
         return _response.data
@@ -266,7 +266,7 @@ class SignaturesClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocSignaturesPrepare200Response:
         """
-        The multipart envelope: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock, appearance) and an optional `resource:<key>` PDF part the body's `appearance.resource` names. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is aborted, or expires (15 minutes). A layer behind the document head cannot sign (StaleBase).
+        Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock), naming the appearance PDF it may carry as `resources: { appearance: '<key>' }`, and that PDF as the part `resource:<key>`. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is cancelled, or expires (15 minutes). A layer behind the document head cannot sign (StaleBase).
 
         Parameters
         ----------
@@ -376,7 +376,7 @@ class AsyncSignaturesClient:
         )
         return _response.data
 
-    async def abort(
+    async def cancel(
         self,
         doc_id: str,
         layer_name: str,
@@ -384,7 +384,7 @@ class AsyncSignaturesClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocSignaturesAbort200Response:
+    ) -> DocSignaturesCancel200Response:
         """
         Parameters
         ----------
@@ -402,7 +402,7 @@ class AsyncSignaturesClient:
 
         Returns
         -------
-        DocSignaturesAbort200Response
+        DocSignaturesCancel200Response
             OK
 
         Examples
@@ -418,7 +418,7 @@ class AsyncSignaturesClient:
 
 
         async def main() -> None:
-            await client.doc.signatures.abort(
+            await client.doc.signatures.cancel(
                 doc_id="docId",
                 layer_name="layerName",
                 signing_id="signingId",
@@ -427,7 +427,7 @@ class AsyncSignaturesClient:
 
         asyncio.run(main())
         """
-        _response = await self._raw_client.abort(
+        _response = await self._raw_client.cancel(
             doc_id, layer_name, signing_id, document_password=document_password, request_options=request_options
         )
         return _response.data
@@ -587,7 +587,7 @@ class AsyncSignaturesClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocSignaturesPrepare200Response:
         """
-        The multipart envelope: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock, appearance) and an optional `resource:<key>` PDF part the body's `appearance.resource` names. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is aborted, or expires (15 minutes). A layer behind the document head cannot sign (StaleBase).
+        Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock), naming the appearance PDF it may carry as `resources: { appearance: '<key>' }`, and that PDF as the part `resource:<key>`. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is cancelled, or expires (15 minutes). A layer behind the document head cannot sign (StaleBase).
 
         Parameters
         ----------

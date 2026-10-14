@@ -5,11 +5,11 @@ import typing
 import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from .doc_manifest200response_pages_item_cache import DocManifest200ResponsePagesItemCache
-from .doc_manifest200response_pages_item_state import DocManifest200ResponsePagesItemState
+from .page_ref import PageRef
 
 
 class DocManifest200ResponsePagesItem(UniversalBaseModel):
-    state: DocManifest200ResponsePagesItemState
+    page: PageRef
     cache: DocManifest200ResponsePagesItemCache
 
     if IS_PYDANTIC_V2:
