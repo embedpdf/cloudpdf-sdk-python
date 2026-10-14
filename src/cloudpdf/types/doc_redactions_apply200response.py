@@ -3,12 +3,21 @@
 import typing
 
 import pydantic
+import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
-from .doc_redactions_apply200response_meta import DocRedactionsApply200ResponseMeta
+from ..core.serialization import FieldMetadata
+from .doc_redactions_apply200response_results_item import DocRedactionsApply200ResponseResultsItem
+from .doc_redactions_apply200response_scope import DocRedactionsApply200ResponseScope
+from .mutation_meta import MutationMeta
 
 
 class DocRedactionsApply200Response(UniversalBaseModel):
-    meta: DocRedactionsApply200ResponseMeta
+    scope: DocRedactionsApply200ResponseScope
+    results: typing.List[DocRedactionsApply200ResponseResultsItem]
+    removed_annotation_count: typing_extensions.Annotated[
+        int, FieldMetadata(alias="removedAnnotationCount"), pydantic.Field(alias="removedAnnotationCount")
+    ]
+    meta: MutationMeta
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

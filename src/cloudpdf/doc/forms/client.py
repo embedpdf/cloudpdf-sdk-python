@@ -4,14 +4,20 @@ import typing
 
 from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
-from ...types.doc_forms_get200response import DocFormsGet200Response
-from ...types.doc_forms_import_data200response import DocFormsImportData200Response
-from ...types.doc_forms_import_data_request import DocFormsImportDataRequest
+from ...types.annotation_position import AnnotationPosition
+from ...types.annotation_ref import AnnotationRef
+from ...types.doc_forms_delete_widget200response import DocFormsDeleteWidget200Response
+from ...types.doc_forms_list200response import DocFormsList200Response
+from ...types.doc_forms_reorder_calculations200response import DocFormsReorderCalculations200Response
+from ...types.doc_forms_reorder_widgets200response import DocFormsReorderWidgets200Response
 from ...types.doc_forms_reset200response import DocFormsReset200Response
 from ...types.doc_forms_set_value200response import DocFormsSetValue200Response
 from ...types.doc_forms_set_value_request import DocFormsSetValueRequest
+from ...types.doc_forms_update_widget200response import DocFormsUpdateWidget200Response
+from ...types.field_position import FieldPosition
+from ...types.form_field_ref import FormFieldRef
+from ...types.widget_patch import WidgetPatch
 from .raw_client import AsyncRawFormsClient, RawFormsClient
-from .types.export_data_forms_request_format import ExportDataFormsRequestFormat
 
 # this is used as the default value for optional parameters
 OMIT = typing.cast(typing.Any, ...)
@@ -32,14 +38,14 @@ class FormsClient:
         """
         return self._raw_client
 
-    def get(
+    def list(
         self,
         doc_id: str,
         layer_name: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsGet200Response:
+    ) -> DocFormsList200Response:
         """
         Parameters
         ----------
@@ -55,7 +61,7 @@ class FormsClient:
 
         Returns
         -------
-        DocFormsGet200Response
+        DocFormsList200Response
             OK
 
         Examples
@@ -66,25 +72,27 @@ class FormsClient:
             token="YOUR_TOKEN",
             base_url="https://yourhost.com/path/to/api",
         )
-        client.doc.forms.get(
+        client.doc.forms.list(
             doc_id="docId",
             layer_name="layerName",
         )
         """
-        _response = self._raw_client.get(
+        _response = self._raw_client.list(
             doc_id, layer_name, document_password=document_password, request_options=request_options
         )
         return _response.data
 
-    def export_data(
+    def reorder_calculations(
         self,
         doc_id: str,
         layer_name: str,
         *,
-        format: typing.Optional[ExportDataFormsRequestFormat] = None,
+        fields: typing.Sequence[FormFieldRef],
+        position: FieldPosition,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> typing.Iterator[bytes]:
+    ) -> DocFormsReorderCalculations200Response:
         """
         Parameters
         ----------
@@ -92,130 +100,51 @@ class FormsClient:
 
         layer_name : str
 
-        format : typing.Optional[ExportDataFormsRequestFormat]
+        fields : typing.Sequence[FormFieldRef]
+
+        position : FieldPosition
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
 
-        request_options : typing.Optional[RequestOptions]
-            Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
-
-        Returns
-        -------
-        typing.Iterator[bytes]
-            OK
-
-        Examples
-        --------
-        from cloudpdf import CloudPDFClient
-
-        client = CloudPDFClient(
-            token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
-        )
-        client.doc.forms.export_data(
-            doc_id="docId",
-            layer_name="layerName",
-        )
-        """
-        with self._raw_client.export_data(
-            doc_id, layer_name, format=format, document_password=document_password, request_options=request_options
-        ) as r:
-            yield from r.data
-
-    def import_data(
-        self,
-        doc_id: str,
-        layer_name: str,
-        *,
-        request: DocFormsImportDataRequest,
-        document_password: typing.Optional[str] = None,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsImportData200Response:
-        """
-        Parameters
-        ----------
-        doc_id : str
-
-        layer_name : str
-
-        request : DocFormsImportDataRequest
-
-        document_password : typing.Optional[str]
-            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        DocFormsImportData200Response
+        DocFormsReorderCalculations200Response
             OK
 
         Examples
         --------
-        from cloudpdf import CloudPDFClient
+        from cloudpdf import CloudPDFClient, FormFieldRef_ObjectNumber
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
             base_url="https://yourhost.com/path/to/api",
         )
-        client.doc.forms.import_data(
+        client.doc.forms.reorder_calculations(
             doc_id="docId",
             layer_name="layerName",
-            request={"key": "value"},
+            fields=[
+                FormFieldRef_ObjectNumber(
+                    object_number=1,
+                )
+            ],
+            position="start",
         )
         """
-        _response = self._raw_client.import_data(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
-        )
-        return _response.data
-
-    def reset(
-        self,
-        doc_id: str,
-        layer_name: str,
-        field_key: str,
-        *,
-        document_password: typing.Optional[str] = None,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsReset200Response:
-        """
-        Parameters
-        ----------
-        doc_id : str
-
-        layer_name : str
-
-        field_key : str
-
-        document_password : typing.Optional[str]
-            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-
-        request_options : typing.Optional[RequestOptions]
-            Request-specific configuration.
-
-        Returns
-        -------
-        DocFormsReset200Response
-            OK
-
-        Examples
-        --------
-        from cloudpdf import CloudPDFClient
-
-        client = CloudPDFClient(
-            token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
-        )
-        client.doc.forms.reset(
-            doc_id="docId",
-            layer_name="layerName",
-            field_key="fieldKey",
-        )
-        """
-        _response = self._raw_client.reset(
-            doc_id, layer_name, field_key, document_password=document_password, request_options=request_options
+        _response = self._raw_client.reorder_calculations(
+            doc_id,
+            layer_name,
+            fields=fields,
+            position=position,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
         )
         return _response.data
 
@@ -227,6 +156,7 @@ class FormsClient:
         *,
         request: DocFormsSetValueRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocFormsSetValue200Response:
         """
@@ -242,6 +172,9 @@ class FormsClient:
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -272,6 +205,272 @@ class FormsClient:
             field_key,
             request=request,
             document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
+        )
+        return _response.data
+
+    def reset(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        refs: typing.Optional[typing.Sequence[FormFieldRef]] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocFormsReset200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        refs : typing.Optional[typing.Sequence[FormFieldRef]]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocFormsReset200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.forms.reset(
+            doc_id="docId",
+            layer_name="layerName",
+        )
+        """
+        _response = self._raw_client.reset(
+            doc_id,
+            layer_name,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            refs=refs,
+            request_options=request_options,
+        )
+        return _response.data
+
+    def delete_widget(
+        self,
+        doc_id: str,
+        layer_name: str,
+        page_key: str,
+        annot_key: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocFormsDeleteWidget200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+
+        annot_key : str
+            The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocFormsDeleteWidget200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.forms.delete_widget(
+            doc_id="docId",
+            layer_name="layerName",
+            page_key="pageKey",
+            annot_key="annotKey",
+        )
+        """
+        _response = self._raw_client.delete_widget(
+            doc_id,
+            layer_name,
+            page_key,
+            annot_key,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
+        )
+        return _response.data
+
+    def update_widget(
+        self,
+        doc_id: str,
+        layer_name: str,
+        page_key: str,
+        annot_key: str,
+        *,
+        patch: WidgetPatch,
+        document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocFormsUpdateWidget200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+
+        annot_key : str
+            The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
+
+        patch : WidgetPatch
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocFormsUpdateWidget200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient, WidgetPatch
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.forms.update_widget(
+            doc_id="docId",
+            layer_name="layerName",
+            page_key="pageKey",
+            annot_key="annotKey",
+            patch=WidgetPatch(),
+        )
+        """
+        _response = self._raw_client.update_widget(
+            doc_id,
+            layer_name,
+            page_key,
+            annot_key,
+            patch=patch,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
+        )
+        return _response.data
+
+    def reorder_widgets(
+        self,
+        doc_id: str,
+        layer_name: str,
+        page_key: str,
+        *,
+        widgets: typing.Sequence[AnnotationRef],
+        position: AnnotationPosition,
+        document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocFormsReorderWidgets200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+
+        widgets : typing.Sequence[AnnotationRef]
+
+        position : AnnotationPosition
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocFormsReorderWidgets200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import AnnotationRef_ObjectNumber, CloudPDFClient, PageRef
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.forms.reorder_widgets(
+            doc_id="docId",
+            layer_name="layerName",
+            page_key="pageKey",
+            widgets=[
+                AnnotationRef_ObjectNumber(
+                    page=PageRef(
+                        kind="objectNumber",
+                        object_number=1,
+                    ),
+                    object_number=1,
+                )
+            ],
+            position="start",
+        )
+        """
+        _response = self._raw_client.reorder_widgets(
+            doc_id,
+            layer_name,
+            page_key,
+            widgets=widgets,
+            position=position,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
             request_options=request_options,
         )
         return _response.data
@@ -292,14 +491,14 @@ class AsyncFormsClient:
         """
         return self._raw_client
 
-    async def get(
+    async def list(
         self,
         doc_id: str,
         layer_name: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsGet200Response:
+    ) -> DocFormsList200Response:
         """
         Parameters
         ----------
@@ -315,7 +514,7 @@ class AsyncFormsClient:
 
         Returns
         -------
-        DocFormsGet200Response
+        DocFormsList200Response
             OK
 
         Examples
@@ -331,7 +530,7 @@ class AsyncFormsClient:
 
 
         async def main() -> None:
-            await client.doc.forms.get(
+            await client.doc.forms.list(
                 doc_id="docId",
                 layer_name="layerName",
             )
@@ -339,20 +538,22 @@ class AsyncFormsClient:
 
         asyncio.run(main())
         """
-        _response = await self._raw_client.get(
+        _response = await self._raw_client.list(
             doc_id, layer_name, document_password=document_password, request_options=request_options
         )
         return _response.data
 
-    async def export_data(
+    async def reorder_calculations(
         self,
         doc_id: str,
         layer_name: str,
         *,
-        format: typing.Optional[ExportDataFormsRequestFormat] = None,
+        fields: typing.Sequence[FormFieldRef],
+        position: FieldPosition,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> typing.AsyncIterator[bytes]:
+    ) -> DocFormsReorderCalculations200Response:
         """
         Parameters
         ----------
@@ -360,80 +561,29 @@ class AsyncFormsClient:
 
         layer_name : str
 
-        format : typing.Optional[ExportDataFormsRequestFormat]
+        fields : typing.Sequence[FormFieldRef]
+
+        position : FieldPosition
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
 
-        request_options : typing.Optional[RequestOptions]
-            Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
-
-        Returns
-        -------
-        typing.AsyncIterator[bytes]
-            OK
-
-        Examples
-        --------
-        import asyncio
-
-        from cloudpdf import AsyncCloudPDFClient
-
-        client = AsyncCloudPDFClient(
-            token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
-        )
-
-
-        async def main() -> None:
-            await client.doc.forms.export_data(
-                doc_id="docId",
-                layer_name="layerName",
-            )
-
-
-        asyncio.run(main())
-        """
-        async with self._raw_client.export_data(
-            doc_id, layer_name, format=format, document_password=document_password, request_options=request_options
-        ) as r:
-            async for _chunk in r.data:
-                yield _chunk
-
-    async def import_data(
-        self,
-        doc_id: str,
-        layer_name: str,
-        *,
-        request: DocFormsImportDataRequest,
-        document_password: typing.Optional[str] = None,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsImportData200Response:
-        """
-        Parameters
-        ----------
-        doc_id : str
-
-        layer_name : str
-
-        request : DocFormsImportDataRequest
-
-        document_password : typing.Optional[str]
-            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        DocFormsImportData200Response
+        DocFormsReorderCalculations200Response
             OK
 
         Examples
         --------
         import asyncio
 
-        from cloudpdf import AsyncCloudPDFClient
+        from cloudpdf import AsyncCloudPDFClient, FormFieldRef_ObjectNumber
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
@@ -442,73 +592,28 @@ class AsyncFormsClient:
 
 
         async def main() -> None:
-            await client.doc.forms.import_data(
+            await client.doc.forms.reorder_calculations(
                 doc_id="docId",
                 layer_name="layerName",
-                request={"key": "value"},
+                fields=[
+                    FormFieldRef_ObjectNumber(
+                        object_number=1,
+                    )
+                ],
+                position="start",
             )
 
 
         asyncio.run(main())
         """
-        _response = await self._raw_client.import_data(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
-        )
-        return _response.data
-
-    async def reset(
-        self,
-        doc_id: str,
-        layer_name: str,
-        field_key: str,
-        *,
-        document_password: typing.Optional[str] = None,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsReset200Response:
-        """
-        Parameters
-        ----------
-        doc_id : str
-
-        layer_name : str
-
-        field_key : str
-
-        document_password : typing.Optional[str]
-            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-
-        request_options : typing.Optional[RequestOptions]
-            Request-specific configuration.
-
-        Returns
-        -------
-        DocFormsReset200Response
-            OK
-
-        Examples
-        --------
-        import asyncio
-
-        from cloudpdf import AsyncCloudPDFClient
-
-        client = AsyncCloudPDFClient(
-            token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
-        )
-
-
-        async def main() -> None:
-            await client.doc.forms.reset(
-                doc_id="docId",
-                layer_name="layerName",
-                field_key="fieldKey",
-            )
-
-
-        asyncio.run(main())
-        """
-        _response = await self._raw_client.reset(
-            doc_id, layer_name, field_key, document_password=document_password, request_options=request_options
+        _response = await self._raw_client.reorder_calculations(
+            doc_id,
+            layer_name,
+            fields=fields,
+            position=position,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
         )
         return _response.data
 
@@ -520,6 +625,7 @@ class AsyncFormsClient:
         *,
         request: DocFormsSetValueRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocFormsSetValue200Response:
         """
@@ -535,6 +641,9 @@ class AsyncFormsClient:
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -573,6 +682,304 @@ class AsyncFormsClient:
             field_key,
             request=request,
             document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
+        )
+        return _response.data
+
+    async def reset(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        refs: typing.Optional[typing.Sequence[FormFieldRef]] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocFormsReset200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        refs : typing.Optional[typing.Sequence[FormFieldRef]]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocFormsReset200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.forms.reset(
+                doc_id="docId",
+                layer_name="layerName",
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.reset(
+            doc_id,
+            layer_name,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            refs=refs,
+            request_options=request_options,
+        )
+        return _response.data
+
+    async def delete_widget(
+        self,
+        doc_id: str,
+        layer_name: str,
+        page_key: str,
+        annot_key: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocFormsDeleteWidget200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+
+        annot_key : str
+            The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocFormsDeleteWidget200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.forms.delete_widget(
+                doc_id="docId",
+                layer_name="layerName",
+                page_key="pageKey",
+                annot_key="annotKey",
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.delete_widget(
+            doc_id,
+            layer_name,
+            page_key,
+            annot_key,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
+        )
+        return _response.data
+
+    async def update_widget(
+        self,
+        doc_id: str,
+        layer_name: str,
+        page_key: str,
+        annot_key: str,
+        *,
+        patch: WidgetPatch,
+        document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocFormsUpdateWidget200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+
+        annot_key : str
+            The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
+
+        patch : WidgetPatch
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocFormsUpdateWidget200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient, WidgetPatch
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.forms.update_widget(
+                doc_id="docId",
+                layer_name="layerName",
+                page_key="pageKey",
+                annot_key="annotKey",
+                patch=WidgetPatch(),
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.update_widget(
+            doc_id,
+            layer_name,
+            page_key,
+            annot_key,
+            patch=patch,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            request_options=request_options,
+        )
+        return _response.data
+
+    async def reorder_widgets(
+        self,
+        doc_id: str,
+        layer_name: str,
+        page_key: str,
+        *,
+        widgets: typing.Sequence[AnnotationRef],
+        position: AnnotationPosition,
+        document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocFormsReorderWidgets200Response:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+
+        widgets : typing.Sequence[AnnotationRef]
+
+        position : AnnotationPosition
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocFormsReorderWidgets200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AnnotationRef_ObjectNumber, AsyncCloudPDFClient, PageRef
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.forms.reorder_widgets(
+                doc_id="docId",
+                layer_name="layerName",
+                page_key="pageKey",
+                widgets=[
+                    AnnotationRef_ObjectNumber(
+                        page=PageRef(
+                            kind="objectNumber",
+                            object_number=1,
+                        ),
+                        object_number=1,
+                    )
+                ],
+                position="start",
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.reorder_widgets(
+            doc_id,
+            layer_name,
+            page_key,
+            widgets=widgets,
+            position=position,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
             request_options=request_options,
         )
         return _response.data

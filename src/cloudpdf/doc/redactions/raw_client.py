@@ -10,10 +10,12 @@ from ...core.jsonable_encoder import encode_path_param
 from ...core.parse_error import ParsingError
 from ...core.pydantic_utilities import parse_obj_as
 from ...core.request_options import RequestOptions
+from ...core.serialization import convert_and_respect_annotation_metadata
 from ...errors.bad_request_error import BadRequestError
 from ...errors.not_found_error import NotFoundError
+from ...types.annotation_ref import AnnotationRef
 from ...types.doc_redactions_apply200response import DocRedactionsApply200Response
-from ...types.doc_redactions_apply_request import DocRedactionsApplyRequest
+from ...types.page_ref import PageRef
 from pydantic import ValidationError
 
 # this is used as the default value for optional parameters
@@ -29,8 +31,10 @@ class RawRedactionsClient:
         doc_id: str,
         layer_name: str,
         *,
-        request: DocRedactionsApplyRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        pages: typing.Optional[typing.Sequence[PageRef]] = OMIT,
+        annotations: typing.Optional[typing.Sequence[AnnotationRef]] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocRedactionsApply200Response]:
         """
@@ -40,10 +44,15 @@ class RawRedactionsClient:
 
         layer_name : str
 
-        request : DocRedactionsApplyRequest
-
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        pages : typing.Optional[typing.Sequence[PageRef]]
+
+        annotations : typing.Optional[typing.Sequence[AnnotationRef]]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -56,10 +65,18 @@ class RawRedactionsClient:
         _response = self._client_wrapper.httpx_client.request(
             f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/redactions/apply",
             method="POST",
-            json=request,
+            json={
+                "pages": convert_and_respect_annotation_metadata(
+                    object_=pages, annotation=typing.Sequence[PageRef], direction="write"
+                ),
+                "annotations": convert_and_respect_annotation_metadata(
+                    object_=annotations, annotation=typing.Sequence[AnnotationRef], direction="write"
+                ),
+            },
             headers={
                 "content-type": "application/json",
                 "X-Document-Password": str(document_password) if document_password is not None else None,
+                "Idempotency-Key": str(idempotency_key) if idempotency_key is not None else None,
             },
             request_options=request_options,
             omit=OMIT,
@@ -115,8 +132,10 @@ class AsyncRawRedactionsClient:
         doc_id: str,
         layer_name: str,
         *,
-        request: DocRedactionsApplyRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        pages: typing.Optional[typing.Sequence[PageRef]] = OMIT,
+        annotations: typing.Optional[typing.Sequence[AnnotationRef]] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocRedactionsApply200Response]:
         """
@@ -126,10 +145,15 @@ class AsyncRawRedactionsClient:
 
         layer_name : str
 
-        request : DocRedactionsApplyRequest
-
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        pages : typing.Optional[typing.Sequence[PageRef]]
+
+        annotations : typing.Optional[typing.Sequence[AnnotationRef]]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -142,10 +166,18 @@ class AsyncRawRedactionsClient:
         _response = await self._client_wrapper.httpx_client.request(
             f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/redactions/apply",
             method="POST",
-            json=request,
+            json={
+                "pages": convert_and_respect_annotation_metadata(
+                    object_=pages, annotation=typing.Sequence[PageRef], direction="write"
+                ),
+                "annotations": convert_and_respect_annotation_metadata(
+                    object_=annotations, annotation=typing.Sequence[AnnotationRef], direction="write"
+                ),
+            },
             headers={
                 "content-type": "application/json",
                 "X-Document-Password": str(document_password) if document_password is not None else None,
+                "Idempotency-Key": str(idempotency_key) if idempotency_key is not None else None,
             },
             request_options=request_options,
             omit=OMIT,

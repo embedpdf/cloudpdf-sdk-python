@@ -4,11 +4,17 @@ import typing
 
 import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
-from .doc_annotations_flatten200response_meta import DocAnnotationsFlatten200ResponseMeta
+from .doc_annotations_flatten200response_results_item import DocAnnotationsFlatten200ResponseResultsItem
+from .doc_annotations_flatten200response_usage import DocAnnotationsFlatten200ResponseUsage
+from .mutation_meta import MutationMeta
+from .page_ref import PageRef
 
 
 class DocAnnotationsFlatten200Response(UniversalBaseModel):
-    meta: DocAnnotationsFlatten200ResponseMeta
+    page: PageRef
+    usage: DocAnnotationsFlatten200ResponseUsage
+    results: typing.List[DocAnnotationsFlatten200ResponseResultsItem]
+    meta: MutationMeta
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

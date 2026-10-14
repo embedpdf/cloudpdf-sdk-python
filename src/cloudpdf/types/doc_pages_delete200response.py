@@ -4,11 +4,13 @@ import typing
 
 import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
-from .doc_pages_delete200response_meta import DocPagesDelete200ResponseMeta
+from .doc_pages_delete200response_layout import DocPagesDelete200ResponseLayout
+from .mutation_meta import MutationMeta
 
 
 class DocPagesDelete200Response(UniversalBaseModel):
-    meta: DocPagesDelete200ResponseMeta
+    layout: DocPagesDelete200ResponseLayout
+    meta: MutationMeta
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

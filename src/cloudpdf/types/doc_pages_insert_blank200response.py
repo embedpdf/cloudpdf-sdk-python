@@ -3,12 +3,20 @@
 import typing
 
 import pydantic
+import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
-from .doc_pages_insert_blank200response_meta import DocPagesInsertBlank200ResponseMeta
+from ..core.serialization import FieldMetadata
+from .doc_pages_insert_blank200response_layout import DocPagesInsertBlank200ResponseLayout
+from .mutation_meta import MutationMeta
+from .page_ref import PageRef
 
 
 class DocPagesInsertBlank200Response(UniversalBaseModel):
-    meta: DocPagesInsertBlank200ResponseMeta
+    inserted_pages: typing_extensions.Annotated[
+        typing.List[PageRef], FieldMetadata(alias="insertedPages"), pydantic.Field(alias="insertedPages")
+    ]
+    layout: DocPagesInsertBlank200ResponseLayout
+    meta: MutationMeta
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

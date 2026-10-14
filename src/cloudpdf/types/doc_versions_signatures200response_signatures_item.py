@@ -9,9 +9,6 @@ from ..core.serialization import FieldMetadata
 from .doc_versions_signatures200response_signatures_item_coverage import (
     DocVersionsSignatures200ResponseSignaturesItemCoverage,
 )
-from .doc_versions_signatures200response_signatures_item_field import (
-    DocVersionsSignatures200ResponseSignaturesItemField,
-)
 from .doc_versions_signatures200response_signatures_item_field_mdp import (
     DocVersionsSignatures200ResponseSignaturesItemFieldMdp,
 )
@@ -23,16 +20,15 @@ from .doc_versions_signatures200response_signatures_item_seed_value import (
 from .doc_versions_signatures200response_signatures_item_signer import (
     DocVersionsSignatures200ResponseSignaturesItemSigner,
 )
-from .doc_versions_signatures200response_signatures_item_widget import (
-    DocVersionsSignatures200ResponseSignaturesItemWidget,
-)
+from .form_field_ref import FormFieldRef
+from .form_widget import FormWidget
 
 
 class DocVersionsSignatures200ResponseSignaturesItem(UniversalBaseModel):
     index: int
-    field: DocVersionsSignatures200ResponseSignaturesItemField
+    field: FormFieldRef
     field_name: typing_extensions.Annotated[str, FieldMetadata(alias="fieldName"), pydantic.Field(alias="fieldName")]
-    widget: typing.Optional[DocVersionsSignatures200ResponseSignaturesItemWidget] = None
+    widget: typing.Optional[FormWidget] = None
     signed: bool
     kind: DocVersionsSignatures200ResponseSignaturesItemKind
     filter: typing.Optional[str] = None

@@ -314,7 +314,7 @@ class DocumentsClient:
         tenant_id : str
 
         source : DocumentsImportFromRequestSource
-            Where CloudPDF pulls the bytes from. The two shapes differ in WHO supplies the authority to read, not in which storage vendor holds the file.
+            Where CloudPDF pulls the bytes from. The two shapes differ in who supplies the authority to read, not in which storage vendor holds the file.
 
         expected : typing.Optional[DocumentsImportFromRequestExpected]
             Integrity pins, enforced when present. When absent, the server-observed values become authoritative.
@@ -790,7 +790,7 @@ class AsyncDocumentsClient:
         tenant_id : str
 
         source : DocumentsImportFromRequestSource
-            Where CloudPDF pulls the bytes from. The two shapes differ in WHO supplies the authority to read, not in which storage vendor holds the file.
+            Where CloudPDF pulls the bytes from. The two shapes differ in who supplies the authority to read, not in which storage vendor holds the file.
 
         expected : typing.Optional[DocumentsImportFromRequestExpected]
             Integrity pins, enforced when present. When absent, the server-observed values become authoritative.

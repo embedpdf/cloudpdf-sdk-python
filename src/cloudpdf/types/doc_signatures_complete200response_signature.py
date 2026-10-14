@@ -7,20 +7,20 @@ import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
 from .doc_signatures_complete200response_signature_coverage import DocSignaturesComplete200ResponseSignatureCoverage
-from .doc_signatures_complete200response_signature_field import DocSignaturesComplete200ResponseSignatureField
 from .doc_signatures_complete200response_signature_field_mdp import DocSignaturesComplete200ResponseSignatureFieldMdp
 from .doc_signatures_complete200response_signature_kind import DocSignaturesComplete200ResponseSignatureKind
 from .doc_signatures_complete200response_signature_lock import DocSignaturesComplete200ResponseSignatureLock
 from .doc_signatures_complete200response_signature_seed_value import DocSignaturesComplete200ResponseSignatureSeedValue
 from .doc_signatures_complete200response_signature_signer import DocSignaturesComplete200ResponseSignatureSigner
-from .doc_signatures_complete200response_signature_widget import DocSignaturesComplete200ResponseSignatureWidget
+from .form_field_ref import FormFieldRef
+from .form_widget import FormWidget
 
 
 class DocSignaturesComplete200ResponseSignature(UniversalBaseModel):
     index: int
-    field: DocSignaturesComplete200ResponseSignatureField
+    field: FormFieldRef
     field_name: typing_extensions.Annotated[str, FieldMetadata(alias="fieldName"), pydantic.Field(alias="fieldName")]
-    widget: typing.Optional[DocSignaturesComplete200ResponseSignatureWidget] = None
+    widget: typing.Optional[FormWidget] = None
     signed: bool
     kind: DocSignaturesComplete200ResponseSignatureKind
     filter: typing.Optional[str] = None

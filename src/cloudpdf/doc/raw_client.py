@@ -11,11 +11,21 @@ from ..core.jsonable_encoder import encode_path_param
 from ..core.parse_error import ParsingError
 from ..core.pydantic_utilities import parse_obj_as
 from ..core.request_options import RequestOptions
+from ..core.serialization import convert_and_respect_annotation_metadata
+from ..errors.bad_request_error import BadRequestError
+from ..errors.conflict_error import ConflictError
+from ..errors.content_too_large_error import ContentTooLargeError
 from ..errors.not_found_error import NotFoundError
+from ..types.doc_changes200response import DocChanges200Response
+from ..types.doc_changes413response import DocChanges413Response
 from ..types.doc_head200response import DocHead200Response
 from ..types.doc_manifest200response import DocManifest200Response
 from ..types.doc_text200response import DocText200Response
+from .types.doc_changes_request_changes_item import DocChangesRequestChangesItem
 from pydantic import ValidationError
+
+# this is used as the default value for optional parameters
+OMIT = typing.cast(typing.Any, ...)
 
 
 class RawDocClient:
@@ -70,6 +80,115 @@ class RawDocClient:
                         typing.Any,
                         parse_obj_as(
                             type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    def changes(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        changes: typing.Sequence[DocChangesRequestChangesItem],
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> HttpResponse[DocChanges200Response]:
+        """
+        Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        changes : typing.Sequence[DocChangesRequestChangesItem]
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        HttpResponse[DocChanges200Response]
+            OK
+        """
+        _response = self._client_wrapper.httpx_client.request(
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/changes",
+            method="POST",
+            json={
+                "changes": convert_and_respect_annotation_metadata(
+                    object_=changes, annotation=typing.Sequence[DocChangesRequestChangesItem], direction="write"
+                ),
+            },
+            headers={
+                "content-type": "application/json",
+                "X-Document-Password": str(document_password) if document_password is not None else None,
+            },
+            request_options=request_options,
+            omit=OMIT,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocChanges200Response,
+                    parse_obj_as(
+                        type_=DocChanges200Response,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return HttpResponse(response=_response, data=_data)
+            if _response.status_code == 400:
+                raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 409:
+                raise ConflictError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 413:
+                raise ContentTooLargeError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        DocChanges413Response,
+                        parse_obj_as(
+                            type_=DocChanges413Response,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -223,7 +342,7 @@ class RawDocClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -237,7 +356,8 @@ class RawDocClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -251,7 +371,7 @@ class RawDocClient:
             OK
         """
         with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/render/pages/{encode_path_param(pon)}/data",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/render/pages/{encode_path_param(page_key)}/data",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -298,7 +418,7 @@ class RawDocClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -310,7 +430,8 @@ class RawDocClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -324,7 +445,7 @@ class RawDocClient:
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/text/pages/{encode_path_param(pon)}/data",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/text/pages/{encode_path_param(page_key)}/data",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -414,6 +535,115 @@ class AsyncRawDocClient:
                         typing.Any,
                         parse_obj_as(
                             type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    async def changes(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        changes: typing.Sequence[DocChangesRequestChangesItem],
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> AsyncHttpResponse[DocChanges200Response]:
+        """
+        Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        changes : typing.Sequence[DocChangesRequestChangesItem]
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        AsyncHttpResponse[DocChanges200Response]
+            OK
+        """
+        _response = await self._client_wrapper.httpx_client.request(
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/changes",
+            method="POST",
+            json={
+                "changes": convert_and_respect_annotation_metadata(
+                    object_=changes, annotation=typing.Sequence[DocChangesRequestChangesItem], direction="write"
+                ),
+            },
+            headers={
+                "content-type": "application/json",
+                "X-Document-Password": str(document_password) if document_password is not None else None,
+            },
+            request_options=request_options,
+            omit=OMIT,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocChanges200Response,
+                    parse_obj_as(
+                        type_=DocChanges200Response,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return AsyncHttpResponse(response=_response, data=_data)
+            if _response.status_code == 400:
+                raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 409:
+                raise ConflictError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 413:
+                raise ContentTooLargeError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        DocChanges413Response,
+                        parse_obj_as(
+                            type_=DocChanges413Response,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -568,7 +798,7 @@ class AsyncRawDocClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -582,7 +812,8 @@ class AsyncRawDocClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -596,7 +827,7 @@ class AsyncRawDocClient:
             OK
         """
         async with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/render/pages/{encode_path_param(pon)}/data",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/render/pages/{encode_path_param(page_key)}/data",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -644,7 +875,7 @@ class AsyncRawDocClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -656,7 +887,8 @@ class AsyncRawDocClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -670,7 +902,7 @@ class AsyncRawDocClient:
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/text/pages/{encode_path_param(pon)}/data",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/text/pages/{encode_path_param(page_key)}/data",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,

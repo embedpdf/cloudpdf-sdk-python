@@ -4,8 +4,9 @@ import typing
 
 from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
+from ...types.annotation_ref import AnnotationRef
 from ...types.doc_redactions_apply200response import DocRedactionsApply200Response
-from ...types.doc_redactions_apply_request import DocRedactionsApplyRequest
+from ...types.page_ref import PageRef
 from .raw_client import AsyncRawRedactionsClient, RawRedactionsClient
 
 # this is used as the default value for optional parameters
@@ -32,8 +33,10 @@ class RedactionsClient:
         doc_id: str,
         layer_name: str,
         *,
-        request: DocRedactionsApplyRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        pages: typing.Optional[typing.Sequence[PageRef]] = OMIT,
+        annotations: typing.Optional[typing.Sequence[AnnotationRef]] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocRedactionsApply200Response:
         """
@@ -43,10 +46,15 @@ class RedactionsClient:
 
         layer_name : str
 
-        request : DocRedactionsApplyRequest
-
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        pages : typing.Optional[typing.Sequence[PageRef]]
+
+        annotations : typing.Optional[typing.Sequence[AnnotationRef]]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -67,11 +75,16 @@ class RedactionsClient:
         client.doc.redactions.apply(
             doc_id="docId",
             layer_name="layerName",
-            request={"key": "value"},
         )
         """
         _response = self._raw_client.apply(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            pages=pages,
+            annotations=annotations,
+            request_options=request_options,
         )
         return _response.data
 
@@ -96,8 +109,10 @@ class AsyncRedactionsClient:
         doc_id: str,
         layer_name: str,
         *,
-        request: DocRedactionsApplyRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        pages: typing.Optional[typing.Sequence[PageRef]] = OMIT,
+        annotations: typing.Optional[typing.Sequence[AnnotationRef]] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocRedactionsApply200Response:
         """
@@ -107,10 +122,15 @@ class AsyncRedactionsClient:
 
         layer_name : str
 
-        request : DocRedactionsApplyRequest
-
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        pages : typing.Optional[typing.Sequence[PageRef]]
+
+        annotations : typing.Optional[typing.Sequence[AnnotationRef]]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -136,13 +156,18 @@ class AsyncRedactionsClient:
             await client.doc.redactions.apply(
                 doc_id="docId",
                 layer_name="layerName",
-                request={"key": "value"},
             )
 
 
         asyncio.run(main())
         """
         _response = await self._raw_client.apply(
-            doc_id, layer_name, request=request, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            pages=pages,
+            annotations=annotations,
+            request_options=request_options,
         )
         return _response.data

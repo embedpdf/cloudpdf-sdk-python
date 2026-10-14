@@ -4,13 +4,13 @@ import typing
 
 import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
-from .pdf_destination import PdfDestination
+from .page_destination import PageDestination
 
 
 class PdfActionNodeGoto(UniversalBaseModel):
     subtype: str
     next: typing.List[typing.Any]
-    destination: PdfDestination
+    destination: PageDestination
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

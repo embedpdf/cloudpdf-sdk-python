@@ -11,9 +11,12 @@ from ...core.jsonable_encoder import encode_path_param
 from ...core.parse_error import ParsingError
 from ...core.pydantic_utilities import parse_obj_as
 from ...core.request_options import RequestOptions
+from ...core.serialization import convert_and_respect_annotation_metadata
 from ...errors.bad_request_error import BadRequestError
 from ...errors.conflict_error import ConflictError
 from ...errors.not_found_error import NotFoundError
+from ...types.annotation_position import AnnotationPosition
+from ...types.annotation_ref import AnnotationRef
 from ...types.doc_annotations_create200response import DocAnnotationsCreate200Response
 from ...types.doc_annotations_create_request import DocAnnotationsCreateRequest
 from ...types.doc_annotations_delete200response import DocAnnotationsDelete200Response
@@ -22,6 +25,7 @@ from ...types.doc_annotations_flatten200response import DocAnnotationsFlatten200
 from ...types.doc_annotations_flatten_request import DocAnnotationsFlattenRequest
 from ...types.doc_annotations_list200response import DocAnnotationsList200Response
 from ...types.doc_annotations_list_all200response import DocAnnotationsListAll200Response
+from ...types.doc_annotations_reorder200response import DocAnnotationsReorder200Response
 from ...types.doc_annotations_update200response import DocAnnotationsUpdate200Response
 from ...types.doc_annotations_update_request import DocAnnotationsUpdateRequest
 from pydantic import ValidationError
@@ -43,7 +47,7 @@ class RawAnnotationsClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocAnnotationsListAll200Response]:
         """
-        Returns one entry per page plus the audit-log cursor for reconciling subsequent document events. Page order is unspecified; join by `pageState.pageObjectNumber` when display order matters.
+        Returns one entry per page plus the audit-log cursor for reconciling subsequent document events. Page order is unspecified; join by `page` (a `PageRef`) when display order matters.
 
         Parameters
         ----------
@@ -115,7 +119,7 @@ class RawAnnotationsClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -127,7 +131,8 @@ class RawAnnotationsClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -141,7 +146,7 @@ class RawAnnotationsClient:
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(pon)}/items",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -182,10 +187,11 @@ class RawAnnotationsClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         request: DocAnnotationsCreateRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocAnnotationsCreate200Response]:
         """
@@ -197,12 +203,16 @@ class RawAnnotationsClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         request : DocAnnotationsCreateRequest
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -213,12 +223,13 @@ class RawAnnotationsClient:
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(pon)}/items",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items",
             method="POST",
             json=request,
             headers={
                 "content-type": "application/json",
                 "X-Document-Password": str(document_password) if document_password is not None else None,
+                "Idempotency-Key": str(idempotency_key) if idempotency_key is not None else None,
             },
             request_options=request_options,
             omit=OMIT,
@@ -268,10 +279,11 @@ class RawAnnotationsClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         annot_key: str,
         *,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocAnnotationsDelete200Response]:
         """
@@ -281,12 +293,17 @@ class RawAnnotationsClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         annot_key : str
+            The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -297,10 +314,11 @@ class RawAnnotationsClient:
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(pon)}/items/{encode_path_param(annot_key)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annot_key)}",
             method="DELETE",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
+                "Idempotency-Key": str(idempotency_key) if idempotency_key is not None else None,
             },
             request_options=request_options,
         )
@@ -338,11 +356,12 @@ class RawAnnotationsClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         annot_key: str,
         *,
         request: DocAnnotationsUpdateRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocAnnotationsUpdate200Response]:
         """
@@ -352,14 +371,19 @@ class RawAnnotationsClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         annot_key : str
+            The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         request : DocAnnotationsUpdateRequest
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -370,12 +394,13 @@ class RawAnnotationsClient:
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(pon)}/items/{encode_path_param(annot_key)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annot_key)}",
             method="PATCH",
             json=request,
             headers={
                 "content-type": "application/json",
                 "X-Document-Password": str(document_password) if document_password is not None else None,
+                "Idempotency-Key": str(idempotency_key) if idempotency_key is not None else None,
             },
             request_options=request_options,
             omit=OMIT,
@@ -422,11 +447,101 @@ class RawAnnotationsClient:
         raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
     @contextlib.contextmanager
+    def read_appearance(
+        self,
+        doc_id: str,
+        layer_name: str,
+        page_key: str,
+        annot_key: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> typing.Iterator[HttpResponse[typing.Iterator[bytes]]]:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+
+        annot_key : str
+            The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
+
+        Returns
+        -------
+        typing.Iterator[HttpResponse[typing.Iterator[bytes]]]
+            OK
+        """
+        with self._client_wrapper.httpx_client.stream(
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annot_key)}/resources/appearance",
+            method="GET",
+            headers={
+                "X-Document-Password": str(document_password) if document_password is not None else None,
+            },
+            request_options=request_options,
+        ) as _response:
+
+            def _stream() -> HttpResponse[typing.Iterator[bytes]]:
+                try:
+                    if 200 <= _response.status_code < 300:
+                        _chunk_size = request_options.get("chunk_size", None) if request_options is not None else None
+                        return HttpResponse(
+                            response=_response, data=(_chunk for _chunk in _response.iter_bytes(chunk_size=_chunk_size))
+                        )
+                    _response.read()
+                    if _response.status_code == 400:
+                        raise BadRequestError(
+                            headers=dict(_response.headers),
+                            body=typing.cast(
+                                typing.Any,
+                                parse_obj_as(
+                                    type_=typing.Any,  # type: ignore
+                                    object_=_response.json(),
+                                ),
+                            ),
+                        )
+                    if _response.status_code == 404:
+                        raise NotFoundError(
+                            headers=dict(_response.headers),
+                            body=typing.cast(
+                                typing.Any,
+                                parse_obj_as(
+                                    type_=typing.Any,  # type: ignore
+                                    object_=_response.json(),
+                                ),
+                            ),
+                        )
+                    _response_json = _response.json()
+                except JSONDecodeError:
+                    raise ApiError(
+                        status_code=_response.status_code, headers=dict(_response.headers), body=_response.text
+                    )
+                except ValidationError as e:
+                    raise ParsingError(
+                        status_code=_response.status_code,
+                        headers=dict(_response.headers),
+                        body=_response.json(),
+                        cause=e,
+                    )
+                raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+            yield _stream()
+
+    @contextlib.contextmanager
     def export_appearance(
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         request: DocAnnotationsExportAppearanceRequest,
         document_password: typing.Optional[str] = None,
@@ -439,7 +554,8 @@ class RawAnnotationsClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         request : DocAnnotationsExportAppearanceRequest
 
@@ -455,7 +571,7 @@ class RawAnnotationsClient:
             OK
         """
         with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(pon)}/items/appearance",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/appearance",
             method="POST",
             json=request,
             headers={
@@ -516,10 +632,11 @@ class RawAnnotationsClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         request: DocAnnotationsFlattenRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocAnnotationsFlatten200Response]:
         """
@@ -529,12 +646,16 @@ class RawAnnotationsClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         request : DocAnnotationsFlattenRequest
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -545,12 +666,13 @@ class RawAnnotationsClient:
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(pon)}/items/flatten",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/flatten",
             method="POST",
             json=request,
             headers={
                 "content-type": "application/json",
                 "X-Document-Password": str(document_password) if document_password is not None else None,
+                "Idempotency-Key": str(idempotency_key) if idempotency_key is not None else None,
             },
             request_options=request_options,
             omit=OMIT,
@@ -561,6 +683,106 @@ class RawAnnotationsClient:
                     DocAnnotationsFlatten200Response,
                     parse_obj_as(
                         type_=DocAnnotationsFlatten200Response,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return HttpResponse(response=_response, data=_data)
+            if _response.status_code == 400:
+                raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    def reorder(
+        self,
+        doc_id: str,
+        layer_name: str,
+        page_key: str,
+        *,
+        refs: typing.Sequence[AnnotationRef],
+        position: AnnotationPosition,
+        document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> HttpResponse[DocAnnotationsReorder200Response]:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+
+        refs : typing.Sequence[AnnotationRef]
+
+        position : AnnotationPosition
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        HttpResponse[DocAnnotationsReorder200Response]
+            OK
+        """
+        _response = self._client_wrapper.httpx_client.request(
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/reorder",
+            method="POST",
+            json={
+                "refs": convert_and_respect_annotation_metadata(
+                    object_=refs, annotation=typing.Sequence[AnnotationRef], direction="write"
+                ),
+                "position": convert_and_respect_annotation_metadata(
+                    object_=position, annotation=AnnotationPosition, direction="write"
+                ),
+            },
+            headers={
+                "content-type": "application/json",
+                "X-Document-Password": str(document_password) if document_password is not None else None,
+                "Idempotency-Key": str(idempotency_key) if idempotency_key is not None else None,
+            },
+            request_options=request_options,
+            omit=OMIT,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocAnnotationsReorder200Response,
+                    parse_obj_as(
+                        type_=DocAnnotationsReorder200Response,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -610,7 +832,7 @@ class AsyncRawAnnotationsClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocAnnotationsListAll200Response]:
         """
-        Returns one entry per page plus the audit-log cursor for reconciling subsequent document events. Page order is unspecified; join by `pageState.pageObjectNumber` when display order matters.
+        Returns one entry per page plus the audit-log cursor for reconciling subsequent document events. Page order is unspecified; join by `page` (a `PageRef`) when display order matters.
 
         Parameters
         ----------
@@ -682,7 +904,7 @@ class AsyncRawAnnotationsClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -694,7 +916,8 @@ class AsyncRawAnnotationsClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -708,7 +931,7 @@ class AsyncRawAnnotationsClient:
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(pon)}/items",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -749,10 +972,11 @@ class AsyncRawAnnotationsClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         request: DocAnnotationsCreateRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocAnnotationsCreate200Response]:
         """
@@ -764,12 +988,16 @@ class AsyncRawAnnotationsClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         request : DocAnnotationsCreateRequest
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -780,12 +1008,13 @@ class AsyncRawAnnotationsClient:
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(pon)}/items",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items",
             method="POST",
             json=request,
             headers={
                 "content-type": "application/json",
                 "X-Document-Password": str(document_password) if document_password is not None else None,
+                "Idempotency-Key": str(idempotency_key) if idempotency_key is not None else None,
             },
             request_options=request_options,
             omit=OMIT,
@@ -835,10 +1064,11 @@ class AsyncRawAnnotationsClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         annot_key: str,
         *,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocAnnotationsDelete200Response]:
         """
@@ -848,12 +1078,17 @@ class AsyncRawAnnotationsClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         annot_key : str
+            The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -864,10 +1099,11 @@ class AsyncRawAnnotationsClient:
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(pon)}/items/{encode_path_param(annot_key)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annot_key)}",
             method="DELETE",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
+                "Idempotency-Key": str(idempotency_key) if idempotency_key is not None else None,
             },
             request_options=request_options,
         )
@@ -905,11 +1141,12 @@ class AsyncRawAnnotationsClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         annot_key: str,
         *,
         request: DocAnnotationsUpdateRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocAnnotationsUpdate200Response]:
         """
@@ -919,14 +1156,19 @@ class AsyncRawAnnotationsClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         annot_key : str
+            The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         request : DocAnnotationsUpdateRequest
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -937,12 +1179,13 @@ class AsyncRawAnnotationsClient:
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(pon)}/items/{encode_path_param(annot_key)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annot_key)}",
             method="PATCH",
             json=request,
             headers={
                 "content-type": "application/json",
                 "X-Document-Password": str(document_password) if document_password is not None else None,
+                "Idempotency-Key": str(idempotency_key) if idempotency_key is not None else None,
             },
             request_options=request_options,
             omit=OMIT,
@@ -989,11 +1232,102 @@ class AsyncRawAnnotationsClient:
         raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
     @contextlib.asynccontextmanager
+    async def read_appearance(
+        self,
+        doc_id: str,
+        layer_name: str,
+        page_key: str,
+        annot_key: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> typing.AsyncIterator[AsyncHttpResponse[typing.AsyncIterator[bytes]]]:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+
+        annot_key : str
+            The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
+
+        Returns
+        -------
+        typing.AsyncIterator[AsyncHttpResponse[typing.AsyncIterator[bytes]]]
+            OK
+        """
+        async with self._client_wrapper.httpx_client.stream(
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annot_key)}/resources/appearance",
+            method="GET",
+            headers={
+                "X-Document-Password": str(document_password) if document_password is not None else None,
+            },
+            request_options=request_options,
+        ) as _response:
+
+            async def _stream() -> AsyncHttpResponse[typing.AsyncIterator[bytes]]:
+                try:
+                    if 200 <= _response.status_code < 300:
+                        _chunk_size = request_options.get("chunk_size", None) if request_options is not None else None
+                        return AsyncHttpResponse(
+                            response=_response,
+                            data=(_chunk async for _chunk in _response.aiter_bytes(chunk_size=_chunk_size)),
+                        )
+                    await _response.aread()
+                    if _response.status_code == 400:
+                        raise BadRequestError(
+                            headers=dict(_response.headers),
+                            body=typing.cast(
+                                typing.Any,
+                                parse_obj_as(
+                                    type_=typing.Any,  # type: ignore
+                                    object_=_response.json(),
+                                ),
+                            ),
+                        )
+                    if _response.status_code == 404:
+                        raise NotFoundError(
+                            headers=dict(_response.headers),
+                            body=typing.cast(
+                                typing.Any,
+                                parse_obj_as(
+                                    type_=typing.Any,  # type: ignore
+                                    object_=_response.json(),
+                                ),
+                            ),
+                        )
+                    _response_json = _response.json()
+                except JSONDecodeError:
+                    raise ApiError(
+                        status_code=_response.status_code, headers=dict(_response.headers), body=_response.text
+                    )
+                except ValidationError as e:
+                    raise ParsingError(
+                        status_code=_response.status_code,
+                        headers=dict(_response.headers),
+                        body=_response.json(),
+                        cause=e,
+                    )
+                raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+            yield await _stream()
+
+    @contextlib.asynccontextmanager
     async def export_appearance(
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         request: DocAnnotationsExportAppearanceRequest,
         document_password: typing.Optional[str] = None,
@@ -1006,7 +1340,8 @@ class AsyncRawAnnotationsClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         request : DocAnnotationsExportAppearanceRequest
 
@@ -1022,7 +1357,7 @@ class AsyncRawAnnotationsClient:
             OK
         """
         async with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(pon)}/items/appearance",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/appearance",
             method="POST",
             json=request,
             headers={
@@ -1084,10 +1419,11 @@ class AsyncRawAnnotationsClient:
         self,
         doc_id: str,
         layer_name: str,
-        pon: int,
+        page_key: str,
         *,
         request: DocAnnotationsFlattenRequest,
         document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocAnnotationsFlatten200Response]:
         """
@@ -1097,12 +1433,16 @@ class AsyncRawAnnotationsClient:
 
         layer_name : str
 
-        pon : int
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
 
         request : DocAnnotationsFlattenRequest
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -1113,12 +1453,13 @@ class AsyncRawAnnotationsClient:
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(pon)}/items/flatten",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/flatten",
             method="POST",
             json=request,
             headers={
                 "content-type": "application/json",
                 "X-Document-Password": str(document_password) if document_password is not None else None,
+                "Idempotency-Key": str(idempotency_key) if idempotency_key is not None else None,
             },
             request_options=request_options,
             omit=OMIT,
@@ -1129,6 +1470,106 @@ class AsyncRawAnnotationsClient:
                     DocAnnotationsFlatten200Response,
                     parse_obj_as(
                         type_=DocAnnotationsFlatten200Response,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return AsyncHttpResponse(response=_response, data=_data)
+            if _response.status_code == 400:
+                raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    async def reorder(
+        self,
+        doc_id: str,
+        layer_name: str,
+        page_key: str,
+        *,
+        refs: typing.Sequence[AnnotationRef],
+        position: AnnotationPosition,
+        document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> AsyncHttpResponse[DocAnnotationsReorder200Response]:
+        """
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+
+        refs : typing.Sequence[AnnotationRef]
+
+        position : AnnotationPosition
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        AsyncHttpResponse[DocAnnotationsReorder200Response]
+            OK
+        """
+        _response = await self._client_wrapper.httpx_client.request(
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/reorder",
+            method="POST",
+            json={
+                "refs": convert_and_respect_annotation_metadata(
+                    object_=refs, annotation=typing.Sequence[AnnotationRef], direction="write"
+                ),
+                "position": convert_and_respect_annotation_metadata(
+                    object_=position, annotation=AnnotationPosition, direction="write"
+                ),
+            },
+            headers={
+                "content-type": "application/json",
+                "X-Document-Password": str(document_password) if document_password is not None else None,
+                "Idempotency-Key": str(idempotency_key) if idempotency_key is not None else None,
+            },
+            request_options=request_options,
+            omit=OMIT,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocAnnotationsReorder200Response,
+                    parse_obj_as(
+                        type_=DocAnnotationsReorder200Response,  # type: ignore
                         object_=_response.json(),
                     ),
                 )

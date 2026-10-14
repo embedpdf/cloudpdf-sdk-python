@@ -12,7 +12,7 @@ from ...core.serialization import FieldMetadata
 
 class DocumentsImportFromRequestSource_Url(UniversalBaseModel):
     """
-    Where CloudPDF pulls the bytes from. The two shapes differ in WHO supplies the authority to read, not in which storage vendor holds the file.
+    Where CloudPDF pulls the bytes from. The two shapes differ in who supplies the authority to read, not in which storage vendor holds the file.
     """
 
     kind: typing.Literal["url"] = "url"
@@ -30,7 +30,7 @@ class DocumentsImportFromRequestSource_Url(UniversalBaseModel):
 
 class DocumentsImportFromRequestSource_Connection(UniversalBaseModel):
     """
-    Where CloudPDF pulls the bytes from. The two shapes differ in WHO supplies the authority to read, not in which storage vendor holds the file.
+    Where CloudPDF pulls the bytes from. The two shapes differ in who supplies the authority to read, not in which storage vendor holds the file.
     """
 
     kind: typing.Literal["connection"] = "connection"
