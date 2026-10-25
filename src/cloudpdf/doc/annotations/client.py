@@ -390,6 +390,67 @@ class AnnotationsClient:
         ) as r:
             yield from r.data
 
+    def read_file(
+        self,
+        doc_id: str,
+        layer_name: str,
+        page_key: str,
+        annot_key: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> typing.Iterator[bytes]:
+        """
+        A file that decodes past the server's limit is refused (PayloadTooLarge).
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+
+        annot_key : str
+            The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
+
+        Returns
+        -------
+        typing.Iterator[bytes]
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.annotations.read_file(
+            doc_id="docId",
+            layer_name="layerName",
+            page_key="pageKey",
+            annot_key="annotKey",
+        )
+        """
+        with self._raw_client.read_file(
+            doc_id,
+            layer_name,
+            page_key,
+            annot_key,
+            document_password=document_password,
+            request_options=request_options,
+        ) as r:
+            yield from r.data
+
     def export_appearance(
         self,
         doc_id: str,
@@ -994,6 +1055,76 @@ class AsyncAnnotationsClient:
         asyncio.run(main())
         """
         async with self._raw_client.read_appearance(
+            doc_id,
+            layer_name,
+            page_key,
+            annot_key,
+            document_password=document_password,
+            request_options=request_options,
+        ) as r:
+            async for _chunk in r.data:
+                yield _chunk
+
+    async def read_file(
+        self,
+        doc_id: str,
+        layer_name: str,
+        page_key: str,
+        annot_key: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> typing.AsyncIterator[bytes]:
+        """
+        A file that decodes past the server's limit is refused (PayloadTooLarge).
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        page_key : str
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+
+        annot_key : str
+            The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
+
+        Returns
+        -------
+        typing.AsyncIterator[bytes]
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.annotations.read_file(
+                doc_id="docId",
+                layer_name="layerName",
+                page_key="pageKey",
+                annot_key="annotKey",
+            )
+
+
+        asyncio.run(main())
+        """
+        async with self._raw_client.read_file(
             doc_id,
             layer_name,
             page_key,

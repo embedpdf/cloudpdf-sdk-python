@@ -12,16 +12,26 @@ from .annotation_draft import AnnotationDraft
 from .annotation_patch import AnnotationPatch
 from .annotation_position import AnnotationPosition
 from .annotation_ref import AnnotationRef
+from .attachment_file_base import AttachmentFileBase
+from .attachment_ref import AttachmentRef
 from .change_op_annotations_create_resources import ChangeOpAnnotationsCreateResources
 from .change_op_annotations_update_resources import ChangeOpAnnotationsUpdateResources
+from .change_op_attachments_create_resources import ChangeOpAttachmentsCreateResources
 from .change_op_forms_set_display_display import ChangeOpFormsSetDisplayDisplay
 from .change_op_forms_set_signature_appearance_resources import ChangeOpFormsSetSignatureAppearanceResources
+from .change_op_pages_insert_blank_spec import ChangeOpPagesInsertBlankSpec
+from .change_op_pages_insert_resources import ChangeOpPagesInsertResources
 from .field_position import FieldPosition
 from .form_field_draft import FormFieldDraft
 from .form_field_patch import FormFieldPatch
 from .form_field_ref import FormFieldRef
 from .form_field_value import FormFieldValue
 from .metadata_patch import MetadataPatch
+from .outline_item_draft import OutlineItemDraft
+from .outline_item_patch import OutlineItemPatch
+from .outline_item_ref import OutlineItemRef
+from .outline_position import OutlinePosition
+from .page_position import PagePosition
 from .page_ref import PageRef
 from .widget_patch import WidgetPatch
 from .widget_placement import WidgetPlacement
@@ -349,6 +359,178 @@ class ChangeOp_MetadataUpdateCustom(UniversalBaseModel):
             extra = pydantic.Extra.allow
 
 
+class ChangeOp_OutlineCreate(UniversalBaseModel):
+    type: typing.Literal["outline.create"] = "outline.create"
+    parent: typing.Optional[OutlineItemRef] = None
+    position: typing.Optional[OutlinePosition] = None
+    data: OutlineItemDraft
+    object_number: typing_extensions.Annotated[
+        typing.Optional[int], FieldMetadata(alias="objectNumber"), pydantic.Field(alias="objectNumber")
+    ] = None
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeOp_OutlineUpdate(UniversalBaseModel):
+    type: typing.Literal["outline.update"] = "outline.update"
+    ref: OutlineItemRef
+    patch: OutlineItemPatch
+    expect: typing.Optional[OutlineItemPatch] = None
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeOp_OutlineMove(UniversalBaseModel):
+    type: typing.Literal["outline.move"] = "outline.move"
+    refs: typing.List[OutlineItemRef]
+    parent: typing.Optional[OutlineItemRef] = None
+    position: OutlinePosition
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeOp_OutlineDelete(UniversalBaseModel):
+    type: typing.Literal["outline.delete"] = "outline.delete"
+    ref: OutlineItemRef
+    expect: typing.Optional[OutlineItemPatch] = None
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeOp_PagesRotate(UniversalBaseModel):
+    type: typing.Literal["pages.rotate"] = "pages.rotate"
+    pages: typing.List[PageRef]
+    rotation: float
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeOp_PagesReorder(UniversalBaseModel):
+    type: typing.Literal["pages.reorder"] = "pages.reorder"
+    pages: typing.List[PageRef]
+    position: PagePosition
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeOp_PagesDelete(UniversalBaseModel):
+    type: typing.Literal["pages.delete"] = "pages.delete"
+    pages: typing.List[PageRef]
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeOp_PagesInsertBlank(UniversalBaseModel):
+    type: typing.Literal["pages.insertBlank"] = "pages.insertBlank"
+    spec: ChangeOpPagesInsertBlankSpec
+    position: typing.Optional[PagePosition] = None
+    object_numbers: typing_extensions.Annotated[
+        typing.Optional[typing.List[int]], FieldMetadata(alias="objectNumbers"), pydantic.Field(alias="objectNumbers")
+    ] = None
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeOp_PagesInsert(UniversalBaseModel):
+    type: typing.Literal["pages.insert"] = "pages.insert"
+    resources: ChangeOpPagesInsertResources
+    position: typing.Optional[PagePosition] = None
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeOp_AttachmentsCreate(UniversalBaseModel):
+    type: typing.Literal["attachments.create"] = "attachments.create"
+    file: AttachmentFileBase
+    resources: ChangeOpAttachmentsCreateResources
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeOp_AttachmentsDelete(UniversalBaseModel):
+    type: typing.Literal["attachments.delete"] = "attachments.delete"
+    ref: AttachmentRef
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
 ChangeOp = typing_extensions.Annotated[
     typing.Union[
         ChangeOp_AnnotationsCreate,
@@ -371,6 +553,17 @@ ChangeOp = typing_extensions.Annotated[
         ChangeOp_FormsSetSignatureAppearance,
         ChangeOp_MetadataUpdate,
         ChangeOp_MetadataUpdateCustom,
+        ChangeOp_OutlineCreate,
+        ChangeOp_OutlineUpdate,
+        ChangeOp_OutlineMove,
+        ChangeOp_OutlineDelete,
+        ChangeOp_PagesRotate,
+        ChangeOp_PagesReorder,
+        ChangeOp_PagesDelete,
+        ChangeOp_PagesInsertBlank,
+        ChangeOp_PagesInsert,
+        ChangeOp_AttachmentsCreate,
+        ChangeOp_AttachmentsDelete,
     ],
     pydantic.Field(discriminator="type"),
 ]

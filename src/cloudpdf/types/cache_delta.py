@@ -29,6 +29,9 @@ class CacheDelta(UniversalBaseModel):
     attachments_version: typing_extensions.Annotated[
         typing.Optional[int], FieldMetadata(alias="attachmentsVersion"), pydantic.Field(alias="attachmentsVersion")
     ] = None
+    outline_version: typing_extensions.Annotated[
+        typing.Optional[int], FieldMetadata(alias="outlineVersion"), pydantic.Field(alias="outlineVersion")
+    ] = None
     layer_version: typing_extensions.Annotated[
         typing.Optional[int], FieldMetadata(alias="layerVersion"), pydantic.Field(alias="layerVersion")
     ] = None

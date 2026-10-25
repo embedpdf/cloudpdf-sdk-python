@@ -11,14 +11,25 @@ from ..core.serialization import FieldMetadata
 from .annotation import Annotation
 from .annotation_mutation_meta import AnnotationMutationMeta
 from .annotation_ref import AnnotationRef
+from .attachment import Attachment
+from .attachment_mutation_meta import AttachmentMutationMeta
 from .change_item_annotations_update_appearance import ChangeItemAnnotationsUpdateAppearance
 from .change_item_forms_update_widget_appearance import ChangeItemFormsUpdateWidgetAppearance
+from .change_item_pages_delete_layout import ChangeItemPagesDeleteLayout
+from .change_item_pages_insert_blank_layout import ChangeItemPagesInsertBlankLayout
+from .change_item_pages_insert_layout import ChangeItemPagesInsertLayout
+from .change_item_pages_reorder_layout import ChangeItemPagesReorderLayout
+from .change_item_pages_restore_layout import ChangeItemPagesRestoreLayout
+from .change_item_pages_rotate_layout import ChangeItemPagesRotateLayout
 from .change_item_skipped_op import ChangeItemSkippedOp
 from .document_metadata import DocumentMetadata
 from .form_field import FormField
 from .form_field_ref import FormFieldRef
 from .form_mutation_meta import FormMutationMeta
 from .mutation_meta import MutationMeta
+from .outline_item import OutlineItem
+from .outline_mutation_meta import OutlineMutationMeta
+from .outline_order import OutlineOrder
 from .page_ref import PageRef
 from .widget_annotation import WidgetAnnotation
 
@@ -440,6 +451,228 @@ class ChangeItem_MetadataUpdateCustom(UniversalBaseModel):
             extra = pydantic.Extra.allow
 
 
+class ChangeItem_OutlineCreate(UniversalBaseModel):
+    type: typing.Literal["outline.create"] = "outline.create"
+    item: OutlineItem
+    order: OutlineOrder
+    meta: OutlineMutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeItem_OutlineUpdate(UniversalBaseModel):
+    type: typing.Literal["outline.update"] = "outline.update"
+    skipped: typing.Optional[typing.List[str]] = None
+    item: OutlineItem
+    meta: OutlineMutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeItem_OutlineMove(UniversalBaseModel):
+    type: typing.Literal["outline.move"] = "outline.move"
+    orders: typing.List[OutlineOrder]
+    meta: OutlineMutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeItem_OutlineDelete(UniversalBaseModel):
+    type: typing.Literal["outline.delete"] = "outline.delete"
+    meta: OutlineMutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeItem_OutlineRestore(UniversalBaseModel):
+    type: typing.Literal["outline.restore"] = "outline.restore"
+    items: typing.List[OutlineItem]
+    order: OutlineOrder
+    meta: OutlineMutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeItem_PagesRotate(UniversalBaseModel):
+    type: typing.Literal["pages.rotate"] = "pages.rotate"
+    pages: typing.List[PageRef]
+    rotation: float
+    layout: ChangeItemPagesRotateLayout
+    meta: MutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeItem_PagesReorder(UniversalBaseModel):
+    type: typing.Literal["pages.reorder"] = "pages.reorder"
+    pages: typing.List[PageRef]
+    layout: ChangeItemPagesReorderLayout
+    meta: MutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeItem_PagesDelete(UniversalBaseModel):
+    type: typing.Literal["pages.delete"] = "pages.delete"
+    pages: typing.List[PageRef]
+    layout: ChangeItemPagesDeleteLayout
+    meta: MutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeItem_PagesInsertBlank(UniversalBaseModel):
+    type: typing.Literal["pages.insertBlank"] = "pages.insertBlank"
+    inserted_pages: typing_extensions.Annotated[
+        typing.List[PageRef], FieldMetadata(alias="insertedPages"), pydantic.Field(alias="insertedPages")
+    ]
+    layout: ChangeItemPagesInsertBlankLayout
+    meta: MutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeItem_PagesInsert(UniversalBaseModel):
+    type: typing.Literal["pages.insert"] = "pages.insert"
+    inserted_pages: typing_extensions.Annotated[
+        typing.List[PageRef], FieldMetadata(alias="insertedPages"), pydantic.Field(alias="insertedPages")
+    ]
+    layout: ChangeItemPagesInsertLayout
+    meta: MutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeItem_PagesRestore(UniversalBaseModel):
+    type: typing.Literal["pages.restore"] = "pages.restore"
+    pages: typing.List[PageRef]
+    layout: ChangeItemPagesRestoreLayout
+    meta: MutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeItem_AttachmentsCreate(UniversalBaseModel):
+    type: typing.Literal["attachments.create"] = "attachments.create"
+    attachment: Attachment
+    meta: AttachmentMutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeItem_AttachmentsDelete(UniversalBaseModel):
+    type: typing.Literal["attachments.delete"] = "attachments.delete"
+    meta: AttachmentMutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeItem_AttachmentsRestore(UniversalBaseModel):
+    type: typing.Literal["attachments.restore"] = "attachments.restore"
+    attachment: Attachment
+    meta: AttachmentMutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
 ChangeItem = typing_extensions.Annotated[
     typing.Union[
         ChangeItem_Skipped,
@@ -466,6 +699,20 @@ ChangeItem = typing_extensions.Annotated[
         ChangeItem_FormsUpdateWidget,
         ChangeItem_MetadataUpdate,
         ChangeItem_MetadataUpdateCustom,
+        ChangeItem_OutlineCreate,
+        ChangeItem_OutlineUpdate,
+        ChangeItem_OutlineMove,
+        ChangeItem_OutlineDelete,
+        ChangeItem_OutlineRestore,
+        ChangeItem_PagesRotate,
+        ChangeItem_PagesReorder,
+        ChangeItem_PagesDelete,
+        ChangeItem_PagesInsertBlank,
+        ChangeItem_PagesInsert,
+        ChangeItem_PagesRestore,
+        ChangeItem_AttachmentsCreate,
+        ChangeItem_AttachmentsDelete,
+        ChangeItem_AttachmentsRestore,
     ],
     pydantic.Field(discriminator="type"),
 ]

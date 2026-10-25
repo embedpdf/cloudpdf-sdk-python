@@ -2,28 +2,17 @@
 
 import typing
 
-from ... import core
 from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
-from ...types.doc_pages_delete200response import DocPagesDelete200Response
-from ...types.doc_pages_delete_request import DocPagesDeleteRequest
 from ...types.doc_pages_extract_request import DocPagesExtractRequest
 from ...types.doc_pages_flatten200response import DocPagesFlatten200Response
 from ...types.doc_pages_flatten_request import DocPagesFlattenRequest
-from ...types.doc_pages_insert200response import DocPagesInsert200Response
-from ...types.doc_pages_insert_blank200response import DocPagesInsertBlank200Response
-from ...types.doc_pages_insert_blank_request import DocPagesInsertBlankRequest
 from ...types.doc_pages_remove_name200response import DocPagesRemoveName200Response
 from ...types.doc_pages_remove_name_request import DocPagesRemoveNameRequest
-from ...types.doc_pages_reorder200response import DocPagesReorder200Response
-from ...types.doc_pages_rotate200response import DocPagesRotate200Response
-from ...types.doc_pages_rotate_request import DocPagesRotateRequest
 from ...types.doc_pages_set_name200response import DocPagesSetName200Response
 from ...types.doc_pages_set_name_request import DocPagesSetNameRequest
 from ...types.doc_pages_set_scale200response import DocPagesSetScale200Response
 from ...types.doc_pages_viewports200response import DocPagesViewports200Response
-from ...types.page_position import PagePosition
-from ...types.page_ref import PageRef
 from .raw_client import AsyncRawPagesClient, RawPagesClient
 from .types.doc_pages_set_scale_request_measure import DocPagesSetScaleRequestMeasure
 
@@ -157,63 +146,6 @@ class PagesClient:
         )
         return _response.data
 
-    def delete(
-        self,
-        doc_id: str,
-        layer_name: str,
-        *,
-        request: DocPagesDeleteRequest,
-        document_password: typing.Optional[str] = None,
-        idempotency_key: typing.Optional[str] = None,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesDelete200Response:
-        """
-        Parameters
-        ----------
-        doc_id : str
-
-        layer_name : str
-
-        request : DocPagesDeleteRequest
-
-        document_password : typing.Optional[str]
-            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-
-        idempotency_key : typing.Optional[str]
-            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
-
-        request_options : typing.Optional[RequestOptions]
-            Request-specific configuration.
-
-        Returns
-        -------
-        DocPagesDelete200Response
-            OK
-
-        Examples
-        --------
-        from cloudpdf import CloudPDFClient
-
-        client = CloudPDFClient(
-            token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
-        )
-        client.doc.pages.delete(
-            doc_id="docId",
-            layer_name="layerName",
-            request={"key": "value"},
-        )
-        """
-        _response = self._raw_client.delete(
-            doc_id,
-            layer_name,
-            request=request,
-            document_password=document_password,
-            idempotency_key=idempotency_key,
-            request_options=request_options,
-        )
-        return _response.data
-
     def extract(
         self,
         doc_id: str,
@@ -224,7 +156,7 @@ class PagesClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> typing.Iterator[bytes]:
         """
-        A read, not a mutation: the source document is untouched and no event is published. Body is `{"pages": PageRef[]}`; the response body is the new PDF.
+        A read, not a mutation: the source document is untouched and no event is published. Body is `{"pages": PageRef[], "flatten"?: {"usage"?: "display" | "print"}, "includeAnnotations"?: boolean, "includeFormFields"?: boolean}`; the response body is the new PDF. With `flatten` the copy is the pages as they draw for `usage` (`"print"`: a print copy): the annotations and form fields painted in, nothing interactive left, layers in their state for the usage. A flattened copy takes `doc.download` or `doc.download.flattened`, and paints only what the caller may read; `includeAnnotations` and `includeFormFields` choose what it paints, and are refused without `flatten`.
 
         Parameters
         ----------
@@ -312,124 +244,6 @@ class PagesClient:
         )
         """
         _response = self._raw_client.flatten(
-            doc_id,
-            layer_name,
-            request=request,
-            document_password=document_password,
-            idempotency_key=idempotency_key,
-            request_options=request_options,
-        )
-        return _response.data
-
-    def insert(
-        self,
-        doc_id: str,
-        layer_name: str,
-        *,
-        file: core.File,
-        document_password: typing.Optional[str] = None,
-        idempotency_key: typing.Optional[str] = None,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesInsert200Response:
-        """
-        Multipart: a JSON `body` part `{"position"?: PagePosition, "resources": {"source": "<key>"}}` (position omitted → the end), and the standalone PDF whose pages are copied in as the part `resource:<key>`. The inserted copies get fresh page object numbers, returned in insertion order.
-
-        Parameters
-        ----------
-        doc_id : str
-
-        layer_name : str
-
-        file : core.File
-            See core.File for more documentation
-
-        document_password : typing.Optional[str]
-            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-
-        idempotency_key : typing.Optional[str]
-            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
-
-        request_options : typing.Optional[RequestOptions]
-            Request-specific configuration.
-
-        Returns
-        -------
-        DocPagesInsert200Response
-            OK
-
-        Examples
-        --------
-        from cloudpdf import CloudPDFClient
-
-        client = CloudPDFClient(
-            token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
-        )
-        client.doc.pages.insert(
-            doc_id="docId",
-            layer_name="layerName",
-        )
-        """
-        _response = self._raw_client.insert(
-            doc_id,
-            layer_name,
-            file=file,
-            document_password=document_password,
-            idempotency_key=idempotency_key,
-            request_options=request_options,
-        )
-        return _response.data
-
-    def insert_blank(
-        self,
-        doc_id: str,
-        layer_name: str,
-        *,
-        request: DocPagesInsertBlankRequest,
-        document_password: typing.Optional[str] = None,
-        idempotency_key: typing.Optional[str] = None,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesInsertBlank200Response:
-        """
-        Body is `{"size": {"width", "height"}, "count"?, "position"?}` — size in PDF points, count in [1, 100], `position` a `PagePosition` (omitted → the end).
-
-        Parameters
-        ----------
-        doc_id : str
-
-        layer_name : str
-
-        request : DocPagesInsertBlankRequest
-
-        document_password : typing.Optional[str]
-            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-
-        idempotency_key : typing.Optional[str]
-            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
-
-        request_options : typing.Optional[RequestOptions]
-            Request-specific configuration.
-
-        Returns
-        -------
-        DocPagesInsertBlank200Response
-            OK
-
-        Examples
-        --------
-        from cloudpdf import CloudPDFClient
-
-        client = CloudPDFClient(
-            token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
-        )
-        client.doc.pages.insert_blank(
-            doc_id="docId",
-            layer_name="layerName",
-            request={"key": "value"},
-        )
-        """
-        _response = self._raw_client.insert_blank(
             doc_id,
             layer_name,
             request=request,
@@ -544,130 +358,6 @@ class PagesClient:
         )
         """
         _response = self._raw_client.remove_name(
-            doc_id,
-            layer_name,
-            request=request,
-            document_password=document_password,
-            idempotency_key=idempotency_key,
-            request_options=request_options,
-        )
-        return _response.data
-
-    def reorder(
-        self,
-        doc_id: str,
-        layer_name: str,
-        *,
-        pages: typing.Sequence[PageRef],
-        position: PagePosition,
-        document_password: typing.Optional[str] = None,
-        idempotency_key: typing.Optional[str] = None,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesReorder200Response:
-        """
-        Parameters
-        ----------
-        doc_id : str
-
-        layer_name : str
-
-        pages : typing.Sequence[PageRef]
-
-        position : PagePosition
-
-        document_password : typing.Optional[str]
-            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-
-        idempotency_key : typing.Optional[str]
-            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
-
-        request_options : typing.Optional[RequestOptions]
-            Request-specific configuration.
-
-        Returns
-        -------
-        DocPagesReorder200Response
-            OK
-
-        Examples
-        --------
-        from cloudpdf import CloudPDFClient, PageRef
-
-        client = CloudPDFClient(
-            token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
-        )
-        client.doc.pages.reorder(
-            doc_id="docId",
-            layer_name="layerName",
-            pages=[
-                PageRef(
-                    kind="objectNumber",
-                    object_number=1,
-                )
-            ],
-            position="start",
-        )
-        """
-        _response = self._raw_client.reorder(
-            doc_id,
-            layer_name,
-            pages=pages,
-            position=position,
-            document_password=document_password,
-            idempotency_key=idempotency_key,
-            request_options=request_options,
-        )
-        return _response.data
-
-    def rotate(
-        self,
-        doc_id: str,
-        layer_name: str,
-        *,
-        request: DocPagesRotateRequest,
-        document_password: typing.Optional[str] = None,
-        idempotency_key: typing.Optional[str] = None,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesRotate200Response:
-        """
-        Parameters
-        ----------
-        doc_id : str
-
-        layer_name : str
-
-        request : DocPagesRotateRequest
-
-        document_password : typing.Optional[str]
-            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-
-        idempotency_key : typing.Optional[str]
-            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
-
-        request_options : typing.Optional[RequestOptions]
-            Request-specific configuration.
-
-        Returns
-        -------
-        DocPagesRotate200Response
-            OK
-
-        Examples
-        --------
-        from cloudpdf import CloudPDFClient
-
-        client = CloudPDFClient(
-            token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
-        )
-        client.doc.pages.rotate(
-            doc_id="docId",
-            layer_name="layerName",
-            request={"key": "value"},
-        )
-        """
-        _response = self._raw_client.rotate(
             doc_id,
             layer_name,
             request=request,
@@ -820,71 +510,6 @@ class AsyncPagesClient:
         )
         return _response.data
 
-    async def delete(
-        self,
-        doc_id: str,
-        layer_name: str,
-        *,
-        request: DocPagesDeleteRequest,
-        document_password: typing.Optional[str] = None,
-        idempotency_key: typing.Optional[str] = None,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesDelete200Response:
-        """
-        Parameters
-        ----------
-        doc_id : str
-
-        layer_name : str
-
-        request : DocPagesDeleteRequest
-
-        document_password : typing.Optional[str]
-            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-
-        idempotency_key : typing.Optional[str]
-            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
-
-        request_options : typing.Optional[RequestOptions]
-            Request-specific configuration.
-
-        Returns
-        -------
-        DocPagesDelete200Response
-            OK
-
-        Examples
-        --------
-        import asyncio
-
-        from cloudpdf import AsyncCloudPDFClient
-
-        client = AsyncCloudPDFClient(
-            token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
-        )
-
-
-        async def main() -> None:
-            await client.doc.pages.delete(
-                doc_id="docId",
-                layer_name="layerName",
-                request={"key": "value"},
-            )
-
-
-        asyncio.run(main())
-        """
-        _response = await self._raw_client.delete(
-            doc_id,
-            layer_name,
-            request=request,
-            document_password=document_password,
-            idempotency_key=idempotency_key,
-            request_options=request_options,
-        )
-        return _response.data
-
     async def extract(
         self,
         doc_id: str,
@@ -895,7 +520,7 @@ class AsyncPagesClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> typing.AsyncIterator[bytes]:
         """
-        A read, not a mutation: the source document is untouched and no event is published. Body is `{"pages": PageRef[]}`; the response body is the new PDF.
+        A read, not a mutation: the source document is untouched and no event is published. Body is `{"pages": PageRef[], "flatten"?: {"usage"?: "display" | "print"}, "includeAnnotations"?: boolean, "includeFormFields"?: boolean}`; the response body is the new PDF. With `flatten` the copy is the pages as they draw for `usage` (`"print"`: a print copy): the annotations and form fields painted in, nothing interactive left, layers in their state for the usage. A flattened copy takes `doc.download` or `doc.download.flattened`, and paints only what the caller may read; `includeAnnotations` and `includeFormFields` choose what it paints, and are refused without `flatten`.
 
         Parameters
         ----------
@@ -1000,140 +625,6 @@ class AsyncPagesClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.flatten(
-            doc_id,
-            layer_name,
-            request=request,
-            document_password=document_password,
-            idempotency_key=idempotency_key,
-            request_options=request_options,
-        )
-        return _response.data
-
-    async def insert(
-        self,
-        doc_id: str,
-        layer_name: str,
-        *,
-        file: core.File,
-        document_password: typing.Optional[str] = None,
-        idempotency_key: typing.Optional[str] = None,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesInsert200Response:
-        """
-        Multipart: a JSON `body` part `{"position"?: PagePosition, "resources": {"source": "<key>"}}` (position omitted → the end), and the standalone PDF whose pages are copied in as the part `resource:<key>`. The inserted copies get fresh page object numbers, returned in insertion order.
-
-        Parameters
-        ----------
-        doc_id : str
-
-        layer_name : str
-
-        file : core.File
-            See core.File for more documentation
-
-        document_password : typing.Optional[str]
-            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-
-        idempotency_key : typing.Optional[str]
-            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
-
-        request_options : typing.Optional[RequestOptions]
-            Request-specific configuration.
-
-        Returns
-        -------
-        DocPagesInsert200Response
-            OK
-
-        Examples
-        --------
-        import asyncio
-
-        from cloudpdf import AsyncCloudPDFClient
-
-        client = AsyncCloudPDFClient(
-            token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
-        )
-
-
-        async def main() -> None:
-            await client.doc.pages.insert(
-                doc_id="docId",
-                layer_name="layerName",
-            )
-
-
-        asyncio.run(main())
-        """
-        _response = await self._raw_client.insert(
-            doc_id,
-            layer_name,
-            file=file,
-            document_password=document_password,
-            idempotency_key=idempotency_key,
-            request_options=request_options,
-        )
-        return _response.data
-
-    async def insert_blank(
-        self,
-        doc_id: str,
-        layer_name: str,
-        *,
-        request: DocPagesInsertBlankRequest,
-        document_password: typing.Optional[str] = None,
-        idempotency_key: typing.Optional[str] = None,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesInsertBlank200Response:
-        """
-        Body is `{"size": {"width", "height"}, "count"?, "position"?}` — size in PDF points, count in [1, 100], `position` a `PagePosition` (omitted → the end).
-
-        Parameters
-        ----------
-        doc_id : str
-
-        layer_name : str
-
-        request : DocPagesInsertBlankRequest
-
-        document_password : typing.Optional[str]
-            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-
-        idempotency_key : typing.Optional[str]
-            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
-
-        request_options : typing.Optional[RequestOptions]
-            Request-specific configuration.
-
-        Returns
-        -------
-        DocPagesInsertBlank200Response
-            OK
-
-        Examples
-        --------
-        import asyncio
-
-        from cloudpdf import AsyncCloudPDFClient
-
-        client = AsyncCloudPDFClient(
-            token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
-        )
-
-
-        async def main() -> None:
-            await client.doc.pages.insert_blank(
-                doc_id="docId",
-                layer_name="layerName",
-                request={"key": "value"},
-            )
-
-
-        asyncio.run(main())
-        """
-        _response = await self._raw_client.insert_blank(
             doc_id,
             layer_name,
             request=request,
@@ -1264,146 +755,6 @@ class AsyncPagesClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.remove_name(
-            doc_id,
-            layer_name,
-            request=request,
-            document_password=document_password,
-            idempotency_key=idempotency_key,
-            request_options=request_options,
-        )
-        return _response.data
-
-    async def reorder(
-        self,
-        doc_id: str,
-        layer_name: str,
-        *,
-        pages: typing.Sequence[PageRef],
-        position: PagePosition,
-        document_password: typing.Optional[str] = None,
-        idempotency_key: typing.Optional[str] = None,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesReorder200Response:
-        """
-        Parameters
-        ----------
-        doc_id : str
-
-        layer_name : str
-
-        pages : typing.Sequence[PageRef]
-
-        position : PagePosition
-
-        document_password : typing.Optional[str]
-            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-
-        idempotency_key : typing.Optional[str]
-            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
-
-        request_options : typing.Optional[RequestOptions]
-            Request-specific configuration.
-
-        Returns
-        -------
-        DocPagesReorder200Response
-            OK
-
-        Examples
-        --------
-        import asyncio
-
-        from cloudpdf import AsyncCloudPDFClient, PageRef
-
-        client = AsyncCloudPDFClient(
-            token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
-        )
-
-
-        async def main() -> None:
-            await client.doc.pages.reorder(
-                doc_id="docId",
-                layer_name="layerName",
-                pages=[
-                    PageRef(
-                        kind="objectNumber",
-                        object_number=1,
-                    )
-                ],
-                position="start",
-            )
-
-
-        asyncio.run(main())
-        """
-        _response = await self._raw_client.reorder(
-            doc_id,
-            layer_name,
-            pages=pages,
-            position=position,
-            document_password=document_password,
-            idempotency_key=idempotency_key,
-            request_options=request_options,
-        )
-        return _response.data
-
-    async def rotate(
-        self,
-        doc_id: str,
-        layer_name: str,
-        *,
-        request: DocPagesRotateRequest,
-        document_password: typing.Optional[str] = None,
-        idempotency_key: typing.Optional[str] = None,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesRotate200Response:
-        """
-        Parameters
-        ----------
-        doc_id : str
-
-        layer_name : str
-
-        request : DocPagesRotateRequest
-
-        document_password : typing.Optional[str]
-            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-
-        idempotency_key : typing.Optional[str]
-            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
-
-        request_options : typing.Optional[RequestOptions]
-            Request-specific configuration.
-
-        Returns
-        -------
-        DocPagesRotate200Response
-            OK
-
-        Examples
-        --------
-        import asyncio
-
-        from cloudpdf import AsyncCloudPDFClient
-
-        client = AsyncCloudPDFClient(
-            token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
-        )
-
-
-        async def main() -> None:
-            await client.doc.pages.rotate(
-                doc_id="docId",
-                layer_name="layerName",
-                request={"key": "value"},
-            )
-
-
-        asyncio.run(main())
-        """
-        _response = await self._raw_client.rotate(
             doc_id,
             layer_name,
             request=request,

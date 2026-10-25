@@ -127,7 +127,7 @@ client.doc.head(
 <dl>
 <dd>
 
-Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
+Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`, outline `doc.outline.modify`, pages `doc.pages.assemble`, embedded files `doc.attachments.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork, a PDF whose pages come in) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
 </dd>
 </dl>
 </dd>
@@ -3129,6 +3129,113 @@ client.doc.annotations.read_appearance(
 </dl>
 </details>
 
+<details><summary><code>client.doc.annotations.<a href="src/cloudpdf/doc/annotations/client.py">read_file</a>(...) -> typing.Iterator[bytes]</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+A file that decodes past the server's limit is refused (PayloadTooLarge).
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+
+client = CloudPDFClient(
+    token="<token>",
+    base_url="https://yourhost.com/path/to/api",
+)
+
+client.doc.annotations.read_file(
+    doc_id="docId",
+    layer_name="layerName",
+    page_key="pageKey",
+    annot_key="annotKey",
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**doc_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**layer_name:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**annot_key:** `str` — The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 <details><summary><code>client.doc.annotations.<a href="src/cloudpdf/doc/annotations/client.py">export_appearance</a>(...) -> typing.Iterator[bytes]</code></summary>
 <dl>
 <dd>
@@ -3426,6 +3533,194 @@ client.doc.annotations.reorder(
 <dd>
 
 **idempotency_key:** `typing.Optional[str]` — Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+## Doc Attachments
+<details><summary><code>client.doc.attachments.<a href="src/cloudpdf/doc/attachments/client.py">download</a>(...) -> typing.Iterator[bytes]</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+A file that decodes past the server's limit is refused (PayloadTooLarge).
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+
+client = CloudPDFClient(
+    token="<token>",
+    base_url="https://yourhost.com/path/to/api",
+)
+
+client.doc.attachments.download(
+    doc_id="docId",
+    layer_name="layerName",
+    file_key="fileKey",
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**doc_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**layer_name:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**file_key:** `str` — The embedded file's name-tree key (its `ref.key`), token-text encoded, as `fieldKey` is.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.doc.attachments.<a href="src/cloudpdf/doc/attachments/client.py">list</a>(...) -> DocAttachmentsList200Response</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+A file-attachment annotation's file is listed with the annotation; read its bytes with `doc.annotations.readFile`.
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+
+client = CloudPDFClient(
+    token="<token>",
+    base_url="https://yourhost.com/path/to/api",
+)
+
+client.doc.attachments.list(
+    doc_id="docId",
+    layer_name="layerName",
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**doc_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**layer_name:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
     
 </dd>
 </dl>
@@ -4225,6 +4520,82 @@ client.doc.metadata.get(
 </dl>
 </details>
 
+## Doc Outline
+<details><summary><code>client.doc.outline.<a href="src/cloudpdf/doc/outline/client.py">get</a>(...) -> DocOutlineGet200Response</code></summary>
+<dl>
+<dd>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+
+client = CloudPDFClient(
+    token="<token>",
+    base_url="https://yourhost.com/path/to/api",
+)
+
+client.doc.outline.get(
+    doc_id="docId",
+    layer_name="layerName",
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**doc_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**layer_name:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 ## Doc Pages
 <details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">set_scale</a>(...) -> DocPagesSetScale200Response</code></summary>
 <dl>
@@ -4410,100 +4781,6 @@ client.doc.pages.viewports(
 </dl>
 </details>
 
-<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">delete</a>(...) -> DocPagesDelete200Response</code></summary>
-<dl>
-<dd>
-
-#### 🔌 Usage
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-```python
-from cloudpdf import CloudPDFClient
-
-client = CloudPDFClient(
-    token="<token>",
-    base_url="https://yourhost.com/path/to/api",
-)
-
-client.doc.pages.delete(
-    doc_id="docId",
-    layer_name="layerName",
-    request={
-        "key": "value"
-    },
-)
-
-```
-</dd>
-</dl>
-</dd>
-</dl>
-
-#### ⚙️ Parameters
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-**doc_id:** `str` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**layer_name:** `str` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**request:** `DocPagesDeleteRequest` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**idempotency_key:** `typing.Optional[str]` — Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
-    
-</dd>
-</dl>
-</dd>
-</dl>
-
-
-</dd>
-</dl>
-</details>
-
 <details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">extract</a>(...) -> typing.Iterator[bytes]</code></summary>
 <dl>
 <dd>
@@ -4516,7 +4793,7 @@ client.doc.pages.delete(
 <dl>
 <dd>
 
-A read, not a mutation: the source document is untouched and no event is published. Body is `{"pages": PageRef[]}`; the response body is the new PDF.
+A read, not a mutation: the source document is untouched and no event is published. Body is `{"pages": PageRef[], "flatten"?: {"usage"?: "display" | "print"}, "includeAnnotations"?: boolean, "includeFormFields"?: boolean}`; the response body is the new PDF. With `flatten` the copy is the pages as they draw for `usage` (`"print"`: a print copy): the annotations and form fields painted in, nothing interactive left, layers in their state for the usage. A flattened copy takes `doc.download` or `doc.download.flattened`, and paints only what the caller may read; `includeAnnotations` and `includeFormFields` choose what it paints, and are refused without `flatten`.
 </dd>
 </dl>
 </dd>
@@ -4663,220 +4940,6 @@ client.doc.pages.flatten(
 <dd>
 
 **request:** `DocPagesFlattenRequest` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**idempotency_key:** `typing.Optional[str]` — Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
-    
-</dd>
-</dl>
-</dd>
-</dl>
-
-
-</dd>
-</dl>
-</details>
-
-<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">insert</a>(...) -> DocPagesInsert200Response</code></summary>
-<dl>
-<dd>
-
-#### 📝 Description
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-Multipart: a JSON `body` part `{"position"?: PagePosition, "resources": {"source": "<key>"}}` (position omitted → the end), and the standalone PDF whose pages are copied in as the part `resource:<key>`. The inserted copies get fresh page object numbers, returned in insertion order.
-</dd>
-</dl>
-</dd>
-</dl>
-
-#### 🔌 Usage
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-```python
-from cloudpdf import CloudPDFClient
-
-client = CloudPDFClient(
-    token="<token>",
-    base_url="https://yourhost.com/path/to/api",
-)
-
-client.doc.pages.insert(
-    doc_id="docId",
-    layer_name="layerName",
-    file="example_file",
-)
-
-```
-</dd>
-</dl>
-</dd>
-</dl>
-
-#### ⚙️ Parameters
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-**doc_id:** `str` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**layer_name:** `str` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**file:** `core.File` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**idempotency_key:** `typing.Optional[str]` — Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
-    
-</dd>
-</dl>
-</dd>
-</dl>
-
-
-</dd>
-</dl>
-</details>
-
-<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">insert_blank</a>(...) -> DocPagesInsertBlank200Response</code></summary>
-<dl>
-<dd>
-
-#### 📝 Description
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-Body is `{"size": {"width", "height"}, "count"?, "position"?}` — size in PDF points, count in [1, 100], `position` a `PagePosition` (omitted → the end).
-</dd>
-</dl>
-</dd>
-</dl>
-
-#### 🔌 Usage
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-```python
-from cloudpdf import CloudPDFClient
-
-client = CloudPDFClient(
-    token="<token>",
-    base_url="https://yourhost.com/path/to/api",
-)
-
-client.doc.pages.insert_blank(
-    doc_id="docId",
-    layer_name="layerName",
-    request={
-        "key": "value"
-    },
-)
-
-```
-</dd>
-</dl>
-</dd>
-</dl>
-
-#### ⚙️ Parameters
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-**doc_id:** `str` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**layer_name:** `str` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**request:** `DocPagesInsertBlankRequest` 
     
 </dd>
 </dl>
@@ -5065,206 +5128,6 @@ client.doc.pages.remove_name(
 <dd>
 
 **request:** `DocPagesRemoveNameRequest` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**idempotency_key:** `typing.Optional[str]` — Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
-    
-</dd>
-</dl>
-</dd>
-</dl>
-
-
-</dd>
-</dl>
-</details>
-
-<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">reorder</a>(...) -> DocPagesReorder200Response</code></summary>
-<dl>
-<dd>
-
-#### 🔌 Usage
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-```python
-from cloudpdf import CloudPDFClient, PageRef
-
-client = CloudPDFClient(
-    token="<token>",
-    base_url="https://yourhost.com/path/to/api",
-)
-
-client.doc.pages.reorder(
-    doc_id="docId",
-    layer_name="layerName",
-    pages=[
-        PageRef(
-            kind="objectNumber",
-            object_number=1,
-        )
-    ],
-    position="start",
-)
-
-```
-</dd>
-</dl>
-</dd>
-</dl>
-
-#### ⚙️ Parameters
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-**doc_id:** `str` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**layer_name:** `str` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**pages:** `typing.List[PageRef]` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**position:** `PagePosition` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**idempotency_key:** `typing.Optional[str]` — Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
-    
-</dd>
-</dl>
-</dd>
-</dl>
-
-
-</dd>
-</dl>
-</details>
-
-<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">rotate</a>(...) -> DocPagesRotate200Response</code></summary>
-<dl>
-<dd>
-
-#### 🔌 Usage
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-```python
-from cloudpdf import CloudPDFClient
-
-client = CloudPDFClient(
-    token="<token>",
-    base_url="https://yourhost.com/path/to/api",
-)
-
-client.doc.pages.rotate(
-    doc_id="docId",
-    layer_name="layerName",
-    request={
-        "key": "value"
-    },
-)
-
-```
-</dd>
-</dl>
-</dd>
-</dl>
-
-#### ⚙️ Parameters
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-**doc_id:** `str` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**layer_name:** `str` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**request:** `DocPagesRotateRequest` 
     
 </dd>
 </dl>

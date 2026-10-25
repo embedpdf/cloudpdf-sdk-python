@@ -15,8 +15,10 @@ from .types.doc_changes_request_changes_item import DocChangesRequestChangesItem
 
 if typing.TYPE_CHECKING:
     from .annotations.client import AnnotationsClient, AsyncAnnotationsClient
+    from .attachments.client import AsyncAttachmentsClient, AttachmentsClient
     from .forms.client import AsyncFormsClient, FormsClient
     from .metadata.client import AsyncMetadataClient, MetadataClient
+    from .outline.client import AsyncOutlineClient, OutlineClient
     from .pages.client import AsyncPagesClient, PagesClient
     from .redactions.client import AsyncRedactionsClient, RedactionsClient
     from .signatures.client import AsyncSignaturesClient, SignaturesClient
@@ -30,8 +32,10 @@ class DocClient:
         self._raw_client = RawDocClient(client_wrapper=client_wrapper)
         self._client_wrapper = client_wrapper
         self._annotations: typing.Optional[AnnotationsClient] = None
+        self._attachments: typing.Optional[AttachmentsClient] = None
         self._forms: typing.Optional[FormsClient] = None
         self._metadata: typing.Optional[MetadataClient] = None
+        self._outline: typing.Optional[OutlineClient] = None
         self._pages: typing.Optional[PagesClient] = None
         self._redactions: typing.Optional[RedactionsClient] = None
         self._signatures: typing.Optional[SignaturesClient] = None
@@ -96,7 +100,7 @@ class DocClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocChanges200Response:
         """
-        Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
+        Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`, outline `doc.outline.modify`, pages `doc.pages.assemble`, embedded files `doc.attachments.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork, a PDF whose pages come in) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
 
         Parameters
         ----------
@@ -338,6 +342,14 @@ class DocClient:
         return self._annotations
 
     @property
+    def attachments(self):
+        if self._attachments is None:
+            from .attachments.client import AttachmentsClient  # noqa: E402
+
+            self._attachments = AttachmentsClient(client_wrapper=self._client_wrapper)
+        return self._attachments
+
+    @property
     def forms(self):
         if self._forms is None:
             from .forms.client import FormsClient  # noqa: E402
@@ -352,6 +364,14 @@ class DocClient:
 
             self._metadata = MetadataClient(client_wrapper=self._client_wrapper)
         return self._metadata
+
+    @property
+    def outline(self):
+        if self._outline is None:
+            from .outline.client import OutlineClient  # noqa: E402
+
+            self._outline = OutlineClient(client_wrapper=self._client_wrapper)
+        return self._outline
 
     @property
     def pages(self):
@@ -391,8 +411,10 @@ class AsyncDocClient:
         self._raw_client = AsyncRawDocClient(client_wrapper=client_wrapper)
         self._client_wrapper = client_wrapper
         self._annotations: typing.Optional[AsyncAnnotationsClient] = None
+        self._attachments: typing.Optional[AsyncAttachmentsClient] = None
         self._forms: typing.Optional[AsyncFormsClient] = None
         self._metadata: typing.Optional[AsyncMetadataClient] = None
+        self._outline: typing.Optional[AsyncOutlineClient] = None
         self._pages: typing.Optional[AsyncPagesClient] = None
         self._redactions: typing.Optional[AsyncRedactionsClient] = None
         self._signatures: typing.Optional[AsyncSignaturesClient] = None
@@ -467,7 +489,7 @@ class AsyncDocClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocChanges200Response:
         """
-        Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
+        Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`, outline `doc.outline.modify`, pages `doc.pages.assemble`, embedded files `doc.attachments.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork, a PDF whose pages come in) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
 
         Parameters
         ----------
@@ -751,6 +773,14 @@ class AsyncDocClient:
         return self._annotations
 
     @property
+    def attachments(self):
+        if self._attachments is None:
+            from .attachments.client import AsyncAttachmentsClient  # noqa: E402
+
+            self._attachments = AsyncAttachmentsClient(client_wrapper=self._client_wrapper)
+        return self._attachments
+
+    @property
     def forms(self):
         if self._forms is None:
             from .forms.client import AsyncFormsClient  # noqa: E402
@@ -765,6 +795,14 @@ class AsyncDocClient:
 
             self._metadata = AsyncMetadataClient(client_wrapper=self._client_wrapper)
         return self._metadata
+
+    @property
+    def outline(self):
+        if self._outline is None:
+            from .outline.client import AsyncOutlineClient  # noqa: E402
+
+            self._outline = AsyncOutlineClient(client_wrapper=self._client_wrapper)
+        return self._outline
 
     @property
     def pages(self):
