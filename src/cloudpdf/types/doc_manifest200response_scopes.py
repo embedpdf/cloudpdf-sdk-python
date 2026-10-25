@@ -11,6 +11,7 @@ from .doc_manifest200response_scopes_content import DocManifest200ResponseScopes
 from .doc_manifest200response_scopes_forms import DocManifest200ResponseScopesForms
 from .doc_manifest200response_scopes_layout import DocManifest200ResponseScopesLayout
 from .doc_manifest200response_scopes_metadata import DocManifest200ResponseScopesMetadata
+from .doc_manifest200response_scopes_outline import DocManifest200ResponseScopesOutline
 
 
 class DocManifest200ResponseScopes(UniversalBaseModel):
@@ -21,6 +22,7 @@ class DocManifest200ResponseScopes(UniversalBaseModel):
     attachments: DocManifest200ResponseScopesAttachments
     metadata: DocManifest200ResponseScopesMetadata
     actions: DocManifest200ResponseScopesActions
+    outline: DocManifest200ResponseScopesOutline
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

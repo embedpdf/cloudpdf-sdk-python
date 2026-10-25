@@ -8,11 +8,11 @@ import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
 from .annotation_file_attachment_blend_mode import AnnotationFileAttachmentBlendMode
-from .annotation_file_attachment_file import AnnotationFileAttachmentFile
 from .annotation_file_attachment_icon import AnnotationFileAttachmentIcon
 from .annotation_file_attachment_rect import AnnotationFileAttachmentRect
 from .annotation_file_attachment_reply import AnnotationFileAttachmentReply
 from .annotation_ref import AnnotationRef
+from .attachment_file_info import AttachmentFileInfo
 from .page_ref import PageRef
 from .pdf_annotation_actions import PdfAnnotationActions
 
@@ -75,7 +75,7 @@ class AnnotationFileAttachment(UniversalBaseModel):
     color: str
     opacity: float
     icon: AnnotationFileAttachmentIcon
-    file: typing.Optional[AnnotationFileAttachmentFile] = None
+    file: typing.Optional[AttachmentFileInfo] = None
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

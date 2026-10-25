@@ -20,7 +20,6 @@ from .annotation_circle_box import AnnotationCircleBox
 from .annotation_circle_rect import AnnotationCircleRect
 from .annotation_circle_reply import AnnotationCircleReply
 from .annotation_file_attachment_blend_mode import AnnotationFileAttachmentBlendMode
-from .annotation_file_attachment_file import AnnotationFileAttachmentFile
 from .annotation_file_attachment_icon import AnnotationFileAttachmentIcon
 from .annotation_file_attachment_rect import AnnotationFileAttachmentRect
 from .annotation_file_attachment_reply import AnnotationFileAttachmentReply
@@ -114,6 +113,7 @@ from .annotation_underline_reply import AnnotationUnderlineReply
 from .annotation_unsupported_blend_mode import AnnotationUnsupportedBlendMode
 from .annotation_unsupported_rect import AnnotationUnsupportedRect
 from .annotation_unsupported_reply import AnnotationUnsupportedReply
+from .attachment_file_info import AttachmentFileInfo
 from .form_field_ref import FormFieldRef
 from .page_ref import PageRef
 from .pdf_annotation_actions import PdfAnnotationActions
@@ -1431,7 +1431,7 @@ class Annotation_FileAttachment(UniversalBaseModel):
     color: str
     opacity: float
     icon: AnnotationFileAttachmentIcon
-    file: typing.Optional[AnnotationFileAttachmentFile] = None
+    file: typing.Optional[AttachmentFileInfo] = None
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

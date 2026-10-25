@@ -17,7 +17,6 @@ from ..errors.conflict_error import ConflictError
 from ..errors.content_too_large_error import ContentTooLargeError
 from ..errors.not_found_error import NotFoundError
 from ..types.doc_changes200response import DocChanges200Response
-from ..types.doc_changes413response import DocChanges413Response
 from ..types.doc_head200response import DocHead200Response
 from ..types.doc_manifest200response import DocManifest200Response
 from ..types.doc_text200response import DocText200Response
@@ -103,7 +102,7 @@ class RawDocClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocChanges200Response]:
         """
-        Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
+        Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`, outline `doc.outline.modify`, pages `doc.pages.assemble`, embedded files `doc.attachments.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork, a PDF whose pages come in) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
 
         Parameters
         ----------
@@ -186,9 +185,9 @@ class RawDocClient:
                 raise ContentTooLargeError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        DocChanges413Response,
+                        typing.Any,
                         parse_obj_as(
-                            type_=DocChanges413Response,  # type: ignore
+                            type_=typing.Any,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -558,7 +557,7 @@ class AsyncRawDocClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocChanges200Response]:
         """
-        Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
+        Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`, outline `doc.outline.modify`, pages `doc.pages.assemble`, embedded files `doc.attachments.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork, a PDF whose pages come in) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
 
         Parameters
         ----------
@@ -641,9 +640,9 @@ class AsyncRawDocClient:
                 raise ContentTooLargeError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        DocChanges413Response,
+                        typing.Any,
                         parse_obj_as(
-                            type_=DocChanges413Response,  # type: ignore
+                            type_=typing.Any,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

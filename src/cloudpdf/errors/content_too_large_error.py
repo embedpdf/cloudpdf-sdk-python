@@ -3,9 +3,8 @@
 import typing
 
 from ..core.api_error import ApiError
-from ..types.doc_changes413response import DocChanges413Response
 
 
 class ContentTooLargeError(ApiError):
-    def __init__(self, body: DocChanges413Response, headers: typing.Optional[typing.Dict[str, str]] = None):
+    def __init__(self, body: typing.Any, headers: typing.Optional[typing.Dict[str, str]] = None):
         super().__init__(status_code=413, headers=headers, body=body)

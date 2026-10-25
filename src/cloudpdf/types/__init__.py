@@ -464,7 +464,6 @@ if typing.TYPE_CHECKING:
     from .annotation_draft_widget_text_align import AnnotationDraftWidgetTextAlign
     from .annotation_file_attachment import AnnotationFileAttachment
     from .annotation_file_attachment_blend_mode import AnnotationFileAttachmentBlendMode
-    from .annotation_file_attachment_file import AnnotationFileAttachmentFile
     from .annotation_file_attachment_icon import AnnotationFileAttachmentIcon
     from .annotation_file_attachment_rect import AnnotationFileAttachmentRect
     from .annotation_file_attachment_reply import AnnotationFileAttachmentReply
@@ -1220,6 +1219,13 @@ if typing.TYPE_CHECKING:
     from .annotation_unsupported_rect import AnnotationUnsupportedRect
     from .annotation_unsupported_reply import AnnotationUnsupportedReply
     from .annotation_unsupported_reply_type import AnnotationUnsupportedReplyType
+    from .attachment import Attachment
+    from .attachment_file_base import AttachmentFileBase
+    from .attachment_file_info import AttachmentFileInfo
+    from .attachment_list import AttachmentList
+    from .attachment_mutation_meta import AttachmentMutationMeta
+    from .attachment_ref import AttachmentRef
+    from .attachment_ref_kind import AttachmentRefKind
     from .cache_delta import CacheDelta
     from .cache_delta_pages_item import CacheDeltaPagesItem
     from .cache_delta_pages_item_cache import CacheDeltaPagesItemCache
@@ -1230,6 +1236,9 @@ if typing.TYPE_CHECKING:
         ChangeItem_AnnotationsReorder,
         ChangeItem_AnnotationsRestore,
         ChangeItem_AnnotationsUpdate,
+        ChangeItem_AttachmentsCreate,
+        ChangeItem_AttachmentsDelete,
+        ChangeItem_AttachmentsRestore,
         ChangeItem_FormsAddWidget,
         ChangeItem_FormsCreate,
         ChangeItem_FormsDelete,
@@ -1248,6 +1257,17 @@ if typing.TYPE_CHECKING:
         ChangeItem_FormsUpdateWidget,
         ChangeItem_MetadataUpdate,
         ChangeItem_MetadataUpdateCustom,
+        ChangeItem_OutlineCreate,
+        ChangeItem_OutlineDelete,
+        ChangeItem_OutlineMove,
+        ChangeItem_OutlineRestore,
+        ChangeItem_OutlineUpdate,
+        ChangeItem_PagesDelete,
+        ChangeItem_PagesInsert,
+        ChangeItem_PagesInsertBlank,
+        ChangeItem_PagesReorder,
+        ChangeItem_PagesRestore,
+        ChangeItem_PagesRotate,
         ChangeItem_Skipped,
     )
     from .change_item_annotations_create import ChangeItemAnnotationsCreate
@@ -1257,6 +1277,9 @@ if typing.TYPE_CHECKING:
     from .change_item_annotations_update import ChangeItemAnnotationsUpdate
     from .change_item_annotations_update_appearance import ChangeItemAnnotationsUpdateAppearance
     from .change_item_annotations_update_appearance_action import ChangeItemAnnotationsUpdateAppearanceAction
+    from .change_item_attachments_create import ChangeItemAttachmentsCreate
+    from .change_item_attachments_delete import ChangeItemAttachmentsDelete
+    from .change_item_attachments_restore import ChangeItemAttachmentsRestore
     from .change_item_forms_add_widget import ChangeItemFormsAddWidget
     from .change_item_forms_create import ChangeItemFormsCreate
     from .change_item_forms_delete import ChangeItemFormsDelete
@@ -1277,6 +1300,197 @@ if typing.TYPE_CHECKING:
     from .change_item_forms_update_widget_appearance_action import ChangeItemFormsUpdateWidgetAppearanceAction
     from .change_item_metadata_update import ChangeItemMetadataUpdate
     from .change_item_metadata_update_custom import ChangeItemMetadataUpdateCustom
+    from .change_item_outline_create import ChangeItemOutlineCreate
+    from .change_item_outline_delete import ChangeItemOutlineDelete
+    from .change_item_outline_move import ChangeItemOutlineMove
+    from .change_item_outline_restore import ChangeItemOutlineRestore
+    from .change_item_outline_update import ChangeItemOutlineUpdate
+    from .change_item_pages_delete import ChangeItemPagesDelete
+    from .change_item_pages_delete_layout import ChangeItemPagesDeleteLayout
+    from .change_item_pages_delete_layout_named_pages_item import ChangeItemPagesDeleteLayoutNamedPagesItem
+    from .change_item_pages_delete_layout_named_pages_item_target import (
+        ChangeItemPagesDeleteLayoutNamedPagesItemTarget,
+        ChangeItemPagesDeleteLayoutNamedPagesItemTarget_Dangling,
+        ChangeItemPagesDeleteLayoutNamedPagesItemTarget_Page,
+        ChangeItemPagesDeleteLayoutNamedPagesItemTarget_Template,
+    )
+    from .change_item_pages_delete_layout_named_pages_item_target_dangling import (
+        ChangeItemPagesDeleteLayoutNamedPagesItemTargetDangling,
+    )
+    from .change_item_pages_delete_layout_named_pages_item_target_page import (
+        ChangeItemPagesDeleteLayoutNamedPagesItemTargetPage,
+    )
+    from .change_item_pages_delete_layout_named_pages_item_target_template import (
+        ChangeItemPagesDeleteLayoutNamedPagesItemTargetTemplate,
+    )
+    from .change_item_pages_delete_layout_pages_item import ChangeItemPagesDeleteLayoutPagesItem
+    from .change_item_pages_delete_layout_pages_item_boxes import ChangeItemPagesDeleteLayoutPagesItemBoxes
+    from .change_item_pages_delete_layout_pages_item_boxes_art import ChangeItemPagesDeleteLayoutPagesItemBoxesArt
+    from .change_item_pages_delete_layout_pages_item_boxes_bleed import ChangeItemPagesDeleteLayoutPagesItemBoxesBleed
+    from .change_item_pages_delete_layout_pages_item_boxes_crop import ChangeItemPagesDeleteLayoutPagesItemBoxesCrop
+    from .change_item_pages_delete_layout_pages_item_boxes_media import ChangeItemPagesDeleteLayoutPagesItemBoxesMedia
+    from .change_item_pages_delete_layout_pages_item_boxes_trim import ChangeItemPagesDeleteLayoutPagesItemBoxesTrim
+    from .change_item_pages_delete_layout_pages_item_pdf_crop_box import ChangeItemPagesDeleteLayoutPagesItemPdfCropBox
+    from .change_item_pages_delete_layout_pages_item_size import ChangeItemPagesDeleteLayoutPagesItemSize
+    from .change_item_pages_delete_layout_pages_item_tab_order import ChangeItemPagesDeleteLayoutPagesItemTabOrder
+    from .change_item_pages_insert import ChangeItemPagesInsert
+    from .change_item_pages_insert_blank import ChangeItemPagesInsertBlank
+    from .change_item_pages_insert_blank_layout import ChangeItemPagesInsertBlankLayout
+    from .change_item_pages_insert_blank_layout_named_pages_item import ChangeItemPagesInsertBlankLayoutNamedPagesItem
+    from .change_item_pages_insert_blank_layout_named_pages_item_target import (
+        ChangeItemPagesInsertBlankLayoutNamedPagesItemTarget,
+        ChangeItemPagesInsertBlankLayoutNamedPagesItemTarget_Dangling,
+        ChangeItemPagesInsertBlankLayoutNamedPagesItemTarget_Page,
+        ChangeItemPagesInsertBlankLayoutNamedPagesItemTarget_Template,
+    )
+    from .change_item_pages_insert_blank_layout_named_pages_item_target_dangling import (
+        ChangeItemPagesInsertBlankLayoutNamedPagesItemTargetDangling,
+    )
+    from .change_item_pages_insert_blank_layout_named_pages_item_target_page import (
+        ChangeItemPagesInsertBlankLayoutNamedPagesItemTargetPage,
+    )
+    from .change_item_pages_insert_blank_layout_named_pages_item_target_template import (
+        ChangeItemPagesInsertBlankLayoutNamedPagesItemTargetTemplate,
+    )
+    from .change_item_pages_insert_blank_layout_pages_item import ChangeItemPagesInsertBlankLayoutPagesItem
+    from .change_item_pages_insert_blank_layout_pages_item_boxes import ChangeItemPagesInsertBlankLayoutPagesItemBoxes
+    from .change_item_pages_insert_blank_layout_pages_item_boxes_art import (
+        ChangeItemPagesInsertBlankLayoutPagesItemBoxesArt,
+    )
+    from .change_item_pages_insert_blank_layout_pages_item_boxes_bleed import (
+        ChangeItemPagesInsertBlankLayoutPagesItemBoxesBleed,
+    )
+    from .change_item_pages_insert_blank_layout_pages_item_boxes_crop import (
+        ChangeItemPagesInsertBlankLayoutPagesItemBoxesCrop,
+    )
+    from .change_item_pages_insert_blank_layout_pages_item_boxes_media import (
+        ChangeItemPagesInsertBlankLayoutPagesItemBoxesMedia,
+    )
+    from .change_item_pages_insert_blank_layout_pages_item_boxes_trim import (
+        ChangeItemPagesInsertBlankLayoutPagesItemBoxesTrim,
+    )
+    from .change_item_pages_insert_blank_layout_pages_item_pdf_crop_box import (
+        ChangeItemPagesInsertBlankLayoutPagesItemPdfCropBox,
+    )
+    from .change_item_pages_insert_blank_layout_pages_item_size import ChangeItemPagesInsertBlankLayoutPagesItemSize
+    from .change_item_pages_insert_blank_layout_pages_item_tab_order import (
+        ChangeItemPagesInsertBlankLayoutPagesItemTabOrder,
+    )
+    from .change_item_pages_insert_layout import ChangeItemPagesInsertLayout
+    from .change_item_pages_insert_layout_named_pages_item import ChangeItemPagesInsertLayoutNamedPagesItem
+    from .change_item_pages_insert_layout_named_pages_item_target import (
+        ChangeItemPagesInsertLayoutNamedPagesItemTarget,
+        ChangeItemPagesInsertLayoutNamedPagesItemTarget_Dangling,
+        ChangeItemPagesInsertLayoutNamedPagesItemTarget_Page,
+        ChangeItemPagesInsertLayoutNamedPagesItemTarget_Template,
+    )
+    from .change_item_pages_insert_layout_named_pages_item_target_dangling import (
+        ChangeItemPagesInsertLayoutNamedPagesItemTargetDangling,
+    )
+    from .change_item_pages_insert_layout_named_pages_item_target_page import (
+        ChangeItemPagesInsertLayoutNamedPagesItemTargetPage,
+    )
+    from .change_item_pages_insert_layout_named_pages_item_target_template import (
+        ChangeItemPagesInsertLayoutNamedPagesItemTargetTemplate,
+    )
+    from .change_item_pages_insert_layout_pages_item import ChangeItemPagesInsertLayoutPagesItem
+    from .change_item_pages_insert_layout_pages_item_boxes import ChangeItemPagesInsertLayoutPagesItemBoxes
+    from .change_item_pages_insert_layout_pages_item_boxes_art import ChangeItemPagesInsertLayoutPagesItemBoxesArt
+    from .change_item_pages_insert_layout_pages_item_boxes_bleed import ChangeItemPagesInsertLayoutPagesItemBoxesBleed
+    from .change_item_pages_insert_layout_pages_item_boxes_crop import ChangeItemPagesInsertLayoutPagesItemBoxesCrop
+    from .change_item_pages_insert_layout_pages_item_boxes_media import ChangeItemPagesInsertLayoutPagesItemBoxesMedia
+    from .change_item_pages_insert_layout_pages_item_boxes_trim import ChangeItemPagesInsertLayoutPagesItemBoxesTrim
+    from .change_item_pages_insert_layout_pages_item_pdf_crop_box import ChangeItemPagesInsertLayoutPagesItemPdfCropBox
+    from .change_item_pages_insert_layout_pages_item_size import ChangeItemPagesInsertLayoutPagesItemSize
+    from .change_item_pages_insert_layout_pages_item_tab_order import ChangeItemPagesInsertLayoutPagesItemTabOrder
+    from .change_item_pages_reorder import ChangeItemPagesReorder
+    from .change_item_pages_reorder_layout import ChangeItemPagesReorderLayout
+    from .change_item_pages_reorder_layout_named_pages_item import ChangeItemPagesReorderLayoutNamedPagesItem
+    from .change_item_pages_reorder_layout_named_pages_item_target import (
+        ChangeItemPagesReorderLayoutNamedPagesItemTarget,
+        ChangeItemPagesReorderLayoutNamedPagesItemTarget_Dangling,
+        ChangeItemPagesReorderLayoutNamedPagesItemTarget_Page,
+        ChangeItemPagesReorderLayoutNamedPagesItemTarget_Template,
+    )
+    from .change_item_pages_reorder_layout_named_pages_item_target_dangling import (
+        ChangeItemPagesReorderLayoutNamedPagesItemTargetDangling,
+    )
+    from .change_item_pages_reorder_layout_named_pages_item_target_page import (
+        ChangeItemPagesReorderLayoutNamedPagesItemTargetPage,
+    )
+    from .change_item_pages_reorder_layout_named_pages_item_target_template import (
+        ChangeItemPagesReorderLayoutNamedPagesItemTargetTemplate,
+    )
+    from .change_item_pages_reorder_layout_pages_item import ChangeItemPagesReorderLayoutPagesItem
+    from .change_item_pages_reorder_layout_pages_item_boxes import ChangeItemPagesReorderLayoutPagesItemBoxes
+    from .change_item_pages_reorder_layout_pages_item_boxes_art import ChangeItemPagesReorderLayoutPagesItemBoxesArt
+    from .change_item_pages_reorder_layout_pages_item_boxes_bleed import ChangeItemPagesReorderLayoutPagesItemBoxesBleed
+    from .change_item_pages_reorder_layout_pages_item_boxes_crop import ChangeItemPagesReorderLayoutPagesItemBoxesCrop
+    from .change_item_pages_reorder_layout_pages_item_boxes_media import ChangeItemPagesReorderLayoutPagesItemBoxesMedia
+    from .change_item_pages_reorder_layout_pages_item_boxes_trim import ChangeItemPagesReorderLayoutPagesItemBoxesTrim
+    from .change_item_pages_reorder_layout_pages_item_pdf_crop_box import (
+        ChangeItemPagesReorderLayoutPagesItemPdfCropBox,
+    )
+    from .change_item_pages_reorder_layout_pages_item_size import ChangeItemPagesReorderLayoutPagesItemSize
+    from .change_item_pages_reorder_layout_pages_item_tab_order import ChangeItemPagesReorderLayoutPagesItemTabOrder
+    from .change_item_pages_restore import ChangeItemPagesRestore
+    from .change_item_pages_restore_layout import ChangeItemPagesRestoreLayout
+    from .change_item_pages_restore_layout_named_pages_item import ChangeItemPagesRestoreLayoutNamedPagesItem
+    from .change_item_pages_restore_layout_named_pages_item_target import (
+        ChangeItemPagesRestoreLayoutNamedPagesItemTarget,
+        ChangeItemPagesRestoreLayoutNamedPagesItemTarget_Dangling,
+        ChangeItemPagesRestoreLayoutNamedPagesItemTarget_Page,
+        ChangeItemPagesRestoreLayoutNamedPagesItemTarget_Template,
+    )
+    from .change_item_pages_restore_layout_named_pages_item_target_dangling import (
+        ChangeItemPagesRestoreLayoutNamedPagesItemTargetDangling,
+    )
+    from .change_item_pages_restore_layout_named_pages_item_target_page import (
+        ChangeItemPagesRestoreLayoutNamedPagesItemTargetPage,
+    )
+    from .change_item_pages_restore_layout_named_pages_item_target_template import (
+        ChangeItemPagesRestoreLayoutNamedPagesItemTargetTemplate,
+    )
+    from .change_item_pages_restore_layout_pages_item import ChangeItemPagesRestoreLayoutPagesItem
+    from .change_item_pages_restore_layout_pages_item_boxes import ChangeItemPagesRestoreLayoutPagesItemBoxes
+    from .change_item_pages_restore_layout_pages_item_boxes_art import ChangeItemPagesRestoreLayoutPagesItemBoxesArt
+    from .change_item_pages_restore_layout_pages_item_boxes_bleed import ChangeItemPagesRestoreLayoutPagesItemBoxesBleed
+    from .change_item_pages_restore_layout_pages_item_boxes_crop import ChangeItemPagesRestoreLayoutPagesItemBoxesCrop
+    from .change_item_pages_restore_layout_pages_item_boxes_media import ChangeItemPagesRestoreLayoutPagesItemBoxesMedia
+    from .change_item_pages_restore_layout_pages_item_boxes_trim import ChangeItemPagesRestoreLayoutPagesItemBoxesTrim
+    from .change_item_pages_restore_layout_pages_item_pdf_crop_box import (
+        ChangeItemPagesRestoreLayoutPagesItemPdfCropBox,
+    )
+    from .change_item_pages_restore_layout_pages_item_size import ChangeItemPagesRestoreLayoutPagesItemSize
+    from .change_item_pages_restore_layout_pages_item_tab_order import ChangeItemPagesRestoreLayoutPagesItemTabOrder
+    from .change_item_pages_rotate import ChangeItemPagesRotate
+    from .change_item_pages_rotate_layout import ChangeItemPagesRotateLayout
+    from .change_item_pages_rotate_layout_named_pages_item import ChangeItemPagesRotateLayoutNamedPagesItem
+    from .change_item_pages_rotate_layout_named_pages_item_target import (
+        ChangeItemPagesRotateLayoutNamedPagesItemTarget,
+        ChangeItemPagesRotateLayoutNamedPagesItemTarget_Dangling,
+        ChangeItemPagesRotateLayoutNamedPagesItemTarget_Page,
+        ChangeItemPagesRotateLayoutNamedPagesItemTarget_Template,
+    )
+    from .change_item_pages_rotate_layout_named_pages_item_target_dangling import (
+        ChangeItemPagesRotateLayoutNamedPagesItemTargetDangling,
+    )
+    from .change_item_pages_rotate_layout_named_pages_item_target_page import (
+        ChangeItemPagesRotateLayoutNamedPagesItemTargetPage,
+    )
+    from .change_item_pages_rotate_layout_named_pages_item_target_template import (
+        ChangeItemPagesRotateLayoutNamedPagesItemTargetTemplate,
+    )
+    from .change_item_pages_rotate_layout_pages_item import ChangeItemPagesRotateLayoutPagesItem
+    from .change_item_pages_rotate_layout_pages_item_boxes import ChangeItemPagesRotateLayoutPagesItemBoxes
+    from .change_item_pages_rotate_layout_pages_item_boxes_art import ChangeItemPagesRotateLayoutPagesItemBoxesArt
+    from .change_item_pages_rotate_layout_pages_item_boxes_bleed import ChangeItemPagesRotateLayoutPagesItemBoxesBleed
+    from .change_item_pages_rotate_layout_pages_item_boxes_crop import ChangeItemPagesRotateLayoutPagesItemBoxesCrop
+    from .change_item_pages_rotate_layout_pages_item_boxes_media import ChangeItemPagesRotateLayoutPagesItemBoxesMedia
+    from .change_item_pages_rotate_layout_pages_item_boxes_trim import ChangeItemPagesRotateLayoutPagesItemBoxesTrim
+    from .change_item_pages_rotate_layout_pages_item_pdf_crop_box import ChangeItemPagesRotateLayoutPagesItemPdfCropBox
+    from .change_item_pages_rotate_layout_pages_item_size import ChangeItemPagesRotateLayoutPagesItemSize
+    from .change_item_pages_rotate_layout_pages_item_tab_order import ChangeItemPagesRotateLayoutPagesItemTabOrder
     from .change_item_skipped import ChangeItemSkipped
     from .change_item_skipped_op import ChangeItemSkippedOp
     from .change_op import (
@@ -1285,6 +1499,8 @@ if typing.TYPE_CHECKING:
         ChangeOp_AnnotationsDelete,
         ChangeOp_AnnotationsReorder,
         ChangeOp_AnnotationsUpdate,
+        ChangeOp_AttachmentsCreate,
+        ChangeOp_AttachmentsDelete,
         ChangeOp_FormsAddWidget,
         ChangeOp_FormsCreate,
         ChangeOp_FormsDelete,
@@ -1301,6 +1517,15 @@ if typing.TYPE_CHECKING:
         ChangeOp_FormsUpdateWidget,
         ChangeOp_MetadataUpdate,
         ChangeOp_MetadataUpdateCustom,
+        ChangeOp_OutlineCreate,
+        ChangeOp_OutlineDelete,
+        ChangeOp_OutlineMove,
+        ChangeOp_OutlineUpdate,
+        ChangeOp_PagesDelete,
+        ChangeOp_PagesInsert,
+        ChangeOp_PagesInsertBlank,
+        ChangeOp_PagesReorder,
+        ChangeOp_PagesRotate,
     )
     from .change_op_annotations_create import ChangeOpAnnotationsCreate
     from .change_op_annotations_create_resources import ChangeOpAnnotationsCreateResources
@@ -1308,6 +1533,9 @@ if typing.TYPE_CHECKING:
     from .change_op_annotations_reorder import ChangeOpAnnotationsReorder
     from .change_op_annotations_update import ChangeOpAnnotationsUpdate
     from .change_op_annotations_update_resources import ChangeOpAnnotationsUpdateResources
+    from .change_op_attachments_create import ChangeOpAttachmentsCreate
+    from .change_op_attachments_create_resources import ChangeOpAttachmentsCreateResources
+    from .change_op_attachments_delete import ChangeOpAttachmentsDelete
     from .change_op_forms_add_widget import ChangeOpFormsAddWidget
     from .change_op_forms_create import ChangeOpFormsCreate
     from .change_op_forms_delete import ChangeOpFormsDelete
@@ -1326,6 +1554,18 @@ if typing.TYPE_CHECKING:
     from .change_op_forms_update_widget import ChangeOpFormsUpdateWidget
     from .change_op_metadata_update import ChangeOpMetadataUpdate
     from .change_op_metadata_update_custom import ChangeOpMetadataUpdateCustom
+    from .change_op_outline_create import ChangeOpOutlineCreate
+    from .change_op_outline_delete import ChangeOpOutlineDelete
+    from .change_op_outline_move import ChangeOpOutlineMove
+    from .change_op_outline_update import ChangeOpOutlineUpdate
+    from .change_op_pages_delete import ChangeOpPagesDelete
+    from .change_op_pages_insert import ChangeOpPagesInsert
+    from .change_op_pages_insert_blank import ChangeOpPagesInsertBlank
+    from .change_op_pages_insert_blank_spec import ChangeOpPagesInsertBlankSpec
+    from .change_op_pages_insert_blank_spec_size import ChangeOpPagesInsertBlankSpecSize
+    from .change_op_pages_insert_resources import ChangeOpPagesInsertResources
+    from .change_op_pages_reorder import ChangeOpPagesReorder
+    from .change_op_pages_rotate import ChangeOpPagesRotate
     from .change_result import ChangeResult
     from .deployment_license_status_response import DeploymentLicenseStatusResponse
     from .doc_annotations_create200response import DocAnnotationsCreate200Response
@@ -1353,6 +1593,9 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_list_all409response import DocAnnotationsListAll409Response
     from .doc_annotations_read_appearance400response import DocAnnotationsReadAppearance400Response
     from .doc_annotations_read_appearance404response import DocAnnotationsReadAppearance404Response
+    from .doc_annotations_read_file400response import DocAnnotationsReadFile400Response
+    from .doc_annotations_read_file404response import DocAnnotationsReadFile404Response
+    from .doc_annotations_read_file413response import DocAnnotationsReadFile413Response
     from .doc_annotations_reorder200response import DocAnnotationsReorder200Response
     from .doc_annotations_reorder400response import DocAnnotationsReorder400Response
     from .doc_annotations_reorder404response import DocAnnotationsReorder404Response
@@ -1362,6 +1605,11 @@ if typing.TYPE_CHECKING:
     from .doc_annotations_update400response import DocAnnotationsUpdate400Response
     from .doc_annotations_update404response import DocAnnotationsUpdate404Response
     from .doc_annotations_update_request import DocAnnotationsUpdateRequest
+    from .doc_attachments_download400response import DocAttachmentsDownload400Response
+    from .doc_attachments_download404response import DocAttachmentsDownload404Response
+    from .doc_attachments_download413response import DocAttachmentsDownload413Response
+    from .doc_attachments_list200response import DocAttachmentsList200Response
+    from .doc_attachments_list404response import DocAttachmentsList404Response
     from .doc_changes200response import DocChanges200Response
     from .doc_changes200response_changes_item import (
         DocChanges200ResponseChangesItem,
@@ -1433,56 +1681,14 @@ if typing.TYPE_CHECKING:
     from .doc_manifest200response_scopes_forms import DocManifest200ResponseScopesForms
     from .doc_manifest200response_scopes_layout import DocManifest200ResponseScopesLayout
     from .doc_manifest200response_scopes_metadata import DocManifest200ResponseScopesMetadata
+    from .doc_manifest200response_scopes_outline import DocManifest200ResponseScopesOutline
     from .doc_manifest404response import DocManifest404Response
     from .doc_metadata_custom_get200response import DocMetadataCustomGet200Response
     from .doc_metadata_custom_get404response import DocMetadataCustomGet404Response
     from .doc_metadata_get200response import DocMetadataGet200Response
     from .doc_metadata_get404response import DocMetadataGet404Response
-    from .doc_pages_delete200response import DocPagesDelete200Response
-    from .doc_pages_delete200response_layout import DocPagesDelete200ResponseLayout
-    from .doc_pages_delete200response_layout_named_pages_item import DocPagesDelete200ResponseLayoutNamedPagesItem
-    from .doc_pages_delete200response_layout_named_pages_item_target import (
-        DocPagesDelete200ResponseLayoutNamedPagesItemTarget,
-        DocPagesDelete200ResponseLayoutNamedPagesItemTarget_Dangling,
-        DocPagesDelete200ResponseLayoutNamedPagesItemTarget_Page,
-        DocPagesDelete200ResponseLayoutNamedPagesItemTarget_Template,
-    )
-    from .doc_pages_delete200response_layout_named_pages_item_target_dangling import (
-        DocPagesDelete200ResponseLayoutNamedPagesItemTargetDangling,
-    )
-    from .doc_pages_delete200response_layout_named_pages_item_target_page import (
-        DocPagesDelete200ResponseLayoutNamedPagesItemTargetPage,
-    )
-    from .doc_pages_delete200response_layout_named_pages_item_target_template import (
-        DocPagesDelete200ResponseLayoutNamedPagesItemTargetTemplate,
-    )
-    from .doc_pages_delete200response_layout_pages_item import DocPagesDelete200ResponseLayoutPagesItem
-    from .doc_pages_delete200response_layout_pages_item_boxes import DocPagesDelete200ResponseLayoutPagesItemBoxes
-    from .doc_pages_delete200response_layout_pages_item_boxes_art import (
-        DocPagesDelete200ResponseLayoutPagesItemBoxesArt,
-    )
-    from .doc_pages_delete200response_layout_pages_item_boxes_bleed import (
-        DocPagesDelete200ResponseLayoutPagesItemBoxesBleed,
-    )
-    from .doc_pages_delete200response_layout_pages_item_boxes_crop import (
-        DocPagesDelete200ResponseLayoutPagesItemBoxesCrop,
-    )
-    from .doc_pages_delete200response_layout_pages_item_boxes_media import (
-        DocPagesDelete200ResponseLayoutPagesItemBoxesMedia,
-    )
-    from .doc_pages_delete200response_layout_pages_item_boxes_trim import (
-        DocPagesDelete200ResponseLayoutPagesItemBoxesTrim,
-    )
-    from .doc_pages_delete200response_layout_pages_item_pdf_crop_box import (
-        DocPagesDelete200ResponseLayoutPagesItemPdfCropBox,
-    )
-    from .doc_pages_delete200response_layout_pages_item_size import DocPagesDelete200ResponseLayoutPagesItemSize
-    from .doc_pages_delete200response_layout_pages_item_tab_order import (
-        DocPagesDelete200ResponseLayoutPagesItemTabOrder,
-    )
-    from .doc_pages_delete400response import DocPagesDelete400Response
-    from .doc_pages_delete404response import DocPagesDelete404Response
-    from .doc_pages_delete_request import DocPagesDeleteRequest
+    from .doc_outline_get200response import DocOutlineGet200Response
+    from .doc_outline_get404response import DocOutlineGet404Response
     from .doc_pages_extract400response import DocPagesExtract400Response
     from .doc_pages_extract404response import DocPagesExtract404Response
     from .doc_pages_extract_request import DocPagesExtractRequest
@@ -1493,101 +1699,6 @@ if typing.TYPE_CHECKING:
     from .doc_pages_flatten400response import DocPagesFlatten400Response
     from .doc_pages_flatten404response import DocPagesFlatten404Response
     from .doc_pages_flatten_request import DocPagesFlattenRequest
-    from .doc_pages_insert200response import DocPagesInsert200Response
-    from .doc_pages_insert200response_layout import DocPagesInsert200ResponseLayout
-    from .doc_pages_insert200response_layout_named_pages_item import DocPagesInsert200ResponseLayoutNamedPagesItem
-    from .doc_pages_insert200response_layout_named_pages_item_target import (
-        DocPagesInsert200ResponseLayoutNamedPagesItemTarget,
-        DocPagesInsert200ResponseLayoutNamedPagesItemTarget_Dangling,
-        DocPagesInsert200ResponseLayoutNamedPagesItemTarget_Page,
-        DocPagesInsert200ResponseLayoutNamedPagesItemTarget_Template,
-    )
-    from .doc_pages_insert200response_layout_named_pages_item_target_dangling import (
-        DocPagesInsert200ResponseLayoutNamedPagesItemTargetDangling,
-    )
-    from .doc_pages_insert200response_layout_named_pages_item_target_page import (
-        DocPagesInsert200ResponseLayoutNamedPagesItemTargetPage,
-    )
-    from .doc_pages_insert200response_layout_named_pages_item_target_template import (
-        DocPagesInsert200ResponseLayoutNamedPagesItemTargetTemplate,
-    )
-    from .doc_pages_insert200response_layout_pages_item import DocPagesInsert200ResponseLayoutPagesItem
-    from .doc_pages_insert200response_layout_pages_item_boxes import DocPagesInsert200ResponseLayoutPagesItemBoxes
-    from .doc_pages_insert200response_layout_pages_item_boxes_art import (
-        DocPagesInsert200ResponseLayoutPagesItemBoxesArt,
-    )
-    from .doc_pages_insert200response_layout_pages_item_boxes_bleed import (
-        DocPagesInsert200ResponseLayoutPagesItemBoxesBleed,
-    )
-    from .doc_pages_insert200response_layout_pages_item_boxes_crop import (
-        DocPagesInsert200ResponseLayoutPagesItemBoxesCrop,
-    )
-    from .doc_pages_insert200response_layout_pages_item_boxes_media import (
-        DocPagesInsert200ResponseLayoutPagesItemBoxesMedia,
-    )
-    from .doc_pages_insert200response_layout_pages_item_boxes_trim import (
-        DocPagesInsert200ResponseLayoutPagesItemBoxesTrim,
-    )
-    from .doc_pages_insert200response_layout_pages_item_pdf_crop_box import (
-        DocPagesInsert200ResponseLayoutPagesItemPdfCropBox,
-    )
-    from .doc_pages_insert200response_layout_pages_item_size import DocPagesInsert200ResponseLayoutPagesItemSize
-    from .doc_pages_insert200response_layout_pages_item_tab_order import (
-        DocPagesInsert200ResponseLayoutPagesItemTabOrder,
-    )
-    from .doc_pages_insert400response import DocPagesInsert400Response
-    from .doc_pages_insert404response import DocPagesInsert404Response
-    from .doc_pages_insert_blank200response import DocPagesInsertBlank200Response
-    from .doc_pages_insert_blank200response_layout import DocPagesInsertBlank200ResponseLayout
-    from .doc_pages_insert_blank200response_layout_named_pages_item import (
-        DocPagesInsertBlank200ResponseLayoutNamedPagesItem,
-    )
-    from .doc_pages_insert_blank200response_layout_named_pages_item_target import (
-        DocPagesInsertBlank200ResponseLayoutNamedPagesItemTarget,
-        DocPagesInsertBlank200ResponseLayoutNamedPagesItemTarget_Dangling,
-        DocPagesInsertBlank200ResponseLayoutNamedPagesItemTarget_Page,
-        DocPagesInsertBlank200ResponseLayoutNamedPagesItemTarget_Template,
-    )
-    from .doc_pages_insert_blank200response_layout_named_pages_item_target_dangling import (
-        DocPagesInsertBlank200ResponseLayoutNamedPagesItemTargetDangling,
-    )
-    from .doc_pages_insert_blank200response_layout_named_pages_item_target_page import (
-        DocPagesInsertBlank200ResponseLayoutNamedPagesItemTargetPage,
-    )
-    from .doc_pages_insert_blank200response_layout_named_pages_item_target_template import (
-        DocPagesInsertBlank200ResponseLayoutNamedPagesItemTargetTemplate,
-    )
-    from .doc_pages_insert_blank200response_layout_pages_item import DocPagesInsertBlank200ResponseLayoutPagesItem
-    from .doc_pages_insert_blank200response_layout_pages_item_boxes import (
-        DocPagesInsertBlank200ResponseLayoutPagesItemBoxes,
-    )
-    from .doc_pages_insert_blank200response_layout_pages_item_boxes_art import (
-        DocPagesInsertBlank200ResponseLayoutPagesItemBoxesArt,
-    )
-    from .doc_pages_insert_blank200response_layout_pages_item_boxes_bleed import (
-        DocPagesInsertBlank200ResponseLayoutPagesItemBoxesBleed,
-    )
-    from .doc_pages_insert_blank200response_layout_pages_item_boxes_crop import (
-        DocPagesInsertBlank200ResponseLayoutPagesItemBoxesCrop,
-    )
-    from .doc_pages_insert_blank200response_layout_pages_item_boxes_media import (
-        DocPagesInsertBlank200ResponseLayoutPagesItemBoxesMedia,
-    )
-    from .doc_pages_insert_blank200response_layout_pages_item_boxes_trim import (
-        DocPagesInsertBlank200ResponseLayoutPagesItemBoxesTrim,
-    )
-    from .doc_pages_insert_blank200response_layout_pages_item_pdf_crop_box import (
-        DocPagesInsertBlank200ResponseLayoutPagesItemPdfCropBox,
-    )
-    from .doc_pages_insert_blank200response_layout_pages_item_size import (
-        DocPagesInsertBlank200ResponseLayoutPagesItemSize,
-    )
-    from .doc_pages_insert_blank200response_layout_pages_item_tab_order import (
-        DocPagesInsertBlank200ResponseLayoutPagesItemTabOrder,
-    )
-    from .doc_pages_insert_blank400response import DocPagesInsertBlank400Response
-    from .doc_pages_insert_blank404response import DocPagesInsertBlank404Response
-    from .doc_pages_insert_blank_request import DocPagesInsertBlankRequest
     from .doc_pages_remove_name200response import DocPagesRemoveName200Response
     from .doc_pages_remove_name200response_layout import DocPagesRemoveName200ResponseLayout
     from .doc_pages_remove_name200response_layout_named_pages_item import (
@@ -1639,95 +1750,6 @@ if typing.TYPE_CHECKING:
     from .doc_pages_remove_name400response import DocPagesRemoveName400Response
     from .doc_pages_remove_name404response import DocPagesRemoveName404Response
     from .doc_pages_remove_name_request import DocPagesRemoveNameRequest
-    from .doc_pages_reorder200response import DocPagesReorder200Response
-    from .doc_pages_reorder200response_layout import DocPagesReorder200ResponseLayout
-    from .doc_pages_reorder200response_layout_named_pages_item import DocPagesReorder200ResponseLayoutNamedPagesItem
-    from .doc_pages_reorder200response_layout_named_pages_item_target import (
-        DocPagesReorder200ResponseLayoutNamedPagesItemTarget,
-        DocPagesReorder200ResponseLayoutNamedPagesItemTarget_Dangling,
-        DocPagesReorder200ResponseLayoutNamedPagesItemTarget_Page,
-        DocPagesReorder200ResponseLayoutNamedPagesItemTarget_Template,
-    )
-    from .doc_pages_reorder200response_layout_named_pages_item_target_dangling import (
-        DocPagesReorder200ResponseLayoutNamedPagesItemTargetDangling,
-    )
-    from .doc_pages_reorder200response_layout_named_pages_item_target_page import (
-        DocPagesReorder200ResponseLayoutNamedPagesItemTargetPage,
-    )
-    from .doc_pages_reorder200response_layout_named_pages_item_target_template import (
-        DocPagesReorder200ResponseLayoutNamedPagesItemTargetTemplate,
-    )
-    from .doc_pages_reorder200response_layout_pages_item import DocPagesReorder200ResponseLayoutPagesItem
-    from .doc_pages_reorder200response_layout_pages_item_boxes import DocPagesReorder200ResponseLayoutPagesItemBoxes
-    from .doc_pages_reorder200response_layout_pages_item_boxes_art import (
-        DocPagesReorder200ResponseLayoutPagesItemBoxesArt,
-    )
-    from .doc_pages_reorder200response_layout_pages_item_boxes_bleed import (
-        DocPagesReorder200ResponseLayoutPagesItemBoxesBleed,
-    )
-    from .doc_pages_reorder200response_layout_pages_item_boxes_crop import (
-        DocPagesReorder200ResponseLayoutPagesItemBoxesCrop,
-    )
-    from .doc_pages_reorder200response_layout_pages_item_boxes_media import (
-        DocPagesReorder200ResponseLayoutPagesItemBoxesMedia,
-    )
-    from .doc_pages_reorder200response_layout_pages_item_boxes_trim import (
-        DocPagesReorder200ResponseLayoutPagesItemBoxesTrim,
-    )
-    from .doc_pages_reorder200response_layout_pages_item_pdf_crop_box import (
-        DocPagesReorder200ResponseLayoutPagesItemPdfCropBox,
-    )
-    from .doc_pages_reorder200response_layout_pages_item_size import DocPagesReorder200ResponseLayoutPagesItemSize
-    from .doc_pages_reorder200response_layout_pages_item_tab_order import (
-        DocPagesReorder200ResponseLayoutPagesItemTabOrder,
-    )
-    from .doc_pages_reorder400response import DocPagesReorder400Response
-    from .doc_pages_reorder404response import DocPagesReorder404Response
-    from .doc_pages_rotate200response import DocPagesRotate200Response
-    from .doc_pages_rotate200response_layout import DocPagesRotate200ResponseLayout
-    from .doc_pages_rotate200response_layout_named_pages_item import DocPagesRotate200ResponseLayoutNamedPagesItem
-    from .doc_pages_rotate200response_layout_named_pages_item_target import (
-        DocPagesRotate200ResponseLayoutNamedPagesItemTarget,
-        DocPagesRotate200ResponseLayoutNamedPagesItemTarget_Dangling,
-        DocPagesRotate200ResponseLayoutNamedPagesItemTarget_Page,
-        DocPagesRotate200ResponseLayoutNamedPagesItemTarget_Template,
-    )
-    from .doc_pages_rotate200response_layout_named_pages_item_target_dangling import (
-        DocPagesRotate200ResponseLayoutNamedPagesItemTargetDangling,
-    )
-    from .doc_pages_rotate200response_layout_named_pages_item_target_page import (
-        DocPagesRotate200ResponseLayoutNamedPagesItemTargetPage,
-    )
-    from .doc_pages_rotate200response_layout_named_pages_item_target_template import (
-        DocPagesRotate200ResponseLayoutNamedPagesItemTargetTemplate,
-    )
-    from .doc_pages_rotate200response_layout_pages_item import DocPagesRotate200ResponseLayoutPagesItem
-    from .doc_pages_rotate200response_layout_pages_item_boxes import DocPagesRotate200ResponseLayoutPagesItemBoxes
-    from .doc_pages_rotate200response_layout_pages_item_boxes_art import (
-        DocPagesRotate200ResponseLayoutPagesItemBoxesArt,
-    )
-    from .doc_pages_rotate200response_layout_pages_item_boxes_bleed import (
-        DocPagesRotate200ResponseLayoutPagesItemBoxesBleed,
-    )
-    from .doc_pages_rotate200response_layout_pages_item_boxes_crop import (
-        DocPagesRotate200ResponseLayoutPagesItemBoxesCrop,
-    )
-    from .doc_pages_rotate200response_layout_pages_item_boxes_media import (
-        DocPagesRotate200ResponseLayoutPagesItemBoxesMedia,
-    )
-    from .doc_pages_rotate200response_layout_pages_item_boxes_trim import (
-        DocPagesRotate200ResponseLayoutPagesItemBoxesTrim,
-    )
-    from .doc_pages_rotate200response_layout_pages_item_pdf_crop_box import (
-        DocPagesRotate200ResponseLayoutPagesItemPdfCropBox,
-    )
-    from .doc_pages_rotate200response_layout_pages_item_size import DocPagesRotate200ResponseLayoutPagesItemSize
-    from .doc_pages_rotate200response_layout_pages_item_tab_order import (
-        DocPagesRotate200ResponseLayoutPagesItemTabOrder,
-    )
-    from .doc_pages_rotate400response import DocPagesRotate400Response
-    from .doc_pages_rotate404response import DocPagesRotate404Response
-    from .doc_pages_rotate_request import DocPagesRotateRequest
     from .doc_pages_set_name200response import DocPagesSetName200Response
     from .doc_pages_set_name200response_layout import DocPagesSetName200ResponseLayout
     from .doc_pages_set_name200response_layout_named_pages_item import DocPagesSetName200ResponseLayoutNamedPagesItem
@@ -2070,6 +2092,7 @@ if typing.TYPE_CHECKING:
     from .document_actions_snapshot_name_tree_scripts_item import DocumentActionsSnapshotNameTreeScriptsItem
     from .document_metadata import DocumentMetadata
     from .document_metadata_trapped import DocumentMetadataTrapped
+    from .document_outline import DocumentOutline
     from .documents_commit200response import DocumentsCommit200Response
     from .documents_commit200response_document import DocumentsCommit200ResponseDocument
     from .documents_commit200response_document_state import DocumentsCommit200ResponseDocumentState
@@ -2414,6 +2437,16 @@ if typing.TYPE_CHECKING:
     from .metadata_patch import MetadataPatch
     from .metadata_patch_trapped import MetadataPatchTrapped
     from .mutation_meta import MutationMeta
+    from .outline_item import OutlineItem
+    from .outline_item_draft import OutlineItemDraft
+    from .outline_item_patch import OutlineItemPatch
+    from .outline_item_ref import OutlineItemRef
+    from .outline_item_ref_kind import OutlineItemRefKind
+    from .outline_mutation_meta import OutlineMutationMeta
+    from .outline_order import OutlineOrder
+    from .outline_position import OutlinePosition
+    from .outline_position_after import OutlinePositionAfter
+    from .outline_position_zero import OutlinePositionZero
     from .page_destination import (
         PageDestination,
         PageDestination_Fit,
@@ -2924,7 +2957,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "AnnotationDraft_Widget": ".annotation_draft",
     "AnnotationFileAttachment": ".annotation_file_attachment",
     "AnnotationFileAttachmentBlendMode": ".annotation_file_attachment_blend_mode",
-    "AnnotationFileAttachmentFile": ".annotation_file_attachment_file",
     "AnnotationFileAttachmentIcon": ".annotation_file_attachment_icon",
     "AnnotationFileAttachmentRect": ".annotation_file_attachment_rect",
     "AnnotationFileAttachmentReply": ".annotation_file_attachment_reply",
@@ -3496,6 +3528,13 @@ _dynamic_imports: typing.Dict[str, str] = {
     "Annotation_Underline": ".annotation",
     "Annotation_Unsupported": ".annotation",
     "Annotation_Widget": ".annotation",
+    "Attachment": ".attachment",
+    "AttachmentFileBase": ".attachment_file_base",
+    "AttachmentFileInfo": ".attachment_file_info",
+    "AttachmentList": ".attachment_list",
+    "AttachmentMutationMeta": ".attachment_mutation_meta",
+    "AttachmentRef": ".attachment_ref",
+    "AttachmentRefKind": ".attachment_ref_kind",
     "CacheDelta": ".cache_delta",
     "CacheDeltaPagesItem": ".cache_delta_pages_item",
     "CacheDeltaPagesItemCache": ".cache_delta_pages_item_cache",
@@ -3507,6 +3546,9 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeItemAnnotationsUpdate": ".change_item_annotations_update",
     "ChangeItemAnnotationsUpdateAppearance": ".change_item_annotations_update_appearance",
     "ChangeItemAnnotationsUpdateAppearanceAction": ".change_item_annotations_update_appearance_action",
+    "ChangeItemAttachmentsCreate": ".change_item_attachments_create",
+    "ChangeItemAttachmentsDelete": ".change_item_attachments_delete",
+    "ChangeItemAttachmentsRestore": ".change_item_attachments_restore",
     "ChangeItemFormsAddWidget": ".change_item_forms_add_widget",
     "ChangeItemFormsCreate": ".change_item_forms_create",
     "ChangeItemFormsDelete": ".change_item_forms_delete",
@@ -3527,6 +3569,131 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeItemFormsUpdateWidgetAppearanceAction": ".change_item_forms_update_widget_appearance_action",
     "ChangeItemMetadataUpdate": ".change_item_metadata_update",
     "ChangeItemMetadataUpdateCustom": ".change_item_metadata_update_custom",
+    "ChangeItemOutlineCreate": ".change_item_outline_create",
+    "ChangeItemOutlineDelete": ".change_item_outline_delete",
+    "ChangeItemOutlineMove": ".change_item_outline_move",
+    "ChangeItemOutlineRestore": ".change_item_outline_restore",
+    "ChangeItemOutlineUpdate": ".change_item_outline_update",
+    "ChangeItemPagesDelete": ".change_item_pages_delete",
+    "ChangeItemPagesDeleteLayout": ".change_item_pages_delete_layout",
+    "ChangeItemPagesDeleteLayoutNamedPagesItem": ".change_item_pages_delete_layout_named_pages_item",
+    "ChangeItemPagesDeleteLayoutNamedPagesItemTarget": ".change_item_pages_delete_layout_named_pages_item_target",
+    "ChangeItemPagesDeleteLayoutNamedPagesItemTargetDangling": ".change_item_pages_delete_layout_named_pages_item_target_dangling",
+    "ChangeItemPagesDeleteLayoutNamedPagesItemTargetPage": ".change_item_pages_delete_layout_named_pages_item_target_page",
+    "ChangeItemPagesDeleteLayoutNamedPagesItemTargetTemplate": ".change_item_pages_delete_layout_named_pages_item_target_template",
+    "ChangeItemPagesDeleteLayoutNamedPagesItemTarget_Dangling": ".change_item_pages_delete_layout_named_pages_item_target",
+    "ChangeItemPagesDeleteLayoutNamedPagesItemTarget_Page": ".change_item_pages_delete_layout_named_pages_item_target",
+    "ChangeItemPagesDeleteLayoutNamedPagesItemTarget_Template": ".change_item_pages_delete_layout_named_pages_item_target",
+    "ChangeItemPagesDeleteLayoutPagesItem": ".change_item_pages_delete_layout_pages_item",
+    "ChangeItemPagesDeleteLayoutPagesItemBoxes": ".change_item_pages_delete_layout_pages_item_boxes",
+    "ChangeItemPagesDeleteLayoutPagesItemBoxesArt": ".change_item_pages_delete_layout_pages_item_boxes_art",
+    "ChangeItemPagesDeleteLayoutPagesItemBoxesBleed": ".change_item_pages_delete_layout_pages_item_boxes_bleed",
+    "ChangeItemPagesDeleteLayoutPagesItemBoxesCrop": ".change_item_pages_delete_layout_pages_item_boxes_crop",
+    "ChangeItemPagesDeleteLayoutPagesItemBoxesMedia": ".change_item_pages_delete_layout_pages_item_boxes_media",
+    "ChangeItemPagesDeleteLayoutPagesItemBoxesTrim": ".change_item_pages_delete_layout_pages_item_boxes_trim",
+    "ChangeItemPagesDeleteLayoutPagesItemPdfCropBox": ".change_item_pages_delete_layout_pages_item_pdf_crop_box",
+    "ChangeItemPagesDeleteLayoutPagesItemSize": ".change_item_pages_delete_layout_pages_item_size",
+    "ChangeItemPagesDeleteLayoutPagesItemTabOrder": ".change_item_pages_delete_layout_pages_item_tab_order",
+    "ChangeItemPagesInsert": ".change_item_pages_insert",
+    "ChangeItemPagesInsertBlank": ".change_item_pages_insert_blank",
+    "ChangeItemPagesInsertBlankLayout": ".change_item_pages_insert_blank_layout",
+    "ChangeItemPagesInsertBlankLayoutNamedPagesItem": ".change_item_pages_insert_blank_layout_named_pages_item",
+    "ChangeItemPagesInsertBlankLayoutNamedPagesItemTarget": ".change_item_pages_insert_blank_layout_named_pages_item_target",
+    "ChangeItemPagesInsertBlankLayoutNamedPagesItemTargetDangling": ".change_item_pages_insert_blank_layout_named_pages_item_target_dangling",
+    "ChangeItemPagesInsertBlankLayoutNamedPagesItemTargetPage": ".change_item_pages_insert_blank_layout_named_pages_item_target_page",
+    "ChangeItemPagesInsertBlankLayoutNamedPagesItemTargetTemplate": ".change_item_pages_insert_blank_layout_named_pages_item_target_template",
+    "ChangeItemPagesInsertBlankLayoutNamedPagesItemTarget_Dangling": ".change_item_pages_insert_blank_layout_named_pages_item_target",
+    "ChangeItemPagesInsertBlankLayoutNamedPagesItemTarget_Page": ".change_item_pages_insert_blank_layout_named_pages_item_target",
+    "ChangeItemPagesInsertBlankLayoutNamedPagesItemTarget_Template": ".change_item_pages_insert_blank_layout_named_pages_item_target",
+    "ChangeItemPagesInsertBlankLayoutPagesItem": ".change_item_pages_insert_blank_layout_pages_item",
+    "ChangeItemPagesInsertBlankLayoutPagesItemBoxes": ".change_item_pages_insert_blank_layout_pages_item_boxes",
+    "ChangeItemPagesInsertBlankLayoutPagesItemBoxesArt": ".change_item_pages_insert_blank_layout_pages_item_boxes_art",
+    "ChangeItemPagesInsertBlankLayoutPagesItemBoxesBleed": ".change_item_pages_insert_blank_layout_pages_item_boxes_bleed",
+    "ChangeItemPagesInsertBlankLayoutPagesItemBoxesCrop": ".change_item_pages_insert_blank_layout_pages_item_boxes_crop",
+    "ChangeItemPagesInsertBlankLayoutPagesItemBoxesMedia": ".change_item_pages_insert_blank_layout_pages_item_boxes_media",
+    "ChangeItemPagesInsertBlankLayoutPagesItemBoxesTrim": ".change_item_pages_insert_blank_layout_pages_item_boxes_trim",
+    "ChangeItemPagesInsertBlankLayoutPagesItemPdfCropBox": ".change_item_pages_insert_blank_layout_pages_item_pdf_crop_box",
+    "ChangeItemPagesInsertBlankLayoutPagesItemSize": ".change_item_pages_insert_blank_layout_pages_item_size",
+    "ChangeItemPagesInsertBlankLayoutPagesItemTabOrder": ".change_item_pages_insert_blank_layout_pages_item_tab_order",
+    "ChangeItemPagesInsertLayout": ".change_item_pages_insert_layout",
+    "ChangeItemPagesInsertLayoutNamedPagesItem": ".change_item_pages_insert_layout_named_pages_item",
+    "ChangeItemPagesInsertLayoutNamedPagesItemTarget": ".change_item_pages_insert_layout_named_pages_item_target",
+    "ChangeItemPagesInsertLayoutNamedPagesItemTargetDangling": ".change_item_pages_insert_layout_named_pages_item_target_dangling",
+    "ChangeItemPagesInsertLayoutNamedPagesItemTargetPage": ".change_item_pages_insert_layout_named_pages_item_target_page",
+    "ChangeItemPagesInsertLayoutNamedPagesItemTargetTemplate": ".change_item_pages_insert_layout_named_pages_item_target_template",
+    "ChangeItemPagesInsertLayoutNamedPagesItemTarget_Dangling": ".change_item_pages_insert_layout_named_pages_item_target",
+    "ChangeItemPagesInsertLayoutNamedPagesItemTarget_Page": ".change_item_pages_insert_layout_named_pages_item_target",
+    "ChangeItemPagesInsertLayoutNamedPagesItemTarget_Template": ".change_item_pages_insert_layout_named_pages_item_target",
+    "ChangeItemPagesInsertLayoutPagesItem": ".change_item_pages_insert_layout_pages_item",
+    "ChangeItemPagesInsertLayoutPagesItemBoxes": ".change_item_pages_insert_layout_pages_item_boxes",
+    "ChangeItemPagesInsertLayoutPagesItemBoxesArt": ".change_item_pages_insert_layout_pages_item_boxes_art",
+    "ChangeItemPagesInsertLayoutPagesItemBoxesBleed": ".change_item_pages_insert_layout_pages_item_boxes_bleed",
+    "ChangeItemPagesInsertLayoutPagesItemBoxesCrop": ".change_item_pages_insert_layout_pages_item_boxes_crop",
+    "ChangeItemPagesInsertLayoutPagesItemBoxesMedia": ".change_item_pages_insert_layout_pages_item_boxes_media",
+    "ChangeItemPagesInsertLayoutPagesItemBoxesTrim": ".change_item_pages_insert_layout_pages_item_boxes_trim",
+    "ChangeItemPagesInsertLayoutPagesItemPdfCropBox": ".change_item_pages_insert_layout_pages_item_pdf_crop_box",
+    "ChangeItemPagesInsertLayoutPagesItemSize": ".change_item_pages_insert_layout_pages_item_size",
+    "ChangeItemPagesInsertLayoutPagesItemTabOrder": ".change_item_pages_insert_layout_pages_item_tab_order",
+    "ChangeItemPagesReorder": ".change_item_pages_reorder",
+    "ChangeItemPagesReorderLayout": ".change_item_pages_reorder_layout",
+    "ChangeItemPagesReorderLayoutNamedPagesItem": ".change_item_pages_reorder_layout_named_pages_item",
+    "ChangeItemPagesReorderLayoutNamedPagesItemTarget": ".change_item_pages_reorder_layout_named_pages_item_target",
+    "ChangeItemPagesReorderLayoutNamedPagesItemTargetDangling": ".change_item_pages_reorder_layout_named_pages_item_target_dangling",
+    "ChangeItemPagesReorderLayoutNamedPagesItemTargetPage": ".change_item_pages_reorder_layout_named_pages_item_target_page",
+    "ChangeItemPagesReorderLayoutNamedPagesItemTargetTemplate": ".change_item_pages_reorder_layout_named_pages_item_target_template",
+    "ChangeItemPagesReorderLayoutNamedPagesItemTarget_Dangling": ".change_item_pages_reorder_layout_named_pages_item_target",
+    "ChangeItemPagesReorderLayoutNamedPagesItemTarget_Page": ".change_item_pages_reorder_layout_named_pages_item_target",
+    "ChangeItemPagesReorderLayoutNamedPagesItemTarget_Template": ".change_item_pages_reorder_layout_named_pages_item_target",
+    "ChangeItemPagesReorderLayoutPagesItem": ".change_item_pages_reorder_layout_pages_item",
+    "ChangeItemPagesReorderLayoutPagesItemBoxes": ".change_item_pages_reorder_layout_pages_item_boxes",
+    "ChangeItemPagesReorderLayoutPagesItemBoxesArt": ".change_item_pages_reorder_layout_pages_item_boxes_art",
+    "ChangeItemPagesReorderLayoutPagesItemBoxesBleed": ".change_item_pages_reorder_layout_pages_item_boxes_bleed",
+    "ChangeItemPagesReorderLayoutPagesItemBoxesCrop": ".change_item_pages_reorder_layout_pages_item_boxes_crop",
+    "ChangeItemPagesReorderLayoutPagesItemBoxesMedia": ".change_item_pages_reorder_layout_pages_item_boxes_media",
+    "ChangeItemPagesReorderLayoutPagesItemBoxesTrim": ".change_item_pages_reorder_layout_pages_item_boxes_trim",
+    "ChangeItemPagesReorderLayoutPagesItemPdfCropBox": ".change_item_pages_reorder_layout_pages_item_pdf_crop_box",
+    "ChangeItemPagesReorderLayoutPagesItemSize": ".change_item_pages_reorder_layout_pages_item_size",
+    "ChangeItemPagesReorderLayoutPagesItemTabOrder": ".change_item_pages_reorder_layout_pages_item_tab_order",
+    "ChangeItemPagesRestore": ".change_item_pages_restore",
+    "ChangeItemPagesRestoreLayout": ".change_item_pages_restore_layout",
+    "ChangeItemPagesRestoreLayoutNamedPagesItem": ".change_item_pages_restore_layout_named_pages_item",
+    "ChangeItemPagesRestoreLayoutNamedPagesItemTarget": ".change_item_pages_restore_layout_named_pages_item_target",
+    "ChangeItemPagesRestoreLayoutNamedPagesItemTargetDangling": ".change_item_pages_restore_layout_named_pages_item_target_dangling",
+    "ChangeItemPagesRestoreLayoutNamedPagesItemTargetPage": ".change_item_pages_restore_layout_named_pages_item_target_page",
+    "ChangeItemPagesRestoreLayoutNamedPagesItemTargetTemplate": ".change_item_pages_restore_layout_named_pages_item_target_template",
+    "ChangeItemPagesRestoreLayoutNamedPagesItemTarget_Dangling": ".change_item_pages_restore_layout_named_pages_item_target",
+    "ChangeItemPagesRestoreLayoutNamedPagesItemTarget_Page": ".change_item_pages_restore_layout_named_pages_item_target",
+    "ChangeItemPagesRestoreLayoutNamedPagesItemTarget_Template": ".change_item_pages_restore_layout_named_pages_item_target",
+    "ChangeItemPagesRestoreLayoutPagesItem": ".change_item_pages_restore_layout_pages_item",
+    "ChangeItemPagesRestoreLayoutPagesItemBoxes": ".change_item_pages_restore_layout_pages_item_boxes",
+    "ChangeItemPagesRestoreLayoutPagesItemBoxesArt": ".change_item_pages_restore_layout_pages_item_boxes_art",
+    "ChangeItemPagesRestoreLayoutPagesItemBoxesBleed": ".change_item_pages_restore_layout_pages_item_boxes_bleed",
+    "ChangeItemPagesRestoreLayoutPagesItemBoxesCrop": ".change_item_pages_restore_layout_pages_item_boxes_crop",
+    "ChangeItemPagesRestoreLayoutPagesItemBoxesMedia": ".change_item_pages_restore_layout_pages_item_boxes_media",
+    "ChangeItemPagesRestoreLayoutPagesItemBoxesTrim": ".change_item_pages_restore_layout_pages_item_boxes_trim",
+    "ChangeItemPagesRestoreLayoutPagesItemPdfCropBox": ".change_item_pages_restore_layout_pages_item_pdf_crop_box",
+    "ChangeItemPagesRestoreLayoutPagesItemSize": ".change_item_pages_restore_layout_pages_item_size",
+    "ChangeItemPagesRestoreLayoutPagesItemTabOrder": ".change_item_pages_restore_layout_pages_item_tab_order",
+    "ChangeItemPagesRotate": ".change_item_pages_rotate",
+    "ChangeItemPagesRotateLayout": ".change_item_pages_rotate_layout",
+    "ChangeItemPagesRotateLayoutNamedPagesItem": ".change_item_pages_rotate_layout_named_pages_item",
+    "ChangeItemPagesRotateLayoutNamedPagesItemTarget": ".change_item_pages_rotate_layout_named_pages_item_target",
+    "ChangeItemPagesRotateLayoutNamedPagesItemTargetDangling": ".change_item_pages_rotate_layout_named_pages_item_target_dangling",
+    "ChangeItemPagesRotateLayoutNamedPagesItemTargetPage": ".change_item_pages_rotate_layout_named_pages_item_target_page",
+    "ChangeItemPagesRotateLayoutNamedPagesItemTargetTemplate": ".change_item_pages_rotate_layout_named_pages_item_target_template",
+    "ChangeItemPagesRotateLayoutNamedPagesItemTarget_Dangling": ".change_item_pages_rotate_layout_named_pages_item_target",
+    "ChangeItemPagesRotateLayoutNamedPagesItemTarget_Page": ".change_item_pages_rotate_layout_named_pages_item_target",
+    "ChangeItemPagesRotateLayoutNamedPagesItemTarget_Template": ".change_item_pages_rotate_layout_named_pages_item_target",
+    "ChangeItemPagesRotateLayoutPagesItem": ".change_item_pages_rotate_layout_pages_item",
+    "ChangeItemPagesRotateLayoutPagesItemBoxes": ".change_item_pages_rotate_layout_pages_item_boxes",
+    "ChangeItemPagesRotateLayoutPagesItemBoxesArt": ".change_item_pages_rotate_layout_pages_item_boxes_art",
+    "ChangeItemPagesRotateLayoutPagesItemBoxesBleed": ".change_item_pages_rotate_layout_pages_item_boxes_bleed",
+    "ChangeItemPagesRotateLayoutPagesItemBoxesCrop": ".change_item_pages_rotate_layout_pages_item_boxes_crop",
+    "ChangeItemPagesRotateLayoutPagesItemBoxesMedia": ".change_item_pages_rotate_layout_pages_item_boxes_media",
+    "ChangeItemPagesRotateLayoutPagesItemBoxesTrim": ".change_item_pages_rotate_layout_pages_item_boxes_trim",
+    "ChangeItemPagesRotateLayoutPagesItemPdfCropBox": ".change_item_pages_rotate_layout_pages_item_pdf_crop_box",
+    "ChangeItemPagesRotateLayoutPagesItemSize": ".change_item_pages_rotate_layout_pages_item_size",
+    "ChangeItemPagesRotateLayoutPagesItemTabOrder": ".change_item_pages_rotate_layout_pages_item_tab_order",
     "ChangeItemSkipped": ".change_item_skipped",
     "ChangeItemSkippedOp": ".change_item_skipped_op",
     "ChangeItem_AnnotationsCreate": ".change_item",
@@ -3534,6 +3701,9 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeItem_AnnotationsReorder": ".change_item",
     "ChangeItem_AnnotationsRestore": ".change_item",
     "ChangeItem_AnnotationsUpdate": ".change_item",
+    "ChangeItem_AttachmentsCreate": ".change_item",
+    "ChangeItem_AttachmentsDelete": ".change_item",
+    "ChangeItem_AttachmentsRestore": ".change_item",
     "ChangeItem_FormsAddWidget": ".change_item",
     "ChangeItem_FormsCreate": ".change_item",
     "ChangeItem_FormsDelete": ".change_item",
@@ -3552,6 +3722,17 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeItem_FormsUpdateWidget": ".change_item",
     "ChangeItem_MetadataUpdate": ".change_item",
     "ChangeItem_MetadataUpdateCustom": ".change_item",
+    "ChangeItem_OutlineCreate": ".change_item",
+    "ChangeItem_OutlineDelete": ".change_item",
+    "ChangeItem_OutlineMove": ".change_item",
+    "ChangeItem_OutlineRestore": ".change_item",
+    "ChangeItem_OutlineUpdate": ".change_item",
+    "ChangeItem_PagesDelete": ".change_item",
+    "ChangeItem_PagesInsert": ".change_item",
+    "ChangeItem_PagesInsertBlank": ".change_item",
+    "ChangeItem_PagesReorder": ".change_item",
+    "ChangeItem_PagesRestore": ".change_item",
+    "ChangeItem_PagesRotate": ".change_item",
     "ChangeItem_Skipped": ".change_item",
     "ChangeOp": ".change_op",
     "ChangeOpAnnotationsCreate": ".change_op_annotations_create",
@@ -3560,6 +3741,9 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeOpAnnotationsReorder": ".change_op_annotations_reorder",
     "ChangeOpAnnotationsUpdate": ".change_op_annotations_update",
     "ChangeOpAnnotationsUpdateResources": ".change_op_annotations_update_resources",
+    "ChangeOpAttachmentsCreate": ".change_op_attachments_create",
+    "ChangeOpAttachmentsCreateResources": ".change_op_attachments_create_resources",
+    "ChangeOpAttachmentsDelete": ".change_op_attachments_delete",
     "ChangeOpFormsAddWidget": ".change_op_forms_add_widget",
     "ChangeOpFormsCreate": ".change_op_forms_create",
     "ChangeOpFormsDelete": ".change_op_forms_delete",
@@ -3578,10 +3762,24 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeOpFormsUpdateWidget": ".change_op_forms_update_widget",
     "ChangeOpMetadataUpdate": ".change_op_metadata_update",
     "ChangeOpMetadataUpdateCustom": ".change_op_metadata_update_custom",
+    "ChangeOpOutlineCreate": ".change_op_outline_create",
+    "ChangeOpOutlineDelete": ".change_op_outline_delete",
+    "ChangeOpOutlineMove": ".change_op_outline_move",
+    "ChangeOpOutlineUpdate": ".change_op_outline_update",
+    "ChangeOpPagesDelete": ".change_op_pages_delete",
+    "ChangeOpPagesInsert": ".change_op_pages_insert",
+    "ChangeOpPagesInsertBlank": ".change_op_pages_insert_blank",
+    "ChangeOpPagesInsertBlankSpec": ".change_op_pages_insert_blank_spec",
+    "ChangeOpPagesInsertBlankSpecSize": ".change_op_pages_insert_blank_spec_size",
+    "ChangeOpPagesInsertResources": ".change_op_pages_insert_resources",
+    "ChangeOpPagesReorder": ".change_op_pages_reorder",
+    "ChangeOpPagesRotate": ".change_op_pages_rotate",
     "ChangeOp_AnnotationsCreate": ".change_op",
     "ChangeOp_AnnotationsDelete": ".change_op",
     "ChangeOp_AnnotationsReorder": ".change_op",
     "ChangeOp_AnnotationsUpdate": ".change_op",
+    "ChangeOp_AttachmentsCreate": ".change_op",
+    "ChangeOp_AttachmentsDelete": ".change_op",
     "ChangeOp_FormsAddWidget": ".change_op",
     "ChangeOp_FormsCreate": ".change_op",
     "ChangeOp_FormsDelete": ".change_op",
@@ -3598,6 +3796,15 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeOp_FormsUpdateWidget": ".change_op",
     "ChangeOp_MetadataUpdate": ".change_op",
     "ChangeOp_MetadataUpdateCustom": ".change_op",
+    "ChangeOp_OutlineCreate": ".change_op",
+    "ChangeOp_OutlineDelete": ".change_op",
+    "ChangeOp_OutlineMove": ".change_op",
+    "ChangeOp_OutlineUpdate": ".change_op",
+    "ChangeOp_PagesDelete": ".change_op",
+    "ChangeOp_PagesInsert": ".change_op",
+    "ChangeOp_PagesInsertBlank": ".change_op",
+    "ChangeOp_PagesReorder": ".change_op",
+    "ChangeOp_PagesRotate": ".change_op",
     "ChangeResult": ".change_result",
     "DeploymentLicenseStatusResponse": ".deployment_license_status_response",
     "DocAnnotationsCreate200Response": ".doc_annotations_create200response",
@@ -3623,6 +3830,9 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsListAll409Response": ".doc_annotations_list_all409response",
     "DocAnnotationsReadAppearance400Response": ".doc_annotations_read_appearance400response",
     "DocAnnotationsReadAppearance404Response": ".doc_annotations_read_appearance404response",
+    "DocAnnotationsReadFile400Response": ".doc_annotations_read_file400response",
+    "DocAnnotationsReadFile404Response": ".doc_annotations_read_file404response",
+    "DocAnnotationsReadFile413Response": ".doc_annotations_read_file413response",
     "DocAnnotationsReorder200Response": ".doc_annotations_reorder200response",
     "DocAnnotationsReorder400Response": ".doc_annotations_reorder400response",
     "DocAnnotationsReorder404Response": ".doc_annotations_reorder404response",
@@ -3632,6 +3842,11 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocAnnotationsUpdate400Response": ".doc_annotations_update400response",
     "DocAnnotationsUpdate404Response": ".doc_annotations_update404response",
     "DocAnnotationsUpdateRequest": ".doc_annotations_update_request",
+    "DocAttachmentsDownload400Response": ".doc_attachments_download400response",
+    "DocAttachmentsDownload404Response": ".doc_attachments_download404response",
+    "DocAttachmentsDownload413Response": ".doc_attachments_download413response",
+    "DocAttachmentsList200Response": ".doc_attachments_list200response",
+    "DocAttachmentsList404Response": ".doc_attachments_list404response",
     "DocChanges200Response": ".doc_changes200response",
     "DocChanges200ResponseChangesItem": ".doc_changes200response_changes_item",
     "DocChanges200ResponseChangesItemApplied": ".doc_changes200response_changes_item_applied",
@@ -3695,34 +3910,14 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocManifest200ResponseScopesForms": ".doc_manifest200response_scopes_forms",
     "DocManifest200ResponseScopesLayout": ".doc_manifest200response_scopes_layout",
     "DocManifest200ResponseScopesMetadata": ".doc_manifest200response_scopes_metadata",
+    "DocManifest200ResponseScopesOutline": ".doc_manifest200response_scopes_outline",
     "DocManifest404Response": ".doc_manifest404response",
     "DocMetadataCustomGet200Response": ".doc_metadata_custom_get200response",
     "DocMetadataCustomGet404Response": ".doc_metadata_custom_get404response",
     "DocMetadataGet200Response": ".doc_metadata_get200response",
     "DocMetadataGet404Response": ".doc_metadata_get404response",
-    "DocPagesDelete200Response": ".doc_pages_delete200response",
-    "DocPagesDelete200ResponseLayout": ".doc_pages_delete200response_layout",
-    "DocPagesDelete200ResponseLayoutNamedPagesItem": ".doc_pages_delete200response_layout_named_pages_item",
-    "DocPagesDelete200ResponseLayoutNamedPagesItemTarget": ".doc_pages_delete200response_layout_named_pages_item_target",
-    "DocPagesDelete200ResponseLayoutNamedPagesItemTargetDangling": ".doc_pages_delete200response_layout_named_pages_item_target_dangling",
-    "DocPagesDelete200ResponseLayoutNamedPagesItemTargetPage": ".doc_pages_delete200response_layout_named_pages_item_target_page",
-    "DocPagesDelete200ResponseLayoutNamedPagesItemTargetTemplate": ".doc_pages_delete200response_layout_named_pages_item_target_template",
-    "DocPagesDelete200ResponseLayoutNamedPagesItemTarget_Dangling": ".doc_pages_delete200response_layout_named_pages_item_target",
-    "DocPagesDelete200ResponseLayoutNamedPagesItemTarget_Page": ".doc_pages_delete200response_layout_named_pages_item_target",
-    "DocPagesDelete200ResponseLayoutNamedPagesItemTarget_Template": ".doc_pages_delete200response_layout_named_pages_item_target",
-    "DocPagesDelete200ResponseLayoutPagesItem": ".doc_pages_delete200response_layout_pages_item",
-    "DocPagesDelete200ResponseLayoutPagesItemBoxes": ".doc_pages_delete200response_layout_pages_item_boxes",
-    "DocPagesDelete200ResponseLayoutPagesItemBoxesArt": ".doc_pages_delete200response_layout_pages_item_boxes_art",
-    "DocPagesDelete200ResponseLayoutPagesItemBoxesBleed": ".doc_pages_delete200response_layout_pages_item_boxes_bleed",
-    "DocPagesDelete200ResponseLayoutPagesItemBoxesCrop": ".doc_pages_delete200response_layout_pages_item_boxes_crop",
-    "DocPagesDelete200ResponseLayoutPagesItemBoxesMedia": ".doc_pages_delete200response_layout_pages_item_boxes_media",
-    "DocPagesDelete200ResponseLayoutPagesItemBoxesTrim": ".doc_pages_delete200response_layout_pages_item_boxes_trim",
-    "DocPagesDelete200ResponseLayoutPagesItemPdfCropBox": ".doc_pages_delete200response_layout_pages_item_pdf_crop_box",
-    "DocPagesDelete200ResponseLayoutPagesItemSize": ".doc_pages_delete200response_layout_pages_item_size",
-    "DocPagesDelete200ResponseLayoutPagesItemTabOrder": ".doc_pages_delete200response_layout_pages_item_tab_order",
-    "DocPagesDelete400Response": ".doc_pages_delete400response",
-    "DocPagesDelete404Response": ".doc_pages_delete404response",
-    "DocPagesDeleteRequest": ".doc_pages_delete_request",
+    "DocOutlineGet200Response": ".doc_outline_get200response",
+    "DocOutlineGet404Response": ".doc_outline_get404response",
     "DocPagesExtract400Response": ".doc_pages_extract400response",
     "DocPagesExtract404Response": ".doc_pages_extract404response",
     "DocPagesExtractRequest": ".doc_pages_extract_request",
@@ -3733,51 +3928,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocPagesFlatten400Response": ".doc_pages_flatten400response",
     "DocPagesFlatten404Response": ".doc_pages_flatten404response",
     "DocPagesFlattenRequest": ".doc_pages_flatten_request",
-    "DocPagesInsert200Response": ".doc_pages_insert200response",
-    "DocPagesInsert200ResponseLayout": ".doc_pages_insert200response_layout",
-    "DocPagesInsert200ResponseLayoutNamedPagesItem": ".doc_pages_insert200response_layout_named_pages_item",
-    "DocPagesInsert200ResponseLayoutNamedPagesItemTarget": ".doc_pages_insert200response_layout_named_pages_item_target",
-    "DocPagesInsert200ResponseLayoutNamedPagesItemTargetDangling": ".doc_pages_insert200response_layout_named_pages_item_target_dangling",
-    "DocPagesInsert200ResponseLayoutNamedPagesItemTargetPage": ".doc_pages_insert200response_layout_named_pages_item_target_page",
-    "DocPagesInsert200ResponseLayoutNamedPagesItemTargetTemplate": ".doc_pages_insert200response_layout_named_pages_item_target_template",
-    "DocPagesInsert200ResponseLayoutNamedPagesItemTarget_Dangling": ".doc_pages_insert200response_layout_named_pages_item_target",
-    "DocPagesInsert200ResponseLayoutNamedPagesItemTarget_Page": ".doc_pages_insert200response_layout_named_pages_item_target",
-    "DocPagesInsert200ResponseLayoutNamedPagesItemTarget_Template": ".doc_pages_insert200response_layout_named_pages_item_target",
-    "DocPagesInsert200ResponseLayoutPagesItem": ".doc_pages_insert200response_layout_pages_item",
-    "DocPagesInsert200ResponseLayoutPagesItemBoxes": ".doc_pages_insert200response_layout_pages_item_boxes",
-    "DocPagesInsert200ResponseLayoutPagesItemBoxesArt": ".doc_pages_insert200response_layout_pages_item_boxes_art",
-    "DocPagesInsert200ResponseLayoutPagesItemBoxesBleed": ".doc_pages_insert200response_layout_pages_item_boxes_bleed",
-    "DocPagesInsert200ResponseLayoutPagesItemBoxesCrop": ".doc_pages_insert200response_layout_pages_item_boxes_crop",
-    "DocPagesInsert200ResponseLayoutPagesItemBoxesMedia": ".doc_pages_insert200response_layout_pages_item_boxes_media",
-    "DocPagesInsert200ResponseLayoutPagesItemBoxesTrim": ".doc_pages_insert200response_layout_pages_item_boxes_trim",
-    "DocPagesInsert200ResponseLayoutPagesItemPdfCropBox": ".doc_pages_insert200response_layout_pages_item_pdf_crop_box",
-    "DocPagesInsert200ResponseLayoutPagesItemSize": ".doc_pages_insert200response_layout_pages_item_size",
-    "DocPagesInsert200ResponseLayoutPagesItemTabOrder": ".doc_pages_insert200response_layout_pages_item_tab_order",
-    "DocPagesInsert400Response": ".doc_pages_insert400response",
-    "DocPagesInsert404Response": ".doc_pages_insert404response",
-    "DocPagesInsertBlank200Response": ".doc_pages_insert_blank200response",
-    "DocPagesInsertBlank200ResponseLayout": ".doc_pages_insert_blank200response_layout",
-    "DocPagesInsertBlank200ResponseLayoutNamedPagesItem": ".doc_pages_insert_blank200response_layout_named_pages_item",
-    "DocPagesInsertBlank200ResponseLayoutNamedPagesItemTarget": ".doc_pages_insert_blank200response_layout_named_pages_item_target",
-    "DocPagesInsertBlank200ResponseLayoutNamedPagesItemTargetDangling": ".doc_pages_insert_blank200response_layout_named_pages_item_target_dangling",
-    "DocPagesInsertBlank200ResponseLayoutNamedPagesItemTargetPage": ".doc_pages_insert_blank200response_layout_named_pages_item_target_page",
-    "DocPagesInsertBlank200ResponseLayoutNamedPagesItemTargetTemplate": ".doc_pages_insert_blank200response_layout_named_pages_item_target_template",
-    "DocPagesInsertBlank200ResponseLayoutNamedPagesItemTarget_Dangling": ".doc_pages_insert_blank200response_layout_named_pages_item_target",
-    "DocPagesInsertBlank200ResponseLayoutNamedPagesItemTarget_Page": ".doc_pages_insert_blank200response_layout_named_pages_item_target",
-    "DocPagesInsertBlank200ResponseLayoutNamedPagesItemTarget_Template": ".doc_pages_insert_blank200response_layout_named_pages_item_target",
-    "DocPagesInsertBlank200ResponseLayoutPagesItem": ".doc_pages_insert_blank200response_layout_pages_item",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemBoxes": ".doc_pages_insert_blank200response_layout_pages_item_boxes",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemBoxesArt": ".doc_pages_insert_blank200response_layout_pages_item_boxes_art",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemBoxesBleed": ".doc_pages_insert_blank200response_layout_pages_item_boxes_bleed",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemBoxesCrop": ".doc_pages_insert_blank200response_layout_pages_item_boxes_crop",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemBoxesMedia": ".doc_pages_insert_blank200response_layout_pages_item_boxes_media",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemBoxesTrim": ".doc_pages_insert_blank200response_layout_pages_item_boxes_trim",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemPdfCropBox": ".doc_pages_insert_blank200response_layout_pages_item_pdf_crop_box",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemSize": ".doc_pages_insert_blank200response_layout_pages_item_size",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemTabOrder": ".doc_pages_insert_blank200response_layout_pages_item_tab_order",
-    "DocPagesInsertBlank400Response": ".doc_pages_insert_blank400response",
-    "DocPagesInsertBlank404Response": ".doc_pages_insert_blank404response",
-    "DocPagesInsertBlankRequest": ".doc_pages_insert_blank_request",
     "DocPagesRemoveName200Response": ".doc_pages_remove_name200response",
     "DocPagesRemoveName200ResponseLayout": ".doc_pages_remove_name200response_layout",
     "DocPagesRemoveName200ResponseLayoutNamedPagesItem": ".doc_pages_remove_name200response_layout_named_pages_item",
@@ -3801,51 +3951,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocPagesRemoveName400Response": ".doc_pages_remove_name400response",
     "DocPagesRemoveName404Response": ".doc_pages_remove_name404response",
     "DocPagesRemoveNameRequest": ".doc_pages_remove_name_request",
-    "DocPagesReorder200Response": ".doc_pages_reorder200response",
-    "DocPagesReorder200ResponseLayout": ".doc_pages_reorder200response_layout",
-    "DocPagesReorder200ResponseLayoutNamedPagesItem": ".doc_pages_reorder200response_layout_named_pages_item",
-    "DocPagesReorder200ResponseLayoutNamedPagesItemTarget": ".doc_pages_reorder200response_layout_named_pages_item_target",
-    "DocPagesReorder200ResponseLayoutNamedPagesItemTargetDangling": ".doc_pages_reorder200response_layout_named_pages_item_target_dangling",
-    "DocPagesReorder200ResponseLayoutNamedPagesItemTargetPage": ".doc_pages_reorder200response_layout_named_pages_item_target_page",
-    "DocPagesReorder200ResponseLayoutNamedPagesItemTargetTemplate": ".doc_pages_reorder200response_layout_named_pages_item_target_template",
-    "DocPagesReorder200ResponseLayoutNamedPagesItemTarget_Dangling": ".doc_pages_reorder200response_layout_named_pages_item_target",
-    "DocPagesReorder200ResponseLayoutNamedPagesItemTarget_Page": ".doc_pages_reorder200response_layout_named_pages_item_target",
-    "DocPagesReorder200ResponseLayoutNamedPagesItemTarget_Template": ".doc_pages_reorder200response_layout_named_pages_item_target",
-    "DocPagesReorder200ResponseLayoutPagesItem": ".doc_pages_reorder200response_layout_pages_item",
-    "DocPagesReorder200ResponseLayoutPagesItemBoxes": ".doc_pages_reorder200response_layout_pages_item_boxes",
-    "DocPagesReorder200ResponseLayoutPagesItemBoxesArt": ".doc_pages_reorder200response_layout_pages_item_boxes_art",
-    "DocPagesReorder200ResponseLayoutPagesItemBoxesBleed": ".doc_pages_reorder200response_layout_pages_item_boxes_bleed",
-    "DocPagesReorder200ResponseLayoutPagesItemBoxesCrop": ".doc_pages_reorder200response_layout_pages_item_boxes_crop",
-    "DocPagesReorder200ResponseLayoutPagesItemBoxesMedia": ".doc_pages_reorder200response_layout_pages_item_boxes_media",
-    "DocPagesReorder200ResponseLayoutPagesItemBoxesTrim": ".doc_pages_reorder200response_layout_pages_item_boxes_trim",
-    "DocPagesReorder200ResponseLayoutPagesItemPdfCropBox": ".doc_pages_reorder200response_layout_pages_item_pdf_crop_box",
-    "DocPagesReorder200ResponseLayoutPagesItemSize": ".doc_pages_reorder200response_layout_pages_item_size",
-    "DocPagesReorder200ResponseLayoutPagesItemTabOrder": ".doc_pages_reorder200response_layout_pages_item_tab_order",
-    "DocPagesReorder400Response": ".doc_pages_reorder400response",
-    "DocPagesReorder404Response": ".doc_pages_reorder404response",
-    "DocPagesRotate200Response": ".doc_pages_rotate200response",
-    "DocPagesRotate200ResponseLayout": ".doc_pages_rotate200response_layout",
-    "DocPagesRotate200ResponseLayoutNamedPagesItem": ".doc_pages_rotate200response_layout_named_pages_item",
-    "DocPagesRotate200ResponseLayoutNamedPagesItemTarget": ".doc_pages_rotate200response_layout_named_pages_item_target",
-    "DocPagesRotate200ResponseLayoutNamedPagesItemTargetDangling": ".doc_pages_rotate200response_layout_named_pages_item_target_dangling",
-    "DocPagesRotate200ResponseLayoutNamedPagesItemTargetPage": ".doc_pages_rotate200response_layout_named_pages_item_target_page",
-    "DocPagesRotate200ResponseLayoutNamedPagesItemTargetTemplate": ".doc_pages_rotate200response_layout_named_pages_item_target_template",
-    "DocPagesRotate200ResponseLayoutNamedPagesItemTarget_Dangling": ".doc_pages_rotate200response_layout_named_pages_item_target",
-    "DocPagesRotate200ResponseLayoutNamedPagesItemTarget_Page": ".doc_pages_rotate200response_layout_named_pages_item_target",
-    "DocPagesRotate200ResponseLayoutNamedPagesItemTarget_Template": ".doc_pages_rotate200response_layout_named_pages_item_target",
-    "DocPagesRotate200ResponseLayoutPagesItem": ".doc_pages_rotate200response_layout_pages_item",
-    "DocPagesRotate200ResponseLayoutPagesItemBoxes": ".doc_pages_rotate200response_layout_pages_item_boxes",
-    "DocPagesRotate200ResponseLayoutPagesItemBoxesArt": ".doc_pages_rotate200response_layout_pages_item_boxes_art",
-    "DocPagesRotate200ResponseLayoutPagesItemBoxesBleed": ".doc_pages_rotate200response_layout_pages_item_boxes_bleed",
-    "DocPagesRotate200ResponseLayoutPagesItemBoxesCrop": ".doc_pages_rotate200response_layout_pages_item_boxes_crop",
-    "DocPagesRotate200ResponseLayoutPagesItemBoxesMedia": ".doc_pages_rotate200response_layout_pages_item_boxes_media",
-    "DocPagesRotate200ResponseLayoutPagesItemBoxesTrim": ".doc_pages_rotate200response_layout_pages_item_boxes_trim",
-    "DocPagesRotate200ResponseLayoutPagesItemPdfCropBox": ".doc_pages_rotate200response_layout_pages_item_pdf_crop_box",
-    "DocPagesRotate200ResponseLayoutPagesItemSize": ".doc_pages_rotate200response_layout_pages_item_size",
-    "DocPagesRotate200ResponseLayoutPagesItemTabOrder": ".doc_pages_rotate200response_layout_pages_item_tab_order",
-    "DocPagesRotate400Response": ".doc_pages_rotate400response",
-    "DocPagesRotate404Response": ".doc_pages_rotate404response",
-    "DocPagesRotateRequest": ".doc_pages_rotate_request",
     "DocPagesSetName200Response": ".doc_pages_set_name200response",
     "DocPagesSetName200ResponseLayout": ".doc_pages_set_name200response_layout",
     "DocPagesSetName200ResponseLayoutNamedPagesItem": ".doc_pages_set_name200response_layout_named_pages_item",
@@ -4036,6 +4141,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocumentActionsSnapshotNameTreeScriptsItem": ".document_actions_snapshot_name_tree_scripts_item",
     "DocumentMetadata": ".document_metadata",
     "DocumentMetadataTrapped": ".document_metadata_trapped",
+    "DocumentOutline": ".document_outline",
     "DocumentsCommit200Response": ".documents_commit200response",
     "DocumentsCommit200ResponseDocument": ".documents_commit200response_document",
     "DocumentsCommit200ResponseDocumentState": ".documents_commit200response_document_state",
@@ -4320,6 +4426,16 @@ _dynamic_imports: typing.Dict[str, str] = {
     "MetadataPatch": ".metadata_patch",
     "MetadataPatchTrapped": ".metadata_patch_trapped",
     "MutationMeta": ".mutation_meta",
+    "OutlineItem": ".outline_item",
+    "OutlineItemDraft": ".outline_item_draft",
+    "OutlineItemPatch": ".outline_item_patch",
+    "OutlineItemRef": ".outline_item_ref",
+    "OutlineItemRefKind": ".outline_item_ref_kind",
+    "OutlineMutationMeta": ".outline_mutation_meta",
+    "OutlineOrder": ".outline_order",
+    "OutlinePosition": ".outline_position",
+    "OutlinePositionAfter": ".outline_position_after",
+    "OutlinePositionZero": ".outline_position_zero",
     "PageDestination": ".page_destination",
     "PageDestinationFit": ".page_destination_fit",
     "PageDestinationFitB": ".page_destination_fit_b",
@@ -4848,7 +4964,6 @@ __all__ = [
     "AnnotationDraft_Widget",
     "AnnotationFileAttachment",
     "AnnotationFileAttachmentBlendMode",
-    "AnnotationFileAttachmentFile",
     "AnnotationFileAttachmentIcon",
     "AnnotationFileAttachmentRect",
     "AnnotationFileAttachmentReply",
@@ -5420,6 +5535,13 @@ __all__ = [
     "Annotation_Underline",
     "Annotation_Unsupported",
     "Annotation_Widget",
+    "Attachment",
+    "AttachmentFileBase",
+    "AttachmentFileInfo",
+    "AttachmentList",
+    "AttachmentMutationMeta",
+    "AttachmentRef",
+    "AttachmentRefKind",
     "CacheDelta",
     "CacheDeltaPagesItem",
     "CacheDeltaPagesItemCache",
@@ -5431,6 +5553,9 @@ __all__ = [
     "ChangeItemAnnotationsUpdate",
     "ChangeItemAnnotationsUpdateAppearance",
     "ChangeItemAnnotationsUpdateAppearanceAction",
+    "ChangeItemAttachmentsCreate",
+    "ChangeItemAttachmentsDelete",
+    "ChangeItemAttachmentsRestore",
     "ChangeItemFormsAddWidget",
     "ChangeItemFormsCreate",
     "ChangeItemFormsDelete",
@@ -5451,6 +5576,131 @@ __all__ = [
     "ChangeItemFormsUpdateWidgetAppearanceAction",
     "ChangeItemMetadataUpdate",
     "ChangeItemMetadataUpdateCustom",
+    "ChangeItemOutlineCreate",
+    "ChangeItemOutlineDelete",
+    "ChangeItemOutlineMove",
+    "ChangeItemOutlineRestore",
+    "ChangeItemOutlineUpdate",
+    "ChangeItemPagesDelete",
+    "ChangeItemPagesDeleteLayout",
+    "ChangeItemPagesDeleteLayoutNamedPagesItem",
+    "ChangeItemPagesDeleteLayoutNamedPagesItemTarget",
+    "ChangeItemPagesDeleteLayoutNamedPagesItemTargetDangling",
+    "ChangeItemPagesDeleteLayoutNamedPagesItemTargetPage",
+    "ChangeItemPagesDeleteLayoutNamedPagesItemTargetTemplate",
+    "ChangeItemPagesDeleteLayoutNamedPagesItemTarget_Dangling",
+    "ChangeItemPagesDeleteLayoutNamedPagesItemTarget_Page",
+    "ChangeItemPagesDeleteLayoutNamedPagesItemTarget_Template",
+    "ChangeItemPagesDeleteLayoutPagesItem",
+    "ChangeItemPagesDeleteLayoutPagesItemBoxes",
+    "ChangeItemPagesDeleteLayoutPagesItemBoxesArt",
+    "ChangeItemPagesDeleteLayoutPagesItemBoxesBleed",
+    "ChangeItemPagesDeleteLayoutPagesItemBoxesCrop",
+    "ChangeItemPagesDeleteLayoutPagesItemBoxesMedia",
+    "ChangeItemPagesDeleteLayoutPagesItemBoxesTrim",
+    "ChangeItemPagesDeleteLayoutPagesItemPdfCropBox",
+    "ChangeItemPagesDeleteLayoutPagesItemSize",
+    "ChangeItemPagesDeleteLayoutPagesItemTabOrder",
+    "ChangeItemPagesInsert",
+    "ChangeItemPagesInsertBlank",
+    "ChangeItemPagesInsertBlankLayout",
+    "ChangeItemPagesInsertBlankLayoutNamedPagesItem",
+    "ChangeItemPagesInsertBlankLayoutNamedPagesItemTarget",
+    "ChangeItemPagesInsertBlankLayoutNamedPagesItemTargetDangling",
+    "ChangeItemPagesInsertBlankLayoutNamedPagesItemTargetPage",
+    "ChangeItemPagesInsertBlankLayoutNamedPagesItemTargetTemplate",
+    "ChangeItemPagesInsertBlankLayoutNamedPagesItemTarget_Dangling",
+    "ChangeItemPagesInsertBlankLayoutNamedPagesItemTarget_Page",
+    "ChangeItemPagesInsertBlankLayoutNamedPagesItemTarget_Template",
+    "ChangeItemPagesInsertBlankLayoutPagesItem",
+    "ChangeItemPagesInsertBlankLayoutPagesItemBoxes",
+    "ChangeItemPagesInsertBlankLayoutPagesItemBoxesArt",
+    "ChangeItemPagesInsertBlankLayoutPagesItemBoxesBleed",
+    "ChangeItemPagesInsertBlankLayoutPagesItemBoxesCrop",
+    "ChangeItemPagesInsertBlankLayoutPagesItemBoxesMedia",
+    "ChangeItemPagesInsertBlankLayoutPagesItemBoxesTrim",
+    "ChangeItemPagesInsertBlankLayoutPagesItemPdfCropBox",
+    "ChangeItemPagesInsertBlankLayoutPagesItemSize",
+    "ChangeItemPagesInsertBlankLayoutPagesItemTabOrder",
+    "ChangeItemPagesInsertLayout",
+    "ChangeItemPagesInsertLayoutNamedPagesItem",
+    "ChangeItemPagesInsertLayoutNamedPagesItemTarget",
+    "ChangeItemPagesInsertLayoutNamedPagesItemTargetDangling",
+    "ChangeItemPagesInsertLayoutNamedPagesItemTargetPage",
+    "ChangeItemPagesInsertLayoutNamedPagesItemTargetTemplate",
+    "ChangeItemPagesInsertLayoutNamedPagesItemTarget_Dangling",
+    "ChangeItemPagesInsertLayoutNamedPagesItemTarget_Page",
+    "ChangeItemPagesInsertLayoutNamedPagesItemTarget_Template",
+    "ChangeItemPagesInsertLayoutPagesItem",
+    "ChangeItemPagesInsertLayoutPagesItemBoxes",
+    "ChangeItemPagesInsertLayoutPagesItemBoxesArt",
+    "ChangeItemPagesInsertLayoutPagesItemBoxesBleed",
+    "ChangeItemPagesInsertLayoutPagesItemBoxesCrop",
+    "ChangeItemPagesInsertLayoutPagesItemBoxesMedia",
+    "ChangeItemPagesInsertLayoutPagesItemBoxesTrim",
+    "ChangeItemPagesInsertLayoutPagesItemPdfCropBox",
+    "ChangeItemPagesInsertLayoutPagesItemSize",
+    "ChangeItemPagesInsertLayoutPagesItemTabOrder",
+    "ChangeItemPagesReorder",
+    "ChangeItemPagesReorderLayout",
+    "ChangeItemPagesReorderLayoutNamedPagesItem",
+    "ChangeItemPagesReorderLayoutNamedPagesItemTarget",
+    "ChangeItemPagesReorderLayoutNamedPagesItemTargetDangling",
+    "ChangeItemPagesReorderLayoutNamedPagesItemTargetPage",
+    "ChangeItemPagesReorderLayoutNamedPagesItemTargetTemplate",
+    "ChangeItemPagesReorderLayoutNamedPagesItemTarget_Dangling",
+    "ChangeItemPagesReorderLayoutNamedPagesItemTarget_Page",
+    "ChangeItemPagesReorderLayoutNamedPagesItemTarget_Template",
+    "ChangeItemPagesReorderLayoutPagesItem",
+    "ChangeItemPagesReorderLayoutPagesItemBoxes",
+    "ChangeItemPagesReorderLayoutPagesItemBoxesArt",
+    "ChangeItemPagesReorderLayoutPagesItemBoxesBleed",
+    "ChangeItemPagesReorderLayoutPagesItemBoxesCrop",
+    "ChangeItemPagesReorderLayoutPagesItemBoxesMedia",
+    "ChangeItemPagesReorderLayoutPagesItemBoxesTrim",
+    "ChangeItemPagesReorderLayoutPagesItemPdfCropBox",
+    "ChangeItemPagesReorderLayoutPagesItemSize",
+    "ChangeItemPagesReorderLayoutPagesItemTabOrder",
+    "ChangeItemPagesRestore",
+    "ChangeItemPagesRestoreLayout",
+    "ChangeItemPagesRestoreLayoutNamedPagesItem",
+    "ChangeItemPagesRestoreLayoutNamedPagesItemTarget",
+    "ChangeItemPagesRestoreLayoutNamedPagesItemTargetDangling",
+    "ChangeItemPagesRestoreLayoutNamedPagesItemTargetPage",
+    "ChangeItemPagesRestoreLayoutNamedPagesItemTargetTemplate",
+    "ChangeItemPagesRestoreLayoutNamedPagesItemTarget_Dangling",
+    "ChangeItemPagesRestoreLayoutNamedPagesItemTarget_Page",
+    "ChangeItemPagesRestoreLayoutNamedPagesItemTarget_Template",
+    "ChangeItemPagesRestoreLayoutPagesItem",
+    "ChangeItemPagesRestoreLayoutPagesItemBoxes",
+    "ChangeItemPagesRestoreLayoutPagesItemBoxesArt",
+    "ChangeItemPagesRestoreLayoutPagesItemBoxesBleed",
+    "ChangeItemPagesRestoreLayoutPagesItemBoxesCrop",
+    "ChangeItemPagesRestoreLayoutPagesItemBoxesMedia",
+    "ChangeItemPagesRestoreLayoutPagesItemBoxesTrim",
+    "ChangeItemPagesRestoreLayoutPagesItemPdfCropBox",
+    "ChangeItemPagesRestoreLayoutPagesItemSize",
+    "ChangeItemPagesRestoreLayoutPagesItemTabOrder",
+    "ChangeItemPagesRotate",
+    "ChangeItemPagesRotateLayout",
+    "ChangeItemPagesRotateLayoutNamedPagesItem",
+    "ChangeItemPagesRotateLayoutNamedPagesItemTarget",
+    "ChangeItemPagesRotateLayoutNamedPagesItemTargetDangling",
+    "ChangeItemPagesRotateLayoutNamedPagesItemTargetPage",
+    "ChangeItemPagesRotateLayoutNamedPagesItemTargetTemplate",
+    "ChangeItemPagesRotateLayoutNamedPagesItemTarget_Dangling",
+    "ChangeItemPagesRotateLayoutNamedPagesItemTarget_Page",
+    "ChangeItemPagesRotateLayoutNamedPagesItemTarget_Template",
+    "ChangeItemPagesRotateLayoutPagesItem",
+    "ChangeItemPagesRotateLayoutPagesItemBoxes",
+    "ChangeItemPagesRotateLayoutPagesItemBoxesArt",
+    "ChangeItemPagesRotateLayoutPagesItemBoxesBleed",
+    "ChangeItemPagesRotateLayoutPagesItemBoxesCrop",
+    "ChangeItemPagesRotateLayoutPagesItemBoxesMedia",
+    "ChangeItemPagesRotateLayoutPagesItemBoxesTrim",
+    "ChangeItemPagesRotateLayoutPagesItemPdfCropBox",
+    "ChangeItemPagesRotateLayoutPagesItemSize",
+    "ChangeItemPagesRotateLayoutPagesItemTabOrder",
     "ChangeItemSkipped",
     "ChangeItemSkippedOp",
     "ChangeItem_AnnotationsCreate",
@@ -5458,6 +5708,9 @@ __all__ = [
     "ChangeItem_AnnotationsReorder",
     "ChangeItem_AnnotationsRestore",
     "ChangeItem_AnnotationsUpdate",
+    "ChangeItem_AttachmentsCreate",
+    "ChangeItem_AttachmentsDelete",
+    "ChangeItem_AttachmentsRestore",
     "ChangeItem_FormsAddWidget",
     "ChangeItem_FormsCreate",
     "ChangeItem_FormsDelete",
@@ -5476,6 +5729,17 @@ __all__ = [
     "ChangeItem_FormsUpdateWidget",
     "ChangeItem_MetadataUpdate",
     "ChangeItem_MetadataUpdateCustom",
+    "ChangeItem_OutlineCreate",
+    "ChangeItem_OutlineDelete",
+    "ChangeItem_OutlineMove",
+    "ChangeItem_OutlineRestore",
+    "ChangeItem_OutlineUpdate",
+    "ChangeItem_PagesDelete",
+    "ChangeItem_PagesInsert",
+    "ChangeItem_PagesInsertBlank",
+    "ChangeItem_PagesReorder",
+    "ChangeItem_PagesRestore",
+    "ChangeItem_PagesRotate",
     "ChangeItem_Skipped",
     "ChangeOp",
     "ChangeOpAnnotationsCreate",
@@ -5484,6 +5748,9 @@ __all__ = [
     "ChangeOpAnnotationsReorder",
     "ChangeOpAnnotationsUpdate",
     "ChangeOpAnnotationsUpdateResources",
+    "ChangeOpAttachmentsCreate",
+    "ChangeOpAttachmentsCreateResources",
+    "ChangeOpAttachmentsDelete",
     "ChangeOpFormsAddWidget",
     "ChangeOpFormsCreate",
     "ChangeOpFormsDelete",
@@ -5502,10 +5769,24 @@ __all__ = [
     "ChangeOpFormsUpdateWidget",
     "ChangeOpMetadataUpdate",
     "ChangeOpMetadataUpdateCustom",
+    "ChangeOpOutlineCreate",
+    "ChangeOpOutlineDelete",
+    "ChangeOpOutlineMove",
+    "ChangeOpOutlineUpdate",
+    "ChangeOpPagesDelete",
+    "ChangeOpPagesInsert",
+    "ChangeOpPagesInsertBlank",
+    "ChangeOpPagesInsertBlankSpec",
+    "ChangeOpPagesInsertBlankSpecSize",
+    "ChangeOpPagesInsertResources",
+    "ChangeOpPagesReorder",
+    "ChangeOpPagesRotate",
     "ChangeOp_AnnotationsCreate",
     "ChangeOp_AnnotationsDelete",
     "ChangeOp_AnnotationsReorder",
     "ChangeOp_AnnotationsUpdate",
+    "ChangeOp_AttachmentsCreate",
+    "ChangeOp_AttachmentsDelete",
     "ChangeOp_FormsAddWidget",
     "ChangeOp_FormsCreate",
     "ChangeOp_FormsDelete",
@@ -5522,6 +5803,15 @@ __all__ = [
     "ChangeOp_FormsUpdateWidget",
     "ChangeOp_MetadataUpdate",
     "ChangeOp_MetadataUpdateCustom",
+    "ChangeOp_OutlineCreate",
+    "ChangeOp_OutlineDelete",
+    "ChangeOp_OutlineMove",
+    "ChangeOp_OutlineUpdate",
+    "ChangeOp_PagesDelete",
+    "ChangeOp_PagesInsert",
+    "ChangeOp_PagesInsertBlank",
+    "ChangeOp_PagesReorder",
+    "ChangeOp_PagesRotate",
     "ChangeResult",
     "DeploymentLicenseStatusResponse",
     "DocAnnotationsCreate200Response",
@@ -5547,6 +5837,9 @@ __all__ = [
     "DocAnnotationsListAll409Response",
     "DocAnnotationsReadAppearance400Response",
     "DocAnnotationsReadAppearance404Response",
+    "DocAnnotationsReadFile400Response",
+    "DocAnnotationsReadFile404Response",
+    "DocAnnotationsReadFile413Response",
     "DocAnnotationsReorder200Response",
     "DocAnnotationsReorder400Response",
     "DocAnnotationsReorder404Response",
@@ -5556,6 +5849,11 @@ __all__ = [
     "DocAnnotationsUpdate400Response",
     "DocAnnotationsUpdate404Response",
     "DocAnnotationsUpdateRequest",
+    "DocAttachmentsDownload400Response",
+    "DocAttachmentsDownload404Response",
+    "DocAttachmentsDownload413Response",
+    "DocAttachmentsList200Response",
+    "DocAttachmentsList404Response",
     "DocChanges200Response",
     "DocChanges200ResponseChangesItem",
     "DocChanges200ResponseChangesItemApplied",
@@ -5619,34 +5917,14 @@ __all__ = [
     "DocManifest200ResponseScopesForms",
     "DocManifest200ResponseScopesLayout",
     "DocManifest200ResponseScopesMetadata",
+    "DocManifest200ResponseScopesOutline",
     "DocManifest404Response",
     "DocMetadataCustomGet200Response",
     "DocMetadataCustomGet404Response",
     "DocMetadataGet200Response",
     "DocMetadataGet404Response",
-    "DocPagesDelete200Response",
-    "DocPagesDelete200ResponseLayout",
-    "DocPagesDelete200ResponseLayoutNamedPagesItem",
-    "DocPagesDelete200ResponseLayoutNamedPagesItemTarget",
-    "DocPagesDelete200ResponseLayoutNamedPagesItemTargetDangling",
-    "DocPagesDelete200ResponseLayoutNamedPagesItemTargetPage",
-    "DocPagesDelete200ResponseLayoutNamedPagesItemTargetTemplate",
-    "DocPagesDelete200ResponseLayoutNamedPagesItemTarget_Dangling",
-    "DocPagesDelete200ResponseLayoutNamedPagesItemTarget_Page",
-    "DocPagesDelete200ResponseLayoutNamedPagesItemTarget_Template",
-    "DocPagesDelete200ResponseLayoutPagesItem",
-    "DocPagesDelete200ResponseLayoutPagesItemBoxes",
-    "DocPagesDelete200ResponseLayoutPagesItemBoxesArt",
-    "DocPagesDelete200ResponseLayoutPagesItemBoxesBleed",
-    "DocPagesDelete200ResponseLayoutPagesItemBoxesCrop",
-    "DocPagesDelete200ResponseLayoutPagesItemBoxesMedia",
-    "DocPagesDelete200ResponseLayoutPagesItemBoxesTrim",
-    "DocPagesDelete200ResponseLayoutPagesItemPdfCropBox",
-    "DocPagesDelete200ResponseLayoutPagesItemSize",
-    "DocPagesDelete200ResponseLayoutPagesItemTabOrder",
-    "DocPagesDelete400Response",
-    "DocPagesDelete404Response",
-    "DocPagesDeleteRequest",
+    "DocOutlineGet200Response",
+    "DocOutlineGet404Response",
     "DocPagesExtract400Response",
     "DocPagesExtract404Response",
     "DocPagesExtractRequest",
@@ -5657,51 +5935,6 @@ __all__ = [
     "DocPagesFlatten400Response",
     "DocPagesFlatten404Response",
     "DocPagesFlattenRequest",
-    "DocPagesInsert200Response",
-    "DocPagesInsert200ResponseLayout",
-    "DocPagesInsert200ResponseLayoutNamedPagesItem",
-    "DocPagesInsert200ResponseLayoutNamedPagesItemTarget",
-    "DocPagesInsert200ResponseLayoutNamedPagesItemTargetDangling",
-    "DocPagesInsert200ResponseLayoutNamedPagesItemTargetPage",
-    "DocPagesInsert200ResponseLayoutNamedPagesItemTargetTemplate",
-    "DocPagesInsert200ResponseLayoutNamedPagesItemTarget_Dangling",
-    "DocPagesInsert200ResponseLayoutNamedPagesItemTarget_Page",
-    "DocPagesInsert200ResponseLayoutNamedPagesItemTarget_Template",
-    "DocPagesInsert200ResponseLayoutPagesItem",
-    "DocPagesInsert200ResponseLayoutPagesItemBoxes",
-    "DocPagesInsert200ResponseLayoutPagesItemBoxesArt",
-    "DocPagesInsert200ResponseLayoutPagesItemBoxesBleed",
-    "DocPagesInsert200ResponseLayoutPagesItemBoxesCrop",
-    "DocPagesInsert200ResponseLayoutPagesItemBoxesMedia",
-    "DocPagesInsert200ResponseLayoutPagesItemBoxesTrim",
-    "DocPagesInsert200ResponseLayoutPagesItemPdfCropBox",
-    "DocPagesInsert200ResponseLayoutPagesItemSize",
-    "DocPagesInsert200ResponseLayoutPagesItemTabOrder",
-    "DocPagesInsert400Response",
-    "DocPagesInsert404Response",
-    "DocPagesInsertBlank200Response",
-    "DocPagesInsertBlank200ResponseLayout",
-    "DocPagesInsertBlank200ResponseLayoutNamedPagesItem",
-    "DocPagesInsertBlank200ResponseLayoutNamedPagesItemTarget",
-    "DocPagesInsertBlank200ResponseLayoutNamedPagesItemTargetDangling",
-    "DocPagesInsertBlank200ResponseLayoutNamedPagesItemTargetPage",
-    "DocPagesInsertBlank200ResponseLayoutNamedPagesItemTargetTemplate",
-    "DocPagesInsertBlank200ResponseLayoutNamedPagesItemTarget_Dangling",
-    "DocPagesInsertBlank200ResponseLayoutNamedPagesItemTarget_Page",
-    "DocPagesInsertBlank200ResponseLayoutNamedPagesItemTarget_Template",
-    "DocPagesInsertBlank200ResponseLayoutPagesItem",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemBoxes",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemBoxesArt",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemBoxesBleed",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemBoxesCrop",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemBoxesMedia",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemBoxesTrim",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemPdfCropBox",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemSize",
-    "DocPagesInsertBlank200ResponseLayoutPagesItemTabOrder",
-    "DocPagesInsertBlank400Response",
-    "DocPagesInsertBlank404Response",
-    "DocPagesInsertBlankRequest",
     "DocPagesRemoveName200Response",
     "DocPagesRemoveName200ResponseLayout",
     "DocPagesRemoveName200ResponseLayoutNamedPagesItem",
@@ -5725,51 +5958,6 @@ __all__ = [
     "DocPagesRemoveName400Response",
     "DocPagesRemoveName404Response",
     "DocPagesRemoveNameRequest",
-    "DocPagesReorder200Response",
-    "DocPagesReorder200ResponseLayout",
-    "DocPagesReorder200ResponseLayoutNamedPagesItem",
-    "DocPagesReorder200ResponseLayoutNamedPagesItemTarget",
-    "DocPagesReorder200ResponseLayoutNamedPagesItemTargetDangling",
-    "DocPagesReorder200ResponseLayoutNamedPagesItemTargetPage",
-    "DocPagesReorder200ResponseLayoutNamedPagesItemTargetTemplate",
-    "DocPagesReorder200ResponseLayoutNamedPagesItemTarget_Dangling",
-    "DocPagesReorder200ResponseLayoutNamedPagesItemTarget_Page",
-    "DocPagesReorder200ResponseLayoutNamedPagesItemTarget_Template",
-    "DocPagesReorder200ResponseLayoutPagesItem",
-    "DocPagesReorder200ResponseLayoutPagesItemBoxes",
-    "DocPagesReorder200ResponseLayoutPagesItemBoxesArt",
-    "DocPagesReorder200ResponseLayoutPagesItemBoxesBleed",
-    "DocPagesReorder200ResponseLayoutPagesItemBoxesCrop",
-    "DocPagesReorder200ResponseLayoutPagesItemBoxesMedia",
-    "DocPagesReorder200ResponseLayoutPagesItemBoxesTrim",
-    "DocPagesReorder200ResponseLayoutPagesItemPdfCropBox",
-    "DocPagesReorder200ResponseLayoutPagesItemSize",
-    "DocPagesReorder200ResponseLayoutPagesItemTabOrder",
-    "DocPagesReorder400Response",
-    "DocPagesReorder404Response",
-    "DocPagesRotate200Response",
-    "DocPagesRotate200ResponseLayout",
-    "DocPagesRotate200ResponseLayoutNamedPagesItem",
-    "DocPagesRotate200ResponseLayoutNamedPagesItemTarget",
-    "DocPagesRotate200ResponseLayoutNamedPagesItemTargetDangling",
-    "DocPagesRotate200ResponseLayoutNamedPagesItemTargetPage",
-    "DocPagesRotate200ResponseLayoutNamedPagesItemTargetTemplate",
-    "DocPagesRotate200ResponseLayoutNamedPagesItemTarget_Dangling",
-    "DocPagesRotate200ResponseLayoutNamedPagesItemTarget_Page",
-    "DocPagesRotate200ResponseLayoutNamedPagesItemTarget_Template",
-    "DocPagesRotate200ResponseLayoutPagesItem",
-    "DocPagesRotate200ResponseLayoutPagesItemBoxes",
-    "DocPagesRotate200ResponseLayoutPagesItemBoxesArt",
-    "DocPagesRotate200ResponseLayoutPagesItemBoxesBleed",
-    "DocPagesRotate200ResponseLayoutPagesItemBoxesCrop",
-    "DocPagesRotate200ResponseLayoutPagesItemBoxesMedia",
-    "DocPagesRotate200ResponseLayoutPagesItemBoxesTrim",
-    "DocPagesRotate200ResponseLayoutPagesItemPdfCropBox",
-    "DocPagesRotate200ResponseLayoutPagesItemSize",
-    "DocPagesRotate200ResponseLayoutPagesItemTabOrder",
-    "DocPagesRotate400Response",
-    "DocPagesRotate404Response",
-    "DocPagesRotateRequest",
     "DocPagesSetName200Response",
     "DocPagesSetName200ResponseLayout",
     "DocPagesSetName200ResponseLayoutNamedPagesItem",
@@ -5960,6 +6148,7 @@ __all__ = [
     "DocumentActionsSnapshotNameTreeScriptsItem",
     "DocumentMetadata",
     "DocumentMetadataTrapped",
+    "DocumentOutline",
     "DocumentsCommit200Response",
     "DocumentsCommit200ResponseDocument",
     "DocumentsCommit200ResponseDocumentState",
@@ -6244,6 +6433,16 @@ __all__ = [
     "MetadataPatch",
     "MetadataPatchTrapped",
     "MutationMeta",
+    "OutlineItem",
+    "OutlineItemDraft",
+    "OutlineItemPatch",
+    "OutlineItemRef",
+    "OutlineItemRefKind",
+    "OutlineMutationMeta",
+    "OutlineOrder",
+    "OutlinePosition",
+    "OutlinePositionAfter",
+    "OutlinePositionZero",
     "PageDestination",
     "PageDestinationFit",
     "PageDestinationFitB",
