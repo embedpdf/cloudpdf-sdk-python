@@ -2,4 +2,4 @@
 
 from .admin_error_payload import AdminErrorPayload
 
-SharesDeleteResponse = AdminErrorPayload
+SharesUpdate409Response = AdminErrorPayload

@@ -16,7 +16,10 @@ from ..errors.bad_request_error import BadRequestError
 from ..errors.conflict_error import ConflictError
 from ..errors.content_too_large_error import ContentTooLargeError
 from ..errors.not_found_error import NotFoundError
+from ..errors.not_implemented_error import NotImplementedError
 from ..types.doc_changes200response import DocChanges200Response
+from ..types.doc_download_link200response import DocDownloadLink200Response
+from ..types.doc_download_link501response import DocDownloadLink501Response
 from ..types.doc_head200response import DocHead200Response
 from ..types.doc_manifest200response import DocManifest200Response
 from ..types.doc_text200response import DocText200Response
@@ -271,6 +274,91 @@ class RawDocClient:
                 raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
             yield _stream()
+
+    def download_link(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        expires_in: typing.Optional[int] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> HttpResponse[DocDownloadLink200Response]:
+        """
+        The link opens the layer as it is when created: once the layer changes, it answers 404, so create it right before handing it over. It downloads that one file and nothing else, and a password-protected document is checked when the link is created. Deployments that verify tokens with their own keys (JWKS) mint links on their backend: a doc token with `layer_name`, a `download: { docVersion, mode: "incremental" }` claim and a short `exp`, passed as `link` on the versioned download URL.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        expires_in : typing.Optional[int]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        HttpResponse[DocDownloadLink200Response]
+            OK
+        """
+        _response = self._client_wrapper.httpx_client.request(
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/download-link",
+            method="POST",
+            json={
+                "expiresIn": expires_in,
+            },
+            headers={
+                "content-type": "application/json",
+                "X-Document-Password": str(document_password) if document_password is not None else None,
+            },
+            request_options=request_options,
+            omit=OMIT,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocDownloadLink200Response,
+                    parse_obj_as(
+                        type_=DocDownloadLink200Response,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return HttpResponse(response=_response, data=_data)
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 501:
+                raise NotImplementedError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        DocDownloadLink501Response,
+                        parse_obj_as(
+                            type_=DocDownloadLink501Response,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
     def manifest(
         self,
@@ -727,6 +815,91 @@ class AsyncRawDocClient:
                 raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
             yield await _stream()
+
+    async def download_link(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        expires_in: typing.Optional[int] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> AsyncHttpResponse[DocDownloadLink200Response]:
+        """
+        The link opens the layer as it is when created: once the layer changes, it answers 404, so create it right before handing it over. It downloads that one file and nothing else, and a password-protected document is checked when the link is created. Deployments that verify tokens with their own keys (JWKS) mint links on their backend: a doc token with `layer_name`, a `download: { docVersion, mode: "incremental" }` claim and a short `exp`, passed as `link` on the versioned download URL.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        expires_in : typing.Optional[int]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        AsyncHttpResponse[DocDownloadLink200Response]
+            OK
+        """
+        _response = await self._client_wrapper.httpx_client.request(
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/download-link",
+            method="POST",
+            json={
+                "expiresIn": expires_in,
+            },
+            headers={
+                "content-type": "application/json",
+                "X-Document-Password": str(document_password) if document_password is not None else None,
+            },
+            request_options=request_options,
+            omit=OMIT,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocDownloadLink200Response,
+                    parse_obj_as(
+                        type_=DocDownloadLink200Response,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return AsyncHttpResponse(response=_response, data=_data)
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 501:
+                raise NotImplementedError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        DocDownloadLink501Response,
+                        parse_obj_as(
+                            type_=DocDownloadLink501Response,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
     async def manifest(
         self,

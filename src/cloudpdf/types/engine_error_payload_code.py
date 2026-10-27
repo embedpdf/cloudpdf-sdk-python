@@ -33,6 +33,8 @@ EngineErrorPayloadCode = typing.Union[
         "ChangeConflict",
         "UndoUnavailable",
         "IdempotencyKeyReused",
+        "LayerDeleted",
+        "VisitorIdentityRequired",
     ],
     typing.Any,
 ]
