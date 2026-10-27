@@ -6,12 +6,18 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
+from .shares_exchange200response_layer_mode import SharesExchange200ResponseLayerMode
+from .shares_exchange200response_visitor import SharesExchange200ResponseVisitor
 
 
 class SharesExchange200Response(UniversalBaseModel):
     token: str
     doc_id: typing_extensions.Annotated[str, FieldMetadata(alias="docId"), pydantic.Field(alias="docId")]
     layer_name: typing_extensions.Annotated[str, FieldMetadata(alias="layerName"), pydantic.Field(alias="layerName")]
+    layer_mode: typing_extensions.Annotated[
+        SharesExchange200ResponseLayerMode, FieldMetadata(alias="layerMode"), pydantic.Field(alias="layerMode")
+    ]
+    visitor: SharesExchange200ResponseVisitor
     expires_at: typing_extensions.Annotated[float, FieldMetadata(alias="expiresAt"), pydantic.Field(alias="expiresAt")]
 
     if IS_PYDANTIC_V2:

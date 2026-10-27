@@ -13,6 +13,7 @@ if typing.TYPE_CHECKING:
     from .forbidden_error import ForbiddenError
     from .gone_error import GoneError
     from .not_found_error import NotFoundError
+    from .not_implemented_error import NotImplementedError
     from .unprocessable_entity_error import UnprocessableEntityError
 _dynamic_imports: typing.Dict[str, str] = {
     "BadGatewayError": ".bad_gateway_error",
@@ -22,6 +23,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ForbiddenError": ".forbidden_error",
     "GoneError": ".gone_error",
     "NotFoundError": ".not_found_error",
+    "NotImplementedError": ".not_implemented_error",
     "UnprocessableEntityError": ".unprocessable_entity_error",
 }
 
@@ -55,5 +57,6 @@ __all__ = [
     "ForbiddenError",
     "GoneError",
     "NotFoundError",
+    "NotImplementedError",
     "UnprocessableEntityError",
 ]

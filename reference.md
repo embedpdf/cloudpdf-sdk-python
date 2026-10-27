@@ -293,6 +293,103 @@ client.doc.download(
 </dl>
 </details>
 
+<details><summary><code>client.doc.<a href="src/cloudpdf/doc/client.py">download_link</a>(...) -> DocDownloadLink200Response</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+The link opens the layer as it is when created: once the layer changes, it answers 404, so create it right before handing it over. It downloads that one file and nothing else, and a password-protected document is checked when the link is created. Deployments that verify tokens with their own keys (JWKS) mint links on their backend: a doc token with `layer_name`, a `download: { docVersion, mode: "incremental" }` claim and a short `exp`, passed as `link` on the versioned download URL.
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+
+client = CloudPDFClient(
+    token="<token>",
+    base_url="https://yourhost.com/path/to/api",
+)
+
+client.doc.download_link(
+    doc_id="docId",
+    layer_name="layerName",
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**doc_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**layer_name:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**expires_in:** `typing.Optional[int]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 <details><summary><code>client.doc.<a href="src/cloudpdf/doc/client.py">manifest</a>(...) -> DocManifest200Response</code></summary>
 <dl>
 <dd>
@@ -563,7 +660,7 @@ client.doc.text(
 <dl>
 <dd>
 
-Unauthenticated, but requires a browser Origin header, checked against the grant allowlist. Unknown, revoked, and disabled tokens are indistinguishable (404). Passphrase-protected grants return 422 SharePasswordRequired until `password` is supplied. Mounted only when the deployment can sign (HS256 mode).
+Unauthenticated, but requires a browser Origin header, checked against the grant allowlist. Unknown, revoked, and disabled tokens are indistinguishable (404). Passphrase-protected grants return 422 SharePasswordRequired until `password` is supplied. A link that asks its visitors who they are on open returns 422 VisitorIdentityRequired until the required answers are given; `error.details` carries `fields` (what the link asks), `missing`, `invalid`, `purpose` and `privacyUrl`. A link that asks before the first change issues the session at once with `visitor.identityRequest`, and writes answer 403 VisitorIdentityRequired with the same details until the visitor exchanges again with their answers. Answers that can not be taken answer 422 on any link. Mounted only when the deployment can sign (HS256 mode).
 </dd>
 </dl>
 </dd>
@@ -612,6 +709,30 @@ client.shares.exchange(
 <dd>
 
 **password:** `typing.Optional[str]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**visitor_handle:** `typing.Optional[str]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**restart:** `typing.Optional[bool]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**visitor_identity:** `typing.Optional[SharesExchangeRequestVisitorIdentity]` 
     
 </dd>
 </dl>
@@ -694,6 +815,14 @@ client.shares.list(
 <dd>
 
 **doc_id:** `typing.Optional[str]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**archived:** `typing.Optional[bool]` 
     
 </dd>
 </dl>
@@ -793,7 +922,39 @@ client.shares.create(
 <dl>
 <dd>
 
+**layer_mode:** `typing.Optional[SharesCreateRequestLayerMode]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
 **layer_name:** `typing.Optional[str]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**keep_visitor_layers:** `typing.Optional[bool]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**visitor_idle_seconds:** `typing.Optional[int]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**visitor_identity:** `typing.Optional[SharesCreateRequestVisitorIdentity]` 
     
 </dd>
 </dl>
@@ -1034,6 +1195,46 @@ client.shares.update(
 <dl>
 <dd>
 
+**layer_mode:** `typing.Optional[SharesUpdateRequestLayerMode]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**layer_name:** `typing.Optional[str]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**keep_visitor_layers:** `typing.Optional[bool]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**visitor_idle_seconds:** `typing.Optional[int]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**visitor_identity:** `typing.Optional[SharesUpdateRequestVisitorIdentity]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
 **scope:** `typing.Optional[typing.List[str]]` 
     
 </dd>
@@ -1075,6 +1276,87 @@ client.shares.update(
 <dd>
 
 **expires_at:** `typing.Optional[int]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.shares.<a href="src/cloudpdf/shares/client.py">archive</a>(...) -> SharesArchive200Response</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Archiving is final: an archived link never exchanges again, and to share again you create a new link. Pausing (`disabled`) is the reversible stop. An archived link no longer counts as using its shared layer, so that layer can be deleted.
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+
+client = CloudPDFClient(
+    token="<token>",
+    base_url="https://yourhost.com/path/to/api",
+)
+
+client.shares.archive(
+    tenant_id="tenantId",
+    share_id="shareId",
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**tenant_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**share_id:** `str` 
     
 </dd>
 </dl>
@@ -6474,6 +6756,362 @@ client.doc.metadata.custom.get(
 <dd>
 
 **document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+## Documents Layers
+<details><summary><code>client.documents.layers.<a href="src/cloudpdf/documents/layers/client.py">list</a>(...) -> DocumentsLayersList200Response</code></summary>
+<dl>
+<dd>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+
+client = CloudPDFClient(
+    token="<token>",
+    base_url="https://yourhost.com/path/to/api",
+)
+
+client.documents.layers.list(
+    tenant_id="tenantId",
+    id="id",
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**tenant_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**limit:** `typing.Optional[int]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**cursor:** `typing.Optional[str]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**share_id:** `typing.Optional[str]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.documents.layers.<a href="src/cloudpdf/documents/layers/client.py">delete</a>(...)</code></summary>
+<dl>
+<dd>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+
+client = CloudPDFClient(
+    token="<token>",
+    base_url="https://yourhost.com/path/to/api",
+)
+
+client.documents.layers.delete(
+    tenant_id="tenantId",
+    id="id",
+    layer_name="layerName",
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**tenant_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**layer_name:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+## Shares Visitors
+<details><summary><code>client.shares.visitors.<a href="src/cloudpdf/shares/visitors/client.py">list</a>(...) -> SharesVisitorsList200Response</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+An archived link's visitors are listed too.
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+
+client = CloudPDFClient(
+    token="<token>",
+    base_url="https://yourhost.com/path/to/api",
+)
+
+client.shares.visitors.list(
+    tenant_id="tenantId",
+    share_id="shareId",
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**tenant_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**share_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**limit:** `typing.Optional[int]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**cursor:** `typing.Optional[str]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.shares.visitors.<a href="src/cloudpdf/shares/visitors/client.py">delete</a>(...)</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Their handle brings them back as a new visitor, who is asked again. Deleting a visitor already deleted changes nothing.
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+
+client = CloudPDFClient(
+    token="<token>",
+    base_url="https://yourhost.com/path/to/api",
+)
+
+client.shares.visitors.delete(
+    tenant_id="tenantId",
+    share_id="shareId",
+    visitor_id="visitorId",
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**tenant_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**share_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**visitor_id:** `str` 
     
 </dd>
 </dl>

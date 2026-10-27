@@ -6,13 +6,31 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
+from .shares_create200response_share_layer_mode import SharesCreate200ResponseShareLayerMode
+from .shares_create200response_share_visitor_identity import SharesCreate200ResponseShareVisitorIdentity
 
 
 class SharesCreate200ResponseShare(UniversalBaseModel):
     id: str
     tenant_id: typing_extensions.Annotated[str, FieldMetadata(alias="tenantId"), pydantic.Field(alias="tenantId")]
     doc_id: typing_extensions.Annotated[str, FieldMetadata(alias="docId"), pydantic.Field(alias="docId")]
-    layer_name: typing_extensions.Annotated[str, FieldMetadata(alias="layerName"), pydantic.Field(alias="layerName")]
+    layer_mode: typing_extensions.Annotated[
+        SharesCreate200ResponseShareLayerMode, FieldMetadata(alias="layerMode"), pydantic.Field(alias="layerMode")
+    ]
+    layer_name: typing_extensions.Annotated[
+        typing.Optional[str], FieldMetadata(alias="layerName"), pydantic.Field(alias="layerName")
+    ] = None
+    keep_visitor_layers: typing_extensions.Annotated[
+        bool, FieldMetadata(alias="keepVisitorLayers"), pydantic.Field(alias="keepVisitorLayers")
+    ]
+    visitor_idle_seconds: typing_extensions.Annotated[
+        typing.Optional[float], FieldMetadata(alias="visitorIdleSeconds"), pydantic.Field(alias="visitorIdleSeconds")
+    ] = None
+    visitor_identity: typing_extensions.Annotated[
+        typing.Optional[SharesCreate200ResponseShareVisitorIdentity],
+        FieldMetadata(alias="visitorIdentity"),
+        pydantic.Field(alias="visitorIdentity"),
+    ] = None
     scope: typing.List[str]
     origins: typing.Optional[typing.List[str]] = None
     password_protected: typing_extensions.Annotated[
@@ -22,6 +40,9 @@ class SharesCreate200ResponseShare(UniversalBaseModel):
         float, FieldMetadata(alias="sessionTtlSeconds"), pydantic.Field(alias="sessionTtlSeconds")
     ]
     disabled: bool
+    archived_at: typing_extensions.Annotated[
+        typing.Optional[float], FieldMetadata(alias="archivedAt"), pydantic.Field(alias="archivedAt")
+    ] = None
     expires_at: typing_extensions.Annotated[
         typing.Optional[float], FieldMetadata(alias="expiresAt"), pydantic.Field(alias="expiresAt")
     ] = None

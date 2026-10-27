@@ -1622,6 +1622,9 @@ if typing.TYPE_CHECKING:
     from .doc_changes404response import DocChanges404Response
     from .doc_changes409response import DocChanges409Response
     from .doc_changes413response import DocChanges413Response
+    from .doc_download_link200response import DocDownloadLink200Response
+    from .doc_download_link404response import DocDownloadLink404Response
+    from .doc_download_link501response import DocDownloadLink501Response
     from .doc_download_response import DocDownloadResponse
     from .doc_forms_delete_widget200response import DocFormsDeleteWidget200Response
     from .doc_forms_delete_widget400response import DocFormsDeleteWidget400Response
@@ -2177,6 +2180,14 @@ if typing.TYPE_CHECKING:
     )
     from .documents_init200response_resumed_upload_proxy import DocumentsInit200ResponseResumedUploadProxy
     from .documents_init400response import DocumentsInit400Response
+    from .documents_layers_delete403response import DocumentsLayersDelete403Response
+    from .documents_layers_delete404response import DocumentsLayersDelete404Response
+    from .documents_layers_delete409response import DocumentsLayersDelete409Response
+    from .documents_layers_list200response import DocumentsLayersList200Response
+    from .documents_layers_list200response_layers_item import DocumentsLayersList200ResponseLayersItem
+    from .documents_layers_list400response import DocumentsLayersList400Response
+    from .documents_layers_list403response import DocumentsLayersList403Response
+    from .documents_layers_list404response import DocumentsLayersList404Response
     from .documents_list200response import DocumentsList200Response
     from .documents_list200response_documents_item import DocumentsList200ResponseDocumentsItem
     from .documents_list200response_documents_item_state import DocumentsList200ResponseDocumentsItemState
@@ -2568,13 +2579,86 @@ if typing.TYPE_CHECKING:
     from .pdf_link_target_writable_named_name import PdfLinkTargetWritableNamedName
     from .pdf_link_target_writable_uri import PdfLinkTargetWritableUri
     from .pdf_page_actions import PdfPageActions
+    from .shares_archive200response import SharesArchive200Response
+    from .shares_archive200response_share import SharesArchive200ResponseShare
+    from .shares_archive200response_share_layer_mode import SharesArchive200ResponseShareLayerMode
+    from .shares_archive200response_share_visitor_identity import SharesArchive200ResponseShareVisitorIdentity
+    from .shares_archive200response_share_visitor_identity_ask import SharesArchive200ResponseShareVisitorIdentityAsk
+    from .shares_archive200response_share_visitor_identity_fields import (
+        SharesArchive200ResponseShareVisitorIdentityFields,
+    )
+    from .shares_archive200response_share_visitor_identity_fields_display_name import (
+        SharesArchive200ResponseShareVisitorIdentityFieldsDisplayName,
+    )
+    from .shares_archive200response_share_visitor_identity_fields_email import (
+        SharesArchive200ResponseShareVisitorIdentityFieldsEmail,
+    )
+    from .shares_archive200response_share_visitor_identity_fields_organization import (
+        SharesArchive200ResponseShareVisitorIdentityFieldsOrganization,
+    )
+    from .shares_archive200response_share_visitor_identity_fields_organizational_unit import (
+        SharesArchive200ResponseShareVisitorIdentityFieldsOrganizationalUnit,
+    )
+    from .shares_archive200response_share_visitor_identity_fields_title import (
+        SharesArchive200ResponseShareVisitorIdentityFieldsTitle,
+    )
+    from .shares_archive404response import SharesArchive404Response
     from .shares_create200response import SharesCreate200Response
     from .shares_create200response_share import SharesCreate200ResponseShare
+    from .shares_create200response_share_layer_mode import SharesCreate200ResponseShareLayerMode
+    from .shares_create200response_share_visitor_identity import SharesCreate200ResponseShareVisitorIdentity
+    from .shares_create200response_share_visitor_identity_ask import SharesCreate200ResponseShareVisitorIdentityAsk
+    from .shares_create200response_share_visitor_identity_fields import (
+        SharesCreate200ResponseShareVisitorIdentityFields,
+    )
+    from .shares_create200response_share_visitor_identity_fields_display_name import (
+        SharesCreate200ResponseShareVisitorIdentityFieldsDisplayName,
+    )
+    from .shares_create200response_share_visitor_identity_fields_email import (
+        SharesCreate200ResponseShareVisitorIdentityFieldsEmail,
+    )
+    from .shares_create200response_share_visitor_identity_fields_organization import (
+        SharesCreate200ResponseShareVisitorIdentityFieldsOrganization,
+    )
+    from .shares_create200response_share_visitor_identity_fields_organizational_unit import (
+        SharesCreate200ResponseShareVisitorIdentityFieldsOrganizationalUnit,
+    )
+    from .shares_create200response_share_visitor_identity_fields_title import (
+        SharesCreate200ResponseShareVisitorIdentityFieldsTitle,
+    )
     from .shares_create400response import SharesCreate400Response
     from .shares_create403response import SharesCreate403Response
     from .shares_create404response import SharesCreate404Response
-    from .shares_delete_response import SharesDeleteResponse
+    from .shares_delete404response import SharesDelete404Response
+    from .shares_delete409response import SharesDelete409Response
     from .shares_exchange200response import SharesExchange200Response
+    from .shares_exchange200response_layer_mode import SharesExchange200ResponseLayerMode
+    from .shares_exchange200response_visitor import SharesExchange200ResponseVisitor
+    from .shares_exchange200response_visitor_identity_request import SharesExchange200ResponseVisitorIdentityRequest
+    from .shares_exchange200response_visitor_identity_request_fields import (
+        SharesExchange200ResponseVisitorIdentityRequestFields,
+    )
+    from .shares_exchange200response_visitor_identity_request_fields_display_name import (
+        SharesExchange200ResponseVisitorIdentityRequestFieldsDisplayName,
+    )
+    from .shares_exchange200response_visitor_identity_request_fields_email import (
+        SharesExchange200ResponseVisitorIdentityRequestFieldsEmail,
+    )
+    from .shares_exchange200response_visitor_identity_request_fields_organization import (
+        SharesExchange200ResponseVisitorIdentityRequestFieldsOrganization,
+    )
+    from .shares_exchange200response_visitor_identity_request_fields_organizational_unit import (
+        SharesExchange200ResponseVisitorIdentityRequestFieldsOrganizationalUnit,
+    )
+    from .shares_exchange200response_visitor_identity_request_fields_title import (
+        SharesExchange200ResponseVisitorIdentityRequestFieldsTitle,
+    )
+    from .shares_exchange200response_visitor_identity_request_invalid_item import (
+        SharesExchange200ResponseVisitorIdentityRequestInvalidItem,
+    )
+    from .shares_exchange200response_visitor_identity_request_missing_item import (
+        SharesExchange200ResponseVisitorIdentityRequestMissingItem,
+    )
     from .shares_exchange400response import SharesExchange400Response
     from .shares_exchange403response import SharesExchange403Response
     from .shares_exchange404response import SharesExchange404Response
@@ -2582,14 +2666,85 @@ if typing.TYPE_CHECKING:
     from .shares_exchange422response import SharesExchange422Response
     from .shares_get200response import SharesGet200Response
     from .shares_get200response_share import SharesGet200ResponseShare
+    from .shares_get200response_share_layer_mode import SharesGet200ResponseShareLayerMode
+    from .shares_get200response_share_visitor_identity import SharesGet200ResponseShareVisitorIdentity
+    from .shares_get200response_share_visitor_identity_ask import SharesGet200ResponseShareVisitorIdentityAsk
+    from .shares_get200response_share_visitor_identity_fields import SharesGet200ResponseShareVisitorIdentityFields
+    from .shares_get200response_share_visitor_identity_fields_display_name import (
+        SharesGet200ResponseShareVisitorIdentityFieldsDisplayName,
+    )
+    from .shares_get200response_share_visitor_identity_fields_email import (
+        SharesGet200ResponseShareVisitorIdentityFieldsEmail,
+    )
+    from .shares_get200response_share_visitor_identity_fields_organization import (
+        SharesGet200ResponseShareVisitorIdentityFieldsOrganization,
+    )
+    from .shares_get200response_share_visitor_identity_fields_organizational_unit import (
+        SharesGet200ResponseShareVisitorIdentityFieldsOrganizationalUnit,
+    )
+    from .shares_get200response_share_visitor_identity_fields_title import (
+        SharesGet200ResponseShareVisitorIdentityFieldsTitle,
+    )
     from .shares_get404response import SharesGet404Response
     from .shares_list200response import SharesList200Response
     from .shares_list200response_shares_item import SharesList200ResponseSharesItem
+    from .shares_list200response_shares_item_layer_mode import SharesList200ResponseSharesItemLayerMode
+    from .shares_list200response_shares_item_visitor_identity import SharesList200ResponseSharesItemVisitorIdentity
+    from .shares_list200response_shares_item_visitor_identity_ask import (
+        SharesList200ResponseSharesItemVisitorIdentityAsk,
+    )
+    from .shares_list200response_shares_item_visitor_identity_fields import (
+        SharesList200ResponseSharesItemVisitorIdentityFields,
+    )
+    from .shares_list200response_shares_item_visitor_identity_fields_display_name import (
+        SharesList200ResponseSharesItemVisitorIdentityFieldsDisplayName,
+    )
+    from .shares_list200response_shares_item_visitor_identity_fields_email import (
+        SharesList200ResponseSharesItemVisitorIdentityFieldsEmail,
+    )
+    from .shares_list200response_shares_item_visitor_identity_fields_organization import (
+        SharesList200ResponseSharesItemVisitorIdentityFieldsOrganization,
+    )
+    from .shares_list200response_shares_item_visitor_identity_fields_organizational_unit import (
+        SharesList200ResponseSharesItemVisitorIdentityFieldsOrganizationalUnit,
+    )
+    from .shares_list200response_shares_item_visitor_identity_fields_title import (
+        SharesList200ResponseSharesItemVisitorIdentityFieldsTitle,
+    )
     from .shares_list400response import SharesList400Response
     from .shares_update200response import SharesUpdate200Response
     from .shares_update200response_share import SharesUpdate200ResponseShare
+    from .shares_update200response_share_layer_mode import SharesUpdate200ResponseShareLayerMode
+    from .shares_update200response_share_visitor_identity import SharesUpdate200ResponseShareVisitorIdentity
+    from .shares_update200response_share_visitor_identity_ask import SharesUpdate200ResponseShareVisitorIdentityAsk
+    from .shares_update200response_share_visitor_identity_fields import (
+        SharesUpdate200ResponseShareVisitorIdentityFields,
+    )
+    from .shares_update200response_share_visitor_identity_fields_display_name import (
+        SharesUpdate200ResponseShareVisitorIdentityFieldsDisplayName,
+    )
+    from .shares_update200response_share_visitor_identity_fields_email import (
+        SharesUpdate200ResponseShareVisitorIdentityFieldsEmail,
+    )
+    from .shares_update200response_share_visitor_identity_fields_organization import (
+        SharesUpdate200ResponseShareVisitorIdentityFieldsOrganization,
+    )
+    from .shares_update200response_share_visitor_identity_fields_organizational_unit import (
+        SharesUpdate200ResponseShareVisitorIdentityFieldsOrganizationalUnit,
+    )
+    from .shares_update200response_share_visitor_identity_fields_title import (
+        SharesUpdate200ResponseShareVisitorIdentityFieldsTitle,
+    )
     from .shares_update400response import SharesUpdate400Response
     from .shares_update404response import SharesUpdate404Response
+    from .shares_update409response import SharesUpdate409Response
+    from .shares_visitors_delete_response import SharesVisitorsDeleteResponse
+    from .shares_visitors_list200response import SharesVisitorsList200Response
+    from .shares_visitors_list200response_visitors_item import SharesVisitorsList200ResponseVisitorsItem
+    from .shares_visitors_list200response_visitors_item_answers import SharesVisitorsList200ResponseVisitorsItemAnswers
+    from .shares_visitors_list200response_visitors_item_layer import SharesVisitorsList200ResponseVisitorsItemLayer
+    from .shares_visitors_list400response import SharesVisitorsList400Response
+    from .shares_visitors_list404response import SharesVisitorsList404Response
     from .tenants_create200response import TenantsCreate200Response
     from .tenants_create200response_tenant import TenantsCreate200ResponseTenant
     from .tenants_create200response_tenant_status import TenantsCreate200ResponseTenantStatus
@@ -3857,6 +4012,9 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocChanges404Response": ".doc_changes404response",
     "DocChanges409Response": ".doc_changes409response",
     "DocChanges413Response": ".doc_changes413response",
+    "DocDownloadLink200Response": ".doc_download_link200response",
+    "DocDownloadLink404Response": ".doc_download_link404response",
+    "DocDownloadLink501Response": ".doc_download_link501response",
     "DocDownloadResponse": ".doc_download_response",
     "DocFormsDeleteWidget200Response": ".doc_forms_delete_widget200response",
     "DocFormsDeleteWidget400Response": ".doc_forms_delete_widget400response",
@@ -4202,6 +4360,14 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocumentsInit200Response_Deduped": ".documents_init200response",
     "DocumentsInit200Response_Resumed": ".documents_init200response",
     "DocumentsInit400Response": ".documents_init400response",
+    "DocumentsLayersDelete403Response": ".documents_layers_delete403response",
+    "DocumentsLayersDelete404Response": ".documents_layers_delete404response",
+    "DocumentsLayersDelete409Response": ".documents_layers_delete409response",
+    "DocumentsLayersList200Response": ".documents_layers_list200response",
+    "DocumentsLayersList200ResponseLayersItem": ".documents_layers_list200response_layers_item",
+    "DocumentsLayersList400Response": ".documents_layers_list400response",
+    "DocumentsLayersList403Response": ".documents_layers_list403response",
+    "DocumentsLayersList404Response": ".documents_layers_list404response",
     "DocumentsList200Response": ".documents_list200response",
     "DocumentsList200ResponseDocumentsItem": ".documents_list200response_documents_item",
     "DocumentsList200ResponseDocumentsItemState": ".documents_list200response_documents_item_state",
@@ -4549,13 +4715,46 @@ _dynamic_imports: typing.Dict[str, str] = {
     "PdfLinkTarget_Unsupported": ".pdf_link_target",
     "PdfLinkTarget_Uri": ".pdf_link_target",
     "PdfPageActions": ".pdf_page_actions",
+    "SharesArchive200Response": ".shares_archive200response",
+    "SharesArchive200ResponseShare": ".shares_archive200response_share",
+    "SharesArchive200ResponseShareLayerMode": ".shares_archive200response_share_layer_mode",
+    "SharesArchive200ResponseShareVisitorIdentity": ".shares_archive200response_share_visitor_identity",
+    "SharesArchive200ResponseShareVisitorIdentityAsk": ".shares_archive200response_share_visitor_identity_ask",
+    "SharesArchive200ResponseShareVisitorIdentityFields": ".shares_archive200response_share_visitor_identity_fields",
+    "SharesArchive200ResponseShareVisitorIdentityFieldsDisplayName": ".shares_archive200response_share_visitor_identity_fields_display_name",
+    "SharesArchive200ResponseShareVisitorIdentityFieldsEmail": ".shares_archive200response_share_visitor_identity_fields_email",
+    "SharesArchive200ResponseShareVisitorIdentityFieldsOrganization": ".shares_archive200response_share_visitor_identity_fields_organization",
+    "SharesArchive200ResponseShareVisitorIdentityFieldsOrganizationalUnit": ".shares_archive200response_share_visitor_identity_fields_organizational_unit",
+    "SharesArchive200ResponseShareVisitorIdentityFieldsTitle": ".shares_archive200response_share_visitor_identity_fields_title",
+    "SharesArchive404Response": ".shares_archive404response",
     "SharesCreate200Response": ".shares_create200response",
     "SharesCreate200ResponseShare": ".shares_create200response_share",
+    "SharesCreate200ResponseShareLayerMode": ".shares_create200response_share_layer_mode",
+    "SharesCreate200ResponseShareVisitorIdentity": ".shares_create200response_share_visitor_identity",
+    "SharesCreate200ResponseShareVisitorIdentityAsk": ".shares_create200response_share_visitor_identity_ask",
+    "SharesCreate200ResponseShareVisitorIdentityFields": ".shares_create200response_share_visitor_identity_fields",
+    "SharesCreate200ResponseShareVisitorIdentityFieldsDisplayName": ".shares_create200response_share_visitor_identity_fields_display_name",
+    "SharesCreate200ResponseShareVisitorIdentityFieldsEmail": ".shares_create200response_share_visitor_identity_fields_email",
+    "SharesCreate200ResponseShareVisitorIdentityFieldsOrganization": ".shares_create200response_share_visitor_identity_fields_organization",
+    "SharesCreate200ResponseShareVisitorIdentityFieldsOrganizationalUnit": ".shares_create200response_share_visitor_identity_fields_organizational_unit",
+    "SharesCreate200ResponseShareVisitorIdentityFieldsTitle": ".shares_create200response_share_visitor_identity_fields_title",
     "SharesCreate400Response": ".shares_create400response",
     "SharesCreate403Response": ".shares_create403response",
     "SharesCreate404Response": ".shares_create404response",
-    "SharesDeleteResponse": ".shares_delete_response",
+    "SharesDelete404Response": ".shares_delete404response",
+    "SharesDelete409Response": ".shares_delete409response",
     "SharesExchange200Response": ".shares_exchange200response",
+    "SharesExchange200ResponseLayerMode": ".shares_exchange200response_layer_mode",
+    "SharesExchange200ResponseVisitor": ".shares_exchange200response_visitor",
+    "SharesExchange200ResponseVisitorIdentityRequest": ".shares_exchange200response_visitor_identity_request",
+    "SharesExchange200ResponseVisitorIdentityRequestFields": ".shares_exchange200response_visitor_identity_request_fields",
+    "SharesExchange200ResponseVisitorIdentityRequestFieldsDisplayName": ".shares_exchange200response_visitor_identity_request_fields_display_name",
+    "SharesExchange200ResponseVisitorIdentityRequestFieldsEmail": ".shares_exchange200response_visitor_identity_request_fields_email",
+    "SharesExchange200ResponseVisitorIdentityRequestFieldsOrganization": ".shares_exchange200response_visitor_identity_request_fields_organization",
+    "SharesExchange200ResponseVisitorIdentityRequestFieldsOrganizationalUnit": ".shares_exchange200response_visitor_identity_request_fields_organizational_unit",
+    "SharesExchange200ResponseVisitorIdentityRequestFieldsTitle": ".shares_exchange200response_visitor_identity_request_fields_title",
+    "SharesExchange200ResponseVisitorIdentityRequestInvalidItem": ".shares_exchange200response_visitor_identity_request_invalid_item",
+    "SharesExchange200ResponseVisitorIdentityRequestMissingItem": ".shares_exchange200response_visitor_identity_request_missing_item",
     "SharesExchange400Response": ".shares_exchange400response",
     "SharesExchange403Response": ".shares_exchange403response",
     "SharesExchange404Response": ".shares_exchange404response",
@@ -4563,14 +4762,49 @@ _dynamic_imports: typing.Dict[str, str] = {
     "SharesExchange422Response": ".shares_exchange422response",
     "SharesGet200Response": ".shares_get200response",
     "SharesGet200ResponseShare": ".shares_get200response_share",
+    "SharesGet200ResponseShareLayerMode": ".shares_get200response_share_layer_mode",
+    "SharesGet200ResponseShareVisitorIdentity": ".shares_get200response_share_visitor_identity",
+    "SharesGet200ResponseShareVisitorIdentityAsk": ".shares_get200response_share_visitor_identity_ask",
+    "SharesGet200ResponseShareVisitorIdentityFields": ".shares_get200response_share_visitor_identity_fields",
+    "SharesGet200ResponseShareVisitorIdentityFieldsDisplayName": ".shares_get200response_share_visitor_identity_fields_display_name",
+    "SharesGet200ResponseShareVisitorIdentityFieldsEmail": ".shares_get200response_share_visitor_identity_fields_email",
+    "SharesGet200ResponseShareVisitorIdentityFieldsOrganization": ".shares_get200response_share_visitor_identity_fields_organization",
+    "SharesGet200ResponseShareVisitorIdentityFieldsOrganizationalUnit": ".shares_get200response_share_visitor_identity_fields_organizational_unit",
+    "SharesGet200ResponseShareVisitorIdentityFieldsTitle": ".shares_get200response_share_visitor_identity_fields_title",
     "SharesGet404Response": ".shares_get404response",
     "SharesList200Response": ".shares_list200response",
     "SharesList200ResponseSharesItem": ".shares_list200response_shares_item",
+    "SharesList200ResponseSharesItemLayerMode": ".shares_list200response_shares_item_layer_mode",
+    "SharesList200ResponseSharesItemVisitorIdentity": ".shares_list200response_shares_item_visitor_identity",
+    "SharesList200ResponseSharesItemVisitorIdentityAsk": ".shares_list200response_shares_item_visitor_identity_ask",
+    "SharesList200ResponseSharesItemVisitorIdentityFields": ".shares_list200response_shares_item_visitor_identity_fields",
+    "SharesList200ResponseSharesItemVisitorIdentityFieldsDisplayName": ".shares_list200response_shares_item_visitor_identity_fields_display_name",
+    "SharesList200ResponseSharesItemVisitorIdentityFieldsEmail": ".shares_list200response_shares_item_visitor_identity_fields_email",
+    "SharesList200ResponseSharesItemVisitorIdentityFieldsOrganization": ".shares_list200response_shares_item_visitor_identity_fields_organization",
+    "SharesList200ResponseSharesItemVisitorIdentityFieldsOrganizationalUnit": ".shares_list200response_shares_item_visitor_identity_fields_organizational_unit",
+    "SharesList200ResponseSharesItemVisitorIdentityFieldsTitle": ".shares_list200response_shares_item_visitor_identity_fields_title",
     "SharesList400Response": ".shares_list400response",
     "SharesUpdate200Response": ".shares_update200response",
     "SharesUpdate200ResponseShare": ".shares_update200response_share",
+    "SharesUpdate200ResponseShareLayerMode": ".shares_update200response_share_layer_mode",
+    "SharesUpdate200ResponseShareVisitorIdentity": ".shares_update200response_share_visitor_identity",
+    "SharesUpdate200ResponseShareVisitorIdentityAsk": ".shares_update200response_share_visitor_identity_ask",
+    "SharesUpdate200ResponseShareVisitorIdentityFields": ".shares_update200response_share_visitor_identity_fields",
+    "SharesUpdate200ResponseShareVisitorIdentityFieldsDisplayName": ".shares_update200response_share_visitor_identity_fields_display_name",
+    "SharesUpdate200ResponseShareVisitorIdentityFieldsEmail": ".shares_update200response_share_visitor_identity_fields_email",
+    "SharesUpdate200ResponseShareVisitorIdentityFieldsOrganization": ".shares_update200response_share_visitor_identity_fields_organization",
+    "SharesUpdate200ResponseShareVisitorIdentityFieldsOrganizationalUnit": ".shares_update200response_share_visitor_identity_fields_organizational_unit",
+    "SharesUpdate200ResponseShareVisitorIdentityFieldsTitle": ".shares_update200response_share_visitor_identity_fields_title",
     "SharesUpdate400Response": ".shares_update400response",
     "SharesUpdate404Response": ".shares_update404response",
+    "SharesUpdate409Response": ".shares_update409response",
+    "SharesVisitorsDeleteResponse": ".shares_visitors_delete_response",
+    "SharesVisitorsList200Response": ".shares_visitors_list200response",
+    "SharesVisitorsList200ResponseVisitorsItem": ".shares_visitors_list200response_visitors_item",
+    "SharesVisitorsList200ResponseVisitorsItemAnswers": ".shares_visitors_list200response_visitors_item_answers",
+    "SharesVisitorsList200ResponseVisitorsItemLayer": ".shares_visitors_list200response_visitors_item_layer",
+    "SharesVisitorsList400Response": ".shares_visitors_list400response",
+    "SharesVisitorsList404Response": ".shares_visitors_list404response",
     "TenantsCreate200Response": ".tenants_create200response",
     "TenantsCreate200ResponseTenant": ".tenants_create200response_tenant",
     "TenantsCreate200ResponseTenantStatus": ".tenants_create200response_tenant_status",
@@ -5864,6 +6098,9 @@ __all__ = [
     "DocChanges404Response",
     "DocChanges409Response",
     "DocChanges413Response",
+    "DocDownloadLink200Response",
+    "DocDownloadLink404Response",
+    "DocDownloadLink501Response",
     "DocDownloadResponse",
     "DocFormsDeleteWidget200Response",
     "DocFormsDeleteWidget400Response",
@@ -6209,6 +6446,14 @@ __all__ = [
     "DocumentsInit200Response_Deduped",
     "DocumentsInit200Response_Resumed",
     "DocumentsInit400Response",
+    "DocumentsLayersDelete403Response",
+    "DocumentsLayersDelete404Response",
+    "DocumentsLayersDelete409Response",
+    "DocumentsLayersList200Response",
+    "DocumentsLayersList200ResponseLayersItem",
+    "DocumentsLayersList400Response",
+    "DocumentsLayersList403Response",
+    "DocumentsLayersList404Response",
     "DocumentsList200Response",
     "DocumentsList200ResponseDocumentsItem",
     "DocumentsList200ResponseDocumentsItemState",
@@ -6556,13 +6801,46 @@ __all__ = [
     "PdfLinkTarget_Unsupported",
     "PdfLinkTarget_Uri",
     "PdfPageActions",
+    "SharesArchive200Response",
+    "SharesArchive200ResponseShare",
+    "SharesArchive200ResponseShareLayerMode",
+    "SharesArchive200ResponseShareVisitorIdentity",
+    "SharesArchive200ResponseShareVisitorIdentityAsk",
+    "SharesArchive200ResponseShareVisitorIdentityFields",
+    "SharesArchive200ResponseShareVisitorIdentityFieldsDisplayName",
+    "SharesArchive200ResponseShareVisitorIdentityFieldsEmail",
+    "SharesArchive200ResponseShareVisitorIdentityFieldsOrganization",
+    "SharesArchive200ResponseShareVisitorIdentityFieldsOrganizationalUnit",
+    "SharesArchive200ResponseShareVisitorIdentityFieldsTitle",
+    "SharesArchive404Response",
     "SharesCreate200Response",
     "SharesCreate200ResponseShare",
+    "SharesCreate200ResponseShareLayerMode",
+    "SharesCreate200ResponseShareVisitorIdentity",
+    "SharesCreate200ResponseShareVisitorIdentityAsk",
+    "SharesCreate200ResponseShareVisitorIdentityFields",
+    "SharesCreate200ResponseShareVisitorIdentityFieldsDisplayName",
+    "SharesCreate200ResponseShareVisitorIdentityFieldsEmail",
+    "SharesCreate200ResponseShareVisitorIdentityFieldsOrganization",
+    "SharesCreate200ResponseShareVisitorIdentityFieldsOrganizationalUnit",
+    "SharesCreate200ResponseShareVisitorIdentityFieldsTitle",
     "SharesCreate400Response",
     "SharesCreate403Response",
     "SharesCreate404Response",
-    "SharesDeleteResponse",
+    "SharesDelete404Response",
+    "SharesDelete409Response",
     "SharesExchange200Response",
+    "SharesExchange200ResponseLayerMode",
+    "SharesExchange200ResponseVisitor",
+    "SharesExchange200ResponseVisitorIdentityRequest",
+    "SharesExchange200ResponseVisitorIdentityRequestFields",
+    "SharesExchange200ResponseVisitorIdentityRequestFieldsDisplayName",
+    "SharesExchange200ResponseVisitorIdentityRequestFieldsEmail",
+    "SharesExchange200ResponseVisitorIdentityRequestFieldsOrganization",
+    "SharesExchange200ResponseVisitorIdentityRequestFieldsOrganizationalUnit",
+    "SharesExchange200ResponseVisitorIdentityRequestFieldsTitle",
+    "SharesExchange200ResponseVisitorIdentityRequestInvalidItem",
+    "SharesExchange200ResponseVisitorIdentityRequestMissingItem",
     "SharesExchange400Response",
     "SharesExchange403Response",
     "SharesExchange404Response",
@@ -6570,14 +6848,49 @@ __all__ = [
     "SharesExchange422Response",
     "SharesGet200Response",
     "SharesGet200ResponseShare",
+    "SharesGet200ResponseShareLayerMode",
+    "SharesGet200ResponseShareVisitorIdentity",
+    "SharesGet200ResponseShareVisitorIdentityAsk",
+    "SharesGet200ResponseShareVisitorIdentityFields",
+    "SharesGet200ResponseShareVisitorIdentityFieldsDisplayName",
+    "SharesGet200ResponseShareVisitorIdentityFieldsEmail",
+    "SharesGet200ResponseShareVisitorIdentityFieldsOrganization",
+    "SharesGet200ResponseShareVisitorIdentityFieldsOrganizationalUnit",
+    "SharesGet200ResponseShareVisitorIdentityFieldsTitle",
     "SharesGet404Response",
     "SharesList200Response",
     "SharesList200ResponseSharesItem",
+    "SharesList200ResponseSharesItemLayerMode",
+    "SharesList200ResponseSharesItemVisitorIdentity",
+    "SharesList200ResponseSharesItemVisitorIdentityAsk",
+    "SharesList200ResponseSharesItemVisitorIdentityFields",
+    "SharesList200ResponseSharesItemVisitorIdentityFieldsDisplayName",
+    "SharesList200ResponseSharesItemVisitorIdentityFieldsEmail",
+    "SharesList200ResponseSharesItemVisitorIdentityFieldsOrganization",
+    "SharesList200ResponseSharesItemVisitorIdentityFieldsOrganizationalUnit",
+    "SharesList200ResponseSharesItemVisitorIdentityFieldsTitle",
     "SharesList400Response",
     "SharesUpdate200Response",
     "SharesUpdate200ResponseShare",
+    "SharesUpdate200ResponseShareLayerMode",
+    "SharesUpdate200ResponseShareVisitorIdentity",
+    "SharesUpdate200ResponseShareVisitorIdentityAsk",
+    "SharesUpdate200ResponseShareVisitorIdentityFields",
+    "SharesUpdate200ResponseShareVisitorIdentityFieldsDisplayName",
+    "SharesUpdate200ResponseShareVisitorIdentityFieldsEmail",
+    "SharesUpdate200ResponseShareVisitorIdentityFieldsOrganization",
+    "SharesUpdate200ResponseShareVisitorIdentityFieldsOrganizationalUnit",
+    "SharesUpdate200ResponseShareVisitorIdentityFieldsTitle",
     "SharesUpdate400Response",
     "SharesUpdate404Response",
+    "SharesUpdate409Response",
+    "SharesVisitorsDeleteResponse",
+    "SharesVisitorsList200Response",
+    "SharesVisitorsList200ResponseVisitorsItem",
+    "SharesVisitorsList200ResponseVisitorsItemAnswers",
+    "SharesVisitorsList200ResponseVisitorsItemLayer",
+    "SharesVisitorsList400Response",
+    "SharesVisitorsList404Response",
     "TenantsCreate200Response",
     "TenantsCreate200ResponseTenant",
     "TenantsCreate200ResponseTenantStatus",

@@ -2,3 +2,96 @@
 
 # isort: skip_file
 
+import typing
+from importlib import import_module
+
+if typing.TYPE_CHECKING:
+    from .types import (
+        SharesCreateRequestLayerMode,
+        SharesCreateRequestVisitorIdentity,
+        SharesCreateRequestVisitorIdentityAsk,
+        SharesCreateRequestVisitorIdentityFields,
+        SharesCreateRequestVisitorIdentityFieldsDisplayName,
+        SharesCreateRequestVisitorIdentityFieldsEmail,
+        SharesCreateRequestVisitorIdentityFieldsOrganization,
+        SharesCreateRequestVisitorIdentityFieldsOrganizationalUnit,
+        SharesCreateRequestVisitorIdentityFieldsTitle,
+        SharesExchangeRequestVisitorIdentity,
+        SharesUpdateRequestLayerMode,
+        SharesUpdateRequestVisitorIdentity,
+        SharesUpdateRequestVisitorIdentityAsk,
+        SharesUpdateRequestVisitorIdentityFields,
+        SharesUpdateRequestVisitorIdentityFieldsDisplayName,
+        SharesUpdateRequestVisitorIdentityFieldsEmail,
+        SharesUpdateRequestVisitorIdentityFieldsOrganization,
+        SharesUpdateRequestVisitorIdentityFieldsOrganizationalUnit,
+        SharesUpdateRequestVisitorIdentityFieldsTitle,
+    )
+    from . import visitors
+_dynamic_imports: typing.Dict[str, str] = {
+    "SharesCreateRequestLayerMode": ".types",
+    "SharesCreateRequestVisitorIdentity": ".types",
+    "SharesCreateRequestVisitorIdentityAsk": ".types",
+    "SharesCreateRequestVisitorIdentityFields": ".types",
+    "SharesCreateRequestVisitorIdentityFieldsDisplayName": ".types",
+    "SharesCreateRequestVisitorIdentityFieldsEmail": ".types",
+    "SharesCreateRequestVisitorIdentityFieldsOrganization": ".types",
+    "SharesCreateRequestVisitorIdentityFieldsOrganizationalUnit": ".types",
+    "SharesCreateRequestVisitorIdentityFieldsTitle": ".types",
+    "SharesExchangeRequestVisitorIdentity": ".types",
+    "SharesUpdateRequestLayerMode": ".types",
+    "SharesUpdateRequestVisitorIdentity": ".types",
+    "SharesUpdateRequestVisitorIdentityAsk": ".types",
+    "SharesUpdateRequestVisitorIdentityFields": ".types",
+    "SharesUpdateRequestVisitorIdentityFieldsDisplayName": ".types",
+    "SharesUpdateRequestVisitorIdentityFieldsEmail": ".types",
+    "SharesUpdateRequestVisitorIdentityFieldsOrganization": ".types",
+    "SharesUpdateRequestVisitorIdentityFieldsOrganizationalUnit": ".types",
+    "SharesUpdateRequestVisitorIdentityFieldsTitle": ".types",
+    "visitors": ".visitors",
+}
+
+
+def __getattr__(attr_name: str) -> typing.Any:
+    module_name = _dynamic_imports.get(attr_name)
+    if module_name is None:
+        raise AttributeError(f"No {attr_name} found in _dynamic_imports for module name -> {__name__}")
+    try:
+        module = import_module(module_name, __package__)
+        if module_name == f".{attr_name}":
+            return module
+        else:
+            return getattr(module, attr_name)
+    except ImportError as e:
+        raise ImportError(f"Failed to import {attr_name} from {module_name}: {e}") from e
+    except AttributeError as e:
+        raise AttributeError(f"Failed to get {attr_name} from {module_name}: {e}") from e
+
+
+def __dir__():
+    lazy_attrs = list(_dynamic_imports.keys())
+    return sorted(lazy_attrs)
+
+
+__all__ = [
+    "SharesCreateRequestLayerMode",
+    "SharesCreateRequestVisitorIdentity",
+    "SharesCreateRequestVisitorIdentityAsk",
+    "SharesCreateRequestVisitorIdentityFields",
+    "SharesCreateRequestVisitorIdentityFieldsDisplayName",
+    "SharesCreateRequestVisitorIdentityFieldsEmail",
+    "SharesCreateRequestVisitorIdentityFieldsOrganization",
+    "SharesCreateRequestVisitorIdentityFieldsOrganizationalUnit",
+    "SharesCreateRequestVisitorIdentityFieldsTitle",
+    "SharesExchangeRequestVisitorIdentity",
+    "SharesUpdateRequestLayerMode",
+    "SharesUpdateRequestVisitorIdentity",
+    "SharesUpdateRequestVisitorIdentityAsk",
+    "SharesUpdateRequestVisitorIdentityFields",
+    "SharesUpdateRequestVisitorIdentityFieldsDisplayName",
+    "SharesUpdateRequestVisitorIdentityFieldsEmail",
+    "SharesUpdateRequestVisitorIdentityFieldsOrganization",
+    "SharesUpdateRequestVisitorIdentityFieldsOrganizationalUnit",
+    "SharesUpdateRequestVisitorIdentityFieldsTitle",
+    "visitors",
+]

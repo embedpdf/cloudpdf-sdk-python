@@ -7,6 +7,7 @@ import typing
 from ..core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ..core.request_options import RequestOptions
 from ..types.doc_changes200response import DocChanges200Response
+from ..types.doc_download_link200response import DocDownloadLink200Response
 from ..types.doc_head200response import DocHead200Response
 from ..types.doc_manifest200response import DocManifest200Response
 from ..types.doc_text200response import DocText200Response
@@ -188,6 +189,59 @@ class DocClient:
             doc_id, layer_name, document_password=document_password, request_options=request_options
         ) as r:
             yield from r.data
+
+    def download_link(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        expires_in: typing.Optional[int] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocDownloadLink200Response:
+        """
+        The link opens the layer as it is when created: once the layer changes, it answers 404, so create it right before handing it over. It downloads that one file and nothing else, and a password-protected document is checked when the link is created. Deployments that verify tokens with their own keys (JWKS) mint links on their backend: a doc token with `layer_name`, a `download: { docVersion, mode: "incremental" }` claim and a short `exp`, passed as `link` on the versioned download URL.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        expires_in : typing.Optional[int]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocDownloadLink200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.doc.download_link(
+            doc_id="docId",
+            layer_name="layerName",
+        )
+        """
+        _response = self._raw_client.download_link(
+            doc_id,
+            layer_name,
+            document_password=document_password,
+            expires_in=expires_in,
+            request_options=request_options,
+        )
+        return _response.data
 
     def manifest(
         self,
@@ -594,6 +648,67 @@ class AsyncDocClient:
         ) as r:
             async for _chunk in r.data:
                 yield _chunk
+
+    async def download_link(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        expires_in: typing.Optional[int] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocDownloadLink200Response:
+        """
+        The link opens the layer as it is when created: once the layer changes, it answers 404, so create it right before handing it over. It downloads that one file and nothing else, and a password-protected document is checked when the link is created. Deployments that verify tokens with their own keys (JWKS) mint links on their backend: a doc token with `layer_name`, a `download: { docVersion, mode: "incremental" }` claim and a short `exp`, passed as `link` on the versioned download URL.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        expires_in : typing.Optional[int]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocDownloadLink200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.doc.download_link(
+                doc_id="docId",
+                layer_name="layerName",
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.download_link(
+            doc_id,
+            layer_name,
+            document_password=document_password,
+            expires_in=expires_in,
+            request_options=request_options,
+        )
+        return _response.data
 
     async def manifest(
         self,

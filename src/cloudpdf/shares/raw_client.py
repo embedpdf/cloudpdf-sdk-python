@@ -10,11 +10,14 @@ from ..core.jsonable_encoder import encode_path_param
 from ..core.parse_error import ParsingError
 from ..core.pydantic_utilities import parse_obj_as
 from ..core.request_options import RequestOptions
+from ..core.serialization import convert_and_respect_annotation_metadata
 from ..errors.bad_request_error import BadRequestError
+from ..errors.conflict_error import ConflictError
 from ..errors.forbidden_error import ForbiddenError
 from ..errors.gone_error import GoneError
 from ..errors.not_found_error import NotFoundError
 from ..errors.unprocessable_entity_error import UnprocessableEntityError
+from ..types.shares_archive200response import SharesArchive200Response
 from ..types.shares_create200response import SharesCreate200Response
 from ..types.shares_exchange200response import SharesExchange200Response
 from ..types.shares_exchange410response import SharesExchange410Response
@@ -22,6 +25,11 @@ from ..types.shares_exchange422response import SharesExchange422Response
 from ..types.shares_get200response import SharesGet200Response
 from ..types.shares_list200response import SharesList200Response
 from ..types.shares_update200response import SharesUpdate200Response
+from .types.shares_create_request_layer_mode import SharesCreateRequestLayerMode
+from .types.shares_create_request_visitor_identity import SharesCreateRequestVisitorIdentity
+from .types.shares_exchange_request_visitor_identity import SharesExchangeRequestVisitorIdentity
+from .types.shares_update_request_layer_mode import SharesUpdateRequestLayerMode
+from .types.shares_update_request_visitor_identity import SharesUpdateRequestVisitorIdentity
 from pydantic import ValidationError
 
 # this is used as the default value for optional parameters
@@ -37,16 +45,25 @@ class RawSharesClient:
         *,
         share_token: str,
         password: typing.Optional[str] = OMIT,
+        visitor_handle: typing.Optional[str] = OMIT,
+        restart: typing.Optional[bool] = OMIT,
+        visitor_identity: typing.Optional[SharesExchangeRequestVisitorIdentity] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[SharesExchange200Response]:
         """
-        Unauthenticated, but requires a browser Origin header, checked against the grant allowlist. Unknown, revoked, and disabled tokens are indistinguishable (404). Passphrase-protected grants return 422 SharePasswordRequired until `password` is supplied. Mounted only when the deployment can sign (HS256 mode).
+        Unauthenticated, but requires a browser Origin header, checked against the grant allowlist. Unknown, revoked, and disabled tokens are indistinguishable (404). Passphrase-protected grants return 422 SharePasswordRequired until `password` is supplied. A link that asks its visitors who they are on open returns 422 VisitorIdentityRequired until the required answers are given; `error.details` carries `fields` (what the link asks), `missing`, `invalid`, `purpose` and `privacyUrl`. A link that asks before the first change issues the session at once with `visitor.identityRequest`, and writes answer 403 VisitorIdentityRequired with the same details until the visitor exchanges again with their answers. Answers that can not be taken answer 422 on any link. Mounted only when the deployment can sign (HS256 mode).
 
         Parameters
         ----------
         share_token : str
 
         password : typing.Optional[str]
+
+        visitor_handle : typing.Optional[str]
+
+        restart : typing.Optional[bool]
+
+        visitor_identity : typing.Optional[SharesExchangeRequestVisitorIdentity]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -62,6 +79,11 @@ class RawSharesClient:
             json={
                 "shareToken": share_token,
                 "password": password,
+                "visitorHandle": visitor_handle,
+                "restart": restart,
+                "visitorIdentity": convert_and_respect_annotation_metadata(
+                    object_=visitor_identity, annotation=SharesExchangeRequestVisitorIdentity, direction="write"
+                ),
             },
             headers={
                 "content-type": "application/json",
@@ -150,6 +172,7 @@ class RawSharesClient:
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         doc_id: typing.Optional[str] = None,
+        archived: typing.Optional[bool] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[SharesList200Response]:
         """
@@ -162,6 +185,8 @@ class RawSharesClient:
         cursor : typing.Optional[str]
 
         doc_id : typing.Optional[str]
+
+        archived : typing.Optional[bool]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -178,6 +203,7 @@ class RawSharesClient:
                 "limit": limit,
                 "cursor": cursor,
                 "docId": doc_id,
+                "archived": archived,
             },
             request_options=request_options,
         )
@@ -217,7 +243,11 @@ class RawSharesClient:
         *,
         doc_id: str,
         scope: typing.Sequence[str],
+        layer_mode: typing.Optional[SharesCreateRequestLayerMode] = OMIT,
         layer_name: typing.Optional[str] = OMIT,
+        keep_visitor_layers: typing.Optional[bool] = OMIT,
+        visitor_idle_seconds: typing.Optional[int] = OMIT,
+        visitor_identity: typing.Optional[SharesCreateRequestVisitorIdentity] = OMIT,
         origins: typing.Optional[typing.Sequence[str]] = OMIT,
         password: typing.Optional[str] = OMIT,
         session_ttl_seconds: typing.Optional[int] = OMIT,
@@ -235,7 +265,15 @@ class RawSharesClient:
 
         scope : typing.Sequence[str]
 
+        layer_mode : typing.Optional[SharesCreateRequestLayerMode]
+
         layer_name : typing.Optional[str]
+
+        keep_visitor_layers : typing.Optional[bool]
+
+        visitor_idle_seconds : typing.Optional[int]
+
+        visitor_identity : typing.Optional[SharesCreateRequestVisitorIdentity]
 
         origins : typing.Optional[typing.Sequence[str]]
 
@@ -258,7 +296,15 @@ class RawSharesClient:
             method="POST",
             json={
                 "docId": doc_id,
+                "layerMode": layer_mode,
                 "layerName": layer_name,
+                "keepVisitorLayers": keep_visitor_layers,
+                "visitorIdleSeconds": visitor_idle_seconds,
+                "visitorIdentity": convert_and_respect_annotation_metadata(
+                    object_=visitor_identity,
+                    annotation=typing.Optional[SharesCreateRequestVisitorIdentity],
+                    direction="write",
+                ),
                 "scope": scope,
                 "origins": origins,
                 "password": password,
@@ -412,6 +458,17 @@ class RawSharesClient:
                         ),
                     ),
                 )
+            if _response.status_code == 409:
+                raise ConflictError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
             _response_json = _response.json()
         except JSONDecodeError:
             raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
@@ -426,6 +483,11 @@ class RawSharesClient:
         tenant_id: str,
         share_id: str,
         *,
+        layer_mode: typing.Optional[SharesUpdateRequestLayerMode] = OMIT,
+        layer_name: typing.Optional[str] = OMIT,
+        keep_visitor_layers: typing.Optional[bool] = OMIT,
+        visitor_idle_seconds: typing.Optional[int] = OMIT,
+        visitor_identity: typing.Optional[SharesUpdateRequestVisitorIdentity] = OMIT,
         scope: typing.Optional[typing.Sequence[str]] = OMIT,
         origins: typing.Optional[typing.Sequence[str]] = OMIT,
         password: typing.Optional[str] = OMIT,
@@ -440,6 +502,16 @@ class RawSharesClient:
         tenant_id : str
 
         share_id : str
+
+        layer_mode : typing.Optional[SharesUpdateRequestLayerMode]
+
+        layer_name : typing.Optional[str]
+
+        keep_visitor_layers : typing.Optional[bool]
+
+        visitor_idle_seconds : typing.Optional[int]
+
+        visitor_identity : typing.Optional[SharesUpdateRequestVisitorIdentity]
 
         scope : typing.Optional[typing.Sequence[str]]
 
@@ -465,6 +537,15 @@ class RawSharesClient:
             f"v1/tenants/{encode_path_param(tenant_id)}/shares/{encode_path_param(share_id)}",
             method="PATCH",
             json={
+                "layerMode": layer_mode,
+                "layerName": layer_name,
+                "keepVisitorLayers": keep_visitor_layers,
+                "visitorIdleSeconds": visitor_idle_seconds,
+                "visitorIdentity": convert_and_respect_annotation_metadata(
+                    object_=visitor_identity,
+                    annotation=typing.Optional[SharesUpdateRequestVisitorIdentity],
+                    direction="write",
+                ),
                 "scope": scope,
                 "origins": origins,
                 "password": password,
@@ -510,6 +591,72 @@ class RawSharesClient:
                         ),
                     ),
                 )
+            if _response.status_code == 409:
+                raise ConflictError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    def archive(
+        self, tenant_id: str, share_id: str, *, request_options: typing.Optional[RequestOptions] = None
+    ) -> HttpResponse[SharesArchive200Response]:
+        """
+        Archiving is final: an archived link never exchanges again, and to share again you create a new link. Pausing (`disabled`) is the reversible stop. An archived link no longer counts as using its shared layer, so that layer can be deleted.
+
+        Parameters
+        ----------
+        tenant_id : str
+
+        share_id : str
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        HttpResponse[SharesArchive200Response]
+            OK
+        """
+        _response = self._client_wrapper.httpx_client.request(
+            f"v1/tenants/{encode_path_param(tenant_id)}/shares/{encode_path_param(share_id)}/archive",
+            method="POST",
+            request_options=request_options,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    SharesArchive200Response,
+                    parse_obj_as(
+                        type_=SharesArchive200Response,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return HttpResponse(response=_response, data=_data)
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
             _response_json = _response.json()
         except JSONDecodeError:
             raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
@@ -529,16 +676,25 @@ class AsyncRawSharesClient:
         *,
         share_token: str,
         password: typing.Optional[str] = OMIT,
+        visitor_handle: typing.Optional[str] = OMIT,
+        restart: typing.Optional[bool] = OMIT,
+        visitor_identity: typing.Optional[SharesExchangeRequestVisitorIdentity] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[SharesExchange200Response]:
         """
-        Unauthenticated, but requires a browser Origin header, checked against the grant allowlist. Unknown, revoked, and disabled tokens are indistinguishable (404). Passphrase-protected grants return 422 SharePasswordRequired until `password` is supplied. Mounted only when the deployment can sign (HS256 mode).
+        Unauthenticated, but requires a browser Origin header, checked against the grant allowlist. Unknown, revoked, and disabled tokens are indistinguishable (404). Passphrase-protected grants return 422 SharePasswordRequired until `password` is supplied. A link that asks its visitors who they are on open returns 422 VisitorIdentityRequired until the required answers are given; `error.details` carries `fields` (what the link asks), `missing`, `invalid`, `purpose` and `privacyUrl`. A link that asks before the first change issues the session at once with `visitor.identityRequest`, and writes answer 403 VisitorIdentityRequired with the same details until the visitor exchanges again with their answers. Answers that can not be taken answer 422 on any link. Mounted only when the deployment can sign (HS256 mode).
 
         Parameters
         ----------
         share_token : str
 
         password : typing.Optional[str]
+
+        visitor_handle : typing.Optional[str]
+
+        restart : typing.Optional[bool]
+
+        visitor_identity : typing.Optional[SharesExchangeRequestVisitorIdentity]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -554,6 +710,11 @@ class AsyncRawSharesClient:
             json={
                 "shareToken": share_token,
                 "password": password,
+                "visitorHandle": visitor_handle,
+                "restart": restart,
+                "visitorIdentity": convert_and_respect_annotation_metadata(
+                    object_=visitor_identity, annotation=SharesExchangeRequestVisitorIdentity, direction="write"
+                ),
             },
             headers={
                 "content-type": "application/json",
@@ -642,6 +803,7 @@ class AsyncRawSharesClient:
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         doc_id: typing.Optional[str] = None,
+        archived: typing.Optional[bool] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[SharesList200Response]:
         """
@@ -654,6 +816,8 @@ class AsyncRawSharesClient:
         cursor : typing.Optional[str]
 
         doc_id : typing.Optional[str]
+
+        archived : typing.Optional[bool]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -670,6 +834,7 @@ class AsyncRawSharesClient:
                 "limit": limit,
                 "cursor": cursor,
                 "docId": doc_id,
+                "archived": archived,
             },
             request_options=request_options,
         )
@@ -709,7 +874,11 @@ class AsyncRawSharesClient:
         *,
         doc_id: str,
         scope: typing.Sequence[str],
+        layer_mode: typing.Optional[SharesCreateRequestLayerMode] = OMIT,
         layer_name: typing.Optional[str] = OMIT,
+        keep_visitor_layers: typing.Optional[bool] = OMIT,
+        visitor_idle_seconds: typing.Optional[int] = OMIT,
+        visitor_identity: typing.Optional[SharesCreateRequestVisitorIdentity] = OMIT,
         origins: typing.Optional[typing.Sequence[str]] = OMIT,
         password: typing.Optional[str] = OMIT,
         session_ttl_seconds: typing.Optional[int] = OMIT,
@@ -727,7 +896,15 @@ class AsyncRawSharesClient:
 
         scope : typing.Sequence[str]
 
+        layer_mode : typing.Optional[SharesCreateRequestLayerMode]
+
         layer_name : typing.Optional[str]
+
+        keep_visitor_layers : typing.Optional[bool]
+
+        visitor_idle_seconds : typing.Optional[int]
+
+        visitor_identity : typing.Optional[SharesCreateRequestVisitorIdentity]
 
         origins : typing.Optional[typing.Sequence[str]]
 
@@ -750,7 +927,15 @@ class AsyncRawSharesClient:
             method="POST",
             json={
                 "docId": doc_id,
+                "layerMode": layer_mode,
                 "layerName": layer_name,
+                "keepVisitorLayers": keep_visitor_layers,
+                "visitorIdleSeconds": visitor_idle_seconds,
+                "visitorIdentity": convert_and_respect_annotation_metadata(
+                    object_=visitor_identity,
+                    annotation=typing.Optional[SharesCreateRequestVisitorIdentity],
+                    direction="write",
+                ),
                 "scope": scope,
                 "origins": origins,
                 "password": password,
@@ -904,6 +1089,17 @@ class AsyncRawSharesClient:
                         ),
                     ),
                 )
+            if _response.status_code == 409:
+                raise ConflictError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
             _response_json = _response.json()
         except JSONDecodeError:
             raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
@@ -918,6 +1114,11 @@ class AsyncRawSharesClient:
         tenant_id: str,
         share_id: str,
         *,
+        layer_mode: typing.Optional[SharesUpdateRequestLayerMode] = OMIT,
+        layer_name: typing.Optional[str] = OMIT,
+        keep_visitor_layers: typing.Optional[bool] = OMIT,
+        visitor_idle_seconds: typing.Optional[int] = OMIT,
+        visitor_identity: typing.Optional[SharesUpdateRequestVisitorIdentity] = OMIT,
         scope: typing.Optional[typing.Sequence[str]] = OMIT,
         origins: typing.Optional[typing.Sequence[str]] = OMIT,
         password: typing.Optional[str] = OMIT,
@@ -932,6 +1133,16 @@ class AsyncRawSharesClient:
         tenant_id : str
 
         share_id : str
+
+        layer_mode : typing.Optional[SharesUpdateRequestLayerMode]
+
+        layer_name : typing.Optional[str]
+
+        keep_visitor_layers : typing.Optional[bool]
+
+        visitor_idle_seconds : typing.Optional[int]
+
+        visitor_identity : typing.Optional[SharesUpdateRequestVisitorIdentity]
 
         scope : typing.Optional[typing.Sequence[str]]
 
@@ -957,6 +1168,15 @@ class AsyncRawSharesClient:
             f"v1/tenants/{encode_path_param(tenant_id)}/shares/{encode_path_param(share_id)}",
             method="PATCH",
             json={
+                "layerMode": layer_mode,
+                "layerName": layer_name,
+                "keepVisitorLayers": keep_visitor_layers,
+                "visitorIdleSeconds": visitor_idle_seconds,
+                "visitorIdentity": convert_and_respect_annotation_metadata(
+                    object_=visitor_identity,
+                    annotation=typing.Optional[SharesUpdateRequestVisitorIdentity],
+                    direction="write",
+                ),
                 "scope": scope,
                 "origins": origins,
                 "password": password,
@@ -991,6 +1211,72 @@ class AsyncRawSharesClient:
                         ),
                     ),
                 )
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 409:
+                raise ConflictError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    async def archive(
+        self, tenant_id: str, share_id: str, *, request_options: typing.Optional[RequestOptions] = None
+    ) -> AsyncHttpResponse[SharesArchive200Response]:
+        """
+        Archiving is final: an archived link never exchanges again, and to share again you create a new link. Pausing (`disabled`) is the reversible stop. An archived link no longer counts as using its shared layer, so that layer can be deleted.
+
+        Parameters
+        ----------
+        tenant_id : str
+
+        share_id : str
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        AsyncHttpResponse[SharesArchive200Response]
+            OK
+        """
+        _response = await self._client_wrapper.httpx_client.request(
+            f"v1/tenants/{encode_path_param(tenant_id)}/shares/{encode_path_param(share_id)}/archive",
+            method="POST",
+            request_options=request_options,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    SharesArchive200Response,
+                    parse_obj_as(
+                        type_=SharesArchive200Response,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return AsyncHttpResponse(response=_response, data=_data)
             if _response.status_code == 404:
                 raise NotFoundError(
                     headers=dict(_response.headers),
