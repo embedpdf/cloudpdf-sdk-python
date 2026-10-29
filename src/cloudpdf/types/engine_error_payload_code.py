@@ -26,7 +26,6 @@ EngineErrorPayloadCode = typing.Union[
         "SigningVersionMismatch",
         "SignatureRefused",
         "ProtectedDocument",
-        "StaleBase",
         "PayloadTooLarge",
         "ObjectNumberUnavailable",
         "LayerFull",

@@ -12,6 +12,7 @@ from ..types.documents_get200response import DocumentsGet200Response
 from ..types.documents_import_from200response import DocumentsImportFrom200Response
 from ..types.documents_init200response import DocumentsInit200Response
 from ..types.documents_list200response import DocumentsList200Response
+from ..types.documents_update200response import DocumentsUpdate200Response
 from ..types.documents_upload_proxy200response import DocumentsUploadProxy200Response
 from .raw_client import AsyncRawDocumentsClient, RawDocumentsClient
 from .types.documents_import_from_request_dedup_mode import DocumentsImportFromRequestDedupMode
@@ -20,6 +21,8 @@ from .types.documents_import_from_request_mode import DocumentsImportFromRequest
 from .types.documents_import_from_request_source import DocumentsImportFromRequestSource
 from .types.documents_init_request_dedup_mode import DocumentsInitRequestDedupMode
 from .types.documents_init_request_upload_preference import DocumentsInitRequestUploadPreference
+from .types.list_documents_request_order import ListDocumentsRequestOrder
+from .types.list_documents_request_sort import ListDocumentsRequestSort
 from .types.list_documents_request_state import ListDocumentsRequestState
 
 if typing.TYPE_CHECKING:
@@ -52,6 +55,10 @@ class DocumentsClient:
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         state: typing.Optional[ListDocumentsRequestState] = None,
+        q: typing.Optional[str] = None,
+        folder_id: typing.Optional[str] = None,
+        sort: typing.Optional[ListDocumentsRequestSort] = None,
+        order: typing.Optional[ListDocumentsRequestOrder] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocumentsList200Response:
         """
@@ -64,6 +71,19 @@ class DocumentsClient:
         cursor : typing.Optional[str]
 
         state : typing.Optional[ListDocumentsRequestState]
+            Only documents in this state. Without it, every state except deleting.
+
+        q : typing.Optional[str]
+            Only documents whose name contains this text, ignoring case.
+
+        folder_id : typing.Optional[str]
+            Only documents directly in this folder (root: the top level). Without it, documents in every folder.
+
+        sort : typing.Optional[ListDocumentsRequestSort]
+            createdAt (default), name (ignoring case), or size (stored bytes; 0 while pending).
+
+        order : typing.Optional[ListDocumentsRequestOrder]
+            Defaults to the reading order of the sort: A to Z for name, newest and largest first otherwise.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -86,7 +106,15 @@ class DocumentsClient:
         )
         """
         _response = self._raw_client.list(
-            tenant_id, limit=limit, cursor=cursor, state=state, request_options=request_options
+            tenant_id,
+            limit=limit,
+            cursor=cursor,
+            state=state,
+            q=q,
+            folder_id=folder_id,
+            sort=sort,
+            order=order,
+            request_options=request_options,
         )
         return _response.data
 
@@ -153,6 +181,46 @@ class DocumentsClient:
         )
         """
         _response = self._raw_client.delete(tenant_id, id, request_options=request_options)
+        return _response.data
+
+    def update(
+        self, tenant_id: str, id: str, *, name: str, request_options: typing.Optional[RequestOptions] = None
+    ) -> DocumentsUpdate200Response:
+        """
+        A document that is being deleted answers 404.
+
+        Parameters
+        ----------
+        tenant_id : str
+
+        id : str
+
+        name : str
+            What people call the document: shown in dashboards, searched and sorted by. 1 to 255 characters, no control characters, no leading or trailing whitespace. Names need not be unique.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocumentsUpdate200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+        client.documents.update(
+            tenant_id="tenantId",
+            id="id",
+            name="name",
+        )
+        """
+        _response = self._raw_client.update(tenant_id, id, name=name, request_options=request_options)
         return _response.data
 
     def commit(
@@ -305,6 +373,8 @@ class DocumentsClient:
         *,
         source: DocumentsImportFromRequestSource,
         expected: typing.Optional[DocumentsImportFromRequestExpected] = OMIT,
+        name: typing.Optional[str] = OMIT,
+        folder_id: typing.Optional[str] = OMIT,
         metadata: typing.Optional[typing.Dict[str, typing.Any]] = OMIT,
         idempotency_key: typing.Optional[str] = OMIT,
         dedup_mode: typing.Optional[DocumentsImportFromRequestDedupMode] = OMIT,
@@ -324,6 +394,12 @@ class DocumentsClient:
 
         expected : typing.Optional[DocumentsImportFromRequestExpected]
             Integrity pins, enforced when present. When absent, the server-observed values become authoritative.
+
+        name : typing.Optional[str]
+            What people call the document: shown in dashboards, searched and sorted by. 1 to 255 characters, no control characters, no leading or trailing whitespace. Names need not be unique.
+
+        folder_id : typing.Optional[str]
+            A folder id, or root for the top level.
 
         metadata : typing.Optional[typing.Dict[str, typing.Any]]
 
@@ -366,6 +442,8 @@ class DocumentsClient:
             tenant_id,
             source=source,
             expected=expected,
+            name=name,
+            folder_id=folder_id,
             metadata=metadata,
             idempotency_key=idempotency_key,
             dedup_mode=dedup_mode,
@@ -381,6 +459,8 @@ class DocumentsClient:
         *,
         content_length: float,
         content_sha256: str,
+        name: typing.Optional[str] = OMIT,
+        folder_id: typing.Optional[str] = OMIT,
         metadata: typing.Optional[typing.Dict[str, typing.Any]] = OMIT,
         idempotency_key: typing.Optional[str] = OMIT,
         dedup_mode: typing.Optional[DocumentsInitRequestDedupMode] = OMIT,
@@ -397,6 +477,12 @@ class DocumentsClient:
         content_length : float
 
         content_sha256 : str
+
+        name : typing.Optional[str]
+            What people call the document: shown in dashboards, searched and sorted by. 1 to 255 characters, no control characters, no leading or trailing whitespace. Names need not be unique.
+
+        folder_id : typing.Optional[str]
+            A folder id, or root for the top level.
 
         metadata : typing.Optional[typing.Dict[str, typing.Any]]
 
@@ -437,6 +523,8 @@ class DocumentsClient:
             tenant_id,
             content_length=content_length,
             content_sha256=content_sha256,
+            name=name,
+            folder_id=folder_id,
             metadata=metadata,
             idempotency_key=idempotency_key,
             dedup_mode=dedup_mode,
@@ -480,6 +568,10 @@ class AsyncDocumentsClient:
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         state: typing.Optional[ListDocumentsRequestState] = None,
+        q: typing.Optional[str] = None,
+        folder_id: typing.Optional[str] = None,
+        sort: typing.Optional[ListDocumentsRequestSort] = None,
+        order: typing.Optional[ListDocumentsRequestOrder] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocumentsList200Response:
         """
@@ -492,6 +584,19 @@ class AsyncDocumentsClient:
         cursor : typing.Optional[str]
 
         state : typing.Optional[ListDocumentsRequestState]
+            Only documents in this state. Without it, every state except deleting.
+
+        q : typing.Optional[str]
+            Only documents whose name contains this text, ignoring case.
+
+        folder_id : typing.Optional[str]
+            Only documents directly in this folder (root: the top level). Without it, documents in every folder.
+
+        sort : typing.Optional[ListDocumentsRequestSort]
+            createdAt (default), name (ignoring case), or size (stored bytes; 0 while pending).
+
+        order : typing.Optional[ListDocumentsRequestOrder]
+            Defaults to the reading order of the sort: A to Z for name, newest and largest first otherwise.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -522,7 +627,15 @@ class AsyncDocumentsClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.list(
-            tenant_id, limit=limit, cursor=cursor, state=state, request_options=request_options
+            tenant_id,
+            limit=limit,
+            cursor=cursor,
+            state=state,
+            q=q,
+            folder_id=folder_id,
+            sort=sort,
+            order=order,
+            request_options=request_options,
         )
         return _response.data
 
@@ -605,6 +718,54 @@ class AsyncDocumentsClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.delete(tenant_id, id, request_options=request_options)
+        return _response.data
+
+    async def update(
+        self, tenant_id: str, id: str, *, name: str, request_options: typing.Optional[RequestOptions] = None
+    ) -> DocumentsUpdate200Response:
+        """
+        A document that is being deleted answers 404.
+
+        Parameters
+        ----------
+        tenant_id : str
+
+        id : str
+
+        name : str
+            What people call the document: shown in dashboards, searched and sorted by. 1 to 255 characters, no control characters, no leading or trailing whitespace. Names need not be unique.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocumentsUpdate200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+            base_url="https://yourhost.com/path/to/api",
+        )
+
+
+        async def main() -> None:
+            await client.documents.update(
+                tenant_id="tenantId",
+                id="id",
+                name="name",
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.update(tenant_id, id, name=name, request_options=request_options)
         return _response.data
 
     async def commit(
@@ -791,6 +952,8 @@ class AsyncDocumentsClient:
         *,
         source: DocumentsImportFromRequestSource,
         expected: typing.Optional[DocumentsImportFromRequestExpected] = OMIT,
+        name: typing.Optional[str] = OMIT,
+        folder_id: typing.Optional[str] = OMIT,
         metadata: typing.Optional[typing.Dict[str, typing.Any]] = OMIT,
         idempotency_key: typing.Optional[str] = OMIT,
         dedup_mode: typing.Optional[DocumentsImportFromRequestDedupMode] = OMIT,
@@ -810,6 +973,12 @@ class AsyncDocumentsClient:
 
         expected : typing.Optional[DocumentsImportFromRequestExpected]
             Integrity pins, enforced when present. When absent, the server-observed values become authoritative.
+
+        name : typing.Optional[str]
+            What people call the document: shown in dashboards, searched and sorted by. 1 to 255 characters, no control characters, no leading or trailing whitespace. Names need not be unique.
+
+        folder_id : typing.Optional[str]
+            A folder id, or root for the top level.
 
         metadata : typing.Optional[typing.Dict[str, typing.Any]]
 
@@ -860,6 +1029,8 @@ class AsyncDocumentsClient:
             tenant_id,
             source=source,
             expected=expected,
+            name=name,
+            folder_id=folder_id,
             metadata=metadata,
             idempotency_key=idempotency_key,
             dedup_mode=dedup_mode,
@@ -875,6 +1046,8 @@ class AsyncDocumentsClient:
         *,
         content_length: float,
         content_sha256: str,
+        name: typing.Optional[str] = OMIT,
+        folder_id: typing.Optional[str] = OMIT,
         metadata: typing.Optional[typing.Dict[str, typing.Any]] = OMIT,
         idempotency_key: typing.Optional[str] = OMIT,
         dedup_mode: typing.Optional[DocumentsInitRequestDedupMode] = OMIT,
@@ -891,6 +1064,12 @@ class AsyncDocumentsClient:
         content_length : float
 
         content_sha256 : str
+
+        name : typing.Optional[str]
+            What people call the document: shown in dashboards, searched and sorted by. 1 to 255 characters, no control characters, no leading or trailing whitespace. Names need not be unique.
+
+        folder_id : typing.Optional[str]
+            A folder id, or root for the top level.
 
         metadata : typing.Optional[typing.Dict[str, typing.Any]]
 
@@ -939,6 +1118,8 @@ class AsyncDocumentsClient:
             tenant_id,
             content_length=content_length,
             content_sha256=content_sha256,
+            name=name,
+            folder_id=folder_id,
             metadata=metadata,
             idempotency_key=idempotency_key,
             dedup_mode=dedup_mode,

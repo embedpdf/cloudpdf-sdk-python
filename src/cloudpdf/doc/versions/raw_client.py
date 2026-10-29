@@ -28,16 +28,19 @@ class RawVersionsClient:
     def list(
         self,
         doc_id: str,
+        layer_name: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocVersionsList200Response]:
         """
-        Every completed signature publishes a new version. Never cached: the list grows.
+        Every completed signature makes a new version of its layer; another layer's versions are never listed. Never cached: the list grows.
 
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -51,7 +54,7 @@ class RawVersionsClient:
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/versions",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -91,6 +94,7 @@ class RawVersionsClient:
     def analysis(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         *,
         since_signature: typing.Optional[int] = None,
@@ -102,11 +106,13 @@ class RawVersionsClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocVersionsAnalysis200Response]:
         """
-        Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults to the last. The same answer for every layer and every caller.
+        Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults to the last. The same answer for every caller.
 
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -132,7 +138,7 @@ class RawVersionsClient:
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/versions/analysis/{encode_path_param(sha)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/analysis/{encode_path_param(sha)}",
             method="GET",
             params={
                 "since.signature": since_signature,
@@ -191,6 +197,7 @@ class RawVersionsClient:
     def download(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         *,
         document_password: typing.Optional[str] = None,
@@ -200,6 +207,8 @@ class RawVersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -215,7 +224,7 @@ class RawVersionsClient:
             OK
         """
         with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/versions/download/{encode_path_param(sha)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/download/{encode_path_param(sha)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -262,6 +271,7 @@ class RawVersionsClient:
     def revision(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         index: int,
         *,
@@ -272,6 +282,8 @@ class RawVersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -289,7 +301,7 @@ class RawVersionsClient:
             OK
         """
         with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/versions/revisions/{encode_path_param(sha)}/{encode_path_param(index)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/revisions/{encode_path_param(sha)}/{encode_path_param(index)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -335,6 +347,7 @@ class RawVersionsClient:
     def signatures(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         *,
         document_password: typing.Optional[str] = None,
@@ -344,6 +357,8 @@ class RawVersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -359,7 +374,7 @@ class RawVersionsClient:
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/versions/signatures/{encode_path_param(sha)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -400,6 +415,7 @@ class RawVersionsClient:
     def signature_contents(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         field_key: str,
         *,
@@ -412,6 +428,8 @@ class RawVersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -429,7 +447,7 @@ class RawVersionsClient:
             OK
         """
         with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/versions/signatures/{encode_path_param(sha)}/{encode_path_param(field_key)}/contents",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha)}/{encode_path_param(field_key)}/contents",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -476,6 +494,7 @@ class RawVersionsClient:
     def signature_digest(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         field_key: str,
         algorithm: SignatureDigestVersionsRequestAlgorithm,
@@ -489,6 +508,8 @@ class RawVersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -508,7 +529,7 @@ class RawVersionsClient:
             OK
         """
         with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/versions/signatures/{encode_path_param(sha)}/{encode_path_param(field_key)}/digest/{encode_path_param(algorithm)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha)}/{encode_path_param(field_key)}/digest/{encode_path_param(algorithm)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -559,16 +580,19 @@ class AsyncRawVersionsClient:
     async def list(
         self,
         doc_id: str,
+        layer_name: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocVersionsList200Response]:
         """
-        Every completed signature publishes a new version. Never cached: the list grows.
+        Every completed signature makes a new version of its layer; another layer's versions are never listed. Never cached: the list grows.
 
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -582,7 +606,7 @@ class AsyncRawVersionsClient:
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/versions",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -622,6 +646,7 @@ class AsyncRawVersionsClient:
     async def analysis(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         *,
         since_signature: typing.Optional[int] = None,
@@ -633,11 +658,13 @@ class AsyncRawVersionsClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocVersionsAnalysis200Response]:
         """
-        Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults to the last. The same answer for every layer and every caller.
+        Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults to the last. The same answer for every caller.
 
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -663,7 +690,7 @@ class AsyncRawVersionsClient:
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/versions/analysis/{encode_path_param(sha)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/analysis/{encode_path_param(sha)}",
             method="GET",
             params={
                 "since.signature": since_signature,
@@ -722,6 +749,7 @@ class AsyncRawVersionsClient:
     async def download(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         *,
         document_password: typing.Optional[str] = None,
@@ -731,6 +759,8 @@ class AsyncRawVersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -746,7 +776,7 @@ class AsyncRawVersionsClient:
             OK
         """
         async with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/versions/download/{encode_path_param(sha)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/download/{encode_path_param(sha)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -794,6 +824,7 @@ class AsyncRawVersionsClient:
     async def revision(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         index: int,
         *,
@@ -804,6 +835,8 @@ class AsyncRawVersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -821,7 +854,7 @@ class AsyncRawVersionsClient:
             OK
         """
         async with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/versions/revisions/{encode_path_param(sha)}/{encode_path_param(index)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/revisions/{encode_path_param(sha)}/{encode_path_param(index)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -868,6 +901,7 @@ class AsyncRawVersionsClient:
     async def signatures(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         *,
         document_password: typing.Optional[str] = None,
@@ -877,6 +911,8 @@ class AsyncRawVersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -892,7 +928,7 @@ class AsyncRawVersionsClient:
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/versions/signatures/{encode_path_param(sha)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -933,6 +969,7 @@ class AsyncRawVersionsClient:
     async def signature_contents(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         field_key: str,
         *,
@@ -945,6 +982,8 @@ class AsyncRawVersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -962,7 +1001,7 @@ class AsyncRawVersionsClient:
             OK
         """
         async with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/versions/signatures/{encode_path_param(sha)}/{encode_path_param(field_key)}/contents",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha)}/{encode_path_param(field_key)}/contents",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -1010,6 +1049,7 @@ class AsyncRawVersionsClient:
     async def signature_digest(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         field_key: str,
         algorithm: SignatureDigestVersionsRequestAlgorithm,
@@ -1023,6 +1063,8 @@ class AsyncRawVersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -1042,7 +1084,7 @@ class AsyncRawVersionsClient:
             OK
         """
         async with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/versions/signatures/{encode_path_param(sha)}/{encode_path_param(field_key)}/digest/{encode_path_param(algorithm)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha)}/{encode_path_param(field_key)}/digest/{encode_path_param(algorithm)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,

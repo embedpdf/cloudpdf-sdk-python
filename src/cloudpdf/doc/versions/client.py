@@ -30,16 +30,19 @@ class VersionsClient:
     def list(
         self,
         doc_id: str,
+        layer_name: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocVersionsList200Response:
         """
-        Every completed signature publishes a new version. Never cached: the list grows.
+        Every completed signature makes a new version of its layer; another layer's versions are never listed. Never cached: the list grows.
 
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -62,14 +65,18 @@ class VersionsClient:
         )
         client.doc.versions.list(
             doc_id="docId",
+            layer_name="layerName",
         )
         """
-        _response = self._raw_client.list(doc_id, document_password=document_password, request_options=request_options)
+        _response = self._raw_client.list(
+            doc_id, layer_name, document_password=document_password, request_options=request_options
+        )
         return _response.data
 
     def analysis(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         *,
         since_signature: typing.Optional[int] = None,
@@ -81,11 +88,13 @@ class VersionsClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocVersionsAnalysis200Response:
         """
-        Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults to the last. The same answer for every layer and every caller.
+        Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults to the last. The same answer for every caller.
 
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -120,11 +129,13 @@ class VersionsClient:
         )
         client.doc.versions.analysis(
             doc_id="docId",
+            layer_name="layerName",
             sha="sha",
         )
         """
         _response = self._raw_client.analysis(
             doc_id,
+            layer_name,
             sha,
             since_signature=since_signature,
             since_revision=since_revision,
@@ -139,6 +150,7 @@ class VersionsClient:
     def download(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         *,
         document_password: typing.Optional[str] = None,
@@ -148,6 +160,8 @@ class VersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -172,17 +186,19 @@ class VersionsClient:
         )
         client.doc.versions.download(
             doc_id="docId",
+            layer_name="layerName",
             sha="sha",
         )
         """
         with self._raw_client.download(
-            doc_id, sha, document_password=document_password, request_options=request_options
+            doc_id, layer_name, sha, document_password=document_password, request_options=request_options
         ) as r:
             yield from r.data
 
     def revision(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         index: int,
         *,
@@ -193,6 +209,8 @@ class VersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -219,18 +237,20 @@ class VersionsClient:
         )
         client.doc.versions.revision(
             doc_id="docId",
+            layer_name="layerName",
             sha="sha",
             index=1,
         )
         """
         with self._raw_client.revision(
-            doc_id, sha, index, document_password=document_password, request_options=request_options
+            doc_id, layer_name, sha, index, document_password=document_password, request_options=request_options
         ) as r:
             yield from r.data
 
     def signatures(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         *,
         document_password: typing.Optional[str] = None,
@@ -240,6 +260,8 @@ class VersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -264,17 +286,19 @@ class VersionsClient:
         )
         client.doc.versions.signatures(
             doc_id="docId",
+            layer_name="layerName",
             sha="sha",
         )
         """
         _response = self._raw_client.signatures(
-            doc_id, sha, document_password=document_password, request_options=request_options
+            doc_id, layer_name, sha, document_password=document_password, request_options=request_options
         )
         return _response.data
 
     def signature_contents(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         field_key: str,
         *,
@@ -287,6 +311,8 @@ class VersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -313,18 +339,20 @@ class VersionsClient:
         )
         client.doc.versions.signature_contents(
             doc_id="docId",
+            layer_name="layerName",
             sha="sha",
             field_key="fieldKey",
         )
         """
         with self._raw_client.signature_contents(
-            doc_id, sha, field_key, document_password=document_password, request_options=request_options
+            doc_id, layer_name, sha, field_key, document_password=document_password, request_options=request_options
         ) as r:
             yield from r.data
 
     def signature_digest(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         field_key: str,
         algorithm: SignatureDigestVersionsRequestAlgorithm,
@@ -338,6 +366,8 @@ class VersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -366,13 +396,20 @@ class VersionsClient:
         )
         client.doc.versions.signature_digest(
             doc_id="docId",
+            layer_name="layerName",
             sha="sha",
             field_key="fieldKey",
             algorithm="sha1",
         )
         """
         with self._raw_client.signature_digest(
-            doc_id, sha, field_key, algorithm, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            sha,
+            field_key,
+            algorithm,
+            document_password=document_password,
+            request_options=request_options,
         ) as r:
             yield from r.data
 
@@ -395,16 +432,19 @@ class AsyncVersionsClient:
     async def list(
         self,
         doc_id: str,
+        layer_name: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocVersionsList200Response:
         """
-        Every completed signature publishes a new version. Never cached: the list grows.
+        Every completed signature makes a new version of its layer; another layer's versions are never listed. Never cached: the list grows.
 
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -432,19 +472,21 @@ class AsyncVersionsClient:
         async def main() -> None:
             await client.doc.versions.list(
                 doc_id="docId",
+                layer_name="layerName",
             )
 
 
         asyncio.run(main())
         """
         _response = await self._raw_client.list(
-            doc_id, document_password=document_password, request_options=request_options
+            doc_id, layer_name, document_password=document_password, request_options=request_options
         )
         return _response.data
 
     async def analysis(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         *,
         since_signature: typing.Optional[int] = None,
@@ -456,11 +498,13 @@ class AsyncVersionsClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocVersionsAnalysis200Response:
         """
-        Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults to the last. The same answer for every layer and every caller.
+        Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults to the last. The same answer for every caller.
 
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -500,6 +544,7 @@ class AsyncVersionsClient:
         async def main() -> None:
             await client.doc.versions.analysis(
                 doc_id="docId",
+                layer_name="layerName",
                 sha="sha",
             )
 
@@ -508,6 +553,7 @@ class AsyncVersionsClient:
         """
         _response = await self._raw_client.analysis(
             doc_id,
+            layer_name,
             sha,
             since_signature=since_signature,
             since_revision=since_revision,
@@ -522,6 +568,7 @@ class AsyncVersionsClient:
     async def download(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         *,
         document_password: typing.Optional[str] = None,
@@ -531,6 +578,8 @@ class AsyncVersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -560,6 +609,7 @@ class AsyncVersionsClient:
         async def main() -> None:
             await client.doc.versions.download(
                 doc_id="docId",
+                layer_name="layerName",
                 sha="sha",
             )
 
@@ -567,7 +617,7 @@ class AsyncVersionsClient:
         asyncio.run(main())
         """
         async with self._raw_client.download(
-            doc_id, sha, document_password=document_password, request_options=request_options
+            doc_id, layer_name, sha, document_password=document_password, request_options=request_options
         ) as r:
             async for _chunk in r.data:
                 yield _chunk
@@ -575,6 +625,7 @@ class AsyncVersionsClient:
     async def revision(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         index: int,
         *,
@@ -585,6 +636,8 @@ class AsyncVersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -616,6 +669,7 @@ class AsyncVersionsClient:
         async def main() -> None:
             await client.doc.versions.revision(
                 doc_id="docId",
+                layer_name="layerName",
                 sha="sha",
                 index=1,
             )
@@ -624,7 +678,7 @@ class AsyncVersionsClient:
         asyncio.run(main())
         """
         async with self._raw_client.revision(
-            doc_id, sha, index, document_password=document_password, request_options=request_options
+            doc_id, layer_name, sha, index, document_password=document_password, request_options=request_options
         ) as r:
             async for _chunk in r.data:
                 yield _chunk
@@ -632,6 +686,7 @@ class AsyncVersionsClient:
     async def signatures(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         *,
         document_password: typing.Optional[str] = None,
@@ -641,6 +696,8 @@ class AsyncVersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -670,6 +727,7 @@ class AsyncVersionsClient:
         async def main() -> None:
             await client.doc.versions.signatures(
                 doc_id="docId",
+                layer_name="layerName",
                 sha="sha",
             )
 
@@ -677,13 +735,14 @@ class AsyncVersionsClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.signatures(
-            doc_id, sha, document_password=document_password, request_options=request_options
+            doc_id, layer_name, sha, document_password=document_password, request_options=request_options
         )
         return _response.data
 
     async def signature_contents(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         field_key: str,
         *,
@@ -696,6 +755,8 @@ class AsyncVersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -727,6 +788,7 @@ class AsyncVersionsClient:
         async def main() -> None:
             await client.doc.versions.signature_contents(
                 doc_id="docId",
+                layer_name="layerName",
                 sha="sha",
                 field_key="fieldKey",
             )
@@ -735,7 +797,7 @@ class AsyncVersionsClient:
         asyncio.run(main())
         """
         async with self._raw_client.signature_contents(
-            doc_id, sha, field_key, document_password=document_password, request_options=request_options
+            doc_id, layer_name, sha, field_key, document_password=document_password, request_options=request_options
         ) as r:
             async for _chunk in r.data:
                 yield _chunk
@@ -743,6 +805,7 @@ class AsyncVersionsClient:
     async def signature_digest(
         self,
         doc_id: str,
+        layer_name: str,
         sha: str,
         field_key: str,
         algorithm: SignatureDigestVersionsRequestAlgorithm,
@@ -756,6 +819,8 @@ class AsyncVersionsClient:
         Parameters
         ----------
         doc_id : str
+
+        layer_name : str
 
         sha : str
 
@@ -789,6 +854,7 @@ class AsyncVersionsClient:
         async def main() -> None:
             await client.doc.versions.signature_digest(
                 doc_id="docId",
+                layer_name="layerName",
                 sha="sha",
                 field_key="fieldKey",
                 algorithm="sha1",
@@ -798,7 +864,13 @@ class AsyncVersionsClient:
         asyncio.run(main())
         """
         async with self._raw_client.signature_digest(
-            doc_id, sha, field_key, algorithm, document_password=document_password, request_options=request_options
+            doc_id,
+            layer_name,
+            sha,
+            field_key,
+            algorithm,
+            document_password=document_password,
+            request_options=request_options,
         ) as r:
             async for _chunk in r.data:
                 yield _chunk

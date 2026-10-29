@@ -2197,6 +2197,13 @@ if typing.TYPE_CHECKING:
     from .documents_list400response import DocumentsList400Response
     from .documents_thumbnail_response import DocumentsThumbnailResponse
     from .documents_thumbnail_response_error import DocumentsThumbnailResponseError
+    from .documents_update200response import DocumentsUpdate200Response
+    from .documents_update200response_document import DocumentsUpdate200ResponseDocument
+    from .documents_update200response_document_state import DocumentsUpdate200ResponseDocumentState
+    from .documents_update200response_document_thumbnail_state import DocumentsUpdate200ResponseDocumentThumbnailState
+    from .documents_update400response import DocumentsUpdate400Response
+    from .documents_update403response import DocumentsUpdate403Response
+    from .documents_update404response import DocumentsUpdate404Response
     from .documents_upload_proxy200response import DocumentsUploadProxy200Response
     from .documents_upload_proxy400response import DocumentsUploadProxy400Response
     from .documents_upload_proxy409response import DocumentsUploadProxy409Response
@@ -2209,6 +2216,35 @@ if typing.TYPE_CHECKING:
     from .field_position_zero import FieldPositionZero
     from .field_script_write import FieldScriptWrite
     from .field_script_write_type import FieldScriptWriteType
+    from .folders_create200response import FoldersCreate200Response
+    from .folders_create200response_folder import FoldersCreate200ResponseFolder
+    from .folders_create400response import FoldersCreate400Response
+    from .folders_create403response import FoldersCreate403Response
+    from .folders_create404response import FoldersCreate404Response
+    from .folders_create409response import FoldersCreate409Response
+    from .folders_delete403response import FoldersDelete403Response
+    from .folders_delete404response import FoldersDelete404Response
+    from .folders_delete409response import FoldersDelete409Response
+    from .folders_get200response import FoldersGet200Response
+    from .folders_get200response_folder import FoldersGet200ResponseFolder
+    from .folders_get200response_path_item import FoldersGet200ResponsePathItem
+    from .folders_get403response import FoldersGet403Response
+    from .folders_get404response import FoldersGet404Response
+    from .folders_list200response import FoldersList200Response
+    from .folders_list200response_folders_item import FoldersList200ResponseFoldersItem
+    from .folders_list400response import FoldersList400Response
+    from .folders_list403response import FoldersList403Response
+    from .folders_list404response import FoldersList404Response
+    from .folders_move_into400response import FoldersMoveInto400Response
+    from .folders_move_into403response import FoldersMoveInto403Response
+    from .folders_move_into404response import FoldersMoveInto404Response
+    from .folders_move_into409response import FoldersMoveInto409Response
+    from .folders_update200response import FoldersUpdate200Response
+    from .folders_update200response_folder import FoldersUpdate200ResponseFolder
+    from .folders_update400response import FoldersUpdate400Response
+    from .folders_update403response import FoldersUpdate403Response
+    from .folders_update404response import FoldersUpdate404Response
+    from .folders_update409response import FoldersUpdate409Response
     from .form_field import (
         FormField,
         FormField_Checkbox,
@@ -2445,6 +2481,7 @@ if typing.TYPE_CHECKING:
     from .form_field_value import FormFieldValue
     from .form_mutation_meta import FormMutationMeta
     from .form_widget import FormWidget
+    from .identity import Identity
     from .metadata_patch import MetadataPatch
     from .metadata_patch_trapped import MetadataPatchTrapped
     from .mutation_meta import MutationMeta
@@ -2770,11 +2807,7 @@ if typing.TYPE_CHECKING:
     from .tokens_issue404response import TokensIssue404Response
     from .tokens_issue_request import TokensIssueRequest, TokensIssueRequest_Doc, TokensIssueRequest_Tenant
     from .tokens_issue_request_doc import TokensIssueRequestDoc
-    from .tokens_issue_request_doc_identity import TokensIssueRequestDocIdentity
     from .tokens_issue_request_tenant import TokensIssueRequestTenant
-    from .tokens_issue_request_tenant_scope_item import TokensIssueRequestTenantScopeItem
-    from .tokens_issue_request_tenant_scope_item_one import TokensIssueRequestTenantScopeItemOne
-    from .tokens_issue_request_tenant_scope_item_zero import TokensIssueRequestTenantScopeItemZero
     from .tokens_revoke_response import TokensRevokeResponse
     from .widget_actions_patch import WidgetActionsPatch
     from .widget_annotation import WidgetAnnotation
@@ -4375,6 +4408,13 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocumentsList400Response": ".documents_list400response",
     "DocumentsThumbnailResponse": ".documents_thumbnail_response",
     "DocumentsThumbnailResponseError": ".documents_thumbnail_response_error",
+    "DocumentsUpdate200Response": ".documents_update200response",
+    "DocumentsUpdate200ResponseDocument": ".documents_update200response_document",
+    "DocumentsUpdate200ResponseDocumentState": ".documents_update200response_document_state",
+    "DocumentsUpdate200ResponseDocumentThumbnailState": ".documents_update200response_document_thumbnail_state",
+    "DocumentsUpdate400Response": ".documents_update400response",
+    "DocumentsUpdate403Response": ".documents_update403response",
+    "DocumentsUpdate404Response": ".documents_update404response",
     "DocumentsUploadProxy200Response": ".documents_upload_proxy200response",
     "DocumentsUploadProxy400Response": ".documents_upload_proxy400response",
     "DocumentsUploadProxy409Response": ".documents_upload_proxy409response",
@@ -4387,6 +4427,35 @@ _dynamic_imports: typing.Dict[str, str] = {
     "FieldPositionZero": ".field_position_zero",
     "FieldScriptWrite": ".field_script_write",
     "FieldScriptWriteType": ".field_script_write_type",
+    "FoldersCreate200Response": ".folders_create200response",
+    "FoldersCreate200ResponseFolder": ".folders_create200response_folder",
+    "FoldersCreate400Response": ".folders_create400response",
+    "FoldersCreate403Response": ".folders_create403response",
+    "FoldersCreate404Response": ".folders_create404response",
+    "FoldersCreate409Response": ".folders_create409response",
+    "FoldersDelete403Response": ".folders_delete403response",
+    "FoldersDelete404Response": ".folders_delete404response",
+    "FoldersDelete409Response": ".folders_delete409response",
+    "FoldersGet200Response": ".folders_get200response",
+    "FoldersGet200ResponseFolder": ".folders_get200response_folder",
+    "FoldersGet200ResponsePathItem": ".folders_get200response_path_item",
+    "FoldersGet403Response": ".folders_get403response",
+    "FoldersGet404Response": ".folders_get404response",
+    "FoldersList200Response": ".folders_list200response",
+    "FoldersList200ResponseFoldersItem": ".folders_list200response_folders_item",
+    "FoldersList400Response": ".folders_list400response",
+    "FoldersList403Response": ".folders_list403response",
+    "FoldersList404Response": ".folders_list404response",
+    "FoldersMoveInto400Response": ".folders_move_into400response",
+    "FoldersMoveInto403Response": ".folders_move_into403response",
+    "FoldersMoveInto404Response": ".folders_move_into404response",
+    "FoldersMoveInto409Response": ".folders_move_into409response",
+    "FoldersUpdate200Response": ".folders_update200response",
+    "FoldersUpdate200ResponseFolder": ".folders_update200response_folder",
+    "FoldersUpdate400Response": ".folders_update400response",
+    "FoldersUpdate403Response": ".folders_update403response",
+    "FoldersUpdate404Response": ".folders_update404response",
+    "FoldersUpdate409Response": ".folders_update409response",
     "FormField": ".form_field",
     "FormFieldCheckbox": ".form_field_checkbox",
     "FormFieldCheckboxDefaultValueEntry": ".form_field_checkbox_default_value_entry",
@@ -4589,6 +4658,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "FormField_Unknown": ".form_field",
     "FormMutationMeta": ".form_mutation_meta",
     "FormWidget": ".form_widget",
+    "Identity": ".identity",
     "MetadataPatch": ".metadata_patch",
     "MetadataPatchTrapped": ".metadata_patch_trapped",
     "MutationMeta": ".mutation_meta",
@@ -4830,11 +4900,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "TokensIssue404Response": ".tokens_issue404response",
     "TokensIssueRequest": ".tokens_issue_request",
     "TokensIssueRequestDoc": ".tokens_issue_request_doc",
-    "TokensIssueRequestDocIdentity": ".tokens_issue_request_doc_identity",
     "TokensIssueRequestTenant": ".tokens_issue_request_tenant",
-    "TokensIssueRequestTenantScopeItem": ".tokens_issue_request_tenant_scope_item",
-    "TokensIssueRequestTenantScopeItemOne": ".tokens_issue_request_tenant_scope_item_one",
-    "TokensIssueRequestTenantScopeItemZero": ".tokens_issue_request_tenant_scope_item_zero",
     "TokensIssueRequest_Doc": ".tokens_issue_request",
     "TokensIssueRequest_Tenant": ".tokens_issue_request",
     "TokensRevokeResponse": ".tokens_revoke_response",
@@ -6461,6 +6527,13 @@ __all__ = [
     "DocumentsList400Response",
     "DocumentsThumbnailResponse",
     "DocumentsThumbnailResponseError",
+    "DocumentsUpdate200Response",
+    "DocumentsUpdate200ResponseDocument",
+    "DocumentsUpdate200ResponseDocumentState",
+    "DocumentsUpdate200ResponseDocumentThumbnailState",
+    "DocumentsUpdate400Response",
+    "DocumentsUpdate403Response",
+    "DocumentsUpdate404Response",
     "DocumentsUploadProxy200Response",
     "DocumentsUploadProxy400Response",
     "DocumentsUploadProxy409Response",
@@ -6473,6 +6546,35 @@ __all__ = [
     "FieldPositionZero",
     "FieldScriptWrite",
     "FieldScriptWriteType",
+    "FoldersCreate200Response",
+    "FoldersCreate200ResponseFolder",
+    "FoldersCreate400Response",
+    "FoldersCreate403Response",
+    "FoldersCreate404Response",
+    "FoldersCreate409Response",
+    "FoldersDelete403Response",
+    "FoldersDelete404Response",
+    "FoldersDelete409Response",
+    "FoldersGet200Response",
+    "FoldersGet200ResponseFolder",
+    "FoldersGet200ResponsePathItem",
+    "FoldersGet403Response",
+    "FoldersGet404Response",
+    "FoldersList200Response",
+    "FoldersList200ResponseFoldersItem",
+    "FoldersList400Response",
+    "FoldersList403Response",
+    "FoldersList404Response",
+    "FoldersMoveInto400Response",
+    "FoldersMoveInto403Response",
+    "FoldersMoveInto404Response",
+    "FoldersMoveInto409Response",
+    "FoldersUpdate200Response",
+    "FoldersUpdate200ResponseFolder",
+    "FoldersUpdate400Response",
+    "FoldersUpdate403Response",
+    "FoldersUpdate404Response",
+    "FoldersUpdate409Response",
     "FormField",
     "FormFieldCheckbox",
     "FormFieldCheckboxDefaultValueEntry",
@@ -6675,6 +6777,7 @@ __all__ = [
     "FormField_Unknown",
     "FormMutationMeta",
     "FormWidget",
+    "Identity",
     "MetadataPatch",
     "MetadataPatchTrapped",
     "MutationMeta",
@@ -6916,11 +7019,7 @@ __all__ = [
     "TokensIssue404Response",
     "TokensIssueRequest",
     "TokensIssueRequestDoc",
-    "TokensIssueRequestDocIdentity",
     "TokensIssueRequestTenant",
-    "TokensIssueRequestTenantScopeItem",
-    "TokensIssueRequestTenantScopeItemOne",
-    "TokensIssueRequestTenantScopeItemZero",
     "TokensIssueRequest_Doc",
     "TokensIssueRequest_Tenant",
     "TokensRevokeResponse",

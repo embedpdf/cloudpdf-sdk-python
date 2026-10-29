@@ -13,6 +13,16 @@ from .documents_commit200response_document_thumbnail_state import DocumentsCommi
 class DocumentsCommit200ResponseDocument(UniversalBaseModel):
     id: str
     tenant_id: typing_extensions.Annotated[str, FieldMetadata(alias="tenantId"), pydantic.Field(alias="tenantId")]
+    name: str
+    folder_id: typing_extensions.Annotated[
+        str,
+        FieldMetadata(alias="folderId"),
+        pydantic.Field(alias="folderId", description="The folder the document is in, or root."),
+    ]
+    """
+    The folder the document is in, or root.
+    """
+
     state: DocumentsCommit200ResponseDocumentState
     base_sha: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="baseSha"), pydantic.Field(alias="baseSha")

@@ -6,7 +6,7 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .tokens_issue_request_doc_identity import TokensIssueRequestDocIdentity
+from .identity import Identity
 
 
 class TokensIssueRequestDoc(UniversalBaseModel):
@@ -16,7 +16,7 @@ class TokensIssueRequestDoc(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="layerName"), pydantic.Field(alias="layerName")
     ] = None
     scope: typing.List[str]
-    identity: typing.Optional[TokensIssueRequestDocIdentity] = None
+    identity: typing.Optional[Identity] = None
     origins: typing.Optional[typing.List[str]] = None
     expires_in: typing_extensions.Annotated[int, FieldMetadata(alias="expiresIn"), pydantic.Field(alias="expiresIn")]
 

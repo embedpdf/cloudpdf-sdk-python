@@ -15,6 +15,16 @@ from .documents_init200response_deduped_document_thumbnail_state import (
 class DocumentsInit200ResponseDedupedDocument(UniversalBaseModel):
     id: str
     tenant_id: typing_extensions.Annotated[str, FieldMetadata(alias="tenantId"), pydantic.Field(alias="tenantId")]
+    name: str
+    folder_id: typing_extensions.Annotated[
+        str,
+        FieldMetadata(alias="folderId"),
+        pydantic.Field(alias="folderId", description="The folder the document is in, or root."),
+    ]
+    """
+    The folder the document is in, or root.
+    """
+
     state: DocumentsInit200ResponseDedupedDocumentState
     base_sha: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="baseSha"), pydantic.Field(alias="baseSha")

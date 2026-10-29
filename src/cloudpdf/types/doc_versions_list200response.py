@@ -3,12 +3,14 @@
 import typing
 
 import pydantic
+import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
+from ..core.serialization import FieldMetadata
 from .doc_versions_list200response_versions_item import DocVersionsList200ResponseVersionsItem
 
 
 class DocVersionsList200Response(UniversalBaseModel):
-    head: str
+    base_sha: typing_extensions.Annotated[str, FieldMetadata(alias="baseSha"), pydantic.Field(alias="baseSha")]
     versions: typing.List[DocVersionsList200ResponseVersionsItem]
 
     if IS_PYDANTIC_V2:
