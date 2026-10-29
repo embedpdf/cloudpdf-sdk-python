@@ -17,6 +17,7 @@ from ..errors.forbidden_error import ForbiddenError
 from ..errors.gone_error import GoneError
 from ..errors.not_found_error import NotFoundError
 from ..errors.unprocessable_entity_error import UnprocessableEntityError
+from ..types.identity import Identity
 from ..types.shares_archive200response import SharesArchive200Response
 from ..types.shares_create200response import SharesCreate200Response
 from ..types.shares_exchange200response import SharesExchange200Response
@@ -248,6 +249,7 @@ class RawSharesClient:
         keep_visitor_layers: typing.Optional[bool] = OMIT,
         visitor_idle_seconds: typing.Optional[int] = OMIT,
         visitor_identity: typing.Optional[SharesCreateRequestVisitorIdentity] = OMIT,
+        identity: typing.Optional[Identity] = OMIT,
         origins: typing.Optional[typing.Sequence[str]] = OMIT,
         password: typing.Optional[str] = OMIT,
         session_ttl_seconds: typing.Optional[int] = OMIT,
@@ -274,6 +276,8 @@ class RawSharesClient:
         visitor_idle_seconds : typing.Optional[int]
 
         visitor_identity : typing.Optional[SharesCreateRequestVisitorIdentity]
+
+        identity : typing.Optional[Identity]
 
         origins : typing.Optional[typing.Sequence[str]]
 
@@ -304,6 +308,9 @@ class RawSharesClient:
                     object_=visitor_identity,
                     annotation=typing.Optional[SharesCreateRequestVisitorIdentity],
                     direction="write",
+                ),
+                "identity": convert_and_respect_annotation_metadata(
+                    object_=identity, annotation=typing.Optional[Identity], direction="write"
                 ),
                 "scope": scope,
                 "origins": origins,
@@ -488,6 +495,7 @@ class RawSharesClient:
         keep_visitor_layers: typing.Optional[bool] = OMIT,
         visitor_idle_seconds: typing.Optional[int] = OMIT,
         visitor_identity: typing.Optional[SharesUpdateRequestVisitorIdentity] = OMIT,
+        identity: typing.Optional[Identity] = OMIT,
         scope: typing.Optional[typing.Sequence[str]] = OMIT,
         origins: typing.Optional[typing.Sequence[str]] = OMIT,
         password: typing.Optional[str] = OMIT,
@@ -512,6 +520,8 @@ class RawSharesClient:
         visitor_idle_seconds : typing.Optional[int]
 
         visitor_identity : typing.Optional[SharesUpdateRequestVisitorIdentity]
+
+        identity : typing.Optional[Identity]
 
         scope : typing.Optional[typing.Sequence[str]]
 
@@ -545,6 +555,9 @@ class RawSharesClient:
                     object_=visitor_identity,
                     annotation=typing.Optional[SharesUpdateRequestVisitorIdentity],
                     direction="write",
+                ),
+                "identity": convert_and_respect_annotation_metadata(
+                    object_=identity, annotation=typing.Optional[Identity], direction="write"
                 ),
                 "scope": scope,
                 "origins": origins,
@@ -879,6 +892,7 @@ class AsyncRawSharesClient:
         keep_visitor_layers: typing.Optional[bool] = OMIT,
         visitor_idle_seconds: typing.Optional[int] = OMIT,
         visitor_identity: typing.Optional[SharesCreateRequestVisitorIdentity] = OMIT,
+        identity: typing.Optional[Identity] = OMIT,
         origins: typing.Optional[typing.Sequence[str]] = OMIT,
         password: typing.Optional[str] = OMIT,
         session_ttl_seconds: typing.Optional[int] = OMIT,
@@ -905,6 +919,8 @@ class AsyncRawSharesClient:
         visitor_idle_seconds : typing.Optional[int]
 
         visitor_identity : typing.Optional[SharesCreateRequestVisitorIdentity]
+
+        identity : typing.Optional[Identity]
 
         origins : typing.Optional[typing.Sequence[str]]
 
@@ -935,6 +951,9 @@ class AsyncRawSharesClient:
                     object_=visitor_identity,
                     annotation=typing.Optional[SharesCreateRequestVisitorIdentity],
                     direction="write",
+                ),
+                "identity": convert_and_respect_annotation_metadata(
+                    object_=identity, annotation=typing.Optional[Identity], direction="write"
                 ),
                 "scope": scope,
                 "origins": origins,
@@ -1119,6 +1138,7 @@ class AsyncRawSharesClient:
         keep_visitor_layers: typing.Optional[bool] = OMIT,
         visitor_idle_seconds: typing.Optional[int] = OMIT,
         visitor_identity: typing.Optional[SharesUpdateRequestVisitorIdentity] = OMIT,
+        identity: typing.Optional[Identity] = OMIT,
         scope: typing.Optional[typing.Sequence[str]] = OMIT,
         origins: typing.Optional[typing.Sequence[str]] = OMIT,
         password: typing.Optional[str] = OMIT,
@@ -1143,6 +1163,8 @@ class AsyncRawSharesClient:
         visitor_idle_seconds : typing.Optional[int]
 
         visitor_identity : typing.Optional[SharesUpdateRequestVisitorIdentity]
+
+        identity : typing.Optional[Identity]
 
         scope : typing.Optional[typing.Sequence[str]]
 
@@ -1176,6 +1198,9 @@ class AsyncRawSharesClient:
                     object_=visitor_identity,
                     annotation=typing.Optional[SharesUpdateRequestVisitorIdentity],
                     direction="write",
+                ),
+                "identity": convert_and_respect_annotation_metadata(
+                    object_=identity, annotation=typing.Optional[Identity], direction="write"
                 ),
                 "scope": scope,
                 "origins": origins,

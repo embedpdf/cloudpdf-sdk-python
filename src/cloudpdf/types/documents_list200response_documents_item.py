@@ -15,6 +15,16 @@ from .documents_list200response_documents_item_thumbnail_state import (
 class DocumentsList200ResponseDocumentsItem(UniversalBaseModel):
     id: str
     tenant_id: typing_extensions.Annotated[str, FieldMetadata(alias="tenantId"), pydantic.Field(alias="tenantId")]
+    name: str
+    folder_id: typing_extensions.Annotated[
+        str,
+        FieldMetadata(alias="folderId"),
+        pydantic.Field(alias="folderId", description="The folder the document is in, or root."),
+    ]
+    """
+    The folder the document is in, or root.
+    """
+
     state: DocumentsList200ResponseDocumentsItemState
     base_sha: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="baseSha"), pydantic.Field(alias="baseSha")

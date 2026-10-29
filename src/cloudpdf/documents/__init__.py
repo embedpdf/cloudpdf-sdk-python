@@ -17,6 +17,8 @@ if typing.TYPE_CHECKING:
         DocumentsImportFromRequestSource_Url,
         DocumentsInitRequestDedupMode,
         DocumentsInitRequestUploadPreference,
+        ListDocumentsRequestOrder,
+        ListDocumentsRequestSort,
         ListDocumentsRequestState,
     )
     from . import layers
@@ -31,6 +33,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocumentsImportFromRequestSource_Url": ".types",
     "DocumentsInitRequestDedupMode": ".types",
     "DocumentsInitRequestUploadPreference": ".types",
+    "ListDocumentsRequestOrder": ".types",
+    "ListDocumentsRequestSort": ".types",
     "ListDocumentsRequestState": ".types",
     "layers": ".layers",
 }
@@ -68,6 +72,8 @@ __all__ = [
     "DocumentsImportFromRequestSource_Url",
     "DocumentsInitRequestDedupMode",
     "DocumentsInitRequestUploadPreference",
+    "ListDocumentsRequestOrder",
+    "ListDocumentsRequestSort",
     "ListDocumentsRequestState",
     "layers",
 ]

@@ -12,6 +12,7 @@ if typing.TYPE_CHECKING:
     from .deployment.client import AsyncDeploymentClient, DeploymentClient
     from .doc.client import AsyncDocClient, DocClient
     from .documents.client import AsyncDocumentsClient, DocumentsClient
+    from .folders.client import AsyncFoldersClient, FoldersClient
     from .shares.client import AsyncSharesClient, SharesClient
     from .tenants.client import AsyncTenantsClient, TenantsClient
     from .tokens.client import AsyncTokensClient, TokensClient
@@ -97,6 +98,7 @@ class CloudPDFClient:
         self._shares: typing.Optional[SharesClient] = None
         self._tenants: typing.Optional[TenantsClient] = None
         self._documents: typing.Optional[DocumentsClient] = None
+        self._folders: typing.Optional[FoldersClient] = None
         self._tokens: typing.Optional[TokensClient] = None
 
     @property
@@ -138,6 +140,14 @@ class CloudPDFClient:
 
             self._documents = DocumentsClient(client_wrapper=self._client_wrapper)
         return self._documents
+
+    @property
+    def folders(self):
+        if self._folders is None:
+            from .folders.client import FoldersClient  # noqa: E402
+
+            self._folders = FoldersClient(client_wrapper=self._client_wrapper)
+        return self._folders
 
     @property
     def tokens(self):
@@ -249,6 +259,7 @@ class AsyncCloudPDFClient:
         self._shares: typing.Optional[AsyncSharesClient] = None
         self._tenants: typing.Optional[AsyncTenantsClient] = None
         self._documents: typing.Optional[AsyncDocumentsClient] = None
+        self._folders: typing.Optional[AsyncFoldersClient] = None
         self._tokens: typing.Optional[AsyncTokensClient] = None
 
     @property
@@ -290,6 +301,14 @@ class AsyncCloudPDFClient:
 
             self._documents = AsyncDocumentsClient(client_wrapper=self._client_wrapper)
         return self._documents
+
+    @property
+    def folders(self):
+        if self._folders is None:
+            from .folders.client import AsyncFoldersClient  # noqa: E402
+
+            self._folders = AsyncFoldersClient(client_wrapper=self._client_wrapper)
+        return self._folders
 
     @property
     def tokens(self):

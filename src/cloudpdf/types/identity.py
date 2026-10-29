@@ -8,7 +8,7 @@ from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
 
 
-class TokensIssueRequestDocIdentity(UniversalBaseModel):
+class Identity(UniversalBaseModel):
     user_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="userId"), pydantic.Field(alias="userId")
     ] = None

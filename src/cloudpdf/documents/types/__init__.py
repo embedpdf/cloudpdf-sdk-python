@@ -18,6 +18,8 @@ if typing.TYPE_CHECKING:
     from .documents_import_from_request_source_url import DocumentsImportFromRequestSourceUrl
     from .documents_init_request_dedup_mode import DocumentsInitRequestDedupMode
     from .documents_init_request_upload_preference import DocumentsInitRequestUploadPreference
+    from .list_documents_request_order import ListDocumentsRequestOrder
+    from .list_documents_request_sort import ListDocumentsRequestSort
     from .list_documents_request_state import ListDocumentsRequestState
 _dynamic_imports: typing.Dict[str, str] = {
     "DocumentsImportFromRequestDedupMode": ".documents_import_from_request_dedup_mode",
@@ -30,6 +32,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocumentsImportFromRequestSource_Url": ".documents_import_from_request_source",
     "DocumentsInitRequestDedupMode": ".documents_init_request_dedup_mode",
     "DocumentsInitRequestUploadPreference": ".documents_init_request_upload_preference",
+    "ListDocumentsRequestOrder": ".list_documents_request_order",
+    "ListDocumentsRequestSort": ".list_documents_request_sort",
     "ListDocumentsRequestState": ".list_documents_request_state",
 }
 
@@ -66,5 +70,7 @@ __all__ = [
     "DocumentsImportFromRequestSource_Url",
     "DocumentsInitRequestDedupMode",
     "DocumentsInitRequestUploadPreference",
+    "ListDocumentsRequestOrder",
+    "ListDocumentsRequestSort",
     "ListDocumentsRequestState",
 ]

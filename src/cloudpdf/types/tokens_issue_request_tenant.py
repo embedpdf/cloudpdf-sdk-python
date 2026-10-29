@@ -6,12 +6,11 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .tokens_issue_request_tenant_scope_item import TokensIssueRequestTenantScopeItem
 
 
 class TokensIssueRequestTenant(UniversalBaseModel):
     sub: str
-    scope: typing.List[TokensIssueRequestTenantScopeItem]
+    scope: typing.List[str]
     expires_in: typing_extensions.Annotated[int, FieldMetadata(alias="expiresIn"), pydantic.Field(alias="expiresIn")]
 
     if IS_PYDANTIC_V2:

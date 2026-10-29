@@ -6,6 +6,7 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
+from .identity import Identity
 from .shares_list200response_shares_item_layer_mode import SharesList200ResponseSharesItemLayerMode
 from .shares_list200response_shares_item_visitor_identity import SharesList200ResponseSharesItemVisitorIdentity
 
@@ -31,6 +32,7 @@ class SharesList200ResponseSharesItem(UniversalBaseModel):
         FieldMetadata(alias="visitorIdentity"),
         pydantic.Field(alias="visitorIdentity"),
     ] = None
+    identity: typing.Optional[Identity] = None
     scope: typing.List[str]
     origins: typing.Optional[typing.List[str]] = None
     password_protected: typing_extensions.Annotated[

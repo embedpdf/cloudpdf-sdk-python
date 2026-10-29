@@ -6,6 +6,7 @@ import typing
 
 from ..core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ..core.request_options import RequestOptions
+from ..types.identity import Identity
 from ..types.shares_archive200response import SharesArchive200Response
 from ..types.shares_create200response import SharesCreate200Response
 from ..types.shares_exchange200response import SharesExchange200Response
@@ -156,6 +157,7 @@ class SharesClient:
         keep_visitor_layers: typing.Optional[bool] = OMIT,
         visitor_idle_seconds: typing.Optional[int] = OMIT,
         visitor_identity: typing.Optional[SharesCreateRequestVisitorIdentity] = OMIT,
+        identity: typing.Optional[Identity] = OMIT,
         origins: typing.Optional[typing.Sequence[str]] = OMIT,
         password: typing.Optional[str] = OMIT,
         session_ttl_seconds: typing.Optional[int] = OMIT,
@@ -182,6 +184,8 @@ class SharesClient:
         visitor_idle_seconds : typing.Optional[int]
 
         visitor_identity : typing.Optional[SharesCreateRequestVisitorIdentity]
+
+        identity : typing.Optional[Identity]
 
         origins : typing.Optional[typing.Sequence[str]]
 
@@ -222,6 +226,7 @@ class SharesClient:
             keep_visitor_layers=keep_visitor_layers,
             visitor_idle_seconds=visitor_idle_seconds,
             visitor_identity=visitor_identity,
+            identity=identity,
             origins=origins,
             password=password,
             session_ttl_seconds=session_ttl_seconds,
@@ -305,6 +310,7 @@ class SharesClient:
         keep_visitor_layers: typing.Optional[bool] = OMIT,
         visitor_idle_seconds: typing.Optional[int] = OMIT,
         visitor_identity: typing.Optional[SharesUpdateRequestVisitorIdentity] = OMIT,
+        identity: typing.Optional[Identity] = OMIT,
         scope: typing.Optional[typing.Sequence[str]] = OMIT,
         origins: typing.Optional[typing.Sequence[str]] = OMIT,
         password: typing.Optional[str] = OMIT,
@@ -329,6 +335,8 @@ class SharesClient:
         visitor_idle_seconds : typing.Optional[int]
 
         visitor_identity : typing.Optional[SharesUpdateRequestVisitorIdentity]
+
+        identity : typing.Optional[Identity]
 
         scope : typing.Optional[typing.Sequence[str]]
 
@@ -371,6 +379,7 @@ class SharesClient:
             keep_visitor_layers=keep_visitor_layers,
             visitor_idle_seconds=visitor_idle_seconds,
             visitor_identity=visitor_identity,
+            identity=identity,
             scope=scope,
             origins=origins,
             password=password,
@@ -573,6 +582,7 @@ class AsyncSharesClient:
         keep_visitor_layers: typing.Optional[bool] = OMIT,
         visitor_idle_seconds: typing.Optional[int] = OMIT,
         visitor_identity: typing.Optional[SharesCreateRequestVisitorIdentity] = OMIT,
+        identity: typing.Optional[Identity] = OMIT,
         origins: typing.Optional[typing.Sequence[str]] = OMIT,
         password: typing.Optional[str] = OMIT,
         session_ttl_seconds: typing.Optional[int] = OMIT,
@@ -599,6 +609,8 @@ class AsyncSharesClient:
         visitor_idle_seconds : typing.Optional[int]
 
         visitor_identity : typing.Optional[SharesCreateRequestVisitorIdentity]
+
+        identity : typing.Optional[Identity]
 
         origins : typing.Optional[typing.Sequence[str]]
 
@@ -647,6 +659,7 @@ class AsyncSharesClient:
             keep_visitor_layers=keep_visitor_layers,
             visitor_idle_seconds=visitor_idle_seconds,
             visitor_identity=visitor_identity,
+            identity=identity,
             origins=origins,
             password=password,
             session_ttl_seconds=session_ttl_seconds,
@@ -748,6 +761,7 @@ class AsyncSharesClient:
         keep_visitor_layers: typing.Optional[bool] = OMIT,
         visitor_idle_seconds: typing.Optional[int] = OMIT,
         visitor_identity: typing.Optional[SharesUpdateRequestVisitorIdentity] = OMIT,
+        identity: typing.Optional[Identity] = OMIT,
         scope: typing.Optional[typing.Sequence[str]] = OMIT,
         origins: typing.Optional[typing.Sequence[str]] = OMIT,
         password: typing.Optional[str] = OMIT,
@@ -772,6 +786,8 @@ class AsyncSharesClient:
         visitor_idle_seconds : typing.Optional[int]
 
         visitor_identity : typing.Optional[SharesUpdateRequestVisitorIdentity]
+
+        identity : typing.Optional[Identity]
 
         scope : typing.Optional[typing.Sequence[str]]
 
@@ -822,6 +838,7 @@ class AsyncSharesClient:
             keep_visitor_layers=keep_visitor_layers,
             visitor_idle_seconds=visitor_idle_seconds,
             visitor_identity=visitor_identity,
+            identity=identity,
             scope=scope,
             origins=origins,
             password=password,

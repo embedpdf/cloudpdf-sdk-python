@@ -24,6 +24,7 @@ from ..types.documents_import_from200response import DocumentsImportFrom200Respo
 from ..types.documents_import_from502response import DocumentsImportFrom502Response
 from ..types.documents_init200response import DocumentsInit200Response
 from ..types.documents_list200response import DocumentsList200Response
+from ..types.documents_update200response import DocumentsUpdate200Response
 from ..types.documents_upload_proxy200response import DocumentsUploadProxy200Response
 from .types.documents_import_from_request_dedup_mode import DocumentsImportFromRequestDedupMode
 from .types.documents_import_from_request_expected import DocumentsImportFromRequestExpected
@@ -31,6 +32,8 @@ from .types.documents_import_from_request_mode import DocumentsImportFromRequest
 from .types.documents_import_from_request_source import DocumentsImportFromRequestSource
 from .types.documents_init_request_dedup_mode import DocumentsInitRequestDedupMode
 from .types.documents_init_request_upload_preference import DocumentsInitRequestUploadPreference
+from .types.list_documents_request_order import ListDocumentsRequestOrder
+from .types.list_documents_request_sort import ListDocumentsRequestSort
 from .types.list_documents_request_state import ListDocumentsRequestState
 from pydantic import ValidationError
 
@@ -49,6 +52,10 @@ class RawDocumentsClient:
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         state: typing.Optional[ListDocumentsRequestState] = None,
+        q: typing.Optional[str] = None,
+        folder_id: typing.Optional[str] = None,
+        sort: typing.Optional[ListDocumentsRequestSort] = None,
+        order: typing.Optional[ListDocumentsRequestOrder] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocumentsList200Response]:
         """
@@ -61,6 +68,19 @@ class RawDocumentsClient:
         cursor : typing.Optional[str]
 
         state : typing.Optional[ListDocumentsRequestState]
+            Only documents in this state. Without it, every state except deleting.
+
+        q : typing.Optional[str]
+            Only documents whose name contains this text, ignoring case.
+
+        folder_id : typing.Optional[str]
+            Only documents directly in this folder (root: the top level). Without it, documents in every folder.
+
+        sort : typing.Optional[ListDocumentsRequestSort]
+            createdAt (default), name (ignoring case), or size (stored bytes; 0 while pending).
+
+        order : typing.Optional[ListDocumentsRequestOrder]
+            Defaults to the reading order of the sort: A to Z for name, newest and largest first otherwise.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -77,6 +97,10 @@ class RawDocumentsClient:
                 "limit": limit,
                 "cursor": cursor,
                 "state": state,
+                "q": q,
+                "folderId": folder_id,
+                "sort": sort,
+                "order": order,
             },
             request_options=request_options,
         )
@@ -199,6 +223,93 @@ class RawDocumentsClient:
         try:
             if 200 <= _response.status_code < 300:
                 return HttpResponse(response=_response, data=None)
+            if _response.status_code == 403:
+                raise ForbiddenError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    def update(
+        self, tenant_id: str, id: str, *, name: str, request_options: typing.Optional[RequestOptions] = None
+    ) -> HttpResponse[DocumentsUpdate200Response]:
+        """
+        A document that is being deleted answers 404.
+
+        Parameters
+        ----------
+        tenant_id : str
+
+        id : str
+
+        name : str
+            What people call the document: shown in dashboards, searched and sorted by. 1 to 255 characters, no control characters, no leading or trailing whitespace. Names need not be unique.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        HttpResponse[DocumentsUpdate200Response]
+            OK
+        """
+        _response = self._client_wrapper.httpx_client.request(
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}",
+            method="PATCH",
+            json={
+                "name": name,
+            },
+            headers={
+                "content-type": "application/json",
+            },
+            request_options=request_options,
+            omit=OMIT,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocumentsUpdate200Response,
+                    parse_obj_as(
+                        type_=DocumentsUpdate200Response,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return HttpResponse(response=_response, data=_data)
+            if _response.status_code == 400:
+                raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
             if _response.status_code == 403:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
@@ -515,6 +626,8 @@ class RawDocumentsClient:
         *,
         source: DocumentsImportFromRequestSource,
         expected: typing.Optional[DocumentsImportFromRequestExpected] = OMIT,
+        name: typing.Optional[str] = OMIT,
+        folder_id: typing.Optional[str] = OMIT,
         metadata: typing.Optional[typing.Dict[str, typing.Any]] = OMIT,
         idempotency_key: typing.Optional[str] = OMIT,
         dedup_mode: typing.Optional[DocumentsImportFromRequestDedupMode] = OMIT,
@@ -534,6 +647,12 @@ class RawDocumentsClient:
 
         expected : typing.Optional[DocumentsImportFromRequestExpected]
             Integrity pins, enforced when present. When absent, the server-observed values become authoritative.
+
+        name : typing.Optional[str]
+            What people call the document: shown in dashboards, searched and sorted by. 1 to 255 characters, no control characters, no leading or trailing whitespace. Names need not be unique.
+
+        folder_id : typing.Optional[str]
+            A folder id, or root for the top level.
 
         metadata : typing.Optional[typing.Dict[str, typing.Any]]
 
@@ -566,6 +685,8 @@ class RawDocumentsClient:
                 "expected": convert_and_respect_annotation_metadata(
                     object_=expected, annotation=DocumentsImportFromRequestExpected, direction="write"
                 ),
+                "name": name,
+                "folderId": folder_id,
                 "metadata": metadata,
                 "idempotencyKey": idempotency_key,
                 "dedupMode": dedup_mode,
@@ -636,6 +757,8 @@ class RawDocumentsClient:
         *,
         content_length: float,
         content_sha256: str,
+        name: typing.Optional[str] = OMIT,
+        folder_id: typing.Optional[str] = OMIT,
         metadata: typing.Optional[typing.Dict[str, typing.Any]] = OMIT,
         idempotency_key: typing.Optional[str] = OMIT,
         dedup_mode: typing.Optional[DocumentsInitRequestDedupMode] = OMIT,
@@ -652,6 +775,12 @@ class RawDocumentsClient:
         content_length : float
 
         content_sha256 : str
+
+        name : typing.Optional[str]
+            What people call the document: shown in dashboards, searched and sorted by. 1 to 255 characters, no control characters, no leading or trailing whitespace. Names need not be unique.
+
+        folder_id : typing.Optional[str]
+            A folder id, or root for the top level.
 
         metadata : typing.Optional[typing.Dict[str, typing.Any]]
 
@@ -680,6 +809,8 @@ class RawDocumentsClient:
             json={
                 "contentLength": content_length,
                 "contentSha256": content_sha256,
+                "name": name,
+                "folderId": folder_id,
                 "metadata": metadata,
                 "idempotencyKey": idempotency_key,
                 "dedupMode": dedup_mode,
@@ -735,6 +866,10 @@ class AsyncRawDocumentsClient:
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         state: typing.Optional[ListDocumentsRequestState] = None,
+        q: typing.Optional[str] = None,
+        folder_id: typing.Optional[str] = None,
+        sort: typing.Optional[ListDocumentsRequestSort] = None,
+        order: typing.Optional[ListDocumentsRequestOrder] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocumentsList200Response]:
         """
@@ -747,6 +882,19 @@ class AsyncRawDocumentsClient:
         cursor : typing.Optional[str]
 
         state : typing.Optional[ListDocumentsRequestState]
+            Only documents in this state. Without it, every state except deleting.
+
+        q : typing.Optional[str]
+            Only documents whose name contains this text, ignoring case.
+
+        folder_id : typing.Optional[str]
+            Only documents directly in this folder (root: the top level). Without it, documents in every folder.
+
+        sort : typing.Optional[ListDocumentsRequestSort]
+            createdAt (default), name (ignoring case), or size (stored bytes; 0 while pending).
+
+        order : typing.Optional[ListDocumentsRequestOrder]
+            Defaults to the reading order of the sort: A to Z for name, newest and largest first otherwise.
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -763,6 +911,10 @@ class AsyncRawDocumentsClient:
                 "limit": limit,
                 "cursor": cursor,
                 "state": state,
+                "q": q,
+                "folderId": folder_id,
+                "sort": sort,
+                "order": order,
             },
             request_options=request_options,
         )
@@ -885,6 +1037,93 @@ class AsyncRawDocumentsClient:
         try:
             if 200 <= _response.status_code < 300:
                 return AsyncHttpResponse(response=_response, data=None)
+            if _response.status_code == 403:
+                raise ForbiddenError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    async def update(
+        self, tenant_id: str, id: str, *, name: str, request_options: typing.Optional[RequestOptions] = None
+    ) -> AsyncHttpResponse[DocumentsUpdate200Response]:
+        """
+        A document that is being deleted answers 404.
+
+        Parameters
+        ----------
+        tenant_id : str
+
+        id : str
+
+        name : str
+            What people call the document: shown in dashboards, searched and sorted by. 1 to 255 characters, no control characters, no leading or trailing whitespace. Names need not be unique.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        AsyncHttpResponse[DocumentsUpdate200Response]
+            OK
+        """
+        _response = await self._client_wrapper.httpx_client.request(
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}",
+            method="PATCH",
+            json={
+                "name": name,
+            },
+            headers={
+                "content-type": "application/json",
+            },
+            request_options=request_options,
+            omit=OMIT,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocumentsUpdate200Response,
+                    parse_obj_as(
+                        type_=DocumentsUpdate200Response,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return AsyncHttpResponse(response=_response, data=_data)
+            if _response.status_code == 400:
+                raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
             if _response.status_code == 403:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
@@ -1203,6 +1442,8 @@ class AsyncRawDocumentsClient:
         *,
         source: DocumentsImportFromRequestSource,
         expected: typing.Optional[DocumentsImportFromRequestExpected] = OMIT,
+        name: typing.Optional[str] = OMIT,
+        folder_id: typing.Optional[str] = OMIT,
         metadata: typing.Optional[typing.Dict[str, typing.Any]] = OMIT,
         idempotency_key: typing.Optional[str] = OMIT,
         dedup_mode: typing.Optional[DocumentsImportFromRequestDedupMode] = OMIT,
@@ -1222,6 +1463,12 @@ class AsyncRawDocumentsClient:
 
         expected : typing.Optional[DocumentsImportFromRequestExpected]
             Integrity pins, enforced when present. When absent, the server-observed values become authoritative.
+
+        name : typing.Optional[str]
+            What people call the document: shown in dashboards, searched and sorted by. 1 to 255 characters, no control characters, no leading or trailing whitespace. Names need not be unique.
+
+        folder_id : typing.Optional[str]
+            A folder id, or root for the top level.
 
         metadata : typing.Optional[typing.Dict[str, typing.Any]]
 
@@ -1254,6 +1501,8 @@ class AsyncRawDocumentsClient:
                 "expected": convert_and_respect_annotation_metadata(
                     object_=expected, annotation=DocumentsImportFromRequestExpected, direction="write"
                 ),
+                "name": name,
+                "folderId": folder_id,
                 "metadata": metadata,
                 "idempotencyKey": idempotency_key,
                 "dedupMode": dedup_mode,
@@ -1324,6 +1573,8 @@ class AsyncRawDocumentsClient:
         *,
         content_length: float,
         content_sha256: str,
+        name: typing.Optional[str] = OMIT,
+        folder_id: typing.Optional[str] = OMIT,
         metadata: typing.Optional[typing.Dict[str, typing.Any]] = OMIT,
         idempotency_key: typing.Optional[str] = OMIT,
         dedup_mode: typing.Optional[DocumentsInitRequestDedupMode] = OMIT,
@@ -1340,6 +1591,12 @@ class AsyncRawDocumentsClient:
         content_length : float
 
         content_sha256 : str
+
+        name : typing.Optional[str]
+            What people call the document: shown in dashboards, searched and sorted by. 1 to 255 characters, no control characters, no leading or trailing whitespace. Names need not be unique.
+
+        folder_id : typing.Optional[str]
+            A folder id, or root for the top level.
 
         metadata : typing.Optional[typing.Dict[str, typing.Any]]
 
@@ -1368,6 +1625,8 @@ class AsyncRawDocumentsClient:
             json={
                 "contentLength": content_length,
                 "contentSha256": content_sha256,
+                "name": name,
+                "folderId": folder_id,
                 "metadata": metadata,
                 "idempotencyKey": idempotency_key,
                 "dedupMode": dedup_mode,
