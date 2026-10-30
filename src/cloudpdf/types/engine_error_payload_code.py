@@ -10,7 +10,7 @@ EngineErrorPayloadCode = typing.Union[
         "DocOpenFailed",
         "DocPasswordRequired",
         "DocPasswordIncorrect",
-        "SharePasswordRequired",
+        "GrantPassphraseRequired",
         "Aborted",
         "Network",
         "Unauthenticated",
