@@ -11,8 +11,8 @@ from ..core.serialization import FieldMetadata
 class DocumentsLayersList200ResponseLayersItem(UniversalBaseModel):
     doc_id: typing_extensions.Annotated[str, FieldMetadata(alias="docId"), pydantic.Field(alias="docId")]
     layer_name: typing_extensions.Annotated[str, FieldMetadata(alias="layerName"), pydantic.Field(alias="layerName")]
-    share_id: typing_extensions.Annotated[
-        typing.Optional[str], FieldMetadata(alias="shareId"), pydantic.Field(alias="shareId")
+    grant_id: typing_extensions.Annotated[
+        typing.Optional[str], FieldMetadata(alias="grantId"), pydantic.Field(alias="grantId")
     ] = None
     visitor_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="visitorId"), pydantic.Field(alias="visitorId")

@@ -30,7 +30,7 @@ class LayersClient:
         *,
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
-        share_id: typing.Optional[str] = None,
+        grant_id: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocumentsLayersList200Response:
         """
@@ -44,7 +44,7 @@ class LayersClient:
 
         cursor : typing.Optional[str]
 
-        share_id : typing.Optional[str]
+        grant_id : typing.Optional[str]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -68,7 +68,7 @@ class LayersClient:
         )
         """
         _response = self._raw_client.list(
-            tenant_id, id, limit=limit, cursor=cursor, share_id=share_id, request_options=request_options
+            tenant_id, id, limit=limit, cursor=cursor, grant_id=grant_id, request_options=request_options
         )
         return _response.data
 
@@ -131,7 +131,7 @@ class AsyncLayersClient:
         *,
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
-        share_id: typing.Optional[str] = None,
+        grant_id: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocumentsLayersList200Response:
         """
@@ -145,7 +145,7 @@ class AsyncLayersClient:
 
         cursor : typing.Optional[str]
 
-        share_id : typing.Optional[str]
+        grant_id : typing.Optional[str]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -177,7 +177,7 @@ class AsyncLayersClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.list(
-            tenant_id, id, limit=limit, cursor=cursor, share_id=share_id, request_options=request_options
+            tenant_id, id, limit=limit, cursor=cursor, grant_id=grant_id, request_options=request_options
         )
         return _response.data
 

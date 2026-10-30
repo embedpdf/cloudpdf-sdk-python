@@ -349,7 +349,7 @@ class RawTenantsClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[TenantsUsage200Response]:
         """
-        Facts only — no limits or billing state. Views count share exchanges plus authorized /v1/access grants, deduplicated across the two.
+        Facts only — no limits or billing state. Views count grant exchanges plus authorized /v1/access requests, deduplicated across the two.
 
         Parameters
         ----------
@@ -746,7 +746,7 @@ class AsyncRawTenantsClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[TenantsUsage200Response]:
         """
-        Facts only — no limits or billing state. Views count share exchanges plus authorized /v1/access grants, deduplicated across the two.
+        Facts only — no limits or billing state. Views count grant exchanges plus authorized /v1/access requests, deduplicated across the two.
 
         Parameters
         ----------

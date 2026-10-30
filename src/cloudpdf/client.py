@@ -13,7 +13,7 @@ if typing.TYPE_CHECKING:
     from .doc.client import AsyncDocClient, DocClient
     from .documents.client import AsyncDocumentsClient, DocumentsClient
     from .folders.client import AsyncFoldersClient, FoldersClient
-    from .shares.client import AsyncSharesClient, SharesClient
+    from .grants.client import AsyncGrantsClient, GrantsClient
     from .tenants.client import AsyncTenantsClient, TenantsClient
     from .tokens.client import AsyncTokensClient, TokensClient
 
@@ -95,7 +95,7 @@ class CloudPDFClient:
         )
         self._deployment: typing.Optional[DeploymentClient] = None
         self._doc: typing.Optional[DocClient] = None
-        self._shares: typing.Optional[SharesClient] = None
+        self._grants: typing.Optional[GrantsClient] = None
         self._tenants: typing.Optional[TenantsClient] = None
         self._documents: typing.Optional[DocumentsClient] = None
         self._folders: typing.Optional[FoldersClient] = None
@@ -118,12 +118,12 @@ class CloudPDFClient:
         return self._doc
 
     @property
-    def shares(self):
-        if self._shares is None:
-            from .shares.client import SharesClient  # noqa: E402
+    def grants(self):
+        if self._grants is None:
+            from .grants.client import GrantsClient  # noqa: E402
 
-            self._shares = SharesClient(client_wrapper=self._client_wrapper)
-        return self._shares
+            self._grants = GrantsClient(client_wrapper=self._client_wrapper)
+        return self._grants
 
     @property
     def tenants(self):
@@ -256,7 +256,7 @@ class AsyncCloudPDFClient:
         )
         self._deployment: typing.Optional[AsyncDeploymentClient] = None
         self._doc: typing.Optional[AsyncDocClient] = None
-        self._shares: typing.Optional[AsyncSharesClient] = None
+        self._grants: typing.Optional[AsyncGrantsClient] = None
         self._tenants: typing.Optional[AsyncTenantsClient] = None
         self._documents: typing.Optional[AsyncDocumentsClient] = None
         self._folders: typing.Optional[AsyncFoldersClient] = None
@@ -279,12 +279,12 @@ class AsyncCloudPDFClient:
         return self._doc
 
     @property
-    def shares(self):
-        if self._shares is None:
-            from .shares.client import AsyncSharesClient  # noqa: E402
+    def grants(self):
+        if self._grants is None:
+            from .grants.client import AsyncGrantsClient  # noqa: E402
 
-            self._shares = AsyncSharesClient(client_wrapper=self._client_wrapper)
-        return self._shares
+            self._grants = AsyncGrantsClient(client_wrapper=self._client_wrapper)
+        return self._grants
 
     @property
     def tenants(self):

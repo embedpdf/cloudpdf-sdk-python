@@ -29,7 +29,7 @@ class RawLayersClient:
         *,
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
-        share_id: typing.Optional[str] = None,
+        grant_id: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocumentsLayersList200Response]:
         """
@@ -43,7 +43,7 @@ class RawLayersClient:
 
         cursor : typing.Optional[str]
 
-        share_id : typing.Optional[str]
+        grant_id : typing.Optional[str]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -59,7 +59,7 @@ class RawLayersClient:
             params={
                 "limit": limit,
                 "cursor": cursor,
-                "shareId": share_id,
+                "grantId": grant_id,
             },
             request_options=request_options,
         )
@@ -196,7 +196,7 @@ class AsyncRawLayersClient:
         *,
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
-        share_id: typing.Optional[str] = None,
+        grant_id: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocumentsLayersList200Response]:
         """
@@ -210,7 +210,7 @@ class AsyncRawLayersClient:
 
         cursor : typing.Optional[str]
 
-        share_id : typing.Optional[str]
+        grant_id : typing.Optional[str]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -226,7 +226,7 @@ class AsyncRawLayersClient:
             params={
                 "limit": limit,
                 "cursor": cursor,
-                "shareId": share_id,
+                "grantId": grant_id,
             },
             request_options=request_options,
         )
