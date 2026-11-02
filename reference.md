@@ -14,10 +14,11 @@
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.deployment.license_status()
@@ -63,10 +64,11 @@ client.deployment.license_status()
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.head(
@@ -143,11 +145,12 @@ Each change stands on its own and names itself by `opId`: a refused change rolls
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 from cloudpdf.doc import DocChangesRequestChangesItem
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.changes(
@@ -232,10 +235,11 @@ client.doc.changes(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.download(
@@ -321,10 +325,11 @@ The link opens the layer as it is when created: once the layer changes, it answe
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.download_link(
@@ -404,10 +409,11 @@ client.doc.download_link(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.manifest(
@@ -493,10 +499,11 @@ Render parameters (viewport, format) pass as flat dotted query keys, e.g. `?view
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.render(
@@ -577,10 +584,11 @@ client.doc.render(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.text(
@@ -676,10 +684,11 @@ Unauthenticated, but requires a browser Origin header, checked against the grant
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.grants.exchange(
@@ -766,10 +775,11 @@ client.grants.exchange(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.grants.list(
@@ -854,7 +864,7 @@ client.grants.list(
 <dl>
 <dd>
 
-The returned id is what a link page or an embed opens. Mounted only when the deployment can sign (HS256 mode) — exchange mints session JWTs, so grants exist only where minting does.
+The returned id is what a link page or an embed opens. Its scope gives only document permissions the caller holds itself, as tokens.issue does. Mounted only when the deployment can sign (HS256 mode) — exchange mints session JWTs, so grants exist only where minting does.
 </dd>
 </dl>
 </dd>
@@ -870,10 +880,11 @@ The returned id is what a link page or an embed opens. Mounted only when the dep
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.grants.create(
@@ -1036,10 +1047,11 @@ client.grants.create(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.grants.get(
@@ -1103,10 +1115,11 @@ client.grants.get(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.grants.delete(
@@ -1170,10 +1183,11 @@ client.grants.delete(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.grants.update(
@@ -1355,10 +1369,11 @@ Archiving is final: an archived grant never exchanges again, and to give access 
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.grants.archive(
@@ -1423,10 +1438,11 @@ client.grants.archive(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.tenants.list()
@@ -1487,10 +1503,11 @@ client.tenants.list()
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.tenants.create(
@@ -1553,10 +1570,11 @@ client.tenants.create(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.tenants.get(
@@ -1625,10 +1643,11 @@ Destroys the tenant and everything in its namespace — documents, layers, store
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.tenants.delete(
@@ -1683,10 +1702,11 @@ client.tenants.delete(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.tenants.resume(
@@ -1755,10 +1775,11 @@ Instantly reversible with resume. The API token is exempt, so a suspended tenant
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.tenants.suspend(
@@ -1835,10 +1856,11 @@ Facts only — no limits or billing state. Views count grant exchanges plus auth
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.tenants.usage(
@@ -1902,10 +1924,11 @@ client.tenants.usage(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.documents.list(
@@ -2016,10 +2039,11 @@ client.documents.list(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.documents.get(
@@ -2083,10 +2107,11 @@ client.documents.get(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.documents.delete(
@@ -2164,10 +2189,11 @@ A document that is being deleted answers 404.
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.documents.update(
@@ -2230,6 +2256,20 @@ client.documents.update(
 <dl>
 <dd>
 
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+An upload token commits only the documents it started; any other document answers 404.
+</dd>
+</dl>
+</dd>
+</dl>
+
 #### 🔌 Usage
 
 <dl>
@@ -2240,10 +2280,11 @@ client.documents.update(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.documents.commit(
@@ -2316,10 +2357,11 @@ client.documents.commit(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.documents.download(
@@ -2383,10 +2425,11 @@ client.documents.download(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.documents.thumbnail(
@@ -2448,7 +2491,7 @@ client.documents.thumbnail(
 <dl>
 <dd>
 
-This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available.
+This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available. An upload token sends files only to the documents it started.
 </dd>
 </dl>
 </dd>
@@ -2464,10 +2507,11 @@ This bounded origin-mediated fallback must only be used after documents.init ret
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.documents.upload_proxy(
@@ -2554,11 +2598,12 @@ Default mode is synchronous and bounded: the response returns only after the tra
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 from cloudpdf.documents import DocumentsImportFromRequestSource_Url
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.documents.import_from(
@@ -2678,6 +2723,20 @@ client.documents.import_from(
 <dl>
 <dd>
 
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+With an upload token, the document goes into the token's folder with the token's metadata, whatever the request says; contentLength must be within the token's maxBytes, and the token makes at most maxFiles documents (403 after). docId, idempotencyKey and dedupMode reuse-existing are refused (400): each could reach a document the token didn't make.
+</dd>
+</dl>
+</dd>
+</dl>
+
 #### 🔌 Usage
 
 <dl>
@@ -2688,10 +2747,11 @@ client.documents.import_from(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.documents.init(
@@ -2829,10 +2889,11 @@ client.documents.init(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.folders.list(
@@ -2925,10 +2986,11 @@ client.folders.list(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.folders.create(
@@ -3000,10 +3062,11 @@ client.folders.create(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.folders.get(
@@ -3081,10 +3144,11 @@ Without recursive, a folder with anything inside is refused: 409 Conflict with `
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.folders.delete(
@@ -3170,10 +3234,11 @@ client.folders.delete(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.folders.update(
@@ -3260,10 +3325,11 @@ Up to 1,000 ids in total. A folder moves with everything in it. 404 NotFound nam
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.folders.move_into(
@@ -3342,7 +3408,7 @@ client.folders.move_into(
 <dl>
 <dd>
 
-kind "tenant" requires the API token — authority mints only downward. Mounted only when the deployment can sign (HS256 mode); asymmetric deployments mint with their own private key.
+Authority mints only downward: kind "doc" gives only document permissions the caller holds itself, kind "tenant" requires the API token, and kind "upload" requires docs.create instead of tokens.issue-doc, since an upload token can do only what docs.create allows. Mounted only when the deployment can sign (HS256 mode); asymmetric deployments mint with their own private key.
 </dd>
 </dl>
 </dd>
@@ -3358,10 +3424,11 @@ kind "tenant" requires the API token — authority mints only downward. Mounted 
 
 ```python
 from cloudpdf import CloudPDFClient, TokensIssueRequest_Doc
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.tokens.issue(
@@ -3446,10 +3513,11 @@ Mounted only when the deployment enables token revocation.
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.tokens.revoke(
@@ -3544,10 +3612,11 @@ Returns one entry per page plus the audit-log cursor for reconciling subsequent 
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.annotations.list_all(
@@ -3619,10 +3688,11 @@ client.doc.annotations.list_all(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.annotations.list(
@@ -3717,10 +3787,11 @@ Doc JWTs may instead carry collab scopes (annotations:create:self, …) that ref
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.annotations.create(
@@ -3820,10 +3891,11 @@ client.doc.annotations.create(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.annotations.delete(
@@ -3921,10 +3993,11 @@ client.doc.annotations.delete(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.annotations.update(
@@ -4033,10 +4106,11 @@ client.doc.annotations.update(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.annotations.read_appearance(
@@ -4140,10 +4214,11 @@ A file that decodes past the server's limit is refused (PayloadTooLarge).
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.annotations.read_file(
@@ -4233,10 +4308,11 @@ client.doc.annotations.read_file(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.annotations.export_appearance(
@@ -4328,10 +4404,11 @@ client.doc.annotations.export_appearance(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.annotations.flatten(
@@ -4431,10 +4508,11 @@ client.doc.annotations.flatten(
 
 ```python
 from cloudpdf import CloudPDFClient, AnnotationRef_ObjectNumber, PageRef
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.annotations.reorder(
@@ -4564,10 +4642,11 @@ A file that decodes past the server's limit is refused (PayloadTooLarge).
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.attachments.download(
@@ -4662,10 +4741,11 @@ A file-attachment annotation's file is listed with the annotation; read its byte
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.attachments.list(
@@ -4723,6 +4803,172 @@ client.doc.attachments.list(
 </dl>
 </details>
 
+## Doc Fonts
+<details><summary><code>client.doc.fonts.<a href="src/cloudpdf/doc/fonts/client.py">list</a>(...) -> DocFontsList200Response</code></summary>
+<dl>
+<dd>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
+
+client = CloudPDFClient(
+    token="<token>",
+    environment=CloudPDFEnvironment.SAAS,
+)
+
+client.doc.fonts.list(
+    doc_id="docId",
+    layer_name="layerName",
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**doc_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**layer_name:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.doc.fonts.<a href="src/cloudpdf/doc/fonts/client.py">resolve</a>(...) -> DocFontsResolve200Response</code></summary>
+<dl>
+<dd>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient, FontResolveRun
+from cloudpdf.environment import CloudPDFEnvironment
+
+client = CloudPDFClient(
+    token="<token>",
+    environment=CloudPDFEnvironment.SAAS,
+)
+
+client.doc.fonts.resolve(
+    doc_id="docId",
+    layer_name="layerName",
+    runs=[
+        FontResolveRun(
+            text="text",
+        )
+    ],
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**doc_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**layer_name:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request:** `DocFontsResolveRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 ## Doc Forms
 <details><summary><code>client.doc.forms.<a href="src/cloudpdf/doc/forms/client.py">list</a>(...) -> DocFormsList200Response</code></summary>
 <dl>
@@ -4738,10 +4984,11 @@ client.doc.attachments.list(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.forms.list(
@@ -4813,10 +5060,11 @@ client.doc.forms.list(
 
 ```python
 from cloudpdf import CloudPDFClient, FormFieldRef_ObjectNumber
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.forms.reorder_calculations(
@@ -4918,10 +5166,11 @@ client.doc.forms.reorder_calculations(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.forms.set_value(
@@ -5021,10 +5270,11 @@ client.doc.forms.set_value(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.forms.reset(
@@ -5112,10 +5362,11 @@ client.doc.forms.reset(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.forms.delete_widget(
@@ -5213,10 +5464,11 @@ client.doc.forms.delete_widget(
 
 ```python
 from cloudpdf import CloudPDFClient, WidgetPatch
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.forms.update_widget(
@@ -5323,10 +5575,11 @@ client.doc.forms.update_widget(
 
 ```python
 from cloudpdf import CloudPDFClient, AnnotationRef_ObjectNumber, PageRef
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.forms.reorder_widgets(
@@ -5442,10 +5695,11 @@ client.doc.forms.reorder_widgets(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.metadata.get(
@@ -5518,10 +5772,11 @@ client.doc.metadata.get(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.outline.get(
@@ -5594,10 +5849,11 @@ client.doc.outline.get(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.pages.set_scale(
@@ -5694,10 +5950,11 @@ client.doc.pages.set_scale(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.pages.viewports(
@@ -5792,10 +6049,11 @@ A read, not a mutation: the source document is untouched and no event is publish
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.pages.extract(
@@ -5878,10 +6136,11 @@ client.doc.pages.extract(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.pages.flatten(
@@ -5972,10 +6231,11 @@ client.doc.pages.flatten(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.pages.set_name(
@@ -6066,10 +6326,11 @@ client.doc.pages.set_name(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.pages.remove_name(
@@ -6161,10 +6422,11 @@ client.doc.pages.remove_name(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.redactions.apply(
@@ -6275,10 +6537,11 @@ Describes the bytes the layer is over: the base version's signatures plus the la
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.signatures.list(
@@ -6350,10 +6613,11 @@ client.doc.signatures.list(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.signatures.cancel(
@@ -6448,11 +6712,12 @@ client.doc.signatures.cancel(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 from cloudpdf.doc.signatures import DocSignaturesCompleteRequestExpectedVersion
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.signatures.complete(
@@ -6568,10 +6833,11 @@ Exactly one of `since.signature=<index>` or `since.revision=<index>`; the layer'
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.signatures.analysis(
@@ -6681,10 +6947,11 @@ Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, c
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.signatures.prepare(
@@ -6780,10 +7047,11 @@ Every completed signature makes a new version of its layer; another layer's vers
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.versions.list(
@@ -6869,10 +7137,11 @@ Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.versions.analysis(
@@ -6993,10 +7262,11 @@ client.doc.versions.analysis(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.versions.download(
@@ -7077,10 +7347,11 @@ client.doc.versions.download(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.versions.revision(
@@ -7170,10 +7441,11 @@ client.doc.versions.revision(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.versions.signatures(
@@ -7268,10 +7540,11 @@ client.doc.versions.signatures(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.versions.signature_contents(
@@ -7375,10 +7648,11 @@ What a CMS verifier compares its message digest to.
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.versions.signature_digest(
@@ -7463,6 +7737,191 @@ client.doc.versions.signature_digest(
 </dl>
 </details>
 
+## Doc Fonts Programs
+<details><summary><code>client.doc.fonts.programs.<a href="src/cloudpdf/doc/fonts/programs/client.py">download</a>(...) -> typing.Iterator[bytes]</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+A document token needs any one of the listed capabilities: one that may write text in the document. A file the list says can't be downloaded (`canDownload: false`) is not found.
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
+
+client = CloudPDFClient(
+    token="<token>",
+    environment=CloudPDFEnvironment.SAAS,
+)
+
+client.doc.fonts.programs.download(
+    doc_id="docId",
+    layer_name="layerName",
+    display_hash="displayHash",
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**doc_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**layer_name:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**display_hash:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.doc.fonts.programs.<a href="src/cloudpdf/doc/fonts/programs/client.py">get</a>(...) -> DocFontsProgramsGet200Response</code></summary>
+<dl>
+<dd>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
+
+client = CloudPDFClient(
+    token="<token>",
+    environment=CloudPDFEnvironment.SAAS,
+)
+
+client.doc.fonts.programs.get(
+    doc_id="docId",
+    layer_name="layerName",
+    display_hash="displayHash",
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**doc_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**layer_name:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**display_hash:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**document_password:** `typing.Optional[str]` — Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 ## Doc Metadata Custom
 <details><summary><code>client.doc.metadata.custom.<a href="src/cloudpdf/doc/metadata/custom/client.py">get</a>(...) -> DocMetadataCustomGet200Response</code></summary>
 <dl>
@@ -7478,10 +7937,11 @@ client.doc.versions.signature_digest(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.doc.metadata.custom.get(
@@ -7554,10 +8014,11 @@ client.doc.metadata.custom.get(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.documents.layers.list(
@@ -7645,10 +8106,11 @@ client.documents.layers.list(
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.documents.layers.delete(
@@ -7736,10 +8198,11 @@ An archived grant's visitors are listed too.
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.grants.visitors.list(
@@ -7833,10 +8296,11 @@ Their handle brings them back as a new visitor, who is asked again. Deleting a v
 
 ```python
 from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
+    environment=CloudPDFEnvironment.SAAS,
 )
 
 client.grants.visitors.delete(

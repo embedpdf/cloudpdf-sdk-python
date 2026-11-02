@@ -67,7 +67,6 @@ class SignaturesClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.signatures.list(
             doc_id="docId",
@@ -114,7 +113,6 @@ class SignaturesClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.signatures.cancel(
             doc_id="docId",
@@ -171,7 +169,6 @@ class SignaturesClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.signatures.complete(
             doc_id="docId",
@@ -238,7 +235,6 @@ class SignaturesClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.signatures.analysis(
             doc_id="docId",
@@ -294,7 +290,6 @@ class SignaturesClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.signatures.prepare(
             doc_id="docId",
@@ -358,7 +353,6 @@ class AsyncSignaturesClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -413,7 +407,6 @@ class AsyncSignaturesClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -478,7 +471,6 @@ class AsyncSignaturesClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -553,7 +545,6 @@ class AsyncSignaturesClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -617,7 +608,6 @@ class AsyncSignaturesClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 

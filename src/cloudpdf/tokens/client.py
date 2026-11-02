@@ -31,7 +31,7 @@ class TokensClient:
         self, tenant_id: str, *, request: TokensIssueRequest, request_options: typing.Optional[RequestOptions] = None
     ) -> TokensIssue200Response:
         """
-        kind "tenant" requires the API token — authority mints only downward. Mounted only when the deployment can sign (HS256 mode); asymmetric deployments mint with their own private key.
+        Authority mints only downward: kind "doc" gives only document permissions the caller holds itself, kind "tenant" requires the API token, and kind "upload" requires docs.create instead of tokens.issue-doc, since an upload token can do only what docs.create allows. Mounted only when the deployment can sign (HS256 mode); asymmetric deployments mint with their own private key.
 
         Parameters
         ----------
@@ -53,7 +53,6 @@ class TokensClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.tokens.issue(
             tenant_id="tenantId",
@@ -103,7 +102,6 @@ class TokensClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.tokens.revoke(
             tenant_id="tenantId",
@@ -135,7 +133,7 @@ class AsyncTokensClient:
         self, tenant_id: str, *, request: TokensIssueRequest, request_options: typing.Optional[RequestOptions] = None
     ) -> TokensIssue200Response:
         """
-        kind "tenant" requires the API token — authority mints only downward. Mounted only when the deployment can sign (HS256 mode); asymmetric deployments mint with their own private key.
+        Authority mints only downward: kind "doc" gives only document permissions the caller holds itself, kind "tenant" requires the API token, and kind "upload" requires docs.create instead of tokens.issue-doc, since an upload token can do only what docs.create allows. Mounted only when the deployment can sign (HS256 mode); asymmetric deployments mint with their own private key.
 
         Parameters
         ----------
@@ -159,7 +157,6 @@ class AsyncTokensClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -217,7 +214,6 @@ class AsyncTokensClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 

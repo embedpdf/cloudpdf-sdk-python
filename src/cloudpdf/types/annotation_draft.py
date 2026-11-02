@@ -131,6 +131,9 @@ class AnnotationDraft_Highlight(UniversalBaseModel):
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
     ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
+    ] = None
     nm: typing.Optional[str] = None
     rect: typing.Optional[AnnotationDraftHighlightRect] = None
     contents: typing.Optional[str] = None
@@ -214,6 +217,9 @@ class AnnotationDraft_Underline(UniversalBaseModel):
     ] = None
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
+    ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
     ] = None
     nm: typing.Optional[str] = None
     rect: typing.Optional[AnnotationDraftUnderlineRect] = None
@@ -299,6 +305,9 @@ class AnnotationDraft_Squiggly(UniversalBaseModel):
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
     ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
+    ] = None
     nm: typing.Optional[str] = None
     rect: typing.Optional[AnnotationDraftSquigglyRect] = None
     contents: typing.Optional[str] = None
@@ -382,6 +391,9 @@ class AnnotationDraft_Strikeout(UniversalBaseModel):
     ] = None
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
+    ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
     ] = None
     nm: typing.Optional[str] = None
     rect: typing.Optional[AnnotationDraftStrikeoutRect] = None
@@ -467,6 +479,9 @@ class AnnotationDraft_Circle(UniversalBaseModel):
     ] = None
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
+    ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
     ] = None
     nm: typing.Optional[str] = None
     rect: typing.Optional[AnnotationDraftCircleRect] = None
@@ -566,6 +581,9 @@ class AnnotationDraft_Square(UniversalBaseModel):
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
     ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
+    ] = None
     nm: typing.Optional[str] = None
     rect: typing.Optional[AnnotationDraftSquareRect] = None
     contents: typing.Optional[str] = None
@@ -663,6 +681,9 @@ class AnnotationDraft_Polygon(UniversalBaseModel):
     ] = None
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
+    ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
     ] = None
     nm: typing.Optional[str] = None
     rect: typing.Optional[AnnotationDraftPolygonRect] = None
@@ -771,6 +792,9 @@ class AnnotationDraft_Polyline(UniversalBaseModel):
     ] = None
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
+    ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
     ] = None
     nm: typing.Optional[str] = None
     rect: typing.Optional[AnnotationDraftPolylineRect] = None
@@ -881,6 +905,9 @@ class AnnotationDraft_Line(UniversalBaseModel):
     ] = None
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
+    ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
     ] = None
     nm: typing.Optional[str] = None
     rect: typing.Optional[AnnotationDraftLineRect] = None
@@ -1000,6 +1027,9 @@ class AnnotationDraft_Link(UniversalBaseModel):
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
     ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
+    ] = None
     nm: typing.Optional[str] = None
     rect: AnnotationDraftLinkRect
     contents: typing.Optional[str] = None
@@ -1077,6 +1107,9 @@ class AnnotationDraft_Ink(UniversalBaseModel):
     ] = None
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
+    ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
     ] = None
     nm: typing.Optional[str] = None
     rect: typing.Optional[AnnotationDraftInkRect] = None
@@ -1174,6 +1207,9 @@ class AnnotationDraft_FreeText(UniversalBaseModel):
     ] = None
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
+    ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
     ] = None
     nm: typing.Optional[str] = None
     rect: typing.Optional[AnnotationDraftFreeTextRect] = None
@@ -1308,6 +1344,9 @@ class AnnotationDraft_Caret(UniversalBaseModel):
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
     ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
+    ] = None
     nm: typing.Optional[str] = None
     rect: typing.Optional[AnnotationDraftCaretRect] = None
     contents: typing.Optional[str] = None
@@ -1389,6 +1428,9 @@ class AnnotationDraft_Text(UniversalBaseModel):
     ] = None
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
+    ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
     ] = None
     nm: typing.Optional[str] = None
     rect: AnnotationDraftTextRect
@@ -1475,6 +1517,9 @@ class AnnotationDraft_Stamp(UniversalBaseModel):
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
     ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
+    ] = None
     nm: typing.Optional[str] = None
     rect: typing.Optional[AnnotationDraftStampRect] = None
     contents: typing.Optional[str] = None
@@ -1557,6 +1602,9 @@ class AnnotationDraft_FileAttachment(UniversalBaseModel):
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
     ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
+    ] = None
     nm: typing.Optional[str] = None
     rect: AnnotationDraftFileAttachmentRect
     contents: typing.Optional[str] = None
@@ -1637,6 +1685,9 @@ class AnnotationDraft_Widget(UniversalBaseModel):
     ] = None
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
+    ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
     ] = None
     nm: typing.Optional[str] = None
     rect: typing.Optional[AnnotationDraftWidgetRect] = None
@@ -1756,6 +1807,9 @@ class AnnotationDraft_Redact(UniversalBaseModel):
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
     ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
+    ] = None
     nm: typing.Optional[str] = None
     rect: typing.Optional[AnnotationDraftRedactRect] = None
     contents: typing.Optional[str] = None
@@ -1860,6 +1914,9 @@ class AnnotationDraft_Popup(UniversalBaseModel):
     ] = None
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
+    ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
     ] = None
     nm: typing.Optional[str] = None
     rect: AnnotationDraftPopupRect

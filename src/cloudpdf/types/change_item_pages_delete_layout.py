@@ -6,6 +6,7 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
+from .change_item_pages_delete_layout_labels_item import ChangeItemPagesDeleteLayoutLabelsItem
 from .change_item_pages_delete_layout_named_pages_item import ChangeItemPagesDeleteLayoutNamedPagesItem
 from .change_item_pages_delete_layout_pages_item import ChangeItemPagesDeleteLayoutPagesItem
 
@@ -13,6 +14,7 @@ from .change_item_pages_delete_layout_pages_item import ChangeItemPagesDeleteLay
 class ChangeItemPagesDeleteLayout(UniversalBaseModel):
     page_count: typing_extensions.Annotated[int, FieldMetadata(alias="pageCount"), pydantic.Field(alias="pageCount")]
     pages: typing.List[ChangeItemPagesDeleteLayoutPagesItem]
+    labels: typing.List[ChangeItemPagesDeleteLayoutLabelsItem]
     named_pages: typing_extensions.Annotated[
         typing.List[ChangeItemPagesDeleteLayoutNamedPagesItem],
         FieldMetadata(alias="namedPages"),

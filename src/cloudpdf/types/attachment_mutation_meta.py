@@ -20,6 +20,11 @@ class AttachmentMutationMeta(UniversalBaseModel):
     ] = None
     op_id: typing_extensions.Annotated[str, FieldMetadata(alias="opId"), pydantic.Field(alias="opId")]
     undoable: bool
+    missing_characters: typing_extensions.Annotated[
+        typing.Optional[typing.List[str]],
+        FieldMetadata(alias="missingCharacters"),
+        pydantic.Field(alias="missingCharacters"),
+    ] = None
     changed: typing.List[AttachmentRef]
 
     if IS_PYDANTIC_V2:

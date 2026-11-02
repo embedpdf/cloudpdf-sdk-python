@@ -6,6 +6,7 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
+from .change_item_pages_rotate_layout_labels_item import ChangeItemPagesRotateLayoutLabelsItem
 from .change_item_pages_rotate_layout_named_pages_item import ChangeItemPagesRotateLayoutNamedPagesItem
 from .change_item_pages_rotate_layout_pages_item import ChangeItemPagesRotateLayoutPagesItem
 
@@ -13,6 +14,7 @@ from .change_item_pages_rotate_layout_pages_item import ChangeItemPagesRotateLay
 class ChangeItemPagesRotateLayout(UniversalBaseModel):
     page_count: typing_extensions.Annotated[int, FieldMetadata(alias="pageCount"), pydantic.Field(alias="pageCount")]
     pages: typing.List[ChangeItemPagesRotateLayoutPagesItem]
+    labels: typing.List[ChangeItemPagesRotateLayoutLabelsItem]
     named_pages: typing_extensions.Annotated[
         typing.List[ChangeItemPagesRotateLayoutNamedPagesItem],
         FieldMetadata(alias="namedPages"),

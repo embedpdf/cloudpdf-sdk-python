@@ -17,6 +17,7 @@ from .types.doc_changes_request_changes_item import DocChangesRequestChangesItem
 if typing.TYPE_CHECKING:
     from .annotations.client import AnnotationsClient, AsyncAnnotationsClient
     from .attachments.client import AsyncAttachmentsClient, AttachmentsClient
+    from .fonts.client import AsyncFontsClient, FontsClient
     from .forms.client import AsyncFormsClient, FormsClient
     from .metadata.client import AsyncMetadataClient, MetadataClient
     from .outline.client import AsyncOutlineClient, OutlineClient
@@ -34,6 +35,7 @@ class DocClient:
         self._client_wrapper = client_wrapper
         self._annotations: typing.Optional[AnnotationsClient] = None
         self._attachments: typing.Optional[AttachmentsClient] = None
+        self._fonts: typing.Optional[FontsClient] = None
         self._forms: typing.Optional[FormsClient] = None
         self._metadata: typing.Optional[MetadataClient] = None
         self._outline: typing.Optional[OutlineClient] = None
@@ -82,7 +84,6 @@ class DocClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.head(
             doc_id="docId",
@@ -129,7 +130,6 @@ class DocClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.changes(
             doc_id="docId",
@@ -178,7 +178,6 @@ class DocClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.download(
             doc_id="docId",
@@ -227,7 +226,6 @@ class DocClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.download_link(
             doc_id="docId",
@@ -275,7 +273,6 @@ class DocClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.manifest(
             doc_id="docId",
@@ -325,7 +322,6 @@ class DocClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.render(
             doc_id="docId",
@@ -374,7 +370,6 @@ class DocClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.text(
             doc_id="docId",
@@ -402,6 +397,14 @@ class DocClient:
 
             self._attachments = AttachmentsClient(client_wrapper=self._client_wrapper)
         return self._attachments
+
+    @property
+    def fonts(self):
+        if self._fonts is None:
+            from .fonts.client import FontsClient  # noqa: E402
+
+            self._fonts = FontsClient(client_wrapper=self._client_wrapper)
+        return self._fonts
 
     @property
     def forms(self):
@@ -466,6 +469,7 @@ class AsyncDocClient:
         self._client_wrapper = client_wrapper
         self._annotations: typing.Optional[AsyncAnnotationsClient] = None
         self._attachments: typing.Optional[AsyncAttachmentsClient] = None
+        self._fonts: typing.Optional[AsyncFontsClient] = None
         self._forms: typing.Optional[AsyncFormsClient] = None
         self._metadata: typing.Optional[AsyncMetadataClient] = None
         self._outline: typing.Optional[AsyncOutlineClient] = None
@@ -516,7 +520,6 @@ class AsyncDocClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -573,7 +576,6 @@ class AsyncDocClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -630,7 +632,6 @@ class AsyncDocClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -688,7 +689,6 @@ class AsyncDocClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -744,7 +744,6 @@ class AsyncDocClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -802,7 +801,6 @@ class AsyncDocClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -860,7 +858,6 @@ class AsyncDocClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -894,6 +891,14 @@ class AsyncDocClient:
 
             self._attachments = AsyncAttachmentsClient(client_wrapper=self._client_wrapper)
         return self._attachments
+
+    @property
+    def fonts(self):
+        if self._fonts is None:
+            from .fonts.client import AsyncFontsClient  # noqa: E402
+
+            self._fonts = AsyncFontsClient(client_wrapper=self._client_wrapper)
+        return self._fonts
 
     @property
     def forms(self):

@@ -32,6 +32,9 @@ class CacheDelta(UniversalBaseModel):
     outline_version: typing_extensions.Annotated[
         typing.Optional[int], FieldMetadata(alias="outlineVersion"), pydantic.Field(alias="outlineVersion")
     ] = None
+    fonts_version: typing_extensions.Annotated[
+        typing.Optional[int], FieldMetadata(alias="fontsVersion"), pydantic.Field(alias="fontsVersion")
+    ] = None
     layer_version: typing_extensions.Annotated[
         typing.Optional[int], FieldMetadata(alias="layerVersion"), pydantic.Field(alias="layerVersion")
     ] = None

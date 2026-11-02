@@ -491,6 +491,27 @@ class ChangeOp_PagesInsert(UniversalBaseModel):
     type: typing.Literal["pages.insert"] = "pages.insert"
     resources: ChangeOpPagesInsertResources
     position: typing.Optional[PagePosition] = None
+    object_numbers: typing_extensions.Annotated[
+        typing.Optional[typing.List[int]], FieldMetadata(alias="objectNumbers"), pydantic.Field(alias="objectNumbers")
+    ] = None
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeOp_PagesCopy(UniversalBaseModel):
+    type: typing.Literal["pages.copy"] = "pages.copy"
+    pages: typing.List[PageRef]
+    position: typing.Optional[PagePosition] = None
+    object_numbers: typing_extensions.Annotated[
+        typing.Optional[typing.List[int]], FieldMetadata(alias="objectNumbers"), pydantic.Field(alias="objectNumbers")
+    ] = None
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
@@ -562,6 +583,7 @@ ChangeOp = typing_extensions.Annotated[
         ChangeOp_PagesDelete,
         ChangeOp_PagesInsertBlank,
         ChangeOp_PagesInsert,
+        ChangeOp_PagesCopy,
         ChangeOp_AttachmentsCreate,
         ChangeOp_AttachmentsDelete,
     ],

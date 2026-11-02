@@ -10,6 +10,7 @@ The official Python SDK for the CloudPDF API.
 - [Installation](#installation)
 - [Reference](#reference)
 - [Usage](#usage)
+- [Environments](#environments)
 - [Async Client](#async-client)
 - [Exception Handling](#exception-handling)
 - [Advanced](#advanced)
@@ -39,7 +40,6 @@ from cloudpdf.doc import DocChangesRequestChangesItem
 
 client = CloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
 )
 
 client.doc.changes(
@@ -50,6 +50,19 @@ client.doc.changes(
             op_id="opId",
         )
     ],
+)
+```
+
+## Environments
+
+This SDK allows you to configure different environments for API requests.
+
+```python
+from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
+
+client = CloudPDFClient(
+    environment=CloudPDFEnvironment.SAAS,
 )
 ```
 
@@ -65,7 +78,6 @@ from cloudpdf import AsyncCloudPDFClient
 
 client = AsyncCloudPDFClient(
     token="<token>",
-    base_url="https://yourhost.com/path/to/api",
 )
 
 

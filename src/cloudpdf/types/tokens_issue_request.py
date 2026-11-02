@@ -49,6 +49,33 @@ class TokensIssueRequest_Tenant(UniversalBaseModel):
             extra = pydantic.Extra.allow
 
 
+class TokensIssueRequest_Upload(UniversalBaseModel):
+    kind: typing.Literal["upload"] = "upload"
+    sub: str
+    folder_id: typing_extensions.Annotated[
+        typing.Optional[str], FieldMetadata(alias="folderId"), pydantic.Field(alias="folderId")
+    ] = None
+    metadata: typing.Optional[typing.Dict[str, typing.Any]] = None
+    max_files: typing_extensions.Annotated[
+        typing.Optional[int], FieldMetadata(alias="maxFiles"), pydantic.Field(alias="maxFiles")
+    ] = None
+    max_bytes: typing_extensions.Annotated[
+        typing.Optional[int], FieldMetadata(alias="maxBytes"), pydantic.Field(alias="maxBytes")
+    ] = None
+    origins: typing.Optional[typing.List[str]] = None
+    expires_in: typing_extensions.Annotated[int, FieldMetadata(alias="expiresIn"), pydantic.Field(alias="expiresIn")]
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
 TokensIssueRequest = typing_extensions.Annotated[
-    typing.Union[TokensIssueRequest_Doc, TokensIssueRequest_Tenant], pydantic.Field(discriminator="kind")
+    typing.Union[TokensIssueRequest_Doc, TokensIssueRequest_Tenant, TokensIssueRequest_Upload],
+    pydantic.Field(discriminator="kind"),
 ]

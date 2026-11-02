@@ -7,7 +7,7 @@ from importlib import import_module
 
 if typing.TYPE_CHECKING:
     from .types import DocChangesRequestChangesItem
-    from . import annotations, attachments, forms, metadata, outline, pages, redactions, signatures, versions
+    from . import annotations, attachments, fonts, forms, metadata, outline, pages, redactions, signatures, versions
     from .pages import (
         DocPagesSetScaleRequestMeasure,
         DocPagesSetScaleRequestMeasureAngleItem,
@@ -62,6 +62,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "SignatureDigestVersionsRequestAlgorithm": ".versions",
     "annotations": ".annotations",
     "attachments": ".attachments",
+    "fonts": ".fonts",
     "forms": ".forms",
     "metadata": ".metadata",
     "outline": ".outline",
@@ -122,6 +123,7 @@ __all__ = [
     "SignatureDigestVersionsRequestAlgorithm",
     "annotations",
     "attachments",
+    "fonts",
     "forms",
     "metadata",
     "outline",

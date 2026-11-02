@@ -60,7 +60,6 @@ class LayersClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.documents.layers.list(
             tenant_id="tenantId",
@@ -97,7 +96,6 @@ class LayersClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.documents.layers.delete(
             tenant_id="tenantId",
@@ -163,7 +161,6 @@ class AsyncLayersClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -208,7 +205,6 @@ class AsyncLayersClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 

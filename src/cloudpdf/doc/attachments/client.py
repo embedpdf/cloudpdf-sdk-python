@@ -61,7 +61,6 @@ class AttachmentsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.attachments.download(
             doc_id="docId",
@@ -108,7 +107,6 @@ class AttachmentsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.attachments.list(
             doc_id="docId",
@@ -176,7 +174,6 @@ class AsyncAttachmentsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -232,7 +229,6 @@ class AsyncAttachmentsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 

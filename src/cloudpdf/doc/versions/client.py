@@ -61,7 +61,6 @@ class VersionsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.versions.list(
             doc_id="docId",
@@ -125,7 +124,6 @@ class VersionsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.versions.analysis(
             doc_id="docId",
@@ -182,7 +180,6 @@ class VersionsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.versions.download(
             doc_id="docId",
@@ -233,7 +230,6 @@ class VersionsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.versions.revision(
             doc_id="docId",
@@ -282,7 +278,6 @@ class VersionsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.versions.signatures(
             doc_id="docId",
@@ -335,7 +330,6 @@ class VersionsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.versions.signature_contents(
             doc_id="docId",
@@ -392,7 +386,6 @@ class VersionsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.versions.signature_digest(
             doc_id="docId",
@@ -465,7 +458,6 @@ class AsyncVersionsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -537,7 +529,6 @@ class AsyncVersionsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -602,7 +593,6 @@ class AsyncVersionsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -662,7 +652,6 @@ class AsyncVersionsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -720,7 +709,6 @@ class AsyncVersionsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -781,7 +769,6 @@ class AsyncVersionsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -847,7 +834,6 @@ class AsyncVersionsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 

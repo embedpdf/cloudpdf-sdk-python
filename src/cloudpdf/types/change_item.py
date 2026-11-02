@@ -15,6 +15,7 @@ from .attachment import Attachment
 from .attachment_mutation_meta import AttachmentMutationMeta
 from .change_item_annotations_update_appearance import ChangeItemAnnotationsUpdateAppearance
 from .change_item_forms_update_widget_appearance import ChangeItemFormsUpdateWidgetAppearance
+from .change_item_pages_copy_layout import ChangeItemPagesCopyLayout
 from .change_item_pages_delete_layout import ChangeItemPagesDeleteLayout
 from .change_item_pages_insert_blank_layout import ChangeItemPagesInsertBlankLayout
 from .change_item_pages_insert_layout import ChangeItemPagesInsertLayout
@@ -613,6 +614,24 @@ class ChangeItem_PagesInsert(UniversalBaseModel):
             extra = pydantic.Extra.allow
 
 
+class ChangeItem_PagesCopy(UniversalBaseModel):
+    type: typing.Literal["pages.copy"] = "pages.copy"
+    inserted_pages: typing_extensions.Annotated[
+        typing.List[PageRef], FieldMetadata(alias="insertedPages"), pydantic.Field(alias="insertedPages")
+    ]
+    layout: ChangeItemPagesCopyLayout
+    meta: MutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
 class ChangeItem_PagesRestore(UniversalBaseModel):
     type: typing.Literal["pages.restore"] = "pages.restore"
     pages: typing.List[PageRef]
@@ -709,6 +728,7 @@ ChangeItem = typing_extensions.Annotated[
         ChangeItem_PagesDelete,
         ChangeItem_PagesInsertBlank,
         ChangeItem_PagesInsert,
+        ChangeItem_PagesCopy,
         ChangeItem_PagesRestore,
         ChangeItem_AttachmentsCreate,
         ChangeItem_AttachmentsDelete,

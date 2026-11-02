@@ -55,7 +55,6 @@ class CustomClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.metadata.custom.get(
             doc_id="docId",
@@ -117,7 +116,6 @@ class AsyncCustomClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 

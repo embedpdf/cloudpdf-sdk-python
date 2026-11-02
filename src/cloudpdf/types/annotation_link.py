@@ -25,6 +25,11 @@ class AnnotationLink(UniversalBaseModel):
     appearance_state: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
     ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.List[int]],
+        FieldMetadata(alias="structurePosition"),
+        pydantic.Field(alias="structurePosition"),
+    ] = None
     nm: typing.Optional[str] = None
     rect: AnnotationLinkRect
     contents: typing.Optional[str] = None

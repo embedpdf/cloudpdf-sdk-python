@@ -70,7 +70,6 @@ class FormsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.forms.list(
             doc_id="docId",
@@ -124,7 +123,6 @@ class FormsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.forms.reorder_calculations(
             doc_id="docId",
@@ -190,7 +188,6 @@ class FormsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.forms.set_value(
             doc_id="docId",
@@ -249,7 +246,6 @@ class FormsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.forms.reset(
             doc_id="docId",
@@ -310,7 +306,6 @@ class FormsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.forms.delete_widget(
             doc_id="docId",
@@ -377,7 +372,6 @@ class FormsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.forms.update_widget(
             doc_id="docId",
@@ -445,7 +439,6 @@ class FormsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.forms.reorder_widgets(
             doc_id="docId",
@@ -525,7 +518,6 @@ class AsyncFormsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -587,7 +579,6 @@ class AsyncFormsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -661,7 +652,6 @@ class AsyncFormsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -728,7 +718,6 @@ class AsyncFormsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -797,7 +786,6 @@ class AsyncFormsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -872,7 +860,6 @@ class AsyncFormsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -948,7 +935,6 @@ class AsyncFormsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 

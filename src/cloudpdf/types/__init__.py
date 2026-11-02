@@ -1262,6 +1262,7 @@ if typing.TYPE_CHECKING:
         ChangeItem_OutlineMove,
         ChangeItem_OutlineRestore,
         ChangeItem_OutlineUpdate,
+        ChangeItem_PagesCopy,
         ChangeItem_PagesDelete,
         ChangeItem_PagesInsert,
         ChangeItem_PagesInsertBlank,
@@ -1305,8 +1306,40 @@ if typing.TYPE_CHECKING:
     from .change_item_outline_move import ChangeItemOutlineMove
     from .change_item_outline_restore import ChangeItemOutlineRestore
     from .change_item_outline_update import ChangeItemOutlineUpdate
+    from .change_item_pages_copy import ChangeItemPagesCopy
+    from .change_item_pages_copy_layout import ChangeItemPagesCopyLayout
+    from .change_item_pages_copy_layout_labels_item import ChangeItemPagesCopyLayoutLabelsItem
+    from .change_item_pages_copy_layout_labels_item_style import ChangeItemPagesCopyLayoutLabelsItemStyle
+    from .change_item_pages_copy_layout_named_pages_item import ChangeItemPagesCopyLayoutNamedPagesItem
+    from .change_item_pages_copy_layout_named_pages_item_target import (
+        ChangeItemPagesCopyLayoutNamedPagesItemTarget,
+        ChangeItemPagesCopyLayoutNamedPagesItemTarget_Dangling,
+        ChangeItemPagesCopyLayoutNamedPagesItemTarget_Page,
+        ChangeItemPagesCopyLayoutNamedPagesItemTarget_Template,
+    )
+    from .change_item_pages_copy_layout_named_pages_item_target_dangling import (
+        ChangeItemPagesCopyLayoutNamedPagesItemTargetDangling,
+    )
+    from .change_item_pages_copy_layout_named_pages_item_target_page import (
+        ChangeItemPagesCopyLayoutNamedPagesItemTargetPage,
+    )
+    from .change_item_pages_copy_layout_named_pages_item_target_template import (
+        ChangeItemPagesCopyLayoutNamedPagesItemTargetTemplate,
+    )
+    from .change_item_pages_copy_layout_pages_item import ChangeItemPagesCopyLayoutPagesItem
+    from .change_item_pages_copy_layout_pages_item_boxes import ChangeItemPagesCopyLayoutPagesItemBoxes
+    from .change_item_pages_copy_layout_pages_item_boxes_art import ChangeItemPagesCopyLayoutPagesItemBoxesArt
+    from .change_item_pages_copy_layout_pages_item_boxes_bleed import ChangeItemPagesCopyLayoutPagesItemBoxesBleed
+    from .change_item_pages_copy_layout_pages_item_boxes_crop import ChangeItemPagesCopyLayoutPagesItemBoxesCrop
+    from .change_item_pages_copy_layout_pages_item_boxes_media import ChangeItemPagesCopyLayoutPagesItemBoxesMedia
+    from .change_item_pages_copy_layout_pages_item_boxes_trim import ChangeItemPagesCopyLayoutPagesItemBoxesTrim
+    from .change_item_pages_copy_layout_pages_item_pdf_crop_box import ChangeItemPagesCopyLayoutPagesItemPdfCropBox
+    from .change_item_pages_copy_layout_pages_item_size import ChangeItemPagesCopyLayoutPagesItemSize
+    from .change_item_pages_copy_layout_pages_item_tab_order import ChangeItemPagesCopyLayoutPagesItemTabOrder
     from .change_item_pages_delete import ChangeItemPagesDelete
     from .change_item_pages_delete_layout import ChangeItemPagesDeleteLayout
+    from .change_item_pages_delete_layout_labels_item import ChangeItemPagesDeleteLayoutLabelsItem
+    from .change_item_pages_delete_layout_labels_item_style import ChangeItemPagesDeleteLayoutLabelsItemStyle
     from .change_item_pages_delete_layout_named_pages_item import ChangeItemPagesDeleteLayoutNamedPagesItem
     from .change_item_pages_delete_layout_named_pages_item_target import (
         ChangeItemPagesDeleteLayoutNamedPagesItemTarget,
@@ -1336,6 +1369,8 @@ if typing.TYPE_CHECKING:
     from .change_item_pages_insert import ChangeItemPagesInsert
     from .change_item_pages_insert_blank import ChangeItemPagesInsertBlank
     from .change_item_pages_insert_blank_layout import ChangeItemPagesInsertBlankLayout
+    from .change_item_pages_insert_blank_layout_labels_item import ChangeItemPagesInsertBlankLayoutLabelsItem
+    from .change_item_pages_insert_blank_layout_labels_item_style import ChangeItemPagesInsertBlankLayoutLabelsItemStyle
     from .change_item_pages_insert_blank_layout_named_pages_item import ChangeItemPagesInsertBlankLayoutNamedPagesItem
     from .change_item_pages_insert_blank_layout_named_pages_item_target import (
         ChangeItemPagesInsertBlankLayoutNamedPagesItemTarget,
@@ -1377,6 +1412,8 @@ if typing.TYPE_CHECKING:
         ChangeItemPagesInsertBlankLayoutPagesItemTabOrder,
     )
     from .change_item_pages_insert_layout import ChangeItemPagesInsertLayout
+    from .change_item_pages_insert_layout_labels_item import ChangeItemPagesInsertLayoutLabelsItem
+    from .change_item_pages_insert_layout_labels_item_style import ChangeItemPagesInsertLayoutLabelsItemStyle
     from .change_item_pages_insert_layout_named_pages_item import ChangeItemPagesInsertLayoutNamedPagesItem
     from .change_item_pages_insert_layout_named_pages_item_target import (
         ChangeItemPagesInsertLayoutNamedPagesItemTarget,
@@ -1405,6 +1442,8 @@ if typing.TYPE_CHECKING:
     from .change_item_pages_insert_layout_pages_item_tab_order import ChangeItemPagesInsertLayoutPagesItemTabOrder
     from .change_item_pages_reorder import ChangeItemPagesReorder
     from .change_item_pages_reorder_layout import ChangeItemPagesReorderLayout
+    from .change_item_pages_reorder_layout_labels_item import ChangeItemPagesReorderLayoutLabelsItem
+    from .change_item_pages_reorder_layout_labels_item_style import ChangeItemPagesReorderLayoutLabelsItemStyle
     from .change_item_pages_reorder_layout_named_pages_item import ChangeItemPagesReorderLayoutNamedPagesItem
     from .change_item_pages_reorder_layout_named_pages_item_target import (
         ChangeItemPagesReorderLayoutNamedPagesItemTarget,
@@ -1435,6 +1474,8 @@ if typing.TYPE_CHECKING:
     from .change_item_pages_reorder_layout_pages_item_tab_order import ChangeItemPagesReorderLayoutPagesItemTabOrder
     from .change_item_pages_restore import ChangeItemPagesRestore
     from .change_item_pages_restore_layout import ChangeItemPagesRestoreLayout
+    from .change_item_pages_restore_layout_labels_item import ChangeItemPagesRestoreLayoutLabelsItem
+    from .change_item_pages_restore_layout_labels_item_style import ChangeItemPagesRestoreLayoutLabelsItemStyle
     from .change_item_pages_restore_layout_named_pages_item import ChangeItemPagesRestoreLayoutNamedPagesItem
     from .change_item_pages_restore_layout_named_pages_item_target import (
         ChangeItemPagesRestoreLayoutNamedPagesItemTarget,
@@ -1465,6 +1506,8 @@ if typing.TYPE_CHECKING:
     from .change_item_pages_restore_layout_pages_item_tab_order import ChangeItemPagesRestoreLayoutPagesItemTabOrder
     from .change_item_pages_rotate import ChangeItemPagesRotate
     from .change_item_pages_rotate_layout import ChangeItemPagesRotateLayout
+    from .change_item_pages_rotate_layout_labels_item import ChangeItemPagesRotateLayoutLabelsItem
+    from .change_item_pages_rotate_layout_labels_item_style import ChangeItemPagesRotateLayoutLabelsItemStyle
     from .change_item_pages_rotate_layout_named_pages_item import ChangeItemPagesRotateLayoutNamedPagesItem
     from .change_item_pages_rotate_layout_named_pages_item_target import (
         ChangeItemPagesRotateLayoutNamedPagesItemTarget,
@@ -1521,6 +1564,7 @@ if typing.TYPE_CHECKING:
         ChangeOp_OutlineDelete,
         ChangeOp_OutlineMove,
         ChangeOp_OutlineUpdate,
+        ChangeOp_PagesCopy,
         ChangeOp_PagesDelete,
         ChangeOp_PagesInsert,
         ChangeOp_PagesInsertBlank,
@@ -1558,6 +1602,7 @@ if typing.TYPE_CHECKING:
     from .change_op_outline_delete import ChangeOpOutlineDelete
     from .change_op_outline_move import ChangeOpOutlineMove
     from .change_op_outline_update import ChangeOpOutlineUpdate
+    from .change_op_pages_copy import ChangeOpPagesCopy
     from .change_op_pages_delete import ChangeOpPagesDelete
     from .change_op_pages_insert import ChangeOpPagesInsert
     from .change_op_pages_insert_blank import ChangeOpPagesInsertBlank
@@ -1626,6 +1671,16 @@ if typing.TYPE_CHECKING:
     from .doc_download_link404response import DocDownloadLink404Response
     from .doc_download_link501response import DocDownloadLink501Response
     from .doc_download_response import DocDownloadResponse
+    from .doc_fonts_list200response import DocFontsList200Response
+    from .doc_fonts_list404response import DocFontsList404Response
+    from .doc_fonts_programs_download403response import DocFontsProgramsDownload403Response
+    from .doc_fonts_programs_download404response import DocFontsProgramsDownload404Response
+    from .doc_fonts_programs_get200response import DocFontsProgramsGet200Response
+    from .doc_fonts_programs_get404response import DocFontsProgramsGet404Response
+    from .doc_fonts_resolve200response import DocFontsResolve200Response
+    from .doc_fonts_resolve400response import DocFontsResolve400Response
+    from .doc_fonts_resolve404response import DocFontsResolve404Response
+    from .doc_fonts_resolve_request import DocFontsResolveRequest
     from .doc_forms_delete_widget200response import DocFormsDeleteWidget200Response
     from .doc_forms_delete_widget400response import DocFormsDeleteWidget400Response
     from .doc_forms_delete_widget404response import DocFormsDeleteWidget404Response
@@ -1704,6 +1759,10 @@ if typing.TYPE_CHECKING:
     from .doc_pages_flatten_request import DocPagesFlattenRequest
     from .doc_pages_remove_name200response import DocPagesRemoveName200Response
     from .doc_pages_remove_name200response_layout import DocPagesRemoveName200ResponseLayout
+    from .doc_pages_remove_name200response_layout_labels_item import DocPagesRemoveName200ResponseLayoutLabelsItem
+    from .doc_pages_remove_name200response_layout_labels_item_style import (
+        DocPagesRemoveName200ResponseLayoutLabelsItemStyle,
+    )
     from .doc_pages_remove_name200response_layout_named_pages_item import (
         DocPagesRemoveName200ResponseLayoutNamedPagesItem,
     )
@@ -1755,6 +1814,8 @@ if typing.TYPE_CHECKING:
     from .doc_pages_remove_name_request import DocPagesRemoveNameRequest
     from .doc_pages_set_name200response import DocPagesSetName200Response
     from .doc_pages_set_name200response_layout import DocPagesSetName200ResponseLayout
+    from .doc_pages_set_name200response_layout_labels_item import DocPagesSetName200ResponseLayoutLabelsItem
+    from .doc_pages_set_name200response_layout_labels_item_style import DocPagesSetName200ResponseLayoutLabelsItemStyle
     from .doc_pages_set_name200response_layout_named_pages_item import DocPagesSetName200ResponseLayoutNamedPagesItem
     from .doc_pages_set_name200response_layout_named_pages_item_target import (
         DocPagesSetName200ResponseLayoutNamedPagesItemTarget,
@@ -2180,6 +2241,7 @@ if typing.TYPE_CHECKING:
     )
     from .documents_init200response_resumed_upload_proxy import DocumentsInit200ResponseResumedUploadProxy
     from .documents_init400response import DocumentsInit400Response
+    from .documents_init403response import DocumentsInit403Response
     from .documents_layers_delete403response import DocumentsLayersDelete403Response
     from .documents_layers_delete404response import DocumentsLayersDelete404Response
     from .documents_layers_delete409response import DocumentsLayersDelete409Response
@@ -2206,6 +2268,7 @@ if typing.TYPE_CHECKING:
     from .documents_update404response import DocumentsUpdate404Response
     from .documents_upload_proxy200response import DocumentsUploadProxy200Response
     from .documents_upload_proxy400response import DocumentsUploadProxy400Response
+    from .documents_upload_proxy404response import DocumentsUploadProxy404Response
     from .documents_upload_proxy409response import DocumentsUploadProxy409Response
     from .engine_error_payload import EngineErrorPayload
     from .engine_error_payload_code import EngineErrorPayloadCode
@@ -2245,6 +2308,22 @@ if typing.TYPE_CHECKING:
     from .folders_update403response import FoldersUpdate403Response
     from .folders_update404response import FoldersUpdate404Response
     from .folders_update409response import FoldersUpdate409Response
+    from .font import Font
+    from .font_list import FontList
+    from .font_program import FontProgram
+    from .font_program_embedded import FontProgramEmbedded
+    from .font_program_embedding_permission import FontProgramEmbeddingPermission
+    from .font_program_format import FontProgramFormat
+    from .font_program_info import FontProgramInfo
+    from .font_program_info_covers_item import FontProgramInfoCoversItem
+    from .font_program_info_embedded import FontProgramInfoEmbedded
+    from .font_program_info_embedding_permission import FontProgramInfoEmbeddingPermission
+    from .font_program_info_format import FontProgramInfoFormat
+    from .font_resolution import FontResolution
+    from .font_resolve_request import FontResolveRequest
+    from .font_resolve_run import FontResolveRun
+    from .font_restrictions_item import FontRestrictionsItem
+    from .font_source import FontSource
     from .form_field import (
         FormField,
         FormField_Checkbox,
@@ -2638,6 +2717,7 @@ if typing.TYPE_CHECKING:
         GrantsUpdate200ResponseGrantVisitorIdentityFieldsTitle,
     )
     from .grants_update400response import GrantsUpdate400Response
+    from .grants_update403response import GrantsUpdate403Response
     from .grants_update404response import GrantsUpdate404Response
     from .grants_update409response import GrantsUpdate409Response
     from .grants_visitors_delete_response import GrantsVisitorsDeleteResponse
@@ -2782,6 +2862,7 @@ if typing.TYPE_CHECKING:
     from .pdf_link_target_writable_named_name import PdfLinkTargetWritableNamedName
     from .pdf_link_target_writable_uri import PdfLinkTargetWritableUri
     from .pdf_page_actions import PdfPageActions
+    from .resolved_font_run import ResolvedFontRun
     from .tenants_create200response import TenantsCreate200Response
     from .tenants_create200response_tenant import TenantsCreate200ResponseTenant
     from .tenants_create200response_tenant_status import TenantsCreate200ResponseTenantStatus
@@ -2805,9 +2886,15 @@ if typing.TYPE_CHECKING:
     from .tokens_issue400response import TokensIssue400Response
     from .tokens_issue403response import TokensIssue403Response
     from .tokens_issue404response import TokensIssue404Response
-    from .tokens_issue_request import TokensIssueRequest, TokensIssueRequest_Doc, TokensIssueRequest_Tenant
+    from .tokens_issue_request import (
+        TokensIssueRequest,
+        TokensIssueRequest_Doc,
+        TokensIssueRequest_Tenant,
+        TokensIssueRequest_Upload,
+    )
     from .tokens_issue_request_doc import TokensIssueRequestDoc
     from .tokens_issue_request_tenant import TokensIssueRequestTenant
+    from .tokens_issue_request_upload import TokensIssueRequestUpload
     from .tokens_revoke_response import TokensRevokeResponse
     from .widget_actions_patch import WidgetActionsPatch
     from .widget_annotation import WidgetAnnotation
@@ -3762,8 +3849,32 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeItemOutlineMove": ".change_item_outline_move",
     "ChangeItemOutlineRestore": ".change_item_outline_restore",
     "ChangeItemOutlineUpdate": ".change_item_outline_update",
+    "ChangeItemPagesCopy": ".change_item_pages_copy",
+    "ChangeItemPagesCopyLayout": ".change_item_pages_copy_layout",
+    "ChangeItemPagesCopyLayoutLabelsItem": ".change_item_pages_copy_layout_labels_item",
+    "ChangeItemPagesCopyLayoutLabelsItemStyle": ".change_item_pages_copy_layout_labels_item_style",
+    "ChangeItemPagesCopyLayoutNamedPagesItem": ".change_item_pages_copy_layout_named_pages_item",
+    "ChangeItemPagesCopyLayoutNamedPagesItemTarget": ".change_item_pages_copy_layout_named_pages_item_target",
+    "ChangeItemPagesCopyLayoutNamedPagesItemTargetDangling": ".change_item_pages_copy_layout_named_pages_item_target_dangling",
+    "ChangeItemPagesCopyLayoutNamedPagesItemTargetPage": ".change_item_pages_copy_layout_named_pages_item_target_page",
+    "ChangeItemPagesCopyLayoutNamedPagesItemTargetTemplate": ".change_item_pages_copy_layout_named_pages_item_target_template",
+    "ChangeItemPagesCopyLayoutNamedPagesItemTarget_Dangling": ".change_item_pages_copy_layout_named_pages_item_target",
+    "ChangeItemPagesCopyLayoutNamedPagesItemTarget_Page": ".change_item_pages_copy_layout_named_pages_item_target",
+    "ChangeItemPagesCopyLayoutNamedPagesItemTarget_Template": ".change_item_pages_copy_layout_named_pages_item_target",
+    "ChangeItemPagesCopyLayoutPagesItem": ".change_item_pages_copy_layout_pages_item",
+    "ChangeItemPagesCopyLayoutPagesItemBoxes": ".change_item_pages_copy_layout_pages_item_boxes",
+    "ChangeItemPagesCopyLayoutPagesItemBoxesArt": ".change_item_pages_copy_layout_pages_item_boxes_art",
+    "ChangeItemPagesCopyLayoutPagesItemBoxesBleed": ".change_item_pages_copy_layout_pages_item_boxes_bleed",
+    "ChangeItemPagesCopyLayoutPagesItemBoxesCrop": ".change_item_pages_copy_layout_pages_item_boxes_crop",
+    "ChangeItemPagesCopyLayoutPagesItemBoxesMedia": ".change_item_pages_copy_layout_pages_item_boxes_media",
+    "ChangeItemPagesCopyLayoutPagesItemBoxesTrim": ".change_item_pages_copy_layout_pages_item_boxes_trim",
+    "ChangeItemPagesCopyLayoutPagesItemPdfCropBox": ".change_item_pages_copy_layout_pages_item_pdf_crop_box",
+    "ChangeItemPagesCopyLayoutPagesItemSize": ".change_item_pages_copy_layout_pages_item_size",
+    "ChangeItemPagesCopyLayoutPagesItemTabOrder": ".change_item_pages_copy_layout_pages_item_tab_order",
     "ChangeItemPagesDelete": ".change_item_pages_delete",
     "ChangeItemPagesDeleteLayout": ".change_item_pages_delete_layout",
+    "ChangeItemPagesDeleteLayoutLabelsItem": ".change_item_pages_delete_layout_labels_item",
+    "ChangeItemPagesDeleteLayoutLabelsItemStyle": ".change_item_pages_delete_layout_labels_item_style",
     "ChangeItemPagesDeleteLayoutNamedPagesItem": ".change_item_pages_delete_layout_named_pages_item",
     "ChangeItemPagesDeleteLayoutNamedPagesItemTarget": ".change_item_pages_delete_layout_named_pages_item_target",
     "ChangeItemPagesDeleteLayoutNamedPagesItemTargetDangling": ".change_item_pages_delete_layout_named_pages_item_target_dangling",
@@ -3785,6 +3896,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeItemPagesInsert": ".change_item_pages_insert",
     "ChangeItemPagesInsertBlank": ".change_item_pages_insert_blank",
     "ChangeItemPagesInsertBlankLayout": ".change_item_pages_insert_blank_layout",
+    "ChangeItemPagesInsertBlankLayoutLabelsItem": ".change_item_pages_insert_blank_layout_labels_item",
+    "ChangeItemPagesInsertBlankLayoutLabelsItemStyle": ".change_item_pages_insert_blank_layout_labels_item_style",
     "ChangeItemPagesInsertBlankLayoutNamedPagesItem": ".change_item_pages_insert_blank_layout_named_pages_item",
     "ChangeItemPagesInsertBlankLayoutNamedPagesItemTarget": ".change_item_pages_insert_blank_layout_named_pages_item_target",
     "ChangeItemPagesInsertBlankLayoutNamedPagesItemTargetDangling": ".change_item_pages_insert_blank_layout_named_pages_item_target_dangling",
@@ -3804,6 +3917,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeItemPagesInsertBlankLayoutPagesItemSize": ".change_item_pages_insert_blank_layout_pages_item_size",
     "ChangeItemPagesInsertBlankLayoutPagesItemTabOrder": ".change_item_pages_insert_blank_layout_pages_item_tab_order",
     "ChangeItemPagesInsertLayout": ".change_item_pages_insert_layout",
+    "ChangeItemPagesInsertLayoutLabelsItem": ".change_item_pages_insert_layout_labels_item",
+    "ChangeItemPagesInsertLayoutLabelsItemStyle": ".change_item_pages_insert_layout_labels_item_style",
     "ChangeItemPagesInsertLayoutNamedPagesItem": ".change_item_pages_insert_layout_named_pages_item",
     "ChangeItemPagesInsertLayoutNamedPagesItemTarget": ".change_item_pages_insert_layout_named_pages_item_target",
     "ChangeItemPagesInsertLayoutNamedPagesItemTargetDangling": ".change_item_pages_insert_layout_named_pages_item_target_dangling",
@@ -3824,6 +3939,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeItemPagesInsertLayoutPagesItemTabOrder": ".change_item_pages_insert_layout_pages_item_tab_order",
     "ChangeItemPagesReorder": ".change_item_pages_reorder",
     "ChangeItemPagesReorderLayout": ".change_item_pages_reorder_layout",
+    "ChangeItemPagesReorderLayoutLabelsItem": ".change_item_pages_reorder_layout_labels_item",
+    "ChangeItemPagesReorderLayoutLabelsItemStyle": ".change_item_pages_reorder_layout_labels_item_style",
     "ChangeItemPagesReorderLayoutNamedPagesItem": ".change_item_pages_reorder_layout_named_pages_item",
     "ChangeItemPagesReorderLayoutNamedPagesItemTarget": ".change_item_pages_reorder_layout_named_pages_item_target",
     "ChangeItemPagesReorderLayoutNamedPagesItemTargetDangling": ".change_item_pages_reorder_layout_named_pages_item_target_dangling",
@@ -3844,6 +3961,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeItemPagesReorderLayoutPagesItemTabOrder": ".change_item_pages_reorder_layout_pages_item_tab_order",
     "ChangeItemPagesRestore": ".change_item_pages_restore",
     "ChangeItemPagesRestoreLayout": ".change_item_pages_restore_layout",
+    "ChangeItemPagesRestoreLayoutLabelsItem": ".change_item_pages_restore_layout_labels_item",
+    "ChangeItemPagesRestoreLayoutLabelsItemStyle": ".change_item_pages_restore_layout_labels_item_style",
     "ChangeItemPagesRestoreLayoutNamedPagesItem": ".change_item_pages_restore_layout_named_pages_item",
     "ChangeItemPagesRestoreLayoutNamedPagesItemTarget": ".change_item_pages_restore_layout_named_pages_item_target",
     "ChangeItemPagesRestoreLayoutNamedPagesItemTargetDangling": ".change_item_pages_restore_layout_named_pages_item_target_dangling",
@@ -3864,6 +3983,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeItemPagesRestoreLayoutPagesItemTabOrder": ".change_item_pages_restore_layout_pages_item_tab_order",
     "ChangeItemPagesRotate": ".change_item_pages_rotate",
     "ChangeItemPagesRotateLayout": ".change_item_pages_rotate_layout",
+    "ChangeItemPagesRotateLayoutLabelsItem": ".change_item_pages_rotate_layout_labels_item",
+    "ChangeItemPagesRotateLayoutLabelsItemStyle": ".change_item_pages_rotate_layout_labels_item_style",
     "ChangeItemPagesRotateLayoutNamedPagesItem": ".change_item_pages_rotate_layout_named_pages_item",
     "ChangeItemPagesRotateLayoutNamedPagesItemTarget": ".change_item_pages_rotate_layout_named_pages_item_target",
     "ChangeItemPagesRotateLayoutNamedPagesItemTargetDangling": ".change_item_pages_rotate_layout_named_pages_item_target_dangling",
@@ -3915,6 +4036,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeItem_OutlineMove": ".change_item",
     "ChangeItem_OutlineRestore": ".change_item",
     "ChangeItem_OutlineUpdate": ".change_item",
+    "ChangeItem_PagesCopy": ".change_item",
     "ChangeItem_PagesDelete": ".change_item",
     "ChangeItem_PagesInsert": ".change_item",
     "ChangeItem_PagesInsertBlank": ".change_item",
@@ -3954,6 +4076,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeOpOutlineDelete": ".change_op_outline_delete",
     "ChangeOpOutlineMove": ".change_op_outline_move",
     "ChangeOpOutlineUpdate": ".change_op_outline_update",
+    "ChangeOpPagesCopy": ".change_op_pages_copy",
     "ChangeOpPagesDelete": ".change_op_pages_delete",
     "ChangeOpPagesInsert": ".change_op_pages_insert",
     "ChangeOpPagesInsertBlank": ".change_op_pages_insert_blank",
@@ -3988,6 +4111,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeOp_OutlineDelete": ".change_op",
     "ChangeOp_OutlineMove": ".change_op",
     "ChangeOp_OutlineUpdate": ".change_op",
+    "ChangeOp_PagesCopy": ".change_op",
     "ChangeOp_PagesDelete": ".change_op",
     "ChangeOp_PagesInsert": ".change_op",
     "ChangeOp_PagesInsertBlank": ".change_op",
@@ -4049,6 +4173,16 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocDownloadLink404Response": ".doc_download_link404response",
     "DocDownloadLink501Response": ".doc_download_link501response",
     "DocDownloadResponse": ".doc_download_response",
+    "DocFontsList200Response": ".doc_fonts_list200response",
+    "DocFontsList404Response": ".doc_fonts_list404response",
+    "DocFontsProgramsDownload403Response": ".doc_fonts_programs_download403response",
+    "DocFontsProgramsDownload404Response": ".doc_fonts_programs_download404response",
+    "DocFontsProgramsGet200Response": ".doc_fonts_programs_get200response",
+    "DocFontsProgramsGet404Response": ".doc_fonts_programs_get404response",
+    "DocFontsResolve200Response": ".doc_fonts_resolve200response",
+    "DocFontsResolve400Response": ".doc_fonts_resolve400response",
+    "DocFontsResolve404Response": ".doc_fonts_resolve404response",
+    "DocFontsResolveRequest": ".doc_fonts_resolve_request",
     "DocFormsDeleteWidget200Response": ".doc_forms_delete_widget200response",
     "DocFormsDeleteWidget400Response": ".doc_forms_delete_widget400response",
     "DocFormsDeleteWidget404Response": ".doc_forms_delete_widget404response",
@@ -4121,6 +4255,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocPagesFlattenRequest": ".doc_pages_flatten_request",
     "DocPagesRemoveName200Response": ".doc_pages_remove_name200response",
     "DocPagesRemoveName200ResponseLayout": ".doc_pages_remove_name200response_layout",
+    "DocPagesRemoveName200ResponseLayoutLabelsItem": ".doc_pages_remove_name200response_layout_labels_item",
+    "DocPagesRemoveName200ResponseLayoutLabelsItemStyle": ".doc_pages_remove_name200response_layout_labels_item_style",
     "DocPagesRemoveName200ResponseLayoutNamedPagesItem": ".doc_pages_remove_name200response_layout_named_pages_item",
     "DocPagesRemoveName200ResponseLayoutNamedPagesItemTarget": ".doc_pages_remove_name200response_layout_named_pages_item_target",
     "DocPagesRemoveName200ResponseLayoutNamedPagesItemTargetDangling": ".doc_pages_remove_name200response_layout_named_pages_item_target_dangling",
@@ -4144,6 +4280,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocPagesRemoveNameRequest": ".doc_pages_remove_name_request",
     "DocPagesSetName200Response": ".doc_pages_set_name200response",
     "DocPagesSetName200ResponseLayout": ".doc_pages_set_name200response_layout",
+    "DocPagesSetName200ResponseLayoutLabelsItem": ".doc_pages_set_name200response_layout_labels_item",
+    "DocPagesSetName200ResponseLayoutLabelsItemStyle": ".doc_pages_set_name200response_layout_labels_item_style",
     "DocPagesSetName200ResponseLayoutNamedPagesItem": ".doc_pages_set_name200response_layout_named_pages_item",
     "DocPagesSetName200ResponseLayoutNamedPagesItemTarget": ".doc_pages_set_name200response_layout_named_pages_item_target",
     "DocPagesSetName200ResponseLayoutNamedPagesItemTargetDangling": ".doc_pages_set_name200response_layout_named_pages_item_target_dangling",
@@ -4393,6 +4531,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocumentsInit200Response_Deduped": ".documents_init200response",
     "DocumentsInit200Response_Resumed": ".documents_init200response",
     "DocumentsInit400Response": ".documents_init400response",
+    "DocumentsInit403Response": ".documents_init403response",
     "DocumentsLayersDelete403Response": ".documents_layers_delete403response",
     "DocumentsLayersDelete404Response": ".documents_layers_delete404response",
     "DocumentsLayersDelete409Response": ".documents_layers_delete409response",
@@ -4417,6 +4556,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocumentsUpdate404Response": ".documents_update404response",
     "DocumentsUploadProxy200Response": ".documents_upload_proxy200response",
     "DocumentsUploadProxy400Response": ".documents_upload_proxy400response",
+    "DocumentsUploadProxy404Response": ".documents_upload_proxy404response",
     "DocumentsUploadProxy409Response": ".documents_upload_proxy409response",
     "EngineErrorPayload": ".engine_error_payload",
     "EngineErrorPayloadCode": ".engine_error_payload_code",
@@ -4456,6 +4596,22 @@ _dynamic_imports: typing.Dict[str, str] = {
     "FoldersUpdate403Response": ".folders_update403response",
     "FoldersUpdate404Response": ".folders_update404response",
     "FoldersUpdate409Response": ".folders_update409response",
+    "Font": ".font",
+    "FontList": ".font_list",
+    "FontProgram": ".font_program",
+    "FontProgramEmbedded": ".font_program_embedded",
+    "FontProgramEmbeddingPermission": ".font_program_embedding_permission",
+    "FontProgramFormat": ".font_program_format",
+    "FontProgramInfo": ".font_program_info",
+    "FontProgramInfoCoversItem": ".font_program_info_covers_item",
+    "FontProgramInfoEmbedded": ".font_program_info_embedded",
+    "FontProgramInfoEmbeddingPermission": ".font_program_info_embedding_permission",
+    "FontProgramInfoFormat": ".font_program_info_format",
+    "FontResolution": ".font_resolution",
+    "FontResolveRequest": ".font_resolve_request",
+    "FontResolveRun": ".font_resolve_run",
+    "FontRestrictionsItem": ".font_restrictions_item",
+    "FontSource": ".font_source",
     "FormField": ".form_field",
     "FormFieldCheckbox": ".form_field_checkbox",
     "FormFieldCheckboxDefaultValueEntry": ".form_field_checkbox_default_value_entry",
@@ -4739,6 +4895,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "GrantsUpdate200ResponseGrantVisitorIdentityFieldsOrganizationalUnit": ".grants_update200response_grant_visitor_identity_fields_organizational_unit",
     "GrantsUpdate200ResponseGrantVisitorIdentityFieldsTitle": ".grants_update200response_grant_visitor_identity_fields_title",
     "GrantsUpdate400Response": ".grants_update400response",
+    "GrantsUpdate403Response": ".grants_update403response",
     "GrantsUpdate404Response": ".grants_update404response",
     "GrantsUpdate409Response": ".grants_update409response",
     "GrantsVisitorsDeleteResponse": ".grants_visitors_delete_response",
@@ -4875,6 +5032,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "PdfLinkTarget_Unsupported": ".pdf_link_target",
     "PdfLinkTarget_Uri": ".pdf_link_target",
     "PdfPageActions": ".pdf_page_actions",
+    "ResolvedFontRun": ".resolved_font_run",
     "TenantsCreate200Response": ".tenants_create200response",
     "TenantsCreate200ResponseTenant": ".tenants_create200response_tenant",
     "TenantsCreate200ResponseTenantStatus": ".tenants_create200response_tenant_status",
@@ -4901,8 +5059,10 @@ _dynamic_imports: typing.Dict[str, str] = {
     "TokensIssueRequest": ".tokens_issue_request",
     "TokensIssueRequestDoc": ".tokens_issue_request_doc",
     "TokensIssueRequestTenant": ".tokens_issue_request_tenant",
+    "TokensIssueRequestUpload": ".tokens_issue_request_upload",
     "TokensIssueRequest_Doc": ".tokens_issue_request",
     "TokensIssueRequest_Tenant": ".tokens_issue_request",
+    "TokensIssueRequest_Upload": ".tokens_issue_request",
     "TokensRevokeResponse": ".tokens_revoke_response",
     "WidgetActionsPatch": ".widget_actions_patch",
     "WidgetAnnotation": ".widget_annotation",
@@ -5881,8 +6041,32 @@ __all__ = [
     "ChangeItemOutlineMove",
     "ChangeItemOutlineRestore",
     "ChangeItemOutlineUpdate",
+    "ChangeItemPagesCopy",
+    "ChangeItemPagesCopyLayout",
+    "ChangeItemPagesCopyLayoutLabelsItem",
+    "ChangeItemPagesCopyLayoutLabelsItemStyle",
+    "ChangeItemPagesCopyLayoutNamedPagesItem",
+    "ChangeItemPagesCopyLayoutNamedPagesItemTarget",
+    "ChangeItemPagesCopyLayoutNamedPagesItemTargetDangling",
+    "ChangeItemPagesCopyLayoutNamedPagesItemTargetPage",
+    "ChangeItemPagesCopyLayoutNamedPagesItemTargetTemplate",
+    "ChangeItemPagesCopyLayoutNamedPagesItemTarget_Dangling",
+    "ChangeItemPagesCopyLayoutNamedPagesItemTarget_Page",
+    "ChangeItemPagesCopyLayoutNamedPagesItemTarget_Template",
+    "ChangeItemPagesCopyLayoutPagesItem",
+    "ChangeItemPagesCopyLayoutPagesItemBoxes",
+    "ChangeItemPagesCopyLayoutPagesItemBoxesArt",
+    "ChangeItemPagesCopyLayoutPagesItemBoxesBleed",
+    "ChangeItemPagesCopyLayoutPagesItemBoxesCrop",
+    "ChangeItemPagesCopyLayoutPagesItemBoxesMedia",
+    "ChangeItemPagesCopyLayoutPagesItemBoxesTrim",
+    "ChangeItemPagesCopyLayoutPagesItemPdfCropBox",
+    "ChangeItemPagesCopyLayoutPagesItemSize",
+    "ChangeItemPagesCopyLayoutPagesItemTabOrder",
     "ChangeItemPagesDelete",
     "ChangeItemPagesDeleteLayout",
+    "ChangeItemPagesDeleteLayoutLabelsItem",
+    "ChangeItemPagesDeleteLayoutLabelsItemStyle",
     "ChangeItemPagesDeleteLayoutNamedPagesItem",
     "ChangeItemPagesDeleteLayoutNamedPagesItemTarget",
     "ChangeItemPagesDeleteLayoutNamedPagesItemTargetDangling",
@@ -5904,6 +6088,8 @@ __all__ = [
     "ChangeItemPagesInsert",
     "ChangeItemPagesInsertBlank",
     "ChangeItemPagesInsertBlankLayout",
+    "ChangeItemPagesInsertBlankLayoutLabelsItem",
+    "ChangeItemPagesInsertBlankLayoutLabelsItemStyle",
     "ChangeItemPagesInsertBlankLayoutNamedPagesItem",
     "ChangeItemPagesInsertBlankLayoutNamedPagesItemTarget",
     "ChangeItemPagesInsertBlankLayoutNamedPagesItemTargetDangling",
@@ -5923,6 +6109,8 @@ __all__ = [
     "ChangeItemPagesInsertBlankLayoutPagesItemSize",
     "ChangeItemPagesInsertBlankLayoutPagesItemTabOrder",
     "ChangeItemPagesInsertLayout",
+    "ChangeItemPagesInsertLayoutLabelsItem",
+    "ChangeItemPagesInsertLayoutLabelsItemStyle",
     "ChangeItemPagesInsertLayoutNamedPagesItem",
     "ChangeItemPagesInsertLayoutNamedPagesItemTarget",
     "ChangeItemPagesInsertLayoutNamedPagesItemTargetDangling",
@@ -5943,6 +6131,8 @@ __all__ = [
     "ChangeItemPagesInsertLayoutPagesItemTabOrder",
     "ChangeItemPagesReorder",
     "ChangeItemPagesReorderLayout",
+    "ChangeItemPagesReorderLayoutLabelsItem",
+    "ChangeItemPagesReorderLayoutLabelsItemStyle",
     "ChangeItemPagesReorderLayoutNamedPagesItem",
     "ChangeItemPagesReorderLayoutNamedPagesItemTarget",
     "ChangeItemPagesReorderLayoutNamedPagesItemTargetDangling",
@@ -5963,6 +6153,8 @@ __all__ = [
     "ChangeItemPagesReorderLayoutPagesItemTabOrder",
     "ChangeItemPagesRestore",
     "ChangeItemPagesRestoreLayout",
+    "ChangeItemPagesRestoreLayoutLabelsItem",
+    "ChangeItemPagesRestoreLayoutLabelsItemStyle",
     "ChangeItemPagesRestoreLayoutNamedPagesItem",
     "ChangeItemPagesRestoreLayoutNamedPagesItemTarget",
     "ChangeItemPagesRestoreLayoutNamedPagesItemTargetDangling",
@@ -5983,6 +6175,8 @@ __all__ = [
     "ChangeItemPagesRestoreLayoutPagesItemTabOrder",
     "ChangeItemPagesRotate",
     "ChangeItemPagesRotateLayout",
+    "ChangeItemPagesRotateLayoutLabelsItem",
+    "ChangeItemPagesRotateLayoutLabelsItemStyle",
     "ChangeItemPagesRotateLayoutNamedPagesItem",
     "ChangeItemPagesRotateLayoutNamedPagesItemTarget",
     "ChangeItemPagesRotateLayoutNamedPagesItemTargetDangling",
@@ -6034,6 +6228,7 @@ __all__ = [
     "ChangeItem_OutlineMove",
     "ChangeItem_OutlineRestore",
     "ChangeItem_OutlineUpdate",
+    "ChangeItem_PagesCopy",
     "ChangeItem_PagesDelete",
     "ChangeItem_PagesInsert",
     "ChangeItem_PagesInsertBlank",
@@ -6073,6 +6268,7 @@ __all__ = [
     "ChangeOpOutlineDelete",
     "ChangeOpOutlineMove",
     "ChangeOpOutlineUpdate",
+    "ChangeOpPagesCopy",
     "ChangeOpPagesDelete",
     "ChangeOpPagesInsert",
     "ChangeOpPagesInsertBlank",
@@ -6107,6 +6303,7 @@ __all__ = [
     "ChangeOp_OutlineDelete",
     "ChangeOp_OutlineMove",
     "ChangeOp_OutlineUpdate",
+    "ChangeOp_PagesCopy",
     "ChangeOp_PagesDelete",
     "ChangeOp_PagesInsert",
     "ChangeOp_PagesInsertBlank",
@@ -6168,6 +6365,16 @@ __all__ = [
     "DocDownloadLink404Response",
     "DocDownloadLink501Response",
     "DocDownloadResponse",
+    "DocFontsList200Response",
+    "DocFontsList404Response",
+    "DocFontsProgramsDownload403Response",
+    "DocFontsProgramsDownload404Response",
+    "DocFontsProgramsGet200Response",
+    "DocFontsProgramsGet404Response",
+    "DocFontsResolve200Response",
+    "DocFontsResolve400Response",
+    "DocFontsResolve404Response",
+    "DocFontsResolveRequest",
     "DocFormsDeleteWidget200Response",
     "DocFormsDeleteWidget400Response",
     "DocFormsDeleteWidget404Response",
@@ -6240,6 +6447,8 @@ __all__ = [
     "DocPagesFlattenRequest",
     "DocPagesRemoveName200Response",
     "DocPagesRemoveName200ResponseLayout",
+    "DocPagesRemoveName200ResponseLayoutLabelsItem",
+    "DocPagesRemoveName200ResponseLayoutLabelsItemStyle",
     "DocPagesRemoveName200ResponseLayoutNamedPagesItem",
     "DocPagesRemoveName200ResponseLayoutNamedPagesItemTarget",
     "DocPagesRemoveName200ResponseLayoutNamedPagesItemTargetDangling",
@@ -6263,6 +6472,8 @@ __all__ = [
     "DocPagesRemoveNameRequest",
     "DocPagesSetName200Response",
     "DocPagesSetName200ResponseLayout",
+    "DocPagesSetName200ResponseLayoutLabelsItem",
+    "DocPagesSetName200ResponseLayoutLabelsItemStyle",
     "DocPagesSetName200ResponseLayoutNamedPagesItem",
     "DocPagesSetName200ResponseLayoutNamedPagesItemTarget",
     "DocPagesSetName200ResponseLayoutNamedPagesItemTargetDangling",
@@ -6512,6 +6723,7 @@ __all__ = [
     "DocumentsInit200Response_Deduped",
     "DocumentsInit200Response_Resumed",
     "DocumentsInit400Response",
+    "DocumentsInit403Response",
     "DocumentsLayersDelete403Response",
     "DocumentsLayersDelete404Response",
     "DocumentsLayersDelete409Response",
@@ -6536,6 +6748,7 @@ __all__ = [
     "DocumentsUpdate404Response",
     "DocumentsUploadProxy200Response",
     "DocumentsUploadProxy400Response",
+    "DocumentsUploadProxy404Response",
     "DocumentsUploadProxy409Response",
     "EngineErrorPayload",
     "EngineErrorPayloadCode",
@@ -6575,6 +6788,22 @@ __all__ = [
     "FoldersUpdate403Response",
     "FoldersUpdate404Response",
     "FoldersUpdate409Response",
+    "Font",
+    "FontList",
+    "FontProgram",
+    "FontProgramEmbedded",
+    "FontProgramEmbeddingPermission",
+    "FontProgramFormat",
+    "FontProgramInfo",
+    "FontProgramInfoCoversItem",
+    "FontProgramInfoEmbedded",
+    "FontProgramInfoEmbeddingPermission",
+    "FontProgramInfoFormat",
+    "FontResolution",
+    "FontResolveRequest",
+    "FontResolveRun",
+    "FontRestrictionsItem",
+    "FontSource",
     "FormField",
     "FormFieldCheckbox",
     "FormFieldCheckboxDefaultValueEntry",
@@ -6858,6 +7087,7 @@ __all__ = [
     "GrantsUpdate200ResponseGrantVisitorIdentityFieldsOrganizationalUnit",
     "GrantsUpdate200ResponseGrantVisitorIdentityFieldsTitle",
     "GrantsUpdate400Response",
+    "GrantsUpdate403Response",
     "GrantsUpdate404Response",
     "GrantsUpdate409Response",
     "GrantsVisitorsDeleteResponse",
@@ -6994,6 +7224,7 @@ __all__ = [
     "PdfLinkTarget_Unsupported",
     "PdfLinkTarget_Uri",
     "PdfPageActions",
+    "ResolvedFontRun",
     "TenantsCreate200Response",
     "TenantsCreate200ResponseTenant",
     "TenantsCreate200ResponseTenantStatus",
@@ -7020,8 +7251,10 @@ __all__ = [
     "TokensIssueRequest",
     "TokensIssueRequestDoc",
     "TokensIssueRequestTenant",
+    "TokensIssueRequestUpload",
     "TokensIssueRequest_Doc",
     "TokensIssueRequest_Tenant",
+    "TokensIssueRequest_Upload",
     "TokensRevokeResponse",
     "WidgetActionsPatch",
     "WidgetAnnotation",

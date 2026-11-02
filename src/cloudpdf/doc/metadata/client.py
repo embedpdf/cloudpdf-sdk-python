@@ -62,7 +62,6 @@ class MetadataClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.metadata.get(
             doc_id="docId",
@@ -134,7 +133,6 @@ class AsyncMetadataClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
