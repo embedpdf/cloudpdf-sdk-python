@@ -26,6 +26,9 @@ class AnnotationPatchPolyline(UniversalBaseModel):
     appearance_state: typing_extensions.Annotated[
         typing.Optional[typing.Any], FieldMetadata(alias="appearanceState"), pydantic.Field(alias="appearanceState")
     ] = None
+    structure_position: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="structurePosition"), pydantic.Field(alias="structurePosition")
+    ] = None
     nm: typing.Optional[str] = None
     rect: typing.Optional[AnnotationPatchPolylineRect] = None
     contents: typing.Optional[str] = None

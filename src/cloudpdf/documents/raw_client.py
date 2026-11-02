@@ -345,6 +345,8 @@ class RawDocumentsClient:
         self, tenant_id: str, id: str, *, sha256: str, request_options: typing.Optional[RequestOptions] = None
     ) -> HttpResponse[DocumentsCommit200Response]:
         """
+        An upload token commits only the documents it started; any other document answers 404.
+
         Parameters
         ----------
         tenant_id : str
@@ -549,7 +551,7 @@ class RawDocumentsClient:
         self, tenant_id: str, id: str, *, file: core.File, request_options: typing.Optional[RequestOptions] = None
     ) -> HttpResponse[DocumentsUploadProxy200Response]:
         """
-        This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available.
+        This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available. An upload token sends files only to the documents it started.
 
         Parameters
         ----------
@@ -591,6 +593,17 @@ class RawDocumentsClient:
                 return HttpResponse(response=_response, data=_data)
             if _response.status_code == 400:
                 raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 404:
+                raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
                         typing.Any,
@@ -768,6 +781,8 @@ class RawDocumentsClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocumentsInit200Response]:
         """
+        With an upload token, the document goes into the token's folder with the token's metadata, whatever the request says; contentLength must be within the token's maxBytes, and the token makes at most maxFiles documents (403 after). docId, idempotencyKey and dedupMode reuse-existing are refused (400): each could reach a document the token didn't make.
+
         Parameters
         ----------
         tenant_id : str
@@ -836,6 +851,17 @@ class RawDocumentsClient:
                 return HttpResponse(response=_response, data=_data)
             if _response.status_code == 400:
                 raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 403:
+                raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
                         typing.Any,
@@ -1159,6 +1185,8 @@ class AsyncRawDocumentsClient:
         self, tenant_id: str, id: str, *, sha256: str, request_options: typing.Optional[RequestOptions] = None
     ) -> AsyncHttpResponse[DocumentsCommit200Response]:
         """
+        An upload token commits only the documents it started; any other document answers 404.
+
         Parameters
         ----------
         tenant_id : str
@@ -1365,7 +1393,7 @@ class AsyncRawDocumentsClient:
         self, tenant_id: str, id: str, *, file: core.File, request_options: typing.Optional[RequestOptions] = None
     ) -> AsyncHttpResponse[DocumentsUploadProxy200Response]:
         """
-        This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available.
+        This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available. An upload token sends files only to the documents it started.
 
         Parameters
         ----------
@@ -1407,6 +1435,17 @@ class AsyncRawDocumentsClient:
                 return AsyncHttpResponse(response=_response, data=_data)
             if _response.status_code == 400:
                 raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 404:
+                raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
                         typing.Any,
@@ -1584,6 +1623,8 @@ class AsyncRawDocumentsClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocumentsInit200Response]:
         """
+        With an upload token, the document goes into the token's folder with the token's metadata, whatever the request says; contentLength must be within the token's maxBytes, and the token makes at most maxFiles documents (403 after). docId, idempotencyKey and dedupMode reuse-existing are refused (400): each could reach a document the token didn't make.
+
         Parameters
         ----------
         tenant_id : str
@@ -1652,6 +1693,17 @@ class AsyncRawDocumentsClient:
                 return AsyncHttpResponse(response=_response, data=_data)
             if _response.status_code == 400:
                 raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        typing.Any,
+                        parse_obj_as(
+                            type_=typing.Any,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 403:
+                raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
                         typing.Any,

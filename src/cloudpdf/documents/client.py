@@ -99,7 +99,6 @@ class DocumentsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.documents.list(
             tenant_id="tenantId",
@@ -142,7 +141,6 @@ class DocumentsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.documents.get(
             tenant_id="tenantId",
@@ -173,7 +171,6 @@ class DocumentsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.documents.delete(
             tenant_id="tenantId",
@@ -212,7 +209,6 @@ class DocumentsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.documents.update(
             tenant_id="tenantId",
@@ -227,6 +223,8 @@ class DocumentsClient:
         self, tenant_id: str, id: str, *, sha256: str, request_options: typing.Optional[RequestOptions] = None
     ) -> DocumentsCommit200Response:
         """
+        An upload token commits only the documents it started; any other document answers 404.
+
         Parameters
         ----------
         tenant_id : str
@@ -249,7 +247,6 @@ class DocumentsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.documents.commit(
             tenant_id="tenantId",
@@ -284,7 +281,6 @@ class DocumentsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.documents.download(
             tenant_id="tenantId",
@@ -318,7 +314,6 @@ class DocumentsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.documents.thumbnail(
             tenant_id="tenantId",
@@ -332,7 +327,7 @@ class DocumentsClient:
         self, tenant_id: str, id: str, *, file: core.File, request_options: typing.Optional[RequestOptions] = None
     ) -> DocumentsUploadProxy200Response:
         """
-        This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available.
+        This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available. An upload token sends files only to the documents it started.
 
         Parameters
         ----------
@@ -357,7 +352,6 @@ class DocumentsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.documents.upload_proxy(
             tenant_id="tenantId",
@@ -429,7 +423,6 @@ class DocumentsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.documents.import_from(
             tenant_id="tenantId",
@@ -470,6 +463,8 @@ class DocumentsClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocumentsInit200Response:
         """
+        With an upload token, the document goes into the token's folder with the token's metadata, whatever the request says; contentLength must be within the token's maxBytes, and the token makes at most maxFiles documents (403 after). docId, idempotencyKey and dedupMode reuse-existing are refused (400): each could reach a document the token didn't make.
+
         Parameters
         ----------
         tenant_id : str
@@ -511,7 +506,6 @@ class DocumentsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.documents.init(
             tenant_id="tenantId",
@@ -614,7 +608,6 @@ class AsyncDocumentsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -665,7 +658,6 @@ class AsyncDocumentsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -704,7 +696,6 @@ class AsyncDocumentsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -751,7 +742,6 @@ class AsyncDocumentsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -772,6 +762,8 @@ class AsyncDocumentsClient:
         self, tenant_id: str, id: str, *, sha256: str, request_options: typing.Optional[RequestOptions] = None
     ) -> DocumentsCommit200Response:
         """
+        An upload token commits only the documents it started; any other document answers 404.
+
         Parameters
         ----------
         tenant_id : str
@@ -796,7 +788,6 @@ class AsyncDocumentsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -839,7 +830,6 @@ class AsyncDocumentsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -882,7 +872,6 @@ class AsyncDocumentsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -903,7 +892,7 @@ class AsyncDocumentsClient:
         self, tenant_id: str, id: str, *, file: core.File, request_options: typing.Optional[RequestOptions] = None
     ) -> DocumentsUploadProxy200Response:
         """
-        This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available.
+        This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available. An upload token sends files only to the documents it started.
 
         Parameters
         ----------
@@ -930,7 +919,6 @@ class AsyncDocumentsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -1010,7 +998,6 @@ class AsyncDocumentsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -1057,6 +1044,8 @@ class AsyncDocumentsClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocumentsInit200Response:
         """
+        With an upload token, the document goes into the token's folder with the token's metadata, whatever the request says; contentLength must be within the token's maxBytes, and the token makes at most maxFiles documents (403 after). docId, idempotencyKey and dedupMode reuse-existing are refused (400): each could reach a document the token didn't make.
+
         Parameters
         ----------
         tenant_id : str
@@ -1100,7 +1089,6 @@ class AsyncDocumentsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 

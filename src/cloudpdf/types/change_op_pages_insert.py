@@ -3,7 +3,9 @@
 import typing
 
 import pydantic
+import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
+from ..core.serialization import FieldMetadata
 from .change_op_pages_insert_resources import ChangeOpPagesInsertResources
 from .page_position import PagePosition
 
@@ -11,6 +13,9 @@ from .page_position import PagePosition
 class ChangeOpPagesInsert(UniversalBaseModel):
     resources: ChangeOpPagesInsertResources
     position: typing.Optional[PagePosition] = None
+    object_numbers: typing_extensions.Annotated[
+        typing.Optional[typing.List[int]], FieldMetadata(alias="objectNumbers"), pydantic.Field(alias="objectNumbers")
+    ] = None
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

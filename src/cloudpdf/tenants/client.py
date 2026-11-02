@@ -57,7 +57,6 @@ class TenantsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.tenants.list()
         """
@@ -88,7 +87,6 @@ class TenantsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.tenants.create(
             id="id",
@@ -117,7 +115,6 @@ class TenantsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.tenants.get(
             tenant_id="tenantId",
@@ -147,7 +144,6 @@ class TenantsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.tenants.delete(
             tenant_id="tenantId",
@@ -175,7 +171,6 @@ class TenantsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.tenants.resume(
             tenant_id="tenantId",
@@ -213,7 +208,6 @@ class TenantsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.tenants.suspend(
             tenant_id="tenantId",
@@ -252,7 +246,6 @@ class TenantsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.tenants.usage(
             tenant_id="tenantId",
@@ -307,7 +300,6 @@ class AsyncTenantsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -346,7 +338,6 @@ class AsyncTenantsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -385,7 +376,6 @@ class AsyncTenantsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -423,7 +413,6 @@ class AsyncTenantsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -459,7 +448,6 @@ class AsyncTenantsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -505,7 +493,6 @@ class AsyncTenantsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -552,7 +539,6 @@ class AsyncTenantsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 

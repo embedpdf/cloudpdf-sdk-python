@@ -21,6 +21,11 @@ class FormMutationMeta(UniversalBaseModel):
     ] = None
     op_id: typing_extensions.Annotated[str, FieldMetadata(alias="opId"), pydantic.Field(alias="opId")]
     undoable: bool
+    missing_characters: typing_extensions.Annotated[
+        typing.Optional[typing.List[str]],
+        FieldMetadata(alias="missingCharacters"),
+        pydantic.Field(alias="missingCharacters"),
+    ] = None
     changed_fields: typing_extensions.Annotated[
         typing.List[FormFieldRef], FieldMetadata(alias="changedFields"), pydantic.Field(alias="changedFields")
     ]

@@ -64,7 +64,6 @@ class FoldersClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.folders.list(
             tenant_id="tenantId",
@@ -110,7 +109,6 @@ class FoldersClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.folders.create(
             tenant_id="tenantId",
@@ -144,7 +142,6 @@ class FoldersClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.folders.get(
             tenant_id="tenantId",
@@ -187,7 +184,6 @@ class FoldersClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.folders.delete(
             tenant_id="tenantId",
@@ -226,7 +222,6 @@ class FoldersClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.folders.update(
             tenant_id="tenantId",
@@ -273,7 +268,6 @@ class FoldersClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.folders.move_into(
             tenant_id="tenantId",
@@ -338,7 +332,6 @@ class AsyncFoldersClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -392,7 +385,6 @@ class AsyncFoldersClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -436,7 +428,6 @@ class AsyncFoldersClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -487,7 +478,6 @@ class AsyncFoldersClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -536,7 +526,6 @@ class AsyncFoldersClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -591,7 +580,6 @@ class AsyncFoldersClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 

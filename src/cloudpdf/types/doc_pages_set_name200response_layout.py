@@ -6,6 +6,7 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
+from .doc_pages_set_name200response_layout_labels_item import DocPagesSetName200ResponseLayoutLabelsItem
 from .doc_pages_set_name200response_layout_named_pages_item import DocPagesSetName200ResponseLayoutNamedPagesItem
 from .doc_pages_set_name200response_layout_pages_item import DocPagesSetName200ResponseLayoutPagesItem
 
@@ -13,6 +14,7 @@ from .doc_pages_set_name200response_layout_pages_item import DocPagesSetName200R
 class DocPagesSetName200ResponseLayout(UniversalBaseModel):
     page_count: typing_extensions.Annotated[int, FieldMetadata(alias="pageCount"), pydantic.Field(alias="pageCount")]
     pages: typing.List[DocPagesSetName200ResponseLayoutPagesItem]
+    labels: typing.List[DocPagesSetName200ResponseLayoutLabelsItem]
     named_pages: typing_extensions.Annotated[
         typing.List[DocPagesSetName200ResponseLayoutNamedPagesItem],
         FieldMetadata(alias="namedPages"),

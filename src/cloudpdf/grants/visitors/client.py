@@ -59,7 +59,6 @@ class VisitorsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.grants.visitors.list(
             tenant_id="tenantId",
@@ -98,7 +97,6 @@ class VisitorsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.grants.visitors.delete(
             tenant_id="tenantId",
@@ -163,7 +161,6 @@ class AsyncVisitorsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -210,7 +207,6 @@ class AsyncVisitorsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 

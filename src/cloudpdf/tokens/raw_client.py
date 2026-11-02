@@ -30,7 +30,7 @@ class RawTokensClient:
         self, tenant_id: str, *, request: TokensIssueRequest, request_options: typing.Optional[RequestOptions] = None
     ) -> HttpResponse[TokensIssue200Response]:
         """
-        kind "tenant" requires the API token — authority mints only downward. Mounted only when the deployment can sign (HS256 mode); asymmetric deployments mint with their own private key.
+        Authority mints only downward: kind "doc" gives only document permissions the caller holds itself, kind "tenant" requires the API token, and kind "upload" requires docs.create instead of tokens.issue-doc, since an upload token can do only what docs.create allows. Mounted only when the deployment can sign (HS256 mode); asymmetric deployments mint with their own private key.
 
         Parameters
         ----------
@@ -184,7 +184,7 @@ class AsyncRawTokensClient:
         self, tenant_id: str, *, request: TokensIssueRequest, request_options: typing.Optional[RequestOptions] = None
     ) -> AsyncHttpResponse[TokensIssue200Response]:
         """
-        kind "tenant" requires the API token — authority mints only downward. Mounted only when the deployment can sign (HS256 mode); asymmetric deployments mint with their own private key.
+        Authority mints only downward: kind "doc" gives only document permissions the caller holds itself, kind "tenant" requires the API token, and kind "upload" requires docs.create instead of tokens.issue-doc, since an upload token can do only what docs.create allows. Mounted only when the deployment can sign (HS256 mode); asymmetric deployments mint with their own private key.
 
         Parameters
         ----------

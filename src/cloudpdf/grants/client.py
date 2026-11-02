@@ -82,7 +82,6 @@ class GrantsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.grants.exchange(
             grant="grant",
@@ -135,7 +134,6 @@ class GrantsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.grants.list(
             tenant_id="tenantId",
@@ -166,7 +164,7 @@ class GrantsClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> GrantsCreate200Response:
         """
-        The returned id is what a link page or an embed opens. Mounted only when the deployment can sign (HS256 mode) — exchange mints session JWTs, so grants exist only where minting does.
+        The returned id is what a link page or an embed opens. Its scope gives only document permissions the caller holds itself, as tokens.issue does. Mounted only when the deployment can sign (HS256 mode) — exchange mints session JWTs, so grants exist only where minting does.
 
         Parameters
         ----------
@@ -212,7 +210,6 @@ class GrantsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.grants.create(
             tenant_id="tenantId",
@@ -263,7 +260,6 @@ class GrantsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.grants.get(
             tenant_id="tenantId",
@@ -294,7 +290,6 @@ class GrantsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.grants.delete(
             tenant_id="tenantId",
@@ -371,7 +366,6 @@ class GrantsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.grants.update(
             tenant_id="tenantId",
@@ -424,7 +418,6 @@ class GrantsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.grants.archive(
             tenant_id="tenantId",
@@ -501,7 +494,6 @@ class AsyncGrantsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -562,7 +554,6 @@ class AsyncGrantsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -599,7 +590,7 @@ class AsyncGrantsClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> GrantsCreate200Response:
         """
-        The returned id is what a link page or an embed opens. Mounted only when the deployment can sign (HS256 mode) — exchange mints session JWTs, so grants exist only where minting does.
+        The returned id is what a link page or an embed opens. Its scope gives only document permissions the caller holds itself, as tokens.issue does. Mounted only when the deployment can sign (HS256 mode) — exchange mints session JWTs, so grants exist only where minting does.
 
         Parameters
         ----------
@@ -647,7 +638,6 @@ class AsyncGrantsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -706,7 +696,6 @@ class AsyncGrantsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -747,7 +736,6 @@ class AsyncGrantsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -832,7 +820,6 @@ class AsyncGrantsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -893,7 +880,6 @@ class AsyncGrantsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 

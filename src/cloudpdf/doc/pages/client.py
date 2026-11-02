@@ -78,7 +78,6 @@ class PagesClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.pages.set_scale(
             doc_id="docId",
@@ -133,7 +132,6 @@ class PagesClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.pages.viewports(
             doc_id="docId",
@@ -183,7 +181,6 @@ class PagesClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.pages.extract(
             doc_id="docId",
@@ -235,7 +232,6 @@ class PagesClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.pages.flatten(
             doc_id="docId",
@@ -292,7 +288,6 @@ class PagesClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.pages.set_name(
             doc_id="docId",
@@ -349,7 +344,6 @@ class PagesClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.pages.remove_name(
             doc_id="docId",
@@ -428,7 +422,6 @@ class AsyncPagesClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -491,7 +484,6 @@ class AsyncPagesClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -549,7 +541,6 @@ class AsyncPagesClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -610,7 +601,6 @@ class AsyncPagesClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -675,7 +665,6 @@ class AsyncPagesClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -740,7 +729,6 @@ class AsyncPagesClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 

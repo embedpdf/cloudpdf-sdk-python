@@ -43,7 +43,6 @@ class DeploymentClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.deployment.license_status()
         """
@@ -88,7 +87,6 @@ class AsyncDeploymentClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 

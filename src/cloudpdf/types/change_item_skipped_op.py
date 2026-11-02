@@ -33,6 +33,7 @@ ChangeItemSkippedOp = typing.Union[
         "pages.delete",
         "pages.insertBlank",
         "pages.insert",
+        "pages.copy",
         "attachments.create",
         "attachments.delete",
         "annotations.restore",

@@ -7,6 +7,7 @@ import typing
 import httpx
 from .core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from .core.logging import LogConfig, Logger
+from .environment import CloudPDFEnvironment
 
 if typing.TYPE_CHECKING:
     from .deployment.client import AsyncDeploymentClient, DeploymentClient
@@ -24,8 +25,17 @@ class CloudPDFClient:
 
     Parameters
     ----------
-    base_url : str
+    base_url : typing.Optional[str]
         The base url to use for requests from the client.
+
+    environment : CloudPDFEnvironment
+        The environment to use for requests from the client. from .environment import CloudPDFEnvironment
+
+
+
+        Defaults to CloudPDFEnvironment.SAAS
+
+
 
     token : typing.Optional[typing.Union[str, typing.Callable[[], str]]]
     headers : typing.Optional[typing.Dict[str, str]]
@@ -58,14 +68,14 @@ class CloudPDFClient:
 
     client = CloudPDFClient(
         token="YOUR_TOKEN",
-        base_url="https://yourhost.com/path/to/api",
     )
     """
 
     def __init__(
         self,
         *,
-        base_url: str,
+        base_url: typing.Optional[str] = None,
+        environment: CloudPDFEnvironment = CloudPDFEnvironment.SAAS,
         token: typing.Optional[typing.Union[str, typing.Callable[[], str]]] = None,
         headers: typing.Optional[typing.Dict[str, str]] = None,
         timeout: typing.Optional[float] = None,
@@ -79,7 +89,7 @@ class CloudPDFClient:
         _defaulted_timeout = timeout if timeout is not None else 60 if httpx_client is None else None
         _defaulted_max_retries = max_retries if max_retries is not None else 2
         self._client_wrapper = SyncClientWrapper(
-            base_url=base_url,
+            base_url=_get_base_url(base_url=base_url, environment=environment),
             token=token,
             headers=headers,
             httpx_client=httpx_client
@@ -182,8 +192,17 @@ class AsyncCloudPDFClient:
 
     Parameters
     ----------
-    base_url : str
+    base_url : typing.Optional[str]
         The base url to use for requests from the client.
+
+    environment : CloudPDFEnvironment
+        The environment to use for requests from the client. from .environment import CloudPDFEnvironment
+
+
+
+        Defaults to CloudPDFEnvironment.SAAS
+
+
 
     token : typing.Optional[typing.Union[str, typing.Callable[[], str]]]
     headers : typing.Optional[typing.Dict[str, str]]
@@ -219,14 +238,14 @@ class AsyncCloudPDFClient:
 
     client = AsyncCloudPDFClient(
         token="YOUR_TOKEN",
-        base_url="https://yourhost.com/path/to/api",
     )
     """
 
     def __init__(
         self,
         *,
-        base_url: str,
+        base_url: typing.Optional[str] = None,
+        environment: CloudPDFEnvironment = CloudPDFEnvironment.SAAS,
         token: typing.Optional[typing.Union[str, typing.Callable[[], str]]] = None,
         headers: typing.Optional[typing.Dict[str, str]] = None,
         async_token: typing.Optional[typing.Callable[[], typing.Awaitable[str]]] = None,
@@ -241,7 +260,7 @@ class AsyncCloudPDFClient:
         _defaulted_timeout = timeout if timeout is not None else 60 if httpx_client is None else None
         _defaulted_max_retries = max_retries if max_retries is not None else 2
         self._client_wrapper = AsyncClientWrapper(
-            base_url=base_url,
+            base_url=_get_base_url(base_url=base_url, environment=environment),
             token=token,
             headers=headers,
             async_token=async_token,
@@ -317,3 +336,12 @@ class AsyncCloudPDFClient:
 
             self._tokens = AsyncTokensClient(client_wrapper=self._client_wrapper)
         return self._tokens
+
+
+def _get_base_url(*, base_url: typing.Optional[str] = None, environment: CloudPDFEnvironment) -> str:
+    if base_url is not None:
+        return base_url
+    elif environment is not None:
+        return environment.value
+    else:
+        raise Exception("Please pass in either base_url or environment to construct the client")

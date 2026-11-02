@@ -70,7 +70,6 @@ class RedactionsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.redactions.apply(
             doc_id="docId",
@@ -148,7 +147,6 @@ class AsyncRedactionsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 

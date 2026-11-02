@@ -55,7 +55,6 @@ class OutlineClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.outline.get(
             doc_id="docId",
@@ -117,7 +116,6 @@ class AsyncOutlineClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 

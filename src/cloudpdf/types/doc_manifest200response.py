@@ -34,6 +34,12 @@ class DocManifest200Response(UniversalBaseModel):
     outline_version: typing_extensions.Annotated[
         typing.Optional[int], FieldMetadata(alias="outlineVersion"), pydantic.Field(alias="outlineVersion")
     ] = None
+    fonts_version: typing_extensions.Annotated[
+        typing.Optional[int], FieldMetadata(alias="fontsVersion"), pydantic.Field(alias="fontsVersion")
+    ] = None
+    server_fonts: typing_extensions.Annotated[
+        str, FieldMetadata(alias="serverFonts"), pydantic.Field(alias="serverFonts")
+    ]
     audit_head: typing_extensions.Annotated[int, FieldMetadata(alias="auditHead"), pydantic.Field(alias="auditHead")]
     base_sha: typing_extensions.Annotated[str, FieldMetadata(alias="baseSha"), pydantic.Field(alias="baseSha")]
     layer_version: typing_extensions.Annotated[

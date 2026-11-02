@@ -72,7 +72,6 @@ class AnnotationsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.annotations.list_all(
             doc_id="docId",
@@ -120,7 +119,6 @@ class AnnotationsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.annotations.list(
             doc_id="docId",
@@ -178,7 +176,6 @@ class AnnotationsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.annotations.create(
             doc_id="docId",
@@ -242,7 +239,6 @@ class AnnotationsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.annotations.delete(
             doc_id="docId",
@@ -309,7 +305,6 @@ class AnnotationsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.annotations.update(
             doc_id="docId",
@@ -371,7 +366,6 @@ class AnnotationsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.annotations.read_appearance(
             doc_id="docId",
@@ -432,7 +426,6 @@ class AnnotationsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.annotations.read_file(
             doc_id="docId",
@@ -490,7 +483,6 @@ class AnnotationsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.annotations.export_appearance(
             doc_id="docId",
@@ -552,7 +544,6 @@ class AnnotationsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.annotations.flatten(
             doc_id="docId",
@@ -618,7 +609,6 @@ class AnnotationsClient:
 
         client = CloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
         client.doc.annotations.reorder(
             doc_id="docId",
@@ -700,7 +690,6 @@ class AsyncAnnotationsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -756,7 +745,6 @@ class AsyncAnnotationsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -822,7 +810,6 @@ class AsyncAnnotationsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -894,7 +881,6 @@ class AsyncAnnotationsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -969,7 +955,6 @@ class AsyncAnnotationsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -1039,7 +1024,6 @@ class AsyncAnnotationsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -1109,7 +1093,6 @@ class AsyncAnnotationsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -1176,7 +1159,6 @@ class AsyncAnnotationsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -1247,7 +1229,6 @@ class AsyncAnnotationsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
@@ -1321,7 +1302,6 @@ class AsyncAnnotationsClient:
 
         client = AsyncCloudPDFClient(
             token="YOUR_TOKEN",
-            base_url="https://yourhost.com/path/to/api",
         )
 
 
