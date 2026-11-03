@@ -1688,6 +1688,92 @@ client.tenants.delete(
 </dl>
 </details>
 
+<details><summary><code>client.tenants.<a href="src/cloudpdf/tenants/client.py">update</a>(...) -> TenantsUpdate200Response</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+A feature names an installed module; any other id is a 400. A module route answers a tenant without its feature 403 FeatureNotEnabled, and one whose feature is stopped 402 FeatureStopped (details.feature, details.stopped). Other replicas apply a change within 30 seconds.
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient, TenantFeature
+from cloudpdf.environment import CloudPDFEnvironment
+
+client = CloudPDFClient(
+    token="<token>",
+    environment=CloudPDFEnvironment.SAAS,
+)
+
+client.tenants.update(
+    tenant_id="tenantId",
+    features=[
+        TenantFeature(
+            id="id",
+        )
+    ],
+)
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**tenant_id:** `str` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**features:** `typing.List[TenantFeature]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 <details><summary><code>client.tenants.<a href="src/cloudpdf/tenants/client.py">resume</a>(...)</code></summary>
 <dl>
 <dd>

@@ -6,6 +6,7 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
+from .tenant_feature import TenantFeature
 from .tenants_get200response_tenant_status import TenantsGet200ResponseTenantStatus
 
 
@@ -16,6 +17,7 @@ class TenantsGet200ResponseTenant(UniversalBaseModel):
         bool, FieldMetadata(alias="autoProvisioned"), pydantic.Field(alias="autoProvisioned")
     ]
     status: typing.Optional[TenantsGet200ResponseTenantStatus] = None
+    features: typing.Optional[typing.List[TenantFeature]] = None
     created_at: typing_extensions.Annotated[float, FieldMetadata(alias="createdAt"), pydantic.Field(alias="createdAt")]
 
     if IS_PYDANTIC_V2:

@@ -2863,6 +2863,8 @@ if typing.TYPE_CHECKING:
     from .pdf_link_target_writable_uri import PdfLinkTargetWritableUri
     from .pdf_page_actions import PdfPageActions
     from .resolved_font_run import ResolvedFontRun
+    from .tenant_feature import TenantFeature
+    from .tenant_feature_stopped import TenantFeatureStopped
     from .tenants_create200response import TenantsCreate200Response
     from .tenants_create200response_tenant import TenantsCreate200ResponseTenant
     from .tenants_create200response_tenant_status import TenantsCreate200ResponseTenantStatus
@@ -2878,6 +2880,11 @@ if typing.TYPE_CHECKING:
     from .tenants_list400response import TenantsList400Response
     from .tenants_resume_response import TenantsResumeResponse
     from .tenants_suspend_response import TenantsSuspendResponse
+    from .tenants_update200response import TenantsUpdate200Response
+    from .tenants_update200response_tenant import TenantsUpdate200ResponseTenant
+    from .tenants_update200response_tenant_status import TenantsUpdate200ResponseTenantStatus
+    from .tenants_update400response import TenantsUpdate400Response
+    from .tenants_update404response import TenantsUpdate404Response
     from .tenants_usage200response import TenantsUsage200Response
     from .tenants_usage200response_metrics import TenantsUsage200ResponseMetrics
     from .tenants_usage400response import TenantsUsage400Response
@@ -5033,6 +5040,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "PdfLinkTarget_Uri": ".pdf_link_target",
     "PdfPageActions": ".pdf_page_actions",
     "ResolvedFontRun": ".resolved_font_run",
+    "TenantFeature": ".tenant_feature",
+    "TenantFeatureStopped": ".tenant_feature_stopped",
     "TenantsCreate200Response": ".tenants_create200response",
     "TenantsCreate200ResponseTenant": ".tenants_create200response_tenant",
     "TenantsCreate200ResponseTenantStatus": ".tenants_create200response_tenant_status",
@@ -5048,6 +5057,11 @@ _dynamic_imports: typing.Dict[str, str] = {
     "TenantsList400Response": ".tenants_list400response",
     "TenantsResumeResponse": ".tenants_resume_response",
     "TenantsSuspendResponse": ".tenants_suspend_response",
+    "TenantsUpdate200Response": ".tenants_update200response",
+    "TenantsUpdate200ResponseTenant": ".tenants_update200response_tenant",
+    "TenantsUpdate200ResponseTenantStatus": ".tenants_update200response_tenant_status",
+    "TenantsUpdate400Response": ".tenants_update400response",
+    "TenantsUpdate404Response": ".tenants_update404response",
     "TenantsUsage200Response": ".tenants_usage200response",
     "TenantsUsage200ResponseMetrics": ".tenants_usage200response_metrics",
     "TenantsUsage400Response": ".tenants_usage400response",
@@ -7225,6 +7239,8 @@ __all__ = [
     "PdfLinkTarget_Uri",
     "PdfPageActions",
     "ResolvedFontRun",
+    "TenantFeature",
+    "TenantFeatureStopped",
     "TenantsCreate200Response",
     "TenantsCreate200ResponseTenant",
     "TenantsCreate200ResponseTenantStatus",
@@ -7240,6 +7256,11 @@ __all__ = [
     "TenantsList400Response",
     "TenantsResumeResponse",
     "TenantsSuspendResponse",
+    "TenantsUpdate200Response",
+    "TenantsUpdate200ResponseTenant",
+    "TenantsUpdate200ResponseTenantStatus",
+    "TenantsUpdate400Response",
+    "TenantsUpdate404Response",
     "TenantsUsage200Response",
     "TenantsUsage200ResponseMetrics",
     "TenantsUsage400Response",
