@@ -4,9 +4,11 @@ import typing
 
 from ..core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ..core.request_options import RequestOptions
+from ..types.tenant_feature import TenantFeature
 from ..types.tenants_create200response import TenantsCreate200Response
 from ..types.tenants_get200response import TenantsGet200Response
 from ..types.tenants_list200response import TenantsList200Response
+from ..types.tenants_update200response import TenantsUpdate200Response
 from ..types.tenants_usage200response import TenantsUsage200Response
 from .raw_client import AsyncRawTenantsClient, RawTenantsClient
 
@@ -150,6 +152,49 @@ class TenantsClient:
         )
         """
         _response = self._raw_client.delete(tenant_id, request_options=request_options)
+        return _response.data
+
+    def update(
+        self,
+        tenant_id: str,
+        *,
+        features: typing.Sequence[TenantFeature],
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> TenantsUpdate200Response:
+        """
+        A feature names an installed module; any other id is a 400. A module route answers a tenant without its feature 403 FeatureNotEnabled, and one whose feature is stopped 402 FeatureStopped (details.feature, details.stopped). Other replicas apply a change within 30 seconds.
+
+        Parameters
+        ----------
+        tenant_id : str
+
+        features : typing.Sequence[TenantFeature]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        TenantsUpdate200Response
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient, TenantFeature
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+        )
+        client.tenants.update(
+            tenant_id="tenantId",
+            features=[
+                TenantFeature(
+                    id="id",
+                )
+            ],
+        )
+        """
+        _response = self._raw_client.update(tenant_id, features=features, request_options=request_options)
         return _response.data
 
     def resume(self, tenant_id: str, *, request_options: typing.Optional[RequestOptions] = None) -> None:
@@ -425,6 +470,57 @@ class AsyncTenantsClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.delete(tenant_id, request_options=request_options)
+        return _response.data
+
+    async def update(
+        self,
+        tenant_id: str,
+        *,
+        features: typing.Sequence[TenantFeature],
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> TenantsUpdate200Response:
+        """
+        A feature names an installed module; any other id is a 400. A module route answers a tenant without its feature 403 FeatureNotEnabled, and one whose feature is stopped 402 FeatureStopped (details.feature, details.stopped). Other replicas apply a change within 30 seconds.
+
+        Parameters
+        ----------
+        tenant_id : str
+
+        features : typing.Sequence[TenantFeature]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        TenantsUpdate200Response
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient, TenantFeature
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+        )
+
+
+        async def main() -> None:
+            await client.tenants.update(
+                tenant_id="tenantId",
+                features=[
+                    TenantFeature(
+                        id="id",
+                    )
+                ],
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.update(tenant_id, features=features, request_options=request_options)
         return _response.data
 
     async def resume(self, tenant_id: str, *, request_options: typing.Optional[RequestOptions] = None) -> None:
