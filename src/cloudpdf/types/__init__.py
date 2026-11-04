@@ -97,37 +97,6 @@ if typing.TYPE_CHECKING:
     from .annotation_draft_free_text_rect import AnnotationDraftFreeTextRect
     from .annotation_draft_free_text_reply import AnnotationDraftFreeTextReply
     from .annotation_draft_free_text_reply_type import AnnotationDraftFreeTextReplyType
-    from .annotation_draft_free_text_rich_text import AnnotationDraftFreeTextRichText
-    from .annotation_draft_free_text_rich_text_body import AnnotationDraftFreeTextRichTextBody
-    from .annotation_draft_free_text_rich_text_body_align import AnnotationDraftFreeTextRichTextBodyAlign
-    from .annotation_draft_free_text_rich_text_body_decoration_item import (
-        AnnotationDraftFreeTextRichTextBodyDecorationItem,
-    )
-    from .annotation_draft_free_text_rich_text_body_dir import AnnotationDraftFreeTextRichTextBodyDir
-    from .annotation_draft_free_text_rich_text_body_margins import AnnotationDraftFreeTextRichTextBodyMargins
-    from .annotation_draft_free_text_rich_text_body_script import AnnotationDraftFreeTextRichTextBodyScript
-    from .annotation_draft_free_text_rich_text_paragraphs_item import AnnotationDraftFreeTextRichTextParagraphsItem
-    from .annotation_draft_free_text_rich_text_paragraphs_item_align import (
-        AnnotationDraftFreeTextRichTextParagraphsItemAlign,
-    )
-    from .annotation_draft_free_text_rich_text_paragraphs_item_dir import (
-        AnnotationDraftFreeTextRichTextParagraphsItemDir,
-    )
-    from .annotation_draft_free_text_rich_text_paragraphs_item_margins import (
-        AnnotationDraftFreeTextRichTextParagraphsItemMargins,
-    )
-    from .annotation_draft_free_text_rich_text_paragraphs_item_runs_item import (
-        AnnotationDraftFreeTextRichTextParagraphsItemRunsItem,
-    )
-    from .annotation_draft_free_text_rich_text_paragraphs_item_runs_item_style import (
-        AnnotationDraftFreeTextRichTextParagraphsItemRunsItemStyle,
-    )
-    from .annotation_draft_free_text_rich_text_paragraphs_item_runs_item_style_decoration_item import (
-        AnnotationDraftFreeTextRichTextParagraphsItemRunsItemStyleDecorationItem,
-    )
-    from .annotation_draft_free_text_rich_text_paragraphs_item_runs_item_style_script import (
-        AnnotationDraftFreeTextRichTextParagraphsItemRunsItemStyleScript,
-    )
     from .annotation_draft_free_text_text_align import AnnotationDraftFreeTextTextAlign
     from .annotation_draft_free_text_vertical_align import AnnotationDraftFreeTextVerticalAlign
     from .annotation_draft_highlight import AnnotationDraftHighlight
@@ -477,29 +446,6 @@ if typing.TYPE_CHECKING:
     from .annotation_free_text_rect import AnnotationFreeTextRect
     from .annotation_free_text_reply import AnnotationFreeTextReply
     from .annotation_free_text_reply_type import AnnotationFreeTextReplyType
-    from .annotation_free_text_rich_text import AnnotationFreeTextRichText
-    from .annotation_free_text_rich_text_body import AnnotationFreeTextRichTextBody
-    from .annotation_free_text_rich_text_body_align import AnnotationFreeTextRichTextBodyAlign
-    from .annotation_free_text_rich_text_body_decoration_item import AnnotationFreeTextRichTextBodyDecorationItem
-    from .annotation_free_text_rich_text_body_dir import AnnotationFreeTextRichTextBodyDir
-    from .annotation_free_text_rich_text_body_margins import AnnotationFreeTextRichTextBodyMargins
-    from .annotation_free_text_rich_text_body_script import AnnotationFreeTextRichTextBodyScript
-    from .annotation_free_text_rich_text_paragraphs_item import AnnotationFreeTextRichTextParagraphsItem
-    from .annotation_free_text_rich_text_paragraphs_item_align import AnnotationFreeTextRichTextParagraphsItemAlign
-    from .annotation_free_text_rich_text_paragraphs_item_dir import AnnotationFreeTextRichTextParagraphsItemDir
-    from .annotation_free_text_rich_text_paragraphs_item_margins import AnnotationFreeTextRichTextParagraphsItemMargins
-    from .annotation_free_text_rich_text_paragraphs_item_runs_item import (
-        AnnotationFreeTextRichTextParagraphsItemRunsItem,
-    )
-    from .annotation_free_text_rich_text_paragraphs_item_runs_item_style import (
-        AnnotationFreeTextRichTextParagraphsItemRunsItemStyle,
-    )
-    from .annotation_free_text_rich_text_paragraphs_item_runs_item_style_decoration_item import (
-        AnnotationFreeTextRichTextParagraphsItemRunsItemStyleDecorationItem,
-    )
-    from .annotation_free_text_rich_text_paragraphs_item_runs_item_style_script import (
-        AnnotationFreeTextRichTextParagraphsItemRunsItemStyleScript,
-    )
     from .annotation_free_text_text_align import AnnotationFreeTextTextAlign
     from .annotation_free_text_vertical_align import AnnotationFreeTextVerticalAlign
     from .annotation_highlight import AnnotationHighlight
@@ -647,37 +593,6 @@ if typing.TYPE_CHECKING:
     from .annotation_patch_free_text_rect import AnnotationPatchFreeTextRect
     from .annotation_patch_free_text_reply import AnnotationPatchFreeTextReply
     from .annotation_patch_free_text_reply_type import AnnotationPatchFreeTextReplyType
-    from .annotation_patch_free_text_rich_text import AnnotationPatchFreeTextRichText
-    from .annotation_patch_free_text_rich_text_body import AnnotationPatchFreeTextRichTextBody
-    from .annotation_patch_free_text_rich_text_body_align import AnnotationPatchFreeTextRichTextBodyAlign
-    from .annotation_patch_free_text_rich_text_body_decoration_item import (
-        AnnotationPatchFreeTextRichTextBodyDecorationItem,
-    )
-    from .annotation_patch_free_text_rich_text_body_dir import AnnotationPatchFreeTextRichTextBodyDir
-    from .annotation_patch_free_text_rich_text_body_margins import AnnotationPatchFreeTextRichTextBodyMargins
-    from .annotation_patch_free_text_rich_text_body_script import AnnotationPatchFreeTextRichTextBodyScript
-    from .annotation_patch_free_text_rich_text_paragraphs_item import AnnotationPatchFreeTextRichTextParagraphsItem
-    from .annotation_patch_free_text_rich_text_paragraphs_item_align import (
-        AnnotationPatchFreeTextRichTextParagraphsItemAlign,
-    )
-    from .annotation_patch_free_text_rich_text_paragraphs_item_dir import (
-        AnnotationPatchFreeTextRichTextParagraphsItemDir,
-    )
-    from .annotation_patch_free_text_rich_text_paragraphs_item_margins import (
-        AnnotationPatchFreeTextRichTextParagraphsItemMargins,
-    )
-    from .annotation_patch_free_text_rich_text_paragraphs_item_runs_item import (
-        AnnotationPatchFreeTextRichTextParagraphsItemRunsItem,
-    )
-    from .annotation_patch_free_text_rich_text_paragraphs_item_runs_item_style import (
-        AnnotationPatchFreeTextRichTextParagraphsItemRunsItemStyle,
-    )
-    from .annotation_patch_free_text_rich_text_paragraphs_item_runs_item_style_decoration_item import (
-        AnnotationPatchFreeTextRichTextParagraphsItemRunsItemStyleDecorationItem,
-    )
-    from .annotation_patch_free_text_rich_text_paragraphs_item_runs_item_style_script import (
-        AnnotationPatchFreeTextRichTextParagraphsItemRunsItemStyleScript,
-    )
     from .annotation_patch_free_text_text_align import AnnotationPatchFreeTextTextAlign
     from .annotation_patch_free_text_vertical_align import AnnotationPatchFreeTextVerticalAlign
     from .annotation_patch_highlight import AnnotationPatchHighlight
@@ -1613,6 +1528,7 @@ if typing.TYPE_CHECKING:
     from .change_op_pages_rotate import ChangeOpPagesRotate
     from .change_result import ChangeResult
     from .deployment_license_status_response import DeploymentLicenseStatusResponse
+    from .deployment_modules_response import DeploymentModulesResponse
     from .doc_annotations_create200response import DocAnnotationsCreate200Response
     from .doc_annotations_create400response import DocAnnotationsCreate400Response
     from .doc_annotations_create404response import DocAnnotationsCreate404Response
@@ -2730,6 +2646,11 @@ if typing.TYPE_CHECKING:
     from .identity import Identity
     from .metadata_patch import MetadataPatch
     from .metadata_patch_trapped import MetadataPatchTrapped
+    from .module_manifest import ModuleManifest
+    from .module_manifest_requires import ModuleManifestRequires
+    from .module_meter import ModuleMeter
+    from .module_permission import ModulePermission
+    from .module_permission_level import ModulePermissionLevel
     from .mutation_meta import MutationMeta
     from .outline_item import OutlineItem
     from .outline_item_draft import OutlineItemDraft
@@ -2863,6 +2784,46 @@ if typing.TYPE_CHECKING:
     from .pdf_link_target_writable_uri import PdfLinkTargetWritableUri
     from .pdf_page_actions import PdfPageActions
     from .resolved_font_run import ResolvedFontRun
+    from .rich_text_document import RichTextDocument
+    from .rich_text_document_body import RichTextDocumentBody
+    from .rich_text_document_body_align import RichTextDocumentBodyAlign
+    from .rich_text_document_body_decoration_item import RichTextDocumentBodyDecorationItem
+    from .rich_text_document_body_dir import RichTextDocumentBodyDir
+    from .rich_text_document_body_margins import RichTextDocumentBodyMargins
+    from .rich_text_document_body_script import RichTextDocumentBodyScript
+    from .rich_text_document_input import RichTextDocumentInput
+    from .rich_text_document_input_body import RichTextDocumentInputBody
+    from .rich_text_document_input_body_align import RichTextDocumentInputBodyAlign
+    from .rich_text_document_input_body_decoration_item import RichTextDocumentInputBodyDecorationItem
+    from .rich_text_document_input_body_dir import RichTextDocumentInputBodyDir
+    from .rich_text_document_input_body_margins import RichTextDocumentInputBodyMargins
+    from .rich_text_document_input_body_script import RichTextDocumentInputBodyScript
+    from .rich_text_document_input_paragraphs_item import RichTextDocumentInputParagraphsItem
+    from .rich_text_document_input_paragraphs_item_align import RichTextDocumentInputParagraphsItemAlign
+    from .rich_text_document_input_paragraphs_item_dir import RichTextDocumentInputParagraphsItemDir
+    from .rich_text_document_input_paragraphs_item_margins import RichTextDocumentInputParagraphsItemMargins
+    from .rich_text_document_input_paragraphs_item_runs_item import RichTextDocumentInputParagraphsItemRunsItem
+    from .rich_text_document_input_paragraphs_item_runs_item_style import (
+        RichTextDocumentInputParagraphsItemRunsItemStyle,
+    )
+    from .rich_text_document_input_paragraphs_item_runs_item_style_decoration_item import (
+        RichTextDocumentInputParagraphsItemRunsItemStyleDecorationItem,
+    )
+    from .rich_text_document_input_paragraphs_item_runs_item_style_script import (
+        RichTextDocumentInputParagraphsItemRunsItemStyleScript,
+    )
+    from .rich_text_document_paragraphs_item import RichTextDocumentParagraphsItem
+    from .rich_text_document_paragraphs_item_align import RichTextDocumentParagraphsItemAlign
+    from .rich_text_document_paragraphs_item_dir import RichTextDocumentParagraphsItemDir
+    from .rich_text_document_paragraphs_item_margins import RichTextDocumentParagraphsItemMargins
+    from .rich_text_document_paragraphs_item_runs_item import RichTextDocumentParagraphsItemRunsItem
+    from .rich_text_document_paragraphs_item_runs_item_style import RichTextDocumentParagraphsItemRunsItemStyle
+    from .rich_text_document_paragraphs_item_runs_item_style_decoration_item import (
+        RichTextDocumentParagraphsItemRunsItemStyleDecorationItem,
+    )
+    from .rich_text_document_paragraphs_item_runs_item_style_script import (
+        RichTextDocumentParagraphsItemRunsItemStyleScript,
+    )
     from .tenant_feature import TenantFeature
     from .tenant_feature_stopped import TenantFeatureStopped
     from .tenants_create200response import TenantsCreate200Response
@@ -2981,21 +2942,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "AnnotationDraftFreeTextRect": ".annotation_draft_free_text_rect",
     "AnnotationDraftFreeTextReply": ".annotation_draft_free_text_reply",
     "AnnotationDraftFreeTextReplyType": ".annotation_draft_free_text_reply_type",
-    "AnnotationDraftFreeTextRichText": ".annotation_draft_free_text_rich_text",
-    "AnnotationDraftFreeTextRichTextBody": ".annotation_draft_free_text_rich_text_body",
-    "AnnotationDraftFreeTextRichTextBodyAlign": ".annotation_draft_free_text_rich_text_body_align",
-    "AnnotationDraftFreeTextRichTextBodyDecorationItem": ".annotation_draft_free_text_rich_text_body_decoration_item",
-    "AnnotationDraftFreeTextRichTextBodyDir": ".annotation_draft_free_text_rich_text_body_dir",
-    "AnnotationDraftFreeTextRichTextBodyMargins": ".annotation_draft_free_text_rich_text_body_margins",
-    "AnnotationDraftFreeTextRichTextBodyScript": ".annotation_draft_free_text_rich_text_body_script",
-    "AnnotationDraftFreeTextRichTextParagraphsItem": ".annotation_draft_free_text_rich_text_paragraphs_item",
-    "AnnotationDraftFreeTextRichTextParagraphsItemAlign": ".annotation_draft_free_text_rich_text_paragraphs_item_align",
-    "AnnotationDraftFreeTextRichTextParagraphsItemDir": ".annotation_draft_free_text_rich_text_paragraphs_item_dir",
-    "AnnotationDraftFreeTextRichTextParagraphsItemMargins": ".annotation_draft_free_text_rich_text_paragraphs_item_margins",
-    "AnnotationDraftFreeTextRichTextParagraphsItemRunsItem": ".annotation_draft_free_text_rich_text_paragraphs_item_runs_item",
-    "AnnotationDraftFreeTextRichTextParagraphsItemRunsItemStyle": ".annotation_draft_free_text_rich_text_paragraphs_item_runs_item_style",
-    "AnnotationDraftFreeTextRichTextParagraphsItemRunsItemStyleDecorationItem": ".annotation_draft_free_text_rich_text_paragraphs_item_runs_item_style_decoration_item",
-    "AnnotationDraftFreeTextRichTextParagraphsItemRunsItemStyleScript": ".annotation_draft_free_text_rich_text_paragraphs_item_runs_item_style_script",
     "AnnotationDraftFreeTextTextAlign": ".annotation_draft_free_text_text_align",
     "AnnotationDraftFreeTextVerticalAlign": ".annotation_draft_free_text_vertical_align",
     "AnnotationDraftHighlight": ".annotation_draft_highlight",
@@ -3252,21 +3198,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "AnnotationFreeTextRect": ".annotation_free_text_rect",
     "AnnotationFreeTextReply": ".annotation_free_text_reply",
     "AnnotationFreeTextReplyType": ".annotation_free_text_reply_type",
-    "AnnotationFreeTextRichText": ".annotation_free_text_rich_text",
-    "AnnotationFreeTextRichTextBody": ".annotation_free_text_rich_text_body",
-    "AnnotationFreeTextRichTextBodyAlign": ".annotation_free_text_rich_text_body_align",
-    "AnnotationFreeTextRichTextBodyDecorationItem": ".annotation_free_text_rich_text_body_decoration_item",
-    "AnnotationFreeTextRichTextBodyDir": ".annotation_free_text_rich_text_body_dir",
-    "AnnotationFreeTextRichTextBodyMargins": ".annotation_free_text_rich_text_body_margins",
-    "AnnotationFreeTextRichTextBodyScript": ".annotation_free_text_rich_text_body_script",
-    "AnnotationFreeTextRichTextParagraphsItem": ".annotation_free_text_rich_text_paragraphs_item",
-    "AnnotationFreeTextRichTextParagraphsItemAlign": ".annotation_free_text_rich_text_paragraphs_item_align",
-    "AnnotationFreeTextRichTextParagraphsItemDir": ".annotation_free_text_rich_text_paragraphs_item_dir",
-    "AnnotationFreeTextRichTextParagraphsItemMargins": ".annotation_free_text_rich_text_paragraphs_item_margins",
-    "AnnotationFreeTextRichTextParagraphsItemRunsItem": ".annotation_free_text_rich_text_paragraphs_item_runs_item",
-    "AnnotationFreeTextRichTextParagraphsItemRunsItemStyle": ".annotation_free_text_rich_text_paragraphs_item_runs_item_style",
-    "AnnotationFreeTextRichTextParagraphsItemRunsItemStyleDecorationItem": ".annotation_free_text_rich_text_paragraphs_item_runs_item_style_decoration_item",
-    "AnnotationFreeTextRichTextParagraphsItemRunsItemStyleScript": ".annotation_free_text_rich_text_paragraphs_item_runs_item_style_script",
     "AnnotationFreeTextTextAlign": ".annotation_free_text_text_align",
     "AnnotationFreeTextVerticalAlign": ".annotation_free_text_vertical_align",
     "AnnotationHighlight": ".annotation_highlight",
@@ -3373,21 +3304,6 @@ _dynamic_imports: typing.Dict[str, str] = {
     "AnnotationPatchFreeTextRect": ".annotation_patch_free_text_rect",
     "AnnotationPatchFreeTextReply": ".annotation_patch_free_text_reply",
     "AnnotationPatchFreeTextReplyType": ".annotation_patch_free_text_reply_type",
-    "AnnotationPatchFreeTextRichText": ".annotation_patch_free_text_rich_text",
-    "AnnotationPatchFreeTextRichTextBody": ".annotation_patch_free_text_rich_text_body",
-    "AnnotationPatchFreeTextRichTextBodyAlign": ".annotation_patch_free_text_rich_text_body_align",
-    "AnnotationPatchFreeTextRichTextBodyDecorationItem": ".annotation_patch_free_text_rich_text_body_decoration_item",
-    "AnnotationPatchFreeTextRichTextBodyDir": ".annotation_patch_free_text_rich_text_body_dir",
-    "AnnotationPatchFreeTextRichTextBodyMargins": ".annotation_patch_free_text_rich_text_body_margins",
-    "AnnotationPatchFreeTextRichTextBodyScript": ".annotation_patch_free_text_rich_text_body_script",
-    "AnnotationPatchFreeTextRichTextParagraphsItem": ".annotation_patch_free_text_rich_text_paragraphs_item",
-    "AnnotationPatchFreeTextRichTextParagraphsItemAlign": ".annotation_patch_free_text_rich_text_paragraphs_item_align",
-    "AnnotationPatchFreeTextRichTextParagraphsItemDir": ".annotation_patch_free_text_rich_text_paragraphs_item_dir",
-    "AnnotationPatchFreeTextRichTextParagraphsItemMargins": ".annotation_patch_free_text_rich_text_paragraphs_item_margins",
-    "AnnotationPatchFreeTextRichTextParagraphsItemRunsItem": ".annotation_patch_free_text_rich_text_paragraphs_item_runs_item",
-    "AnnotationPatchFreeTextRichTextParagraphsItemRunsItemStyle": ".annotation_patch_free_text_rich_text_paragraphs_item_runs_item_style",
-    "AnnotationPatchFreeTextRichTextParagraphsItemRunsItemStyleDecorationItem": ".annotation_patch_free_text_rich_text_paragraphs_item_runs_item_style_decoration_item",
-    "AnnotationPatchFreeTextRichTextParagraphsItemRunsItemStyleScript": ".annotation_patch_free_text_rich_text_paragraphs_item_runs_item_style_script",
     "AnnotationPatchFreeTextTextAlign": ".annotation_patch_free_text_text_align",
     "AnnotationPatchFreeTextVerticalAlign": ".annotation_patch_free_text_vertical_align",
     "AnnotationPatchHighlight": ".annotation_patch_highlight",
@@ -4126,6 +4042,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeOp_PagesRotate": ".change_op",
     "ChangeResult": ".change_result",
     "DeploymentLicenseStatusResponse": ".deployment_license_status_response",
+    "DeploymentModulesResponse": ".deployment_modules_response",
     "DocAnnotationsCreate200Response": ".doc_annotations_create200response",
     "DocAnnotationsCreate400Response": ".doc_annotations_create400response",
     "DocAnnotationsCreate404Response": ".doc_annotations_create404response",
@@ -4915,6 +4832,11 @@ _dynamic_imports: typing.Dict[str, str] = {
     "Identity": ".identity",
     "MetadataPatch": ".metadata_patch",
     "MetadataPatchTrapped": ".metadata_patch_trapped",
+    "ModuleManifest": ".module_manifest",
+    "ModuleManifestRequires": ".module_manifest_requires",
+    "ModuleMeter": ".module_meter",
+    "ModulePermission": ".module_permission",
+    "ModulePermissionLevel": ".module_permission_level",
     "MutationMeta": ".mutation_meta",
     "OutlineItem": ".outline_item",
     "OutlineItemDraft": ".outline_item_draft",
@@ -5040,6 +4962,36 @@ _dynamic_imports: typing.Dict[str, str] = {
     "PdfLinkTarget_Uri": ".pdf_link_target",
     "PdfPageActions": ".pdf_page_actions",
     "ResolvedFontRun": ".resolved_font_run",
+    "RichTextDocument": ".rich_text_document",
+    "RichTextDocumentBody": ".rich_text_document_body",
+    "RichTextDocumentBodyAlign": ".rich_text_document_body_align",
+    "RichTextDocumentBodyDecorationItem": ".rich_text_document_body_decoration_item",
+    "RichTextDocumentBodyDir": ".rich_text_document_body_dir",
+    "RichTextDocumentBodyMargins": ".rich_text_document_body_margins",
+    "RichTextDocumentBodyScript": ".rich_text_document_body_script",
+    "RichTextDocumentInput": ".rich_text_document_input",
+    "RichTextDocumentInputBody": ".rich_text_document_input_body",
+    "RichTextDocumentInputBodyAlign": ".rich_text_document_input_body_align",
+    "RichTextDocumentInputBodyDecorationItem": ".rich_text_document_input_body_decoration_item",
+    "RichTextDocumentInputBodyDir": ".rich_text_document_input_body_dir",
+    "RichTextDocumentInputBodyMargins": ".rich_text_document_input_body_margins",
+    "RichTextDocumentInputBodyScript": ".rich_text_document_input_body_script",
+    "RichTextDocumentInputParagraphsItem": ".rich_text_document_input_paragraphs_item",
+    "RichTextDocumentInputParagraphsItemAlign": ".rich_text_document_input_paragraphs_item_align",
+    "RichTextDocumentInputParagraphsItemDir": ".rich_text_document_input_paragraphs_item_dir",
+    "RichTextDocumentInputParagraphsItemMargins": ".rich_text_document_input_paragraphs_item_margins",
+    "RichTextDocumentInputParagraphsItemRunsItem": ".rich_text_document_input_paragraphs_item_runs_item",
+    "RichTextDocumentInputParagraphsItemRunsItemStyle": ".rich_text_document_input_paragraphs_item_runs_item_style",
+    "RichTextDocumentInputParagraphsItemRunsItemStyleDecorationItem": ".rich_text_document_input_paragraphs_item_runs_item_style_decoration_item",
+    "RichTextDocumentInputParagraphsItemRunsItemStyleScript": ".rich_text_document_input_paragraphs_item_runs_item_style_script",
+    "RichTextDocumentParagraphsItem": ".rich_text_document_paragraphs_item",
+    "RichTextDocumentParagraphsItemAlign": ".rich_text_document_paragraphs_item_align",
+    "RichTextDocumentParagraphsItemDir": ".rich_text_document_paragraphs_item_dir",
+    "RichTextDocumentParagraphsItemMargins": ".rich_text_document_paragraphs_item_margins",
+    "RichTextDocumentParagraphsItemRunsItem": ".rich_text_document_paragraphs_item_runs_item",
+    "RichTextDocumentParagraphsItemRunsItemStyle": ".rich_text_document_paragraphs_item_runs_item_style",
+    "RichTextDocumentParagraphsItemRunsItemStyleDecorationItem": ".rich_text_document_paragraphs_item_runs_item_style_decoration_item",
+    "RichTextDocumentParagraphsItemRunsItemStyleScript": ".rich_text_document_paragraphs_item_runs_item_style_script",
     "TenantFeature": ".tenant_feature",
     "TenantFeatureStopped": ".tenant_feature_stopped",
     "TenantsCreate200Response": ".tenants_create200response",
@@ -5180,21 +5132,6 @@ __all__ = [
     "AnnotationDraftFreeTextRect",
     "AnnotationDraftFreeTextReply",
     "AnnotationDraftFreeTextReplyType",
-    "AnnotationDraftFreeTextRichText",
-    "AnnotationDraftFreeTextRichTextBody",
-    "AnnotationDraftFreeTextRichTextBodyAlign",
-    "AnnotationDraftFreeTextRichTextBodyDecorationItem",
-    "AnnotationDraftFreeTextRichTextBodyDir",
-    "AnnotationDraftFreeTextRichTextBodyMargins",
-    "AnnotationDraftFreeTextRichTextBodyScript",
-    "AnnotationDraftFreeTextRichTextParagraphsItem",
-    "AnnotationDraftFreeTextRichTextParagraphsItemAlign",
-    "AnnotationDraftFreeTextRichTextParagraphsItemDir",
-    "AnnotationDraftFreeTextRichTextParagraphsItemMargins",
-    "AnnotationDraftFreeTextRichTextParagraphsItemRunsItem",
-    "AnnotationDraftFreeTextRichTextParagraphsItemRunsItemStyle",
-    "AnnotationDraftFreeTextRichTextParagraphsItemRunsItemStyleDecorationItem",
-    "AnnotationDraftFreeTextRichTextParagraphsItemRunsItemStyleScript",
     "AnnotationDraftFreeTextTextAlign",
     "AnnotationDraftFreeTextVerticalAlign",
     "AnnotationDraftHighlight",
@@ -5451,21 +5388,6 @@ __all__ = [
     "AnnotationFreeTextRect",
     "AnnotationFreeTextReply",
     "AnnotationFreeTextReplyType",
-    "AnnotationFreeTextRichText",
-    "AnnotationFreeTextRichTextBody",
-    "AnnotationFreeTextRichTextBodyAlign",
-    "AnnotationFreeTextRichTextBodyDecorationItem",
-    "AnnotationFreeTextRichTextBodyDir",
-    "AnnotationFreeTextRichTextBodyMargins",
-    "AnnotationFreeTextRichTextBodyScript",
-    "AnnotationFreeTextRichTextParagraphsItem",
-    "AnnotationFreeTextRichTextParagraphsItemAlign",
-    "AnnotationFreeTextRichTextParagraphsItemDir",
-    "AnnotationFreeTextRichTextParagraphsItemMargins",
-    "AnnotationFreeTextRichTextParagraphsItemRunsItem",
-    "AnnotationFreeTextRichTextParagraphsItemRunsItemStyle",
-    "AnnotationFreeTextRichTextParagraphsItemRunsItemStyleDecorationItem",
-    "AnnotationFreeTextRichTextParagraphsItemRunsItemStyleScript",
     "AnnotationFreeTextTextAlign",
     "AnnotationFreeTextVerticalAlign",
     "AnnotationHighlight",
@@ -5572,21 +5494,6 @@ __all__ = [
     "AnnotationPatchFreeTextRect",
     "AnnotationPatchFreeTextReply",
     "AnnotationPatchFreeTextReplyType",
-    "AnnotationPatchFreeTextRichText",
-    "AnnotationPatchFreeTextRichTextBody",
-    "AnnotationPatchFreeTextRichTextBodyAlign",
-    "AnnotationPatchFreeTextRichTextBodyDecorationItem",
-    "AnnotationPatchFreeTextRichTextBodyDir",
-    "AnnotationPatchFreeTextRichTextBodyMargins",
-    "AnnotationPatchFreeTextRichTextBodyScript",
-    "AnnotationPatchFreeTextRichTextParagraphsItem",
-    "AnnotationPatchFreeTextRichTextParagraphsItemAlign",
-    "AnnotationPatchFreeTextRichTextParagraphsItemDir",
-    "AnnotationPatchFreeTextRichTextParagraphsItemMargins",
-    "AnnotationPatchFreeTextRichTextParagraphsItemRunsItem",
-    "AnnotationPatchFreeTextRichTextParagraphsItemRunsItemStyle",
-    "AnnotationPatchFreeTextRichTextParagraphsItemRunsItemStyleDecorationItem",
-    "AnnotationPatchFreeTextRichTextParagraphsItemRunsItemStyleScript",
     "AnnotationPatchFreeTextTextAlign",
     "AnnotationPatchFreeTextVerticalAlign",
     "AnnotationPatchHighlight",
@@ -6325,6 +6232,7 @@ __all__ = [
     "ChangeOp_PagesRotate",
     "ChangeResult",
     "DeploymentLicenseStatusResponse",
+    "DeploymentModulesResponse",
     "DocAnnotationsCreate200Response",
     "DocAnnotationsCreate400Response",
     "DocAnnotationsCreate404Response",
@@ -7114,6 +7022,11 @@ __all__ = [
     "Identity",
     "MetadataPatch",
     "MetadataPatchTrapped",
+    "ModuleManifest",
+    "ModuleManifestRequires",
+    "ModuleMeter",
+    "ModulePermission",
+    "ModulePermissionLevel",
     "MutationMeta",
     "OutlineItem",
     "OutlineItemDraft",
@@ -7239,6 +7152,36 @@ __all__ = [
     "PdfLinkTarget_Uri",
     "PdfPageActions",
     "ResolvedFontRun",
+    "RichTextDocument",
+    "RichTextDocumentBody",
+    "RichTextDocumentBodyAlign",
+    "RichTextDocumentBodyDecorationItem",
+    "RichTextDocumentBodyDir",
+    "RichTextDocumentBodyMargins",
+    "RichTextDocumentBodyScript",
+    "RichTextDocumentInput",
+    "RichTextDocumentInputBody",
+    "RichTextDocumentInputBodyAlign",
+    "RichTextDocumentInputBodyDecorationItem",
+    "RichTextDocumentInputBodyDir",
+    "RichTextDocumentInputBodyMargins",
+    "RichTextDocumentInputBodyScript",
+    "RichTextDocumentInputParagraphsItem",
+    "RichTextDocumentInputParagraphsItemAlign",
+    "RichTextDocumentInputParagraphsItemDir",
+    "RichTextDocumentInputParagraphsItemMargins",
+    "RichTextDocumentInputParagraphsItemRunsItem",
+    "RichTextDocumentInputParagraphsItemRunsItemStyle",
+    "RichTextDocumentInputParagraphsItemRunsItemStyleDecorationItem",
+    "RichTextDocumentInputParagraphsItemRunsItemStyleScript",
+    "RichTextDocumentParagraphsItem",
+    "RichTextDocumentParagraphsItemAlign",
+    "RichTextDocumentParagraphsItemDir",
+    "RichTextDocumentParagraphsItemMargins",
+    "RichTextDocumentParagraphsItemRunsItem",
+    "RichTextDocumentParagraphsItemRunsItemStyle",
+    "RichTextDocumentParagraphsItemRunsItemStyleDecorationItem",
+    "RichTextDocumentParagraphsItemRunsItemStyleScript",
     "TenantFeature",
     "TenantFeatureStopped",
     "TenantsCreate200Response",

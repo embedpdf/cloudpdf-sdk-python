@@ -14,6 +14,7 @@ from .annotation_draft_polygon_measure import AnnotationDraftPolygonMeasure
 from .annotation_draft_polygon_rect import AnnotationDraftPolygonRect
 from .annotation_draft_polygon_reply import AnnotationDraftPolygonReply
 from .annotation_draft_polygon_vertices_item import AnnotationDraftPolygonVerticesItem
+from .rich_text_document_input import RichTextDocumentInput
 
 
 class AnnotationDraftPolygon(UniversalBaseModel):
@@ -84,6 +85,9 @@ class AnnotationDraftPolygon(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     stroke_width: typing_extensions.Annotated[

@@ -428,6 +428,8 @@ class RawTenantsClient:
         tenant_id: str,
         *,
         period: typing.Optional[str] = None,
+        from_: typing.Optional[str] = None,
+        to: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[TenantsUsage200Response]:
         """
@@ -438,6 +440,10 @@ class RawTenantsClient:
         tenant_id : str
 
         period : typing.Optional[str]
+
+        from_ : typing.Optional[str]
+
+        to : typing.Optional[str]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -452,6 +458,8 @@ class RawTenantsClient:
             method="GET",
             params={
                 "period": period,
+                "from": from_,
+                "to": to,
             },
             request_options=request_options,
         )
@@ -904,6 +912,8 @@ class AsyncRawTenantsClient:
         tenant_id: str,
         *,
         period: typing.Optional[str] = None,
+        from_: typing.Optional[str] = None,
+        to: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[TenantsUsage200Response]:
         """
@@ -914,6 +924,10 @@ class AsyncRawTenantsClient:
         tenant_id : str
 
         period : typing.Optional[str]
+
+        from_ : typing.Optional[str]
+
+        to : typing.Optional[str]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -928,6 +942,8 @@ class AsyncRawTenantsClient:
             method="GET",
             params={
                 "period": period,
+                "from": from_,
+                "to": to,
             },
             request_options=request_options,
         )

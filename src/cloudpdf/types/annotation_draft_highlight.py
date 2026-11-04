@@ -10,6 +10,7 @@ from .annotation_draft_highlight_blend_mode import AnnotationDraftHighlightBlend
 from .annotation_draft_highlight_quad_points_item import AnnotationDraftHighlightQuadPointsItem
 from .annotation_draft_highlight_rect import AnnotationDraftHighlightRect
 from .annotation_draft_highlight_reply import AnnotationDraftHighlightReply
+from .rich_text_document_input import RichTextDocumentInput
 
 
 class AnnotationDraftHighlight(UniversalBaseModel):
@@ -80,6 +81,9 @@ class AnnotationDraftHighlight(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     quad_points: typing_extensions.Annotated[

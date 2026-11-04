@@ -11,6 +11,7 @@ from .annotation_patch_caret_box import AnnotationPatchCaretBox
 from .annotation_patch_caret_intent import AnnotationPatchCaretIntent
 from .annotation_patch_caret_rect import AnnotationPatchCaretRect
 from .annotation_patch_caret_reply import AnnotationPatchCaretReply
+from .rich_text_document_input import RichTextDocumentInput
 
 
 class AnnotationPatchCaret(UniversalBaseModel):
@@ -81,6 +82,9 @@ class AnnotationPatchCaret(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     box: typing.Optional[AnnotationPatchCaretBox] = None

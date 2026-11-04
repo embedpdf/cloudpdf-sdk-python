@@ -11,6 +11,7 @@ from .annotation_patch_stamp_box import AnnotationPatchStampBox
 from .annotation_patch_stamp_fit import AnnotationPatchStampFit
 from .annotation_patch_stamp_rect import AnnotationPatchStampRect
 from .annotation_patch_stamp_reply import AnnotationPatchStampReply
+from .rich_text_document_input import RichTextDocumentInput
 
 
 class AnnotationPatchStamp(UniversalBaseModel):
@@ -81,6 +82,9 @@ class AnnotationPatchStamp(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     box: typing.Optional[AnnotationPatchStampBox] = None
     rotation: typing.Optional[float] = None
     name: typing.Optional[str] = None

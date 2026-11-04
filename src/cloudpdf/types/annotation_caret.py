@@ -15,6 +15,7 @@ from .annotation_caret_reply import AnnotationCaretReply
 from .annotation_ref import AnnotationRef
 from .page_ref import PageRef
 from .pdf_annotation_actions import PdfAnnotationActions
+from .rich_text_document import RichTextDocument
 
 
 class AnnotationCaret(UniversalBaseModel):
@@ -77,6 +78,9 @@ class AnnotationCaret(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[PdfAnnotationActions] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocument], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: str
     opacity: float
     box: AnnotationCaretBox

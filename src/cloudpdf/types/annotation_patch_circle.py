@@ -11,6 +11,7 @@ from .annotation_patch_circle_border_style import AnnotationPatchCircleBorderSty
 from .annotation_patch_circle_box import AnnotationPatchCircleBox
 from .annotation_patch_circle_rect import AnnotationPatchCircleRect
 from .annotation_patch_circle_reply import AnnotationPatchCircleReply
+from .rich_text_document_input import RichTextDocumentInput
 
 
 class AnnotationPatchCircle(UniversalBaseModel):
@@ -81,6 +82,9 @@ class AnnotationPatchCircle(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     stroke_width: typing_extensions.Annotated[

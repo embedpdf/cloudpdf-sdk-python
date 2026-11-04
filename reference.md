@@ -49,6 +49,69 @@ client.deployment.license_status()
 </dl>
 </details>
 
+<details><summary><code>client.deployment.<a href="src/cloudpdf/deployment/client.py">modules</a>() -> DeploymentModulesResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+What each module declares, for a dashboard or a script that lists modules, offers their permissions in its dialogs and shows their meters. Which tenants may use one is in their `features` (`tenants.get`); what it costs, if anything, is the operator's.
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```python
+from cloudpdf import CloudPDFClient
+from cloudpdf.environment import CloudPDFEnvironment
+
+client = CloudPDFClient(
+    token="<token>",
+    environment=CloudPDFEnvironment.SAAS,
+)
+
+client.deployment.modules()
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request_options:** `typing.Optional[RequestOptions]` — Request-specific configuration.
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 ## Doc
 <details><summary><code>client.doc.<a href="src/cloudpdf/doc/client.py">head</a>(...) -> DocHead200Response</code></summary>
 <dl>
@@ -1976,6 +2039,22 @@ client.tenants.usage(
 <dd>
 
 **period:** `typing.Optional[str]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**from:** `typing.Optional[str]` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**to:** `typing.Optional[str]` 
     
 </dd>
 </dl>

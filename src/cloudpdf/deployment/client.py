@@ -5,6 +5,7 @@ import typing
 from ..core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ..core.request_options import RequestOptions
 from ..types.deployment_license_status_response import DeploymentLicenseStatusResponse
+from ..types.deployment_modules_response import DeploymentModulesResponse
 from .raw_client import AsyncRawDeploymentClient, RawDeploymentClient
 
 
@@ -47,6 +48,32 @@ class DeploymentClient:
         client.deployment.license_status()
         """
         _response = self._raw_client.license_status(request_options=request_options)
+        return _response.data
+
+    def modules(self, *, request_options: typing.Optional[RequestOptions] = None) -> DeploymentModulesResponse:
+        """
+        What each module declares, for a dashboard or a script that lists modules, offers their permissions in its dialogs and shows their meters. Which tenants may use one is in their `features` (`tenants.get`); what it costs, if anything, is the operator's.
+
+        Parameters
+        ----------
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DeploymentModulesResponse
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+        )
+        client.deployment.modules()
+        """
+        _response = self._raw_client.modules(request_options=request_options)
         return _response.data
 
 
@@ -97,4 +124,38 @@ class AsyncDeploymentClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.license_status(request_options=request_options)
+        return _response.data
+
+    async def modules(self, *, request_options: typing.Optional[RequestOptions] = None) -> DeploymentModulesResponse:
+        """
+        What each module declares, for a dashboard or a script that lists modules, offers their permissions in its dialogs and shows their meters. Which tenants may use one is in their `features` (`tenants.get`); what it costs, if anything, is the operator's.
+
+        Parameters
+        ----------
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DeploymentModulesResponse
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+        )
+
+
+        async def main() -> None:
+            await client.deployment.modules()
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.modules(request_options=request_options)
         return _response.data

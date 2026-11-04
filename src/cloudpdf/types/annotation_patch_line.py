@@ -17,6 +17,7 @@ from .annotation_patch_line_line_points import AnnotationPatchLineLinePoints
 from .annotation_patch_line_measure import AnnotationPatchLineMeasure
 from .annotation_patch_line_rect import AnnotationPatchLineRect
 from .annotation_patch_line_reply import AnnotationPatchLineReply
+from .rich_text_document_input import RichTextDocumentInput
 
 
 class AnnotationPatchLine(UniversalBaseModel):
@@ -87,6 +88,9 @@ class AnnotationPatchLine(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     stroke_width: typing_extensions.Annotated[

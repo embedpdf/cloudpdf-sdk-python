@@ -10,6 +10,7 @@ from .annotation_patch_underline_blend_mode import AnnotationPatchUnderlineBlend
 from .annotation_patch_underline_quad_points_item import AnnotationPatchUnderlineQuadPointsItem
 from .annotation_patch_underline_rect import AnnotationPatchUnderlineRect
 from .annotation_patch_underline_reply import AnnotationPatchUnderlineReply
+from .rich_text_document_input import RichTextDocumentInput
 
 
 class AnnotationPatchUnderline(UniversalBaseModel):
@@ -80,6 +81,9 @@ class AnnotationPatchUnderline(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     quad_points: typing_extensions.Annotated[

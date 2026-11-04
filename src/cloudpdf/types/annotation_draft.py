@@ -30,7 +30,6 @@ from .annotation_draft_free_text_intent import AnnotationDraftFreeTextIntent
 from .annotation_draft_free_text_line_ending import AnnotationDraftFreeTextLineEnding
 from .annotation_draft_free_text_rect import AnnotationDraftFreeTextRect
 from .annotation_draft_free_text_reply import AnnotationDraftFreeTextReply
-from .annotation_draft_free_text_rich_text import AnnotationDraftFreeTextRichText
 from .annotation_draft_free_text_text_align import AnnotationDraftFreeTextTextAlign
 from .annotation_draft_free_text_vertical_align import AnnotationDraftFreeTextVerticalAlign
 from .annotation_draft_highlight_blend_mode import AnnotationDraftHighlightBlendMode
@@ -118,6 +117,7 @@ from .annotation_draft_widget_reply import AnnotationDraftWidgetReply
 from .annotation_draft_widget_text_align import AnnotationDraftWidgetTextAlign
 from .annotation_ref import AnnotationRef
 from .pdf_link_target_writable import PdfLinkTargetWritable
+from .rich_text_document_input import RichTextDocumentInput
 from .widget_actions_patch import WidgetActionsPatch
 
 
@@ -190,6 +190,9 @@ class AnnotationDraft_Highlight(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     quad_points: typing_extensions.Annotated[
@@ -277,6 +280,9 @@ class AnnotationDraft_Underline(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     quad_points: typing_extensions.Annotated[
@@ -364,6 +370,9 @@ class AnnotationDraft_Squiggly(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     quad_points: typing_extensions.Annotated[
@@ -451,6 +460,9 @@ class AnnotationDraft_Strikeout(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     quad_points: typing_extensions.Annotated[
@@ -539,6 +551,9 @@ class AnnotationDraft_Circle(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     stroke_width: typing_extensions.Annotated[
@@ -640,6 +655,9 @@ class AnnotationDraft_Square(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     stroke_width: typing_extensions.Annotated[
@@ -741,6 +759,9 @@ class AnnotationDraft_Polygon(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     stroke_width: typing_extensions.Annotated[
@@ -852,6 +873,9 @@ class AnnotationDraft_Polyline(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     stroke_width: typing_extensions.Annotated[
@@ -965,6 +989,9 @@ class AnnotationDraft_Line(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     stroke_width: typing_extensions.Annotated[
@@ -1167,6 +1194,9 @@ class AnnotationDraft_Ink(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     stroke_width: typing_extensions.Annotated[
@@ -1267,6 +1297,9 @@ class AnnotationDraft_FreeText(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     box: typing.Optional[AnnotationDraftFreeTextBox] = None
     rotation: typing.Optional[float] = None
     intent: typing.Optional[AnnotationDraftFreeTextIntent] = None
@@ -1285,11 +1318,6 @@ class AnnotationDraft_FreeText(UniversalBaseModel):
         typing.Optional[AnnotationDraftFreeTextVerticalAlign],
         FieldMetadata(alias="verticalAlign"),
         pydantic.Field(alias="verticalAlign"),
-    ] = None
-    rich_text: typing_extensions.Annotated[
-        typing.Optional[AnnotationDraftFreeTextRichText],
-        FieldMetadata(alias="richText"),
-        pydantic.Field(alias="richText"),
     ] = None
     color: typing.Optional[str] = None
     font_color: typing_extensions.Annotated[
@@ -1403,6 +1431,9 @@ class AnnotationDraft_Caret(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     box: typing.Optional[AnnotationDraftCaretBox] = None
@@ -1488,6 +1519,9 @@ class AnnotationDraft_Text(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     icon: typing.Optional[AnnotationDraftTextIcon] = None
@@ -1576,6 +1610,9 @@ class AnnotationDraft_Stamp(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     box: typing.Optional[AnnotationDraftStampBox] = None
     rotation: typing.Optional[float] = None
     name: typing.Optional[str] = None
@@ -1661,6 +1698,9 @@ class AnnotationDraft_FileAttachment(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     icon: typing.Optional[AnnotationDraftFileAttachmentIcon] = None
@@ -1866,6 +1906,9 @@ class AnnotationDraft_Redact(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     quad_points: typing_extensions.Annotated[

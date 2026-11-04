@@ -15,6 +15,7 @@ from .annotation_stamp_rect import AnnotationStampRect
 from .annotation_stamp_reply import AnnotationStampReply
 from .page_ref import PageRef
 from .pdf_annotation_actions import PdfAnnotationActions
+from .rich_text_document import RichTextDocument
 
 
 class AnnotationStamp(UniversalBaseModel):
@@ -77,6 +78,9 @@ class AnnotationStamp(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[PdfAnnotationActions] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocument], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     box: AnnotationStampBox
     rotation: typing.Optional[float] = None
     name: typing.Optional[str] = None
