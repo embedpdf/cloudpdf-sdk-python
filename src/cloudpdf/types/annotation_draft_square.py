@@ -11,6 +11,7 @@ from .annotation_draft_square_border_style import AnnotationDraftSquareBorderSty
 from .annotation_draft_square_box import AnnotationDraftSquareBox
 from .annotation_draft_square_rect import AnnotationDraftSquareRect
 from .annotation_draft_square_reply import AnnotationDraftSquareReply
+from .rich_text_document_input import RichTextDocumentInput
 
 
 class AnnotationDraftSquare(UniversalBaseModel):
@@ -81,6 +82,9 @@ class AnnotationDraftSquare(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     stroke_width: typing_extensions.Annotated[

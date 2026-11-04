@@ -13,9 +13,9 @@ from .annotation_patch_free_text_intent import AnnotationPatchFreeTextIntent
 from .annotation_patch_free_text_line_ending import AnnotationPatchFreeTextLineEnding
 from .annotation_patch_free_text_rect import AnnotationPatchFreeTextRect
 from .annotation_patch_free_text_reply import AnnotationPatchFreeTextReply
-from .annotation_patch_free_text_rich_text import AnnotationPatchFreeTextRichText
 from .annotation_patch_free_text_text_align import AnnotationPatchFreeTextTextAlign
 from .annotation_patch_free_text_vertical_align import AnnotationPatchFreeTextVerticalAlign
+from .rich_text_document_input import RichTextDocumentInput
 
 
 class AnnotationPatchFreeText(UniversalBaseModel):
@@ -86,6 +86,9 @@ class AnnotationPatchFreeText(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     box: typing.Optional[AnnotationPatchFreeTextBox] = None
     rotation: typing.Optional[float] = None
     intent: typing.Optional[AnnotationPatchFreeTextIntent] = None
@@ -104,11 +107,6 @@ class AnnotationPatchFreeText(UniversalBaseModel):
         typing.Optional[AnnotationPatchFreeTextVerticalAlign],
         FieldMetadata(alias="verticalAlign"),
         pydantic.Field(alias="verticalAlign"),
-    ] = None
-    rich_text: typing_extensions.Annotated[
-        typing.Optional[AnnotationPatchFreeTextRichText],
-        FieldMetadata(alias="richText"),
-        pydantic.Field(alias="richText"),
     ] = None
     color: typing.Optional[str] = None
     font_color: typing_extensions.Annotated[

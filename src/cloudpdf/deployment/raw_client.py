@@ -10,6 +10,7 @@ from ..core.parse_error import ParsingError
 from ..core.pydantic_utilities import parse_obj_as
 from ..core.request_options import RequestOptions
 from ..types.deployment_license_status_response import DeploymentLicenseStatusResponse
+from ..types.deployment_modules_response import DeploymentModulesResponse
 from pydantic import ValidationError
 
 
@@ -55,6 +56,46 @@ class RawDeploymentClient:
             )
         raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
+    def modules(
+        self, *, request_options: typing.Optional[RequestOptions] = None
+    ) -> HttpResponse[DeploymentModulesResponse]:
+        """
+        What each module declares, for a dashboard or a script that lists modules, offers their permissions in its dialogs and shows their meters. Which tenants may use one is in their `features` (`tenants.get`); what it costs, if anything, is the operator's.
+
+        Parameters
+        ----------
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        HttpResponse[DeploymentModulesResponse]
+            OK
+        """
+        _response = self._client_wrapper.httpx_client.request(
+            "v1/deployment/modules",
+            method="GET",
+            request_options=request_options,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DeploymentModulesResponse,
+                    parse_obj_as(
+                        type_=DeploymentModulesResponse,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return HttpResponse(response=_response, data=_data)
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
 
 class AsyncRawDeploymentClient:
     def __init__(self, *, client_wrapper: AsyncClientWrapper):
@@ -85,6 +126,46 @@ class AsyncRawDeploymentClient:
                     DeploymentLicenseStatusResponse,
                     parse_obj_as(
                         type_=DeploymentLicenseStatusResponse,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return AsyncHttpResponse(response=_response, data=_data)
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    async def modules(
+        self, *, request_options: typing.Optional[RequestOptions] = None
+    ) -> AsyncHttpResponse[DeploymentModulesResponse]:
+        """
+        What each module declares, for a dashboard or a script that lists modules, offers their permissions in its dialogs and shows their meters. Which tenants may use one is in their `features` (`tenants.get`); what it costs, if anything, is the operator's.
+
+        Parameters
+        ----------
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        AsyncHttpResponse[DeploymentModulesResponse]
+            OK
+        """
+        _response = await self._client_wrapper.httpx_client.request(
+            "v1/deployment/modules",
+            method="GET",
+            request_options=request_options,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DeploymentModulesResponse,
+                    parse_obj_as(
+                        type_=DeploymentModulesResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )

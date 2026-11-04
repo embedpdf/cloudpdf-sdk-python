@@ -266,6 +266,8 @@ class TenantsClient:
         tenant_id: str,
         *,
         period: typing.Optional[str] = None,
+        from_: typing.Optional[str] = None,
+        to: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> TenantsUsage200Response:
         """
@@ -276,6 +278,10 @@ class TenantsClient:
         tenant_id : str
 
         period : typing.Optional[str]
+
+        from_ : typing.Optional[str]
+
+        to : typing.Optional[str]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -296,7 +302,9 @@ class TenantsClient:
             tenant_id="tenantId",
         )
         """
-        _response = self._raw_client.usage(tenant_id, period=period, request_options=request_options)
+        _response = self._raw_client.usage(
+            tenant_id, period=period, from_=from_, to=to, request_options=request_options
+        )
         return _response.data
 
 
@@ -608,6 +616,8 @@ class AsyncTenantsClient:
         tenant_id: str,
         *,
         period: typing.Optional[str] = None,
+        from_: typing.Optional[str] = None,
+        to: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> TenantsUsage200Response:
         """
@@ -618,6 +628,10 @@ class AsyncTenantsClient:
         tenant_id : str
 
         period : typing.Optional[str]
+
+        from_ : typing.Optional[str]
+
+        to : typing.Optional[str]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -646,5 +660,7 @@ class AsyncTenantsClient:
 
         asyncio.run(main())
         """
-        _response = await self._raw_client.usage(tenant_id, period=period, request_options=request_options)
+        _response = await self._raw_client.usage(
+            tenant_id, period=period, from_=from_, to=to, request_options=request_options
+        )
         return _response.data

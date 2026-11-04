@@ -14,6 +14,7 @@ from .annotation_underline_rect import AnnotationUnderlineRect
 from .annotation_underline_reply import AnnotationUnderlineReply
 from .page_ref import PageRef
 from .pdf_annotation_actions import PdfAnnotationActions
+from .rich_text_document import RichTextDocument
 
 
 class AnnotationUnderline(UniversalBaseModel):
@@ -76,6 +77,9 @@ class AnnotationUnderline(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[PdfAnnotationActions] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocument], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: str
     opacity: float
     quad_points: typing_extensions.Annotated[

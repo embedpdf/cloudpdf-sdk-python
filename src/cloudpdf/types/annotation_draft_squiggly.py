@@ -10,6 +10,7 @@ from .annotation_draft_squiggly_blend_mode import AnnotationDraftSquigglyBlendMo
 from .annotation_draft_squiggly_quad_points_item import AnnotationDraftSquigglyQuadPointsItem
 from .annotation_draft_squiggly_rect import AnnotationDraftSquigglyRect
 from .annotation_draft_squiggly_reply import AnnotationDraftSquigglyReply
+from .rich_text_document_input import RichTextDocumentInput
 
 
 class AnnotationDraftSquiggly(UniversalBaseModel):
@@ -80,6 +81,9 @@ class AnnotationDraftSquiggly(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     quad_points: typing_extensions.Annotated[

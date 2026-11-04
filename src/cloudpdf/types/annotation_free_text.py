@@ -14,12 +14,12 @@ from .annotation_free_text_intent import AnnotationFreeTextIntent
 from .annotation_free_text_line_ending import AnnotationFreeTextLineEnding
 from .annotation_free_text_rect import AnnotationFreeTextRect
 from .annotation_free_text_reply import AnnotationFreeTextReply
-from .annotation_free_text_rich_text import AnnotationFreeTextRichText
 from .annotation_free_text_text_align import AnnotationFreeTextTextAlign
 from .annotation_free_text_vertical_align import AnnotationFreeTextVerticalAlign
 from .annotation_ref import AnnotationRef
 from .page_ref import PageRef
 from .pdf_annotation_actions import PdfAnnotationActions
+from .rich_text_document import RichTextDocument
 
 
 class AnnotationFreeText(UniversalBaseModel):
@@ -82,6 +82,9 @@ class AnnotationFreeText(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[PdfAnnotationActions] = None
+    rich_text: typing_extensions.Annotated[
+        RichTextDocument, FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ]
     box: AnnotationFreeTextBox
     rotation: typing.Optional[float] = None
     intent: AnnotationFreeTextIntent
@@ -92,9 +95,6 @@ class AnnotationFreeText(UniversalBaseModel):
     ]
     vertical_align: typing_extensions.Annotated[
         AnnotationFreeTextVerticalAlign, FieldMetadata(alias="verticalAlign"), pydantic.Field(alias="verticalAlign")
-    ]
-    rich_text: typing_extensions.Annotated[
-        AnnotationFreeTextRichText, FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
     ]
     color: str
     font_color: typing_extensions.Annotated[str, FieldMetadata(alias="fontColor"), pydantic.Field(alias="fontColor")]

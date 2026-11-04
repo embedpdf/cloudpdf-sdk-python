@@ -10,6 +10,7 @@ from .annotation_draft_text_blend_mode import AnnotationDraftTextBlendMode
 from .annotation_draft_text_icon import AnnotationDraftTextIcon
 from .annotation_draft_text_rect import AnnotationDraftTextRect
 from .annotation_draft_text_reply import AnnotationDraftTextReply
+from .rich_text_document_input import RichTextDocumentInput
 
 
 class AnnotationDraftText(UniversalBaseModel):
@@ -80,6 +81,9 @@ class AnnotationDraftText(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     icon: typing.Optional[AnnotationDraftTextIcon] = None

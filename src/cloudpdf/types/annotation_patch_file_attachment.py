@@ -11,6 +11,7 @@ from .annotation_patch_file_attachment_file import AnnotationPatchFileAttachment
 from .annotation_patch_file_attachment_icon import AnnotationPatchFileAttachmentIcon
 from .annotation_patch_file_attachment_rect import AnnotationPatchFileAttachmentRect
 from .annotation_patch_file_attachment_reply import AnnotationPatchFileAttachmentReply
+from .rich_text_document_input import RichTextDocumentInput
 
 
 class AnnotationPatchFileAttachment(UniversalBaseModel):
@@ -81,6 +82,9 @@ class AnnotationPatchFileAttachment(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     icon: typing.Optional[AnnotationPatchFileAttachmentIcon] = None

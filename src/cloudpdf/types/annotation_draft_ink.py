@@ -12,6 +12,7 @@ from .annotation_draft_ink_ink_list_item_item import AnnotationDraftInkInkListIt
 from .annotation_draft_ink_intent import AnnotationDraftInkIntent
 from .annotation_draft_ink_rect import AnnotationDraftInkRect
 from .annotation_draft_ink_reply import AnnotationDraftInkReply
+from .rich_text_document_input import RichTextDocumentInput
 
 
 class AnnotationDraftInk(UniversalBaseModel):
@@ -82,6 +83,9 @@ class AnnotationDraftInk(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     stroke_width: typing_extensions.Annotated[

@@ -10,6 +10,7 @@ from .annotation_patch_text_blend_mode import AnnotationPatchTextBlendMode
 from .annotation_patch_text_icon import AnnotationPatchTextIcon
 from .annotation_patch_text_rect import AnnotationPatchTextRect
 from .annotation_patch_text_reply import AnnotationPatchTextReply
+from .rich_text_document_input import RichTextDocumentInput
 
 
 class AnnotationPatchText(UniversalBaseModel):
@@ -80,6 +81,9 @@ class AnnotationPatchText(UniversalBaseModel):
         typing.Optional[typing.Any], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[typing.Any] = None
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocumentInput], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
     color: typing.Optional[str] = None
     opacity: typing.Optional[float] = None
     icon: typing.Optional[AnnotationPatchTextIcon] = None

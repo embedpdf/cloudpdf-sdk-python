@@ -19,6 +19,7 @@ from .annotation_polyline_vertices_item import AnnotationPolylineVerticesItem
 from .annotation_ref import AnnotationRef
 from .page_ref import PageRef
 from .pdf_annotation_actions import PdfAnnotationActions
+from .rich_text_document import RichTextDocument
 
 
 class AnnotationPolyline(UniversalBaseModel):
@@ -81,7 +82,10 @@ class AnnotationPolyline(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[PdfAnnotationActions] = None
-    color: str
+    rich_text: typing_extensions.Annotated[
+        typing.Optional[RichTextDocument], FieldMetadata(alias="richText"), pydantic.Field(alias="richText")
+    ] = None
+    color: typing.Optional[str] = None
     opacity: float
     stroke_width: typing_extensions.Annotated[
         float, FieldMetadata(alias="strokeWidth"), pydantic.Field(alias="strokeWidth")
