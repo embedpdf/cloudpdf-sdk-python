@@ -4,7 +4,7 @@ import typing
 
 from ....core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ....core.request_options import RequestOptions
-from ....types.doc_fonts_programs_get200response import DocFontsProgramsGet200Response
+from ....types.doc_fonts_programs_get_response import DocFontsProgramsGetResponse
 from .raw_client import AsyncRawProgramsClient, RawProgramsClient
 
 
@@ -27,7 +27,7 @@ class ProgramsClient:
         self,
         doc_id: str,
         layer_name: str,
-        display_hash: str,
+        display_sha256: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -41,7 +41,7 @@ class ProgramsClient:
 
         layer_name : str
 
-        display_hash : str
+        display_sha256 : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -64,11 +64,11 @@ class ProgramsClient:
         client.doc.fonts.programs.download(
             doc_id="docId",
             layer_name="layerName",
-            display_hash="displayHash",
+            display_sha256="displaySha256",
         )
         """
         with self._raw_client.download(
-            doc_id, layer_name, display_hash, document_password=document_password, request_options=request_options
+            doc_id, layer_name, display_sha256, document_password=document_password, request_options=request_options
         ) as r:
             yield from r.data
 
@@ -76,11 +76,11 @@ class ProgramsClient:
         self,
         doc_id: str,
         layer_name: str,
-        display_hash: str,
+        display_sha256: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFontsProgramsGet200Response:
+    ) -> DocFontsProgramsGetResponse:
         """
         Parameters
         ----------
@@ -88,7 +88,7 @@ class ProgramsClient:
 
         layer_name : str
 
-        display_hash : str
+        display_sha256 : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -98,7 +98,7 @@ class ProgramsClient:
 
         Returns
         -------
-        DocFontsProgramsGet200Response
+        DocFontsProgramsGetResponse
             OK
 
         Examples
@@ -111,11 +111,11 @@ class ProgramsClient:
         client.doc.fonts.programs.get(
             doc_id="docId",
             layer_name="layerName",
-            display_hash="displayHash",
+            display_sha256="displaySha256",
         )
         """
         _response = self._raw_client.get(
-            doc_id, layer_name, display_hash, document_password=document_password, request_options=request_options
+            doc_id, layer_name, display_sha256, document_password=document_password, request_options=request_options
         )
         return _response.data
 
@@ -139,7 +139,7 @@ class AsyncProgramsClient:
         self,
         doc_id: str,
         layer_name: str,
-        display_hash: str,
+        display_sha256: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -153,7 +153,7 @@ class AsyncProgramsClient:
 
         layer_name : str
 
-        display_hash : str
+        display_sha256 : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -181,14 +181,14 @@ class AsyncProgramsClient:
             await client.doc.fonts.programs.download(
                 doc_id="docId",
                 layer_name="layerName",
-                display_hash="displayHash",
+                display_sha256="displaySha256",
             )
 
 
         asyncio.run(main())
         """
         async with self._raw_client.download(
-            doc_id, layer_name, display_hash, document_password=document_password, request_options=request_options
+            doc_id, layer_name, display_sha256, document_password=document_password, request_options=request_options
         ) as r:
             async for _chunk in r.data:
                 yield _chunk
@@ -197,11 +197,11 @@ class AsyncProgramsClient:
         self,
         doc_id: str,
         layer_name: str,
-        display_hash: str,
+        display_sha256: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFontsProgramsGet200Response:
+    ) -> DocFontsProgramsGetResponse:
         """
         Parameters
         ----------
@@ -209,7 +209,7 @@ class AsyncProgramsClient:
 
         layer_name : str
 
-        display_hash : str
+        display_sha256 : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -219,7 +219,7 @@ class AsyncProgramsClient:
 
         Returns
         -------
-        DocFontsProgramsGet200Response
+        DocFontsProgramsGetResponse
             OK
 
         Examples
@@ -237,13 +237,13 @@ class AsyncProgramsClient:
             await client.doc.fonts.programs.get(
                 doc_id="docId",
                 layer_name="layerName",
-                display_hash="displayHash",
+                display_sha256="displaySha256",
             )
 
 
         asyncio.run(main())
         """
         _response = await self._raw_client.get(
-            doc_id, layer_name, display_hash, document_password=document_password, request_options=request_options
+            doc_id, layer_name, display_sha256, document_password=document_password, request_options=request_options
         )
         return _response.data

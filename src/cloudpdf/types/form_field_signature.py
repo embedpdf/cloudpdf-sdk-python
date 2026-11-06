@@ -8,9 +8,8 @@ import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
 from .form_field_ref import FormFieldRef
-from .form_field_signature_default_value_entry import FormFieldSignatureDefaultValueEntry
 from .form_field_signature_origin import FormFieldSignatureOrigin
-from .form_field_signature_value_entry import FormFieldSignatureValueEntry
+from .form_value_entry import FormValueEntry
 from .form_widget import FormWidget
 from .pdf_field_actions import PdfFieldActions
 
@@ -29,12 +28,10 @@ class FormFieldSignature(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="mappingName"), pydantic.Field(alias="mappingName")
     ] = None
     value_entry: typing_extensions.Annotated[
-        FormFieldSignatureValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
+        FormValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
     ]
     default_value_entry: typing_extensions.Annotated[
-        FormFieldSignatureDefaultValueEntry,
-        FieldMetadata(alias="defaultValueEntry"),
-        pydantic.Field(alias="defaultValueEntry"),
+        FormValueEntry, FieldMetadata(alias="defaultValueEntry"), pydantic.Field(alias="defaultValueEntry")
     ]
     actions: typing.Optional[PdfFieldActions] = None
     group_id: typing_extensions.Annotated[

@@ -4,7 +4,7 @@ import typing
 
 from ....core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ....core.request_options import RequestOptions
-from ....types.doc_metadata_custom_get200response import DocMetadataCustomGet200Response
+from ....types.doc_metadata_custom_get_response import DocMetadataCustomGetResponse
 from .raw_client import AsyncRawCustomClient, RawCustomClient
 
 
@@ -30,7 +30,7 @@ class CustomClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocMetadataCustomGet200Response:
+    ) -> DocMetadataCustomGetResponse:
         """
         Parameters
         ----------
@@ -46,7 +46,7 @@ class CustomClient:
 
         Returns
         -------
-        DocMetadataCustomGet200Response
+        DocMetadataCustomGetResponse
             OK
 
         Examples
@@ -89,7 +89,7 @@ class AsyncCustomClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocMetadataCustomGet200Response:
+    ) -> DocMetadataCustomGetResponse:
         """
         Parameters
         ----------
@@ -105,7 +105,7 @@ class AsyncCustomClient:
 
         Returns
         -------
-        DocMetadataCustomGet200Response
+        DocMetadataCustomGetResponse
             OK
 
         Examples

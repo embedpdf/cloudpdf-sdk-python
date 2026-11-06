@@ -14,7 +14,8 @@ from ...core.request_options import RequestOptions
 from ...errors.bad_request_error import BadRequestError
 from ...errors.content_too_large_error import ContentTooLargeError
 from ...errors.not_found_error import NotFoundError
-from ...types.doc_attachments_list200response import DocAttachmentsList200Response
+from ...types.doc_attachments_list_response import DocAttachmentsListResponse
+from ...types.error_response import ErrorResponse
 from pydantic import ValidationError
 
 
@@ -76,9 +77,9 @@ class RawAttachmentsClient:
                         raise BadRequestError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -87,9 +88,9 @@ class RawAttachmentsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -98,9 +99,9 @@ class RawAttachmentsClient:
                         raise ContentTooLargeError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -128,7 +129,7 @@ class RawAttachmentsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocAttachmentsList200Response]:
+    ) -> HttpResponse[DocAttachmentsListResponse]:
         """
         A file-attachment annotation's file is listed with the annotation; read its bytes with `doc.annotations.readFile`.
 
@@ -146,7 +147,7 @@ class RawAttachmentsClient:
 
         Returns
         -------
-        HttpResponse[DocAttachmentsList200Response]
+        HttpResponse[DocAttachmentsListResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -160,9 +161,9 @@ class RawAttachmentsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocAttachmentsList200Response,
+                    DocAttachmentsListResponse,
                     parse_obj_as(
-                        type_=DocAttachmentsList200Response,  # type: ignore
+                        type_=DocAttachmentsListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -171,9 +172,9 @@ class RawAttachmentsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -247,9 +248,9 @@ class AsyncRawAttachmentsClient:
                         raise BadRequestError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -258,9 +259,9 @@ class AsyncRawAttachmentsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -269,9 +270,9 @@ class AsyncRawAttachmentsClient:
                         raise ContentTooLargeError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -299,7 +300,7 @@ class AsyncRawAttachmentsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocAttachmentsList200Response]:
+    ) -> AsyncHttpResponse[DocAttachmentsListResponse]:
         """
         A file-attachment annotation's file is listed with the annotation; read its bytes with `doc.annotations.readFile`.
 
@@ -317,7 +318,7 @@ class AsyncRawAttachmentsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocAttachmentsList200Response]
+        AsyncHttpResponse[DocAttachmentsListResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -331,9 +332,9 @@ class AsyncRawAttachmentsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocAttachmentsList200Response,
+                    DocAttachmentsListResponse,
                     parse_obj_as(
-                        type_=DocAttachmentsList200Response,  # type: ignore
+                        type_=DocAttachmentsListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -342,9 +343,9 @@ class AsyncRawAttachmentsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

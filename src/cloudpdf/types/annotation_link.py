@@ -76,7 +76,10 @@ class AnnotationLink(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="importedBy"), pydantic.Field(alias="importedBy")
     ] = None
     actions: typing.Optional[PdfAnnotationActions] = None
-    target: typing.Optional[PdfLinkTarget] = None
+    target: typing.Optional[PdfLinkTarget] = pydantic.Field(default=None)
+    """
+    Where a link goes, by its `kind`. A newer server can add kinds: read one your client doesn't know as `unsupported`.
+    """
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

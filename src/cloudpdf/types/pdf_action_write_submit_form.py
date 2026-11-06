@@ -3,14 +3,44 @@
 import typing
 
 import pydantic
+import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
+from ..core.serialization import FieldMetadata
 from .pdf_action_target_ref import PdfActionTargetRef
+from .pdf_action_write_submit_form_format import PdfActionWriteSubmitFormFormat
+from .pdf_action_write_submit_form_method import PdfActionWriteSubmitFormMethod
 
 
 class PdfActionWriteSubmitForm(UniversalBaseModel):
     url: str
     fields: typing.Optional[typing.List[PdfActionTargetRef]] = None
-    flags: typing.Optional[int] = None
+    exclude: typing.Optional[bool] = None
+    include_no_value_fields: typing_extensions.Annotated[
+        typing.Optional[bool], FieldMetadata(alias="includeNoValueFields"), pydantic.Field(alias="includeNoValueFields")
+    ] = None
+    format: typing.Optional[PdfActionWriteSubmitFormFormat] = None
+    method: typing.Optional[PdfActionWriteSubmitFormMethod] = None
+    submit_coordinates: typing_extensions.Annotated[
+        typing.Optional[bool], FieldMetadata(alias="submitCoordinates"), pydantic.Field(alias="submitCoordinates")
+    ] = None
+    include_append_saves: typing_extensions.Annotated[
+        typing.Optional[bool], FieldMetadata(alias="includeAppendSaves"), pydantic.Field(alias="includeAppendSaves")
+    ] = None
+    include_annotations: typing_extensions.Annotated[
+        typing.Optional[bool], FieldMetadata(alias="includeAnnotations"), pydantic.Field(alias="includeAnnotations")
+    ] = None
+    canonical_format: typing_extensions.Annotated[
+        typing.Optional[bool], FieldMetadata(alias="canonicalFormat"), pydantic.Field(alias="canonicalFormat")
+    ] = None
+    excl_non_user_annots: typing_extensions.Annotated[
+        typing.Optional[bool], FieldMetadata(alias="exclNonUserAnnots"), pydantic.Field(alias="exclNonUserAnnots")
+    ] = None
+    excl_f_key: typing_extensions.Annotated[
+        typing.Optional[bool], FieldMetadata(alias="exclFKey"), pydantic.Field(alias="exclFKey")
+    ] = None
+    embed_form: typing_extensions.Annotated[
+        typing.Optional[bool], FieldMetadata(alias="embedForm"), pydantic.Field(alias="embedForm")
+    ] = None
     next: typing.Optional[typing.List[typing.Any]] = None
 
     if IS_PYDANTIC_V2:

@@ -13,9 +13,10 @@ from ...core.pydantic_utilities import parse_obj_as
 from ...core.request_options import RequestOptions
 from ...errors.bad_request_error import BadRequestError
 from ...errors.not_found_error import NotFoundError
-from ...types.doc_versions_analysis200response import DocVersionsAnalysis200Response
-from ...types.doc_versions_list200response import DocVersionsList200Response
-from ...types.doc_versions_signatures200response import DocVersionsSignatures200Response
+from ...types.doc_versions_analysis_response import DocVersionsAnalysisResponse
+from ...types.doc_versions_list_response import DocVersionsListResponse
+from ...types.doc_versions_signatures_response import DocVersionsSignaturesResponse
+from ...types.error_response import ErrorResponse
 from .types.analysis_versions_request_level import AnalysisVersionsRequestLevel
 from .types.signature_digest_versions_request_algorithm import SignatureDigestVersionsRequestAlgorithm
 from pydantic import ValidationError
@@ -32,7 +33,7 @@ class RawVersionsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocVersionsList200Response]:
+    ) -> HttpResponse[DocVersionsListResponse]:
         """
         Every completed signature makes a new version of its layer; another layer's versions are never listed. Never cached: the list grows.
 
@@ -50,7 +51,7 @@ class RawVersionsClient:
 
         Returns
         -------
-        HttpResponse[DocVersionsList200Response]
+        HttpResponse[DocVersionsListResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -64,9 +65,9 @@ class RawVersionsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocVersionsList200Response,
+                    DocVersionsListResponse,
                     parse_obj_as(
-                        type_=DocVersionsList200Response,  # type: ignore
+                        type_=DocVersionsListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -75,9 +76,9 @@ class RawVersionsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -95,7 +96,7 @@ class RawVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         *,
         since_signature: typing.Optional[int] = None,
         since_revision: typing.Optional[int] = None,
@@ -104,7 +105,7 @@ class RawVersionsClient:
         policy: typing.Optional[int] = None,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocVersionsAnalysis200Response]:
+    ) -> HttpResponse[DocVersionsAnalysisResponse]:
         """
         Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults to the last. The same answer for every caller.
 
@@ -114,7 +115,7 @@ class RawVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         since_signature : typing.Optional[int]
 
@@ -134,11 +135,11 @@ class RawVersionsClient:
 
         Returns
         -------
-        HttpResponse[DocVersionsAnalysis200Response]
+        HttpResponse[DocVersionsAnalysisResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/analysis/{encode_path_param(sha)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/analysis/{encode_path_param(sha256)}",
             method="GET",
             params={
                 "since.signature": since_signature,
@@ -155,9 +156,9 @@ class RawVersionsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocVersionsAnalysis200Response,
+                    DocVersionsAnalysisResponse,
                     parse_obj_as(
-                        type_=DocVersionsAnalysis200Response,  # type: ignore
+                        type_=DocVersionsAnalysisResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -166,9 +167,9 @@ class RawVersionsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -177,9 +178,9 @@ class RawVersionsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -198,7 +199,7 @@ class RawVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -210,7 +211,7 @@ class RawVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -224,7 +225,7 @@ class RawVersionsClient:
             OK
         """
         with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/download/{encode_path_param(sha)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/download/{encode_path_param(sha256)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -244,9 +245,9 @@ class RawVersionsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -272,7 +273,7 @@ class RawVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         index: int,
         *,
         document_password: typing.Optional[str] = None,
@@ -285,7 +286,7 @@ class RawVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         index : int
 
@@ -301,7 +302,7 @@ class RawVersionsClient:
             OK
         """
         with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/revisions/{encode_path_param(sha)}/{encode_path_param(index)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/revisions/{encode_path_param(sha256)}/{encode_path_param(index)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -321,9 +322,9 @@ class RawVersionsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -348,11 +349,11 @@ class RawVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocVersionsSignatures200Response]:
+    ) -> HttpResponse[DocVersionsSignaturesResponse]:
         """
         Parameters
         ----------
@@ -360,7 +361,7 @@ class RawVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -370,11 +371,11 @@ class RawVersionsClient:
 
         Returns
         -------
-        HttpResponse[DocVersionsSignatures200Response]
+        HttpResponse[DocVersionsSignaturesResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha256)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -384,9 +385,9 @@ class RawVersionsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocVersionsSignatures200Response,
+                    DocVersionsSignaturesResponse,
                     parse_obj_as(
-                        type_=DocVersionsSignatures200Response,  # type: ignore
+                        type_=DocVersionsSignaturesResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -395,9 +396,9 @@ class RawVersionsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -416,7 +417,7 @@ class RawVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         field_key: str,
         *,
         document_password: typing.Optional[str] = None,
@@ -431,7 +432,7 @@ class RawVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         field_key : str
 
@@ -447,7 +448,7 @@ class RawVersionsClient:
             OK
         """
         with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha)}/{encode_path_param(field_key)}/contents",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha256)}/{encode_path_param(field_key)}/contents",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -467,9 +468,9 @@ class RawVersionsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -495,7 +496,7 @@ class RawVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         field_key: str,
         algorithm: SignatureDigestVersionsRequestAlgorithm,
         *,
@@ -511,7 +512,7 @@ class RawVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         field_key : str
 
@@ -529,7 +530,7 @@ class RawVersionsClient:
             OK
         """
         with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha)}/{encode_path_param(field_key)}/digest/{encode_path_param(algorithm)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha256)}/{encode_path_param(field_key)}/digest/{encode_path_param(algorithm)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -549,9 +550,9 @@ class RawVersionsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -584,7 +585,7 @@ class AsyncRawVersionsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocVersionsList200Response]:
+    ) -> AsyncHttpResponse[DocVersionsListResponse]:
         """
         Every completed signature makes a new version of its layer; another layer's versions are never listed. Never cached: the list grows.
 
@@ -602,7 +603,7 @@ class AsyncRawVersionsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocVersionsList200Response]
+        AsyncHttpResponse[DocVersionsListResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -616,9 +617,9 @@ class AsyncRawVersionsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocVersionsList200Response,
+                    DocVersionsListResponse,
                     parse_obj_as(
-                        type_=DocVersionsList200Response,  # type: ignore
+                        type_=DocVersionsListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -627,9 +628,9 @@ class AsyncRawVersionsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -647,7 +648,7 @@ class AsyncRawVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         *,
         since_signature: typing.Optional[int] = None,
         since_revision: typing.Optional[int] = None,
@@ -656,7 +657,7 @@ class AsyncRawVersionsClient:
         policy: typing.Optional[int] = None,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocVersionsAnalysis200Response]:
+    ) -> AsyncHttpResponse[DocVersionsAnalysisResponse]:
         """
         Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults to the last. The same answer for every caller.
 
@@ -666,7 +667,7 @@ class AsyncRawVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         since_signature : typing.Optional[int]
 
@@ -686,11 +687,11 @@ class AsyncRawVersionsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocVersionsAnalysis200Response]
+        AsyncHttpResponse[DocVersionsAnalysisResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/analysis/{encode_path_param(sha)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/analysis/{encode_path_param(sha256)}",
             method="GET",
             params={
                 "since.signature": since_signature,
@@ -707,9 +708,9 @@ class AsyncRawVersionsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocVersionsAnalysis200Response,
+                    DocVersionsAnalysisResponse,
                     parse_obj_as(
-                        type_=DocVersionsAnalysis200Response,  # type: ignore
+                        type_=DocVersionsAnalysisResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -718,9 +719,9 @@ class AsyncRawVersionsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -729,9 +730,9 @@ class AsyncRawVersionsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -750,7 +751,7 @@ class AsyncRawVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -762,7 +763,7 @@ class AsyncRawVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -776,7 +777,7 @@ class AsyncRawVersionsClient:
             OK
         """
         async with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/download/{encode_path_param(sha)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/download/{encode_path_param(sha256)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -797,9 +798,9 @@ class AsyncRawVersionsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -825,7 +826,7 @@ class AsyncRawVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         index: int,
         *,
         document_password: typing.Optional[str] = None,
@@ -838,7 +839,7 @@ class AsyncRawVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         index : int
 
@@ -854,7 +855,7 @@ class AsyncRawVersionsClient:
             OK
         """
         async with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/revisions/{encode_path_param(sha)}/{encode_path_param(index)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/revisions/{encode_path_param(sha256)}/{encode_path_param(index)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -875,9 +876,9 @@ class AsyncRawVersionsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -902,11 +903,11 @@ class AsyncRawVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocVersionsSignatures200Response]:
+    ) -> AsyncHttpResponse[DocVersionsSignaturesResponse]:
         """
         Parameters
         ----------
@@ -914,7 +915,7 @@ class AsyncRawVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -924,11 +925,11 @@ class AsyncRawVersionsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocVersionsSignatures200Response]
+        AsyncHttpResponse[DocVersionsSignaturesResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha256)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -938,9 +939,9 @@ class AsyncRawVersionsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocVersionsSignatures200Response,
+                    DocVersionsSignaturesResponse,
                     parse_obj_as(
-                        type_=DocVersionsSignatures200Response,  # type: ignore
+                        type_=DocVersionsSignaturesResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -949,9 +950,9 @@ class AsyncRawVersionsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -970,7 +971,7 @@ class AsyncRawVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         field_key: str,
         *,
         document_password: typing.Optional[str] = None,
@@ -985,7 +986,7 @@ class AsyncRawVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         field_key : str
 
@@ -1001,7 +1002,7 @@ class AsyncRawVersionsClient:
             OK
         """
         async with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha)}/{encode_path_param(field_key)}/contents",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha256)}/{encode_path_param(field_key)}/contents",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -1022,9 +1023,9 @@ class AsyncRawVersionsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -1050,7 +1051,7 @@ class AsyncRawVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         field_key: str,
         algorithm: SignatureDigestVersionsRequestAlgorithm,
         *,
@@ -1066,7 +1067,7 @@ class AsyncRawVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         field_key : str
 
@@ -1084,7 +1085,7 @@ class AsyncRawVersionsClient:
             OK
         """
         async with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha)}/{encode_path_param(field_key)}/digest/{encode_path_param(algorithm)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha256)}/{encode_path_param(field_key)}/digest/{encode_path_param(algorithm)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -1105,9 +1106,9 @@ class AsyncRawVersionsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),

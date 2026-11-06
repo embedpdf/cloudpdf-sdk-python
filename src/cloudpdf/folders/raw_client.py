@@ -14,10 +14,11 @@ from ..errors.bad_request_error import BadRequestError
 from ..errors.conflict_error import ConflictError
 from ..errors.forbidden_error import ForbiddenError
 from ..errors.not_found_error import NotFoundError
-from ..types.folders_create200response import FoldersCreate200Response
-from ..types.folders_get200response import FoldersGet200Response
-from ..types.folders_list200response import FoldersList200Response
-from ..types.folders_update200response import FoldersUpdate200Response
+from ..types.error_response import ErrorResponse
+from ..types.folders_create_response import FoldersCreateResponse
+from ..types.folders_get_response import FoldersGetResponse
+from ..types.folders_list_response import FoldersListResponse
+from ..types.folders_update_response import FoldersUpdateResponse
 from pydantic import ValidationError
 
 # this is used as the default value for optional parameters
@@ -36,7 +37,7 @@ class RawFoldersClient:
         cursor: typing.Optional[str] = None,
         parent_id: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[FoldersList200Response]:
+    ) -> HttpResponse[FoldersListResponse]:
         """
         Parameters
         ----------
@@ -54,7 +55,7 @@ class RawFoldersClient:
 
         Returns
         -------
-        HttpResponse[FoldersList200Response]
+        HttpResponse[FoldersListResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -70,9 +71,9 @@ class RawFoldersClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    FoldersList200Response,
+                    FoldersListResponse,
                     parse_obj_as(
-                        type_=FoldersList200Response,  # type: ignore
+                        type_=FoldersListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -81,9 +82,9 @@ class RawFoldersClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -92,9 +93,9 @@ class RawFoldersClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -103,9 +104,9 @@ class RawFoldersClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -126,7 +127,7 @@ class RawFoldersClient:
         name: str,
         parent_id: typing.Optional[str] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[FoldersCreate200Response]:
+    ) -> HttpResponse[FoldersCreateResponse]:
         """
         409 Conflict carries `details.reason`: `name-taken` (a sibling has the name, ignoring case; `details.name`) or `too-deep` (folders nest at most 100 levels; `details.maxDepth`). 404 when the parent folder does not exist.
 
@@ -145,7 +146,7 @@ class RawFoldersClient:
 
         Returns
         -------
-        HttpResponse[FoldersCreate200Response]
+        HttpResponse[FoldersCreateResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -164,9 +165,9 @@ class RawFoldersClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    FoldersCreate200Response,
+                    FoldersCreateResponse,
                     parse_obj_as(
-                        type_=FoldersCreate200Response,  # type: ignore
+                        type_=FoldersCreateResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -175,9 +176,9 @@ class RawFoldersClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -186,9 +187,9 @@ class RawFoldersClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -197,9 +198,9 @@ class RawFoldersClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -208,9 +209,9 @@ class RawFoldersClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -226,7 +227,7 @@ class RawFoldersClient:
 
     def get(
         self, tenant_id: str, folder_id: str, *, request_options: typing.Optional[RequestOptions] = None
-    ) -> HttpResponse[FoldersGet200Response]:
+    ) -> HttpResponse[FoldersGetResponse]:
         """
         Parameters
         ----------
@@ -239,7 +240,7 @@ class RawFoldersClient:
 
         Returns
         -------
-        HttpResponse[FoldersGet200Response]
+        HttpResponse[FoldersGetResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -250,9 +251,9 @@ class RawFoldersClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    FoldersGet200Response,
+                    FoldersGetResponse,
                     parse_obj_as(
-                        type_=FoldersGet200Response,  # type: ignore
+                        type_=FoldersGetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -261,9 +262,9 @@ class RawFoldersClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -272,9 +273,9 @@ class RawFoldersClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -330,9 +331,9 @@ class RawFoldersClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -341,9 +342,9 @@ class RawFoldersClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -352,9 +353,9 @@ class RawFoldersClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -370,7 +371,7 @@ class RawFoldersClient:
 
     def update(
         self, tenant_id: str, folder_id: str, *, name: str, request_options: typing.Optional[RequestOptions] = None
-    ) -> HttpResponse[FoldersUpdate200Response]:
+    ) -> HttpResponse[FoldersUpdateResponse]:
         """
         409 Conflict with `details.reason` `name-taken` when a sibling has the name, ignoring case.
 
@@ -388,7 +389,7 @@ class RawFoldersClient:
 
         Returns
         -------
-        HttpResponse[FoldersUpdate200Response]
+        HttpResponse[FoldersUpdateResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -406,9 +407,9 @@ class RawFoldersClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    FoldersUpdate200Response,
+                    FoldersUpdateResponse,
                     parse_obj_as(
-                        type_=FoldersUpdate200Response,  # type: ignore
+                        type_=FoldersUpdateResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -417,9 +418,9 @@ class RawFoldersClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -428,9 +429,9 @@ class RawFoldersClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -439,9 +440,9 @@ class RawFoldersClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -450,9 +451,9 @@ class RawFoldersClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -471,12 +472,12 @@ class RawFoldersClient:
         tenant_id: str,
         folder_id: str,
         *,
-        document_ids: typing.Optional[typing.Sequence[str]] = OMIT,
+        doc_ids: typing.Optional[typing.Sequence[str]] = OMIT,
         folder_ids: typing.Optional[typing.Sequence[str]] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[None]:
         """
-        Up to 1,000 ids in total. A folder moves with everything in it. 404 NotFound names the ids that do not exist or are being deleted in `details.documentIds` and `details.folderIds`. 409 Conflict carries `details.reason`: `cycle` (the destination is a moved folder or inside one; `details.folderId`), `too-deep` (the move would nest folders deeper than 100 levels; `details.maxDepth`) or `name-taken` (a moved folder's name is taken in the destination, ignoring case; `details.name`).
+        Up to 1,000 ids in total. A folder moves with everything in it. 404 NotFound names the ids that do not exist or are being deleted in `details.docIds` and `details.folderIds`. 409 Conflict carries `details.reason`: `cycle` (the destination is a moved folder or inside one; `details.folderId`), `too-deep` (the move would nest folders deeper than 100 levels; `details.maxDepth`) or `name-taken` (a moved folder's name is taken in the destination, ignoring case; `details.name`).
 
         Parameters
         ----------
@@ -485,7 +486,7 @@ class RawFoldersClient:
         folder_id : str
             A folder id, or root for the top level.
 
-        document_ids : typing.Optional[typing.Sequence[str]]
+        doc_ids : typing.Optional[typing.Sequence[str]]
 
         folder_ids : typing.Optional[typing.Sequence[str]]
 
@@ -500,7 +501,7 @@ class RawFoldersClient:
             f"v1/tenants/{encode_path_param(tenant_id)}/folders/{encode_path_param(folder_id)}/move-into",
             method="POST",
             json={
-                "documentIds": document_ids,
+                "docIds": doc_ids,
                 "folderIds": folder_ids,
             },
             headers={
@@ -516,9 +517,9 @@ class RawFoldersClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -527,9 +528,9 @@ class RawFoldersClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -538,9 +539,9 @@ class RawFoldersClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -549,9 +550,9 @@ class RawFoldersClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -578,7 +579,7 @@ class AsyncRawFoldersClient:
         cursor: typing.Optional[str] = None,
         parent_id: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[FoldersList200Response]:
+    ) -> AsyncHttpResponse[FoldersListResponse]:
         """
         Parameters
         ----------
@@ -596,7 +597,7 @@ class AsyncRawFoldersClient:
 
         Returns
         -------
-        AsyncHttpResponse[FoldersList200Response]
+        AsyncHttpResponse[FoldersListResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -612,9 +613,9 @@ class AsyncRawFoldersClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    FoldersList200Response,
+                    FoldersListResponse,
                     parse_obj_as(
-                        type_=FoldersList200Response,  # type: ignore
+                        type_=FoldersListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -623,9 +624,9 @@ class AsyncRawFoldersClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -634,9 +635,9 @@ class AsyncRawFoldersClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -645,9 +646,9 @@ class AsyncRawFoldersClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -668,7 +669,7 @@ class AsyncRawFoldersClient:
         name: str,
         parent_id: typing.Optional[str] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[FoldersCreate200Response]:
+    ) -> AsyncHttpResponse[FoldersCreateResponse]:
         """
         409 Conflict carries `details.reason`: `name-taken` (a sibling has the name, ignoring case; `details.name`) or `too-deep` (folders nest at most 100 levels; `details.maxDepth`). 404 when the parent folder does not exist.
 
@@ -687,7 +688,7 @@ class AsyncRawFoldersClient:
 
         Returns
         -------
-        AsyncHttpResponse[FoldersCreate200Response]
+        AsyncHttpResponse[FoldersCreateResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -706,9 +707,9 @@ class AsyncRawFoldersClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    FoldersCreate200Response,
+                    FoldersCreateResponse,
                     parse_obj_as(
-                        type_=FoldersCreate200Response,  # type: ignore
+                        type_=FoldersCreateResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -717,9 +718,9 @@ class AsyncRawFoldersClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -728,9 +729,9 @@ class AsyncRawFoldersClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -739,9 +740,9 @@ class AsyncRawFoldersClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -750,9 +751,9 @@ class AsyncRawFoldersClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -768,7 +769,7 @@ class AsyncRawFoldersClient:
 
     async def get(
         self, tenant_id: str, folder_id: str, *, request_options: typing.Optional[RequestOptions] = None
-    ) -> AsyncHttpResponse[FoldersGet200Response]:
+    ) -> AsyncHttpResponse[FoldersGetResponse]:
         """
         Parameters
         ----------
@@ -781,7 +782,7 @@ class AsyncRawFoldersClient:
 
         Returns
         -------
-        AsyncHttpResponse[FoldersGet200Response]
+        AsyncHttpResponse[FoldersGetResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -792,9 +793,9 @@ class AsyncRawFoldersClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    FoldersGet200Response,
+                    FoldersGetResponse,
                     parse_obj_as(
-                        type_=FoldersGet200Response,  # type: ignore
+                        type_=FoldersGetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -803,9 +804,9 @@ class AsyncRawFoldersClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -814,9 +815,9 @@ class AsyncRawFoldersClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -872,9 +873,9 @@ class AsyncRawFoldersClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -883,9 +884,9 @@ class AsyncRawFoldersClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -894,9 +895,9 @@ class AsyncRawFoldersClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -912,7 +913,7 @@ class AsyncRawFoldersClient:
 
     async def update(
         self, tenant_id: str, folder_id: str, *, name: str, request_options: typing.Optional[RequestOptions] = None
-    ) -> AsyncHttpResponse[FoldersUpdate200Response]:
+    ) -> AsyncHttpResponse[FoldersUpdateResponse]:
         """
         409 Conflict with `details.reason` `name-taken` when a sibling has the name, ignoring case.
 
@@ -930,7 +931,7 @@ class AsyncRawFoldersClient:
 
         Returns
         -------
-        AsyncHttpResponse[FoldersUpdate200Response]
+        AsyncHttpResponse[FoldersUpdateResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -948,9 +949,9 @@ class AsyncRawFoldersClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    FoldersUpdate200Response,
+                    FoldersUpdateResponse,
                     parse_obj_as(
-                        type_=FoldersUpdate200Response,  # type: ignore
+                        type_=FoldersUpdateResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -959,9 +960,9 @@ class AsyncRawFoldersClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -970,9 +971,9 @@ class AsyncRawFoldersClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -981,9 +982,9 @@ class AsyncRawFoldersClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -992,9 +993,9 @@ class AsyncRawFoldersClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1013,12 +1014,12 @@ class AsyncRawFoldersClient:
         tenant_id: str,
         folder_id: str,
         *,
-        document_ids: typing.Optional[typing.Sequence[str]] = OMIT,
+        doc_ids: typing.Optional[typing.Sequence[str]] = OMIT,
         folder_ids: typing.Optional[typing.Sequence[str]] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[None]:
         """
-        Up to 1,000 ids in total. A folder moves with everything in it. 404 NotFound names the ids that do not exist or are being deleted in `details.documentIds` and `details.folderIds`. 409 Conflict carries `details.reason`: `cycle` (the destination is a moved folder or inside one; `details.folderId`), `too-deep` (the move would nest folders deeper than 100 levels; `details.maxDepth`) or `name-taken` (a moved folder's name is taken in the destination, ignoring case; `details.name`).
+        Up to 1,000 ids in total. A folder moves with everything in it. 404 NotFound names the ids that do not exist or are being deleted in `details.docIds` and `details.folderIds`. 409 Conflict carries `details.reason`: `cycle` (the destination is a moved folder or inside one; `details.folderId`), `too-deep` (the move would nest folders deeper than 100 levels; `details.maxDepth`) or `name-taken` (a moved folder's name is taken in the destination, ignoring case; `details.name`).
 
         Parameters
         ----------
@@ -1027,7 +1028,7 @@ class AsyncRawFoldersClient:
         folder_id : str
             A folder id, or root for the top level.
 
-        document_ids : typing.Optional[typing.Sequence[str]]
+        doc_ids : typing.Optional[typing.Sequence[str]]
 
         folder_ids : typing.Optional[typing.Sequence[str]]
 
@@ -1042,7 +1043,7 @@ class AsyncRawFoldersClient:
             f"v1/tenants/{encode_path_param(tenant_id)}/folders/{encode_path_param(folder_id)}/move-into",
             method="POST",
             json={
-                "documentIds": document_ids,
+                "docIds": doc_ids,
                 "folderIds": folder_ids,
             },
             headers={
@@ -1058,9 +1059,9 @@ class AsyncRawFoldersClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1069,9 +1070,9 @@ class AsyncRawFoldersClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1080,9 +1081,9 @@ class AsyncRawFoldersClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1091,9 +1092,9 @@ class AsyncRawFoldersClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

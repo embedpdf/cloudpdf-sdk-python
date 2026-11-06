@@ -13,7 +13,8 @@ from ....core.pydantic_utilities import parse_obj_as
 from ....core.request_options import RequestOptions
 from ....errors.forbidden_error import ForbiddenError
 from ....errors.not_found_error import NotFoundError
-from ....types.doc_fonts_programs_get200response import DocFontsProgramsGet200Response
+from ....types.doc_fonts_programs_get_response import DocFontsProgramsGetResponse
+from ....types.error_response import ErrorResponse
 from pydantic import ValidationError
 
 
@@ -26,7 +27,7 @@ class RawProgramsClient:
         self,
         doc_id: str,
         layer_name: str,
-        display_hash: str,
+        display_sha256: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -40,7 +41,7 @@ class RawProgramsClient:
 
         layer_name : str
 
-        display_hash : str
+        display_sha256 : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -54,7 +55,7 @@ class RawProgramsClient:
             OK
         """
         with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/font-program-files/{encode_path_param(display_hash)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/font-program-files/{encode_path_param(display_sha256)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -74,9 +75,9 @@ class RawProgramsClient:
                         raise ForbiddenError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -85,9 +86,9 @@ class RawProgramsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -112,11 +113,11 @@ class RawProgramsClient:
         self,
         doc_id: str,
         layer_name: str,
-        display_hash: str,
+        display_sha256: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocFontsProgramsGet200Response]:
+    ) -> HttpResponse[DocFontsProgramsGetResponse]:
         """
         Parameters
         ----------
@@ -124,7 +125,7 @@ class RawProgramsClient:
 
         layer_name : str
 
-        display_hash : str
+        display_sha256 : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -134,11 +135,11 @@ class RawProgramsClient:
 
         Returns
         -------
-        HttpResponse[DocFontsProgramsGet200Response]
+        HttpResponse[DocFontsProgramsGetResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/font-programs/{encode_path_param(display_hash)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/font-programs/{encode_path_param(display_sha256)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -148,9 +149,9 @@ class RawProgramsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFontsProgramsGet200Response,
+                    DocFontsProgramsGetResponse,
                     parse_obj_as(
-                        type_=DocFontsProgramsGet200Response,  # type: ignore
+                        type_=DocFontsProgramsGetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -159,9 +160,9 @@ class RawProgramsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -185,7 +186,7 @@ class AsyncRawProgramsClient:
         self,
         doc_id: str,
         layer_name: str,
-        display_hash: str,
+        display_sha256: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -199,7 +200,7 @@ class AsyncRawProgramsClient:
 
         layer_name : str
 
-        display_hash : str
+        display_sha256 : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -213,7 +214,7 @@ class AsyncRawProgramsClient:
             OK
         """
         async with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/font-program-files/{encode_path_param(display_hash)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/font-program-files/{encode_path_param(display_sha256)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -234,9 +235,9 @@ class AsyncRawProgramsClient:
                         raise ForbiddenError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -245,9 +246,9 @@ class AsyncRawProgramsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -272,11 +273,11 @@ class AsyncRawProgramsClient:
         self,
         doc_id: str,
         layer_name: str,
-        display_hash: str,
+        display_sha256: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocFontsProgramsGet200Response]:
+    ) -> AsyncHttpResponse[DocFontsProgramsGetResponse]:
         """
         Parameters
         ----------
@@ -284,7 +285,7 @@ class AsyncRawProgramsClient:
 
         layer_name : str
 
-        display_hash : str
+        display_sha256 : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -294,11 +295,11 @@ class AsyncRawProgramsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocFontsProgramsGet200Response]
+        AsyncHttpResponse[DocFontsProgramsGetResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/font-programs/{encode_path_param(display_hash)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/font-programs/{encode_path_param(display_sha256)}",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -308,9 +309,9 @@ class AsyncRawProgramsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFontsProgramsGet200Response,
+                    DocFontsProgramsGetResponse,
                     parse_obj_as(
-                        type_=DocFontsProgramsGet200Response,  # type: ignore
+                        type_=DocFontsProgramsGetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -319,9 +320,9 @@ class AsyncRawProgramsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

@@ -13,7 +13,11 @@ from .page_ref import PageRef
 class ChangeItemFormsDeleteWidget(UniversalBaseModel):
     widget: AnnotationRef
     page: PageRef
-    field: typing.Optional[FormField] = None
+    field: typing.Optional[FormField] = pydantic.Field(default=None)
+    """
+    A form field, by its `family`. A newer server can add families: read one your client doesn't know as `unknown`, keeping the fields every field has, with `rawValue` an empty string when the body has none.
+    """
+
     meta: FormMutationMeta
 
     if IS_PYDANTIC_V2:

@@ -15,14 +15,15 @@ from ...errors.bad_request_error import BadRequestError
 from ...errors.not_found_error import NotFoundError
 from ...types.annotation_position import AnnotationPosition
 from ...types.annotation_ref import AnnotationRef
-from ...types.doc_forms_delete_widget200response import DocFormsDeleteWidget200Response
-from ...types.doc_forms_list200response import DocFormsList200Response
-from ...types.doc_forms_reorder_calculations200response import DocFormsReorderCalculations200Response
-from ...types.doc_forms_reorder_widgets200response import DocFormsReorderWidgets200Response
-from ...types.doc_forms_reset200response import DocFormsReset200Response
-from ...types.doc_forms_set_value200response import DocFormsSetValue200Response
+from ...types.doc_forms_delete_widget_response import DocFormsDeleteWidgetResponse
+from ...types.doc_forms_list_response import DocFormsListResponse
+from ...types.doc_forms_reorder_calculations_response import DocFormsReorderCalculationsResponse
+from ...types.doc_forms_reorder_widgets_response import DocFormsReorderWidgetsResponse
+from ...types.doc_forms_reset_response import DocFormsResetResponse
 from ...types.doc_forms_set_value_request import DocFormsSetValueRequest
-from ...types.doc_forms_update_widget200response import DocFormsUpdateWidget200Response
+from ...types.doc_forms_set_value_response import DocFormsSetValueResponse
+from ...types.doc_forms_update_widget_response import DocFormsUpdateWidgetResponse
+from ...types.error_response import ErrorResponse
 from ...types.field_position import FieldPosition
 from ...types.form_field_ref import FormFieldRef
 from ...types.widget_patch import WidgetPatch
@@ -43,7 +44,7 @@ class RawFormsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocFormsList200Response]:
+    ) -> HttpResponse[DocFormsListResponse]:
         """
         Parameters
         ----------
@@ -59,7 +60,7 @@ class RawFormsClient:
 
         Returns
         -------
-        HttpResponse[DocFormsList200Response]
+        HttpResponse[DocFormsListResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -73,9 +74,9 @@ class RawFormsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFormsList200Response,
+                    DocFormsListResponse,
                     parse_obj_as(
-                        type_=DocFormsList200Response,  # type: ignore
+                        type_=DocFormsListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -84,9 +85,9 @@ class RawFormsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -110,7 +111,7 @@ class RawFormsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocFormsReorderCalculations200Response]:
+    ) -> HttpResponse[DocFormsReorderCalculationsResponse]:
         """
         Parameters
         ----------
@@ -133,7 +134,7 @@ class RawFormsClient:
 
         Returns
         -------
-        HttpResponse[DocFormsReorderCalculations200Response]
+        HttpResponse[DocFormsReorderCalculationsResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -158,9 +159,9 @@ class RawFormsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFormsReorderCalculations200Response,
+                    DocFormsReorderCalculationsResponse,
                     parse_obj_as(
-                        type_=DocFormsReorderCalculations200Response,  # type: ignore
+                        type_=DocFormsReorderCalculationsResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -169,9 +170,9 @@ class RawFormsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -180,9 +181,9 @@ class RawFormsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -206,7 +207,7 @@ class RawFormsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocFormsSetValue200Response]:
+    ) -> HttpResponse[DocFormsSetValueResponse]:
         """
         Parameters
         ----------
@@ -229,7 +230,7 @@ class RawFormsClient:
 
         Returns
         -------
-        HttpResponse[DocFormsSetValue200Response]
+        HttpResponse[DocFormsSetValueResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -247,9 +248,9 @@ class RawFormsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFormsSetValue200Response,
+                    DocFormsSetValueResponse,
                     parse_obj_as(
-                        type_=DocFormsSetValue200Response,  # type: ignore
+                        type_=DocFormsSetValueResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -258,9 +259,9 @@ class RawFormsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -269,9 +270,9 @@ class RawFormsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -294,7 +295,7 @@ class RawFormsClient:
         idempotency_key: typing.Optional[str] = None,
         refs: typing.Optional[typing.Sequence[FormFieldRef]] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocFormsReset200Response]:
+    ) -> HttpResponse[DocFormsResetResponse]:
         """
         Parameters
         ----------
@@ -315,7 +316,7 @@ class RawFormsClient:
 
         Returns
         -------
-        HttpResponse[DocFormsReset200Response]
+        HttpResponse[DocFormsResetResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -337,9 +338,9 @@ class RawFormsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFormsReset200Response,
+                    DocFormsResetResponse,
                     parse_obj_as(
-                        type_=DocFormsReset200Response,  # type: ignore
+                        type_=DocFormsResetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -348,9 +349,9 @@ class RawFormsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -359,9 +360,9 @@ class RawFormsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -380,12 +381,12 @@ class RawFormsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocFormsDeleteWidget200Response]:
+    ) -> HttpResponse[DocFormsDeleteWidgetResponse]:
         """
         Parameters
         ----------
@@ -394,9 +395,9 @@ class RawFormsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
@@ -410,11 +411,11 @@ class RawFormsClient:
 
         Returns
         -------
-        HttpResponse[DocFormsDeleteWidget200Response]
+        HttpResponse[DocFormsDeleteWidgetResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/form/widgets/{encode_path_param(page_key)}/{encode_path_param(annot_key)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/form/widgets/{encode_path_param(page_key)}/{encode_path_param(annotation_key)}",
             method="DELETE",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -425,9 +426,9 @@ class RawFormsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFormsDeleteWidget200Response,
+                    DocFormsDeleteWidgetResponse,
                     parse_obj_as(
-                        type_=DocFormsDeleteWidget200Response,  # type: ignore
+                        type_=DocFormsDeleteWidgetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -436,9 +437,9 @@ class RawFormsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -447,9 +448,9 @@ class RawFormsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -468,13 +469,13 @@ class RawFormsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         patch: WidgetPatch,
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocFormsUpdateWidget200Response]:
+    ) -> HttpResponse[DocFormsUpdateWidgetResponse]:
         """
         Parameters
         ----------
@@ -483,9 +484,9 @@ class RawFormsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         patch : WidgetPatch
@@ -501,11 +502,11 @@ class RawFormsClient:
 
         Returns
         -------
-        HttpResponse[DocFormsUpdateWidget200Response]
+        HttpResponse[DocFormsUpdateWidgetResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/form/widgets/{encode_path_param(page_key)}/{encode_path_param(annot_key)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/form/widgets/{encode_path_param(page_key)}/{encode_path_param(annotation_key)}",
             method="PATCH",
             json={
                 "patch": convert_and_respect_annotation_metadata(
@@ -523,9 +524,9 @@ class RawFormsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFormsUpdateWidget200Response,
+                    DocFormsUpdateWidgetResponse,
                     parse_obj_as(
-                        type_=DocFormsUpdateWidget200Response,  # type: ignore
+                        type_=DocFormsUpdateWidgetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -534,9 +535,9 @@ class RawFormsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -545,9 +546,9 @@ class RawFormsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -572,7 +573,7 @@ class RawFormsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocFormsReorderWidgets200Response]:
+    ) -> HttpResponse[DocFormsReorderWidgetsResponse]:
         """
         Parameters
         ----------
@@ -581,7 +582,7 @@ class RawFormsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         widgets : typing.Sequence[AnnotationRef]
 
@@ -598,7 +599,7 @@ class RawFormsClient:
 
         Returns
         -------
-        HttpResponse[DocFormsReorderWidgets200Response]
+        HttpResponse[DocFormsReorderWidgetsResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -623,9 +624,9 @@ class RawFormsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFormsReorderWidgets200Response,
+                    DocFormsReorderWidgetsResponse,
                     parse_obj_as(
-                        type_=DocFormsReorderWidgets200Response,  # type: ignore
+                        type_=DocFormsReorderWidgetsResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -634,9 +635,9 @@ class RawFormsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -645,9 +646,9 @@ class RawFormsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -673,7 +674,7 @@ class AsyncRawFormsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocFormsList200Response]:
+    ) -> AsyncHttpResponse[DocFormsListResponse]:
         """
         Parameters
         ----------
@@ -689,7 +690,7 @@ class AsyncRawFormsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocFormsList200Response]
+        AsyncHttpResponse[DocFormsListResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -703,9 +704,9 @@ class AsyncRawFormsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFormsList200Response,
+                    DocFormsListResponse,
                     parse_obj_as(
-                        type_=DocFormsList200Response,  # type: ignore
+                        type_=DocFormsListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -714,9 +715,9 @@ class AsyncRawFormsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -740,7 +741,7 @@ class AsyncRawFormsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocFormsReorderCalculations200Response]:
+    ) -> AsyncHttpResponse[DocFormsReorderCalculationsResponse]:
         """
         Parameters
         ----------
@@ -763,7 +764,7 @@ class AsyncRawFormsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocFormsReorderCalculations200Response]
+        AsyncHttpResponse[DocFormsReorderCalculationsResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -788,9 +789,9 @@ class AsyncRawFormsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFormsReorderCalculations200Response,
+                    DocFormsReorderCalculationsResponse,
                     parse_obj_as(
-                        type_=DocFormsReorderCalculations200Response,  # type: ignore
+                        type_=DocFormsReorderCalculationsResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -799,9 +800,9 @@ class AsyncRawFormsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -810,9 +811,9 @@ class AsyncRawFormsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -836,7 +837,7 @@ class AsyncRawFormsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocFormsSetValue200Response]:
+    ) -> AsyncHttpResponse[DocFormsSetValueResponse]:
         """
         Parameters
         ----------
@@ -859,7 +860,7 @@ class AsyncRawFormsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocFormsSetValue200Response]
+        AsyncHttpResponse[DocFormsSetValueResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -877,9 +878,9 @@ class AsyncRawFormsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFormsSetValue200Response,
+                    DocFormsSetValueResponse,
                     parse_obj_as(
-                        type_=DocFormsSetValue200Response,  # type: ignore
+                        type_=DocFormsSetValueResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -888,9 +889,9 @@ class AsyncRawFormsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -899,9 +900,9 @@ class AsyncRawFormsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -924,7 +925,7 @@ class AsyncRawFormsClient:
         idempotency_key: typing.Optional[str] = None,
         refs: typing.Optional[typing.Sequence[FormFieldRef]] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocFormsReset200Response]:
+    ) -> AsyncHttpResponse[DocFormsResetResponse]:
         """
         Parameters
         ----------
@@ -945,7 +946,7 @@ class AsyncRawFormsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocFormsReset200Response]
+        AsyncHttpResponse[DocFormsResetResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -967,9 +968,9 @@ class AsyncRawFormsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFormsReset200Response,
+                    DocFormsResetResponse,
                     parse_obj_as(
-                        type_=DocFormsReset200Response,  # type: ignore
+                        type_=DocFormsResetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -978,9 +979,9 @@ class AsyncRawFormsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -989,9 +990,9 @@ class AsyncRawFormsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1010,12 +1011,12 @@ class AsyncRawFormsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocFormsDeleteWidget200Response]:
+    ) -> AsyncHttpResponse[DocFormsDeleteWidgetResponse]:
         """
         Parameters
         ----------
@@ -1024,9 +1025,9 @@ class AsyncRawFormsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
@@ -1040,11 +1041,11 @@ class AsyncRawFormsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocFormsDeleteWidget200Response]
+        AsyncHttpResponse[DocFormsDeleteWidgetResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/form/widgets/{encode_path_param(page_key)}/{encode_path_param(annot_key)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/form/widgets/{encode_path_param(page_key)}/{encode_path_param(annotation_key)}",
             method="DELETE",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -1055,9 +1056,9 @@ class AsyncRawFormsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFormsDeleteWidget200Response,
+                    DocFormsDeleteWidgetResponse,
                     parse_obj_as(
-                        type_=DocFormsDeleteWidget200Response,  # type: ignore
+                        type_=DocFormsDeleteWidgetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1066,9 +1067,9 @@ class AsyncRawFormsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1077,9 +1078,9 @@ class AsyncRawFormsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1098,13 +1099,13 @@ class AsyncRawFormsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         patch: WidgetPatch,
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocFormsUpdateWidget200Response]:
+    ) -> AsyncHttpResponse[DocFormsUpdateWidgetResponse]:
         """
         Parameters
         ----------
@@ -1113,9 +1114,9 @@ class AsyncRawFormsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         patch : WidgetPatch
@@ -1131,11 +1132,11 @@ class AsyncRawFormsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocFormsUpdateWidget200Response]
+        AsyncHttpResponse[DocFormsUpdateWidgetResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/form/widgets/{encode_path_param(page_key)}/{encode_path_param(annot_key)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/form/widgets/{encode_path_param(page_key)}/{encode_path_param(annotation_key)}",
             method="PATCH",
             json={
                 "patch": convert_and_respect_annotation_metadata(
@@ -1153,9 +1154,9 @@ class AsyncRawFormsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFormsUpdateWidget200Response,
+                    DocFormsUpdateWidgetResponse,
                     parse_obj_as(
-                        type_=DocFormsUpdateWidget200Response,  # type: ignore
+                        type_=DocFormsUpdateWidgetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1164,9 +1165,9 @@ class AsyncRawFormsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1175,9 +1176,9 @@ class AsyncRawFormsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1202,7 +1203,7 @@ class AsyncRawFormsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocFormsReorderWidgets200Response]:
+    ) -> AsyncHttpResponse[DocFormsReorderWidgetsResponse]:
         """
         Parameters
         ----------
@@ -1211,7 +1212,7 @@ class AsyncRawFormsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         widgets : typing.Sequence[AnnotationRef]
 
@@ -1228,7 +1229,7 @@ class AsyncRawFormsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocFormsReorderWidgets200Response]
+        AsyncHttpResponse[DocFormsReorderWidgetsResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -1253,9 +1254,9 @@ class AsyncRawFormsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFormsReorderWidgets200Response,
+                    DocFormsReorderWidgetsResponse,
                     parse_obj_as(
-                        type_=DocFormsReorderWidgets200Response,  # type: ignore
+                        type_=DocFormsReorderWidgetsResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1264,9 +1265,9 @@ class AsyncRawFormsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1275,9 +1276,9 @@ class AsyncRawFormsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

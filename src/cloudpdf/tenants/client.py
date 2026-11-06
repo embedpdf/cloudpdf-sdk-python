@@ -5,11 +5,11 @@ import typing
 from ..core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ..core.request_options import RequestOptions
 from ..types.tenant_feature import TenantFeature
-from ..types.tenants_create200response import TenantsCreate200Response
-from ..types.tenants_get200response import TenantsGet200Response
-from ..types.tenants_list200response import TenantsList200Response
-from ..types.tenants_update200response import TenantsUpdate200Response
-from ..types.tenants_usage200response import TenantsUsage200Response
+from ..types.tenants_create_response import TenantsCreateResponse
+from ..types.tenants_get_response import TenantsGetResponse
+from ..types.tenants_list_response import TenantsListResponse
+from ..types.tenants_update_response import TenantsUpdateResponse
+from ..types.tenants_usage_response import TenantsUsageResponse
 from .raw_client import AsyncRawTenantsClient, RawTenantsClient
 
 # this is used as the default value for optional parameters
@@ -37,7 +37,7 @@ class TenantsClient:
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> TenantsList200Response:
+    ) -> TenantsListResponse:
         """
         Parameters
         ----------
@@ -50,7 +50,7 @@ class TenantsClient:
 
         Returns
         -------
-        TenantsList200Response
+        TenantsListResponse
             OK
 
         Examples
@@ -67,7 +67,7 @@ class TenantsClient:
 
     def create(
         self, *, id: str, name: typing.Optional[str] = OMIT, request_options: typing.Optional[RequestOptions] = None
-    ) -> TenantsCreate200Response:
+    ) -> TenantsCreateResponse:
         """
         Parameters
         ----------
@@ -80,7 +80,7 @@ class TenantsClient:
 
         Returns
         -------
-        TenantsCreate200Response
+        TenantsCreateResponse
             OK
 
         Examples
@@ -97,7 +97,7 @@ class TenantsClient:
         _response = self._raw_client.create(id=id, name=name, request_options=request_options)
         return _response.data
 
-    def get(self, tenant_id: str, *, request_options: typing.Optional[RequestOptions] = None) -> TenantsGet200Response:
+    def get(self, tenant_id: str, *, request_options: typing.Optional[RequestOptions] = None) -> TenantsGetResponse:
         """
         Parameters
         ----------
@@ -108,7 +108,7 @@ class TenantsClient:
 
         Returns
         -------
-        TenantsGet200Response
+        TenantsGetResponse
             OK
 
         Examples
@@ -160,7 +160,7 @@ class TenantsClient:
         *,
         features: typing.Sequence[TenantFeature],
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> TenantsUpdate200Response:
+    ) -> TenantsUpdateResponse:
         """
         A feature names an installed module; any other id is a 400. A module route answers a tenant without its feature 403 FeatureNotEnabled, and one whose feature is stopped 402 FeatureStopped (details.feature, details.stopped). Other replicas apply a change within 30 seconds.
 
@@ -175,7 +175,7 @@ class TenantsClient:
 
         Returns
         -------
-        TenantsUpdate200Response
+        TenantsUpdateResponse
             OK
 
         Examples
@@ -269,7 +269,7 @@ class TenantsClient:
         from_: typing.Optional[str] = None,
         to: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> TenantsUsage200Response:
+    ) -> TenantsUsageResponse:
         """
         Facts only — no limits or billing state. Views count grant exchanges plus authorized /v1/access requests, deduplicated across the two.
 
@@ -288,7 +288,7 @@ class TenantsClient:
 
         Returns
         -------
-        TenantsUsage200Response
+        TenantsUsageResponse
             OK
 
         Examples
@@ -329,7 +329,7 @@ class AsyncTenantsClient:
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> TenantsList200Response:
+    ) -> TenantsListResponse:
         """
         Parameters
         ----------
@@ -342,7 +342,7 @@ class AsyncTenantsClient:
 
         Returns
         -------
-        TenantsList200Response
+        TenantsListResponse
             OK
 
         Examples
@@ -367,7 +367,7 @@ class AsyncTenantsClient:
 
     async def create(
         self, *, id: str, name: typing.Optional[str] = OMIT, request_options: typing.Optional[RequestOptions] = None
-    ) -> TenantsCreate200Response:
+    ) -> TenantsCreateResponse:
         """
         Parameters
         ----------
@@ -380,7 +380,7 @@ class AsyncTenantsClient:
 
         Returns
         -------
-        TenantsCreate200Response
+        TenantsCreateResponse
             OK
 
         Examples
@@ -407,7 +407,7 @@ class AsyncTenantsClient:
 
     async def get(
         self, tenant_id: str, *, request_options: typing.Optional[RequestOptions] = None
-    ) -> TenantsGet200Response:
+    ) -> TenantsGetResponse:
         """
         Parameters
         ----------
@@ -418,7 +418,7 @@ class AsyncTenantsClient:
 
         Returns
         -------
-        TenantsGet200Response
+        TenantsGetResponse
             OK
 
         Examples
@@ -486,7 +486,7 @@ class AsyncTenantsClient:
         *,
         features: typing.Sequence[TenantFeature],
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> TenantsUpdate200Response:
+    ) -> TenantsUpdateResponse:
         """
         A feature names an installed module; any other id is a 400. A module route answers a tenant without its feature 403 FeatureNotEnabled, and one whose feature is stopped 402 FeatureStopped (details.feature, details.stopped). Other replicas apply a change within 30 seconds.
 
@@ -501,7 +501,7 @@ class AsyncTenantsClient:
 
         Returns
         -------
-        TenantsUpdate200Response
+        TenantsUpdateResponse
             OK
 
         Examples
@@ -619,7 +619,7 @@ class AsyncTenantsClient:
         from_: typing.Optional[str] = None,
         to: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> TenantsUsage200Response:
+    ) -> TenantsUsageResponse:
         """
         Facts only — no limits or billing state. Views count grant exchanges plus authorized /v1/access requests, deduplicated across the two.
 
@@ -638,7 +638,7 @@ class AsyncTenantsClient:
 
         Returns
         -------
-        TenantsUsage200Response
+        TenantsUsageResponse
             OK
 
         Examples

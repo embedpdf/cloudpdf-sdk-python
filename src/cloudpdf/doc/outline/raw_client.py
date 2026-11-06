@@ -11,7 +11,8 @@ from ...core.parse_error import ParsingError
 from ...core.pydantic_utilities import parse_obj_as
 from ...core.request_options import RequestOptions
 from ...errors.not_found_error import NotFoundError
-from ...types.doc_outline_get200response import DocOutlineGet200Response
+from ...types.doc_outline_get_response import DocOutlineGetResponse
+from ...types.error_response import ErrorResponse
 from pydantic import ValidationError
 
 
@@ -26,7 +27,7 @@ class RawOutlineClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocOutlineGet200Response]:
+    ) -> HttpResponse[DocOutlineGetResponse]:
         """
         Parameters
         ----------
@@ -42,7 +43,7 @@ class RawOutlineClient:
 
         Returns
         -------
-        HttpResponse[DocOutlineGet200Response]
+        HttpResponse[DocOutlineGetResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -56,9 +57,9 @@ class RawOutlineClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocOutlineGet200Response,
+                    DocOutlineGetResponse,
                     parse_obj_as(
-                        type_=DocOutlineGet200Response,  # type: ignore
+                        type_=DocOutlineGetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -67,9 +68,9 @@ class RawOutlineClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -95,7 +96,7 @@ class AsyncRawOutlineClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocOutlineGet200Response]:
+    ) -> AsyncHttpResponse[DocOutlineGetResponse]:
         """
         Parameters
         ----------
@@ -111,7 +112,7 @@ class AsyncRawOutlineClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocOutlineGet200Response]
+        AsyncHttpResponse[DocOutlineGetResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -125,9 +126,9 @@ class AsyncRawOutlineClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocOutlineGet200Response,
+                    DocOutlineGetResponse,
                     parse_obj_as(
-                        type_=DocOutlineGet200Response,  # type: ignore
+                        type_=DocOutlineGetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -136,9 +137,9 @@ class AsyncRawOutlineClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

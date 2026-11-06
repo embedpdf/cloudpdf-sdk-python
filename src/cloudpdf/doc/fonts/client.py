@@ -7,8 +7,8 @@ import typing
 from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
 from ...types.annotation_ref import AnnotationRef
-from ...types.doc_fonts_list200response import DocFontsList200Response
-from ...types.doc_fonts_resolve200response import DocFontsResolve200Response
+from ...types.doc_fonts_list_response import DocFontsListResponse
+from ...types.doc_fonts_resolve_response import DocFontsResolveResponse
 from ...types.font_resolve_run import FontResolveRun
 from .raw_client import AsyncRawFontsClient, RawFontsClient
 
@@ -42,7 +42,7 @@ class FontsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFontsList200Response:
+    ) -> DocFontsListResponse:
         """
         Parameters
         ----------
@@ -58,7 +58,7 @@ class FontsClient:
 
         Returns
         -------
-        DocFontsList200Response
+        DocFontsListResponse
             OK
 
         Examples
@@ -87,7 +87,7 @@ class FontsClient:
         document_password: typing.Optional[str] = None,
         annotation: typing.Optional[AnnotationRef] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFontsResolve200Response:
+    ) -> DocFontsResolveResponse:
         """
         Parameters
         ----------
@@ -107,7 +107,7 @@ class FontsClient:
 
         Returns
         -------
-        DocFontsResolve200Response
+        DocFontsResolveResponse
             OK
 
         Examples
@@ -170,7 +170,7 @@ class AsyncFontsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFontsList200Response:
+    ) -> DocFontsListResponse:
         """
         Parameters
         ----------
@@ -186,7 +186,7 @@ class AsyncFontsClient:
 
         Returns
         -------
-        DocFontsList200Response
+        DocFontsListResponse
             OK
 
         Examples
@@ -223,7 +223,7 @@ class AsyncFontsClient:
         document_password: typing.Optional[str] = None,
         annotation: typing.Optional[AnnotationRef] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFontsResolve200Response:
+    ) -> DocFontsResolveResponse:
         """
         Parameters
         ----------
@@ -243,7 +243,7 @@ class AsyncFontsClient:
 
         Returns
         -------
-        DocFontsResolve200Response
+        DocFontsResolveResponse
             OK
 
         Examples

@@ -5,7 +5,7 @@ import typing
 from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
 from ...types.annotation_ref import AnnotationRef
-from ...types.doc_redactions_apply200response import DocRedactionsApply200Response
+from ...types.doc_redactions_apply_response import DocRedactionsApplyResponse
 from ...types.page_ref import PageRef
 from .raw_client import AsyncRawRedactionsClient, RawRedactionsClient
 
@@ -38,7 +38,7 @@ class RedactionsClient:
         pages: typing.Optional[typing.Sequence[PageRef]] = OMIT,
         annotations: typing.Optional[typing.Sequence[AnnotationRef]] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocRedactionsApply200Response:
+    ) -> DocRedactionsApplyResponse:
         """
         Parameters
         ----------
@@ -61,7 +61,7 @@ class RedactionsClient:
 
         Returns
         -------
-        DocRedactionsApply200Response
+        DocRedactionsApplyResponse
             OK
 
         Examples
@@ -113,7 +113,7 @@ class AsyncRedactionsClient:
         pages: typing.Optional[typing.Sequence[PageRef]] = OMIT,
         annotations: typing.Optional[typing.Sequence[AnnotationRef]] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocRedactionsApply200Response:
+    ) -> DocRedactionsApplyResponse:
         """
         Parameters
         ----------
@@ -136,7 +136,7 @@ class AsyncRedactionsClient:
 
         Returns
         -------
-        DocRedactionsApply200Response
+        DocRedactionsApplyResponse
             OK
 
         Examples

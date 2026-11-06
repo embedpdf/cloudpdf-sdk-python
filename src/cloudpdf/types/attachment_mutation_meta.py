@@ -25,7 +25,9 @@ class AttachmentMutationMeta(UniversalBaseModel):
         FieldMetadata(alias="missingCharacters"),
         pydantic.Field(alias="missingCharacters"),
     ] = None
-    changed: typing.List[AttachmentRef]
+    changed_refs: typing_extensions.Annotated[
+        typing.List[AttachmentRef], FieldMetadata(alias="changedRefs"), pydantic.Field(alias="changedRefs")
+    ]
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

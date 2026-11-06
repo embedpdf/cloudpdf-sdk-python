@@ -7,13 +7,13 @@ import typing
 from .. import core
 from ..core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ..core.request_options import RequestOptions
-from ..types.documents_commit200response import DocumentsCommit200Response
-from ..types.documents_get200response import DocumentsGet200Response
+from ..types.documents_commit_response import DocumentsCommitResponse
+from ..types.documents_get_response import DocumentsGetResponse
 from ..types.documents_import_from200response import DocumentsImportFrom200Response
-from ..types.documents_init200response import DocumentsInit200Response
-from ..types.documents_list200response import DocumentsList200Response
-from ..types.documents_update200response import DocumentsUpdate200Response
-from ..types.documents_upload_proxy200response import DocumentsUploadProxy200Response
+from ..types.documents_init_response import DocumentsInitResponse
+from ..types.documents_list_response import DocumentsListResponse
+from ..types.documents_update_response import DocumentsUpdateResponse
+from ..types.documents_upload_proxy_response import DocumentsUploadProxyResponse
 from .raw_client import AsyncRawDocumentsClient, RawDocumentsClient
 from .types.documents_import_from_request_dedup_mode import DocumentsImportFromRequestDedupMode
 from .types.documents_import_from_request_expected import DocumentsImportFromRequestExpected
@@ -60,7 +60,7 @@ class DocumentsClient:
         sort: typing.Optional[ListDocumentsRequestSort] = None,
         order: typing.Optional[ListDocumentsRequestOrder] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocumentsList200Response:
+    ) -> DocumentsListResponse:
         """
         Parameters
         ----------
@@ -90,7 +90,7 @@ class DocumentsClient:
 
         Returns
         -------
-        DocumentsList200Response
+        DocumentsListResponse
             OK
 
         Examples
@@ -118,21 +118,21 @@ class DocumentsClient:
         return _response.data
 
     def get(
-        self, tenant_id: str, id: str, *, request_options: typing.Optional[RequestOptions] = None
-    ) -> DocumentsGet200Response:
+        self, tenant_id: str, doc_id: str, *, request_options: typing.Optional[RequestOptions] = None
+    ) -> DocumentsGetResponse:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        DocumentsGet200Response
+        DocumentsGetResponse
             OK
 
         Examples
@@ -144,19 +144,19 @@ class DocumentsClient:
         )
         client.documents.get(
             tenant_id="tenantId",
-            id="id",
+            doc_id="docId",
         )
         """
-        _response = self._raw_client.get(tenant_id, id, request_options=request_options)
+        _response = self._raw_client.get(tenant_id, doc_id, request_options=request_options)
         return _response.data
 
-    def delete(self, tenant_id: str, id: str, *, request_options: typing.Optional[RequestOptions] = None) -> None:
+    def delete(self, tenant_id: str, doc_id: str, *, request_options: typing.Optional[RequestOptions] = None) -> None:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -174,15 +174,15 @@ class DocumentsClient:
         )
         client.documents.delete(
             tenant_id="tenantId",
-            id="id",
+            doc_id="docId",
         )
         """
-        _response = self._raw_client.delete(tenant_id, id, request_options=request_options)
+        _response = self._raw_client.delete(tenant_id, doc_id, request_options=request_options)
         return _response.data
 
     def update(
-        self, tenant_id: str, id: str, *, name: str, request_options: typing.Optional[RequestOptions] = None
-    ) -> DocumentsUpdate200Response:
+        self, tenant_id: str, doc_id: str, *, name: str, request_options: typing.Optional[RequestOptions] = None
+    ) -> DocumentsUpdateResponse:
         """
         A document that is being deleted answers 404.
 
@@ -190,7 +190,7 @@ class DocumentsClient:
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         name : str
             What people call the document: shown in dashboards, searched and sorted by. 1 to 255 characters, no control characters, no leading or trailing whitespace. Names need not be unique.
@@ -200,7 +200,7 @@ class DocumentsClient:
 
         Returns
         -------
-        DocumentsUpdate200Response
+        DocumentsUpdateResponse
             OK
 
         Examples
@@ -212,16 +212,16 @@ class DocumentsClient:
         )
         client.documents.update(
             tenant_id="tenantId",
-            id="id",
+            doc_id="docId",
             name="name",
         )
         """
-        _response = self._raw_client.update(tenant_id, id, name=name, request_options=request_options)
+        _response = self._raw_client.update(tenant_id, doc_id, name=name, request_options=request_options)
         return _response.data
 
     def commit(
-        self, tenant_id: str, id: str, *, sha256: str, request_options: typing.Optional[RequestOptions] = None
-    ) -> DocumentsCommit200Response:
+        self, tenant_id: str, doc_id: str, *, sha256: str, request_options: typing.Optional[RequestOptions] = None
+    ) -> DocumentsCommitResponse:
         """
         An upload token commits only the documents it started; any other document answers 404.
 
@@ -229,7 +229,7 @@ class DocumentsClient:
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         sha256 : str
 
@@ -238,7 +238,7 @@ class DocumentsClient:
 
         Returns
         -------
-        DocumentsCommit200Response
+        DocumentsCommitResponse
             OK
 
         Examples
@@ -250,22 +250,22 @@ class DocumentsClient:
         )
         client.documents.commit(
             tenant_id="tenantId",
-            id="id",
+            doc_id="docId",
             sha256="sha256",
         )
         """
-        _response = self._raw_client.commit(tenant_id, id, sha256=sha256, request_options=request_options)
+        _response = self._raw_client.commit(tenant_id, doc_id, sha256=sha256, request_options=request_options)
         return _response.data
 
     def download(
-        self, tenant_id: str, id: str, *, request_options: typing.Optional[RequestOptions] = None
+        self, tenant_id: str, doc_id: str, *, request_options: typing.Optional[RequestOptions] = None
     ) -> typing.Iterator[bytes]:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
@@ -284,21 +284,21 @@ class DocumentsClient:
         )
         client.documents.download(
             tenant_id="tenantId",
-            id="id",
+            doc_id="docId",
         )
         """
-        with self._raw_client.download(tenant_id, id, request_options=request_options) as r:
+        with self._raw_client.download(tenant_id, doc_id, request_options=request_options) as r:
             yield from r.data
 
     def thumbnail(
-        self, tenant_id: str, id: str, *, request_options: typing.Optional[RequestOptions] = None
+        self, tenant_id: str, doc_id: str, *, request_options: typing.Optional[RequestOptions] = None
     ) -> typing.Iterator[bytes]:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
@@ -317,15 +317,15 @@ class DocumentsClient:
         )
         client.documents.thumbnail(
             tenant_id="tenantId",
-            id="id",
+            doc_id="docId",
         )
         """
-        with self._raw_client.thumbnail(tenant_id, id, request_options=request_options) as r:
+        with self._raw_client.thumbnail(tenant_id, doc_id, request_options=request_options) as r:
             yield from r.data
 
     def upload_proxy(
-        self, tenant_id: str, id: str, *, file: core.File, request_options: typing.Optional[RequestOptions] = None
-    ) -> DocumentsUploadProxy200Response:
+        self, tenant_id: str, doc_id: str, *, file: core.File, request_options: typing.Optional[RequestOptions] = None
+    ) -> DocumentsUploadProxyResponse:
         """
         This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available. An upload token sends files only to the documents it started.
 
@@ -333,7 +333,7 @@ class DocumentsClient:
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         file : core.File
             See core.File for more documentation
@@ -343,7 +343,7 @@ class DocumentsClient:
 
         Returns
         -------
-        DocumentsUploadProxy200Response
+        DocumentsUploadProxyResponse
             OK
 
         Examples
@@ -355,10 +355,10 @@ class DocumentsClient:
         )
         client.documents.upload_proxy(
             tenant_id="tenantId",
-            id="id",
+            doc_id="docId",
         )
         """
-        _response = self._raw_client.upload_proxy(tenant_id, id, file=file, request_options=request_options)
+        _response = self._raw_client.upload_proxy(tenant_id, doc_id, file=file, request_options=request_options)
         return _response.data
 
     def import_from(
@@ -450,7 +450,7 @@ class DocumentsClient:
         self,
         tenant_id: str,
         *,
-        content_length: float,
+        size_bytes: int,
         content_sha256: str,
         name: typing.Optional[str] = OMIT,
         folder_id: typing.Optional[str] = OMIT,
@@ -458,18 +458,18 @@ class DocumentsClient:
         idempotency_key: typing.Optional[str] = OMIT,
         dedup_mode: typing.Optional[DocumentsInitRequestDedupMode] = OMIT,
         doc_id: typing.Optional[str] = OMIT,
-        upload_ttl_sec: typing.Optional[float] = OMIT,
+        upload_ttl_seconds: typing.Optional[int] = OMIT,
         upload_preference: typing.Optional[DocumentsInitRequestUploadPreference] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocumentsInit200Response:
+    ) -> DocumentsInitResponse:
         """
-        With an upload token, the document goes into the token's folder with the token's metadata, whatever the request says; contentLength must be within the token's maxBytes, and the token makes at most maxFiles documents (403 after). docId, idempotencyKey and dedupMode reuse-existing are refused (400): each could reach a document the token didn't make.
+        With an upload token, the document goes into the token's folder with the token's metadata, whatever the request says; sizeBytes must be within the token's maxBytes, and the token makes at most maxFiles documents (403 after). docId, idempotencyKey and dedupMode reuse-existing are refused (400): each could reach a document the token didn't make.
 
         Parameters
         ----------
         tenant_id : str
 
-        content_length : float
+        size_bytes : int
 
         content_sha256 : str
 
@@ -488,7 +488,7 @@ class DocumentsClient:
 
         doc_id : typing.Optional[str]
 
-        upload_ttl_sec : typing.Optional[float]
+        upload_ttl_seconds : typing.Optional[int]
 
         upload_preference : typing.Optional[DocumentsInitRequestUploadPreference]
 
@@ -497,7 +497,7 @@ class DocumentsClient:
 
         Returns
         -------
-        DocumentsInit200Response
+        DocumentsInitResponse
             OK
 
         Examples
@@ -509,13 +509,13 @@ class DocumentsClient:
         )
         client.documents.init(
             tenant_id="tenantId",
-            content_length=1.1,
+            size_bytes=1,
             content_sha256="contentSha256",
         )
         """
         _response = self._raw_client.init(
             tenant_id,
-            content_length=content_length,
+            size_bytes=size_bytes,
             content_sha256=content_sha256,
             name=name,
             folder_id=folder_id,
@@ -523,7 +523,7 @@ class DocumentsClient:
             idempotency_key=idempotency_key,
             dedup_mode=dedup_mode,
             doc_id=doc_id,
-            upload_ttl_sec=upload_ttl_sec,
+            upload_ttl_seconds=upload_ttl_seconds,
             upload_preference=upload_preference,
             request_options=request_options,
         )
@@ -567,7 +567,7 @@ class AsyncDocumentsClient:
         sort: typing.Optional[ListDocumentsRequestSort] = None,
         order: typing.Optional[ListDocumentsRequestOrder] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocumentsList200Response:
+    ) -> DocumentsListResponse:
         """
         Parameters
         ----------
@@ -597,7 +597,7 @@ class AsyncDocumentsClient:
 
         Returns
         -------
-        DocumentsList200Response
+        DocumentsListResponse
             OK
 
         Examples
@@ -633,21 +633,21 @@ class AsyncDocumentsClient:
         return _response.data
 
     async def get(
-        self, tenant_id: str, id: str, *, request_options: typing.Optional[RequestOptions] = None
-    ) -> DocumentsGet200Response:
+        self, tenant_id: str, doc_id: str, *, request_options: typing.Optional[RequestOptions] = None
+    ) -> DocumentsGetResponse:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        DocumentsGet200Response
+        DocumentsGetResponse
             OK
 
         Examples
@@ -664,22 +664,24 @@ class AsyncDocumentsClient:
         async def main() -> None:
             await client.documents.get(
                 tenant_id="tenantId",
-                id="id",
+                doc_id="docId",
             )
 
 
         asyncio.run(main())
         """
-        _response = await self._raw_client.get(tenant_id, id, request_options=request_options)
+        _response = await self._raw_client.get(tenant_id, doc_id, request_options=request_options)
         return _response.data
 
-    async def delete(self, tenant_id: str, id: str, *, request_options: typing.Optional[RequestOptions] = None) -> None:
+    async def delete(
+        self, tenant_id: str, doc_id: str, *, request_options: typing.Optional[RequestOptions] = None
+    ) -> None:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -702,18 +704,18 @@ class AsyncDocumentsClient:
         async def main() -> None:
             await client.documents.delete(
                 tenant_id="tenantId",
-                id="id",
+                doc_id="docId",
             )
 
 
         asyncio.run(main())
         """
-        _response = await self._raw_client.delete(tenant_id, id, request_options=request_options)
+        _response = await self._raw_client.delete(tenant_id, doc_id, request_options=request_options)
         return _response.data
 
     async def update(
-        self, tenant_id: str, id: str, *, name: str, request_options: typing.Optional[RequestOptions] = None
-    ) -> DocumentsUpdate200Response:
+        self, tenant_id: str, doc_id: str, *, name: str, request_options: typing.Optional[RequestOptions] = None
+    ) -> DocumentsUpdateResponse:
         """
         A document that is being deleted answers 404.
 
@@ -721,7 +723,7 @@ class AsyncDocumentsClient:
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         name : str
             What people call the document: shown in dashboards, searched and sorted by. 1 to 255 characters, no control characters, no leading or trailing whitespace. Names need not be unique.
@@ -731,7 +733,7 @@ class AsyncDocumentsClient:
 
         Returns
         -------
-        DocumentsUpdate200Response
+        DocumentsUpdateResponse
             OK
 
         Examples
@@ -748,19 +750,19 @@ class AsyncDocumentsClient:
         async def main() -> None:
             await client.documents.update(
                 tenant_id="tenantId",
-                id="id",
+                doc_id="docId",
                 name="name",
             )
 
 
         asyncio.run(main())
         """
-        _response = await self._raw_client.update(tenant_id, id, name=name, request_options=request_options)
+        _response = await self._raw_client.update(tenant_id, doc_id, name=name, request_options=request_options)
         return _response.data
 
     async def commit(
-        self, tenant_id: str, id: str, *, sha256: str, request_options: typing.Optional[RequestOptions] = None
-    ) -> DocumentsCommit200Response:
+        self, tenant_id: str, doc_id: str, *, sha256: str, request_options: typing.Optional[RequestOptions] = None
+    ) -> DocumentsCommitResponse:
         """
         An upload token commits only the documents it started; any other document answers 404.
 
@@ -768,7 +770,7 @@ class AsyncDocumentsClient:
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         sha256 : str
 
@@ -777,7 +779,7 @@ class AsyncDocumentsClient:
 
         Returns
         -------
-        DocumentsCommit200Response
+        DocumentsCommitResponse
             OK
 
         Examples
@@ -794,25 +796,25 @@ class AsyncDocumentsClient:
         async def main() -> None:
             await client.documents.commit(
                 tenant_id="tenantId",
-                id="id",
+                doc_id="docId",
                 sha256="sha256",
             )
 
 
         asyncio.run(main())
         """
-        _response = await self._raw_client.commit(tenant_id, id, sha256=sha256, request_options=request_options)
+        _response = await self._raw_client.commit(tenant_id, doc_id, sha256=sha256, request_options=request_options)
         return _response.data
 
     async def download(
-        self, tenant_id: str, id: str, *, request_options: typing.Optional[RequestOptions] = None
+        self, tenant_id: str, doc_id: str, *, request_options: typing.Optional[RequestOptions] = None
     ) -> typing.AsyncIterator[bytes]:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
@@ -836,25 +838,25 @@ class AsyncDocumentsClient:
         async def main() -> None:
             await client.documents.download(
                 tenant_id="tenantId",
-                id="id",
+                doc_id="docId",
             )
 
 
         asyncio.run(main())
         """
-        async with self._raw_client.download(tenant_id, id, request_options=request_options) as r:
+        async with self._raw_client.download(tenant_id, doc_id, request_options=request_options) as r:
             async for _chunk in r.data:
                 yield _chunk
 
     async def thumbnail(
-        self, tenant_id: str, id: str, *, request_options: typing.Optional[RequestOptions] = None
+        self, tenant_id: str, doc_id: str, *, request_options: typing.Optional[RequestOptions] = None
     ) -> typing.AsyncIterator[bytes]:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
@@ -878,19 +880,19 @@ class AsyncDocumentsClient:
         async def main() -> None:
             await client.documents.thumbnail(
                 tenant_id="tenantId",
-                id="id",
+                doc_id="docId",
             )
 
 
         asyncio.run(main())
         """
-        async with self._raw_client.thumbnail(tenant_id, id, request_options=request_options) as r:
+        async with self._raw_client.thumbnail(tenant_id, doc_id, request_options=request_options) as r:
             async for _chunk in r.data:
                 yield _chunk
 
     async def upload_proxy(
-        self, tenant_id: str, id: str, *, file: core.File, request_options: typing.Optional[RequestOptions] = None
-    ) -> DocumentsUploadProxy200Response:
+        self, tenant_id: str, doc_id: str, *, file: core.File, request_options: typing.Optional[RequestOptions] = None
+    ) -> DocumentsUploadProxyResponse:
         """
         This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available. An upload token sends files only to the documents it started.
 
@@ -898,7 +900,7 @@ class AsyncDocumentsClient:
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         file : core.File
             See core.File for more documentation
@@ -908,7 +910,7 @@ class AsyncDocumentsClient:
 
         Returns
         -------
-        DocumentsUploadProxy200Response
+        DocumentsUploadProxyResponse
             OK
 
         Examples
@@ -925,13 +927,13 @@ class AsyncDocumentsClient:
         async def main() -> None:
             await client.documents.upload_proxy(
                 tenant_id="tenantId",
-                id="id",
+                doc_id="docId",
             )
 
 
         asyncio.run(main())
         """
-        _response = await self._raw_client.upload_proxy(tenant_id, id, file=file, request_options=request_options)
+        _response = await self._raw_client.upload_proxy(tenant_id, doc_id, file=file, request_options=request_options)
         return _response.data
 
     async def import_from(
@@ -1031,7 +1033,7 @@ class AsyncDocumentsClient:
         self,
         tenant_id: str,
         *,
-        content_length: float,
+        size_bytes: int,
         content_sha256: str,
         name: typing.Optional[str] = OMIT,
         folder_id: typing.Optional[str] = OMIT,
@@ -1039,18 +1041,18 @@ class AsyncDocumentsClient:
         idempotency_key: typing.Optional[str] = OMIT,
         dedup_mode: typing.Optional[DocumentsInitRequestDedupMode] = OMIT,
         doc_id: typing.Optional[str] = OMIT,
-        upload_ttl_sec: typing.Optional[float] = OMIT,
+        upload_ttl_seconds: typing.Optional[int] = OMIT,
         upload_preference: typing.Optional[DocumentsInitRequestUploadPreference] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocumentsInit200Response:
+    ) -> DocumentsInitResponse:
         """
-        With an upload token, the document goes into the token's folder with the token's metadata, whatever the request says; contentLength must be within the token's maxBytes, and the token makes at most maxFiles documents (403 after). docId, idempotencyKey and dedupMode reuse-existing are refused (400): each could reach a document the token didn't make.
+        With an upload token, the document goes into the token's folder with the token's metadata, whatever the request says; sizeBytes must be within the token's maxBytes, and the token makes at most maxFiles documents (403 after). docId, idempotencyKey and dedupMode reuse-existing are refused (400): each could reach a document the token didn't make.
 
         Parameters
         ----------
         tenant_id : str
 
-        content_length : float
+        size_bytes : int
 
         content_sha256 : str
 
@@ -1069,7 +1071,7 @@ class AsyncDocumentsClient:
 
         doc_id : typing.Optional[str]
 
-        upload_ttl_sec : typing.Optional[float]
+        upload_ttl_seconds : typing.Optional[int]
 
         upload_preference : typing.Optional[DocumentsInitRequestUploadPreference]
 
@@ -1078,7 +1080,7 @@ class AsyncDocumentsClient:
 
         Returns
         -------
-        DocumentsInit200Response
+        DocumentsInitResponse
             OK
 
         Examples
@@ -1095,7 +1097,7 @@ class AsyncDocumentsClient:
         async def main() -> None:
             await client.documents.init(
                 tenant_id="tenantId",
-                content_length=1.1,
+                size_bytes=1,
                 content_sha256="contentSha256",
             )
 
@@ -1104,7 +1106,7 @@ class AsyncDocumentsClient:
         """
         _response = await self._raw_client.init(
             tenant_id,
-            content_length=content_length,
+            size_bytes=size_bytes,
             content_sha256=content_sha256,
             name=name,
             folder_id=folder_id,
@@ -1112,7 +1114,7 @@ class AsyncDocumentsClient:
             idempotency_key=idempotency_key,
             dedup_mode=dedup_mode,
             doc_id=doc_id,
-            upload_ttl_sec=upload_ttl_sec,
+            upload_ttl_seconds=upload_ttl_seconds,
             upload_preference=upload_preference,
             request_options=request_options,
         )

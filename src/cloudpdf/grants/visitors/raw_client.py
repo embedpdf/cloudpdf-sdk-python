@@ -12,7 +12,8 @@ from ...core.pydantic_utilities import parse_obj_as
 from ...core.request_options import RequestOptions
 from ...errors.bad_request_error import BadRequestError
 from ...errors.not_found_error import NotFoundError
-from ...types.grants_visitors_list200response import GrantsVisitorsList200Response
+from ...types.error_response import ErrorResponse
+from ...types.grants_visitors_list_response import GrantsVisitorsListResponse
 from pydantic import ValidationError
 
 
@@ -28,7 +29,7 @@ class RawVisitorsClient:
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[GrantsVisitorsList200Response]:
+    ) -> HttpResponse[GrantsVisitorsListResponse]:
         """
         An archived grant's visitors are listed too.
 
@@ -47,7 +48,7 @@ class RawVisitorsClient:
 
         Returns
         -------
-        HttpResponse[GrantsVisitorsList200Response]
+        HttpResponse[GrantsVisitorsListResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -62,9 +63,9 @@ class RawVisitorsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    GrantsVisitorsList200Response,
+                    GrantsVisitorsListResponse,
                     parse_obj_as(
-                        type_=GrantsVisitorsList200Response,  # type: ignore
+                        type_=GrantsVisitorsListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -73,9 +74,9 @@ class RawVisitorsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -84,9 +85,9 @@ class RawVisitorsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -133,9 +134,9 @@ class RawVisitorsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -162,7 +163,7 @@ class AsyncRawVisitorsClient:
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[GrantsVisitorsList200Response]:
+    ) -> AsyncHttpResponse[GrantsVisitorsListResponse]:
         """
         An archived grant's visitors are listed too.
 
@@ -181,7 +182,7 @@ class AsyncRawVisitorsClient:
 
         Returns
         -------
-        AsyncHttpResponse[GrantsVisitorsList200Response]
+        AsyncHttpResponse[GrantsVisitorsListResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -196,9 +197,9 @@ class AsyncRawVisitorsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    GrantsVisitorsList200Response,
+                    GrantsVisitorsListResponse,
                     parse_obj_as(
-                        type_=GrantsVisitorsList200Response,  # type: ignore
+                        type_=GrantsVisitorsListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -207,9 +208,9 @@ class AsyncRawVisitorsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -218,9 +219,9 @@ class AsyncRawVisitorsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -267,9 +268,9 @@ class AsyncRawVisitorsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

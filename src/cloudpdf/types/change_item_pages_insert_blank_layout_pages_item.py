@@ -23,7 +23,7 @@ class ChangeItemPagesInsertBlankLayoutPagesItem(UniversalBaseModel):
     ref: PageRef
     label: typing.Optional[str] = None
     size: ChangeItemPagesInsertBlankLayoutPagesItemSize
-    rotation: float
+    rotation: int
     user_unit: typing_extensions.Annotated[float, FieldMetadata(alias="userUnit"), pydantic.Field(alias="userUnit")]
     tab_order: typing_extensions.Annotated[
         typing.Optional[ChangeItemPagesInsertBlankLayoutPagesItemTabOrder],

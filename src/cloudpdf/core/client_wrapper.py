@@ -19,6 +19,7 @@ class BaseClientWrapper:
         stream_reconnection_enabled: typing.Optional[bool] = None,
         max_stream_reconnection_attempts: typing.Optional[int] = None,
         logging: typing.Optional[typing.Union[LogConfig, Logger]] = None,
+        embed_pdf_version: typing.Optional[str] = None,
     ):
         self._token = token
         self._headers = headers
@@ -28,22 +29,24 @@ class BaseClientWrapper:
         self._stream_reconnection_enabled = stream_reconnection_enabled
         self._max_stream_reconnection_attempts = max_stream_reconnection_attempts
         self._logging = logging
+        self._embed_pdf_version = embed_pdf_version
 
     def get_headers(self) -> typing.Dict[str, str]:
         import platform
 
         headers: typing.Dict[str, str] = {
-            "User-Agent": "cloudpdf/3.0.0a22",
+            "User-Agent": "cloudpdf/3.0.0a23",
             "X-Fern-Language": "Python",
             "X-Fern-Runtime": f"python/{platform.python_version()}",
             "X-Fern-Platform": f"{platform.system().lower()}/{platform.release()}",
             "X-Fern-SDK-Name": "cloudpdf",
-            "X-Fern-SDK-Version": "3.0.0a22",
+            "X-Fern-SDK-Version": "3.0.0a23",
             **(self.get_custom_headers() or {}),
         }
         token = self._get_token()
         if token is not None:
             headers["Authorization"] = f"Bearer {token}"
+        headers["EmbedPDF-Version"] = self._embed_pdf_version if self._embed_pdf_version is not None else "3.0"
         return headers
 
     def _get_token(self) -> typing.Optional[str]:
@@ -83,6 +86,7 @@ class SyncClientWrapper(BaseClientWrapper):
         stream_reconnection_enabled: typing.Optional[bool] = None,
         max_stream_reconnection_attempts: typing.Optional[int] = None,
         logging: typing.Optional[typing.Union[LogConfig, Logger]] = None,
+        embed_pdf_version: typing.Optional[str] = None,
         httpx_client: httpx.Client,
     ):
         super().__init__(
@@ -94,6 +98,7 @@ class SyncClientWrapper(BaseClientWrapper):
             stream_reconnection_enabled=stream_reconnection_enabled,
             max_stream_reconnection_attempts=max_stream_reconnection_attempts,
             logging=logging,
+            embed_pdf_version=embed_pdf_version,
         )
         self.httpx_client = HttpClient(
             httpx_client=httpx_client,
@@ -117,6 +122,7 @@ class AsyncClientWrapper(BaseClientWrapper):
         stream_reconnection_enabled: typing.Optional[bool] = None,
         max_stream_reconnection_attempts: typing.Optional[int] = None,
         logging: typing.Optional[typing.Union[LogConfig, Logger]] = None,
+        embed_pdf_version: typing.Optional[str] = None,
         async_token: typing.Optional[typing.Callable[[], typing.Awaitable[str]]] = None,
         httpx_client: httpx.AsyncClient,
     ):
@@ -129,6 +135,7 @@ class AsyncClientWrapper(BaseClientWrapper):
             stream_reconnection_enabled=stream_reconnection_enabled,
             max_stream_reconnection_attempts=max_stream_reconnection_attempts,
             logging=logging,
+            embed_pdf_version=embed_pdf_version,
         )
         self._async_token = async_token
         self.httpx_client = AsyncHttpClient(

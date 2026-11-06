@@ -62,6 +62,7 @@ class CloudPDFClient:
     logging : typing.Optional[typing.Union[LogConfig, Logger]]
         Configure logging for the SDK. Accepts a LogConfig dict with 'level' (debug/info/warn/error), 'logger' (custom logger implementation), and 'silent' (boolean, defaults to True) fields. You can also pass a pre-configured Logger instance.
 
+    embed_pdf_version : typing.Optional[str]
     Examples
     --------
     from cloudpdf import CloudPDFClient
@@ -85,6 +86,7 @@ class CloudPDFClient:
         follow_redirects: typing.Optional[bool] = True,
         httpx_client: typing.Optional[httpx.Client] = None,
         logging: typing.Optional[typing.Union[LogConfig, Logger]] = None,
+        embed_pdf_version: typing.Optional[str] = None,
     ):
         _defaulted_timeout = timeout if timeout is not None else 60 if httpx_client is None else None
         _defaulted_max_retries = max_retries if max_retries is not None else 2
@@ -102,6 +104,7 @@ class CloudPDFClient:
             stream_reconnection_enabled=stream_reconnection_enabled,
             max_stream_reconnection_attempts=max_stream_reconnection_attempts,
             logging=logging,
+            embed_pdf_version=embed_pdf_version,
         )
         self._deployment: typing.Optional[DeploymentClient] = None
         self._doc: typing.Optional[DocClient] = None
@@ -232,6 +235,7 @@ class AsyncCloudPDFClient:
     logging : typing.Optional[typing.Union[LogConfig, Logger]]
         Configure logging for the SDK. Accepts a LogConfig dict with 'level' (debug/info/warn/error), 'logger' (custom logger implementation), and 'silent' (boolean, defaults to True) fields. You can also pass a pre-configured Logger instance.
 
+    embed_pdf_version : typing.Optional[str]
     Examples
     --------
     from cloudpdf import AsyncCloudPDFClient
@@ -256,6 +260,7 @@ class AsyncCloudPDFClient:
         follow_redirects: typing.Optional[bool] = True,
         httpx_client: typing.Optional[httpx.AsyncClient] = None,
         logging: typing.Optional[typing.Union[LogConfig, Logger]] = None,
+        embed_pdf_version: typing.Optional[str] = None,
     ):
         _defaulted_timeout = timeout if timeout is not None else 60 if httpx_client is None else None
         _defaulted_max_retries = max_retries if max_retries is not None else 2
@@ -272,6 +277,7 @@ class AsyncCloudPDFClient:
             stream_reconnection_enabled=stream_reconnection_enabled,
             max_stream_reconnection_attempts=max_stream_reconnection_attempts,
             logging=logging,
+            embed_pdf_version=embed_pdf_version,
         )
         self._deployment: typing.Optional[AsyncDeploymentClient] = None
         self._doc: typing.Optional[AsyncDocClient] = None

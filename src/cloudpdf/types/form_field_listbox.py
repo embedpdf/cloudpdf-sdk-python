@@ -7,11 +7,10 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .form_field_listbox_default_value_entry import FormFieldListboxDefaultValueEntry
 from .form_field_listbox_options_item import FormFieldListboxOptionsItem
 from .form_field_listbox_origin import FormFieldListboxOrigin
-from .form_field_listbox_value_entry import FormFieldListboxValueEntry
 from .form_field_ref import FormFieldRef
+from .form_value_entry import FormValueEntry
 from .form_widget import FormWidget
 from .pdf_field_actions import PdfFieldActions
 
@@ -30,12 +29,10 @@ class FormFieldListbox(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="mappingName"), pydantic.Field(alias="mappingName")
     ] = None
     value_entry: typing_extensions.Annotated[
-        FormFieldListboxValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
+        FormValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
     ]
     default_value_entry: typing_extensions.Annotated[
-        FormFieldListboxDefaultValueEntry,
-        FieldMetadata(alias="defaultValueEntry"),
-        pydantic.Field(alias="defaultValueEntry"),
+        FormValueEntry, FieldMetadata(alias="defaultValueEntry"), pydantic.Field(alias="defaultValueEntry")
     ]
     actions: typing.Optional[PdfFieldActions] = None
     group_id: typing_extensions.Annotated[

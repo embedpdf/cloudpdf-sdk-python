@@ -5,11 +5,11 @@ import typing
 import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from .documents_import_from202response_document import DocumentsImportFrom202ResponseDocument
-from .documents_import_from202response_tag import DocumentsImportFrom202ResponseTag
+from .documents_import_from202response_status import DocumentsImportFrom202ResponseStatus
 
 
 class DocumentsImportFrom202Response(UniversalBaseModel):
-    tag: DocumentsImportFrom202ResponseTag
+    status: DocumentsImportFrom202ResponseStatus
     document: DocumentsImportFrom202ResponseDocument
 
     if IS_PYDANTIC_V2:

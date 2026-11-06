@@ -11,7 +11,7 @@ from .page_ref import PageRef
 
 class ChangeItemPagesRotate(UniversalBaseModel):
     pages: typing.List[PageRef]
-    rotation: float
+    rotation: int
     layout: ChangeItemPagesRotateLayout
     meta: MutationMeta
 

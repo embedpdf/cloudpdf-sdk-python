@@ -14,6 +14,10 @@ from .pdf_action_target_ref import PdfActionTargetRef
 
 
 class PdfActionNode_Javascript(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["javascript"] = "javascript"
     subtype: str
     next: typing.List[typing.Any]
@@ -30,6 +34,10 @@ class PdfActionNode_Javascript(UniversalBaseModel):
 
 
 class PdfActionNode_Goto(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["goto"] = "goto"
     subtype: str
     next: typing.List[typing.Any]
@@ -46,6 +54,10 @@ class PdfActionNode_Goto(UniversalBaseModel):
 
 
 class PdfActionNode_Uri(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["uri"] = "uri"
     subtype: str
     next: typing.List[typing.Any]
@@ -63,6 +75,10 @@ class PdfActionNode_Uri(UniversalBaseModel):
 
 
 class PdfActionNode_Named(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["named"] = "named"
     subtype: str
     next: typing.List[typing.Any]
@@ -79,6 +95,10 @@ class PdfActionNode_Named(UniversalBaseModel):
 
 
 class PdfActionNode_Hide(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["hide"] = "hide"
     subtype: str
     next: typing.List[typing.Any]
@@ -96,6 +116,10 @@ class PdfActionNode_Hide(UniversalBaseModel):
 
 
 class PdfActionNode_ResetForm(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["reset-form"] = "reset-form"
     subtype: str
     next: typing.List[typing.Any]
@@ -113,6 +137,10 @@ class PdfActionNode_ResetForm(UniversalBaseModel):
 
 
 class PdfActionNode_GotoRemote(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["goto-remote"] = "goto-remote"
     subtype: str
     next: typing.List[typing.Any]
@@ -129,6 +157,10 @@ class PdfActionNode_GotoRemote(UniversalBaseModel):
 
 
 class PdfActionNode_GotoEmbedded(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["goto-embedded"] = "goto-embedded"
     subtype: str
     next: typing.List[typing.Any]
@@ -145,6 +177,10 @@ class PdfActionNode_GotoEmbedded(UniversalBaseModel):
 
 
 class PdfActionNode_Launch(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["launch"] = "launch"
     subtype: str
     next: typing.List[typing.Any]
@@ -161,6 +197,10 @@ class PdfActionNode_Launch(UniversalBaseModel):
 
 
 class PdfActionNode_Rendition(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["rendition"] = "rendition"
     subtype: str
     next: typing.List[typing.Any]
@@ -177,6 +217,10 @@ class PdfActionNode_Rendition(UniversalBaseModel):
 
 
 class PdfActionNode_SubmitForm(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["submit-form"] = "submit-form"
     subtype: str
     next: typing.List[typing.Any]
@@ -193,6 +237,10 @@ class PdfActionNode_SubmitForm(UniversalBaseModel):
 
 
 class PdfActionNode_Thread(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["thread"] = "thread"
     subtype: str
     next: typing.List[typing.Any]
@@ -208,6 +256,10 @@ class PdfActionNode_Thread(UniversalBaseModel):
 
 
 class PdfActionNode_Sound(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["sound"] = "sound"
     subtype: str
     next: typing.List[typing.Any]
@@ -223,6 +275,10 @@ class PdfActionNode_Sound(UniversalBaseModel):
 
 
 class PdfActionNode_Movie(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["movie"] = "movie"
     subtype: str
     next: typing.List[typing.Any]
@@ -238,6 +294,10 @@ class PdfActionNode_Movie(UniversalBaseModel):
 
 
 class PdfActionNode_ImportData(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["import-data"] = "import-data"
     subtype: str
     next: typing.List[typing.Any]
@@ -253,6 +313,10 @@ class PdfActionNode_ImportData(UniversalBaseModel):
 
 
 class PdfActionNode_SetOcgState(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["set-ocg-state"] = "set-ocg-state"
     subtype: str
     next: typing.List[typing.Any]
@@ -268,6 +332,10 @@ class PdfActionNode_SetOcgState(UniversalBaseModel):
 
 
 class PdfActionNode_Transition(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["transition"] = "transition"
     subtype: str
     next: typing.List[typing.Any]
@@ -283,6 +351,10 @@ class PdfActionNode_Transition(UniversalBaseModel):
 
 
 class PdfActionNode_Goto3DView(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["goto-3d-view"] = "goto-3d-view"
     subtype: str
     next: typing.List[typing.Any]
@@ -298,6 +370,10 @@ class PdfActionNode_Goto3DView(UniversalBaseModel):
 
 
 class PdfActionNode_Unknown(UniversalBaseModel):
+    """
+    An action, by its `type`. A newer server can add types: read one your client doesn't know as `unknown`, keeping its `subtype` and `next`.
+    """
+
     type: typing.Literal["unknown"] = "unknown"
     subtype: str
     next: typing.List[typing.Any]
@@ -336,3 +412,29 @@ PdfActionNode = typing_extensions.Annotated[
     ],
     pydantic.Field(discriminator="type"),
 ]
+
+
+# A PdfActionNode of a type this SDK doesn't know, one a newer server sends,
+# reads as `unknown`. A type it knows is read as that type. Added after
+# generation by fern/scripts/record-sdk-metadata.mjs from
+# fern/tolerant-reading/open-unions.json.
+if IS_PYDANTIC_V2:
+    _KNOWN_KINDS = frozenset(
+        member.model_fields["type"].default
+        for member in typing.get_args(typing.get_args(PdfActionNode)[0])
+    )
+
+    def _read_unknown_type_as_unknown(value: typing.Any) -> typing.Any:
+        if not isinstance(value, dict):
+            return value
+        type_ = value.get("type")
+        if not isinstance(type_, str) or type_ in _KNOWN_KINDS:
+            return value
+        return {
+            **value,
+            "type": "unknown",
+        }
+
+    PdfActionNode = typing_extensions.Annotated[  # type: ignore[misc]
+        PdfActionNode, pydantic.BeforeValidator(_read_unknown_type_as_unknown)
+    ]

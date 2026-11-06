@@ -10,7 +10,11 @@ from .widget_annotation import WidgetAnnotation
 
 
 class ChangeItemFormsRestoreWidget(UniversalBaseModel):
-    field: typing.Optional[FormField] = None
+    field: typing.Optional[FormField] = pydantic.Field(default=None)
+    """
+    A form field, by its `family`. A newer server can add families: read one your client doesn't know as `unknown`, keeping the fields every field has, with `rawValue` an empty string when the body has none.
+    """
+
     widgets: typing.List[WidgetAnnotation]
     meta: FormMutationMeta
 

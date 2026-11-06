@@ -6,14 +6,37 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .pdf_action_node_submit_form_payload_flags import PdfActionNodeSubmitFormPayloadFlags
+from .pdf_action_node_submit_form_payload_format import PdfActionNodeSubmitFormPayloadFormat
+from .pdf_action_node_submit_form_payload_method import PdfActionNodeSubmitFormPayloadMethod
 from .pdf_action_target_ref import PdfActionTargetRef
 
 
 class PdfActionNodeSubmitFormPayload(UniversalBaseModel):
     url: str
     fields: typing.Optional[typing.List[PdfActionTargetRef]] = None
-    flags: PdfActionNodeSubmitFormPayloadFlags
+    exclude: bool
+    include_no_value_fields: typing_extensions.Annotated[
+        bool, FieldMetadata(alias="includeNoValueFields"), pydantic.Field(alias="includeNoValueFields")
+    ]
+    format: PdfActionNodeSubmitFormPayloadFormat
+    method: PdfActionNodeSubmitFormPayloadMethod
+    submit_coordinates: typing_extensions.Annotated[
+        bool, FieldMetadata(alias="submitCoordinates"), pydantic.Field(alias="submitCoordinates")
+    ]
+    include_append_saves: typing_extensions.Annotated[
+        bool, FieldMetadata(alias="includeAppendSaves"), pydantic.Field(alias="includeAppendSaves")
+    ]
+    include_annotations: typing_extensions.Annotated[
+        bool, FieldMetadata(alias="includeAnnotations"), pydantic.Field(alias="includeAnnotations")
+    ]
+    canonical_format: typing_extensions.Annotated[
+        bool, FieldMetadata(alias="canonicalFormat"), pydantic.Field(alias="canonicalFormat")
+    ]
+    excl_non_user_annots: typing_extensions.Annotated[
+        bool, FieldMetadata(alias="exclNonUserAnnots"), pydantic.Field(alias="exclNonUserAnnots")
+    ]
+    excl_f_key: typing_extensions.Annotated[bool, FieldMetadata(alias="exclFKey"), pydantic.Field(alias="exclFKey")]
+    embed_form: typing_extensions.Annotated[bool, FieldMetadata(alias="embedForm"), pydantic.Field(alias="embedForm")]
     char_set: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="charSet"), pydantic.Field(alias="charSet")
     ] = None

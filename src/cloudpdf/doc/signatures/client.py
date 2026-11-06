@@ -5,11 +5,11 @@ import typing
 from ... import core
 from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
-from ...types.doc_signatures_analysis200response import DocSignaturesAnalysis200Response
-from ...types.doc_signatures_cancel200response import DocSignaturesCancel200Response
-from ...types.doc_signatures_complete200response import DocSignaturesComplete200Response
-from ...types.doc_signatures_list200response import DocSignaturesList200Response
-from ...types.doc_signatures_prepare200response import DocSignaturesPrepare200Response
+from ...types.doc_signatures_analysis_response import DocSignaturesAnalysisResponse
+from ...types.doc_signatures_cancel_response import DocSignaturesCancelResponse
+from ...types.doc_signatures_complete_response import DocSignaturesCompleteResponse
+from ...types.doc_signatures_list_response import DocSignaturesListResponse
+from ...types.doc_signatures_prepare_response import DocSignaturesPrepareResponse
 from .raw_client import AsyncRawSignaturesClient, RawSignaturesClient
 from .types.analysis_signatures_request_level import AnalysisSignaturesRequestLevel
 from .types.doc_signatures_complete_request_expected_version import DocSignaturesCompleteRequestExpectedVersion
@@ -40,7 +40,7 @@ class SignaturesClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocSignaturesList200Response:
+    ) -> DocSignaturesListResponse:
         """
         Describes the bytes the layer is over: the base version's signatures plus the layer's own edits as the last revision. Signed bytes (contents, digests, revision prefixes) are served per base version under /versions.
 
@@ -58,7 +58,7 @@ class SignaturesClient:
 
         Returns
         -------
-        DocSignaturesList200Response
+        DocSignaturesListResponse
             OK
 
         Examples
@@ -86,7 +86,7 @@ class SignaturesClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocSignaturesCancel200Response:
+    ) -> DocSignaturesCancelResponse:
         """
         Parameters
         ----------
@@ -104,7 +104,7 @@ class SignaturesClient:
 
         Returns
         -------
-        DocSignaturesCancel200Response
+        DocSignaturesCancelResponse
             OK
 
         Examples
@@ -135,7 +135,7 @@ class SignaturesClient:
         expected_version: DocSignaturesCompleteRequestExpectedVersion,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocSignaturesComplete200Response:
+    ) -> DocSignaturesCompleteResponse:
         """
         `cms` is the detached CMS over the prepared digest, base64. `expectedVersion` must be what prepare returned. Idempotent by signing id: the same CMS again answers `already-completed`. The new version is the layer's own: only this layer moves to it, and the document and every other layer stay as they were. Refetch the manifest after a completion.
 
@@ -159,7 +159,7 @@ class SignaturesClient:
 
         Returns
         -------
-        DocSignaturesComplete200Response
+        DocSignaturesCompleteResponse
             OK
 
         Examples
@@ -202,7 +202,7 @@ class SignaturesClient:
         level: typing.Optional[AnalysisSignaturesRequestLevel] = None,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocSignaturesAnalysis200Response:
+    ) -> DocSignaturesAnalysisResponse:
         """
         Exactly one of `since.signature=<index>` or `since.revision=<index>`; the layer's pending edits are the end. `level=fill|annotate|lta|none` evaluates exploratorily and never becomes a verdict. For history between two base revisions use the version analysis.
 
@@ -226,7 +226,7 @@ class SignaturesClient:
 
         Returns
         -------
-        DocSignaturesAnalysis200Response
+        DocSignaturesAnalysisResponse
             OK
 
         Examples
@@ -260,7 +260,7 @@ class SignaturesClient:
         file: core.File,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocSignaturesPrepare200Response:
+    ) -> DocSignaturesPrepareResponse:
         """
         Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock), naming the appearance PDF it may carry as `resources: { appearance: '<key>' }`, and that PDF as the part `resource:<key>`. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is cancelled, or expires (15 minutes). The signature is made over the layer's own base: the upload, or the version its last signature made.
 
@@ -281,7 +281,7 @@ class SignaturesClient:
 
         Returns
         -------
-        DocSignaturesPrepare200Response
+        DocSignaturesPrepareResponse
             OK
 
         Examples
@@ -324,7 +324,7 @@ class AsyncSignaturesClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocSignaturesList200Response:
+    ) -> DocSignaturesListResponse:
         """
         Describes the bytes the layer is over: the base version's signatures plus the layer's own edits as the last revision. Signed bytes (contents, digests, revision prefixes) are served per base version under /versions.
 
@@ -342,7 +342,7 @@ class AsyncSignaturesClient:
 
         Returns
         -------
-        DocSignaturesList200Response
+        DocSignaturesListResponse
             OK
 
         Examples
@@ -378,7 +378,7 @@ class AsyncSignaturesClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocSignaturesCancel200Response:
+    ) -> DocSignaturesCancelResponse:
         """
         Parameters
         ----------
@@ -396,7 +396,7 @@ class AsyncSignaturesClient:
 
         Returns
         -------
-        DocSignaturesCancel200Response
+        DocSignaturesCancelResponse
             OK
 
         Examples
@@ -435,7 +435,7 @@ class AsyncSignaturesClient:
         expected_version: DocSignaturesCompleteRequestExpectedVersion,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocSignaturesComplete200Response:
+    ) -> DocSignaturesCompleteResponse:
         """
         `cms` is the detached CMS over the prepared digest, base64. `expectedVersion` must be what prepare returned. Idempotent by signing id: the same CMS again answers `already-completed`. The new version is the layer's own: only this layer moves to it, and the document and every other layer stay as they were. Refetch the manifest after a completion.
 
@@ -459,7 +459,7 @@ class AsyncSignaturesClient:
 
         Returns
         -------
-        DocSignaturesComplete200Response
+        DocSignaturesCompleteResponse
             OK
 
         Examples
@@ -510,7 +510,7 @@ class AsyncSignaturesClient:
         level: typing.Optional[AnalysisSignaturesRequestLevel] = None,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocSignaturesAnalysis200Response:
+    ) -> DocSignaturesAnalysisResponse:
         """
         Exactly one of `since.signature=<index>` or `since.revision=<index>`; the layer's pending edits are the end. `level=fill|annotate|lta|none` evaluates exploratorily and never becomes a verdict. For history between two base revisions use the version analysis.
 
@@ -534,7 +534,7 @@ class AsyncSignaturesClient:
 
         Returns
         -------
-        DocSignaturesAnalysis200Response
+        DocSignaturesAnalysisResponse
             OK
 
         Examples
@@ -576,7 +576,7 @@ class AsyncSignaturesClient:
         file: core.File,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocSignaturesPrepare200Response:
+    ) -> DocSignaturesPrepareResponse:
         """
         Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock), naming the appearance PDF it may carry as `resources: { appearance: '<key>' }`, and that PDF as the part `resource:<key>`. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is cancelled, or expires (15 minutes). The signature is made over the layer's own base: the upload, or the version its last signature made.
 
@@ -597,7 +597,7 @@ class AsyncSignaturesClient:
 
         Returns
         -------
-        DocSignaturesPrepare200Response
+        DocSignaturesPrepareResponse
             OK
 
         Examples

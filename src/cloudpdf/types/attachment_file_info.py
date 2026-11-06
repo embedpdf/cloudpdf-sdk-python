@@ -15,8 +15,10 @@ class AttachmentFileInfo(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="mimeType"), pydantic.Field(alias="mimeType")
     ] = None
     description: typing.Optional[str] = None
-    size: typing.Optional[int] = None
-    checksum: typing.Optional[str] = None
+    size_bytes: typing_extensions.Annotated[
+        typing.Optional[int], FieldMetadata(alias="sizeBytes"), pydantic.Field(alias="sizeBytes")
+    ] = None
+    md5: typing.Optional[str] = None
     created_at: typing_extensions.Annotated[
         typing.Optional[dt.datetime], FieldMetadata(alias="createdAt"), pydantic.Field(alias="createdAt")
     ] = None

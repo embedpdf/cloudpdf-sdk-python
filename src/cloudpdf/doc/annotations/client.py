@@ -6,17 +6,17 @@ from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
 from ...types.annotation_position import AnnotationPosition
 from ...types.annotation_ref import AnnotationRef
-from ...types.doc_annotations_create200response import DocAnnotationsCreate200Response
 from ...types.doc_annotations_create_request import DocAnnotationsCreateRequest
-from ...types.doc_annotations_delete200response import DocAnnotationsDelete200Response
+from ...types.doc_annotations_create_response import DocAnnotationsCreateResponse
+from ...types.doc_annotations_delete_response import DocAnnotationsDeleteResponse
 from ...types.doc_annotations_export_appearance_request import DocAnnotationsExportAppearanceRequest
-from ...types.doc_annotations_flatten200response import DocAnnotationsFlatten200Response
 from ...types.doc_annotations_flatten_request import DocAnnotationsFlattenRequest
-from ...types.doc_annotations_list200response import DocAnnotationsList200Response
-from ...types.doc_annotations_list_all200response import DocAnnotationsListAll200Response
-from ...types.doc_annotations_reorder200response import DocAnnotationsReorder200Response
-from ...types.doc_annotations_update200response import DocAnnotationsUpdate200Response
+from ...types.doc_annotations_flatten_response import DocAnnotationsFlattenResponse
+from ...types.doc_annotations_list_all_response import DocAnnotationsListAllResponse
+from ...types.doc_annotations_list_response import DocAnnotationsListResponse
+from ...types.doc_annotations_reorder_response import DocAnnotationsReorderResponse
 from ...types.doc_annotations_update_request import DocAnnotationsUpdateRequest
+from ...types.doc_annotations_update_response import DocAnnotationsUpdateResponse
 from .raw_client import AsyncRawAnnotationsClient, RawAnnotationsClient
 
 # this is used as the default value for optional parameters
@@ -45,7 +45,7 @@ class AnnotationsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocAnnotationsListAll200Response:
+    ) -> DocAnnotationsListAllResponse:
         """
         Returns one entry per page plus the audit-log cursor for reconciling subsequent document events. Page order is unspecified; join by `page` (a `PageRef`) when display order matters.
 
@@ -63,7 +63,7 @@ class AnnotationsClient:
 
         Returns
         -------
-        DocAnnotationsListAll200Response
+        DocAnnotationsListAllResponse
             OK
 
         Examples
@@ -91,7 +91,7 @@ class AnnotationsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocAnnotationsList200Response:
+    ) -> DocAnnotationsListResponse:
         """
         Parameters
         ----------
@@ -100,7 +100,7 @@ class AnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -110,7 +110,7 @@ class AnnotationsClient:
 
         Returns
         -------
-        DocAnnotationsList200Response
+        DocAnnotationsListResponse
             OK
 
         Examples
@@ -141,7 +141,7 @@ class AnnotationsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocAnnotationsCreate200Response:
+    ) -> DocAnnotationsCreateResponse:
         """
         Doc JWTs may instead carry collab scopes (annotations:create:self, …) that refine per-annotation authorship rules; the API token is exempt from both.
 
@@ -152,7 +152,7 @@ class AnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         request : DocAnnotationsCreateRequest
 
@@ -167,7 +167,7 @@ class AnnotationsClient:
 
         Returns
         -------
-        DocAnnotationsCreate200Response
+        DocAnnotationsCreateResponse
             OK
 
         Examples
@@ -200,12 +200,12 @@ class AnnotationsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocAnnotationsDelete200Response:
+    ) -> DocAnnotationsDeleteResponse:
         """
         Parameters
         ----------
@@ -214,9 +214,9 @@ class AnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
@@ -230,7 +230,7 @@ class AnnotationsClient:
 
         Returns
         -------
-        DocAnnotationsDelete200Response
+        DocAnnotationsDeleteResponse
             OK
 
         Examples
@@ -244,14 +244,14 @@ class AnnotationsClient:
             doc_id="docId",
             layer_name="layerName",
             page_key="pageKey",
-            annot_key="annotKey",
+            annotation_key="annotationKey",
         )
         """
         _response = self._raw_client.delete(
             doc_id,
             layer_name,
             page_key,
-            annot_key,
+            annotation_key,
             document_password=document_password,
             idempotency_key=idempotency_key,
             request_options=request_options,
@@ -263,13 +263,13 @@ class AnnotationsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         request: DocAnnotationsUpdateRequest,
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocAnnotationsUpdate200Response:
+    ) -> DocAnnotationsUpdateResponse:
         """
         Parameters
         ----------
@@ -278,9 +278,9 @@ class AnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         request : DocAnnotationsUpdateRequest
@@ -296,7 +296,7 @@ class AnnotationsClient:
 
         Returns
         -------
-        DocAnnotationsUpdate200Response
+        DocAnnotationsUpdateResponse
             OK
 
         Examples
@@ -310,7 +310,7 @@ class AnnotationsClient:
             doc_id="docId",
             layer_name="layerName",
             page_key="pageKey",
-            annot_key="annotKey",
+            annotation_key="annotationKey",
             request={"key": "value"},
         )
         """
@@ -318,7 +318,7 @@ class AnnotationsClient:
             doc_id,
             layer_name,
             page_key,
-            annot_key,
+            annotation_key,
             request=request,
             document_password=document_password,
             idempotency_key=idempotency_key,
@@ -331,7 +331,7 @@ class AnnotationsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -344,9 +344,9 @@ class AnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
@@ -371,14 +371,14 @@ class AnnotationsClient:
             doc_id="docId",
             layer_name="layerName",
             page_key="pageKey",
-            annot_key="annotKey",
+            annotation_key="annotationKey",
         )
         """
         with self._raw_client.read_appearance(
             doc_id,
             layer_name,
             page_key,
-            annot_key,
+            annotation_key,
             document_password=document_password,
             request_options=request_options,
         ) as r:
@@ -389,7 +389,7 @@ class AnnotationsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -404,9 +404,9 @@ class AnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
@@ -431,14 +431,14 @@ class AnnotationsClient:
             doc_id="docId",
             layer_name="layerName",
             page_key="pageKey",
-            annot_key="annotKey",
+            annotation_key="annotationKey",
         )
         """
         with self._raw_client.read_file(
             doc_id,
             layer_name,
             page_key,
-            annot_key,
+            annotation_key,
             document_password=document_password,
             request_options=request_options,
         ) as r:
@@ -462,7 +462,7 @@ class AnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         request : DocAnnotationsExportAppearanceRequest
 
@@ -511,7 +511,7 @@ class AnnotationsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocAnnotationsFlatten200Response:
+    ) -> DocAnnotationsFlattenResponse:
         """
         Parameters
         ----------
@@ -520,7 +520,7 @@ class AnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         request : DocAnnotationsFlattenRequest
 
@@ -535,7 +535,7 @@ class AnnotationsClient:
 
         Returns
         -------
-        DocAnnotationsFlatten200Response
+        DocAnnotationsFlattenResponse
             OK
 
         Examples
@@ -574,7 +574,7 @@ class AnnotationsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocAnnotationsReorder200Response:
+    ) -> DocAnnotationsReorderResponse:
         """
         Parameters
         ----------
@@ -583,7 +583,7 @@ class AnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         refs : typing.Sequence[AnnotationRef]
 
@@ -600,7 +600,7 @@ class AnnotationsClient:
 
         Returns
         -------
-        DocAnnotationsReorder200Response
+        DocAnnotationsReorderResponse
             OK
 
         Examples
@@ -661,7 +661,7 @@ class AsyncAnnotationsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocAnnotationsListAll200Response:
+    ) -> DocAnnotationsListAllResponse:
         """
         Returns one entry per page plus the audit-log cursor for reconciling subsequent document events. Page order is unspecified; join by `page` (a `PageRef`) when display order matters.
 
@@ -679,7 +679,7 @@ class AsyncAnnotationsClient:
 
         Returns
         -------
-        DocAnnotationsListAll200Response
+        DocAnnotationsListAllResponse
             OK
 
         Examples
@@ -715,7 +715,7 @@ class AsyncAnnotationsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocAnnotationsList200Response:
+    ) -> DocAnnotationsListResponse:
         """
         Parameters
         ----------
@@ -724,7 +724,7 @@ class AsyncAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -734,7 +734,7 @@ class AsyncAnnotationsClient:
 
         Returns
         -------
-        DocAnnotationsList200Response
+        DocAnnotationsListResponse
             OK
 
         Examples
@@ -773,7 +773,7 @@ class AsyncAnnotationsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocAnnotationsCreate200Response:
+    ) -> DocAnnotationsCreateResponse:
         """
         Doc JWTs may instead carry collab scopes (annotations:create:self, …) that refine per-annotation authorship rules; the API token is exempt from both.
 
@@ -784,7 +784,7 @@ class AsyncAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         request : DocAnnotationsCreateRequest
 
@@ -799,7 +799,7 @@ class AsyncAnnotationsClient:
 
         Returns
         -------
-        DocAnnotationsCreate200Response
+        DocAnnotationsCreateResponse
             OK
 
         Examples
@@ -840,12 +840,12 @@ class AsyncAnnotationsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocAnnotationsDelete200Response:
+    ) -> DocAnnotationsDeleteResponse:
         """
         Parameters
         ----------
@@ -854,9 +854,9 @@ class AsyncAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
@@ -870,7 +870,7 @@ class AsyncAnnotationsClient:
 
         Returns
         -------
-        DocAnnotationsDelete200Response
+        DocAnnotationsDeleteResponse
             OK
 
         Examples
@@ -889,7 +889,7 @@ class AsyncAnnotationsClient:
                 doc_id="docId",
                 layer_name="layerName",
                 page_key="pageKey",
-                annot_key="annotKey",
+                annotation_key="annotationKey",
             )
 
 
@@ -899,7 +899,7 @@ class AsyncAnnotationsClient:
             doc_id,
             layer_name,
             page_key,
-            annot_key,
+            annotation_key,
             document_password=document_password,
             idempotency_key=idempotency_key,
             request_options=request_options,
@@ -911,13 +911,13 @@ class AsyncAnnotationsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         request: DocAnnotationsUpdateRequest,
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocAnnotationsUpdate200Response:
+    ) -> DocAnnotationsUpdateResponse:
         """
         Parameters
         ----------
@@ -926,9 +926,9 @@ class AsyncAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         request : DocAnnotationsUpdateRequest
@@ -944,7 +944,7 @@ class AsyncAnnotationsClient:
 
         Returns
         -------
-        DocAnnotationsUpdate200Response
+        DocAnnotationsUpdateResponse
             OK
 
         Examples
@@ -963,7 +963,7 @@ class AsyncAnnotationsClient:
                 doc_id="docId",
                 layer_name="layerName",
                 page_key="pageKey",
-                annot_key="annotKey",
+                annotation_key="annotationKey",
                 request={"key": "value"},
             )
 
@@ -974,7 +974,7 @@ class AsyncAnnotationsClient:
             doc_id,
             layer_name,
             page_key,
-            annot_key,
+            annotation_key,
             request=request,
             document_password=document_password,
             idempotency_key=idempotency_key,
@@ -987,7 +987,7 @@ class AsyncAnnotationsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -1000,9 +1000,9 @@ class AsyncAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
@@ -1032,7 +1032,7 @@ class AsyncAnnotationsClient:
                 doc_id="docId",
                 layer_name="layerName",
                 page_key="pageKey",
-                annot_key="annotKey",
+                annotation_key="annotationKey",
             )
 
 
@@ -1042,7 +1042,7 @@ class AsyncAnnotationsClient:
             doc_id,
             layer_name,
             page_key,
-            annot_key,
+            annotation_key,
             document_password=document_password,
             request_options=request_options,
         ) as r:
@@ -1054,7 +1054,7 @@ class AsyncAnnotationsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -1069,9 +1069,9 @@ class AsyncAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
@@ -1101,7 +1101,7 @@ class AsyncAnnotationsClient:
                 doc_id="docId",
                 layer_name="layerName",
                 page_key="pageKey",
-                annot_key="annotKey",
+                annotation_key="annotationKey",
             )
 
 
@@ -1111,7 +1111,7 @@ class AsyncAnnotationsClient:
             doc_id,
             layer_name,
             page_key,
-            annot_key,
+            annotation_key,
             document_password=document_password,
             request_options=request_options,
         ) as r:
@@ -1136,7 +1136,7 @@ class AsyncAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         request : DocAnnotationsExportAppearanceRequest
 
@@ -1194,7 +1194,7 @@ class AsyncAnnotationsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocAnnotationsFlatten200Response:
+    ) -> DocAnnotationsFlattenResponse:
         """
         Parameters
         ----------
@@ -1203,7 +1203,7 @@ class AsyncAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         request : DocAnnotationsFlattenRequest
 
@@ -1218,7 +1218,7 @@ class AsyncAnnotationsClient:
 
         Returns
         -------
-        DocAnnotationsFlatten200Response
+        DocAnnotationsFlattenResponse
             OK
 
         Examples
@@ -1265,7 +1265,7 @@ class AsyncAnnotationsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocAnnotationsReorder200Response:
+    ) -> DocAnnotationsReorderResponse:
         """
         Parameters
         ----------
@@ -1274,7 +1274,7 @@ class AsyncAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         refs : typing.Sequence[AnnotationRef]
 
@@ -1291,7 +1291,7 @@ class AsyncAnnotationsClient:
 
         Returns
         -------
-        DocAnnotationsReorder200Response
+        DocAnnotationsReorderResponse
             OK
 
         Examples

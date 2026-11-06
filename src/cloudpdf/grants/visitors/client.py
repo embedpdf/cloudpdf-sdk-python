@@ -4,7 +4,7 @@ import typing
 
 from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
-from ...types.grants_visitors_list200response import GrantsVisitorsList200Response
+from ...types.grants_visitors_list_response import GrantsVisitorsListResponse
 from .raw_client import AsyncRawVisitorsClient, RawVisitorsClient
 
 
@@ -31,7 +31,7 @@ class VisitorsClient:
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> GrantsVisitorsList200Response:
+    ) -> GrantsVisitorsListResponse:
         """
         An archived grant's visitors are listed too.
 
@@ -50,7 +50,7 @@ class VisitorsClient:
 
         Returns
         -------
-        GrantsVisitorsList200Response
+        GrantsVisitorsListResponse
             OK
 
         Examples
@@ -131,7 +131,7 @@ class AsyncVisitorsClient:
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> GrantsVisitorsList200Response:
+    ) -> GrantsVisitorsListResponse:
         """
         An archived grant's visitors are listed too.
 
@@ -150,7 +150,7 @@ class AsyncVisitorsClient:
 
         Returns
         -------
-        GrantsVisitorsList200Response
+        GrantsVisitorsListResponse
             OK
 
         Examples

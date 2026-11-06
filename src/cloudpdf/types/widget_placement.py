@@ -19,7 +19,7 @@ class WidgetPlacement(UniversalBaseModel):
     page: PageRef
     rect: typing.Optional[WidgetPlacementRect] = None
     box: typing.Optional[WidgetPlacementBox] = None
-    rotation: typing.Optional[float] = None
+    rotation: typing.Optional[int] = None
     export_value: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="exportValue"), pydantic.Field(alias="exportValue")
     ] = None

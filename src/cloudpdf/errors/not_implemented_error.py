@@ -3,9 +3,9 @@
 import typing
 
 from ..core.api_error import ApiError
-from ..types.doc_download_link501response import DocDownloadLink501Response
+from ..types.error_response import ErrorResponse
 
 
 class NotImplementedError(ApiError):
-    def __init__(self, body: DocDownloadLink501Response, headers: typing.Optional[typing.Dict[str, str]] = None):
+    def __init__(self, body: ErrorResponse, headers: typing.Optional[typing.Dict[str, str]] = None):
         super().__init__(status_code=501, headers=headers, body=body)

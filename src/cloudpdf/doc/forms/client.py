@@ -6,14 +6,14 @@ from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
 from ...types.annotation_position import AnnotationPosition
 from ...types.annotation_ref import AnnotationRef
-from ...types.doc_forms_delete_widget200response import DocFormsDeleteWidget200Response
-from ...types.doc_forms_list200response import DocFormsList200Response
-from ...types.doc_forms_reorder_calculations200response import DocFormsReorderCalculations200Response
-from ...types.doc_forms_reorder_widgets200response import DocFormsReorderWidgets200Response
-from ...types.doc_forms_reset200response import DocFormsReset200Response
-from ...types.doc_forms_set_value200response import DocFormsSetValue200Response
+from ...types.doc_forms_delete_widget_response import DocFormsDeleteWidgetResponse
+from ...types.doc_forms_list_response import DocFormsListResponse
+from ...types.doc_forms_reorder_calculations_response import DocFormsReorderCalculationsResponse
+from ...types.doc_forms_reorder_widgets_response import DocFormsReorderWidgetsResponse
+from ...types.doc_forms_reset_response import DocFormsResetResponse
 from ...types.doc_forms_set_value_request import DocFormsSetValueRequest
-from ...types.doc_forms_update_widget200response import DocFormsUpdateWidget200Response
+from ...types.doc_forms_set_value_response import DocFormsSetValueResponse
+from ...types.doc_forms_update_widget_response import DocFormsUpdateWidgetResponse
 from ...types.field_position import FieldPosition
 from ...types.form_field_ref import FormFieldRef
 from ...types.widget_patch import WidgetPatch
@@ -45,7 +45,7 @@ class FormsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsList200Response:
+    ) -> DocFormsListResponse:
         """
         Parameters
         ----------
@@ -61,7 +61,7 @@ class FormsClient:
 
         Returns
         -------
-        DocFormsList200Response
+        DocFormsListResponse
             OK
 
         Examples
@@ -91,7 +91,7 @@ class FormsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsReorderCalculations200Response:
+    ) -> DocFormsReorderCalculationsResponse:
         """
         Parameters
         ----------
@@ -114,7 +114,7 @@ class FormsClient:
 
         Returns
         -------
-        DocFormsReorderCalculations200Response
+        DocFormsReorderCalculationsResponse
             OK
 
         Examples
@@ -156,7 +156,7 @@ class FormsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsSetValue200Response:
+    ) -> DocFormsSetValueResponse:
         """
         Parameters
         ----------
@@ -179,7 +179,7 @@ class FormsClient:
 
         Returns
         -------
-        DocFormsSetValue200Response
+        DocFormsSetValueResponse
             OK
 
         Examples
@@ -216,7 +216,7 @@ class FormsClient:
         idempotency_key: typing.Optional[str] = None,
         refs: typing.Optional[typing.Sequence[FormFieldRef]] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsReset200Response:
+    ) -> DocFormsResetResponse:
         """
         Parameters
         ----------
@@ -237,7 +237,7 @@ class FormsClient:
 
         Returns
         -------
-        DocFormsReset200Response
+        DocFormsResetResponse
             OK
 
         Examples
@@ -267,12 +267,12 @@ class FormsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsDeleteWidget200Response:
+    ) -> DocFormsDeleteWidgetResponse:
         """
         Parameters
         ----------
@@ -281,9 +281,9 @@ class FormsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
@@ -297,7 +297,7 @@ class FormsClient:
 
         Returns
         -------
-        DocFormsDeleteWidget200Response
+        DocFormsDeleteWidgetResponse
             OK
 
         Examples
@@ -311,14 +311,14 @@ class FormsClient:
             doc_id="docId",
             layer_name="layerName",
             page_key="pageKey",
-            annot_key="annotKey",
+            annotation_key="annotationKey",
         )
         """
         _response = self._raw_client.delete_widget(
             doc_id,
             layer_name,
             page_key,
-            annot_key,
+            annotation_key,
             document_password=document_password,
             idempotency_key=idempotency_key,
             request_options=request_options,
@@ -330,13 +330,13 @@ class FormsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         patch: WidgetPatch,
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsUpdateWidget200Response:
+    ) -> DocFormsUpdateWidgetResponse:
         """
         Parameters
         ----------
@@ -345,9 +345,9 @@ class FormsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         patch : WidgetPatch
@@ -363,7 +363,7 @@ class FormsClient:
 
         Returns
         -------
-        DocFormsUpdateWidget200Response
+        DocFormsUpdateWidgetResponse
             OK
 
         Examples
@@ -377,7 +377,7 @@ class FormsClient:
             doc_id="docId",
             layer_name="layerName",
             page_key="pageKey",
-            annot_key="annotKey",
+            annotation_key="annotationKey",
             patch=WidgetPatch(),
         )
         """
@@ -385,7 +385,7 @@ class FormsClient:
             doc_id,
             layer_name,
             page_key,
-            annot_key,
+            annotation_key,
             patch=patch,
             document_password=document_password,
             idempotency_key=idempotency_key,
@@ -404,7 +404,7 @@ class FormsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsReorderWidgets200Response:
+    ) -> DocFormsReorderWidgetsResponse:
         """
         Parameters
         ----------
@@ -413,7 +413,7 @@ class FormsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         widgets : typing.Sequence[AnnotationRef]
 
@@ -430,7 +430,7 @@ class FormsClient:
 
         Returns
         -------
-        DocFormsReorderWidgets200Response
+        DocFormsReorderWidgetsResponse
             OK
 
         Examples
@@ -491,7 +491,7 @@ class AsyncFormsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsList200Response:
+    ) -> DocFormsListResponse:
         """
         Parameters
         ----------
@@ -507,7 +507,7 @@ class AsyncFormsClient:
 
         Returns
         -------
-        DocFormsList200Response
+        DocFormsListResponse
             OK
 
         Examples
@@ -545,7 +545,7 @@ class AsyncFormsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsReorderCalculations200Response:
+    ) -> DocFormsReorderCalculationsResponse:
         """
         Parameters
         ----------
@@ -568,7 +568,7 @@ class AsyncFormsClient:
 
         Returns
         -------
-        DocFormsReorderCalculations200Response
+        DocFormsReorderCalculationsResponse
             OK
 
         Examples
@@ -618,7 +618,7 @@ class AsyncFormsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsSetValue200Response:
+    ) -> DocFormsSetValueResponse:
         """
         Parameters
         ----------
@@ -641,7 +641,7 @@ class AsyncFormsClient:
 
         Returns
         -------
-        DocFormsSetValue200Response
+        DocFormsSetValueResponse
             OK
 
         Examples
@@ -686,7 +686,7 @@ class AsyncFormsClient:
         idempotency_key: typing.Optional[str] = None,
         refs: typing.Optional[typing.Sequence[FormFieldRef]] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsReset200Response:
+    ) -> DocFormsResetResponse:
         """
         Parameters
         ----------
@@ -707,7 +707,7 @@ class AsyncFormsClient:
 
         Returns
         -------
-        DocFormsReset200Response
+        DocFormsResetResponse
             OK
 
         Examples
@@ -745,12 +745,12 @@ class AsyncFormsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsDeleteWidget200Response:
+    ) -> DocFormsDeleteWidgetResponse:
         """
         Parameters
         ----------
@@ -759,9 +759,9 @@ class AsyncFormsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
@@ -775,7 +775,7 @@ class AsyncFormsClient:
 
         Returns
         -------
-        DocFormsDeleteWidget200Response
+        DocFormsDeleteWidgetResponse
             OK
 
         Examples
@@ -794,7 +794,7 @@ class AsyncFormsClient:
                 doc_id="docId",
                 layer_name="layerName",
                 page_key="pageKey",
-                annot_key="annotKey",
+                annotation_key="annotationKey",
             )
 
 
@@ -804,7 +804,7 @@ class AsyncFormsClient:
             doc_id,
             layer_name,
             page_key,
-            annot_key,
+            annotation_key,
             document_password=document_password,
             idempotency_key=idempotency_key,
             request_options=request_options,
@@ -816,13 +816,13 @@ class AsyncFormsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         patch: WidgetPatch,
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsUpdateWidget200Response:
+    ) -> DocFormsUpdateWidgetResponse:
         """
         Parameters
         ----------
@@ -831,9 +831,9 @@ class AsyncFormsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         patch : WidgetPatch
@@ -849,7 +849,7 @@ class AsyncFormsClient:
 
         Returns
         -------
-        DocFormsUpdateWidget200Response
+        DocFormsUpdateWidgetResponse
             OK
 
         Examples
@@ -868,7 +868,7 @@ class AsyncFormsClient:
                 doc_id="docId",
                 layer_name="layerName",
                 page_key="pageKey",
-                annot_key="annotKey",
+                annotation_key="annotationKey",
                 patch=WidgetPatch(),
             )
 
@@ -879,7 +879,7 @@ class AsyncFormsClient:
             doc_id,
             layer_name,
             page_key,
-            annot_key,
+            annotation_key,
             patch=patch,
             document_password=document_password,
             idempotency_key=idempotency_key,
@@ -898,7 +898,7 @@ class AsyncFormsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocFormsReorderWidgets200Response:
+    ) -> DocFormsReorderWidgetsResponse:
         """
         Parameters
         ----------
@@ -907,7 +907,7 @@ class AsyncFormsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         widgets : typing.Sequence[AnnotationRef]
 
@@ -924,7 +924,7 @@ class AsyncFormsClient:
 
         Returns
         -------
-        DocFormsReorderWidgets200Response
+        DocFormsReorderWidgetsResponse
             OK
 
         Examples

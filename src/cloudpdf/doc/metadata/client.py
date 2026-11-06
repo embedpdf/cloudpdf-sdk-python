@@ -6,7 +6,7 @@ import typing
 
 from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
-from ...types.doc_metadata_get200response import DocMetadataGet200Response
+from ...types.doc_metadata_get_response import DocMetadataGetResponse
 from .raw_client import AsyncRawMetadataClient, RawMetadataClient
 
 if typing.TYPE_CHECKING:
@@ -37,7 +37,7 @@ class MetadataClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocMetadataGet200Response:
+    ) -> DocMetadataGetResponse:
         """
         Parameters
         ----------
@@ -53,7 +53,7 @@ class MetadataClient:
 
         Returns
         -------
-        DocMetadataGet200Response
+        DocMetadataGetResponse
             OK
 
         Examples
@@ -106,7 +106,7 @@ class AsyncMetadataClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocMetadataGet200Response:
+    ) -> DocMetadataGetResponse:
         """
         Parameters
         ----------
@@ -122,7 +122,7 @@ class AsyncMetadataClient:
 
         Returns
         -------
-        DocMetadataGet200Response
+        DocMetadataGetResponse
             OK
 
         Examples
