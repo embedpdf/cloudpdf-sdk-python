@@ -14,7 +14,8 @@ from ...errors.bad_request_error import BadRequestError
 from ...errors.conflict_error import ConflictError
 from ...errors.forbidden_error import ForbiddenError
 from ...errors.not_found_error import NotFoundError
-from ...types.documents_layers_list200response import DocumentsLayersList200Response
+from ...types.documents_layers_list_response import DocumentsLayersListResponse
+from ...types.error_response import ErrorResponse
 from pydantic import ValidationError
 
 
@@ -25,19 +26,19 @@ class RawLayersClient:
     def list(
         self,
         tenant_id: str,
-        id: str,
+        doc_id: str,
         *,
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         grant_id: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocumentsLayersList200Response]:
+    ) -> HttpResponse[DocumentsLayersListResponse]:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         limit : typing.Optional[int]
 
@@ -50,11 +51,11 @@ class RawLayersClient:
 
         Returns
         -------
-        HttpResponse[DocumentsLayersList200Response]
+        HttpResponse[DocumentsLayersListResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}/layers",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}/layers",
             method="GET",
             params={
                 "limit": limit,
@@ -66,9 +67,9 @@ class RawLayersClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocumentsLayersList200Response,
+                    DocumentsLayersListResponse,
                     parse_obj_as(
-                        type_=DocumentsLayersList200Response,  # type: ignore
+                        type_=DocumentsLayersListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -77,9 +78,9 @@ class RawLayersClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -88,9 +89,9 @@ class RawLayersClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -99,9 +100,9 @@ class RawLayersClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -116,14 +117,14 @@ class RawLayersClient:
         raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
     def delete(
-        self, tenant_id: str, id: str, layer_name: str, *, request_options: typing.Optional[RequestOptions] = None
+        self, tenant_id: str, doc_id: str, layer_name: str, *, request_options: typing.Optional[RequestOptions] = None
     ) -> HttpResponse[None]:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         layer_name : str
 
@@ -135,7 +136,7 @@ class RawLayersClient:
         HttpResponse[None]
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}/layers/{encode_path_param(layer_name)}",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}",
             method="DELETE",
             request_options=request_options,
         )
@@ -146,9 +147,9 @@ class RawLayersClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -157,9 +158,9 @@ class RawLayersClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -168,9 +169,9 @@ class RawLayersClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -192,19 +193,19 @@ class AsyncRawLayersClient:
     async def list(
         self,
         tenant_id: str,
-        id: str,
+        doc_id: str,
         *,
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         grant_id: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocumentsLayersList200Response]:
+    ) -> AsyncHttpResponse[DocumentsLayersListResponse]:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         limit : typing.Optional[int]
 
@@ -217,11 +218,11 @@ class AsyncRawLayersClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocumentsLayersList200Response]
+        AsyncHttpResponse[DocumentsLayersListResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}/layers",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}/layers",
             method="GET",
             params={
                 "limit": limit,
@@ -233,9 +234,9 @@ class AsyncRawLayersClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocumentsLayersList200Response,
+                    DocumentsLayersListResponse,
                     parse_obj_as(
-                        type_=DocumentsLayersList200Response,  # type: ignore
+                        type_=DocumentsLayersListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -244,9 +245,9 @@ class AsyncRawLayersClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -255,9 +256,9 @@ class AsyncRawLayersClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -266,9 +267,9 @@ class AsyncRawLayersClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -283,14 +284,14 @@ class AsyncRawLayersClient:
         raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
     async def delete(
-        self, tenant_id: str, id: str, layer_name: str, *, request_options: typing.Optional[RequestOptions] = None
+        self, tenant_id: str, doc_id: str, layer_name: str, *, request_options: typing.Optional[RequestOptions] = None
     ) -> AsyncHttpResponse[None]:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         layer_name : str
 
@@ -302,7 +303,7 @@ class AsyncRawLayersClient:
         AsyncHttpResponse[None]
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}/layers/{encode_path_param(layer_name)}",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}",
             method="DELETE",
             request_options=request_options,
         )
@@ -313,9 +314,9 @@ class AsyncRawLayersClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -324,9 +325,9 @@ class AsyncRawLayersClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -335,9 +336,9 @@ class AsyncRawLayersClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

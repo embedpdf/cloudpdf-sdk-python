@@ -50,7 +50,6 @@ from .annotation_line_intent import AnnotationLineIntent
 from .annotation_line_leader import AnnotationLineLeader
 from .annotation_line_line_endings import AnnotationLineLineEndings
 from .annotation_line_line_points import AnnotationLineLinePoints
-from .annotation_line_measure import AnnotationLineMeasure
 from .annotation_line_rect import AnnotationLineRect
 from .annotation_line_reply import AnnotationLineReply
 from .annotation_link_blend_mode import AnnotationLinkBlendMode
@@ -60,7 +59,6 @@ from .annotation_polygon_blend_mode import AnnotationPolygonBlendMode
 from .annotation_polygon_border_style import AnnotationPolygonBorderStyle
 from .annotation_polygon_caption_center import AnnotationPolygonCaptionCenter
 from .annotation_polygon_intent import AnnotationPolygonIntent
-from .annotation_polygon_measure import AnnotationPolygonMeasure
 from .annotation_polygon_rect import AnnotationPolygonRect
 from .annotation_polygon_reply import AnnotationPolygonReply
 from .annotation_polygon_vertices_item import AnnotationPolygonVerticesItem
@@ -69,7 +67,6 @@ from .annotation_polyline_border_style import AnnotationPolylineBorderStyle
 from .annotation_polyline_caption_center import AnnotationPolylineCaptionCenter
 from .annotation_polyline_intent import AnnotationPolylineIntent
 from .annotation_polyline_line_endings import AnnotationPolylineLineEndings
-from .annotation_polyline_measure import AnnotationPolylineMeasure
 from .annotation_polyline_rect import AnnotationPolylineRect
 from .annotation_polyline_reply import AnnotationPolylineReply
 from .annotation_polyline_vertices_item import AnnotationPolylineVerticesItem
@@ -117,18 +114,23 @@ from .form_field_ref import FormFieldRef
 from .page_ref import PageRef
 from .pdf_annotation_actions import PdfAnnotationActions
 from .pdf_link_target import PdfLinkTarget
+from .pdf_measurement import PdfMeasurement
 from .rich_text_document import RichTextDocument
 from .widget_annotation_blend_mode import WidgetAnnotationBlendMode
 from .widget_annotation_border_style import WidgetAnnotationBorderStyle
 from .widget_annotation_box import WidgetAnnotationBox
 from .widget_annotation_check_style import WidgetAnnotationCheckStyle
-from .widget_annotation_field_family import WidgetAnnotationFieldFamily
+from .widget_annotation_field_kind import WidgetAnnotationFieldKind
 from .widget_annotation_rect import WidgetAnnotationRect
 from .widget_annotation_reply import WidgetAnnotationReply
 from .widget_annotation_text_align import WidgetAnnotationTextAlign
 
 
 class Annotation_Highlight(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["highlight"] = "highlight"
     ref: AnnotationRef
     page: PageRef
@@ -211,6 +213,10 @@ class Annotation_Highlight(UniversalBaseModel):
 
 
 class Annotation_Underline(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["underline"] = "underline"
     ref: AnnotationRef
     page: PageRef
@@ -293,6 +299,10 @@ class Annotation_Underline(UniversalBaseModel):
 
 
 class Annotation_Squiggly(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["squiggly"] = "squiggly"
     ref: AnnotationRef
     page: PageRef
@@ -375,6 +385,10 @@ class Annotation_Squiggly(UniversalBaseModel):
 
 
 class Annotation_Strikeout(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["strikeout"] = "strikeout"
     ref: AnnotationRef
     page: PageRef
@@ -458,6 +472,10 @@ class Annotation_Strikeout(UniversalBaseModel):
 
 
 class Annotation_Circle(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["circle"] = "circle"
     ref: AnnotationRef
     page: PageRef
@@ -552,6 +570,10 @@ class Annotation_Circle(UniversalBaseModel):
 
 
 class Annotation_Square(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["square"] = "square"
     ref: AnnotationRef
     page: PageRef
@@ -646,6 +668,10 @@ class Annotation_Square(UniversalBaseModel):
 
 
 class Annotation_Polygon(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["polygon"] = "polygon"
     ref: AnnotationRef
     page: PageRef
@@ -734,7 +760,7 @@ class Annotation_Polygon(UniversalBaseModel):
         pydantic.Field(alias="captionCenter"),
     ] = None
     intent: typing.Optional[AnnotationPolygonIntent] = None
-    measure: typing.Optional[AnnotationPolygonMeasure] = None
+    measure: typing.Optional[PdfMeasurement] = None
     cloudy_intensity: typing_extensions.Annotated[
         typing.Optional[float], FieldMetadata(alias="cloudyIntensity"), pydantic.Field(alias="cloudyIntensity")
     ] = None
@@ -750,6 +776,10 @@ class Annotation_Polygon(UniversalBaseModel):
 
 
 class Annotation_Polyline(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["polyline"] = "polyline"
     ref: AnnotationRef
     page: PageRef
@@ -838,7 +868,7 @@ class Annotation_Polyline(UniversalBaseModel):
         pydantic.Field(alias="captionCenter"),
     ] = None
     intent: typing.Optional[AnnotationPolylineIntent] = None
-    measure: typing.Optional[AnnotationPolylineMeasure] = None
+    measure: typing.Optional[PdfMeasurement] = None
     line_endings: typing_extensions.Annotated[
         AnnotationPolylineLineEndings, FieldMetadata(alias="lineEndings"), pydantic.Field(alias="lineEndings")
     ]
@@ -854,6 +884,10 @@ class Annotation_Polyline(UniversalBaseModel):
 
 
 class Annotation_Line(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["line"] = "line"
     ref: AnnotationRef
     page: PageRef
@@ -939,10 +973,10 @@ class Annotation_Line(UniversalBaseModel):
     ]
     rotation: typing.Optional[float] = None
     intent: typing.Optional[AnnotationLineIntent] = None
-    measure: typing.Optional[AnnotationLineMeasure] = None
+    measure: typing.Optional[PdfMeasurement] = None
     caption_enabled: typing_extensions.Annotated[
-        typing.Optional[bool], FieldMetadata(alias="captionEnabled"), pydantic.Field(alias="captionEnabled")
-    ] = None
+        bool, FieldMetadata(alias="captionEnabled"), pydantic.Field(alias="captionEnabled")
+    ]
     caption_position: typing_extensions.Annotated[
         AnnotationLineCaptionPosition, FieldMetadata(alias="captionPosition"), pydantic.Field(alias="captionPosition")
     ]
@@ -964,6 +998,10 @@ class Annotation_Line(UniversalBaseModel):
 
 
 class Annotation_Link(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["link"] = "link"
     ref: AnnotationRef
     page: PageRef
@@ -1037,6 +1075,10 @@ class Annotation_Link(UniversalBaseModel):
 
 
 class Annotation_Ink(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["ink"] = "ink"
     ref: AnnotationRef
     page: PageRef
@@ -1130,6 +1172,10 @@ class Annotation_Ink(UniversalBaseModel):
 
 
 class Annotation_FreeText(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["free-text"] = "free-text"
     ref: AnnotationRef
     page: PageRef
@@ -1244,6 +1290,10 @@ class Annotation_FreeText(UniversalBaseModel):
 
 
 class Annotation_Caret(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["caret"] = "caret"
     ref: AnnotationRef
     page: PageRef
@@ -1324,6 +1374,10 @@ class Annotation_Caret(UniversalBaseModel):
 
 
 class Annotation_Text(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["text"] = "text"
     ref: AnnotationRef
     page: PageRef
@@ -1407,6 +1461,10 @@ class Annotation_Text(UniversalBaseModel):
 
 
 class Annotation_Stamp(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["stamp"] = "stamp"
     ref: AnnotationRef
     page: PageRef
@@ -1487,6 +1545,10 @@ class Annotation_Stamp(UniversalBaseModel):
 
 
 class Annotation_FileAttachment(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["file-attachment"] = "file-attachment"
     ref: AnnotationRef
     page: PageRef
@@ -1566,6 +1628,10 @@ class Annotation_FileAttachment(UniversalBaseModel):
 
 
 class Annotation_Widget(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["widget"] = "widget"
     ref: AnnotationRef
     page: PageRef
@@ -1627,7 +1693,7 @@ class Annotation_Widget(UniversalBaseModel):
     ] = None
     actions: typing.Optional[PdfAnnotationActions] = None
     box: WidgetAnnotationBox
-    rotation: typing.Optional[float] = None
+    rotation: typing.Optional[int] = None
     color: typing.Optional[str] = None
     interior_color: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="interiorColor"), pydantic.Field(alias="interiorColor")
@@ -1660,9 +1726,10 @@ class Annotation_Widget(UniversalBaseModel):
         pydantic.Field(alias="checkStyle"),
     ] = None
     field: typing.Optional[FormFieldRef] = None
-    field_family: typing_extensions.Annotated[
-        WidgetAnnotationFieldFamily, FieldMetadata(alias="fieldFamily"), pydantic.Field(alias="fieldFamily")
+    field_kind: typing_extensions.Annotated[
+        WidgetAnnotationFieldKind, FieldMetadata(alias="fieldKind"), pydantic.Field(alias="fieldKind")
     ]
+    has_mark: typing_extensions.Annotated[bool, FieldMetadata(alias="hasMark"), pydantic.Field(alias="hasMark")]
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
@@ -1675,6 +1742,10 @@ class Annotation_Widget(UniversalBaseModel):
 
 
 class Annotation_Redact(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["redact"] = "redact"
     ref: AnnotationRef
     page: PageRef
@@ -1770,6 +1841,10 @@ class Annotation_Redact(UniversalBaseModel):
 
 
 class Annotation_Popup(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["popup"] = "popup"
     ref: AnnotationRef
     page: PageRef
@@ -1844,6 +1919,10 @@ class Annotation_Popup(UniversalBaseModel):
 
 
 class Annotation_Unsupported(UniversalBaseModel):
+    """
+    An annotation, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unsupported`, keeping the fields every annotation has, with `rawSubtypeCode` 0 and `rawSubtypeName` null when the body has neither.
+    """
+
     subtype: typing.Literal["unsupported"] = "unsupported"
     ref: AnnotationRef
     page: PageRef
@@ -1946,3 +2025,34 @@ Annotation = typing_extensions.Annotated[
     ],
     pydantic.Field(discriminator="subtype"),
 ]
+
+
+# A Annotation of a subtype this SDK doesn't know, one a newer server sends,
+# reads as `unsupported`, keeping `rawSubtypeCode` and `rawSubtypeName` when
+# the body carries them. A subtype it knows is read as that subtype. Added
+# after generation by fern/scripts/record-sdk-metadata.mjs from
+# fern/tolerant-reading/open-unions.json.
+if IS_PYDANTIC_V2:
+    _KNOWN_KINDS = frozenset(
+        member.model_fields["subtype"].default
+        for member in typing.get_args(typing.get_args(Annotation)[0])
+    )
+
+    def _read_unknown_subtype_as_unsupported(value: typing.Any) -> typing.Any:
+        if not isinstance(value, dict):
+            return value
+        subtype_ = value.get("subtype")
+        if not isinstance(subtype_, str) or subtype_ in _KNOWN_KINDS:
+            return value
+        raw_subtype_code = value.get("rawSubtypeCode")
+        raw_subtype_name = value.get("rawSubtypeName")
+        return {
+            **value,
+            "subtype": "unsupported",
+            "rawSubtypeCode": raw_subtype_code if isinstance(raw_subtype_code, int) and not isinstance(raw_subtype_code, bool) else 0,
+            "rawSubtypeName": raw_subtype_name if isinstance(raw_subtype_name, str) else None,
+        }
+
+    Annotation = typing_extensions.Annotated[  # type: ignore[misc]
+        Annotation, pydantic.BeforeValidator(_read_unknown_subtype_as_unsupported)
+    ]

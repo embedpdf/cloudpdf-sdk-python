@@ -4,7 +4,7 @@ import typing
 
 from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
-from ...types.documents_layers_list200response import DocumentsLayersList200Response
+from ...types.documents_layers_list_response import DocumentsLayersListResponse
 from .raw_client import AsyncRawLayersClient, RawLayersClient
 
 
@@ -26,19 +26,19 @@ class LayersClient:
     def list(
         self,
         tenant_id: str,
-        id: str,
+        doc_id: str,
         *,
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         grant_id: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocumentsLayersList200Response:
+    ) -> DocumentsLayersListResponse:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         limit : typing.Optional[int]
 
@@ -51,7 +51,7 @@ class LayersClient:
 
         Returns
         -------
-        DocumentsLayersList200Response
+        DocumentsLayersListResponse
             OK
 
         Examples
@@ -63,23 +63,23 @@ class LayersClient:
         )
         client.documents.layers.list(
             tenant_id="tenantId",
-            id="id",
+            doc_id="docId",
         )
         """
         _response = self._raw_client.list(
-            tenant_id, id, limit=limit, cursor=cursor, grant_id=grant_id, request_options=request_options
+            tenant_id, doc_id, limit=limit, cursor=cursor, grant_id=grant_id, request_options=request_options
         )
         return _response.data
 
     def delete(
-        self, tenant_id: str, id: str, layer_name: str, *, request_options: typing.Optional[RequestOptions] = None
+        self, tenant_id: str, doc_id: str, layer_name: str, *, request_options: typing.Optional[RequestOptions] = None
     ) -> None:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         layer_name : str
 
@@ -99,11 +99,11 @@ class LayersClient:
         )
         client.documents.layers.delete(
             tenant_id="tenantId",
-            id="id",
+            doc_id="docId",
             layer_name="layerName",
         )
         """
-        _response = self._raw_client.delete(tenant_id, id, layer_name, request_options=request_options)
+        _response = self._raw_client.delete(tenant_id, doc_id, layer_name, request_options=request_options)
         return _response.data
 
 
@@ -125,19 +125,19 @@ class AsyncLayersClient:
     async def list(
         self,
         tenant_id: str,
-        id: str,
+        doc_id: str,
         *,
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         grant_id: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocumentsLayersList200Response:
+    ) -> DocumentsLayersListResponse:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         limit : typing.Optional[int]
 
@@ -150,7 +150,7 @@ class AsyncLayersClient:
 
         Returns
         -------
-        DocumentsLayersList200Response
+        DocumentsLayersListResponse
             OK
 
         Examples
@@ -167,26 +167,26 @@ class AsyncLayersClient:
         async def main() -> None:
             await client.documents.layers.list(
                 tenant_id="tenantId",
-                id="id",
+                doc_id="docId",
             )
 
 
         asyncio.run(main())
         """
         _response = await self._raw_client.list(
-            tenant_id, id, limit=limit, cursor=cursor, grant_id=grant_id, request_options=request_options
+            tenant_id, doc_id, limit=limit, cursor=cursor, grant_id=grant_id, request_options=request_options
         )
         return _response.data
 
     async def delete(
-        self, tenant_id: str, id: str, layer_name: str, *, request_options: typing.Optional[RequestOptions] = None
+        self, tenant_id: str, doc_id: str, layer_name: str, *, request_options: typing.Optional[RequestOptions] = None
     ) -> None:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         layer_name : str
 
@@ -211,12 +211,12 @@ class AsyncLayersClient:
         async def main() -> None:
             await client.documents.layers.delete(
                 tenant_id="tenantId",
-                id="id",
+                doc_id="docId",
                 layer_name="layerName",
             )
 
 
         asyncio.run(main())
         """
-        _response = await self._raw_client.delete(tenant_id, id, layer_name, request_options=request_options)
+        _response = await self._raw_client.delete(tenant_id, doc_id, layer_name, request_options=request_options)
         return _response.data

@@ -4,10 +4,10 @@ import typing
 
 from ..core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ..core.request_options import RequestOptions
-from ..types.folders_create200response import FoldersCreate200Response
-from ..types.folders_get200response import FoldersGet200Response
-from ..types.folders_list200response import FoldersList200Response
-from ..types.folders_update200response import FoldersUpdate200Response
+from ..types.folders_create_response import FoldersCreateResponse
+from ..types.folders_get_response import FoldersGetResponse
+from ..types.folders_list_response import FoldersListResponse
+from ..types.folders_update_response import FoldersUpdateResponse
 from .raw_client import AsyncRawFoldersClient, RawFoldersClient
 
 # this is used as the default value for optional parameters
@@ -37,7 +37,7 @@ class FoldersClient:
         cursor: typing.Optional[str] = None,
         parent_id: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> FoldersList200Response:
+    ) -> FoldersListResponse:
         """
         Parameters
         ----------
@@ -55,7 +55,7 @@ class FoldersClient:
 
         Returns
         -------
-        FoldersList200Response
+        FoldersListResponse
             OK
 
         Examples
@@ -81,7 +81,7 @@ class FoldersClient:
         name: str,
         parent_id: typing.Optional[str] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> FoldersCreate200Response:
+    ) -> FoldersCreateResponse:
         """
         409 Conflict carries `details.reason`: `name-taken` (a sibling has the name, ignoring case; `details.name`) or `too-deep` (folders nest at most 100 levels; `details.maxDepth`). 404 when the parent folder does not exist.
 
@@ -100,7 +100,7 @@ class FoldersClient:
 
         Returns
         -------
-        FoldersCreate200Response
+        FoldersCreateResponse
             OK
 
         Examples
@@ -120,7 +120,7 @@ class FoldersClient:
 
     def get(
         self, tenant_id: str, folder_id: str, *, request_options: typing.Optional[RequestOptions] = None
-    ) -> FoldersGet200Response:
+    ) -> FoldersGetResponse:
         """
         Parameters
         ----------
@@ -133,7 +133,7 @@ class FoldersClient:
 
         Returns
         -------
-        FoldersGet200Response
+        FoldersGetResponse
             OK
 
         Examples
@@ -195,7 +195,7 @@ class FoldersClient:
 
     def update(
         self, tenant_id: str, folder_id: str, *, name: str, request_options: typing.Optional[RequestOptions] = None
-    ) -> FoldersUpdate200Response:
+    ) -> FoldersUpdateResponse:
         """
         409 Conflict with `details.reason` `name-taken` when a sibling has the name, ignoring case.
 
@@ -213,7 +213,7 @@ class FoldersClient:
 
         Returns
         -------
-        FoldersUpdate200Response
+        FoldersUpdateResponse
             OK
 
         Examples
@@ -237,12 +237,12 @@ class FoldersClient:
         tenant_id: str,
         folder_id: str,
         *,
-        document_ids: typing.Optional[typing.Sequence[str]] = OMIT,
+        doc_ids: typing.Optional[typing.Sequence[str]] = OMIT,
         folder_ids: typing.Optional[typing.Sequence[str]] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> None:
         """
-        Up to 1,000 ids in total. A folder moves with everything in it. 404 NotFound names the ids that do not exist or are being deleted in `details.documentIds` and `details.folderIds`. 409 Conflict carries `details.reason`: `cycle` (the destination is a moved folder or inside one; `details.folderId`), `too-deep` (the move would nest folders deeper than 100 levels; `details.maxDepth`) or `name-taken` (a moved folder's name is taken in the destination, ignoring case; `details.name`).
+        Up to 1,000 ids in total. A folder moves with everything in it. 404 NotFound names the ids that do not exist or are being deleted in `details.docIds` and `details.folderIds`. 409 Conflict carries `details.reason`: `cycle` (the destination is a moved folder or inside one; `details.folderId`), `too-deep` (the move would nest folders deeper than 100 levels; `details.maxDepth`) or `name-taken` (a moved folder's name is taken in the destination, ignoring case; `details.name`).
 
         Parameters
         ----------
@@ -251,7 +251,7 @@ class FoldersClient:
         folder_id : str
             A folder id, or root for the top level.
 
-        document_ids : typing.Optional[typing.Sequence[str]]
+        doc_ids : typing.Optional[typing.Sequence[str]]
 
         folder_ids : typing.Optional[typing.Sequence[str]]
 
@@ -275,7 +275,7 @@ class FoldersClient:
         )
         """
         _response = self._raw_client.move_into(
-            tenant_id, folder_id, document_ids=document_ids, folder_ids=folder_ids, request_options=request_options
+            tenant_id, folder_id, doc_ids=doc_ids, folder_ids=folder_ids, request_options=request_options
         )
         return _response.data
 
@@ -303,7 +303,7 @@ class AsyncFoldersClient:
         cursor: typing.Optional[str] = None,
         parent_id: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> FoldersList200Response:
+    ) -> FoldersListResponse:
         """
         Parameters
         ----------
@@ -321,7 +321,7 @@ class AsyncFoldersClient:
 
         Returns
         -------
-        FoldersList200Response
+        FoldersListResponse
             OK
 
         Examples
@@ -355,7 +355,7 @@ class AsyncFoldersClient:
         name: str,
         parent_id: typing.Optional[str] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> FoldersCreate200Response:
+    ) -> FoldersCreateResponse:
         """
         409 Conflict carries `details.reason`: `name-taken` (a sibling has the name, ignoring case; `details.name`) or `too-deep` (folders nest at most 100 levels; `details.maxDepth`). 404 when the parent folder does not exist.
 
@@ -374,7 +374,7 @@ class AsyncFoldersClient:
 
         Returns
         -------
-        FoldersCreate200Response
+        FoldersCreateResponse
             OK
 
         Examples
@@ -404,7 +404,7 @@ class AsyncFoldersClient:
 
     async def get(
         self, tenant_id: str, folder_id: str, *, request_options: typing.Optional[RequestOptions] = None
-    ) -> FoldersGet200Response:
+    ) -> FoldersGetResponse:
         """
         Parameters
         ----------
@@ -417,7 +417,7 @@ class AsyncFoldersClient:
 
         Returns
         -------
-        FoldersGet200Response
+        FoldersGetResponse
             OK
 
         Examples
@@ -497,7 +497,7 @@ class AsyncFoldersClient:
 
     async def update(
         self, tenant_id: str, folder_id: str, *, name: str, request_options: typing.Optional[RequestOptions] = None
-    ) -> FoldersUpdate200Response:
+    ) -> FoldersUpdateResponse:
         """
         409 Conflict with `details.reason` `name-taken` when a sibling has the name, ignoring case.
 
@@ -515,7 +515,7 @@ class AsyncFoldersClient:
 
         Returns
         -------
-        FoldersUpdate200Response
+        FoldersUpdateResponse
             OK
 
         Examples
@@ -547,12 +547,12 @@ class AsyncFoldersClient:
         tenant_id: str,
         folder_id: str,
         *,
-        document_ids: typing.Optional[typing.Sequence[str]] = OMIT,
+        doc_ids: typing.Optional[typing.Sequence[str]] = OMIT,
         folder_ids: typing.Optional[typing.Sequence[str]] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> None:
         """
-        Up to 1,000 ids in total. A folder moves with everything in it. 404 NotFound names the ids that do not exist or are being deleted in `details.documentIds` and `details.folderIds`. 409 Conflict carries `details.reason`: `cycle` (the destination is a moved folder or inside one; `details.folderId`), `too-deep` (the move would nest folders deeper than 100 levels; `details.maxDepth`) or `name-taken` (a moved folder's name is taken in the destination, ignoring case; `details.name`).
+        Up to 1,000 ids in total. A folder moves with everything in it. 404 NotFound names the ids that do not exist or are being deleted in `details.docIds` and `details.folderIds`. 409 Conflict carries `details.reason`: `cycle` (the destination is a moved folder or inside one; `details.folderId`), `too-deep` (the move would nest folders deeper than 100 levels; `details.maxDepth`) or `name-taken` (a moved folder's name is taken in the destination, ignoring case; `details.name`).
 
         Parameters
         ----------
@@ -561,7 +561,7 @@ class AsyncFoldersClient:
         folder_id : str
             A folder id, or root for the top level.
 
-        document_ids : typing.Optional[typing.Sequence[str]]
+        doc_ids : typing.Optional[typing.Sequence[str]]
 
         folder_ids : typing.Optional[typing.Sequence[str]]
 
@@ -593,6 +593,6 @@ class AsyncFoldersClient:
         asyncio.run(main())
         """
         _response = await self._raw_client.move_into(
-            tenant_id, folder_id, document_ids=document_ids, folder_ids=folder_ids, request_options=request_options
+            tenant_id, folder_id, doc_ids=doc_ids, folder_ids=folder_ids, request_options=request_options
         )
         return _response.data

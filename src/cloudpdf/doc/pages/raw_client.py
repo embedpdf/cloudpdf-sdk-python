@@ -15,14 +15,15 @@ from ...core.serialization import convert_and_respect_annotation_metadata
 from ...errors.bad_request_error import BadRequestError
 from ...errors.not_found_error import NotFoundError
 from ...types.doc_pages_extract_request import DocPagesExtractRequest
-from ...types.doc_pages_flatten200response import DocPagesFlatten200Response
 from ...types.doc_pages_flatten_request import DocPagesFlattenRequest
-from ...types.doc_pages_remove_name200response import DocPagesRemoveName200Response
+from ...types.doc_pages_flatten_response import DocPagesFlattenResponse
 from ...types.doc_pages_remove_name_request import DocPagesRemoveNameRequest
-from ...types.doc_pages_set_name200response import DocPagesSetName200Response
+from ...types.doc_pages_remove_name_response import DocPagesRemoveNameResponse
 from ...types.doc_pages_set_name_request import DocPagesSetNameRequest
-from ...types.doc_pages_set_scale200response import DocPagesSetScale200Response
-from ...types.doc_pages_viewports200response import DocPagesViewports200Response
+from ...types.doc_pages_set_name_response import DocPagesSetNameResponse
+from ...types.doc_pages_set_scale_response import DocPagesSetScaleResponse
+from ...types.doc_pages_viewports_response import DocPagesViewportsResponse
+from ...types.error_response import ErrorResponse
 from .types.doc_pages_set_scale_request_measure import DocPagesSetScaleRequestMeasure
 from pydantic import ValidationError
 
@@ -44,7 +45,7 @@ class RawPagesClient:
         idempotency_key: typing.Optional[str] = None,
         measure: typing.Optional[DocPagesSetScaleRequestMeasure] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocPagesSetScale200Response]:
+    ) -> HttpResponse[DocPagesSetScaleResponse]:
         """
         Parameters
         ----------
@@ -53,7 +54,7 @@ class RawPagesClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -68,7 +69,7 @@ class RawPagesClient:
 
         Returns
         -------
-        HttpResponse[DocPagesSetScale200Response]
+        HttpResponse[DocPagesSetScaleResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -90,9 +91,9 @@ class RawPagesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocPagesSetScale200Response,
+                    DocPagesSetScaleResponse,
                     parse_obj_as(
-                        type_=DocPagesSetScale200Response,  # type: ignore
+                        type_=DocPagesSetScaleResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -101,9 +102,9 @@ class RawPagesClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -112,9 +113,9 @@ class RawPagesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -136,7 +137,7 @@ class RawPagesClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocPagesViewports200Response]:
+    ) -> HttpResponse[DocPagesViewportsResponse]:
         """
         Parameters
         ----------
@@ -145,7 +146,7 @@ class RawPagesClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -155,7 +156,7 @@ class RawPagesClient:
 
         Returns
         -------
-        HttpResponse[DocPagesViewports200Response]
+        HttpResponse[DocPagesViewportsResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -169,9 +170,9 @@ class RawPagesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocPagesViewports200Response,
+                    DocPagesViewportsResponse,
                     parse_obj_as(
-                        type_=DocPagesViewports200Response,  # type: ignore
+                        type_=DocPagesViewportsResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -180,9 +181,9 @@ class RawPagesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -252,9 +253,9 @@ class RawPagesClient:
                         raise BadRequestError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -263,9 +264,9 @@ class RawPagesClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -295,7 +296,7 @@ class RawPagesClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocPagesFlatten200Response]:
+    ) -> HttpResponse[DocPagesFlattenResponse]:
         """
         Parameters
         ----------
@@ -316,7 +317,7 @@ class RawPagesClient:
 
         Returns
         -------
-        HttpResponse[DocPagesFlatten200Response]
+        HttpResponse[DocPagesFlattenResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -334,9 +335,9 @@ class RawPagesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocPagesFlatten200Response,
+                    DocPagesFlattenResponse,
                     parse_obj_as(
-                        type_=DocPagesFlatten200Response,  # type: ignore
+                        type_=DocPagesFlattenResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -345,9 +346,9 @@ class RawPagesClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -356,9 +357,9 @@ class RawPagesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -381,7 +382,7 @@ class RawPagesClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocPagesSetName200Response]:
+    ) -> HttpResponse[DocPagesSetNameResponse]:
         """
         Parameters
         ----------
@@ -402,7 +403,7 @@ class RawPagesClient:
 
         Returns
         -------
-        HttpResponse[DocPagesSetName200Response]
+        HttpResponse[DocPagesSetNameResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -420,9 +421,9 @@ class RawPagesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocPagesSetName200Response,
+                    DocPagesSetNameResponse,
                     parse_obj_as(
-                        type_=DocPagesSetName200Response,  # type: ignore
+                        type_=DocPagesSetNameResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -431,9 +432,9 @@ class RawPagesClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -442,9 +443,9 @@ class RawPagesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -467,7 +468,7 @@ class RawPagesClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocPagesRemoveName200Response]:
+    ) -> HttpResponse[DocPagesRemoveNameResponse]:
         """
         Parameters
         ----------
@@ -488,7 +489,7 @@ class RawPagesClient:
 
         Returns
         -------
-        HttpResponse[DocPagesRemoveName200Response]
+        HttpResponse[DocPagesRemoveNameResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -506,9 +507,9 @@ class RawPagesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocPagesRemoveName200Response,
+                    DocPagesRemoveNameResponse,
                     parse_obj_as(
-                        type_=DocPagesRemoveName200Response,  # type: ignore
+                        type_=DocPagesRemoveNameResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -517,9 +518,9 @@ class RawPagesClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -528,9 +529,9 @@ class RawPagesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -559,7 +560,7 @@ class AsyncRawPagesClient:
         idempotency_key: typing.Optional[str] = None,
         measure: typing.Optional[DocPagesSetScaleRequestMeasure] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocPagesSetScale200Response]:
+    ) -> AsyncHttpResponse[DocPagesSetScaleResponse]:
         """
         Parameters
         ----------
@@ -568,7 +569,7 @@ class AsyncRawPagesClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -583,7 +584,7 @@ class AsyncRawPagesClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocPagesSetScale200Response]
+        AsyncHttpResponse[DocPagesSetScaleResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -605,9 +606,9 @@ class AsyncRawPagesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocPagesSetScale200Response,
+                    DocPagesSetScaleResponse,
                     parse_obj_as(
-                        type_=DocPagesSetScale200Response,  # type: ignore
+                        type_=DocPagesSetScaleResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -616,9 +617,9 @@ class AsyncRawPagesClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -627,9 +628,9 @@ class AsyncRawPagesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -651,7 +652,7 @@ class AsyncRawPagesClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocPagesViewports200Response]:
+    ) -> AsyncHttpResponse[DocPagesViewportsResponse]:
         """
         Parameters
         ----------
@@ -660,7 +661,7 @@ class AsyncRawPagesClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -670,7 +671,7 @@ class AsyncRawPagesClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocPagesViewports200Response]
+        AsyncHttpResponse[DocPagesViewportsResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -684,9 +685,9 @@ class AsyncRawPagesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocPagesViewports200Response,
+                    DocPagesViewportsResponse,
                     parse_obj_as(
-                        type_=DocPagesViewports200Response,  # type: ignore
+                        type_=DocPagesViewportsResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -695,9 +696,9 @@ class AsyncRawPagesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -768,9 +769,9 @@ class AsyncRawPagesClient:
                         raise BadRequestError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -779,9 +780,9 @@ class AsyncRawPagesClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -811,7 +812,7 @@ class AsyncRawPagesClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocPagesFlatten200Response]:
+    ) -> AsyncHttpResponse[DocPagesFlattenResponse]:
         """
         Parameters
         ----------
@@ -832,7 +833,7 @@ class AsyncRawPagesClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocPagesFlatten200Response]
+        AsyncHttpResponse[DocPagesFlattenResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -850,9 +851,9 @@ class AsyncRawPagesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocPagesFlatten200Response,
+                    DocPagesFlattenResponse,
                     parse_obj_as(
-                        type_=DocPagesFlatten200Response,  # type: ignore
+                        type_=DocPagesFlattenResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -861,9 +862,9 @@ class AsyncRawPagesClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -872,9 +873,9 @@ class AsyncRawPagesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -897,7 +898,7 @@ class AsyncRawPagesClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocPagesSetName200Response]:
+    ) -> AsyncHttpResponse[DocPagesSetNameResponse]:
         """
         Parameters
         ----------
@@ -918,7 +919,7 @@ class AsyncRawPagesClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocPagesSetName200Response]
+        AsyncHttpResponse[DocPagesSetNameResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -936,9 +937,9 @@ class AsyncRawPagesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocPagesSetName200Response,
+                    DocPagesSetNameResponse,
                     parse_obj_as(
-                        type_=DocPagesSetName200Response,  # type: ignore
+                        type_=DocPagesSetNameResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -947,9 +948,9 @@ class AsyncRawPagesClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -958,9 +959,9 @@ class AsyncRawPagesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -983,7 +984,7 @@ class AsyncRawPagesClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocPagesRemoveName200Response]:
+    ) -> AsyncHttpResponse[DocPagesRemoveNameResponse]:
         """
         Parameters
         ----------
@@ -1004,7 +1005,7 @@ class AsyncRawPagesClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocPagesRemoveName200Response]
+        AsyncHttpResponse[DocPagesRemoveNameResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -1022,9 +1023,9 @@ class AsyncRawPagesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocPagesRemoveName200Response,
+                    DocPagesRemoveNameResponse,
                     parse_obj_as(
-                        type_=DocPagesRemoveName200Response,  # type: ignore
+                        type_=DocPagesRemoveNameResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1033,9 +1034,9 @@ class AsyncRawPagesClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1044,9 +1045,9 @@ class AsyncRawPagesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

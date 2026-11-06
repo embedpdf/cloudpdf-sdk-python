@@ -15,12 +15,12 @@ from .annotation_line_intent import AnnotationLineIntent
 from .annotation_line_leader import AnnotationLineLeader
 from .annotation_line_line_endings import AnnotationLineLineEndings
 from .annotation_line_line_points import AnnotationLineLinePoints
-from .annotation_line_measure import AnnotationLineMeasure
 from .annotation_line_rect import AnnotationLineRect
 from .annotation_line_reply import AnnotationLineReply
 from .annotation_ref import AnnotationRef
 from .page_ref import PageRef
 from .pdf_annotation_actions import PdfAnnotationActions
+from .pdf_measurement import PdfMeasurement
 from .rich_text_document import RichTextDocument
 
 
@@ -109,10 +109,14 @@ class AnnotationLine(UniversalBaseModel):
     ]
     rotation: typing.Optional[float] = None
     intent: typing.Optional[AnnotationLineIntent] = None
-    measure: typing.Optional[AnnotationLineMeasure] = None
+    measure: typing.Optional[PdfMeasurement] = pydantic.Field(default=None)
+    """
+    A measure, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unknown`.
+    """
+
     caption_enabled: typing_extensions.Annotated[
-        typing.Optional[bool], FieldMetadata(alias="captionEnabled"), pydantic.Field(alias="captionEnabled")
-    ] = None
+        bool, FieldMetadata(alias="captionEnabled"), pydantic.Field(alias="captionEnabled")
+    ]
     caption_position: typing_extensions.Annotated[
         AnnotationLineCaptionPosition, FieldMetadata(alias="captionPosition"), pydantic.Field(alias="captionPosition")
     ]

@@ -12,11 +12,11 @@ from .font_program_format import FontProgramFormat
 
 
 class FontProgram(UniversalBaseModel):
-    display_hash: typing_extensions.Annotated[
-        typing.Optional[str], FieldMetadata(alias="displayHash"), pydantic.Field(alias="displayHash")
+    display_sha256: typing_extensions.Annotated[
+        typing.Optional[str], FieldMetadata(alias="displaySha256"), pydantic.Field(alias="displaySha256")
     ] = None
-    source_hash: typing_extensions.Annotated[
-        typing.Optional[str], FieldMetadata(alias="sourceHash"), pydantic.Field(alias="sourceHash")
+    source_sha256: typing_extensions.Annotated[
+        typing.Optional[str], FieldMetadata(alias="sourceSha256"), pydantic.Field(alias="sourceSha256")
     ] = None
     embedded: FontProgramEmbedded
     format: typing.Optional[FontProgramFormat] = None

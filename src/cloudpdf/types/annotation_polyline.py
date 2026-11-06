@@ -12,13 +12,13 @@ from .annotation_polyline_border_style import AnnotationPolylineBorderStyle
 from .annotation_polyline_caption_center import AnnotationPolylineCaptionCenter
 from .annotation_polyline_intent import AnnotationPolylineIntent
 from .annotation_polyline_line_endings import AnnotationPolylineLineEndings
-from .annotation_polyline_measure import AnnotationPolylineMeasure
 from .annotation_polyline_rect import AnnotationPolylineRect
 from .annotation_polyline_reply import AnnotationPolylineReply
 from .annotation_polyline_vertices_item import AnnotationPolylineVerticesItem
 from .annotation_ref import AnnotationRef
 from .page_ref import PageRef
 from .pdf_annotation_actions import PdfAnnotationActions
+from .pdf_measurement import PdfMeasurement
 from .rich_text_document import RichTextDocument
 
 
@@ -110,7 +110,11 @@ class AnnotationPolyline(UniversalBaseModel):
         pydantic.Field(alias="captionCenter"),
     ] = None
     intent: typing.Optional[AnnotationPolylineIntent] = None
-    measure: typing.Optional[AnnotationPolylineMeasure] = None
+    measure: typing.Optional[PdfMeasurement] = pydantic.Field(default=None)
+    """
+    A measure, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unknown`.
+    """
+
     line_endings: typing_extensions.Annotated[
         AnnotationPolylineLineEndings, FieldMetadata(alias="lineEndings"), pydantic.Field(alias="lineEndings")
     ]

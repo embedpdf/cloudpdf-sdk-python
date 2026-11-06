@@ -4,7 +4,7 @@ import typing
 
 from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
-from ...types.doc_outline_get200response import DocOutlineGet200Response
+from ...types.doc_outline_get_response import DocOutlineGetResponse
 from .raw_client import AsyncRawOutlineClient, RawOutlineClient
 
 
@@ -30,7 +30,7 @@ class OutlineClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocOutlineGet200Response:
+    ) -> DocOutlineGetResponse:
         """
         Parameters
         ----------
@@ -46,7 +46,7 @@ class OutlineClient:
 
         Returns
         -------
-        DocOutlineGet200Response
+        DocOutlineGetResponse
             OK
 
         Examples
@@ -89,7 +89,7 @@ class AsyncOutlineClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocOutlineGet200Response:
+    ) -> DocOutlineGetResponse:
         """
         Parameters
         ----------
@@ -105,7 +105,7 @@ class AsyncOutlineClient:
 
         Returns
         -------
-        DocOutlineGet200Response
+        DocOutlineGetResponse
             OK
 
         Examples

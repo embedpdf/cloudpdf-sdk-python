@@ -11,7 +11,8 @@ from ...core.parse_error import ParsingError
 from ...core.pydantic_utilities import parse_obj_as
 from ...core.request_options import RequestOptions
 from ...errors.not_found_error import NotFoundError
-from ...types.doc_metadata_get200response import DocMetadataGet200Response
+from ...types.doc_metadata_get_response import DocMetadataGetResponse
+from ...types.error_response import ErrorResponse
 from pydantic import ValidationError
 
 
@@ -26,7 +27,7 @@ class RawMetadataClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocMetadataGet200Response]:
+    ) -> HttpResponse[DocMetadataGetResponse]:
         """
         Parameters
         ----------
@@ -42,7 +43,7 @@ class RawMetadataClient:
 
         Returns
         -------
-        HttpResponse[DocMetadataGet200Response]
+        HttpResponse[DocMetadataGetResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -56,9 +57,9 @@ class RawMetadataClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocMetadataGet200Response,
+                    DocMetadataGetResponse,
                     parse_obj_as(
-                        type_=DocMetadataGet200Response,  # type: ignore
+                        type_=DocMetadataGetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -67,9 +68,9 @@ class RawMetadataClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -95,7 +96,7 @@ class AsyncRawMetadataClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocMetadataGet200Response]:
+    ) -> AsyncHttpResponse[DocMetadataGetResponse]:
         """
         Parameters
         ----------
@@ -111,7 +112,7 @@ class AsyncRawMetadataClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocMetadataGet200Response]
+        AsyncHttpResponse[DocMetadataGetResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -125,9 +126,9 @@ class AsyncRawMetadataClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocMetadataGet200Response,
+                    DocMetadataGetResponse,
                     parse_obj_as(
-                        type_=DocMetadataGet200Response,  # type: ignore
+                        type_=DocMetadataGetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -136,9 +137,9 @@ class AsyncRawMetadataClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

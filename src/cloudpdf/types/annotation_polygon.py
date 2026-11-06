@@ -11,13 +11,13 @@ from .annotation_polygon_blend_mode import AnnotationPolygonBlendMode
 from .annotation_polygon_border_style import AnnotationPolygonBorderStyle
 from .annotation_polygon_caption_center import AnnotationPolygonCaptionCenter
 from .annotation_polygon_intent import AnnotationPolygonIntent
-from .annotation_polygon_measure import AnnotationPolygonMeasure
 from .annotation_polygon_rect import AnnotationPolygonRect
 from .annotation_polygon_reply import AnnotationPolygonReply
 from .annotation_polygon_vertices_item import AnnotationPolygonVerticesItem
 from .annotation_ref import AnnotationRef
 from .page_ref import PageRef
 from .pdf_annotation_actions import PdfAnnotationActions
+from .pdf_measurement import PdfMeasurement
 from .rich_text_document import RichTextDocument
 
 
@@ -109,7 +109,11 @@ class AnnotationPolygon(UniversalBaseModel):
         pydantic.Field(alias="captionCenter"),
     ] = None
     intent: typing.Optional[AnnotationPolygonIntent] = None
-    measure: typing.Optional[AnnotationPolygonMeasure] = None
+    measure: typing.Optional[PdfMeasurement] = pydantic.Field(default=None)
+    """
+    A measure, by its `subtype`. A newer server can add subtypes: read one your client doesn't know as `unknown`.
+    """
+
     cloudy_intensity: typing_extensions.Annotated[
         typing.Optional[float], FieldMetadata(alias="cloudyIntensity"), pydantic.Field(alias="cloudyIntensity")
     ] = None

@@ -13,12 +13,13 @@ from ..core.request_options import RequestOptions
 from ..core.serialization import convert_and_respect_annotation_metadata
 from ..errors.bad_request_error import BadRequestError
 from ..errors.not_found_error import NotFoundError
+from ..types.error_response import ErrorResponse
 from ..types.tenant_feature import TenantFeature
-from ..types.tenants_create200response import TenantsCreate200Response
-from ..types.tenants_get200response import TenantsGet200Response
-from ..types.tenants_list200response import TenantsList200Response
-from ..types.tenants_update200response import TenantsUpdate200Response
-from ..types.tenants_usage200response import TenantsUsage200Response
+from ..types.tenants_create_response import TenantsCreateResponse
+from ..types.tenants_get_response import TenantsGetResponse
+from ..types.tenants_list_response import TenantsListResponse
+from ..types.tenants_update_response import TenantsUpdateResponse
+from ..types.tenants_usage_response import TenantsUsageResponse
 from pydantic import ValidationError
 
 # this is used as the default value for optional parameters
@@ -35,7 +36,7 @@ class RawTenantsClient:
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[TenantsList200Response]:
+    ) -> HttpResponse[TenantsListResponse]:
         """
         Parameters
         ----------
@@ -48,7 +49,7 @@ class RawTenantsClient:
 
         Returns
         -------
-        HttpResponse[TenantsList200Response]
+        HttpResponse[TenantsListResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -63,9 +64,9 @@ class RawTenantsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    TenantsList200Response,
+                    TenantsListResponse,
                     parse_obj_as(
-                        type_=TenantsList200Response,  # type: ignore
+                        type_=TenantsListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -74,9 +75,9 @@ class RawTenantsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -92,7 +93,7 @@ class RawTenantsClient:
 
     def create(
         self, *, id: str, name: typing.Optional[str] = OMIT, request_options: typing.Optional[RequestOptions] = None
-    ) -> HttpResponse[TenantsCreate200Response]:
+    ) -> HttpResponse[TenantsCreateResponse]:
         """
         Parameters
         ----------
@@ -105,7 +106,7 @@ class RawTenantsClient:
 
         Returns
         -------
-        HttpResponse[TenantsCreate200Response]
+        HttpResponse[TenantsCreateResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -124,9 +125,9 @@ class RawTenantsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    TenantsCreate200Response,
+                    TenantsCreateResponse,
                     parse_obj_as(
-                        type_=TenantsCreate200Response,  # type: ignore
+                        type_=TenantsCreateResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -135,9 +136,9 @@ class RawTenantsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -153,7 +154,7 @@ class RawTenantsClient:
 
     def get(
         self, tenant_id: str, *, request_options: typing.Optional[RequestOptions] = None
-    ) -> HttpResponse[TenantsGet200Response]:
+    ) -> HttpResponse[TenantsGetResponse]:
         """
         Parameters
         ----------
@@ -164,7 +165,7 @@ class RawTenantsClient:
 
         Returns
         -------
-        HttpResponse[TenantsGet200Response]
+        HttpResponse[TenantsGetResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -175,9 +176,9 @@ class RawTenantsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    TenantsGet200Response,
+                    TenantsGetResponse,
                     parse_obj_as(
-                        type_=TenantsGet200Response,  # type: ignore
+                        type_=TenantsGetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -186,9 +187,9 @@ class RawTenantsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -229,9 +230,9 @@ class RawTenantsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -251,7 +252,7 @@ class RawTenantsClient:
         *,
         features: typing.Sequence[TenantFeature],
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[TenantsUpdate200Response]:
+    ) -> HttpResponse[TenantsUpdateResponse]:
         """
         A feature names an installed module; any other id is a 400. A module route answers a tenant without its feature 403 FeatureNotEnabled, and one whose feature is stopped 402 FeatureStopped (details.feature, details.stopped). Other replicas apply a change within 30 seconds.
 
@@ -266,7 +267,7 @@ class RawTenantsClient:
 
         Returns
         -------
-        HttpResponse[TenantsUpdate200Response]
+        HttpResponse[TenantsUpdateResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -286,9 +287,9 @@ class RawTenantsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    TenantsUpdate200Response,
+                    TenantsUpdateResponse,
                     parse_obj_as(
-                        type_=TenantsUpdate200Response,  # type: ignore
+                        type_=TenantsUpdateResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -297,9 +298,9 @@ class RawTenantsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -308,9 +309,9 @@ class RawTenantsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -349,9 +350,9 @@ class RawTenantsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -407,9 +408,9 @@ class RawTenantsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -431,7 +432,7 @@ class RawTenantsClient:
         from_: typing.Optional[str] = None,
         to: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[TenantsUsage200Response]:
+    ) -> HttpResponse[TenantsUsageResponse]:
         """
         Facts only — no limits or billing state. Views count grant exchanges plus authorized /v1/access requests, deduplicated across the two.
 
@@ -450,7 +451,7 @@ class RawTenantsClient:
 
         Returns
         -------
-        HttpResponse[TenantsUsage200Response]
+        HttpResponse[TenantsUsageResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -466,9 +467,9 @@ class RawTenantsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    TenantsUsage200Response,
+                    TenantsUsageResponse,
                     parse_obj_as(
-                        type_=TenantsUsage200Response,  # type: ignore
+                        type_=TenantsUsageResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -477,9 +478,9 @@ class RawTenantsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -488,9 +489,9 @@ class RawTenantsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -515,7 +516,7 @@ class AsyncRawTenantsClient:
         limit: typing.Optional[int] = None,
         cursor: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[TenantsList200Response]:
+    ) -> AsyncHttpResponse[TenantsListResponse]:
         """
         Parameters
         ----------
@@ -528,7 +529,7 @@ class AsyncRawTenantsClient:
 
         Returns
         -------
-        AsyncHttpResponse[TenantsList200Response]
+        AsyncHttpResponse[TenantsListResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -543,9 +544,9 @@ class AsyncRawTenantsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    TenantsList200Response,
+                    TenantsListResponse,
                     parse_obj_as(
-                        type_=TenantsList200Response,  # type: ignore
+                        type_=TenantsListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -554,9 +555,9 @@ class AsyncRawTenantsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -572,7 +573,7 @@ class AsyncRawTenantsClient:
 
     async def create(
         self, *, id: str, name: typing.Optional[str] = OMIT, request_options: typing.Optional[RequestOptions] = None
-    ) -> AsyncHttpResponse[TenantsCreate200Response]:
+    ) -> AsyncHttpResponse[TenantsCreateResponse]:
         """
         Parameters
         ----------
@@ -585,7 +586,7 @@ class AsyncRawTenantsClient:
 
         Returns
         -------
-        AsyncHttpResponse[TenantsCreate200Response]
+        AsyncHttpResponse[TenantsCreateResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -604,9 +605,9 @@ class AsyncRawTenantsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    TenantsCreate200Response,
+                    TenantsCreateResponse,
                     parse_obj_as(
-                        type_=TenantsCreate200Response,  # type: ignore
+                        type_=TenantsCreateResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -615,9 +616,9 @@ class AsyncRawTenantsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -633,7 +634,7 @@ class AsyncRawTenantsClient:
 
     async def get(
         self, tenant_id: str, *, request_options: typing.Optional[RequestOptions] = None
-    ) -> AsyncHttpResponse[TenantsGet200Response]:
+    ) -> AsyncHttpResponse[TenantsGetResponse]:
         """
         Parameters
         ----------
@@ -644,7 +645,7 @@ class AsyncRawTenantsClient:
 
         Returns
         -------
-        AsyncHttpResponse[TenantsGet200Response]
+        AsyncHttpResponse[TenantsGetResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -655,9 +656,9 @@ class AsyncRawTenantsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    TenantsGet200Response,
+                    TenantsGetResponse,
                     parse_obj_as(
-                        type_=TenantsGet200Response,  # type: ignore
+                        type_=TenantsGetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -666,9 +667,9 @@ class AsyncRawTenantsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -711,9 +712,9 @@ class AsyncRawTenantsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -733,7 +734,7 @@ class AsyncRawTenantsClient:
         *,
         features: typing.Sequence[TenantFeature],
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[TenantsUpdate200Response]:
+    ) -> AsyncHttpResponse[TenantsUpdateResponse]:
         """
         A feature names an installed module; any other id is a 400. A module route answers a tenant without its feature 403 FeatureNotEnabled, and one whose feature is stopped 402 FeatureStopped (details.feature, details.stopped). Other replicas apply a change within 30 seconds.
 
@@ -748,7 +749,7 @@ class AsyncRawTenantsClient:
 
         Returns
         -------
-        AsyncHttpResponse[TenantsUpdate200Response]
+        AsyncHttpResponse[TenantsUpdateResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -768,9 +769,9 @@ class AsyncRawTenantsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    TenantsUpdate200Response,
+                    TenantsUpdateResponse,
                     parse_obj_as(
-                        type_=TenantsUpdate200Response,  # type: ignore
+                        type_=TenantsUpdateResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -779,9 +780,9 @@ class AsyncRawTenantsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -790,9 +791,9 @@ class AsyncRawTenantsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -833,9 +834,9 @@ class AsyncRawTenantsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -891,9 +892,9 @@ class AsyncRawTenantsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -915,7 +916,7 @@ class AsyncRawTenantsClient:
         from_: typing.Optional[str] = None,
         to: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[TenantsUsage200Response]:
+    ) -> AsyncHttpResponse[TenantsUsageResponse]:
         """
         Facts only — no limits or billing state. Views count grant exchanges plus authorized /v1/access requests, deduplicated across the two.
 
@@ -934,7 +935,7 @@ class AsyncRawTenantsClient:
 
         Returns
         -------
-        AsyncHttpResponse[TenantsUsage200Response]
+        AsyncHttpResponse[TenantsUsageResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -950,9 +951,9 @@ class AsyncRawTenantsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    TenantsUsage200Response,
+                    TenantsUsageResponse,
                     parse_obj_as(
-                        type_=TenantsUsage200Response,  # type: ignore
+                        type_=TenantsUsageResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -961,9 +962,9 @@ class AsyncRawTenantsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -972,9 +973,9 @@ class AsyncRawTenantsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

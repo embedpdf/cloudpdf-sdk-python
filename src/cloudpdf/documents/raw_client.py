@@ -18,14 +18,14 @@ from ..errors.bad_request_error import BadRequestError
 from ..errors.conflict_error import ConflictError
 from ..errors.forbidden_error import ForbiddenError
 from ..errors.not_found_error import NotFoundError
-from ..types.documents_commit200response import DocumentsCommit200Response
-from ..types.documents_get200response import DocumentsGet200Response
+from ..types.documents_commit_response import DocumentsCommitResponse
+from ..types.documents_get_response import DocumentsGetResponse
 from ..types.documents_import_from200response import DocumentsImportFrom200Response
-from ..types.documents_import_from502response import DocumentsImportFrom502Response
-from ..types.documents_init200response import DocumentsInit200Response
-from ..types.documents_list200response import DocumentsList200Response
-from ..types.documents_update200response import DocumentsUpdate200Response
-from ..types.documents_upload_proxy200response import DocumentsUploadProxy200Response
+from ..types.documents_init_response import DocumentsInitResponse
+from ..types.documents_list_response import DocumentsListResponse
+from ..types.documents_update_response import DocumentsUpdateResponse
+from ..types.documents_upload_proxy_response import DocumentsUploadProxyResponse
+from ..types.error_response import ErrorResponse
 from .types.documents_import_from_request_dedup_mode import DocumentsImportFromRequestDedupMode
 from .types.documents_import_from_request_expected import DocumentsImportFromRequestExpected
 from .types.documents_import_from_request_mode import DocumentsImportFromRequestMode
@@ -57,7 +57,7 @@ class RawDocumentsClient:
         sort: typing.Optional[ListDocumentsRequestSort] = None,
         order: typing.Optional[ListDocumentsRequestOrder] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocumentsList200Response]:
+    ) -> HttpResponse[DocumentsListResponse]:
         """
         Parameters
         ----------
@@ -87,7 +87,7 @@ class RawDocumentsClient:
 
         Returns
         -------
-        HttpResponse[DocumentsList200Response]
+        HttpResponse[DocumentsListResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -107,9 +107,9 @@ class RawDocumentsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocumentsList200Response,
+                    DocumentsListResponse,
                     parse_obj_as(
-                        type_=DocumentsList200Response,  # type: ignore
+                        type_=DocumentsListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -118,9 +118,9 @@ class RawDocumentsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -135,34 +135,34 @@ class RawDocumentsClient:
         raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
     def get(
-        self, tenant_id: str, id: str, *, request_options: typing.Optional[RequestOptions] = None
-    ) -> HttpResponse[DocumentsGet200Response]:
+        self, tenant_id: str, doc_id: str, *, request_options: typing.Optional[RequestOptions] = None
+    ) -> HttpResponse[DocumentsGetResponse]:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        HttpResponse[DocumentsGet200Response]
+        HttpResponse[DocumentsGetResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}",
             method="GET",
             request_options=request_options,
         )
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocumentsGet200Response,
+                    DocumentsGetResponse,
                     parse_obj_as(
-                        type_=DocumentsGet200Response,  # type: ignore
+                        type_=DocumentsGetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -171,9 +171,9 @@ class RawDocumentsClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -182,9 +182,9 @@ class RawDocumentsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -199,14 +199,14 @@ class RawDocumentsClient:
         raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
     def delete(
-        self, tenant_id: str, id: str, *, request_options: typing.Optional[RequestOptions] = None
+        self, tenant_id: str, doc_id: str, *, request_options: typing.Optional[RequestOptions] = None
     ) -> HttpResponse[None]:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -216,7 +216,7 @@ class RawDocumentsClient:
         HttpResponse[None]
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}",
             method="DELETE",
             request_options=request_options,
         )
@@ -227,9 +227,9 @@ class RawDocumentsClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -238,9 +238,9 @@ class RawDocumentsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -255,8 +255,8 @@ class RawDocumentsClient:
         raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
     def update(
-        self, tenant_id: str, id: str, *, name: str, request_options: typing.Optional[RequestOptions] = None
-    ) -> HttpResponse[DocumentsUpdate200Response]:
+        self, tenant_id: str, doc_id: str, *, name: str, request_options: typing.Optional[RequestOptions] = None
+    ) -> HttpResponse[DocumentsUpdateResponse]:
         """
         A document that is being deleted answers 404.
 
@@ -264,7 +264,7 @@ class RawDocumentsClient:
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         name : str
             What people call the document: shown in dashboards, searched and sorted by. 1 to 255 characters, no control characters, no leading or trailing whitespace. Names need not be unique.
@@ -274,11 +274,11 @@ class RawDocumentsClient:
 
         Returns
         -------
-        HttpResponse[DocumentsUpdate200Response]
+        HttpResponse[DocumentsUpdateResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}",
             method="PATCH",
             json={
                 "name": name,
@@ -292,9 +292,9 @@ class RawDocumentsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocumentsUpdate200Response,
+                    DocumentsUpdateResponse,
                     parse_obj_as(
-                        type_=DocumentsUpdate200Response,  # type: ignore
+                        type_=DocumentsUpdateResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -303,9 +303,9 @@ class RawDocumentsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -314,9 +314,9 @@ class RawDocumentsClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -325,9 +325,9 @@ class RawDocumentsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -342,8 +342,8 @@ class RawDocumentsClient:
         raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
     def commit(
-        self, tenant_id: str, id: str, *, sha256: str, request_options: typing.Optional[RequestOptions] = None
-    ) -> HttpResponse[DocumentsCommit200Response]:
+        self, tenant_id: str, doc_id: str, *, sha256: str, request_options: typing.Optional[RequestOptions] = None
+    ) -> HttpResponse[DocumentsCommitResponse]:
         """
         An upload token commits only the documents it started; any other document answers 404.
 
@@ -351,7 +351,7 @@ class RawDocumentsClient:
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         sha256 : str
 
@@ -360,11 +360,11 @@ class RawDocumentsClient:
 
         Returns
         -------
-        HttpResponse[DocumentsCommit200Response]
+        HttpResponse[DocumentsCommitResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}/commit",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}/commit",
             method="POST",
             json={
                 "sha256": sha256,
@@ -378,9 +378,9 @@ class RawDocumentsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocumentsCommit200Response,
+                    DocumentsCommitResponse,
                     parse_obj_as(
-                        type_=DocumentsCommit200Response,  # type: ignore
+                        type_=DocumentsCommitResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -389,9 +389,9 @@ class RawDocumentsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -400,9 +400,9 @@ class RawDocumentsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -418,14 +418,14 @@ class RawDocumentsClient:
 
     @contextlib.contextmanager
     def download(
-        self, tenant_id: str, id: str, *, request_options: typing.Optional[RequestOptions] = None
+        self, tenant_id: str, doc_id: str, *, request_options: typing.Optional[RequestOptions] = None
     ) -> typing.Iterator[HttpResponse[typing.Iterator[bytes]]]:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
@@ -436,7 +436,7 @@ class RawDocumentsClient:
             OK
         """
         with self._client_wrapper.httpx_client.stream(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}/download",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}/download",
             method="GET",
             request_options=request_options,
         ) as _response:
@@ -453,9 +453,9 @@ class RawDocumentsClient:
                         raise ForbiddenError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -464,9 +464,9 @@ class RawDocumentsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -489,14 +489,14 @@ class RawDocumentsClient:
 
     @contextlib.contextmanager
     def thumbnail(
-        self, tenant_id: str, id: str, *, request_options: typing.Optional[RequestOptions] = None
+        self, tenant_id: str, doc_id: str, *, request_options: typing.Optional[RequestOptions] = None
     ) -> typing.Iterator[HttpResponse[typing.Iterator[bytes]]]:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
@@ -507,7 +507,7 @@ class RawDocumentsClient:
             OK
         """
         with self._client_wrapper.httpx_client.stream(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}/thumbnail",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}/thumbnail",
             method="GET",
             request_options=request_options,
         ) as _response:
@@ -524,9 +524,9 @@ class RawDocumentsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -548,8 +548,8 @@ class RawDocumentsClient:
             yield _stream()
 
     def upload_proxy(
-        self, tenant_id: str, id: str, *, file: core.File, request_options: typing.Optional[RequestOptions] = None
-    ) -> HttpResponse[DocumentsUploadProxy200Response]:
+        self, tenant_id: str, doc_id: str, *, file: core.File, request_options: typing.Optional[RequestOptions] = None
+    ) -> HttpResponse[DocumentsUploadProxyResponse]:
         """
         This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available. An upload token sends files only to the documents it started.
 
@@ -557,7 +557,7 @@ class RawDocumentsClient:
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         file : core.File
             See core.File for more documentation
@@ -567,11 +567,11 @@ class RawDocumentsClient:
 
         Returns
         -------
-        HttpResponse[DocumentsUploadProxy200Response]
+        HttpResponse[DocumentsUploadProxyResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}/upload-proxy",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}/upload-proxy",
             method="POST",
             data={},
             files={
@@ -584,9 +584,9 @@ class RawDocumentsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocumentsUploadProxy200Response,
+                    DocumentsUploadProxyResponse,
                     parse_obj_as(
-                        type_=DocumentsUploadProxy200Response,  # type: ignore
+                        type_=DocumentsUploadProxyResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -595,9 +595,9 @@ class RawDocumentsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -606,9 +606,9 @@ class RawDocumentsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -617,9 +617,9 @@ class RawDocumentsClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -726,9 +726,9 @@ class RawDocumentsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -737,9 +737,9 @@ class RawDocumentsClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -748,9 +748,9 @@ class RawDocumentsClient:
                 raise BadGatewayError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        DocumentsImportFrom502Response,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=DocumentsImportFrom502Response,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -768,7 +768,7 @@ class RawDocumentsClient:
         self,
         tenant_id: str,
         *,
-        content_length: float,
+        size_bytes: int,
         content_sha256: str,
         name: typing.Optional[str] = OMIT,
         folder_id: typing.Optional[str] = OMIT,
@@ -776,18 +776,18 @@ class RawDocumentsClient:
         idempotency_key: typing.Optional[str] = OMIT,
         dedup_mode: typing.Optional[DocumentsInitRequestDedupMode] = OMIT,
         doc_id: typing.Optional[str] = OMIT,
-        upload_ttl_sec: typing.Optional[float] = OMIT,
+        upload_ttl_seconds: typing.Optional[int] = OMIT,
         upload_preference: typing.Optional[DocumentsInitRequestUploadPreference] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocumentsInit200Response]:
+    ) -> HttpResponse[DocumentsInitResponse]:
         """
-        With an upload token, the document goes into the token's folder with the token's metadata, whatever the request says; contentLength must be within the token's maxBytes, and the token makes at most maxFiles documents (403 after). docId, idempotencyKey and dedupMode reuse-existing are refused (400): each could reach a document the token didn't make.
+        With an upload token, the document goes into the token's folder with the token's metadata, whatever the request says; sizeBytes must be within the token's maxBytes, and the token makes at most maxFiles documents (403 after). docId, idempotencyKey and dedupMode reuse-existing are refused (400): each could reach a document the token didn't make.
 
         Parameters
         ----------
         tenant_id : str
 
-        content_length : float
+        size_bytes : int
 
         content_sha256 : str
 
@@ -806,7 +806,7 @@ class RawDocumentsClient:
 
         doc_id : typing.Optional[str]
 
-        upload_ttl_sec : typing.Optional[float]
+        upload_ttl_seconds : typing.Optional[int]
 
         upload_preference : typing.Optional[DocumentsInitRequestUploadPreference]
 
@@ -815,14 +815,14 @@ class RawDocumentsClient:
 
         Returns
         -------
-        HttpResponse[DocumentsInit200Response]
+        HttpResponse[DocumentsInitResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
             f"v1/tenants/{encode_path_param(tenant_id)}/documents/init",
             method="POST",
             json={
-                "contentLength": content_length,
+                "sizeBytes": size_bytes,
                 "contentSha256": content_sha256,
                 "name": name,
                 "folderId": folder_id,
@@ -830,7 +830,7 @@ class RawDocumentsClient:
                 "idempotencyKey": idempotency_key,
                 "dedupMode": dedup_mode,
                 "docId": doc_id,
-                "uploadTtlSec": upload_ttl_sec,
+                "uploadTtlSeconds": upload_ttl_seconds,
                 "uploadPreference": upload_preference,
             },
             headers={
@@ -842,9 +842,9 @@ class RawDocumentsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocumentsInit200Response,
+                    DocumentsInitResponse,
                     parse_obj_as(
-                        type_=DocumentsInit200Response,  # type: ignore
+                        type_=DocumentsInitResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -853,9 +853,9 @@ class RawDocumentsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -864,9 +864,9 @@ class RawDocumentsClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -897,7 +897,7 @@ class AsyncRawDocumentsClient:
         sort: typing.Optional[ListDocumentsRequestSort] = None,
         order: typing.Optional[ListDocumentsRequestOrder] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocumentsList200Response]:
+    ) -> AsyncHttpResponse[DocumentsListResponse]:
         """
         Parameters
         ----------
@@ -927,7 +927,7 @@ class AsyncRawDocumentsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocumentsList200Response]
+        AsyncHttpResponse[DocumentsListResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -947,9 +947,9 @@ class AsyncRawDocumentsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocumentsList200Response,
+                    DocumentsListResponse,
                     parse_obj_as(
-                        type_=DocumentsList200Response,  # type: ignore
+                        type_=DocumentsListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -958,9 +958,9 @@ class AsyncRawDocumentsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -975,34 +975,34 @@ class AsyncRawDocumentsClient:
         raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
     async def get(
-        self, tenant_id: str, id: str, *, request_options: typing.Optional[RequestOptions] = None
-    ) -> AsyncHttpResponse[DocumentsGet200Response]:
+        self, tenant_id: str, doc_id: str, *, request_options: typing.Optional[RequestOptions] = None
+    ) -> AsyncHttpResponse[DocumentsGetResponse]:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        AsyncHttpResponse[DocumentsGet200Response]
+        AsyncHttpResponse[DocumentsGetResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}",
             method="GET",
             request_options=request_options,
         )
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocumentsGet200Response,
+                    DocumentsGetResponse,
                     parse_obj_as(
-                        type_=DocumentsGet200Response,  # type: ignore
+                        type_=DocumentsGetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1011,9 +1011,9 @@ class AsyncRawDocumentsClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1022,9 +1022,9 @@ class AsyncRawDocumentsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1039,14 +1039,14 @@ class AsyncRawDocumentsClient:
         raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
     async def delete(
-        self, tenant_id: str, id: str, *, request_options: typing.Optional[RequestOptions] = None
+        self, tenant_id: str, doc_id: str, *, request_options: typing.Optional[RequestOptions] = None
     ) -> AsyncHttpResponse[None]:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
@@ -1056,7 +1056,7 @@ class AsyncRawDocumentsClient:
         AsyncHttpResponse[None]
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}",
             method="DELETE",
             request_options=request_options,
         )
@@ -1067,9 +1067,9 @@ class AsyncRawDocumentsClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1078,9 +1078,9 @@ class AsyncRawDocumentsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1095,8 +1095,8 @@ class AsyncRawDocumentsClient:
         raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
     async def update(
-        self, tenant_id: str, id: str, *, name: str, request_options: typing.Optional[RequestOptions] = None
-    ) -> AsyncHttpResponse[DocumentsUpdate200Response]:
+        self, tenant_id: str, doc_id: str, *, name: str, request_options: typing.Optional[RequestOptions] = None
+    ) -> AsyncHttpResponse[DocumentsUpdateResponse]:
         """
         A document that is being deleted answers 404.
 
@@ -1104,7 +1104,7 @@ class AsyncRawDocumentsClient:
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         name : str
             What people call the document: shown in dashboards, searched and sorted by. 1 to 255 characters, no control characters, no leading or trailing whitespace. Names need not be unique.
@@ -1114,11 +1114,11 @@ class AsyncRawDocumentsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocumentsUpdate200Response]
+        AsyncHttpResponse[DocumentsUpdateResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}",
             method="PATCH",
             json={
                 "name": name,
@@ -1132,9 +1132,9 @@ class AsyncRawDocumentsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocumentsUpdate200Response,
+                    DocumentsUpdateResponse,
                     parse_obj_as(
-                        type_=DocumentsUpdate200Response,  # type: ignore
+                        type_=DocumentsUpdateResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1143,9 +1143,9 @@ class AsyncRawDocumentsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1154,9 +1154,9 @@ class AsyncRawDocumentsClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1165,9 +1165,9 @@ class AsyncRawDocumentsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1182,8 +1182,8 @@ class AsyncRawDocumentsClient:
         raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
 
     async def commit(
-        self, tenant_id: str, id: str, *, sha256: str, request_options: typing.Optional[RequestOptions] = None
-    ) -> AsyncHttpResponse[DocumentsCommit200Response]:
+        self, tenant_id: str, doc_id: str, *, sha256: str, request_options: typing.Optional[RequestOptions] = None
+    ) -> AsyncHttpResponse[DocumentsCommitResponse]:
         """
         An upload token commits only the documents it started; any other document answers 404.
 
@@ -1191,7 +1191,7 @@ class AsyncRawDocumentsClient:
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         sha256 : str
 
@@ -1200,11 +1200,11 @@ class AsyncRawDocumentsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocumentsCommit200Response]
+        AsyncHttpResponse[DocumentsCommitResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}/commit",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}/commit",
             method="POST",
             json={
                 "sha256": sha256,
@@ -1218,9 +1218,9 @@ class AsyncRawDocumentsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocumentsCommit200Response,
+                    DocumentsCommitResponse,
                     parse_obj_as(
-                        type_=DocumentsCommit200Response,  # type: ignore
+                        type_=DocumentsCommitResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1229,9 +1229,9 @@ class AsyncRawDocumentsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1240,9 +1240,9 @@ class AsyncRawDocumentsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1258,14 +1258,14 @@ class AsyncRawDocumentsClient:
 
     @contextlib.asynccontextmanager
     async def download(
-        self, tenant_id: str, id: str, *, request_options: typing.Optional[RequestOptions] = None
+        self, tenant_id: str, doc_id: str, *, request_options: typing.Optional[RequestOptions] = None
     ) -> typing.AsyncIterator[AsyncHttpResponse[typing.AsyncIterator[bytes]]]:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
@@ -1276,7 +1276,7 @@ class AsyncRawDocumentsClient:
             OK
         """
         async with self._client_wrapper.httpx_client.stream(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}/download",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}/download",
             method="GET",
             request_options=request_options,
         ) as _response:
@@ -1294,9 +1294,9 @@ class AsyncRawDocumentsClient:
                         raise ForbiddenError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -1305,9 +1305,9 @@ class AsyncRawDocumentsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -1330,14 +1330,14 @@ class AsyncRawDocumentsClient:
 
     @contextlib.asynccontextmanager
     async def thumbnail(
-        self, tenant_id: str, id: str, *, request_options: typing.Optional[RequestOptions] = None
+        self, tenant_id: str, doc_id: str, *, request_options: typing.Optional[RequestOptions] = None
     ) -> typing.AsyncIterator[AsyncHttpResponse[typing.AsyncIterator[bytes]]]:
         """
         Parameters
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration. You can pass in configuration such as `chunk_size`, and more to customize the request and response.
@@ -1348,7 +1348,7 @@ class AsyncRawDocumentsClient:
             OK
         """
         async with self._client_wrapper.httpx_client.stream(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}/thumbnail",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}/thumbnail",
             method="GET",
             request_options=request_options,
         ) as _response:
@@ -1366,9 +1366,9 @@ class AsyncRawDocumentsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -1390,8 +1390,8 @@ class AsyncRawDocumentsClient:
             yield await _stream()
 
     async def upload_proxy(
-        self, tenant_id: str, id: str, *, file: core.File, request_options: typing.Optional[RequestOptions] = None
-    ) -> AsyncHttpResponse[DocumentsUploadProxy200Response]:
+        self, tenant_id: str, doc_id: str, *, file: core.File, request_options: typing.Optional[RequestOptions] = None
+    ) -> AsyncHttpResponse[DocumentsUploadProxyResponse]:
         """
         This bounded origin-mediated fallback must only be used after documents.init returns upload.kind=proxy. Auto mode prefers a presigned object-store PUT whenever available. An upload token sends files only to the documents it started.
 
@@ -1399,7 +1399,7 @@ class AsyncRawDocumentsClient:
         ----------
         tenant_id : str
 
-        id : str
+        doc_id : str
 
         file : core.File
             See core.File for more documentation
@@ -1409,11 +1409,11 @@ class AsyncRawDocumentsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocumentsUploadProxy200Response]
+        AsyncHttpResponse[DocumentsUploadProxyResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(id)}/upload-proxy",
+            f"v1/tenants/{encode_path_param(tenant_id)}/documents/{encode_path_param(doc_id)}/upload-proxy",
             method="POST",
             data={},
             files={
@@ -1426,9 +1426,9 @@ class AsyncRawDocumentsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocumentsUploadProxy200Response,
+                    DocumentsUploadProxyResponse,
                     parse_obj_as(
-                        type_=DocumentsUploadProxy200Response,  # type: ignore
+                        type_=DocumentsUploadProxyResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1437,9 +1437,9 @@ class AsyncRawDocumentsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1448,9 +1448,9 @@ class AsyncRawDocumentsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1459,9 +1459,9 @@ class AsyncRawDocumentsClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1568,9 +1568,9 @@ class AsyncRawDocumentsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1579,9 +1579,9 @@ class AsyncRawDocumentsClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1590,9 +1590,9 @@ class AsyncRawDocumentsClient:
                 raise BadGatewayError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        DocumentsImportFrom502Response,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=DocumentsImportFrom502Response,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1610,7 +1610,7 @@ class AsyncRawDocumentsClient:
         self,
         tenant_id: str,
         *,
-        content_length: float,
+        size_bytes: int,
         content_sha256: str,
         name: typing.Optional[str] = OMIT,
         folder_id: typing.Optional[str] = OMIT,
@@ -1618,18 +1618,18 @@ class AsyncRawDocumentsClient:
         idempotency_key: typing.Optional[str] = OMIT,
         dedup_mode: typing.Optional[DocumentsInitRequestDedupMode] = OMIT,
         doc_id: typing.Optional[str] = OMIT,
-        upload_ttl_sec: typing.Optional[float] = OMIT,
+        upload_ttl_seconds: typing.Optional[int] = OMIT,
         upload_preference: typing.Optional[DocumentsInitRequestUploadPreference] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocumentsInit200Response]:
+    ) -> AsyncHttpResponse[DocumentsInitResponse]:
         """
-        With an upload token, the document goes into the token's folder with the token's metadata, whatever the request says; contentLength must be within the token's maxBytes, and the token makes at most maxFiles documents (403 after). docId, idempotencyKey and dedupMode reuse-existing are refused (400): each could reach a document the token didn't make.
+        With an upload token, the document goes into the token's folder with the token's metadata, whatever the request says; sizeBytes must be within the token's maxBytes, and the token makes at most maxFiles documents (403 after). docId, idempotencyKey and dedupMode reuse-existing are refused (400): each could reach a document the token didn't make.
 
         Parameters
         ----------
         tenant_id : str
 
-        content_length : float
+        size_bytes : int
 
         content_sha256 : str
 
@@ -1648,7 +1648,7 @@ class AsyncRawDocumentsClient:
 
         doc_id : typing.Optional[str]
 
-        upload_ttl_sec : typing.Optional[float]
+        upload_ttl_seconds : typing.Optional[int]
 
         upload_preference : typing.Optional[DocumentsInitRequestUploadPreference]
 
@@ -1657,14 +1657,14 @@ class AsyncRawDocumentsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocumentsInit200Response]
+        AsyncHttpResponse[DocumentsInitResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
             f"v1/tenants/{encode_path_param(tenant_id)}/documents/init",
             method="POST",
             json={
-                "contentLength": content_length,
+                "sizeBytes": size_bytes,
                 "contentSha256": content_sha256,
                 "name": name,
                 "folderId": folder_id,
@@ -1672,7 +1672,7 @@ class AsyncRawDocumentsClient:
                 "idempotencyKey": idempotency_key,
                 "dedupMode": dedup_mode,
                 "docId": doc_id,
-                "uploadTtlSec": upload_ttl_sec,
+                "uploadTtlSeconds": upload_ttl_seconds,
                 "uploadPreference": upload_preference,
             },
             headers={
@@ -1684,9 +1684,9 @@ class AsyncRawDocumentsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocumentsInit200Response,
+                    DocumentsInitResponse,
                     parse_obj_as(
-                        type_=DocumentsInit200Response,  # type: ignore
+                        type_=DocumentsInitResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1695,9 +1695,9 @@ class AsyncRawDocumentsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1706,9 +1706,9 @@ class AsyncRawDocumentsClient:
                 raise ForbiddenError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

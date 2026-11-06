@@ -7,9 +7,9 @@ from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 
 
 class DeploymentLicenseStatusResponse(UniversalBaseModel):
-    license: typing.Optional[typing.Any] = None
-    reporting: typing.Optional[typing.Any] = None
-    usage: typing.Optional[typing.Any] = None
+    license: typing.Dict[str, typing.Any]
+    reporting: typing.Optional[typing.Dict[str, typing.Any]] = None
+    usage: typing.Optional[typing.Dict[str, typing.Any]] = None
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

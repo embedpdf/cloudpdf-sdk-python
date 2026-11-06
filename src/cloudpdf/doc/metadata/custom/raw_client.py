@@ -11,7 +11,8 @@ from ....core.parse_error import ParsingError
 from ....core.pydantic_utilities import parse_obj_as
 from ....core.request_options import RequestOptions
 from ....errors.not_found_error import NotFoundError
-from ....types.doc_metadata_custom_get200response import DocMetadataCustomGet200Response
+from ....types.doc_metadata_custom_get_response import DocMetadataCustomGetResponse
+from ....types.error_response import ErrorResponse
 from pydantic import ValidationError
 
 
@@ -26,7 +27,7 @@ class RawCustomClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocMetadataCustomGet200Response]:
+    ) -> HttpResponse[DocMetadataCustomGetResponse]:
         """
         Parameters
         ----------
@@ -42,7 +43,7 @@ class RawCustomClient:
 
         Returns
         -------
-        HttpResponse[DocMetadataCustomGet200Response]
+        HttpResponse[DocMetadataCustomGetResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -56,9 +57,9 @@ class RawCustomClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocMetadataCustomGet200Response,
+                    DocMetadataCustomGetResponse,
                     parse_obj_as(
-                        type_=DocMetadataCustomGet200Response,  # type: ignore
+                        type_=DocMetadataCustomGetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -67,9 +68,9 @@ class RawCustomClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -95,7 +96,7 @@ class AsyncRawCustomClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocMetadataCustomGet200Response]:
+    ) -> AsyncHttpResponse[DocMetadataCustomGetResponse]:
         """
         Parameters
         ----------
@@ -111,7 +112,7 @@ class AsyncRawCustomClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocMetadataCustomGet200Response]
+        AsyncHttpResponse[DocMetadataCustomGetResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -125,9 +126,9 @@ class AsyncRawCustomClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocMetadataCustomGet200Response,
+                    DocMetadataCustomGetResponse,
                     parse_obj_as(
-                        type_=DocMetadataCustomGet200Response,  # type: ignore
+                        type_=DocMetadataCustomGetResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -136,9 +137,9 @@ class AsyncRawCustomClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

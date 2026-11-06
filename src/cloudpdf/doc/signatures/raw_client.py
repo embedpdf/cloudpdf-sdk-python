@@ -15,11 +15,12 @@ from ...core.serialization import convert_and_respect_annotation_metadata
 from ...errors.bad_request_error import BadRequestError
 from ...errors.conflict_error import ConflictError
 from ...errors.not_found_error import NotFoundError
-from ...types.doc_signatures_analysis200response import DocSignaturesAnalysis200Response
-from ...types.doc_signatures_cancel200response import DocSignaturesCancel200Response
-from ...types.doc_signatures_complete200response import DocSignaturesComplete200Response
-from ...types.doc_signatures_list200response import DocSignaturesList200Response
-from ...types.doc_signatures_prepare200response import DocSignaturesPrepare200Response
+from ...types.doc_signatures_analysis_response import DocSignaturesAnalysisResponse
+from ...types.doc_signatures_cancel_response import DocSignaturesCancelResponse
+from ...types.doc_signatures_complete_response import DocSignaturesCompleteResponse
+from ...types.doc_signatures_list_response import DocSignaturesListResponse
+from ...types.doc_signatures_prepare_response import DocSignaturesPrepareResponse
+from ...types.error_response import ErrorResponse
 from .types.analysis_signatures_request_level import AnalysisSignaturesRequestLevel
 from .types.doc_signatures_complete_request_expected_version import DocSignaturesCompleteRequestExpectedVersion
 from pydantic import ValidationError
@@ -39,7 +40,7 @@ class RawSignaturesClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocSignaturesList200Response]:
+    ) -> HttpResponse[DocSignaturesListResponse]:
         """
         Describes the bytes the layer is over: the base version's signatures plus the layer's own edits as the last revision. Signed bytes (contents, digests, revision prefixes) are served per base version under /versions.
 
@@ -57,7 +58,7 @@ class RawSignaturesClient:
 
         Returns
         -------
-        HttpResponse[DocSignaturesList200Response]
+        HttpResponse[DocSignaturesListResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -71,9 +72,9 @@ class RawSignaturesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocSignaturesList200Response,
+                    DocSignaturesListResponse,
                     parse_obj_as(
-                        type_=DocSignaturesList200Response,  # type: ignore
+                        type_=DocSignaturesListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -82,9 +83,9 @@ class RawSignaturesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -106,7 +107,7 @@ class RawSignaturesClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocSignaturesCancel200Response]:
+    ) -> HttpResponse[DocSignaturesCancelResponse]:
         """
         Parameters
         ----------
@@ -124,7 +125,7 @@ class RawSignaturesClient:
 
         Returns
         -------
-        HttpResponse[DocSignaturesCancel200Response]
+        HttpResponse[DocSignaturesCancelResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -138,9 +139,9 @@ class RawSignaturesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocSignaturesCancel200Response,
+                    DocSignaturesCancelResponse,
                     parse_obj_as(
-                        type_=DocSignaturesCancel200Response,  # type: ignore
+                        type_=DocSignaturesCancelResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -149,9 +150,9 @@ class RawSignaturesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -175,7 +176,7 @@ class RawSignaturesClient:
         expected_version: DocSignaturesCompleteRequestExpectedVersion,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocSignaturesComplete200Response]:
+    ) -> HttpResponse[DocSignaturesCompleteResponse]:
         """
         `cms` is the detached CMS over the prepared digest, base64. `expectedVersion` must be what prepare returned. Idempotent by signing id: the same CMS again answers `already-completed`. The new version is the layer's own: only this layer moves to it, and the document and every other layer stay as they were. Refetch the manifest after a completion.
 
@@ -199,7 +200,7 @@ class RawSignaturesClient:
 
         Returns
         -------
-        HttpResponse[DocSignaturesComplete200Response]
+        HttpResponse[DocSignaturesCompleteResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -221,9 +222,9 @@ class RawSignaturesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocSignaturesComplete200Response,
+                    DocSignaturesCompleteResponse,
                     parse_obj_as(
-                        type_=DocSignaturesComplete200Response,  # type: ignore
+                        type_=DocSignaturesCompleteResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -232,9 +233,9 @@ class RawSignaturesClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -243,9 +244,9 @@ class RawSignaturesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -254,9 +255,9 @@ class RawSignaturesClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -280,7 +281,7 @@ class RawSignaturesClient:
         level: typing.Optional[AnalysisSignaturesRequestLevel] = None,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocSignaturesAnalysis200Response]:
+    ) -> HttpResponse[DocSignaturesAnalysisResponse]:
         """
         Exactly one of `since.signature=<index>` or `since.revision=<index>`; the layer's pending edits are the end. `level=fill|annotate|lta|none` evaluates exploratorily and never becomes a verdict. For history between two base revisions use the version analysis.
 
@@ -304,7 +305,7 @@ class RawSignaturesClient:
 
         Returns
         -------
-        HttpResponse[DocSignaturesAnalysis200Response]
+        HttpResponse[DocSignaturesAnalysisResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -323,9 +324,9 @@ class RawSignaturesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocSignaturesAnalysis200Response,
+                    DocSignaturesAnalysisResponse,
                     parse_obj_as(
-                        type_=DocSignaturesAnalysis200Response,  # type: ignore
+                        type_=DocSignaturesAnalysisResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -334,9 +335,9 @@ class RawSignaturesClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -345,9 +346,9 @@ class RawSignaturesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -369,7 +370,7 @@ class RawSignaturesClient:
         file: core.File,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocSignaturesPrepare200Response]:
+    ) -> HttpResponse[DocSignaturesPrepareResponse]:
         """
         Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock), naming the appearance PDF it may carry as `resources: { appearance: '<key>' }`, and that PDF as the part `resource:<key>`. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is cancelled, or expires (15 minutes). The signature is made over the layer's own base: the upload, or the version its last signature made.
 
@@ -390,7 +391,7 @@ class RawSignaturesClient:
 
         Returns
         -------
-        HttpResponse[DocSignaturesPrepare200Response]
+        HttpResponse[DocSignaturesPrepareResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -410,9 +411,9 @@ class RawSignaturesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocSignaturesPrepare200Response,
+                    DocSignaturesPrepareResponse,
                     parse_obj_as(
-                        type_=DocSignaturesPrepare200Response,  # type: ignore
+                        type_=DocSignaturesPrepareResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -421,9 +422,9 @@ class RawSignaturesClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -432,9 +433,9 @@ class RawSignaturesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -443,9 +444,9 @@ class RawSignaturesClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -471,7 +472,7 @@ class AsyncRawSignaturesClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocSignaturesList200Response]:
+    ) -> AsyncHttpResponse[DocSignaturesListResponse]:
         """
         Describes the bytes the layer is over: the base version's signatures plus the layer's own edits as the last revision. Signed bytes (contents, digests, revision prefixes) are served per base version under /versions.
 
@@ -489,7 +490,7 @@ class AsyncRawSignaturesClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocSignaturesList200Response]
+        AsyncHttpResponse[DocSignaturesListResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -503,9 +504,9 @@ class AsyncRawSignaturesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocSignaturesList200Response,
+                    DocSignaturesListResponse,
                     parse_obj_as(
-                        type_=DocSignaturesList200Response,  # type: ignore
+                        type_=DocSignaturesListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -514,9 +515,9 @@ class AsyncRawSignaturesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -538,7 +539,7 @@ class AsyncRawSignaturesClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocSignaturesCancel200Response]:
+    ) -> AsyncHttpResponse[DocSignaturesCancelResponse]:
         """
         Parameters
         ----------
@@ -556,7 +557,7 @@ class AsyncRawSignaturesClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocSignaturesCancel200Response]
+        AsyncHttpResponse[DocSignaturesCancelResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -570,9 +571,9 @@ class AsyncRawSignaturesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocSignaturesCancel200Response,
+                    DocSignaturesCancelResponse,
                     parse_obj_as(
-                        type_=DocSignaturesCancel200Response,  # type: ignore
+                        type_=DocSignaturesCancelResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -581,9 +582,9 @@ class AsyncRawSignaturesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -607,7 +608,7 @@ class AsyncRawSignaturesClient:
         expected_version: DocSignaturesCompleteRequestExpectedVersion,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocSignaturesComplete200Response]:
+    ) -> AsyncHttpResponse[DocSignaturesCompleteResponse]:
         """
         `cms` is the detached CMS over the prepared digest, base64. `expectedVersion` must be what prepare returned. Idempotent by signing id: the same CMS again answers `already-completed`. The new version is the layer's own: only this layer moves to it, and the document and every other layer stay as they were. Refetch the manifest after a completion.
 
@@ -631,7 +632,7 @@ class AsyncRawSignaturesClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocSignaturesComplete200Response]
+        AsyncHttpResponse[DocSignaturesCompleteResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -653,9 +654,9 @@ class AsyncRawSignaturesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocSignaturesComplete200Response,
+                    DocSignaturesCompleteResponse,
                     parse_obj_as(
-                        type_=DocSignaturesComplete200Response,  # type: ignore
+                        type_=DocSignaturesCompleteResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -664,9 +665,9 @@ class AsyncRawSignaturesClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -675,9 +676,9 @@ class AsyncRawSignaturesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -686,9 +687,9 @@ class AsyncRawSignaturesClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -712,7 +713,7 @@ class AsyncRawSignaturesClient:
         level: typing.Optional[AnalysisSignaturesRequestLevel] = None,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocSignaturesAnalysis200Response]:
+    ) -> AsyncHttpResponse[DocSignaturesAnalysisResponse]:
         """
         Exactly one of `since.signature=<index>` or `since.revision=<index>`; the layer's pending edits are the end. `level=fill|annotate|lta|none` evaluates exploratorily and never becomes a verdict. For history between two base revisions use the version analysis.
 
@@ -736,7 +737,7 @@ class AsyncRawSignaturesClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocSignaturesAnalysis200Response]
+        AsyncHttpResponse[DocSignaturesAnalysisResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -755,9 +756,9 @@ class AsyncRawSignaturesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocSignaturesAnalysis200Response,
+                    DocSignaturesAnalysisResponse,
                     parse_obj_as(
-                        type_=DocSignaturesAnalysis200Response,  # type: ignore
+                        type_=DocSignaturesAnalysisResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -766,9 +767,9 @@ class AsyncRawSignaturesClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -777,9 +778,9 @@ class AsyncRawSignaturesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -801,7 +802,7 @@ class AsyncRawSignaturesClient:
         file: core.File,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocSignaturesPrepare200Response]:
+    ) -> AsyncHttpResponse[DocSignaturesPrepareResponse]:
         """
         Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock), naming the appearance PDF it may carry as `resources: { appearance: '<key>' }`, and that PDF as the part `resource:<key>`. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is cancelled, or expires (15 minutes). The signature is made over the layer's own base: the upload, or the version its last signature made.
 
@@ -822,7 +823,7 @@ class AsyncRawSignaturesClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocSignaturesPrepare200Response]
+        AsyncHttpResponse[DocSignaturesPrepareResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -842,9 +843,9 @@ class AsyncRawSignaturesClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocSignaturesPrepare200Response,
+                    DocSignaturesPrepareResponse,
                     parse_obj_as(
-                        type_=DocSignaturesPrepare200Response,  # type: ignore
+                        type_=DocSignaturesPrepareResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -853,9 +854,9 @@ class AsyncRawSignaturesClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -864,9 +865,9 @@ class AsyncRawSignaturesClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -875,9 +876,9 @@ class AsyncRawSignaturesClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

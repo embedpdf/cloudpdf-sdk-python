@@ -15,7 +15,7 @@ from .widget_placement import WidgetPlacement
 
 
 class FormFieldDraft_Text(UniversalBaseModel):
-    family: typing.Literal["text"] = "text"
+    kind: typing.Literal["text"] = "text"
     name: str
     read_only: typing_extensions.Annotated[
         typing.Optional[bool], FieldMetadata(alias="readOnly"), pydantic.Field(alias="readOnly")
@@ -56,7 +56,7 @@ class FormFieldDraft_Text(UniversalBaseModel):
 
 
 class FormFieldDraft_Checkbox(UniversalBaseModel):
-    family: typing.Literal["checkbox"] = "checkbox"
+    kind: typing.Literal["checkbox"] = "checkbox"
     name: str
     read_only: typing_extensions.Annotated[
         typing.Optional[bool], FieldMetadata(alias="readOnly"), pydantic.Field(alias="readOnly")
@@ -88,7 +88,7 @@ class FormFieldDraft_Checkbox(UniversalBaseModel):
 
 
 class FormFieldDraft_Radio(UniversalBaseModel):
-    family: typing.Literal["radio"] = "radio"
+    kind: typing.Literal["radio"] = "radio"
     name: str
     read_only: typing_extensions.Annotated[
         typing.Optional[bool], FieldMetadata(alias="readOnly"), pydantic.Field(alias="readOnly")
@@ -126,7 +126,7 @@ class FormFieldDraft_Radio(UniversalBaseModel):
 
 
 class FormFieldDraft_Combobox(UniversalBaseModel):
-    family: typing.Literal["combobox"] = "combobox"
+    kind: typing.Literal["combobox"] = "combobox"
     name: str
     read_only: typing_extensions.Annotated[
         typing.Optional[bool], FieldMetadata(alias="readOnly"), pydantic.Field(alias="readOnly")
@@ -163,7 +163,7 @@ class FormFieldDraft_Combobox(UniversalBaseModel):
 
 
 class FormFieldDraft_Listbox(UniversalBaseModel):
-    family: typing.Literal["listbox"] = "listbox"
+    kind: typing.Literal["listbox"] = "listbox"
     name: str
     read_only: typing_extensions.Annotated[
         typing.Optional[bool], FieldMetadata(alias="readOnly"), pydantic.Field(alias="readOnly")
@@ -202,7 +202,7 @@ class FormFieldDraft_Listbox(UniversalBaseModel):
 
 
 class FormFieldDraft_Pushbutton(UniversalBaseModel):
-    family: typing.Literal["pushbutton"] = "pushbutton"
+    kind: typing.Literal["pushbutton"] = "pushbutton"
     name: str
     read_only: typing_extensions.Annotated[
         typing.Optional[bool], FieldMetadata(alias="readOnly"), pydantic.Field(alias="readOnly")
@@ -234,7 +234,7 @@ class FormFieldDraft_Pushbutton(UniversalBaseModel):
 
 
 class FormFieldDraft_Signature(UniversalBaseModel):
-    family: typing.Literal["signature"] = "signature"
+    kind: typing.Literal["signature"] = "signature"
     name: str
     read_only: typing_extensions.Annotated[
         typing.Optional[bool], FieldMetadata(alias="readOnly"), pydantic.Field(alias="readOnly")
@@ -275,5 +275,5 @@ FormFieldDraft = typing_extensions.Annotated[
         FormFieldDraft_Pushbutton,
         FormFieldDraft_Signature,
     ],
-    pydantic.Field(discriminator="family"),
+    pydantic.Field(discriminator="kind"),
 ]

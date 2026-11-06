@@ -13,7 +13,11 @@ class OutlineItem(UniversalBaseModel):
     ref: OutlineItemRef
     parent: typing.Optional[OutlineItemRef] = None
     title: str
-    target: typing.Optional[PdfLinkTarget] = None
+    target: typing.Optional[PdfLinkTarget] = pydantic.Field(default=None)
+    """
+    Where a link goes, by its `kind`. A newer server can add kinds: read one your client doesn't know as `unsupported`.
+    """
+
     action: typing.Optional[PdfActionTree] = None
     open: bool
     color: typing.Optional[str] = None

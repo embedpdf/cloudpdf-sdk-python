@@ -532,7 +532,7 @@ class ChangeItem_OutlineRestore(UniversalBaseModel):
 class ChangeItem_PagesRotate(UniversalBaseModel):
     type: typing.Literal["pages.rotate"] = "pages.rotate"
     pages: typing.List[PageRef]
-    rotation: float
+    rotation: int
     layout: ChangeItemPagesRotateLayout
     meta: MutationMeta
 

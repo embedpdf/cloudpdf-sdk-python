@@ -8,7 +8,7 @@ from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
 from .field_actions_patch import FieldActionsPatch
 from .form_field_patch_default_value import FormFieldPatchDefaultValue
-from .form_field_patch_family import FormFieldPatchFamily
+from .form_field_patch_kind import FormFieldPatchKind
 from .form_field_patch_options_item import FormFieldPatchOptionsItem
 
 
@@ -31,7 +31,7 @@ class FormFieldPatch(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
     actions: typing.Optional[FieldActionsPatch] = None
-    family: typing.Optional[FormFieldPatchFamily] = None
+    kind: typing.Optional[FormFieldPatchKind] = None
     default_value: typing_extensions.Annotated[
         typing.Optional[FormFieldPatchDefaultValue],
         FieldMetadata(alias="defaultValue"),

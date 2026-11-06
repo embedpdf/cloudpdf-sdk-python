@@ -113,7 +113,7 @@ client.deployment.modules()
 </details>
 
 ## Doc
-<details><summary><code>client.doc.<a href="src/cloudpdf/doc/client.py">head</a>(...) -> DocHead200Response</code></summary>
+<details><summary><code>client.doc.<a href="src/cloudpdf/doc/client.py">head</a>(...) -> DocHeadResponse</code></summary>
 <dl>
 <dd>
 
@@ -180,7 +180,7 @@ client.doc.head(
 </dl>
 </details>
 
-<details><summary><code>client.doc.<a href="src/cloudpdf/doc/client.py">changes</a>(...) -> DocChanges200Response</code></summary>
+<details><summary><code>client.doc.<a href="src/cloudpdf/doc/client.py">changes</a>(...) -> DocChangesResponse</code></summary>
 <dl>
 <dd>
 
@@ -360,7 +360,7 @@ client.doc.download(
 </dl>
 </details>
 
-<details><summary><code>client.doc.<a href="src/cloudpdf/doc/client.py">download_link</a>(...) -> DocDownloadLink200Response</code></summary>
+<details><summary><code>client.doc.<a href="src/cloudpdf/doc/client.py">download_link</a>(...) -> DocDownloadLinkResponse</code></summary>
 <dl>
 <dd>
 
@@ -438,7 +438,7 @@ client.doc.download_link(
 <dl>
 <dd>
 
-**expires_in:** `typing.Optional[int]` 
+**expires_in_seconds:** `typing.Optional[int]` 
     
 </dd>
 </dl>
@@ -458,7 +458,7 @@ client.doc.download_link(
 </dl>
 </details>
 
-<details><summary><code>client.doc.<a href="src/cloudpdf/doc/client.py">manifest</a>(...) -> DocManifest200Response</code></summary>
+<details><summary><code>client.doc.<a href="src/cloudpdf/doc/client.py">manifest</a>(...) -> DocManifestResponse</code></summary>
 <dl>
 <dd>
 
@@ -605,7 +605,7 @@ client.doc.render(
 <dl>
 <dd>
 
-**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
     
 </dd>
 </dl>
@@ -633,7 +633,7 @@ client.doc.render(
 </dl>
 </details>
 
-<details><summary><code>client.doc.<a href="src/cloudpdf/doc/client.py">text</a>(...) -> DocText200Response</code></summary>
+<details><summary><code>client.doc.<a href="src/cloudpdf/doc/client.py">text</a>(...) -> DocTextResponse</code></summary>
 <dl>
 <dd>
 
@@ -690,7 +690,7 @@ client.doc.text(
 <dl>
 <dd>
 
-**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
     
 </dd>
 </dl>
@@ -719,7 +719,7 @@ client.doc.text(
 </details>
 
 ## Grants
-<details><summary><code>client.grants.<a href="src/cloudpdf/grants/client.py">exchange</a>(...) -> GrantsExchange200Response</code></summary>
+<details><summary><code>client.grants.<a href="src/cloudpdf/grants/client.py">exchange</a>(...) -> GrantsExchangeResponse</code></summary>
 <dl>
 <dd>
 
@@ -824,7 +824,7 @@ client.grants.exchange(
 </dl>
 </details>
 
-<details><summary><code>client.grants.<a href="src/cloudpdf/grants/client.py">list</a>(...) -> GrantsList200Response</code></summary>
+<details><summary><code>client.grants.<a href="src/cloudpdf/grants/client.py">list</a>(...) -> GrantsListResponse</code></summary>
 <dl>
 <dd>
 
@@ -915,7 +915,7 @@ client.grants.list(
 </dl>
 </details>
 
-<details><summary><code>client.grants.<a href="src/cloudpdf/grants/client.py">create</a>(...) -> GrantsCreate200Response</code></summary>
+<details><summary><code>client.grants.<a href="src/cloudpdf/grants/client.py">create</a>(...) -> GrantsCreateResponse</code></summary>
 <dl>
 <dd>
 
@@ -1076,7 +1076,7 @@ client.grants.create(
 <dl>
 <dd>
 
-**expires_at:** `typing.Optional[int]` 
+**expires_at:** `typing.Optional[datetime.datetime]` 
     
 </dd>
 </dl>
@@ -1096,7 +1096,7 @@ client.grants.create(
 </dl>
 </details>
 
-<details><summary><code>client.grants.<a href="src/cloudpdf/grants/client.py">get</a>(...) -> GrantsGet200Response</code></summary>
+<details><summary><code>client.grants.<a href="src/cloudpdf/grants/client.py">get</a>(...) -> GrantsGetResponse</code></summary>
 <dl>
 <dd>
 
@@ -1232,7 +1232,7 @@ client.grants.delete(
 </dl>
 </details>
 
-<details><summary><code>client.grants.<a href="src/cloudpdf/grants/client.py">update</a>(...) -> GrantsUpdate200Response</code></summary>
+<details><summary><code>client.grants.<a href="src/cloudpdf/grants/client.py">update</a>(...) -> GrantsUpdateResponse</code></summary>
 <dl>
 <dd>
 
@@ -1384,7 +1384,7 @@ client.grants.update(
 <dl>
 <dd>
 
-**expires_at:** `typing.Optional[int]` 
+**expires_at:** `typing.Optional[datetime.datetime]` 
     
 </dd>
 </dl>
@@ -1404,7 +1404,7 @@ client.grants.update(
 </dl>
 </details>
 
-<details><summary><code>client.grants.<a href="src/cloudpdf/grants/client.py">archive</a>(...) -> GrantsArchive200Response</code></summary>
+<details><summary><code>client.grants.<a href="src/cloudpdf/grants/client.py">archive</a>(...) -> GrantsArchiveResponse</code></summary>
 <dl>
 <dd>
 
@@ -1487,7 +1487,7 @@ client.grants.archive(
 </details>
 
 ## Tenants
-<details><summary><code>client.tenants.<a href="src/cloudpdf/tenants/client.py">list</a>(...) -> TenantsList200Response</code></summary>
+<details><summary><code>client.tenants.<a href="src/cloudpdf/tenants/client.py">list</a>(...) -> TenantsListResponse</code></summary>
 <dl>
 <dd>
 
@@ -1552,7 +1552,7 @@ client.tenants.list()
 </dl>
 </details>
 
-<details><summary><code>client.tenants.<a href="src/cloudpdf/tenants/client.py">create</a>(...) -> TenantsCreate200Response</code></summary>
+<details><summary><code>client.tenants.<a href="src/cloudpdf/tenants/client.py">create</a>(...) -> TenantsCreateResponse</code></summary>
 <dl>
 <dd>
 
@@ -1619,7 +1619,7 @@ client.tenants.create(
 </dl>
 </details>
 
-<details><summary><code>client.tenants.<a href="src/cloudpdf/tenants/client.py">get</a>(...) -> TenantsGet200Response</code></summary>
+<details><summary><code>client.tenants.<a href="src/cloudpdf/tenants/client.py">get</a>(...) -> TenantsGetResponse</code></summary>
 <dl>
 <dd>
 
@@ -1751,7 +1751,7 @@ client.tenants.delete(
 </dl>
 </details>
 
-<details><summary><code>client.tenants.<a href="src/cloudpdf/tenants/client.py">update</a>(...) -> TenantsUpdate200Response</code></summary>
+<details><summary><code>client.tenants.<a href="src/cloudpdf/tenants/client.py">update</a>(...) -> TenantsUpdateResponse</code></summary>
 <dl>
 <dd>
 
@@ -1977,7 +1977,7 @@ client.tenants.suspend(
 </dl>
 </details>
 
-<details><summary><code>client.tenants.<a href="src/cloudpdf/tenants/client.py">usage</a>(...) -> TenantsUsage200Response</code></summary>
+<details><summary><code>client.tenants.<a href="src/cloudpdf/tenants/client.py">usage</a>(...) -> TenantsUsageResponse</code></summary>
 <dl>
 <dd>
 
@@ -2075,7 +2075,7 @@ client.tenants.usage(
 </details>
 
 ## Documents
-<details><summary><code>client.documents.<a href="src/cloudpdf/documents/client.py">list</a>(...) -> DocumentsList200Response</code></summary>
+<details><summary><code>client.documents.<a href="src/cloudpdf/documents/client.py">list</a>(...) -> DocumentsListResponse</code></summary>
 <dl>
 <dd>
 
@@ -2190,7 +2190,7 @@ client.documents.list(
 </dl>
 </details>
 
-<details><summary><code>client.documents.<a href="src/cloudpdf/documents/client.py">get</a>(...) -> DocumentsGet200Response</code></summary>
+<details><summary><code>client.documents.<a href="src/cloudpdf/documents/client.py">get</a>(...) -> DocumentsGetResponse</code></summary>
 <dl>
 <dd>
 
@@ -2213,7 +2213,7 @@ client = CloudPDFClient(
 
 client.documents.get(
     tenant_id="tenantId",
-    id="id",
+    doc_id="docId",
 )
 
 ```
@@ -2238,7 +2238,7 @@ client.documents.get(
 <dl>
 <dd>
 
-**id:** `str` 
+**doc_id:** `str` 
     
 </dd>
 </dl>
@@ -2281,7 +2281,7 @@ client = CloudPDFClient(
 
 client.documents.delete(
     tenant_id="tenantId",
-    id="id",
+    doc_id="docId",
 )
 
 ```
@@ -2306,7 +2306,7 @@ client.documents.delete(
 <dl>
 <dd>
 
-**id:** `str` 
+**doc_id:** `str` 
     
 </dd>
 </dl>
@@ -2326,7 +2326,7 @@ client.documents.delete(
 </dl>
 </details>
 
-<details><summary><code>client.documents.<a href="src/cloudpdf/documents/client.py">update</a>(...) -> DocumentsUpdate200Response</code></summary>
+<details><summary><code>client.documents.<a href="src/cloudpdf/documents/client.py">update</a>(...) -> DocumentsUpdateResponse</code></summary>
 <dl>
 <dd>
 
@@ -2363,7 +2363,7 @@ client = CloudPDFClient(
 
 client.documents.update(
     tenant_id="tenantId",
-    id="id",
+    doc_id="docId",
     name="name",
 )
 
@@ -2389,7 +2389,7 @@ client.documents.update(
 <dl>
 <dd>
 
-**id:** `str` 
+**doc_id:** `str` 
     
 </dd>
 </dl>
@@ -2417,7 +2417,7 @@ client.documents.update(
 </dl>
 </details>
 
-<details><summary><code>client.documents.<a href="src/cloudpdf/documents/client.py">commit</a>(...) -> DocumentsCommit200Response</code></summary>
+<details><summary><code>client.documents.<a href="src/cloudpdf/documents/client.py">commit</a>(...) -> DocumentsCommitResponse</code></summary>
 <dl>
 <dd>
 
@@ -2454,7 +2454,7 @@ client = CloudPDFClient(
 
 client.documents.commit(
     tenant_id="tenantId",
-    id="id",
+    doc_id="docId",
     sha256="sha256",
 )
 
@@ -2480,7 +2480,7 @@ client.documents.commit(
 <dl>
 <dd>
 
-**id:** `str` 
+**doc_id:** `str` 
     
 </dd>
 </dl>
@@ -2531,7 +2531,7 @@ client = CloudPDFClient(
 
 client.documents.download(
     tenant_id="tenantId",
-    id="id",
+    doc_id="docId",
 )
 
 ```
@@ -2556,7 +2556,7 @@ client.documents.download(
 <dl>
 <dd>
 
-**id:** `str` 
+**doc_id:** `str` 
     
 </dd>
 </dl>
@@ -2599,7 +2599,7 @@ client = CloudPDFClient(
 
 client.documents.thumbnail(
     tenant_id="tenantId",
-    id="id",
+    doc_id="docId",
 )
 
 ```
@@ -2624,7 +2624,7 @@ client.documents.thumbnail(
 <dl>
 <dd>
 
-**id:** `str` 
+**doc_id:** `str` 
     
 </dd>
 </dl>
@@ -2644,7 +2644,7 @@ client.documents.thumbnail(
 </dl>
 </details>
 
-<details><summary><code>client.documents.<a href="src/cloudpdf/documents/client.py">upload_proxy</a>(...) -> DocumentsUploadProxy200Response</code></summary>
+<details><summary><code>client.documents.<a href="src/cloudpdf/documents/client.py">upload_proxy</a>(...) -> DocumentsUploadProxyResponse</code></summary>
 <dl>
 <dd>
 
@@ -2681,7 +2681,7 @@ client = CloudPDFClient(
 
 client.documents.upload_proxy(
     tenant_id="tenantId",
-    id="id",
+    doc_id="docId",
     file="example_file",
 )
 
@@ -2707,7 +2707,7 @@ client.documents.upload_proxy(
 <dl>
 <dd>
 
-**id:** `str` 
+**doc_id:** `str` 
     
 </dd>
 </dl>
@@ -2884,7 +2884,7 @@ client.documents.import_from(
 </dl>
 </details>
 
-<details><summary><code>client.documents.<a href="src/cloudpdf/documents/client.py">init</a>(...) -> DocumentsInit200Response</code></summary>
+<details><summary><code>client.documents.<a href="src/cloudpdf/documents/client.py">init</a>(...) -> DocumentsInitResponse</code></summary>
 <dl>
 <dd>
 
@@ -2896,7 +2896,7 @@ client.documents.import_from(
 <dl>
 <dd>
 
-With an upload token, the document goes into the token's folder with the token's metadata, whatever the request says; contentLength must be within the token's maxBytes, and the token makes at most maxFiles documents (403 after). docId, idempotencyKey and dedupMode reuse-existing are refused (400): each could reach a document the token didn't make.
+With an upload token, the document goes into the token's folder with the token's metadata, whatever the request says; sizeBytes must be within the token's maxBytes, and the token makes at most maxFiles documents (403 after). docId, idempotencyKey and dedupMode reuse-existing are refused (400): each could reach a document the token didn't make.
 </dd>
 </dl>
 </dd>
@@ -2921,7 +2921,7 @@ client = CloudPDFClient(
 
 client.documents.init(
     tenant_id="tenantId",
-    content_length=1.1,
+    size_bytes=1,
     content_sha256="contentSha256",
 )
 
@@ -2947,7 +2947,7 @@ client.documents.init(
 <dl>
 <dd>
 
-**content_length:** `float` 
+**size_bytes:** `int` 
     
 </dd>
 </dl>
@@ -3011,7 +3011,7 @@ client.documents.init(
 <dl>
 <dd>
 
-**upload_ttl_sec:** `typing.Optional[float]` 
+**upload_ttl_seconds:** `typing.Optional[int]` 
     
 </dd>
 </dl>
@@ -3040,7 +3040,7 @@ client.documents.init(
 </details>
 
 ## Folders
-<details><summary><code>client.folders.<a href="src/cloudpdf/folders/client.py">list</a>(...) -> FoldersList200Response</code></summary>
+<details><summary><code>client.folders.<a href="src/cloudpdf/folders/client.py">list</a>(...) -> FoldersListResponse</code></summary>
 <dl>
 <dd>
 
@@ -3123,7 +3123,7 @@ client.folders.list(
 </dl>
 </details>
 
-<details><summary><code>client.folders.<a href="src/cloudpdf/folders/client.py">create</a>(...) -> FoldersCreate200Response</code></summary>
+<details><summary><code>client.folders.<a href="src/cloudpdf/folders/client.py">create</a>(...) -> FoldersCreateResponse</code></summary>
 <dl>
 <dd>
 
@@ -3213,7 +3213,7 @@ client.folders.create(
 </dl>
 </details>
 
-<details><summary><code>client.folders.<a href="src/cloudpdf/folders/client.py">get</a>(...) -> FoldersGet200Response</code></summary>
+<details><summary><code>client.folders.<a href="src/cloudpdf/folders/client.py">get</a>(...) -> FoldersGetResponse</code></summary>
 <dl>
 <dd>
 
@@ -3371,7 +3371,7 @@ client.folders.delete(
 </dl>
 </details>
 
-<details><summary><code>client.folders.<a href="src/cloudpdf/folders/client.py">update</a>(...) -> FoldersUpdate200Response</code></summary>
+<details><summary><code>client.folders.<a href="src/cloudpdf/folders/client.py">update</a>(...) -> FoldersUpdateResponse</code></summary>
 <dl>
 <dd>
 
@@ -3474,7 +3474,7 @@ client.folders.update(
 <dl>
 <dd>
 
-Up to 1,000 ids in total. A folder moves with everything in it. 404 NotFound names the ids that do not exist or are being deleted in `details.documentIds` and `details.folderIds`. 409 Conflict carries `details.reason`: `cycle` (the destination is a moved folder or inside one; `details.folderId`), `too-deep` (the move would nest folders deeper than 100 levels; `details.maxDepth`) or `name-taken` (a moved folder's name is taken in the destination, ignoring case; `details.name`).
+Up to 1,000 ids in total. A folder moves with everything in it. 404 NotFound names the ids that do not exist or are being deleted in `details.docIds` and `details.folderIds`. 409 Conflict carries `details.reason`: `cycle` (the destination is a moved folder or inside one; `details.folderId`), `too-deep` (the move would nest folders deeper than 100 levels; `details.maxDepth`) or `name-taken` (a moved folder's name is taken in the destination, ignoring case; `details.name`).
 </dd>
 </dl>
 </dd>
@@ -3532,7 +3532,7 @@ client.folders.move_into(
 <dl>
 <dd>
 
-**document_ids:** `typing.Optional[typing.List[str]]` 
+**doc_ids:** `typing.Optional[typing.List[str]]` 
     
 </dd>
 </dl>
@@ -3561,7 +3561,7 @@ client.folders.move_into(
 </details>
 
 ## Tokens
-<details><summary><code>client.tokens.<a href="src/cloudpdf/tokens/client.py">issue</a>(...) -> TokensIssue200Response</code></summary>
+<details><summary><code>client.tokens.<a href="src/cloudpdf/tokens/client.py">issue</a>(...) -> TokensIssueResponse</code></summary>
 <dl>
 <dd>
 
@@ -3604,7 +3604,7 @@ client.tokens.issue(
         scope=[
             "scope"
         ],
-        expires_in=1,
+        expires_in_seconds=1,
     ),
 )
 
@@ -3728,7 +3728,7 @@ client.tokens.revoke(
 <dl>
 <dd>
 
-**expires_at_seconds:** `typing.Optional[int]` 
+**expires_at:** `typing.Optional[datetime.datetime]` 
     
 </dd>
 </dl>
@@ -3749,7 +3749,7 @@ client.tokens.revoke(
 </details>
 
 ## Doc Annotations
-<details><summary><code>client.doc.annotations.<a href="src/cloudpdf/doc/annotations/client.py">list_all</a>(...) -> DocAnnotationsListAll200Response</code></summary>
+<details><summary><code>client.doc.annotations.<a href="src/cloudpdf/doc/annotations/client.py">list_all</a>(...) -> DocAnnotationsListAllResponse</code></summary>
 <dl>
 <dd>
 
@@ -3839,7 +3839,7 @@ client.doc.annotations.list_all(
 </dl>
 </details>
 
-<details><summary><code>client.doc.annotations.<a href="src/cloudpdf/doc/annotations/client.py">list</a>(...) -> DocAnnotationsList200Response</code></summary>
+<details><summary><code>client.doc.annotations.<a href="src/cloudpdf/doc/annotations/client.py">list</a>(...) -> DocAnnotationsListResponse</code></summary>
 <dl>
 <dd>
 
@@ -3896,7 +3896,7 @@ client.doc.annotations.list(
 <dl>
 <dd>
 
-**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
     
 </dd>
 </dl>
@@ -3924,7 +3924,7 @@ client.doc.annotations.list(
 </dl>
 </details>
 
-<details><summary><code>client.doc.annotations.<a href="src/cloudpdf/doc/annotations/client.py">create</a>(...) -> DocAnnotationsCreate200Response</code></summary>
+<details><summary><code>client.doc.annotations.<a href="src/cloudpdf/doc/annotations/client.py">create</a>(...) -> DocAnnotationsCreateResponse</code></summary>
 <dl>
 <dd>
 
@@ -3998,7 +3998,7 @@ client.doc.annotations.create(
 <dl>
 <dd>
 
-**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
     
 </dd>
 </dl>
@@ -4042,7 +4042,7 @@ client.doc.annotations.create(
 </dl>
 </details>
 
-<details><summary><code>client.doc.annotations.<a href="src/cloudpdf/doc/annotations/client.py">delete</a>(...) -> DocAnnotationsDelete200Response</code></summary>
+<details><summary><code>client.doc.annotations.<a href="src/cloudpdf/doc/annotations/client.py">delete</a>(...) -> DocAnnotationsDeleteResponse</code></summary>
 <dl>
 <dd>
 
@@ -4067,7 +4067,7 @@ client.doc.annotations.delete(
     doc_id="docId",
     layer_name="layerName",
     page_key="pageKey",
-    annot_key="annotKey",
+    annotation_key="annotationKey",
 )
 
 ```
@@ -4100,7 +4100,7 @@ client.doc.annotations.delete(
 <dl>
 <dd>
 
-**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
     
 </dd>
 </dl>
@@ -4108,7 +4108,7 @@ client.doc.annotations.delete(
 <dl>
 <dd>
 
-**annot_key:** `str` — The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
+**annotation_key:** `str` — The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
     
 </dd>
 </dl>
@@ -4144,7 +4144,7 @@ client.doc.annotations.delete(
 </dl>
 </details>
 
-<details><summary><code>client.doc.annotations.<a href="src/cloudpdf/doc/annotations/client.py">update</a>(...) -> DocAnnotationsUpdate200Response</code></summary>
+<details><summary><code>client.doc.annotations.<a href="src/cloudpdf/doc/annotations/client.py">update</a>(...) -> DocAnnotationsUpdateResponse</code></summary>
 <dl>
 <dd>
 
@@ -4169,7 +4169,7 @@ client.doc.annotations.update(
     doc_id="docId",
     layer_name="layerName",
     page_key="pageKey",
-    annot_key="annotKey",
+    annotation_key="annotationKey",
     request={
         "key": "value"
     },
@@ -4205,7 +4205,7 @@ client.doc.annotations.update(
 <dl>
 <dd>
 
-**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
     
 </dd>
 </dl>
@@ -4213,7 +4213,7 @@ client.doc.annotations.update(
 <dl>
 <dd>
 
-**annot_key:** `str` — The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
+**annotation_key:** `str` — The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
     
 </dd>
 </dl>
@@ -4282,7 +4282,7 @@ client.doc.annotations.read_appearance(
     doc_id="docId",
     layer_name="layerName",
     page_key="pageKey",
-    annot_key="annotKey",
+    annotation_key="annotationKey",
 )
 
 ```
@@ -4315,7 +4315,7 @@ client.doc.annotations.read_appearance(
 <dl>
 <dd>
 
-**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
     
 </dd>
 </dl>
@@ -4323,7 +4323,7 @@ client.doc.annotations.read_appearance(
 <dl>
 <dd>
 
-**annot_key:** `str` — The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
+**annotation_key:** `str` — The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
     
 </dd>
 </dl>
@@ -4390,7 +4390,7 @@ client.doc.annotations.read_file(
     doc_id="docId",
     layer_name="layerName",
     page_key="pageKey",
-    annot_key="annotKey",
+    annotation_key="annotationKey",
 )
 
 ```
@@ -4423,7 +4423,7 @@ client.doc.annotations.read_file(
 <dl>
 <dd>
 
-**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
     
 </dd>
 </dl>
@@ -4431,7 +4431,7 @@ client.doc.annotations.read_file(
 <dl>
 <dd>
 
-**annot_key:** `str` — The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
+**annotation_key:** `str` — The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
     
 </dd>
 </dl>
@@ -4519,7 +4519,7 @@ client.doc.annotations.export_appearance(
 <dl>
 <dd>
 
-**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
     
 </dd>
 </dl>
@@ -4555,7 +4555,7 @@ client.doc.annotations.export_appearance(
 </dl>
 </details>
 
-<details><summary><code>client.doc.annotations.<a href="src/cloudpdf/doc/annotations/client.py">flatten</a>(...) -> DocAnnotationsFlatten200Response</code></summary>
+<details><summary><code>client.doc.annotations.<a href="src/cloudpdf/doc/annotations/client.py">flatten</a>(...) -> DocAnnotationsFlattenResponse</code></summary>
 <dl>
 <dd>
 
@@ -4615,7 +4615,7 @@ client.doc.annotations.flatten(
 <dl>
 <dd>
 
-**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
     
 </dd>
 </dl>
@@ -4659,7 +4659,7 @@ client.doc.annotations.flatten(
 </dl>
 </details>
 
-<details><summary><code>client.doc.annotations.<a href="src/cloudpdf/doc/annotations/client.py">reorder</a>(...) -> DocAnnotationsReorder200Response</code></summary>
+<details><summary><code>client.doc.annotations.<a href="src/cloudpdf/doc/annotations/client.py">reorder</a>(...) -> DocAnnotationsReorderResponse</code></summary>
 <dl>
 <dd>
 
@@ -4726,7 +4726,7 @@ client.doc.annotations.reorder(
 <dl>
 <dd>
 
-**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
     
 </dd>
 </dl>
@@ -4878,7 +4878,7 @@ client.doc.attachments.download(
 </dl>
 </details>
 
-<details><summary><code>client.doc.attachments.<a href="src/cloudpdf/doc/attachments/client.py">list</a>(...) -> DocAttachmentsList200Response</code></summary>
+<details><summary><code>client.doc.attachments.<a href="src/cloudpdf/doc/attachments/client.py">list</a>(...) -> DocAttachmentsListResponse</code></summary>
 <dl>
 <dd>
 
@@ -4969,7 +4969,7 @@ client.doc.attachments.list(
 </details>
 
 ## Doc Fonts
-<details><summary><code>client.doc.fonts.<a href="src/cloudpdf/doc/fonts/client.py">list</a>(...) -> DocFontsList200Response</code></summary>
+<details><summary><code>client.doc.fonts.<a href="src/cloudpdf/doc/fonts/client.py">list</a>(...) -> DocFontsListResponse</code></summary>
 <dl>
 <dd>
 
@@ -5045,7 +5045,7 @@ client.doc.fonts.list(
 </dl>
 </details>
 
-<details><summary><code>client.doc.fonts.<a href="src/cloudpdf/doc/fonts/client.py">resolve</a>(...) -> DocFontsResolve200Response</code></summary>
+<details><summary><code>client.doc.fonts.<a href="src/cloudpdf/doc/fonts/client.py">resolve</a>(...) -> DocFontsResolveResponse</code></summary>
 <dl>
 <dd>
 
@@ -5135,7 +5135,7 @@ client.doc.fonts.resolve(
 </details>
 
 ## Doc Forms
-<details><summary><code>client.doc.forms.<a href="src/cloudpdf/doc/forms/client.py">list</a>(...) -> DocFormsList200Response</code></summary>
+<details><summary><code>client.doc.forms.<a href="src/cloudpdf/doc/forms/client.py">list</a>(...) -> DocFormsListResponse</code></summary>
 <dl>
 <dd>
 
@@ -5211,7 +5211,7 @@ client.doc.forms.list(
 </dl>
 </details>
 
-<details><summary><code>client.doc.forms.<a href="src/cloudpdf/doc/forms/client.py">reorder_calculations</a>(...) -> DocFormsReorderCalculations200Response</code></summary>
+<details><summary><code>client.doc.forms.<a href="src/cloudpdf/doc/forms/client.py">reorder_calculations</a>(...) -> DocFormsReorderCalculationsResponse</code></summary>
 <dl>
 <dd>
 
@@ -5317,7 +5317,7 @@ client.doc.forms.reorder_calculations(
 </dl>
 </details>
 
-<details><summary><code>client.doc.forms.<a href="src/cloudpdf/doc/forms/client.py">set_value</a>(...) -> DocFormsSetValue200Response</code></summary>
+<details><summary><code>client.doc.forms.<a href="src/cloudpdf/doc/forms/client.py">set_value</a>(...) -> DocFormsSetValueResponse</code></summary>
 <dl>
 <dd>
 
@@ -5421,7 +5421,7 @@ client.doc.forms.set_value(
 </dl>
 </details>
 
-<details><summary><code>client.doc.forms.<a href="src/cloudpdf/doc/forms/client.py">reset</a>(...) -> DocFormsReset200Response</code></summary>
+<details><summary><code>client.doc.forms.<a href="src/cloudpdf/doc/forms/client.py">reset</a>(...) -> DocFormsResetResponse</code></summary>
 <dl>
 <dd>
 
@@ -5513,7 +5513,7 @@ client.doc.forms.reset(
 </dl>
 </details>
 
-<details><summary><code>client.doc.forms.<a href="src/cloudpdf/doc/forms/client.py">delete_widget</a>(...) -> DocFormsDeleteWidget200Response</code></summary>
+<details><summary><code>client.doc.forms.<a href="src/cloudpdf/doc/forms/client.py">delete_widget</a>(...) -> DocFormsDeleteWidgetResponse</code></summary>
 <dl>
 <dd>
 
@@ -5538,7 +5538,7 @@ client.doc.forms.delete_widget(
     doc_id="docId",
     layer_name="layerName",
     page_key="pageKey",
-    annot_key="annotKey",
+    annotation_key="annotationKey",
 )
 
 ```
@@ -5571,7 +5571,7 @@ client.doc.forms.delete_widget(
 <dl>
 <dd>
 
-**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
     
 </dd>
 </dl>
@@ -5579,7 +5579,7 @@ client.doc.forms.delete_widget(
 <dl>
 <dd>
 
-**annot_key:** `str` — The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
+**annotation_key:** `str` — The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
     
 </dd>
 </dl>
@@ -5615,7 +5615,7 @@ client.doc.forms.delete_widget(
 </dl>
 </details>
 
-<details><summary><code>client.doc.forms.<a href="src/cloudpdf/doc/forms/client.py">update_widget</a>(...) -> DocFormsUpdateWidget200Response</code></summary>
+<details><summary><code>client.doc.forms.<a href="src/cloudpdf/doc/forms/client.py">update_widget</a>(...) -> DocFormsUpdateWidgetResponse</code></summary>
 <dl>
 <dd>
 
@@ -5640,7 +5640,7 @@ client.doc.forms.update_widget(
     doc_id="docId",
     layer_name="layerName",
     page_key="pageKey",
-    annot_key="annotKey",
+    annotation_key="annotationKey",
     patch=WidgetPatch(),
 )
 
@@ -5674,7 +5674,7 @@ client.doc.forms.update_widget(
 <dl>
 <dd>
 
-**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
     
 </dd>
 </dl>
@@ -5682,7 +5682,7 @@ client.doc.forms.update_widget(
 <dl>
 <dd>
 
-**annot_key:** `str` — The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
+**annotation_key:** `str` — The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
     
 </dd>
 </dl>
@@ -5726,7 +5726,7 @@ client.doc.forms.update_widget(
 </dl>
 </details>
 
-<details><summary><code>client.doc.forms.<a href="src/cloudpdf/doc/forms/client.py">reorder_widgets</a>(...) -> DocFormsReorderWidgets200Response</code></summary>
+<details><summary><code>client.doc.forms.<a href="src/cloudpdf/doc/forms/client.py">reorder_widgets</a>(...) -> DocFormsReorderWidgetsResponse</code></summary>
 <dl>
 <dd>
 
@@ -5793,7 +5793,7 @@ client.doc.forms.reorder_widgets(
 <dl>
 <dd>
 
-**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
     
 </dd>
 </dl>
@@ -5846,7 +5846,7 @@ client.doc.forms.reorder_widgets(
 </details>
 
 ## Doc Metadata
-<details><summary><code>client.doc.metadata.<a href="src/cloudpdf/doc/metadata/client.py">get</a>(...) -> DocMetadataGet200Response</code></summary>
+<details><summary><code>client.doc.metadata.<a href="src/cloudpdf/doc/metadata/client.py">get</a>(...) -> DocMetadataGetResponse</code></summary>
 <dl>
 <dd>
 
@@ -5923,7 +5923,7 @@ client.doc.metadata.get(
 </details>
 
 ## Doc Outline
-<details><summary><code>client.doc.outline.<a href="src/cloudpdf/doc/outline/client.py">get</a>(...) -> DocOutlineGet200Response</code></summary>
+<details><summary><code>client.doc.outline.<a href="src/cloudpdf/doc/outline/client.py">get</a>(...) -> DocOutlineGetResponse</code></summary>
 <dl>
 <dd>
 
@@ -6000,7 +6000,7 @@ client.doc.outline.get(
 </details>
 
 ## Doc Pages
-<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">set_scale</a>(...) -> DocPagesSetScale200Response</code></summary>
+<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">set_scale</a>(...) -> DocPagesSetScaleResponse</code></summary>
 <dl>
 <dd>
 
@@ -6057,7 +6057,7 @@ client.doc.pages.set_scale(
 <dl>
 <dd>
 
-**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
     
 </dd>
 </dl>
@@ -6101,7 +6101,7 @@ client.doc.pages.set_scale(
 </dl>
 </details>
 
-<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">viewports</a>(...) -> DocPagesViewports200Response</code></summary>
+<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">viewports</a>(...) -> DocPagesViewportsResponse</code></summary>
 <dl>
 <dd>
 
@@ -6158,7 +6158,7 @@ client.doc.pages.viewports(
 <dl>
 <dd>
 
-**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+**page_key:** `str` — The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
     
 </dd>
 </dl>
@@ -6287,7 +6287,7 @@ client.doc.pages.extract(
 </dl>
 </details>
 
-<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">flatten</a>(...) -> DocPagesFlatten200Response</code></summary>
+<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">flatten</a>(...) -> DocPagesFlattenResponse</code></summary>
 <dl>
 <dd>
 
@@ -6382,7 +6382,7 @@ client.doc.pages.flatten(
 </dl>
 </details>
 
-<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">set_name</a>(...) -> DocPagesSetName200Response</code></summary>
+<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">set_name</a>(...) -> DocPagesSetNameResponse</code></summary>
 <dl>
 <dd>
 
@@ -6477,7 +6477,7 @@ client.doc.pages.set_name(
 </dl>
 </details>
 
-<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">remove_name</a>(...) -> DocPagesRemoveName200Response</code></summary>
+<details><summary><code>client.doc.pages.<a href="src/cloudpdf/doc/pages/client.py">remove_name</a>(...) -> DocPagesRemoveNameResponse</code></summary>
 <dl>
 <dd>
 
@@ -6573,7 +6573,7 @@ client.doc.pages.remove_name(
 </details>
 
 ## Doc Redactions
-<details><summary><code>client.doc.redactions.<a href="src/cloudpdf/doc/redactions/client.py">apply</a>(...) -> DocRedactionsApply200Response</code></summary>
+<details><summary><code>client.doc.redactions.<a href="src/cloudpdf/doc/redactions/client.py">apply</a>(...) -> DocRedactionsApplyResponse</code></summary>
 <dl>
 <dd>
 
@@ -6674,7 +6674,7 @@ client.doc.redactions.apply(
 </details>
 
 ## Doc Signatures
-<details><summary><code>client.doc.signatures.<a href="src/cloudpdf/doc/signatures/client.py">list</a>(...) -> DocSignaturesList200Response</code></summary>
+<details><summary><code>client.doc.signatures.<a href="src/cloudpdf/doc/signatures/client.py">list</a>(...) -> DocSignaturesListResponse</code></summary>
 <dl>
 <dd>
 
@@ -6764,7 +6764,7 @@ client.doc.signatures.list(
 </dl>
 </details>
 
-<details><summary><code>client.doc.signatures.<a href="src/cloudpdf/doc/signatures/client.py">cancel</a>(...) -> DocSignaturesCancel200Response</code></summary>
+<details><summary><code>client.doc.signatures.<a href="src/cloudpdf/doc/signatures/client.py">cancel</a>(...) -> DocSignaturesCancelResponse</code></summary>
 <dl>
 <dd>
 
@@ -6849,7 +6849,7 @@ client.doc.signatures.cancel(
 </dl>
 </details>
 
-<details><summary><code>client.doc.signatures.<a href="src/cloudpdf/doc/signatures/client.py">complete</a>(...) -> DocSignaturesComplete200Response</code></summary>
+<details><summary><code>client.doc.signatures.<a href="src/cloudpdf/doc/signatures/client.py">complete</a>(...) -> DocSignaturesCompleteResponse</code></summary>
 <dl>
 <dd>
 
@@ -6970,7 +6970,7 @@ client.doc.signatures.complete(
 </dl>
 </details>
 
-<details><summary><code>client.doc.signatures.<a href="src/cloudpdf/doc/signatures/client.py">analysis</a>(...) -> DocSignaturesAnalysis200Response</code></summary>
+<details><summary><code>client.doc.signatures.<a href="src/cloudpdf/doc/signatures/client.py">analysis</a>(...) -> DocSignaturesAnalysisResponse</code></summary>
 <dl>
 <dd>
 
@@ -7084,7 +7084,7 @@ client.doc.signatures.analysis(
 </dl>
 </details>
 
-<details><summary><code>client.doc.signatures.<a href="src/cloudpdf/doc/signatures/client.py">prepare</a>(...) -> DocSignaturesPrepare200Response</code></summary>
+<details><summary><code>client.doc.signatures.<a href="src/cloudpdf/doc/signatures/client.py">prepare</a>(...) -> DocSignaturesPrepareResponse</code></summary>
 <dl>
 <dd>
 
@@ -7184,7 +7184,7 @@ client.doc.signatures.prepare(
 </details>
 
 ## Doc Versions
-<details><summary><code>client.doc.versions.<a href="src/cloudpdf/doc/versions/client.py">list</a>(...) -> DocVersionsList200Response</code></summary>
+<details><summary><code>client.doc.versions.<a href="src/cloudpdf/doc/versions/client.py">list</a>(...) -> DocVersionsListResponse</code></summary>
 <dl>
 <dd>
 
@@ -7274,7 +7274,7 @@ client.doc.versions.list(
 </dl>
 </details>
 
-<details><summary><code>client.doc.versions.<a href="src/cloudpdf/doc/versions/client.py">analysis</a>(...) -> DocVersionsAnalysis200Response</code></summary>
+<details><summary><code>client.doc.versions.<a href="src/cloudpdf/doc/versions/client.py">analysis</a>(...) -> DocVersionsAnalysisResponse</code></summary>
 <dl>
 <dd>
 
@@ -7312,7 +7312,7 @@ client = CloudPDFClient(
 client.doc.versions.analysis(
     doc_id="docId",
     layer_name="layerName",
-    sha="sha",
+    sha256="sha256",
 )
 
 ```
@@ -7345,7 +7345,7 @@ client.doc.versions.analysis(
 <dl>
 <dd>
 
-**sha:** `str` 
+**sha256:** `str` 
     
 </dd>
 </dl>
@@ -7437,7 +7437,7 @@ client = CloudPDFClient(
 client.doc.versions.download(
     doc_id="docId",
     layer_name="layerName",
-    sha="sha",
+    sha256="sha256",
 )
 
 ```
@@ -7470,7 +7470,7 @@ client.doc.versions.download(
 <dl>
 <dd>
 
-**sha:** `str` 
+**sha256:** `str` 
     
 </dd>
 </dl>
@@ -7522,7 +7522,7 @@ client = CloudPDFClient(
 client.doc.versions.revision(
     doc_id="docId",
     layer_name="layerName",
-    sha="sha",
+    sha256="sha256",
     index=1,
 )
 
@@ -7556,7 +7556,7 @@ client.doc.versions.revision(
 <dl>
 <dd>
 
-**sha:** `str` 
+**sha256:** `str` 
     
 </dd>
 </dl>
@@ -7592,7 +7592,7 @@ client.doc.versions.revision(
 </dl>
 </details>
 
-<details><summary><code>client.doc.versions.<a href="src/cloudpdf/doc/versions/client.py">signatures</a>(...) -> DocVersionsSignatures200Response</code></summary>
+<details><summary><code>client.doc.versions.<a href="src/cloudpdf/doc/versions/client.py">signatures</a>(...) -> DocVersionsSignaturesResponse</code></summary>
 <dl>
 <dd>
 
@@ -7616,7 +7616,7 @@ client = CloudPDFClient(
 client.doc.versions.signatures(
     doc_id="docId",
     layer_name="layerName",
-    sha="sha",
+    sha256="sha256",
 )
 
 ```
@@ -7649,7 +7649,7 @@ client.doc.versions.signatures(
 <dl>
 <dd>
 
-**sha:** `str` 
+**sha256:** `str` 
     
 </dd>
 </dl>
@@ -7715,7 +7715,7 @@ client = CloudPDFClient(
 client.doc.versions.signature_contents(
     doc_id="docId",
     layer_name="layerName",
-    sha="sha",
+    sha256="sha256",
     field_key="fieldKey",
 )
 
@@ -7749,7 +7749,7 @@ client.doc.versions.signature_contents(
 <dl>
 <dd>
 
-**sha:** `str` 
+**sha256:** `str` 
     
 </dd>
 </dl>
@@ -7823,7 +7823,7 @@ client = CloudPDFClient(
 client.doc.versions.signature_digest(
     doc_id="docId",
     layer_name="layerName",
-    sha="sha",
+    sha256="sha256",
     field_key="fieldKey",
     algorithm="sha1",
 )
@@ -7858,7 +7858,7 @@ client.doc.versions.signature_digest(
 <dl>
 <dd>
 
-**sha:** `str` 
+**sha256:** `str` 
     
 </dd>
 </dl>
@@ -7941,7 +7941,7 @@ client = CloudPDFClient(
 client.doc.fonts.programs.download(
     doc_id="docId",
     layer_name="layerName",
-    display_hash="displayHash",
+    display_sha256="displaySha256",
 )
 
 ```
@@ -7974,7 +7974,7 @@ client.doc.fonts.programs.download(
 <dl>
 <dd>
 
-**display_hash:** `str` 
+**display_sha256:** `str` 
     
 </dd>
 </dl>
@@ -8002,7 +8002,7 @@ client.doc.fonts.programs.download(
 </dl>
 </details>
 
-<details><summary><code>client.doc.fonts.programs.<a href="src/cloudpdf/doc/fonts/programs/client.py">get</a>(...) -> DocFontsProgramsGet200Response</code></summary>
+<details><summary><code>client.doc.fonts.programs.<a href="src/cloudpdf/doc/fonts/programs/client.py">get</a>(...) -> DocFontsProgramsGetResponse</code></summary>
 <dl>
 <dd>
 
@@ -8026,7 +8026,7 @@ client = CloudPDFClient(
 client.doc.fonts.programs.get(
     doc_id="docId",
     layer_name="layerName",
-    display_hash="displayHash",
+    display_sha256="displaySha256",
 )
 
 ```
@@ -8059,7 +8059,7 @@ client.doc.fonts.programs.get(
 <dl>
 <dd>
 
-**display_hash:** `str` 
+**display_sha256:** `str` 
     
 </dd>
 </dl>
@@ -8088,7 +8088,7 @@ client.doc.fonts.programs.get(
 </details>
 
 ## Doc Metadata Custom
-<details><summary><code>client.doc.metadata.custom.<a href="src/cloudpdf/doc/metadata/custom/client.py">get</a>(...) -> DocMetadataCustomGet200Response</code></summary>
+<details><summary><code>client.doc.metadata.custom.<a href="src/cloudpdf/doc/metadata/custom/client.py">get</a>(...) -> DocMetadataCustomGetResponse</code></summary>
 <dl>
 <dd>
 
@@ -8165,7 +8165,7 @@ client.doc.metadata.custom.get(
 </details>
 
 ## Documents Layers
-<details><summary><code>client.documents.layers.<a href="src/cloudpdf/documents/layers/client.py">list</a>(...) -> DocumentsLayersList200Response</code></summary>
+<details><summary><code>client.documents.layers.<a href="src/cloudpdf/documents/layers/client.py">list</a>(...) -> DocumentsLayersListResponse</code></summary>
 <dl>
 <dd>
 
@@ -8188,7 +8188,7 @@ client = CloudPDFClient(
 
 client.documents.layers.list(
     tenant_id="tenantId",
-    id="id",
+    doc_id="docId",
 )
 
 ```
@@ -8213,7 +8213,7 @@ client.documents.layers.list(
 <dl>
 <dd>
 
-**id:** `str` 
+**doc_id:** `str` 
     
 </dd>
 </dl>
@@ -8280,7 +8280,7 @@ client = CloudPDFClient(
 
 client.documents.layers.delete(
     tenant_id="tenantId",
-    id="id",
+    doc_id="docId",
     layer_name="layerName",
 )
 
@@ -8306,7 +8306,7 @@ client.documents.layers.delete(
 <dl>
 <dd>
 
-**id:** `str` 
+**doc_id:** `str` 
     
 </dd>
 </dl>
@@ -8335,7 +8335,7 @@ client.documents.layers.delete(
 </details>
 
 ## Grants Visitors
-<details><summary><code>client.grants.visitors.<a href="src/cloudpdf/grants/visitors/client.py">list</a>(...) -> GrantsVisitorsList200Response</code></summary>
+<details><summary><code>client.grants.visitors.<a href="src/cloudpdf/grants/visitors/client.py">list</a>(...) -> GrantsVisitorsListResponse</code></summary>
 <dl>
 <dd>
 

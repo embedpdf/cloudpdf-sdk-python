@@ -15,7 +15,7 @@ from .widget_annotation_blend_mode import WidgetAnnotationBlendMode
 from .widget_annotation_border_style import WidgetAnnotationBorderStyle
 from .widget_annotation_box import WidgetAnnotationBox
 from .widget_annotation_check_style import WidgetAnnotationCheckStyle
-from .widget_annotation_field_family import WidgetAnnotationFieldFamily
+from .widget_annotation_field_kind import WidgetAnnotationFieldKind
 from .widget_annotation_rect import WidgetAnnotationRect
 from .widget_annotation_reply import WidgetAnnotationReply
 from .widget_annotation_subtype import WidgetAnnotationSubtype
@@ -84,7 +84,7 @@ class WidgetAnnotation(UniversalBaseModel):
     ] = None
     actions: typing.Optional[PdfAnnotationActions] = None
     box: WidgetAnnotationBox
-    rotation: typing.Optional[float] = None
+    rotation: typing.Optional[int] = None
     color: typing.Optional[str] = None
     interior_color: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="interiorColor"), pydantic.Field(alias="interiorColor")
@@ -117,9 +117,19 @@ class WidgetAnnotation(UniversalBaseModel):
         pydantic.Field(alias="checkStyle"),
     ] = None
     field: typing.Optional[FormFieldRef] = None
-    field_family: typing_extensions.Annotated[
-        WidgetAnnotationFieldFamily, FieldMetadata(alias="fieldFamily"), pydantic.Field(alias="fieldFamily")
+    field_kind: typing_extensions.Annotated[
+        WidgetAnnotationFieldKind,
+        FieldMetadata(alias="fieldKind"),
+        pydantic.Field(
+            alias="fieldKind",
+            description="Its field's family. A newer server can add families: read one your client doesn't know as `unknown`.",
+        ),
     ]
+    """
+    Its field's family. A newer server can add families: read one your client doesn't know as `unknown`.
+    """
+
+    has_mark: typing_extensions.Annotated[bool, FieldMetadata(alias="hasMark"), pydantic.Field(alias="hasMark")]
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

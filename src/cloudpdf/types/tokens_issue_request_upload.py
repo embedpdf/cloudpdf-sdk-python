@@ -27,7 +27,9 @@ class TokensIssueRequestUpload(UniversalBaseModel):
         typing.Optional[int], FieldMetadata(alias="maxBytes"), pydantic.Field(alias="maxBytes")
     ] = None
     origins: typing.Optional[typing.List[str]] = None
-    expires_in: typing_extensions.Annotated[int, FieldMetadata(alias="expiresIn"), pydantic.Field(alias="expiresIn")]
+    expires_in_seconds: typing_extensions.Annotated[
+        int, FieldMetadata(alias="expiresInSeconds"), pydantic.Field(alias="expiresInSeconds")
+    ]
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

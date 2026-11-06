@@ -5,14 +5,14 @@ import typing
 from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
 from ...types.doc_pages_extract_request import DocPagesExtractRequest
-from ...types.doc_pages_flatten200response import DocPagesFlatten200Response
 from ...types.doc_pages_flatten_request import DocPagesFlattenRequest
-from ...types.doc_pages_remove_name200response import DocPagesRemoveName200Response
+from ...types.doc_pages_flatten_response import DocPagesFlattenResponse
 from ...types.doc_pages_remove_name_request import DocPagesRemoveNameRequest
-from ...types.doc_pages_set_name200response import DocPagesSetName200Response
+from ...types.doc_pages_remove_name_response import DocPagesRemoveNameResponse
 from ...types.doc_pages_set_name_request import DocPagesSetNameRequest
-from ...types.doc_pages_set_scale200response import DocPagesSetScale200Response
-from ...types.doc_pages_viewports200response import DocPagesViewports200Response
+from ...types.doc_pages_set_name_response import DocPagesSetNameResponse
+from ...types.doc_pages_set_scale_response import DocPagesSetScaleResponse
+from ...types.doc_pages_viewports_response import DocPagesViewportsResponse
 from .raw_client import AsyncRawPagesClient, RawPagesClient
 from .types.doc_pages_set_scale_request_measure import DocPagesSetScaleRequestMeasure
 
@@ -45,7 +45,7 @@ class PagesClient:
         idempotency_key: typing.Optional[str] = None,
         measure: typing.Optional[DocPagesSetScaleRequestMeasure] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesSetScale200Response:
+    ) -> DocPagesSetScaleResponse:
         """
         Parameters
         ----------
@@ -54,7 +54,7 @@ class PagesClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -69,7 +69,7 @@ class PagesClient:
 
         Returns
         -------
-        DocPagesSetScale200Response
+        DocPagesSetScaleResponse
             OK
 
         Examples
@@ -104,7 +104,7 @@ class PagesClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesViewports200Response:
+    ) -> DocPagesViewportsResponse:
         """
         Parameters
         ----------
@@ -113,7 +113,7 @@ class PagesClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -123,7 +123,7 @@ class PagesClient:
 
         Returns
         -------
-        DocPagesViewports200Response
+        DocPagesViewportsResponse
             OK
 
         Examples
@@ -202,7 +202,7 @@ class PagesClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesFlatten200Response:
+    ) -> DocPagesFlattenResponse:
         """
         Parameters
         ----------
@@ -223,7 +223,7 @@ class PagesClient:
 
         Returns
         -------
-        DocPagesFlatten200Response
+        DocPagesFlattenResponse
             OK
 
         Examples
@@ -258,7 +258,7 @@ class PagesClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesSetName200Response:
+    ) -> DocPagesSetNameResponse:
         """
         Parameters
         ----------
@@ -279,7 +279,7 @@ class PagesClient:
 
         Returns
         -------
-        DocPagesSetName200Response
+        DocPagesSetNameResponse
             OK
 
         Examples
@@ -314,7 +314,7 @@ class PagesClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesRemoveName200Response:
+    ) -> DocPagesRemoveNameResponse:
         """
         Parameters
         ----------
@@ -335,7 +335,7 @@ class PagesClient:
 
         Returns
         -------
-        DocPagesRemoveName200Response
+        DocPagesRemoveNameResponse
             OK
 
         Examples
@@ -387,7 +387,7 @@ class AsyncPagesClient:
         idempotency_key: typing.Optional[str] = None,
         measure: typing.Optional[DocPagesSetScaleRequestMeasure] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesSetScale200Response:
+    ) -> DocPagesSetScaleResponse:
         """
         Parameters
         ----------
@@ -396,7 +396,7 @@ class AsyncPagesClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -411,7 +411,7 @@ class AsyncPagesClient:
 
         Returns
         -------
-        DocPagesSetScale200Response
+        DocPagesSetScaleResponse
             OK
 
         Examples
@@ -454,7 +454,7 @@ class AsyncPagesClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesViewports200Response:
+    ) -> DocPagesViewportsResponse:
         """
         Parameters
         ----------
@@ -463,7 +463,7 @@ class AsyncPagesClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -473,7 +473,7 @@ class AsyncPagesClient:
 
         Returns
         -------
-        DocPagesViewports200Response
+        DocPagesViewportsResponse
             OK
 
         Examples
@@ -569,7 +569,7 @@ class AsyncPagesClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesFlatten200Response:
+    ) -> DocPagesFlattenResponse:
         """
         Parameters
         ----------
@@ -590,7 +590,7 @@ class AsyncPagesClient:
 
         Returns
         -------
-        DocPagesFlatten200Response
+        DocPagesFlattenResponse
             OK
 
         Examples
@@ -633,7 +633,7 @@ class AsyncPagesClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesSetName200Response:
+    ) -> DocPagesSetNameResponse:
         """
         Parameters
         ----------
@@ -654,7 +654,7 @@ class AsyncPagesClient:
 
         Returns
         -------
-        DocPagesSetName200Response
+        DocPagesSetNameResponse
             OK
 
         Examples
@@ -697,7 +697,7 @@ class AsyncPagesClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocPagesRemoveName200Response:
+    ) -> DocPagesRemoveNameResponse:
         """
         Parameters
         ----------
@@ -718,7 +718,7 @@ class AsyncPagesClient:
 
         Returns
         -------
-        DocPagesRemoveName200Response
+        DocPagesRemoveNameResponse
             OK
 
         Examples

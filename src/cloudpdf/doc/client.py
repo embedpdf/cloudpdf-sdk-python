@@ -6,11 +6,11 @@ import typing
 
 from ..core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ..core.request_options import RequestOptions
-from ..types.doc_changes200response import DocChanges200Response
-from ..types.doc_download_link200response import DocDownloadLink200Response
-from ..types.doc_head200response import DocHead200Response
-from ..types.doc_manifest200response import DocManifest200Response
-from ..types.doc_text200response import DocText200Response
+from ..types.doc_changes_response import DocChangesResponse
+from ..types.doc_download_link_response import DocDownloadLinkResponse
+from ..types.doc_head_response import DocHeadResponse
+from ..types.doc_manifest_response import DocManifestResponse
+from ..types.doc_text_response import DocTextResponse
 from .raw_client import AsyncRawDocClient, RawDocClient
 from .types.doc_changes_request_changes_item import DocChangesRequestChangesItem
 
@@ -61,7 +61,7 @@ class DocClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocHead200Response:
+    ) -> DocHeadResponse:
         """
         Parameters
         ----------
@@ -75,7 +75,7 @@ class DocClient:
 
         Returns
         -------
-        DocHead200Response
+        DocHeadResponse
             OK
 
         Examples
@@ -100,7 +100,7 @@ class DocClient:
         changes: typing.Sequence[DocChangesRequestChangesItem],
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocChanges200Response:
+    ) -> DocChangesResponse:
         """
         Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`, outline `doc.outline.modify`, pages `doc.pages.assemble`, embedded files `doc.attachments.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork, a PDF whose pages come in) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
 
@@ -120,7 +120,7 @@ class DocClient:
 
         Returns
         -------
-        DocChanges200Response
+        DocChangesResponse
             OK
 
         Examples
@@ -195,9 +195,9 @@ class DocClient:
         layer_name: str,
         *,
         document_password: typing.Optional[str] = None,
-        expires_in: typing.Optional[int] = OMIT,
+        expires_in_seconds: typing.Optional[int] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocDownloadLink200Response:
+    ) -> DocDownloadLinkResponse:
         """
         The link opens the layer as it is when created: once the layer changes, it answers 404, so create it right before handing it over. It downloads that one file and nothing else, and a password-protected document is checked when the link is created. Deployments that verify tokens with their own keys (JWKS) mint links on their backend: a doc token with `layer_name`, a `download: { docVersion, mode: "incremental" }` claim and a short `exp`, passed as `link` on the versioned download URL.
 
@@ -210,14 +210,14 @@ class DocClient:
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
 
-        expires_in : typing.Optional[int]
+        expires_in_seconds : typing.Optional[int]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        DocDownloadLink200Response
+        DocDownloadLinkResponse
             OK
 
         Examples
@@ -236,7 +236,7 @@ class DocClient:
             doc_id,
             layer_name,
             document_password=document_password,
-            expires_in=expires_in,
+            expires_in_seconds=expires_in_seconds,
             request_options=request_options,
         )
         return _response.data
@@ -248,7 +248,7 @@ class DocClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocManifest200Response:
+    ) -> DocManifestResponse:
         """
         Parameters
         ----------
@@ -264,7 +264,7 @@ class DocClient:
 
         Returns
         -------
-        DocManifest200Response
+        DocManifestResponse
             OK
 
         Examples
@@ -303,7 +303,7 @@ class DocClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -342,7 +342,7 @@ class DocClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocText200Response:
+    ) -> DocTextResponse:
         """
         Parameters
         ----------
@@ -351,7 +351,7 @@ class DocClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -361,7 +361,7 @@ class DocClient:
 
         Returns
         -------
-        DocText200Response
+        DocTextResponse
             OK
 
         Examples
@@ -495,7 +495,7 @@ class AsyncDocClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocHead200Response:
+    ) -> DocHeadResponse:
         """
         Parameters
         ----------
@@ -509,7 +509,7 @@ class AsyncDocClient:
 
         Returns
         -------
-        DocHead200Response
+        DocHeadResponse
             OK
 
         Examples
@@ -544,7 +544,7 @@ class AsyncDocClient:
         changes: typing.Sequence[DocChangesRequestChangesItem],
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocChanges200Response:
+    ) -> DocChangesResponse:
         """
         Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`, outline `doc.outline.modify`, pages `doc.pages.assemble`, embedded files `doc.attachments.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork, a PDF whose pages come in) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
 
@@ -564,7 +564,7 @@ class AsyncDocClient:
 
         Returns
         -------
-        DocChanges200Response
+        DocChangesResponse
             OK
 
         Examples
@@ -656,9 +656,9 @@ class AsyncDocClient:
         layer_name: str,
         *,
         document_password: typing.Optional[str] = None,
-        expires_in: typing.Optional[int] = OMIT,
+        expires_in_seconds: typing.Optional[int] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocDownloadLink200Response:
+    ) -> DocDownloadLinkResponse:
         """
         The link opens the layer as it is when created: once the layer changes, it answers 404, so create it right before handing it over. It downloads that one file and nothing else, and a password-protected document is checked when the link is created. Deployments that verify tokens with their own keys (JWKS) mint links on their backend: a doc token with `layer_name`, a `download: { docVersion, mode: "incremental" }` claim and a short `exp`, passed as `link` on the versioned download URL.
 
@@ -671,14 +671,14 @@ class AsyncDocClient:
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
 
-        expires_in : typing.Optional[int]
+        expires_in_seconds : typing.Optional[int]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        DocDownloadLink200Response
+        DocDownloadLinkResponse
             OK
 
         Examples
@@ -705,7 +705,7 @@ class AsyncDocClient:
             doc_id,
             layer_name,
             document_password=document_password,
-            expires_in=expires_in,
+            expires_in_seconds=expires_in_seconds,
             request_options=request_options,
         )
         return _response.data
@@ -717,7 +717,7 @@ class AsyncDocClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocManifest200Response:
+    ) -> DocManifestResponse:
         """
         Parameters
         ----------
@@ -733,7 +733,7 @@ class AsyncDocClient:
 
         Returns
         -------
-        DocManifest200Response
+        DocManifestResponse
             OK
 
         Examples
@@ -780,7 +780,7 @@ class AsyncDocClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -828,7 +828,7 @@ class AsyncDocClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocText200Response:
+    ) -> DocTextResponse:
         """
         Parameters
         ----------
@@ -837,7 +837,7 @@ class AsyncDocClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -847,7 +847,7 @@ class AsyncDocClient:
 
         Returns
         -------
-        DocText200Response
+        DocTextResponse
             OK
 
         Examples

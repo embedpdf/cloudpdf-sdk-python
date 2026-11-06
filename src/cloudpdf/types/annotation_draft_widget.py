@@ -85,7 +85,7 @@ class AnnotationDraftWidget(UniversalBaseModel):
     ] = None
     actions: typing.Optional[WidgetActionsPatch] = None
     box: typing.Optional[AnnotationDraftWidgetBox] = None
-    rotation: typing.Optional[float] = None
+    rotation: typing.Optional[int] = None
     color: typing.Optional[str] = None
     interior_color: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="interiorColor"), pydantic.Field(alias="interiorColor")
@@ -122,8 +122,11 @@ class AnnotationDraftWidget(UniversalBaseModel):
         pydantic.Field(alias="checkStyle"),
     ] = None
     field: typing.Optional[typing.Any] = None
-    field_family: typing_extensions.Annotated[
-        typing.Optional[typing.Any], FieldMetadata(alias="fieldFamily"), pydantic.Field(alias="fieldFamily")
+    field_kind: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="fieldKind"), pydantic.Field(alias="fieldKind")
+    ] = None
+    has_mark: typing_extensions.Annotated[
+        typing.Optional[typing.Any], FieldMetadata(alias="hasMark"), pydantic.Field(alias="hasMark")
     ] = None
 
     if IS_PYDANTIC_V2:

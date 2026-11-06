@@ -14,8 +14,9 @@ from ...core.serialization import convert_and_respect_annotation_metadata
 from ...errors.bad_request_error import BadRequestError
 from ...errors.not_found_error import NotFoundError
 from ...types.annotation_ref import AnnotationRef
-from ...types.doc_fonts_list200response import DocFontsList200Response
-from ...types.doc_fonts_resolve200response import DocFontsResolve200Response
+from ...types.doc_fonts_list_response import DocFontsListResponse
+from ...types.doc_fonts_resolve_response import DocFontsResolveResponse
+from ...types.error_response import ErrorResponse
 from ...types.font_resolve_run import FontResolveRun
 from pydantic import ValidationError
 
@@ -34,7 +35,7 @@ class RawFontsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocFontsList200Response]:
+    ) -> HttpResponse[DocFontsListResponse]:
         """
         Parameters
         ----------
@@ -50,7 +51,7 @@ class RawFontsClient:
 
         Returns
         -------
-        HttpResponse[DocFontsList200Response]
+        HttpResponse[DocFontsListResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -64,9 +65,9 @@ class RawFontsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFontsList200Response,
+                    DocFontsListResponse,
                     parse_obj_as(
-                        type_=DocFontsList200Response,  # type: ignore
+                        type_=DocFontsListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -75,9 +76,9 @@ class RawFontsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -100,7 +101,7 @@ class RawFontsClient:
         document_password: typing.Optional[str] = None,
         annotation: typing.Optional[AnnotationRef] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocFontsResolve200Response]:
+    ) -> HttpResponse[DocFontsResolveResponse]:
         """
         Parameters
         ----------
@@ -120,7 +121,7 @@ class RawFontsClient:
 
         Returns
         -------
-        HttpResponse[DocFontsResolve200Response]
+        HttpResponse[DocFontsResolveResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -144,9 +145,9 @@ class RawFontsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFontsResolve200Response,
+                    DocFontsResolveResponse,
                     parse_obj_as(
-                        type_=DocFontsResolve200Response,  # type: ignore
+                        type_=DocFontsResolveResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -155,9 +156,9 @@ class RawFontsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -166,9 +167,9 @@ class RawFontsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -194,7 +195,7 @@ class AsyncRawFontsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocFontsList200Response]:
+    ) -> AsyncHttpResponse[DocFontsListResponse]:
         """
         Parameters
         ----------
@@ -210,7 +211,7 @@ class AsyncRawFontsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocFontsList200Response]
+        AsyncHttpResponse[DocFontsListResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -224,9 +225,9 @@ class AsyncRawFontsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFontsList200Response,
+                    DocFontsListResponse,
                     parse_obj_as(
-                        type_=DocFontsList200Response,  # type: ignore
+                        type_=DocFontsListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -235,9 +236,9 @@ class AsyncRawFontsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -260,7 +261,7 @@ class AsyncRawFontsClient:
         document_password: typing.Optional[str] = None,
         annotation: typing.Optional[AnnotationRef] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocFontsResolve200Response]:
+    ) -> AsyncHttpResponse[DocFontsResolveResponse]:
         """
         Parameters
         ----------
@@ -280,7 +281,7 @@ class AsyncRawFontsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocFontsResolve200Response]
+        AsyncHttpResponse[DocFontsResolveResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -304,9 +305,9 @@ class AsyncRawFontsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocFontsResolve200Response,
+                    DocFontsResolveResponse,
                     parse_obj_as(
-                        type_=DocFontsResolve200Response,  # type: ignore
+                        type_=DocFontsResolveResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -315,9 +316,9 @@ class AsyncRawFontsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -326,9 +327,9 @@ class AsyncRawFontsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

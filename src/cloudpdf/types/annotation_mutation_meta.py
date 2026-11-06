@@ -25,7 +25,9 @@ class AnnotationMutationMeta(UniversalBaseModel):
         FieldMetadata(alias="missingCharacters"),
         pydantic.Field(alias="missingCharacters"),
     ] = None
-    changed: typing.List[AnnotationRef]
+    changed_refs: typing_extensions.Annotated[
+        typing.List[AnnotationRef], FieldMetadata(alias="changedRefs"), pydantic.Field(alias="changedRefs")
+    ]
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

@@ -4,9 +4,9 @@ import typing
 
 from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
-from ...types.doc_versions_analysis200response import DocVersionsAnalysis200Response
-from ...types.doc_versions_list200response import DocVersionsList200Response
-from ...types.doc_versions_signatures200response import DocVersionsSignatures200Response
+from ...types.doc_versions_analysis_response import DocVersionsAnalysisResponse
+from ...types.doc_versions_list_response import DocVersionsListResponse
+from ...types.doc_versions_signatures_response import DocVersionsSignaturesResponse
 from .raw_client import AsyncRawVersionsClient, RawVersionsClient
 from .types.analysis_versions_request_level import AnalysisVersionsRequestLevel
 from .types.signature_digest_versions_request_algorithm import SignatureDigestVersionsRequestAlgorithm
@@ -34,7 +34,7 @@ class VersionsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocVersionsList200Response:
+    ) -> DocVersionsListResponse:
         """
         Every completed signature makes a new version of its layer; another layer's versions are never listed. Never cached: the list grows.
 
@@ -52,7 +52,7 @@ class VersionsClient:
 
         Returns
         -------
-        DocVersionsList200Response
+        DocVersionsListResponse
             OK
 
         Examples
@@ -76,7 +76,7 @@ class VersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         *,
         since_signature: typing.Optional[int] = None,
         since_revision: typing.Optional[int] = None,
@@ -85,7 +85,7 @@ class VersionsClient:
         policy: typing.Optional[int] = None,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocVersionsAnalysis200Response:
+    ) -> DocVersionsAnalysisResponse:
         """
         Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults to the last. The same answer for every caller.
 
@@ -95,7 +95,7 @@ class VersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         since_signature : typing.Optional[int]
 
@@ -115,7 +115,7 @@ class VersionsClient:
 
         Returns
         -------
-        DocVersionsAnalysis200Response
+        DocVersionsAnalysisResponse
             OK
 
         Examples
@@ -128,13 +128,13 @@ class VersionsClient:
         client.doc.versions.analysis(
             doc_id="docId",
             layer_name="layerName",
-            sha="sha",
+            sha256="sha256",
         )
         """
         _response = self._raw_client.analysis(
             doc_id,
             layer_name,
-            sha,
+            sha256,
             since_signature=since_signature,
             since_revision=since_revision,
             level=level,
@@ -149,7 +149,7 @@ class VersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -161,7 +161,7 @@ class VersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -184,11 +184,11 @@ class VersionsClient:
         client.doc.versions.download(
             doc_id="docId",
             layer_name="layerName",
-            sha="sha",
+            sha256="sha256",
         )
         """
         with self._raw_client.download(
-            doc_id, layer_name, sha, document_password=document_password, request_options=request_options
+            doc_id, layer_name, sha256, document_password=document_password, request_options=request_options
         ) as r:
             yield from r.data
 
@@ -196,7 +196,7 @@ class VersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         index: int,
         *,
         document_password: typing.Optional[str] = None,
@@ -209,7 +209,7 @@ class VersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         index : int
 
@@ -234,12 +234,12 @@ class VersionsClient:
         client.doc.versions.revision(
             doc_id="docId",
             layer_name="layerName",
-            sha="sha",
+            sha256="sha256",
             index=1,
         )
         """
         with self._raw_client.revision(
-            doc_id, layer_name, sha, index, document_password=document_password, request_options=request_options
+            doc_id, layer_name, sha256, index, document_password=document_password, request_options=request_options
         ) as r:
             yield from r.data
 
@@ -247,11 +247,11 @@ class VersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocVersionsSignatures200Response:
+    ) -> DocVersionsSignaturesResponse:
         """
         Parameters
         ----------
@@ -259,7 +259,7 @@ class VersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -269,7 +269,7 @@ class VersionsClient:
 
         Returns
         -------
-        DocVersionsSignatures200Response
+        DocVersionsSignaturesResponse
             OK
 
         Examples
@@ -282,11 +282,11 @@ class VersionsClient:
         client.doc.versions.signatures(
             doc_id="docId",
             layer_name="layerName",
-            sha="sha",
+            sha256="sha256",
         )
         """
         _response = self._raw_client.signatures(
-            doc_id, layer_name, sha, document_password=document_password, request_options=request_options
+            doc_id, layer_name, sha256, document_password=document_password, request_options=request_options
         )
         return _response.data
 
@@ -294,7 +294,7 @@ class VersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         field_key: str,
         *,
         document_password: typing.Optional[str] = None,
@@ -309,7 +309,7 @@ class VersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         field_key : str
 
@@ -334,12 +334,12 @@ class VersionsClient:
         client.doc.versions.signature_contents(
             doc_id="docId",
             layer_name="layerName",
-            sha="sha",
+            sha256="sha256",
             field_key="fieldKey",
         )
         """
         with self._raw_client.signature_contents(
-            doc_id, layer_name, sha, field_key, document_password=document_password, request_options=request_options
+            doc_id, layer_name, sha256, field_key, document_password=document_password, request_options=request_options
         ) as r:
             yield from r.data
 
@@ -347,7 +347,7 @@ class VersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         field_key: str,
         algorithm: SignatureDigestVersionsRequestAlgorithm,
         *,
@@ -363,7 +363,7 @@ class VersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         field_key : str
 
@@ -390,7 +390,7 @@ class VersionsClient:
         client.doc.versions.signature_digest(
             doc_id="docId",
             layer_name="layerName",
-            sha="sha",
+            sha256="sha256",
             field_key="fieldKey",
             algorithm="sha1",
         )
@@ -398,7 +398,7 @@ class VersionsClient:
         with self._raw_client.signature_digest(
             doc_id,
             layer_name,
-            sha,
+            sha256,
             field_key,
             algorithm,
             document_password=document_password,
@@ -429,7 +429,7 @@ class AsyncVersionsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocVersionsList200Response:
+    ) -> DocVersionsListResponse:
         """
         Every completed signature makes a new version of its layer; another layer's versions are never listed. Never cached: the list grows.
 
@@ -447,7 +447,7 @@ class AsyncVersionsClient:
 
         Returns
         -------
-        DocVersionsList200Response
+        DocVersionsListResponse
             OK
 
         Examples
@@ -479,7 +479,7 @@ class AsyncVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         *,
         since_signature: typing.Optional[int] = None,
         since_revision: typing.Optional[int] = None,
@@ -488,7 +488,7 @@ class AsyncVersionsClient:
         policy: typing.Optional[int] = None,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocVersionsAnalysis200Response:
+    ) -> DocVersionsAnalysisResponse:
         """
         Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults to the last. The same answer for every caller.
 
@@ -498,7 +498,7 @@ class AsyncVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         since_signature : typing.Optional[int]
 
@@ -518,7 +518,7 @@ class AsyncVersionsClient:
 
         Returns
         -------
-        DocVersionsAnalysis200Response
+        DocVersionsAnalysisResponse
             OK
 
         Examples
@@ -536,7 +536,7 @@ class AsyncVersionsClient:
             await client.doc.versions.analysis(
                 doc_id="docId",
                 layer_name="layerName",
-                sha="sha",
+                sha256="sha256",
             )
 
 
@@ -545,7 +545,7 @@ class AsyncVersionsClient:
         _response = await self._raw_client.analysis(
             doc_id,
             layer_name,
-            sha,
+            sha256,
             since_signature=since_signature,
             since_revision=since_revision,
             level=level,
@@ -560,7 +560,7 @@ class AsyncVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -572,7 +572,7 @@ class AsyncVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -600,14 +600,14 @@ class AsyncVersionsClient:
             await client.doc.versions.download(
                 doc_id="docId",
                 layer_name="layerName",
-                sha="sha",
+                sha256="sha256",
             )
 
 
         asyncio.run(main())
         """
         async with self._raw_client.download(
-            doc_id, layer_name, sha, document_password=document_password, request_options=request_options
+            doc_id, layer_name, sha256, document_password=document_password, request_options=request_options
         ) as r:
             async for _chunk in r.data:
                 yield _chunk
@@ -616,7 +616,7 @@ class AsyncVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         index: int,
         *,
         document_password: typing.Optional[str] = None,
@@ -629,7 +629,7 @@ class AsyncVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         index : int
 
@@ -659,7 +659,7 @@ class AsyncVersionsClient:
             await client.doc.versions.revision(
                 doc_id="docId",
                 layer_name="layerName",
-                sha="sha",
+                sha256="sha256",
                 index=1,
             )
 
@@ -667,7 +667,7 @@ class AsyncVersionsClient:
         asyncio.run(main())
         """
         async with self._raw_client.revision(
-            doc_id, layer_name, sha, index, document_password=document_password, request_options=request_options
+            doc_id, layer_name, sha256, index, document_password=document_password, request_options=request_options
         ) as r:
             async for _chunk in r.data:
                 yield _chunk
@@ -676,11 +676,11 @@ class AsyncVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocVersionsSignatures200Response:
+    ) -> DocVersionsSignaturesResponse:
         """
         Parameters
         ----------
@@ -688,7 +688,7 @@ class AsyncVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -698,7 +698,7 @@ class AsyncVersionsClient:
 
         Returns
         -------
-        DocVersionsSignatures200Response
+        DocVersionsSignaturesResponse
             OK
 
         Examples
@@ -716,14 +716,14 @@ class AsyncVersionsClient:
             await client.doc.versions.signatures(
                 doc_id="docId",
                 layer_name="layerName",
-                sha="sha",
+                sha256="sha256",
             )
 
 
         asyncio.run(main())
         """
         _response = await self._raw_client.signatures(
-            doc_id, layer_name, sha, document_password=document_password, request_options=request_options
+            doc_id, layer_name, sha256, document_password=document_password, request_options=request_options
         )
         return _response.data
 
@@ -731,7 +731,7 @@ class AsyncVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         field_key: str,
         *,
         document_password: typing.Optional[str] = None,
@@ -746,7 +746,7 @@ class AsyncVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         field_key : str
 
@@ -776,7 +776,7 @@ class AsyncVersionsClient:
             await client.doc.versions.signature_contents(
                 doc_id="docId",
                 layer_name="layerName",
-                sha="sha",
+                sha256="sha256",
                 field_key="fieldKey",
             )
 
@@ -784,7 +784,7 @@ class AsyncVersionsClient:
         asyncio.run(main())
         """
         async with self._raw_client.signature_contents(
-            doc_id, layer_name, sha, field_key, document_password=document_password, request_options=request_options
+            doc_id, layer_name, sha256, field_key, document_password=document_password, request_options=request_options
         ) as r:
             async for _chunk in r.data:
                 yield _chunk
@@ -793,7 +793,7 @@ class AsyncVersionsClient:
         self,
         doc_id: str,
         layer_name: str,
-        sha: str,
+        sha256: str,
         field_key: str,
         algorithm: SignatureDigestVersionsRequestAlgorithm,
         *,
@@ -809,7 +809,7 @@ class AsyncVersionsClient:
 
         layer_name : str
 
-        sha : str
+        sha256 : str
 
         field_key : str
 
@@ -841,7 +841,7 @@ class AsyncVersionsClient:
             await client.doc.versions.signature_digest(
                 doc_id="docId",
                 layer_name="layerName",
-                sha="sha",
+                sha256="sha256",
                 field_key="fieldKey",
                 algorithm="sha1",
             )
@@ -852,7 +852,7 @@ class AsyncVersionsClient:
         async with self._raw_client.signature_digest(
             doc_id,
             layer_name,
-            sha,
+            sha256,
             field_key,
             algorithm,
             document_password=document_password,

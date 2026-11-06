@@ -18,17 +18,18 @@ from ...errors.content_too_large_error import ContentTooLargeError
 from ...errors.not_found_error import NotFoundError
 from ...types.annotation_position import AnnotationPosition
 from ...types.annotation_ref import AnnotationRef
-from ...types.doc_annotations_create200response import DocAnnotationsCreate200Response
 from ...types.doc_annotations_create_request import DocAnnotationsCreateRequest
-from ...types.doc_annotations_delete200response import DocAnnotationsDelete200Response
+from ...types.doc_annotations_create_response import DocAnnotationsCreateResponse
+from ...types.doc_annotations_delete_response import DocAnnotationsDeleteResponse
 from ...types.doc_annotations_export_appearance_request import DocAnnotationsExportAppearanceRequest
-from ...types.doc_annotations_flatten200response import DocAnnotationsFlatten200Response
 from ...types.doc_annotations_flatten_request import DocAnnotationsFlattenRequest
-from ...types.doc_annotations_list200response import DocAnnotationsList200Response
-from ...types.doc_annotations_list_all200response import DocAnnotationsListAll200Response
-from ...types.doc_annotations_reorder200response import DocAnnotationsReorder200Response
-from ...types.doc_annotations_update200response import DocAnnotationsUpdate200Response
+from ...types.doc_annotations_flatten_response import DocAnnotationsFlattenResponse
+from ...types.doc_annotations_list_all_response import DocAnnotationsListAllResponse
+from ...types.doc_annotations_list_response import DocAnnotationsListResponse
+from ...types.doc_annotations_reorder_response import DocAnnotationsReorderResponse
 from ...types.doc_annotations_update_request import DocAnnotationsUpdateRequest
+from ...types.doc_annotations_update_response import DocAnnotationsUpdateResponse
+from ...types.error_response import ErrorResponse
 from pydantic import ValidationError
 
 # this is used as the default value for optional parameters
@@ -46,7 +47,7 @@ class RawAnnotationsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocAnnotationsListAll200Response]:
+    ) -> HttpResponse[DocAnnotationsListAllResponse]:
         """
         Returns one entry per page plus the audit-log cursor for reconciling subsequent document events. Page order is unspecified; join by `page` (a `PageRef`) when display order matters.
 
@@ -64,7 +65,7 @@ class RawAnnotationsClient:
 
         Returns
         -------
-        HttpResponse[DocAnnotationsListAll200Response]
+        HttpResponse[DocAnnotationsListAllResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -78,9 +79,9 @@ class RawAnnotationsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocAnnotationsListAll200Response,
+                    DocAnnotationsListAllResponse,
                     parse_obj_as(
-                        type_=DocAnnotationsListAll200Response,  # type: ignore
+                        type_=DocAnnotationsListAllResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -89,9 +90,9 @@ class RawAnnotationsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -100,9 +101,9 @@ class RawAnnotationsClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -124,7 +125,7 @@ class RawAnnotationsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocAnnotationsList200Response]:
+    ) -> HttpResponse[DocAnnotationsListResponse]:
         """
         Parameters
         ----------
@@ -133,7 +134,7 @@ class RawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -143,7 +144,7 @@ class RawAnnotationsClient:
 
         Returns
         -------
-        HttpResponse[DocAnnotationsList200Response]
+        HttpResponse[DocAnnotationsListResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -157,9 +158,9 @@ class RawAnnotationsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocAnnotationsList200Response,
+                    DocAnnotationsListResponse,
                     parse_obj_as(
-                        type_=DocAnnotationsList200Response,  # type: ignore
+                        type_=DocAnnotationsListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -168,9 +169,9 @@ class RawAnnotationsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -194,7 +195,7 @@ class RawAnnotationsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocAnnotationsCreate200Response]:
+    ) -> HttpResponse[DocAnnotationsCreateResponse]:
         """
         Doc JWTs may instead carry collab scopes (annotations:create:self, …) that refine per-annotation authorship rules; the API token is exempt from both.
 
@@ -205,7 +206,7 @@ class RawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         request : DocAnnotationsCreateRequest
 
@@ -220,7 +221,7 @@ class RawAnnotationsClient:
 
         Returns
         -------
-        HttpResponse[DocAnnotationsCreate200Response]
+        HttpResponse[DocAnnotationsCreateResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -238,9 +239,9 @@ class RawAnnotationsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocAnnotationsCreate200Response,
+                    DocAnnotationsCreateResponse,
                     parse_obj_as(
-                        type_=DocAnnotationsCreate200Response,  # type: ignore
+                        type_=DocAnnotationsCreateResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -249,9 +250,9 @@ class RawAnnotationsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -260,9 +261,9 @@ class RawAnnotationsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -281,12 +282,12 @@ class RawAnnotationsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocAnnotationsDelete200Response]:
+    ) -> HttpResponse[DocAnnotationsDeleteResponse]:
         """
         Parameters
         ----------
@@ -295,9 +296,9 @@ class RawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
@@ -311,11 +312,11 @@ class RawAnnotationsClient:
 
         Returns
         -------
-        HttpResponse[DocAnnotationsDelete200Response]
+        HttpResponse[DocAnnotationsDeleteResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annot_key)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annotation_key)}",
             method="DELETE",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -326,9 +327,9 @@ class RawAnnotationsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocAnnotationsDelete200Response,
+                    DocAnnotationsDeleteResponse,
                     parse_obj_as(
-                        type_=DocAnnotationsDelete200Response,  # type: ignore
+                        type_=DocAnnotationsDeleteResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -337,9 +338,9 @@ class RawAnnotationsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -358,13 +359,13 @@ class RawAnnotationsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         request: DocAnnotationsUpdateRequest,
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocAnnotationsUpdate200Response]:
+    ) -> HttpResponse[DocAnnotationsUpdateResponse]:
         """
         Parameters
         ----------
@@ -373,9 +374,9 @@ class RawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         request : DocAnnotationsUpdateRequest
@@ -391,11 +392,11 @@ class RawAnnotationsClient:
 
         Returns
         -------
-        HttpResponse[DocAnnotationsUpdate200Response]
+        HttpResponse[DocAnnotationsUpdateResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annot_key)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annotation_key)}",
             method="PATCH",
             json=request,
             headers={
@@ -409,9 +410,9 @@ class RawAnnotationsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocAnnotationsUpdate200Response,
+                    DocAnnotationsUpdateResponse,
                     parse_obj_as(
-                        type_=DocAnnotationsUpdate200Response,  # type: ignore
+                        type_=DocAnnotationsUpdateResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -420,9 +421,9 @@ class RawAnnotationsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -431,9 +432,9 @@ class RawAnnotationsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -453,7 +454,7 @@ class RawAnnotationsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -466,9 +467,9 @@ class RawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
@@ -483,7 +484,7 @@ class RawAnnotationsClient:
             OK
         """
         with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annot_key)}/resources/appearance",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annotation_key)}/resources/appearance",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -503,9 +504,9 @@ class RawAnnotationsClient:
                         raise BadRequestError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -514,9 +515,9 @@ class RawAnnotationsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -543,7 +544,7 @@ class RawAnnotationsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -558,9 +559,9 @@ class RawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
@@ -575,7 +576,7 @@ class RawAnnotationsClient:
             OK
         """
         with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annot_key)}/resources/file",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annotation_key)}/resources/file",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -595,9 +596,9 @@ class RawAnnotationsClient:
                         raise BadRequestError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -606,9 +607,9 @@ class RawAnnotationsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -617,9 +618,9 @@ class RawAnnotationsClient:
                         raise ContentTooLargeError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -659,7 +660,7 @@ class RawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         request : DocAnnotationsExportAppearanceRequest
 
@@ -698,9 +699,9 @@ class RawAnnotationsClient:
                         raise BadRequestError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -709,9 +710,9 @@ class RawAnnotationsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -742,7 +743,7 @@ class RawAnnotationsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocAnnotationsFlatten200Response]:
+    ) -> HttpResponse[DocAnnotationsFlattenResponse]:
         """
         Parameters
         ----------
@@ -751,7 +752,7 @@ class RawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         request : DocAnnotationsFlattenRequest
 
@@ -766,7 +767,7 @@ class RawAnnotationsClient:
 
         Returns
         -------
-        HttpResponse[DocAnnotationsFlatten200Response]
+        HttpResponse[DocAnnotationsFlattenResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -784,9 +785,9 @@ class RawAnnotationsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocAnnotationsFlatten200Response,
+                    DocAnnotationsFlattenResponse,
                     parse_obj_as(
-                        type_=DocAnnotationsFlatten200Response,  # type: ignore
+                        type_=DocAnnotationsFlattenResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -795,9 +796,9 @@ class RawAnnotationsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -806,9 +807,9 @@ class RawAnnotationsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -833,7 +834,7 @@ class RawAnnotationsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocAnnotationsReorder200Response]:
+    ) -> HttpResponse[DocAnnotationsReorderResponse]:
         """
         Parameters
         ----------
@@ -842,7 +843,7 @@ class RawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         refs : typing.Sequence[AnnotationRef]
 
@@ -859,7 +860,7 @@ class RawAnnotationsClient:
 
         Returns
         -------
-        HttpResponse[DocAnnotationsReorder200Response]
+        HttpResponse[DocAnnotationsReorderResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -884,9 +885,9 @@ class RawAnnotationsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocAnnotationsReorder200Response,
+                    DocAnnotationsReorderResponse,
                     parse_obj_as(
-                        type_=DocAnnotationsReorder200Response,  # type: ignore
+                        type_=DocAnnotationsReorderResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -895,9 +896,9 @@ class RawAnnotationsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -906,9 +907,9 @@ class RawAnnotationsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -934,7 +935,7 @@ class AsyncRawAnnotationsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocAnnotationsListAll200Response]:
+    ) -> AsyncHttpResponse[DocAnnotationsListAllResponse]:
         """
         Returns one entry per page plus the audit-log cursor for reconciling subsequent document events. Page order is unspecified; join by `page` (a `PageRef`) when display order matters.
 
@@ -952,7 +953,7 @@ class AsyncRawAnnotationsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocAnnotationsListAll200Response]
+        AsyncHttpResponse[DocAnnotationsListAllResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -966,9 +967,9 @@ class AsyncRawAnnotationsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocAnnotationsListAll200Response,
+                    DocAnnotationsListAllResponse,
                     parse_obj_as(
-                        type_=DocAnnotationsListAll200Response,  # type: ignore
+                        type_=DocAnnotationsListAllResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -977,9 +978,9 @@ class AsyncRawAnnotationsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -988,9 +989,9 @@ class AsyncRawAnnotationsClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1012,7 +1013,7 @@ class AsyncRawAnnotationsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocAnnotationsList200Response]:
+    ) -> AsyncHttpResponse[DocAnnotationsListResponse]:
         """
         Parameters
         ----------
@@ -1021,7 +1022,7 @@ class AsyncRawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -1031,7 +1032,7 @@ class AsyncRawAnnotationsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocAnnotationsList200Response]
+        AsyncHttpResponse[DocAnnotationsListResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -1045,9 +1046,9 @@ class AsyncRawAnnotationsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocAnnotationsList200Response,
+                    DocAnnotationsListResponse,
                     parse_obj_as(
-                        type_=DocAnnotationsList200Response,  # type: ignore
+                        type_=DocAnnotationsListResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1056,9 +1057,9 @@ class AsyncRawAnnotationsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1082,7 +1083,7 @@ class AsyncRawAnnotationsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocAnnotationsCreate200Response]:
+    ) -> AsyncHttpResponse[DocAnnotationsCreateResponse]:
         """
         Doc JWTs may instead carry collab scopes (annotations:create:self, …) that refine per-annotation authorship rules; the API token is exempt from both.
 
@@ -1093,7 +1094,7 @@ class AsyncRawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         request : DocAnnotationsCreateRequest
 
@@ -1108,7 +1109,7 @@ class AsyncRawAnnotationsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocAnnotationsCreate200Response]
+        AsyncHttpResponse[DocAnnotationsCreateResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -1126,9 +1127,9 @@ class AsyncRawAnnotationsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocAnnotationsCreate200Response,
+                    DocAnnotationsCreateResponse,
                     parse_obj_as(
-                        type_=DocAnnotationsCreate200Response,  # type: ignore
+                        type_=DocAnnotationsCreateResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1137,9 +1138,9 @@ class AsyncRawAnnotationsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1148,9 +1149,9 @@ class AsyncRawAnnotationsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1169,12 +1170,12 @@ class AsyncRawAnnotationsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocAnnotationsDelete200Response]:
+    ) -> AsyncHttpResponse[DocAnnotationsDeleteResponse]:
         """
         Parameters
         ----------
@@ -1183,9 +1184,9 @@ class AsyncRawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
@@ -1199,11 +1200,11 @@ class AsyncRawAnnotationsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocAnnotationsDelete200Response]
+        AsyncHttpResponse[DocAnnotationsDeleteResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annot_key)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annotation_key)}",
             method="DELETE",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -1214,9 +1215,9 @@ class AsyncRawAnnotationsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocAnnotationsDelete200Response,
+                    DocAnnotationsDeleteResponse,
                     parse_obj_as(
-                        type_=DocAnnotationsDelete200Response,  # type: ignore
+                        type_=DocAnnotationsDeleteResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1225,9 +1226,9 @@ class AsyncRawAnnotationsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1246,13 +1247,13 @@ class AsyncRawAnnotationsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         request: DocAnnotationsUpdateRequest,
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocAnnotationsUpdate200Response]:
+    ) -> AsyncHttpResponse[DocAnnotationsUpdateResponse]:
         """
         Parameters
         ----------
@@ -1261,9 +1262,9 @@ class AsyncRawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         request : DocAnnotationsUpdateRequest
@@ -1279,11 +1280,11 @@ class AsyncRawAnnotationsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocAnnotationsUpdate200Response]
+        AsyncHttpResponse[DocAnnotationsUpdateResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annot_key)}",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annotation_key)}",
             method="PATCH",
             json=request,
             headers={
@@ -1297,9 +1298,9 @@ class AsyncRawAnnotationsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocAnnotationsUpdate200Response,
+                    DocAnnotationsUpdateResponse,
                     parse_obj_as(
-                        type_=DocAnnotationsUpdate200Response,  # type: ignore
+                        type_=DocAnnotationsUpdateResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1308,9 +1309,9 @@ class AsyncRawAnnotationsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1319,9 +1320,9 @@ class AsyncRawAnnotationsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1341,7 +1342,7 @@ class AsyncRawAnnotationsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -1354,9 +1355,9 @@ class AsyncRawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
@@ -1371,7 +1372,7 @@ class AsyncRawAnnotationsClient:
             OK
         """
         async with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annot_key)}/resources/appearance",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annotation_key)}/resources/appearance",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -1392,9 +1393,9 @@ class AsyncRawAnnotationsClient:
                         raise BadRequestError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -1403,9 +1404,9 @@ class AsyncRawAnnotationsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -1432,7 +1433,7 @@ class AsyncRawAnnotationsClient:
         doc_id: str,
         layer_name: str,
         page_key: str,
-        annot_key: str,
+        annotation_key: str,
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
@@ -1447,9 +1448,9 @@ class AsyncRawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
-        annot_key : str
+        annotation_key : str
             The annotation's address on the page: `obj:N`, its indirect object number, or `base:N` for an annotation the uploaded file stored inline (without an object number of its own), the position it was born at in the page's /Annots. The name the annotation's `ref` carries for life.
 
         document_password : typing.Optional[str]
@@ -1464,7 +1465,7 @@ class AsyncRawAnnotationsClient:
             OK
         """
         async with self._client_wrapper.httpx_client.stream(
-            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annot_key)}/resources/file",
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/annotations/pages/{encode_path_param(page_key)}/items/{encode_path_param(annotation_key)}/resources/file",
             method="GET",
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -1485,9 +1486,9 @@ class AsyncRawAnnotationsClient:
                         raise BadRequestError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -1496,9 +1497,9 @@ class AsyncRawAnnotationsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -1507,9 +1508,9 @@ class AsyncRawAnnotationsClient:
                         raise ContentTooLargeError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -1549,7 +1550,7 @@ class AsyncRawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         request : DocAnnotationsExportAppearanceRequest
 
@@ -1589,9 +1590,9 @@ class AsyncRawAnnotationsClient:
                         raise BadRequestError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -1600,9 +1601,9 @@ class AsyncRawAnnotationsClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -1633,7 +1634,7 @@ class AsyncRawAnnotationsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocAnnotationsFlatten200Response]:
+    ) -> AsyncHttpResponse[DocAnnotationsFlattenResponse]:
         """
         Parameters
         ----------
@@ -1642,7 +1643,7 @@ class AsyncRawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         request : DocAnnotationsFlattenRequest
 
@@ -1657,7 +1658,7 @@ class AsyncRawAnnotationsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocAnnotationsFlatten200Response]
+        AsyncHttpResponse[DocAnnotationsFlattenResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -1675,9 +1676,9 @@ class AsyncRawAnnotationsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocAnnotationsFlatten200Response,
+                    DocAnnotationsFlattenResponse,
                     parse_obj_as(
-                        type_=DocAnnotationsFlatten200Response,  # type: ignore
+                        type_=DocAnnotationsFlattenResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1686,9 +1687,9 @@ class AsyncRawAnnotationsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1697,9 +1698,9 @@ class AsyncRawAnnotationsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1724,7 +1725,7 @@ class AsyncRawAnnotationsClient:
         document_password: typing.Optional[str] = None,
         idempotency_key: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocAnnotationsReorder200Response]:
+    ) -> AsyncHttpResponse[DocAnnotationsReorderResponse]:
         """
         Parameters
         ----------
@@ -1733,7 +1734,7 @@ class AsyncRawAnnotationsClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         refs : typing.Sequence[AnnotationRef]
 
@@ -1750,7 +1751,7 @@ class AsyncRawAnnotationsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocAnnotationsReorder200Response]
+        AsyncHttpResponse[DocAnnotationsReorderResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -1775,9 +1776,9 @@ class AsyncRawAnnotationsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocAnnotationsReorder200Response,
+                    DocAnnotationsReorderResponse,
                     parse_obj_as(
-                        type_=DocAnnotationsReorder200Response,  # type: ignore
+                        type_=DocAnnotationsReorderResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1786,9 +1787,9 @@ class AsyncRawAnnotationsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -1797,9 +1798,9 @@ class AsyncRawAnnotationsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

@@ -9,41 +9,30 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .form_field_checkbox_default_value_entry import FormFieldCheckboxDefaultValueEntry
 from .form_field_checkbox_origin import FormFieldCheckboxOrigin
-from .form_field_checkbox_value_entry import FormFieldCheckboxValueEntry
 from .form_field_checkbox_widgets_item import FormFieldCheckboxWidgetsItem
-from .form_field_combobox_default_value_entry import FormFieldComboboxDefaultValueEntry
 from .form_field_combobox_options_item import FormFieldComboboxOptionsItem
 from .form_field_combobox_origin import FormFieldComboboxOrigin
-from .form_field_combobox_value_entry import FormFieldComboboxValueEntry
-from .form_field_listbox_default_value_entry import FormFieldListboxDefaultValueEntry
 from .form_field_listbox_options_item import FormFieldListboxOptionsItem
 from .form_field_listbox_origin import FormFieldListboxOrigin
-from .form_field_listbox_value_entry import FormFieldListboxValueEntry
-from .form_field_pushbutton_default_value_entry import FormFieldPushbuttonDefaultValueEntry
 from .form_field_pushbutton_origin import FormFieldPushbuttonOrigin
-from .form_field_pushbutton_value_entry import FormFieldPushbuttonValueEntry
-from .form_field_radio_default_value_entry import FormFieldRadioDefaultValueEntry
 from .form_field_radio_origin import FormFieldRadioOrigin
-from .form_field_radio_value_entry import FormFieldRadioValueEntry
 from .form_field_radio_widgets_item import FormFieldRadioWidgetsItem
 from .form_field_ref import FormFieldRef
-from .form_field_signature_default_value_entry import FormFieldSignatureDefaultValueEntry
 from .form_field_signature_origin import FormFieldSignatureOrigin
-from .form_field_signature_value_entry import FormFieldSignatureValueEntry
-from .form_field_text_default_value_entry import FormFieldTextDefaultValueEntry
 from .form_field_text_origin import FormFieldTextOrigin
-from .form_field_text_value_entry import FormFieldTextValueEntry
-from .form_field_unknown_default_value_entry import FormFieldUnknownDefaultValueEntry
 from .form_field_unknown_origin import FormFieldUnknownOrigin
-from .form_field_unknown_value_entry import FormFieldUnknownValueEntry
+from .form_value_entry import FormValueEntry
 from .form_widget import FormWidget
 from .pdf_field_actions import PdfFieldActions
 
 
 class FormField_Text(UniversalBaseModel):
-    family: typing.Literal["text"] = "text"
+    """
+    A form field, by its `family`. A newer server can add families: read one your client doesn't know as `unknown`, keeping the fields every field has, with `rawValue` an empty string when the body has none.
+    """
+
+    kind: typing.Literal["text"] = "text"
     ref: FormFieldRef
     name: str
     origin: FormFieldTextOrigin
@@ -57,12 +46,10 @@ class FormField_Text(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="mappingName"), pydantic.Field(alias="mappingName")
     ] = None
     value_entry: typing_extensions.Annotated[
-        FormFieldTextValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
+        FormValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
     ]
     default_value_entry: typing_extensions.Annotated[
-        FormFieldTextDefaultValueEntry,
-        FieldMetadata(alias="defaultValueEntry"),
-        pydantic.Field(alias="defaultValueEntry"),
+        FormValueEntry, FieldMetadata(alias="defaultValueEntry"), pydantic.Field(alias="defaultValueEntry")
     ]
     actions: typing.Optional[PdfFieldActions] = None
     group_id: typing_extensions.Annotated[
@@ -109,7 +96,11 @@ class FormField_Text(UniversalBaseModel):
 
 
 class FormField_Checkbox(UniversalBaseModel):
-    family: typing.Literal["checkbox"] = "checkbox"
+    """
+    A form field, by its `family`. A newer server can add families: read one your client doesn't know as `unknown`, keeping the fields every field has, with `rawValue` an empty string when the body has none.
+    """
+
+    kind: typing.Literal["checkbox"] = "checkbox"
     ref: FormFieldRef
     name: str
     origin: FormFieldCheckboxOrigin
@@ -123,12 +114,10 @@ class FormField_Checkbox(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="mappingName"), pydantic.Field(alias="mappingName")
     ] = None
     value_entry: typing_extensions.Annotated[
-        FormFieldCheckboxValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
+        FormValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
     ]
     default_value_entry: typing_extensions.Annotated[
-        FormFieldCheckboxDefaultValueEntry,
-        FieldMetadata(alias="defaultValueEntry"),
-        pydantic.Field(alias="defaultValueEntry"),
+        FormValueEntry, FieldMetadata(alias="defaultValueEntry"), pydantic.Field(alias="defaultValueEntry")
     ]
     actions: typing.Optional[PdfFieldActions] = None
     group_id: typing_extensions.Annotated[
@@ -169,7 +158,11 @@ class FormField_Checkbox(UniversalBaseModel):
 
 
 class FormField_Radio(UniversalBaseModel):
-    family: typing.Literal["radio"] = "radio"
+    """
+    A form field, by its `family`. A newer server can add families: read one your client doesn't know as `unknown`, keeping the fields every field has, with `rawValue` an empty string when the body has none.
+    """
+
+    kind: typing.Literal["radio"] = "radio"
     ref: FormFieldRef
     name: str
     origin: FormFieldRadioOrigin
@@ -183,12 +176,10 @@ class FormField_Radio(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="mappingName"), pydantic.Field(alias="mappingName")
     ] = None
     value_entry: typing_extensions.Annotated[
-        FormFieldRadioValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
+        FormValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
     ]
     default_value_entry: typing_extensions.Annotated[
-        FormFieldRadioDefaultValueEntry,
-        FieldMetadata(alias="defaultValueEntry"),
-        pydantic.Field(alias="defaultValueEntry"),
+        FormValueEntry, FieldMetadata(alias="defaultValueEntry"), pydantic.Field(alias="defaultValueEntry")
     ]
     actions: typing.Optional[PdfFieldActions] = None
     group_id: typing_extensions.Annotated[
@@ -232,7 +223,11 @@ class FormField_Radio(UniversalBaseModel):
 
 
 class FormField_Combobox(UniversalBaseModel):
-    family: typing.Literal["combobox"] = "combobox"
+    """
+    A form field, by its `family`. A newer server can add families: read one your client doesn't know as `unknown`, keeping the fields every field has, with `rawValue` an empty string when the body has none.
+    """
+
+    kind: typing.Literal["combobox"] = "combobox"
     ref: FormFieldRef
     name: str
     origin: FormFieldComboboxOrigin
@@ -246,12 +241,10 @@ class FormField_Combobox(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="mappingName"), pydantic.Field(alias="mappingName")
     ] = None
     value_entry: typing_extensions.Annotated[
-        FormFieldComboboxValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
+        FormValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
     ]
     default_value_entry: typing_extensions.Annotated[
-        FormFieldComboboxDefaultValueEntry,
-        FieldMetadata(alias="defaultValueEntry"),
-        pydantic.Field(alias="defaultValueEntry"),
+        FormValueEntry, FieldMetadata(alias="defaultValueEntry"), pydantic.Field(alias="defaultValueEntry")
     ]
     actions: typing.Optional[PdfFieldActions] = None
     group_id: typing_extensions.Annotated[
@@ -294,7 +287,11 @@ class FormField_Combobox(UniversalBaseModel):
 
 
 class FormField_Listbox(UniversalBaseModel):
-    family: typing.Literal["listbox"] = "listbox"
+    """
+    A form field, by its `family`. A newer server can add families: read one your client doesn't know as `unknown`, keeping the fields every field has, with `rawValue` an empty string when the body has none.
+    """
+
+    kind: typing.Literal["listbox"] = "listbox"
     ref: FormFieldRef
     name: str
     origin: FormFieldListboxOrigin
@@ -308,12 +305,10 @@ class FormField_Listbox(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="mappingName"), pydantic.Field(alias="mappingName")
     ] = None
     value_entry: typing_extensions.Annotated[
-        FormFieldListboxValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
+        FormValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
     ]
     default_value_entry: typing_extensions.Annotated[
-        FormFieldListboxDefaultValueEntry,
-        FieldMetadata(alias="defaultValueEntry"),
-        pydantic.Field(alias="defaultValueEntry"),
+        FormValueEntry, FieldMetadata(alias="defaultValueEntry"), pydantic.Field(alias="defaultValueEntry")
     ]
     actions: typing.Optional[PdfFieldActions] = None
     group_id: typing_extensions.Annotated[
@@ -361,7 +356,11 @@ class FormField_Listbox(UniversalBaseModel):
 
 
 class FormField_Pushbutton(UniversalBaseModel):
-    family: typing.Literal["pushbutton"] = "pushbutton"
+    """
+    A form field, by its `family`. A newer server can add families: read one your client doesn't know as `unknown`, keeping the fields every field has, with `rawValue` an empty string when the body has none.
+    """
+
+    kind: typing.Literal["pushbutton"] = "pushbutton"
     ref: FormFieldRef
     name: str
     origin: FormFieldPushbuttonOrigin
@@ -375,12 +374,10 @@ class FormField_Pushbutton(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="mappingName"), pydantic.Field(alias="mappingName")
     ] = None
     value_entry: typing_extensions.Annotated[
-        FormFieldPushbuttonValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
+        FormValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
     ]
     default_value_entry: typing_extensions.Annotated[
-        FormFieldPushbuttonDefaultValueEntry,
-        FieldMetadata(alias="defaultValueEntry"),
-        pydantic.Field(alias="defaultValueEntry"),
+        FormValueEntry, FieldMetadata(alias="defaultValueEntry"), pydantic.Field(alias="defaultValueEntry")
     ]
     actions: typing.Optional[PdfFieldActions] = None
     group_id: typing_extensions.Annotated[
@@ -417,7 +414,11 @@ class FormField_Pushbutton(UniversalBaseModel):
 
 
 class FormField_Signature(UniversalBaseModel):
-    family: typing.Literal["signature"] = "signature"
+    """
+    A form field, by its `family`. A newer server can add families: read one your client doesn't know as `unknown`, keeping the fields every field has, with `rawValue` an empty string when the body has none.
+    """
+
+    kind: typing.Literal["signature"] = "signature"
     ref: FormFieldRef
     name: str
     origin: FormFieldSignatureOrigin
@@ -431,12 +432,10 @@ class FormField_Signature(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="mappingName"), pydantic.Field(alias="mappingName")
     ] = None
     value_entry: typing_extensions.Annotated[
-        FormFieldSignatureValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
+        FormValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
     ]
     default_value_entry: typing_extensions.Annotated[
-        FormFieldSignatureDefaultValueEntry,
-        FieldMetadata(alias="defaultValueEntry"),
-        pydantic.Field(alias="defaultValueEntry"),
+        FormValueEntry, FieldMetadata(alias="defaultValueEntry"), pydantic.Field(alias="defaultValueEntry")
     ]
     actions: typing.Optional[PdfFieldActions] = None
     group_id: typing_extensions.Annotated[
@@ -473,7 +472,11 @@ class FormField_Signature(UniversalBaseModel):
 
 
 class FormField_Unknown(UniversalBaseModel):
-    family: typing.Literal["unknown"] = "unknown"
+    """
+    A form field, by its `family`. A newer server can add families: read one your client doesn't know as `unknown`, keeping the fields every field has, with `rawValue` an empty string when the body has none.
+    """
+
+    kind: typing.Literal["unknown"] = "unknown"
     ref: FormFieldRef
     name: str
     origin: FormFieldUnknownOrigin
@@ -487,12 +490,10 @@ class FormField_Unknown(UniversalBaseModel):
         typing.Optional[str], FieldMetadata(alias="mappingName"), pydantic.Field(alias="mappingName")
     ] = None
     value_entry: typing_extensions.Annotated[
-        FormFieldUnknownValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
+        FormValueEntry, FieldMetadata(alias="valueEntry"), pydantic.Field(alias="valueEntry")
     ]
     default_value_entry: typing_extensions.Annotated[
-        FormFieldUnknownDefaultValueEntry,
-        FieldMetadata(alias="defaultValueEntry"),
-        pydantic.Field(alias="defaultValueEntry"),
+        FormValueEntry, FieldMetadata(alias="defaultValueEntry"), pydantic.Field(alias="defaultValueEntry")
     ]
     actions: typing.Optional[PdfFieldActions] = None
     group_id: typing_extensions.Annotated[
@@ -540,5 +541,34 @@ FormField = typing_extensions.Annotated[
         FormField_Signature,
         FormField_Unknown,
     ],
-    pydantic.Field(discriminator="family"),
+    pydantic.Field(discriminator="kind"),
 ]
+
+
+# A FormField of a kind this SDK doesn't know, one a newer server sends, reads
+# as `unknown`, keeping `rawValue` when the body carries it. A kind it knows is
+# read as that kind. Added after generation by
+# fern/scripts/record-sdk-metadata.mjs from
+# fern/tolerant-reading/open-unions.json.
+if IS_PYDANTIC_V2:
+    _KNOWN_KINDS = frozenset(
+        member.model_fields["kind"].default
+        for member in typing.get_args(typing.get_args(FormField)[0])
+    )
+
+    def _read_unknown_kind_as_unknown(value: typing.Any) -> typing.Any:
+        if not isinstance(value, dict):
+            return value
+        kind_ = value.get("kind")
+        if not isinstance(kind_, str) or kind_ in _KNOWN_KINDS:
+            return value
+        raw_value = value.get("rawValue")
+        return {
+            **value,
+            "kind": "unknown",
+            "rawValue": raw_value if isinstance(raw_value, str) else "",
+        }
+
+    FormField = typing_extensions.Annotated[  # type: ignore[misc]
+        FormField, pydantic.BeforeValidator(_read_unknown_kind_as_unknown)
+    ]

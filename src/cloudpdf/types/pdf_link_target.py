@@ -11,6 +11,10 @@ from .page_destination import PageDestination
 
 
 class PdfLinkTarget_Goto(UniversalBaseModel):
+    """
+    Where a link goes, by its `kind`. A newer server can add kinds: read one your client doesn't know as `unsupported`.
+    """
+
     kind: typing.Literal["goto"] = "goto"
     destination: PageDestination
 
@@ -25,6 +29,10 @@ class PdfLinkTarget_Goto(UniversalBaseModel):
 
 
 class PdfLinkTarget_Uri(UniversalBaseModel):
+    """
+    Where a link goes, by its `kind`. A newer server can add kinds: read one your client doesn't know as `unsupported`.
+    """
+
     kind: typing.Literal["uri"] = "uri"
     uri: str
 
@@ -39,6 +47,10 @@ class PdfLinkTarget_Uri(UniversalBaseModel):
 
 
 class PdfLinkTarget_GotoRemote(UniversalBaseModel):
+    """
+    Where a link goes, by its `kind`. A newer server can add kinds: read one your client doesn't know as `unsupported`.
+    """
+
     kind: typing.Literal["goto-remote"] = "goto-remote"
     file: str
 
@@ -53,6 +65,10 @@ class PdfLinkTarget_GotoRemote(UniversalBaseModel):
 
 
 class PdfLinkTarget_Launch(UniversalBaseModel):
+    """
+    Where a link goes, by its `kind`. A newer server can add kinds: read one your client doesn't know as `unsupported`.
+    """
+
     kind: typing.Literal["launch"] = "launch"
     path: str
 
@@ -67,6 +83,10 @@ class PdfLinkTarget_Launch(UniversalBaseModel):
 
 
 class PdfLinkTarget_Javascript(UniversalBaseModel):
+    """
+    Where a link goes, by its `kind`. A newer server can add kinds: read one your client doesn't know as `unsupported`.
+    """
+
     kind: typing.Literal["javascript"] = "javascript"
 
     if IS_PYDANTIC_V2:
@@ -80,6 +100,10 @@ class PdfLinkTarget_Javascript(UniversalBaseModel):
 
 
 class PdfLinkTarget_Named(UniversalBaseModel):
+    """
+    Where a link goes, by its `kind`. A newer server can add kinds: read one your client doesn't know as `unsupported`.
+    """
+
     kind: typing.Literal["named"] = "named"
     name: str
 
@@ -94,6 +118,10 @@ class PdfLinkTarget_Named(UniversalBaseModel):
 
 
 class PdfLinkTarget_Unsupported(UniversalBaseModel):
+    """
+    Where a link goes, by its `kind`. A newer server can add kinds: read one your client doesn't know as `unsupported`.
+    """
+
     kind: typing.Literal["unsupported"] = "unsupported"
 
     if IS_PYDANTIC_V2:
@@ -118,3 +146,29 @@ PdfLinkTarget = typing_extensions.Annotated[
     ],
     pydantic.Field(discriminator="kind"),
 ]
+
+
+# A PdfLinkTarget of a kind this SDK doesn't know, one a newer server sends,
+# reads as `unsupported`. A kind it knows is read as that kind. Added after
+# generation by fern/scripts/record-sdk-metadata.mjs from
+# fern/tolerant-reading/open-unions.json.
+if IS_PYDANTIC_V2:
+    _KNOWN_KINDS = frozenset(
+        member.model_fields["kind"].default
+        for member in typing.get_args(typing.get_args(PdfLinkTarget)[0])
+    )
+
+    def _read_unknown_kind_as_unsupported(value: typing.Any) -> typing.Any:
+        if not isinstance(value, dict):
+            return value
+        kind_ = value.get("kind")
+        if not isinstance(kind_, str) or kind_ in _KNOWN_KINDS:
+            return value
+        return {
+            **value,
+            "kind": "unsupported",
+        }
+
+    PdfLinkTarget = typing_extensions.Annotated[  # type: ignore[misc]
+        PdfLinkTarget, pydantic.BeforeValidator(_read_unknown_kind_as_unsupported)
+    ]

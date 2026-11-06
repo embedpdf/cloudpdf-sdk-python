@@ -2,16 +2,17 @@
 
 from __future__ import annotations
 
+import datetime as dt
 import typing
 
 from ..core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ..core.request_options import RequestOptions
-from ..types.grants_archive200response import GrantsArchive200Response
-from ..types.grants_create200response import GrantsCreate200Response
-from ..types.grants_exchange200response import GrantsExchange200Response
-from ..types.grants_get200response import GrantsGet200Response
-from ..types.grants_list200response import GrantsList200Response
-from ..types.grants_update200response import GrantsUpdate200Response
+from ..types.grants_archive_response import GrantsArchiveResponse
+from ..types.grants_create_response import GrantsCreateResponse
+from ..types.grants_exchange_response import GrantsExchangeResponse
+from ..types.grants_get_response import GrantsGetResponse
+from ..types.grants_list_response import GrantsListResponse
+from ..types.grants_update_response import GrantsUpdateResponse
 from ..types.identity import Identity
 from .raw_client import AsyncRawGrantsClient, RawGrantsClient
 from .types.grants_create_request_layer_mode import GrantsCreateRequestLayerMode
@@ -52,7 +53,7 @@ class GrantsClient:
         restart: typing.Optional[bool] = OMIT,
         visitor_identity: typing.Optional[GrantsExchangeRequestVisitorIdentity] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> GrantsExchange200Response:
+    ) -> GrantsExchangeResponse:
         """
         Unauthenticated, but requires a browser Origin header, checked against the grant allowlist. Unknown, deleted, paused and archived grants are indistinguishable (404). Passphrase-protected grants return 422 GrantPassphraseRequired until `passphrase` is supplied. A grant that asks its visitors who they are on open returns 422 VisitorIdentityRequired until the required answers are given; `error.details` carries `fields` (what the grant asks), `missing`, `invalid`, `purpose` and `privacyUrl`. A grant that asks before the first change issues the session at once with `visitor.identityRequest`, and writes answer 403 VisitorIdentityRequired with the same details until the visitor exchanges again with their answers. Answers that can not be taken answer 422 on any grant. Mounted only when the deployment can sign (HS256 mode).
 
@@ -73,7 +74,7 @@ class GrantsClient:
 
         Returns
         -------
-        GrantsExchange200Response
+        GrantsExchangeResponse
             OK
 
         Examples
@@ -106,7 +107,7 @@ class GrantsClient:
         doc_id: typing.Optional[str] = None,
         archived: typing.Optional[bool] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> GrantsList200Response:
+    ) -> GrantsListResponse:
         """
         Parameters
         ----------
@@ -125,7 +126,7 @@ class GrantsClient:
 
         Returns
         -------
-        GrantsList200Response
+        GrantsListResponse
             OK
 
         Examples
@@ -160,9 +161,9 @@ class GrantsClient:
         origins: typing.Optional[typing.Sequence[str]] = OMIT,
         passphrase: typing.Optional[str] = OMIT,
         session_ttl_seconds: typing.Optional[int] = OMIT,
-        expires_at: typing.Optional[int] = OMIT,
+        expires_at: typing.Optional[dt.datetime] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> GrantsCreate200Response:
+    ) -> GrantsCreateResponse:
         """
         The returned id is what a link page or an embed opens. Its scope gives only document permissions the caller holds itself, as tokens.issue does. Mounted only when the deployment can sign (HS256 mode) — exchange mints session JWTs, so grants exist only where minting does.
 
@@ -194,14 +195,14 @@ class GrantsClient:
 
         session_ttl_seconds : typing.Optional[int]
 
-        expires_at : typing.Optional[int]
+        expires_at : typing.Optional[dt.datetime]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        GrantsCreate200Response
+        GrantsCreateResponse
             OK
 
         Examples
@@ -238,7 +239,7 @@ class GrantsClient:
 
     def get(
         self, tenant_id: str, grant_id: str, *, request_options: typing.Optional[RequestOptions] = None
-    ) -> GrantsGet200Response:
+    ) -> GrantsGetResponse:
         """
         Parameters
         ----------
@@ -251,7 +252,7 @@ class GrantsClient:
 
         Returns
         -------
-        GrantsGet200Response
+        GrantsGetResponse
             OK
 
         Examples
@@ -316,9 +317,9 @@ class GrantsClient:
         passphrase: typing.Optional[str] = OMIT,
         session_ttl_seconds: typing.Optional[int] = OMIT,
         disabled: typing.Optional[bool] = OMIT,
-        expires_at: typing.Optional[int] = OMIT,
+        expires_at: typing.Optional[dt.datetime] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> GrantsUpdate200Response:
+    ) -> GrantsUpdateResponse:
         """
         Parameters
         ----------
@@ -350,14 +351,14 @@ class GrantsClient:
 
         disabled : typing.Optional[bool]
 
-        expires_at : typing.Optional[int]
+        expires_at : typing.Optional[dt.datetime]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        GrantsUpdate200Response
+        GrantsUpdateResponse
             OK
 
         Examples
@@ -394,7 +395,7 @@ class GrantsClient:
 
     def archive(
         self, tenant_id: str, grant_id: str, *, request_options: typing.Optional[RequestOptions] = None
-    ) -> GrantsArchive200Response:
+    ) -> GrantsArchiveResponse:
         """
         Archiving is final: an archived grant never exchanges again, and to give access again you create a new grant. Pausing (`disabled`) is the reversible stop. An archived grant no longer counts as using its shared layer, so that layer can be deleted.
 
@@ -409,7 +410,7 @@ class GrantsClient:
 
         Returns
         -------
-        GrantsArchive200Response
+        GrantsArchiveResponse
             OK
 
         Examples
@@ -462,7 +463,7 @@ class AsyncGrantsClient:
         restart: typing.Optional[bool] = OMIT,
         visitor_identity: typing.Optional[GrantsExchangeRequestVisitorIdentity] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> GrantsExchange200Response:
+    ) -> GrantsExchangeResponse:
         """
         Unauthenticated, but requires a browser Origin header, checked against the grant allowlist. Unknown, deleted, paused and archived grants are indistinguishable (404). Passphrase-protected grants return 422 GrantPassphraseRequired until `passphrase` is supplied. A grant that asks its visitors who they are on open returns 422 VisitorIdentityRequired until the required answers are given; `error.details` carries `fields` (what the grant asks), `missing`, `invalid`, `purpose` and `privacyUrl`. A grant that asks before the first change issues the session at once with `visitor.identityRequest`, and writes answer 403 VisitorIdentityRequired with the same details until the visitor exchanges again with their answers. Answers that can not be taken answer 422 on any grant. Mounted only when the deployment can sign (HS256 mode).
 
@@ -483,7 +484,7 @@ class AsyncGrantsClient:
 
         Returns
         -------
-        GrantsExchange200Response
+        GrantsExchangeResponse
             OK
 
         Examples
@@ -524,7 +525,7 @@ class AsyncGrantsClient:
         doc_id: typing.Optional[str] = None,
         archived: typing.Optional[bool] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> GrantsList200Response:
+    ) -> GrantsListResponse:
         """
         Parameters
         ----------
@@ -543,7 +544,7 @@ class AsyncGrantsClient:
 
         Returns
         -------
-        GrantsList200Response
+        GrantsListResponse
             OK
 
         Examples
@@ -586,9 +587,9 @@ class AsyncGrantsClient:
         origins: typing.Optional[typing.Sequence[str]] = OMIT,
         passphrase: typing.Optional[str] = OMIT,
         session_ttl_seconds: typing.Optional[int] = OMIT,
-        expires_at: typing.Optional[int] = OMIT,
+        expires_at: typing.Optional[dt.datetime] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> GrantsCreate200Response:
+    ) -> GrantsCreateResponse:
         """
         The returned id is what a link page or an embed opens. Its scope gives only document permissions the caller holds itself, as tokens.issue does. Mounted only when the deployment can sign (HS256 mode) — exchange mints session JWTs, so grants exist only where minting does.
 
@@ -620,14 +621,14 @@ class AsyncGrantsClient:
 
         session_ttl_seconds : typing.Optional[int]
 
-        expires_at : typing.Optional[int]
+        expires_at : typing.Optional[dt.datetime]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        GrantsCreate200Response
+        GrantsCreateResponse
             OK
 
         Examples
@@ -672,7 +673,7 @@ class AsyncGrantsClient:
 
     async def get(
         self, tenant_id: str, grant_id: str, *, request_options: typing.Optional[RequestOptions] = None
-    ) -> GrantsGet200Response:
+    ) -> GrantsGetResponse:
         """
         Parameters
         ----------
@@ -685,7 +686,7 @@ class AsyncGrantsClient:
 
         Returns
         -------
-        GrantsGet200Response
+        GrantsGetResponse
             OK
 
         Examples
@@ -768,9 +769,9 @@ class AsyncGrantsClient:
         passphrase: typing.Optional[str] = OMIT,
         session_ttl_seconds: typing.Optional[int] = OMIT,
         disabled: typing.Optional[bool] = OMIT,
-        expires_at: typing.Optional[int] = OMIT,
+        expires_at: typing.Optional[dt.datetime] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> GrantsUpdate200Response:
+    ) -> GrantsUpdateResponse:
         """
         Parameters
         ----------
@@ -802,14 +803,14 @@ class AsyncGrantsClient:
 
         disabled : typing.Optional[bool]
 
-        expires_at : typing.Optional[int]
+        expires_at : typing.Optional[dt.datetime]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        GrantsUpdate200Response
+        GrantsUpdateResponse
             OK
 
         Examples
@@ -854,7 +855,7 @@ class AsyncGrantsClient:
 
     async def archive(
         self, tenant_id: str, grant_id: str, *, request_options: typing.Optional[RequestOptions] = None
-    ) -> GrantsArchive200Response:
+    ) -> GrantsArchiveResponse:
         """
         Archiving is final: an archived grant never exchanges again, and to give access again you create a new grant. Pausing (`disabled`) is the reversible stop. An archived grant no longer counts as using its shared layer, so that layer can be deleted.
 
@@ -869,7 +870,7 @@ class AsyncGrantsClient:
 
         Returns
         -------
-        GrantsArchive200Response
+        GrantsArchiveResponse
             OK
 
         Examples

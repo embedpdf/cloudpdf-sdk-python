@@ -17,12 +17,12 @@ from ..errors.conflict_error import ConflictError
 from ..errors.content_too_large_error import ContentTooLargeError
 from ..errors.not_found_error import NotFoundError
 from ..errors.not_implemented_error import NotImplementedError
-from ..types.doc_changes200response import DocChanges200Response
-from ..types.doc_download_link200response import DocDownloadLink200Response
-from ..types.doc_download_link501response import DocDownloadLink501Response
-from ..types.doc_head200response import DocHead200Response
-from ..types.doc_manifest200response import DocManifest200Response
-from ..types.doc_text200response import DocText200Response
+from ..types.doc_changes_response import DocChangesResponse
+from ..types.doc_download_link_response import DocDownloadLinkResponse
+from ..types.doc_head_response import DocHeadResponse
+from ..types.doc_manifest_response import DocManifestResponse
+from ..types.doc_text_response import DocTextResponse
+from ..types.error_response import ErrorResponse
 from .types.doc_changes_request_changes_item import DocChangesRequestChangesItem
 from pydantic import ValidationError
 
@@ -40,7 +40,7 @@ class RawDocClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocHead200Response]:
+    ) -> HttpResponse[DocHeadResponse]:
         """
         Parameters
         ----------
@@ -54,7 +54,7 @@ class RawDocClient:
 
         Returns
         -------
-        HttpResponse[DocHead200Response]
+        HttpResponse[DocHeadResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -68,9 +68,9 @@ class RawDocClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocHead200Response,
+                    DocHeadResponse,
                     parse_obj_as(
-                        type_=DocHead200Response,  # type: ignore
+                        type_=DocHeadResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -79,9 +79,9 @@ class RawDocClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -103,7 +103,7 @@ class RawDocClient:
         changes: typing.Sequence[DocChangesRequestChangesItem],
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocChanges200Response]:
+    ) -> HttpResponse[DocChangesResponse]:
         """
         Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`, outline `doc.outline.modify`, pages `doc.pages.assemble`, embedded files `doc.attachments.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork, a PDF whose pages come in) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
 
@@ -123,7 +123,7 @@ class RawDocClient:
 
         Returns
         -------
-        HttpResponse[DocChanges200Response]
+        HttpResponse[DocChangesResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -144,9 +144,9 @@ class RawDocClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocChanges200Response,
+                    DocChangesResponse,
                     parse_obj_as(
-                        type_=DocChanges200Response,  # type: ignore
+                        type_=DocChangesResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -155,9 +155,9 @@ class RawDocClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -166,9 +166,9 @@ class RawDocClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -177,9 +177,9 @@ class RawDocClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -188,9 +188,9 @@ class RawDocClient:
                 raise ContentTooLargeError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -252,9 +252,9 @@ class RawDocClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -281,9 +281,9 @@ class RawDocClient:
         layer_name: str,
         *,
         document_password: typing.Optional[str] = None,
-        expires_in: typing.Optional[int] = OMIT,
+        expires_in_seconds: typing.Optional[int] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocDownloadLink200Response]:
+    ) -> HttpResponse[DocDownloadLinkResponse]:
         """
         The link opens the layer as it is when created: once the layer changes, it answers 404, so create it right before handing it over. It downloads that one file and nothing else, and a password-protected document is checked when the link is created. Deployments that verify tokens with their own keys (JWKS) mint links on their backend: a doc token with `layer_name`, a `download: { docVersion, mode: "incremental" }` claim and a short `exp`, passed as `link` on the versioned download URL.
 
@@ -296,21 +296,21 @@ class RawDocClient:
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
 
-        expires_in : typing.Optional[int]
+        expires_in_seconds : typing.Optional[int]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        HttpResponse[DocDownloadLink200Response]
+        HttpResponse[DocDownloadLinkResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
             f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/download-link",
             method="POST",
             json={
-                "expiresIn": expires_in,
+                "expiresInSeconds": expires_in_seconds,
             },
             headers={
                 "content-type": "application/json",
@@ -322,9 +322,9 @@ class RawDocClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocDownloadLink200Response,
+                    DocDownloadLinkResponse,
                     parse_obj_as(
-                        type_=DocDownloadLink200Response,  # type: ignore
+                        type_=DocDownloadLinkResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -333,9 +333,9 @@ class RawDocClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -344,9 +344,9 @@ class RawDocClient:
                 raise NotImplementedError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        DocDownloadLink501Response,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=DocDownloadLink501Response,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -367,7 +367,7 @@ class RawDocClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocManifest200Response]:
+    ) -> HttpResponse[DocManifestResponse]:
         """
         Parameters
         ----------
@@ -383,7 +383,7 @@ class RawDocClient:
 
         Returns
         -------
-        HttpResponse[DocManifest200Response]
+        HttpResponse[DocManifestResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -397,9 +397,9 @@ class RawDocClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocManifest200Response,
+                    DocManifestResponse,
                     parse_obj_as(
-                        type_=DocManifest200Response,  # type: ignore
+                        type_=DocManifestResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -408,9 +408,9 @@ class RawDocClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -444,7 +444,7 @@ class RawDocClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -478,9 +478,9 @@ class RawDocClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -509,7 +509,7 @@ class RawDocClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocText200Response]:
+    ) -> HttpResponse[DocTextResponse]:
         """
         Parameters
         ----------
@@ -518,7 +518,7 @@ class RawDocClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -528,7 +528,7 @@ class RawDocClient:
 
         Returns
         -------
-        HttpResponse[DocText200Response]
+        HttpResponse[DocTextResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -542,9 +542,9 @@ class RawDocClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocText200Response,
+                    DocTextResponse,
                     parse_obj_as(
-                        type_=DocText200Response,  # type: ignore
+                        type_=DocTextResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -553,9 +553,9 @@ class RawDocClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -580,7 +580,7 @@ class AsyncRawDocClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocHead200Response]:
+    ) -> AsyncHttpResponse[DocHeadResponse]:
         """
         Parameters
         ----------
@@ -594,7 +594,7 @@ class AsyncRawDocClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocHead200Response]
+        AsyncHttpResponse[DocHeadResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -608,9 +608,9 @@ class AsyncRawDocClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocHead200Response,
+                    DocHeadResponse,
                     parse_obj_as(
-                        type_=DocHead200Response,  # type: ignore
+                        type_=DocHeadResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -619,9 +619,9 @@ class AsyncRawDocClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -643,7 +643,7 @@ class AsyncRawDocClient:
         changes: typing.Sequence[DocChangesRequestChangesItem],
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocChanges200Response]:
+    ) -> AsyncHttpResponse[DocChangesResponse]:
         """
         Each change stands on its own and names itself by `opId`: a refused change rolls back alone, and the answer lists every change in order, applied with its result or refused with its error. Asked again under its `opId`, a change gets the same answer, refusals included; a different change under an answered `opId` is refused (IdempotencyKeyReused). `{ opId, undoOf }` undoes an earlier change of the caller, here or in an earlier request; an undo leaves alone what was changed since, and the undo of an undo redoes. A redaction, a flatten, a form repair or a completed signature ends undo for the changes before it (UndoUnavailable). Each op is checked against its own capability: annotation ops need `doc.annotate.modify`, form values `doc.forms.fill`, form structure `doc.forms.modify`, metadata `doc.metadata.modify`, outline `doc.outline.modify`, pages `doc.pages.assemble`, embedded files `doc.attachments.modify`. Bytes (a stamp's drawing, an attached file, a signature's artwork, a PDF whose pages come in) travel as multipart: a JSON `body` part, each op naming its files by role as `resources: { <role>: '<key>' }`, and each file as the part `resource:<key>`. At most 64 changes per request and 512 ops per change.
 
@@ -663,7 +663,7 @@ class AsyncRawDocClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocChanges200Response]
+        AsyncHttpResponse[DocChangesResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -684,9 +684,9 @@ class AsyncRawDocClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocChanges200Response,
+                    DocChangesResponse,
                     parse_obj_as(
-                        type_=DocChanges200Response,  # type: ignore
+                        type_=DocChangesResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -695,9 +695,9 @@ class AsyncRawDocClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -706,9 +706,9 @@ class AsyncRawDocClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -717,9 +717,9 @@ class AsyncRawDocClient:
                 raise ConflictError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -728,9 +728,9 @@ class AsyncRawDocClient:
                 raise ContentTooLargeError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -793,9 +793,9 @@ class AsyncRawDocClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -822,9 +822,9 @@ class AsyncRawDocClient:
         layer_name: str,
         *,
         document_password: typing.Optional[str] = None,
-        expires_in: typing.Optional[int] = OMIT,
+        expires_in_seconds: typing.Optional[int] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocDownloadLink200Response]:
+    ) -> AsyncHttpResponse[DocDownloadLinkResponse]:
         """
         The link opens the layer as it is when created: once the layer changes, it answers 404, so create it right before handing it over. It downloads that one file and nothing else, and a password-protected document is checked when the link is created. Deployments that verify tokens with their own keys (JWKS) mint links on their backend: a doc token with `layer_name`, a `download: { docVersion, mode: "incremental" }` claim and a short `exp`, passed as `link` on the versioned download URL.
 
@@ -837,21 +837,21 @@ class AsyncRawDocClient:
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
 
-        expires_in : typing.Optional[int]
+        expires_in_seconds : typing.Optional[int]
 
         request_options : typing.Optional[RequestOptions]
             Request-specific configuration.
 
         Returns
         -------
-        AsyncHttpResponse[DocDownloadLink200Response]
+        AsyncHttpResponse[DocDownloadLinkResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
             f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/download-link",
             method="POST",
             json={
-                "expiresIn": expires_in,
+                "expiresInSeconds": expires_in_seconds,
             },
             headers={
                 "content-type": "application/json",
@@ -863,9 +863,9 @@ class AsyncRawDocClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocDownloadLink200Response,
+                    DocDownloadLinkResponse,
                     parse_obj_as(
-                        type_=DocDownloadLink200Response,  # type: ignore
+                        type_=DocDownloadLinkResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -874,9 +874,9 @@ class AsyncRawDocClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -885,9 +885,9 @@ class AsyncRawDocClient:
                 raise NotImplementedError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        DocDownloadLink501Response,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=DocDownloadLink501Response,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -908,7 +908,7 @@ class AsyncRawDocClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocManifest200Response]:
+    ) -> AsyncHttpResponse[DocManifestResponse]:
         """
         Parameters
         ----------
@@ -924,7 +924,7 @@ class AsyncRawDocClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocManifest200Response]
+        AsyncHttpResponse[DocManifestResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -938,9 +938,9 @@ class AsyncRawDocClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocManifest200Response,
+                    DocManifestResponse,
                     parse_obj_as(
-                        type_=DocManifest200Response,  # type: ignore
+                        type_=DocManifestResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -949,9 +949,9 @@ class AsyncRawDocClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -985,7 +985,7 @@ class AsyncRawDocClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -1020,9 +1020,9 @@ class AsyncRawDocClient:
                         raise NotFoundError(
                             headers=dict(_response.headers),
                             body=typing.cast(
-                                typing.Any,
+                                ErrorResponse,
                                 parse_obj_as(
-                                    type_=typing.Any,  # type: ignore
+                                    type_=ErrorResponse,  # type: ignore
                                     object_=_response.json(),
                                 ),
                             ),
@@ -1051,7 +1051,7 @@ class AsyncRawDocClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocText200Response]:
+    ) -> AsyncHttpResponse[DocTextResponse]:
         """
         Parameters
         ----------
@@ -1060,7 +1060,7 @@ class AsyncRawDocClient:
         layer_name : str
 
         page_key : str
-            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotKey` and `fieldKey`.
+            The page's address, `obj:N`: the page's indirect object number, the durable identity every `PageLayout.ref` carries. Mirrors `annotationKey` and `fieldKey`.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -1070,7 +1070,7 @@ class AsyncRawDocClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocText200Response]
+        AsyncHttpResponse[DocTextResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -1084,9 +1084,9 @@ class AsyncRawDocClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocText200Response,
+                    DocTextResponse,
                     parse_obj_as(
-                        type_=DocText200Response,  # type: ignore
+                        type_=DocTextResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -1095,9 +1095,9 @@ class AsyncRawDocClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

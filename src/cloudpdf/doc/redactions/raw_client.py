@@ -14,7 +14,8 @@ from ...core.serialization import convert_and_respect_annotation_metadata
 from ...errors.bad_request_error import BadRequestError
 from ...errors.not_found_error import NotFoundError
 from ...types.annotation_ref import AnnotationRef
-from ...types.doc_redactions_apply200response import DocRedactionsApply200Response
+from ...types.doc_redactions_apply_response import DocRedactionsApplyResponse
+from ...types.error_response import ErrorResponse
 from ...types.page_ref import PageRef
 from pydantic import ValidationError
 
@@ -36,7 +37,7 @@ class RawRedactionsClient:
         pages: typing.Optional[typing.Sequence[PageRef]] = OMIT,
         annotations: typing.Optional[typing.Sequence[AnnotationRef]] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> HttpResponse[DocRedactionsApply200Response]:
+    ) -> HttpResponse[DocRedactionsApplyResponse]:
         """
         Parameters
         ----------
@@ -59,7 +60,7 @@ class RawRedactionsClient:
 
         Returns
         -------
-        HttpResponse[DocRedactionsApply200Response]
+        HttpResponse[DocRedactionsApplyResponse]
             OK
         """
         _response = self._client_wrapper.httpx_client.request(
@@ -84,9 +85,9 @@ class RawRedactionsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocRedactionsApply200Response,
+                    DocRedactionsApplyResponse,
                     parse_obj_as(
-                        type_=DocRedactionsApply200Response,  # type: ignore
+                        type_=DocRedactionsApplyResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -95,9 +96,9 @@ class RawRedactionsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -106,9 +107,9 @@ class RawRedactionsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -137,7 +138,7 @@ class AsyncRawRedactionsClient:
         pages: typing.Optional[typing.Sequence[PageRef]] = OMIT,
         annotations: typing.Optional[typing.Sequence[AnnotationRef]] = OMIT,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> AsyncHttpResponse[DocRedactionsApply200Response]:
+    ) -> AsyncHttpResponse[DocRedactionsApplyResponse]:
         """
         Parameters
         ----------
@@ -160,7 +161,7 @@ class AsyncRawRedactionsClient:
 
         Returns
         -------
-        AsyncHttpResponse[DocRedactionsApply200Response]
+        AsyncHttpResponse[DocRedactionsApplyResponse]
             OK
         """
         _response = await self._client_wrapper.httpx_client.request(
@@ -185,9 +186,9 @@ class AsyncRawRedactionsClient:
         try:
             if 200 <= _response.status_code < 300:
                 _data = typing.cast(
-                    DocRedactionsApply200Response,
+                    DocRedactionsApplyResponse,
                     parse_obj_as(
-                        type_=DocRedactionsApply200Response,  # type: ignore
+                        type_=DocRedactionsApplyResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -196,9 +197,9 @@ class AsyncRawRedactionsClient:
                 raise BadRequestError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),
@@ -207,9 +208,9 @@ class AsyncRawRedactionsClient:
                 raise NotFoundError(
                     headers=dict(_response.headers),
                     body=typing.cast(
-                        typing.Any,
+                        ErrorResponse,
                         parse_obj_as(
-                            type_=typing.Any,  # type: ignore
+                            type_=ErrorResponse,  # type: ignore
                             object_=_response.json(),
                         ),
                     ),

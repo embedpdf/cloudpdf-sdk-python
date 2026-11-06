@@ -4,7 +4,7 @@ import typing
 
 from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
-from ...types.doc_attachments_list200response import DocAttachmentsList200Response
+from ...types.doc_attachments_list_response import DocAttachmentsListResponse
 from .raw_client import AsyncRawAttachmentsClient, RawAttachmentsClient
 
 
@@ -80,7 +80,7 @@ class AttachmentsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocAttachmentsList200Response:
+    ) -> DocAttachmentsListResponse:
         """
         A file-attachment annotation's file is listed with the annotation; read its bytes with `doc.annotations.readFile`.
 
@@ -98,7 +98,7 @@ class AttachmentsClient:
 
         Returns
         -------
-        DocAttachmentsList200Response
+        DocAttachmentsListResponse
             OK
 
         Examples
@@ -200,7 +200,7 @@ class AsyncAttachmentsClient:
         *,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
-    ) -> DocAttachmentsList200Response:
+    ) -> DocAttachmentsListResponse:
         """
         A file-attachment annotation's file is listed with the annotation; read its bytes with `doc.annotations.readFile`.
 
@@ -218,7 +218,7 @@ class AsyncAttachmentsClient:
 
         Returns
         -------
-        DocAttachmentsList200Response
+        DocAttachmentsListResponse
             OK
 
         Examples
