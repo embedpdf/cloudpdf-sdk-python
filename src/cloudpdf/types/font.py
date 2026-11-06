@@ -14,6 +14,7 @@ from .font_source import FontSource
 class Font(UniversalBaseModel):
     name: str
     source: FontSource
+    built_in: typing_extensions.Annotated[bool, FieldMetadata(alias="builtIn"), pydantic.Field(alias="builtIn")]
     family_name: typing_extensions.Annotated[str, FieldMetadata(alias="familyName"), pydantic.Field(alias="familyName")]
     weight: int
     italic: bool
