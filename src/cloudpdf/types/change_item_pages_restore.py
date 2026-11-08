@@ -4,14 +4,14 @@ import typing
 
 import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
-from .change_item_pages_restore_layout import ChangeItemPagesRestoreLayout
 from .mutation_meta import MutationMeta
+from .page_list_snapshot import PageListSnapshot
 from .page_ref import PageRef
 
 
 class ChangeItemPagesRestore(UniversalBaseModel):
     pages: typing.List[PageRef]
-    layout: ChangeItemPagesRestoreLayout
+    layout: PageListSnapshot
     meta: MutationMeta
 
     if IS_PYDANTIC_V2:

@@ -15,13 +15,7 @@ from .attachment import Attachment
 from .attachment_mutation_meta import AttachmentMutationMeta
 from .change_item_annotations_update_appearance import ChangeItemAnnotationsUpdateAppearance
 from .change_item_forms_update_widget_appearance import ChangeItemFormsUpdateWidgetAppearance
-from .change_item_pages_copy_layout import ChangeItemPagesCopyLayout
-from .change_item_pages_delete_layout import ChangeItemPagesDeleteLayout
-from .change_item_pages_insert_blank_layout import ChangeItemPagesInsertBlankLayout
-from .change_item_pages_insert_layout import ChangeItemPagesInsertLayout
-from .change_item_pages_reorder_layout import ChangeItemPagesReorderLayout
-from .change_item_pages_restore_layout import ChangeItemPagesRestoreLayout
-from .change_item_pages_rotate_layout import ChangeItemPagesRotateLayout
+from .change_item_pages_set_scale_measure import ChangeItemPagesSetScaleMeasure
 from .change_item_skipped_op import ChangeItemSkippedOp
 from .document_metadata import DocumentMetadata
 from .form_field import FormField
@@ -31,6 +25,7 @@ from .mutation_meta import MutationMeta
 from .outline_item import OutlineItem
 from .outline_mutation_meta import OutlineMutationMeta
 from .outline_order import OutlineOrder
+from .page_list_snapshot import PageListSnapshot
 from .page_ref import PageRef
 from .widget_annotation import WidgetAnnotation
 
@@ -533,7 +528,25 @@ class ChangeItem_PagesRotate(UniversalBaseModel):
     type: typing.Literal["pages.rotate"] = "pages.rotate"
     pages: typing.List[PageRef]
     rotation: int
-    layout: ChangeItemPagesRotateLayout
+    layout: PageListSnapshot
+    meta: MutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeItem_PagesSetScale(UniversalBaseModel):
+    type: typing.Literal["pages.setScale"] = "pages.setScale"
+    pages: typing.List[PageRef]
+    measure: typing.Optional[ChangeItemPagesSetScaleMeasure] = None
+    page: PageRef
+    layout: PageListSnapshot
     meta: MutationMeta
 
     if IS_PYDANTIC_V2:
@@ -549,7 +562,7 @@ class ChangeItem_PagesRotate(UniversalBaseModel):
 class ChangeItem_PagesReorder(UniversalBaseModel):
     type: typing.Literal["pages.reorder"] = "pages.reorder"
     pages: typing.List[PageRef]
-    layout: ChangeItemPagesReorderLayout
+    layout: PageListSnapshot
     meta: MutationMeta
 
     if IS_PYDANTIC_V2:
@@ -565,7 +578,7 @@ class ChangeItem_PagesReorder(UniversalBaseModel):
 class ChangeItem_PagesDelete(UniversalBaseModel):
     type: typing.Literal["pages.delete"] = "pages.delete"
     pages: typing.List[PageRef]
-    layout: ChangeItemPagesDeleteLayout
+    layout: PageListSnapshot
     meta: MutationMeta
 
     if IS_PYDANTIC_V2:
@@ -583,7 +596,7 @@ class ChangeItem_PagesInsertBlank(UniversalBaseModel):
     inserted_pages: typing_extensions.Annotated[
         typing.List[PageRef], FieldMetadata(alias="insertedPages"), pydantic.Field(alias="insertedPages")
     ]
-    layout: ChangeItemPagesInsertBlankLayout
+    layout: PageListSnapshot
     meta: MutationMeta
 
     if IS_PYDANTIC_V2:
@@ -601,7 +614,7 @@ class ChangeItem_PagesInsert(UniversalBaseModel):
     inserted_pages: typing_extensions.Annotated[
         typing.List[PageRef], FieldMetadata(alias="insertedPages"), pydantic.Field(alias="insertedPages")
     ]
-    layout: ChangeItemPagesInsertLayout
+    layout: PageListSnapshot
     meta: MutationMeta
 
     if IS_PYDANTIC_V2:
@@ -619,7 +632,7 @@ class ChangeItem_PagesCopy(UniversalBaseModel):
     inserted_pages: typing_extensions.Annotated[
         typing.List[PageRef], FieldMetadata(alias="insertedPages"), pydantic.Field(alias="insertedPages")
     ]
-    layout: ChangeItemPagesCopyLayout
+    layout: PageListSnapshot
     meta: MutationMeta
 
     if IS_PYDANTIC_V2:
@@ -635,7 +648,7 @@ class ChangeItem_PagesCopy(UniversalBaseModel):
 class ChangeItem_PagesRestore(UniversalBaseModel):
     type: typing.Literal["pages.restore"] = "pages.restore"
     pages: typing.List[PageRef]
-    layout: ChangeItemPagesRestoreLayout
+    layout: PageListSnapshot
     meta: MutationMeta
 
     if IS_PYDANTIC_V2:
@@ -724,6 +737,7 @@ ChangeItem = typing_extensions.Annotated[
         ChangeItem_OutlineDelete,
         ChangeItem_OutlineRestore,
         ChangeItem_PagesRotate,
+        ChangeItem_PagesSetScale,
         ChangeItem_PagesReorder,
         ChangeItem_PagesDelete,
         ChangeItem_PagesInsertBlank,

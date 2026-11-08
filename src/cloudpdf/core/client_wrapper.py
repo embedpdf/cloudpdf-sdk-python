@@ -35,18 +35,18 @@ class BaseClientWrapper:
         import platform
 
         headers: typing.Dict[str, str] = {
-            "User-Agent": "cloudpdf/3.0.0",
+            "User-Agent": "cloudpdf/3.1.0",
             "X-Fern-Language": "Python",
             "X-Fern-Runtime": f"python/{platform.python_version()}",
             "X-Fern-Platform": f"{platform.system().lower()}/{platform.release()}",
             "X-Fern-SDK-Name": "cloudpdf",
-            "X-Fern-SDK-Version": "3.0.0",
+            "X-Fern-SDK-Version": "3.1.0",
             **(self.get_custom_headers() or {}),
         }
         token = self._get_token()
         if token is not None:
             headers["Authorization"] = f"Bearer {token}"
-        headers["EmbedPDF-Version"] = self._embed_pdf_version if self._embed_pdf_version is not None else "3.0"
+        headers["EmbedPDF-Version"] = self._embed_pdf_version if self._embed_pdf_version is not None else "3.1"
         return headers
 
     def _get_token(self) -> typing.Optional[str]:

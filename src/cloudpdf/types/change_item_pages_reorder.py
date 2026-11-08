@@ -4,14 +4,14 @@ import typing
 
 import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
-from .change_item_pages_reorder_layout import ChangeItemPagesReorderLayout
 from .mutation_meta import MutationMeta
+from .page_list_snapshot import PageListSnapshot
 from .page_ref import PageRef
 
 
 class ChangeItemPagesReorder(UniversalBaseModel):
     pages: typing.List[PageRef]
-    layout: ChangeItemPagesReorderLayout
+    layout: PageListSnapshot
     meta: MutationMeta
 
     if IS_PYDANTIC_V2:

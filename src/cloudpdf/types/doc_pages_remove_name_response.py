@@ -4,12 +4,12 @@ import typing
 
 import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
-from .doc_pages_remove_name_response_layout import DocPagesRemoveNameResponseLayout
 from .mutation_meta import MutationMeta
+from .page_list_snapshot import PageListSnapshot
 
 
 class DocPagesRemoveNameResponse(UniversalBaseModel):
-    layout: DocPagesRemoveNameResponseLayout
+    layout: PageListSnapshot
     meta: MutationMeta
 
     if IS_PYDANTIC_V2:

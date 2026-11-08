@@ -29,6 +29,7 @@ ChangeItemSkippedOp = typing.Union[
         "outline.move",
         "outline.delete",
         "pages.rotate",
+        "pages.setScale",
         "pages.reorder",
         "pages.delete",
         "pages.insertBlank",
