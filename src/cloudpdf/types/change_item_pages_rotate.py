@@ -4,15 +4,15 @@ import typing
 
 import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
-from .change_item_pages_rotate_layout import ChangeItemPagesRotateLayout
 from .mutation_meta import MutationMeta
+from .page_list_snapshot import PageListSnapshot
 from .page_ref import PageRef
 
 
 class ChangeItemPagesRotate(UniversalBaseModel):
     pages: typing.List[PageRef]
     rotation: int
-    layout: ChangeItemPagesRotateLayout
+    layout: PageListSnapshot
     meta: MutationMeta
 
     if IS_PYDANTIC_V2:

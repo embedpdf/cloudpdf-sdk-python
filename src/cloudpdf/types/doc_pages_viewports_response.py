@@ -4,11 +4,11 @@ import typing
 
 import pydantic
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
-from .doc_pages_viewports_response_viewports_item import DocPagesViewportsResponseViewportsItem
+from .page_measurement_viewport import PageMeasurementViewport
 
 
 class DocPagesViewportsResponse(UniversalBaseModel):
-    viewports: typing.List[DocPagesViewportsResponseViewportsItem]
+    viewports: typing.List[PageMeasurementViewport]
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

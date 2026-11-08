@@ -6,8 +6,8 @@ import pydantic
 import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
-from .change_item_pages_insert_blank_layout import ChangeItemPagesInsertBlankLayout
 from .mutation_meta import MutationMeta
+from .page_list_snapshot import PageListSnapshot
 from .page_ref import PageRef
 
 
@@ -15,7 +15,7 @@ class ChangeItemPagesInsertBlank(UniversalBaseModel):
     inserted_pages: typing_extensions.Annotated[
         typing.List[PageRef], FieldMetadata(alias="insertedPages"), pydantic.Field(alias="insertedPages")
     ]
-    layout: ChangeItemPagesInsertBlankLayout
+    layout: PageListSnapshot
     meta: MutationMeta
 
     if IS_PYDANTIC_V2:

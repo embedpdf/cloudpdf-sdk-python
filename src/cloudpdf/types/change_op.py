@@ -21,6 +21,7 @@ from .change_op_forms_set_display_display import ChangeOpFormsSetDisplayDisplay
 from .change_op_forms_set_signature_appearance_resources import ChangeOpFormsSetSignatureAppearanceResources
 from .change_op_pages_insert_blank_spec import ChangeOpPagesInsertBlankSpec
 from .change_op_pages_insert_resources import ChangeOpPagesInsertResources
+from .change_op_pages_set_scale_measure import ChangeOpPagesSetScaleMeasure
 from .field_position import FieldPosition
 from .form_field_draft import FormFieldDraft
 from .form_field_patch import FormFieldPatch
@@ -440,6 +441,21 @@ class ChangeOp_PagesRotate(UniversalBaseModel):
             extra = pydantic.Extra.allow
 
 
+class ChangeOp_PagesSetScale(UniversalBaseModel):
+    type: typing.Literal["pages.setScale"] = "pages.setScale"
+    pages: typing.List[PageRef]
+    measure: typing.Optional[ChangeOpPagesSetScaleMeasure] = None
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
 class ChangeOp_PagesReorder(UniversalBaseModel):
     type: typing.Literal["pages.reorder"] = "pages.reorder"
     pages: typing.List[PageRef]
@@ -579,6 +595,7 @@ ChangeOp = typing_extensions.Annotated[
         ChangeOp_OutlineMove,
         ChangeOp_OutlineDelete,
         ChangeOp_PagesRotate,
+        ChangeOp_PagesSetScale,
         ChangeOp_PagesReorder,
         ChangeOp_PagesDelete,
         ChangeOp_PagesInsertBlank,

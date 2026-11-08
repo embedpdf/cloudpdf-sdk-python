@@ -34,6 +34,9 @@ class DocManifestResponse(UniversalBaseModel):
     outline_version: typing_extensions.Annotated[
         typing.Optional[int], FieldMetadata(alias="outlineVersion"), pydantic.Field(alias="outlineVersion")
     ] = None
+    viewports_version: typing_extensions.Annotated[
+        typing.Optional[int], FieldMetadata(alias="viewportsVersion"), pydantic.Field(alias="viewportsVersion")
+    ] = None
     fonts_version: typing_extensions.Annotated[
         typing.Optional[int], FieldMetadata(alias="fontsVersion"), pydantic.Field(alias="fontsVersion")
     ] = None
