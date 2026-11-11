@@ -13,7 +13,11 @@ from .annotation_mutation_meta import AnnotationMutationMeta
 from .annotation_ref import AnnotationRef
 from .attachment import Attachment
 from .attachment_mutation_meta import AttachmentMutationMeta
+from .change_item_annotations_copy_dropped_item import ChangeItemAnnotationsCopyDroppedItem
+from .change_item_annotations_copy_ref_map_item import ChangeItemAnnotationsCopyRefMapItem
 from .change_item_annotations_update_appearance import ChangeItemAnnotationsUpdateAppearance
+from .change_item_forms_copy_dropped_item import ChangeItemFormsCopyDroppedItem
+from .change_item_forms_copy_ref_map_item import ChangeItemFormsCopyRefMapItem
 from .change_item_forms_update_widget_appearance import ChangeItemFormsUpdateWidgetAppearance
 from .change_item_pages_set_scale_measure import ChangeItemPagesSetScaleMeasure
 from .change_item_skipped_op import ChangeItemSkippedOp
@@ -98,6 +102,25 @@ class ChangeItem_AnnotationsReorder(UniversalBaseModel):
     type: typing.Literal["annotations.reorder"] = "annotations.reorder"
     page: PageRef
     order: typing.List[AnnotationRef]
+    meta: AnnotationMutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeItem_AnnotationsCopy(UniversalBaseModel):
+    type: typing.Literal["annotations.copy"] = "annotations.copy"
+    annotations: typing.List[Annotation]
+    ref_map: typing_extensions.Annotated[
+        typing.List[ChangeItemAnnotationsCopyRefMapItem], FieldMetadata(alias="refMap"), pydantic.Field(alias="refMap")
+    ]
+    dropped: typing.List[ChangeItemAnnotationsCopyDroppedItem]
     meta: AnnotationMutationMeta
 
     if IS_PYDANTIC_V2:
@@ -205,6 +228,31 @@ class ChangeItem_FormsCreate(UniversalBaseModel):
     type: typing.Literal["forms.create"] = "forms.create"
     field: FormField
     widgets: typing.List[WidgetAnnotation]
+    calculation_order: typing_extensions.Annotated[
+        typing.Optional[typing.List[FormFieldRef]],
+        FieldMetadata(alias="calculationOrder"),
+        pydantic.Field(alias="calculationOrder"),
+    ] = None
+    meta: FormMutationMeta
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeItem_FormsCopy(UniversalBaseModel):
+    type: typing.Literal["forms.copy"] = "forms.copy"
+    fields: typing.List[FormField]
+    widgets: typing.List[WidgetAnnotation]
+    ref_map: typing_extensions.Annotated[
+        typing.List[ChangeItemFormsCopyRefMapItem], FieldMetadata(alias="refMap"), pydantic.Field(alias="refMap")
+    ]
+    dropped: typing.List[ChangeItemFormsCopyDroppedItem]
     calculation_order: typing_extensions.Annotated[
         typing.Optional[typing.List[FormFieldRef]],
         FieldMetadata(alias="calculationOrder"),
@@ -712,12 +760,14 @@ ChangeItem = typing_extensions.Annotated[
         ChangeItem_AnnotationsUpdate,
         ChangeItem_AnnotationsDelete,
         ChangeItem_AnnotationsReorder,
+        ChangeItem_AnnotationsCopy,
         ChangeItem_AnnotationsRestore,
         ChangeItem_FormsSetValue,
         ChangeItem_FormsSetDisplay,
         ChangeItem_FormsSetAppearanceText,
         ChangeItem_FormsReset,
         ChangeItem_FormsCreate,
+        ChangeItem_FormsCopy,
         ChangeItem_FormsUpdate,
         ChangeItem_FormsDelete,
         ChangeItem_FormsRestore,

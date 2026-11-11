@@ -14,9 +14,11 @@ from .annotation_position import AnnotationPosition
 from .annotation_ref import AnnotationRef
 from .attachment_file_base import AttachmentFileBase
 from .attachment_ref import AttachmentRef
+from .change_op_annotations_copy_offset import ChangeOpAnnotationsCopyOffset
 from .change_op_annotations_create_resources import ChangeOpAnnotationsCreateResources
 from .change_op_annotations_update_resources import ChangeOpAnnotationsUpdateResources
 from .change_op_attachments_create_resources import ChangeOpAttachmentsCreateResources
+from .change_op_forms_copy_offset import ChangeOpFormsCopyOffset
 from .change_op_forms_set_display_display import ChangeOpFormsSetDisplayDisplay
 from .change_op_forms_set_signature_appearance_resources import ChangeOpFormsSetSignatureAppearanceResources
 from .change_op_pages_insert_blank_spec import ChangeOpPagesInsertBlankSpec
@@ -105,6 +107,25 @@ class ChangeOp_AnnotationsReorder(UniversalBaseModel):
             extra = pydantic.Extra.allow
 
 
+class ChangeOp_AnnotationsCopy(UniversalBaseModel):
+    type: typing.Literal["annotations.copy"] = "annotations.copy"
+    refs: typing.List[AnnotationRef]
+    page: typing.Optional[PageRef] = None
+    offset: typing.Optional[ChangeOpAnnotationsCopyOffset] = None
+    object_numbers: typing_extensions.Annotated[
+        typing.Optional[typing.List[int]], FieldMetadata(alias="objectNumbers"), pydantic.Field(alias="objectNumbers")
+    ] = None
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
 class ChangeOp_FormsSetValue(UniversalBaseModel):
     type: typing.Literal["forms.setValue"] = "forms.setValue"
     field: FormFieldRef
@@ -175,6 +196,27 @@ class ChangeOp_FormsCreate(UniversalBaseModel):
         typing.Optional[typing.List[int]],
         FieldMetadata(alias="widgetObjectNumbers"),
         pydantic.Field(alias="widgetObjectNumbers"),
+    ] = None
+
+    if IS_PYDANTIC_V2:
+        model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
+    else:
+
+        class Config:
+            frozen = True
+            smart_union = True
+            extra = pydantic.Extra.allow
+
+
+class ChangeOp_FormsCopy(UniversalBaseModel):
+    type: typing.Literal["forms.copy"] = "forms.copy"
+    fields: typing.List[FormFieldRef]
+    widgets: typing.Optional[typing.List[AnnotationRef]] = None
+    page: typing.Optional[PageRef] = None
+    offset: typing.Optional[ChangeOpFormsCopyOffset] = None
+    values: typing.Optional[bool] = None
+    object_numbers: typing_extensions.Annotated[
+        typing.Optional[typing.List[int]], FieldMetadata(alias="objectNumbers"), pydantic.Field(alias="objectNumbers")
     ] = None
 
     if IS_PYDANTIC_V2:
@@ -574,11 +616,13 @@ ChangeOp = typing_extensions.Annotated[
         ChangeOp_AnnotationsUpdate,
         ChangeOp_AnnotationsDelete,
         ChangeOp_AnnotationsReorder,
+        ChangeOp_AnnotationsCopy,
         ChangeOp_FormsSetValue,
         ChangeOp_FormsSetDisplay,
         ChangeOp_FormsSetAppearanceText,
         ChangeOp_FormsReset,
         ChangeOp_FormsCreate,
+        ChangeOp_FormsCopy,
         ChangeOp_FormsUpdate,
         ChangeOp_FormsDelete,
         ChangeOp_FormsAddWidget,
