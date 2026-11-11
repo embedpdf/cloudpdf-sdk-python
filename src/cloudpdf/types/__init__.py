@@ -998,6 +998,7 @@ if typing.TYPE_CHECKING:
     from .cache_delta_pages_item_cache import CacheDeltaPagesItemCache
     from .change_item import (
         ChangeItem,
+        ChangeItem_AnnotationsCopy,
         ChangeItem_AnnotationsCreate,
         ChangeItem_AnnotationsDelete,
         ChangeItem_AnnotationsReorder,
@@ -1007,6 +1008,7 @@ if typing.TYPE_CHECKING:
         ChangeItem_AttachmentsDelete,
         ChangeItem_AttachmentsRestore,
         ChangeItem_FormsAddWidget,
+        ChangeItem_FormsCopy,
         ChangeItem_FormsCreate,
         ChangeItem_FormsDelete,
         ChangeItem_FormsDeleteWidget,
@@ -1039,6 +1041,10 @@ if typing.TYPE_CHECKING:
         ChangeItem_PagesSetScale,
         ChangeItem_Skipped,
     )
+    from .change_item_annotations_copy import ChangeItemAnnotationsCopy
+    from .change_item_annotations_copy_dropped_item import ChangeItemAnnotationsCopyDroppedItem
+    from .change_item_annotations_copy_dropped_item_reason import ChangeItemAnnotationsCopyDroppedItemReason
+    from .change_item_annotations_copy_ref_map_item import ChangeItemAnnotationsCopyRefMapItem
     from .change_item_annotations_create import ChangeItemAnnotationsCreate
     from .change_item_annotations_delete import ChangeItemAnnotationsDelete
     from .change_item_annotations_reorder import ChangeItemAnnotationsReorder
@@ -1050,6 +1056,10 @@ if typing.TYPE_CHECKING:
     from .change_item_attachments_delete import ChangeItemAttachmentsDelete
     from .change_item_attachments_restore import ChangeItemAttachmentsRestore
     from .change_item_forms_add_widget import ChangeItemFormsAddWidget
+    from .change_item_forms_copy import ChangeItemFormsCopy
+    from .change_item_forms_copy_dropped_item import ChangeItemFormsCopyDroppedItem
+    from .change_item_forms_copy_dropped_item_reason import ChangeItemFormsCopyDroppedItemReason
+    from .change_item_forms_copy_ref_map_item import ChangeItemFormsCopyRefMapItem
     from .change_item_forms_create import ChangeItemFormsCreate
     from .change_item_forms_delete import ChangeItemFormsDelete
     from .change_item_forms_delete_widget import ChangeItemFormsDeleteWidget
@@ -1121,6 +1131,7 @@ if typing.TYPE_CHECKING:
     from .change_item_skipped_op import ChangeItemSkippedOp
     from .change_op import (
         ChangeOp,
+        ChangeOp_AnnotationsCopy,
         ChangeOp_AnnotationsCreate,
         ChangeOp_AnnotationsDelete,
         ChangeOp_AnnotationsReorder,
@@ -1128,6 +1139,7 @@ if typing.TYPE_CHECKING:
         ChangeOp_AttachmentsCreate,
         ChangeOp_AttachmentsDelete,
         ChangeOp_FormsAddWidget,
+        ChangeOp_FormsCopy,
         ChangeOp_FormsCreate,
         ChangeOp_FormsDelete,
         ChangeOp_FormsDeleteWidget,
@@ -1155,6 +1167,8 @@ if typing.TYPE_CHECKING:
         ChangeOp_PagesRotate,
         ChangeOp_PagesSetScale,
     )
+    from .change_op_annotations_copy import ChangeOpAnnotationsCopy
+    from .change_op_annotations_copy_offset import ChangeOpAnnotationsCopyOffset
     from .change_op_annotations_create import ChangeOpAnnotationsCreate
     from .change_op_annotations_create_resources import ChangeOpAnnotationsCreateResources
     from .change_op_annotations_delete import ChangeOpAnnotationsDelete
@@ -1165,6 +1179,8 @@ if typing.TYPE_CHECKING:
     from .change_op_attachments_create_resources import ChangeOpAttachmentsCreateResources
     from .change_op_attachments_delete import ChangeOpAttachmentsDelete
     from .change_op_forms_add_widget import ChangeOpFormsAddWidget
+    from .change_op_forms_copy import ChangeOpFormsCopy
+    from .change_op_forms_copy_offset import ChangeOpFormsCopyOffset
     from .change_op_forms_create import ChangeOpFormsCreate
     from .change_op_forms_delete import ChangeOpFormsDelete
     from .change_op_forms_delete_widget import ChangeOpFormsDeleteWidget
@@ -2830,6 +2846,10 @@ _dynamic_imports: typing.Dict[str, str] = {
     "CacheDeltaPagesItem": ".cache_delta_pages_item",
     "CacheDeltaPagesItemCache": ".cache_delta_pages_item_cache",
     "ChangeItem": ".change_item",
+    "ChangeItemAnnotationsCopy": ".change_item_annotations_copy",
+    "ChangeItemAnnotationsCopyDroppedItem": ".change_item_annotations_copy_dropped_item",
+    "ChangeItemAnnotationsCopyDroppedItemReason": ".change_item_annotations_copy_dropped_item_reason",
+    "ChangeItemAnnotationsCopyRefMapItem": ".change_item_annotations_copy_ref_map_item",
     "ChangeItemAnnotationsCreate": ".change_item_annotations_create",
     "ChangeItemAnnotationsDelete": ".change_item_annotations_delete",
     "ChangeItemAnnotationsReorder": ".change_item_annotations_reorder",
@@ -2841,6 +2861,10 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeItemAttachmentsDelete": ".change_item_attachments_delete",
     "ChangeItemAttachmentsRestore": ".change_item_attachments_restore",
     "ChangeItemFormsAddWidget": ".change_item_forms_add_widget",
+    "ChangeItemFormsCopy": ".change_item_forms_copy",
+    "ChangeItemFormsCopyDroppedItem": ".change_item_forms_copy_dropped_item",
+    "ChangeItemFormsCopyDroppedItemReason": ".change_item_forms_copy_dropped_item_reason",
+    "ChangeItemFormsCopyRefMapItem": ".change_item_forms_copy_ref_map_item",
     "ChangeItemFormsCreate": ".change_item_forms_create",
     "ChangeItemFormsDelete": ".change_item_forms_delete",
     "ChangeItemFormsDeleteWidget": ".change_item_forms_delete_widget",
@@ -2896,6 +2920,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeItemPagesSetScaleMeasureYItemLabelPosition": ".change_item_pages_set_scale_measure_y_item_label_position",
     "ChangeItemSkipped": ".change_item_skipped",
     "ChangeItemSkippedOp": ".change_item_skipped_op",
+    "ChangeItem_AnnotationsCopy": ".change_item",
     "ChangeItem_AnnotationsCreate": ".change_item",
     "ChangeItem_AnnotationsDelete": ".change_item",
     "ChangeItem_AnnotationsReorder": ".change_item",
@@ -2905,6 +2930,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeItem_AttachmentsDelete": ".change_item",
     "ChangeItem_AttachmentsRestore": ".change_item",
     "ChangeItem_FormsAddWidget": ".change_item",
+    "ChangeItem_FormsCopy": ".change_item",
     "ChangeItem_FormsCreate": ".change_item",
     "ChangeItem_FormsDelete": ".change_item",
     "ChangeItem_FormsDeleteWidget": ".change_item",
@@ -2937,6 +2963,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeItem_PagesSetScale": ".change_item",
     "ChangeItem_Skipped": ".change_item",
     "ChangeOp": ".change_op",
+    "ChangeOpAnnotationsCopy": ".change_op_annotations_copy",
+    "ChangeOpAnnotationsCopyOffset": ".change_op_annotations_copy_offset",
     "ChangeOpAnnotationsCreate": ".change_op_annotations_create",
     "ChangeOpAnnotationsCreateResources": ".change_op_annotations_create_resources",
     "ChangeOpAnnotationsDelete": ".change_op_annotations_delete",
@@ -2947,6 +2975,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeOpAttachmentsCreateResources": ".change_op_attachments_create_resources",
     "ChangeOpAttachmentsDelete": ".change_op_attachments_delete",
     "ChangeOpFormsAddWidget": ".change_op_forms_add_widget",
+    "ChangeOpFormsCopy": ".change_op_forms_copy",
+    "ChangeOpFormsCopyOffset": ".change_op_forms_copy_offset",
     "ChangeOpFormsCreate": ".change_op_forms_create",
     "ChangeOpFormsDelete": ".change_op_forms_delete",
     "ChangeOpFormsDeleteWidget": ".change_op_forms_delete_widget",
@@ -2999,6 +3029,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeOpPagesSetScaleMeasureYItem": ".change_op_pages_set_scale_measure_y_item",
     "ChangeOpPagesSetScaleMeasureYItemFraction": ".change_op_pages_set_scale_measure_y_item_fraction",
     "ChangeOpPagesSetScaleMeasureYItemLabelPosition": ".change_op_pages_set_scale_measure_y_item_label_position",
+    "ChangeOp_AnnotationsCopy": ".change_op",
     "ChangeOp_AnnotationsCreate": ".change_op",
     "ChangeOp_AnnotationsDelete": ".change_op",
     "ChangeOp_AnnotationsReorder": ".change_op",
@@ -3006,6 +3037,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "ChangeOp_AttachmentsCreate": ".change_op",
     "ChangeOp_AttachmentsDelete": ".change_op",
     "ChangeOp_FormsAddWidget": ".change_op",
+    "ChangeOp_FormsCopy": ".change_op",
     "ChangeOp_FormsCreate": ".change_op",
     "ChangeOp_FormsDelete": ".change_op",
     "ChangeOp_FormsDeleteWidget": ".change_op",
@@ -4499,6 +4531,10 @@ __all__ = [
     "CacheDeltaPagesItem",
     "CacheDeltaPagesItemCache",
     "ChangeItem",
+    "ChangeItemAnnotationsCopy",
+    "ChangeItemAnnotationsCopyDroppedItem",
+    "ChangeItemAnnotationsCopyDroppedItemReason",
+    "ChangeItemAnnotationsCopyRefMapItem",
     "ChangeItemAnnotationsCreate",
     "ChangeItemAnnotationsDelete",
     "ChangeItemAnnotationsReorder",
@@ -4510,6 +4546,10 @@ __all__ = [
     "ChangeItemAttachmentsDelete",
     "ChangeItemAttachmentsRestore",
     "ChangeItemFormsAddWidget",
+    "ChangeItemFormsCopy",
+    "ChangeItemFormsCopyDroppedItem",
+    "ChangeItemFormsCopyDroppedItemReason",
+    "ChangeItemFormsCopyRefMapItem",
     "ChangeItemFormsCreate",
     "ChangeItemFormsDelete",
     "ChangeItemFormsDeleteWidget",
@@ -4565,6 +4605,7 @@ __all__ = [
     "ChangeItemPagesSetScaleMeasureYItemLabelPosition",
     "ChangeItemSkipped",
     "ChangeItemSkippedOp",
+    "ChangeItem_AnnotationsCopy",
     "ChangeItem_AnnotationsCreate",
     "ChangeItem_AnnotationsDelete",
     "ChangeItem_AnnotationsReorder",
@@ -4574,6 +4615,7 @@ __all__ = [
     "ChangeItem_AttachmentsDelete",
     "ChangeItem_AttachmentsRestore",
     "ChangeItem_FormsAddWidget",
+    "ChangeItem_FormsCopy",
     "ChangeItem_FormsCreate",
     "ChangeItem_FormsDelete",
     "ChangeItem_FormsDeleteWidget",
@@ -4606,6 +4648,8 @@ __all__ = [
     "ChangeItem_PagesSetScale",
     "ChangeItem_Skipped",
     "ChangeOp",
+    "ChangeOpAnnotationsCopy",
+    "ChangeOpAnnotationsCopyOffset",
     "ChangeOpAnnotationsCreate",
     "ChangeOpAnnotationsCreateResources",
     "ChangeOpAnnotationsDelete",
@@ -4616,6 +4660,8 @@ __all__ = [
     "ChangeOpAttachmentsCreateResources",
     "ChangeOpAttachmentsDelete",
     "ChangeOpFormsAddWidget",
+    "ChangeOpFormsCopy",
+    "ChangeOpFormsCopyOffset",
     "ChangeOpFormsCreate",
     "ChangeOpFormsDelete",
     "ChangeOpFormsDeleteWidget",
@@ -4668,6 +4714,7 @@ __all__ = [
     "ChangeOpPagesSetScaleMeasureYItem",
     "ChangeOpPagesSetScaleMeasureYItemFraction",
     "ChangeOpPagesSetScaleMeasureYItemLabelPosition",
+    "ChangeOp_AnnotationsCopy",
     "ChangeOp_AnnotationsCreate",
     "ChangeOp_AnnotationsDelete",
     "ChangeOp_AnnotationsReorder",
@@ -4675,6 +4722,7 @@ __all__ = [
     "ChangeOp_AttachmentsCreate",
     "ChangeOp_AttachmentsDelete",
     "ChangeOp_FormsAddWidget",
+    "ChangeOp_FormsCopy",
     "ChangeOp_FormsCreate",
     "ChangeOp_FormsDelete",
     "ChangeOp_FormsDeleteWidget",
