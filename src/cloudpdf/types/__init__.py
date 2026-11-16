@@ -1335,6 +1335,8 @@ if typing.TYPE_CHECKING:
     from .doc_redactions_apply_response_results_item import DocRedactionsApplyResponseResultsItem
     from .doc_redactions_apply_response_results_item_status import DocRedactionsApplyResponseResultsItemStatus
     from .doc_redactions_apply_response_scope import DocRedactionsApplyResponseScope
+    from .doc_signatures_add_validation_info_response import DocSignaturesAddValidationInfoResponse
+    from .doc_signatures_add_validation_info_response_added import DocSignaturesAddValidationInfoResponseAdded
     from .doc_signatures_analysis_response import DocSignaturesAnalysisResponse
     from .doc_signatures_analysis_response_basis import DocSignaturesAnalysisResponseBasis
     from .doc_signatures_analysis_response_basis_source import DocSignaturesAnalysisResponseBasisSource
@@ -1404,6 +1406,7 @@ if typing.TYPE_CHECKING:
     from .doc_signatures_prepare_response import DocSignaturesPrepareResponse
     from .doc_signatures_prepare_response_algorithm import DocSignaturesPrepareResponseAlgorithm
     from .doc_signatures_prepare_response_expected_version import DocSignaturesPrepareResponseExpectedVersion
+    from .doc_signatures_validation_info_response import DocSignaturesValidationInfoResponse
     from .doc_text_response import DocTextResponse
     from .doc_versions_analysis_response import DocVersionsAnalysisResponse
     from .doc_versions_analysis_response_basis import DocVersionsAnalysisResponseBasis
@@ -3152,6 +3155,8 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocRedactionsApplyResponseResultsItem": ".doc_redactions_apply_response_results_item",
     "DocRedactionsApplyResponseResultsItemStatus": ".doc_redactions_apply_response_results_item_status",
     "DocRedactionsApplyResponseScope": ".doc_redactions_apply_response_scope",
+    "DocSignaturesAddValidationInfoResponse": ".doc_signatures_add_validation_info_response",
+    "DocSignaturesAddValidationInfoResponseAdded": ".doc_signatures_add_validation_info_response_added",
     "DocSignaturesAnalysisResponse": ".doc_signatures_analysis_response",
     "DocSignaturesAnalysisResponseBasis": ".doc_signatures_analysis_response_basis",
     "DocSignaturesAnalysisResponseBasisSource": ".doc_signatures_analysis_response_basis_source",
@@ -3203,6 +3208,7 @@ _dynamic_imports: typing.Dict[str, str] = {
     "DocSignaturesPrepareResponse": ".doc_signatures_prepare_response",
     "DocSignaturesPrepareResponseAlgorithm": ".doc_signatures_prepare_response_algorithm",
     "DocSignaturesPrepareResponseExpectedVersion": ".doc_signatures_prepare_response_expected_version",
+    "DocSignaturesValidationInfoResponse": ".doc_signatures_validation_info_response",
     "DocTextResponse": ".doc_text_response",
     "DocVersionsAnalysisResponse": ".doc_versions_analysis_response",
     "DocVersionsAnalysisResponseBasis": ".doc_versions_analysis_response_basis",
@@ -4837,6 +4843,8 @@ __all__ = [
     "DocRedactionsApplyResponseResultsItem",
     "DocRedactionsApplyResponseResultsItemStatus",
     "DocRedactionsApplyResponseScope",
+    "DocSignaturesAddValidationInfoResponse",
+    "DocSignaturesAddValidationInfoResponseAdded",
     "DocSignaturesAnalysisResponse",
     "DocSignaturesAnalysisResponseBasis",
     "DocSignaturesAnalysisResponseBasisSource",
@@ -4888,6 +4896,7 @@ __all__ = [
     "DocSignaturesPrepareResponse",
     "DocSignaturesPrepareResponseAlgorithm",
     "DocSignaturesPrepareResponseExpectedVersion",
+    "DocSignaturesValidationInfoResponse",
     "DocTextResponse",
     "DocVersionsAnalysisResponse",
     "DocVersionsAnalysisResponseBasis",
