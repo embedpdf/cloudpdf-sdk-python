@@ -9,6 +9,7 @@ from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
 from .doc_signatures_prepare_response_algorithm import DocSignaturesPrepareResponseAlgorithm
 from .doc_signatures_prepare_response_expected_version import DocSignaturesPrepareResponseExpectedVersion
+from .form_field_ref import FormFieldRef
 
 
 class DocSignaturesPrepareResponse(UniversalBaseModel):
@@ -30,6 +31,7 @@ class DocSignaturesPrepareResponse(UniversalBaseModel):
     expires_at: typing_extensions.Annotated[
         typing.Optional[dt.datetime], FieldMetadata(alias="expiresAt"), pydantic.Field(alias="expiresAt")
     ] = None
+    field: typing.Optional[FormFieldRef] = None
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

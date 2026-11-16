@@ -15,11 +15,13 @@ from ...core.serialization import convert_and_respect_annotation_metadata
 from ...errors.bad_request_error import BadRequestError
 from ...errors.conflict_error import ConflictError
 from ...errors.not_found_error import NotFoundError
+from ...types.doc_signatures_add_validation_info_response import DocSignaturesAddValidationInfoResponse
 from ...types.doc_signatures_analysis_response import DocSignaturesAnalysisResponse
 from ...types.doc_signatures_cancel_response import DocSignaturesCancelResponse
 from ...types.doc_signatures_complete_response import DocSignaturesCompleteResponse
 from ...types.doc_signatures_list_response import DocSignaturesListResponse
 from ...types.doc_signatures_prepare_response import DocSignaturesPrepareResponse
+from ...types.doc_signatures_validation_info_response import DocSignaturesValidationInfoResponse
 from ...types.error_response import ErrorResponse
 from .types.analysis_signatures_request_level import AnalysisSignaturesRequestLevel
 from .types.doc_signatures_complete_request_expected_version import DocSignaturesCompleteRequestExpectedVersion
@@ -372,7 +374,7 @@ class RawSignaturesClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocSignaturesPrepareResponse]:
         """
-        Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock), naming the appearance PDF it may carry as `resources: { appearance: '<key>' }`, and that PDF as the part `resource:<key>`. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is cancelled, or expires (15 minutes). The signature is made over the layer's own base: the upload, or the version its last signature made.
+        Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock), naming the appearance PDF it may carry as `resources: { appearance: '<key>' }`, and that PDF as the part `resource:<key>`. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is cancelled, or expires (15 minutes). A document timestamp (`kind: 'timestamp'`) may leave `field` out, since 3.3: the engine then makes a field of no size for it, under a name no other field has, and the answer names it in `field`. That needs `doc.sign` for the document. The signature is made over the layer's own base: the upload, or the version its last signature made.
 
         Parameters
         ----------
@@ -414,6 +416,181 @@ class RawSignaturesClient:
                     DocSignaturesPrepareResponse,
                     parse_obj_as(
                         type_=DocSignaturesPrepareResponse,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return HttpResponse(response=_response, data=_data)
+            if _response.status_code == 400:
+                raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        ErrorResponse,
+                        parse_obj_as(
+                            type_=ErrorResponse,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        ErrorResponse,
+                        parse_obj_as(
+                            type_=ErrorResponse,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 409:
+                raise ConflictError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        ErrorResponse,
+                        parse_obj_as(
+                            type_=ErrorResponse,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    def validation_info(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> HttpResponse[DocSignaturesValidationInfoResponse]:
+        """
+        Each entry is one DER object, base64. It reads the layer as it is now, so entries stored and not yet sealed by a signature are among them. Arrived in 3.3.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        HttpResponse[DocSignaturesValidationInfoResponse]
+            OK
+        """
+        _response = self._client_wrapper.httpx_client.request(
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/signatures/validation-info",
+            method="GET",
+            headers={
+                "X-Document-Password": str(document_password) if document_password is not None else None,
+            },
+            request_options=request_options,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocSignaturesValidationInfoResponse,
+                    parse_obj_as(
+                        type_=DocSignaturesValidationInfoResponse,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return HttpResponse(response=_response, data=_data)
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        ErrorResponse,
+                        parse_obj_as(
+                            type_=ErrorResponse,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    def add_validation_info(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        certificates: typing.Optional[typing.Sequence[str]] = OMIT,
+        ocsp_responses: typing.Optional[typing.Sequence[str]] = OMIT,
+        crls: typing.Optional[typing.Sequence[str]] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> HttpResponse[DocSignaturesAddValidationInfoResponse]:
+        """
+        Each entry is one DER object of at most 16 MiB, base64. An entry the file already holds, byte for byte, is not stored again: `added` counts the new ones. An entry that is not one DER object fails the request and nothing is stored; the error names it, as in `certificates[1]`. The server stores what it is given and asks no certificate authority: collect the answers first. It needs `doc.sign` for the document, not for a group of fields, and is refused after a certification that allows no changes. It cannot be undone, and it leaves undo for earlier changes as it was. Arrived in 3.3.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        certificates : typing.Optional[typing.Sequence[str]]
+
+        ocsp_responses : typing.Optional[typing.Sequence[str]]
+
+        crls : typing.Optional[typing.Sequence[str]]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        HttpResponse[DocSignaturesAddValidationInfoResponse]
+            OK
+        """
+        _response = self._client_wrapper.httpx_client.request(
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/signatures/validation-info",
+            method="POST",
+            json={
+                "certificates": certificates,
+                "ocspResponses": ocsp_responses,
+                "crls": crls,
+            },
+            headers={
+                "content-type": "application/json",
+                "X-Document-Password": str(document_password) if document_password is not None else None,
+                "Idempotency-Key": str(idempotency_key) if idempotency_key is not None else None,
+            },
+            request_options=request_options,
+            omit=OMIT,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocSignaturesAddValidationInfoResponse,
+                    parse_obj_as(
+                        type_=DocSignaturesAddValidationInfoResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )
@@ -804,7 +981,7 @@ class AsyncRawSignaturesClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocSignaturesPrepareResponse]:
         """
-        Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock), naming the appearance PDF it may carry as `resources: { appearance: '<key>' }`, and that PDF as the part `resource:<key>`. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is cancelled, or expires (15 minutes). The signature is made over the layer's own base: the upload, or the version its last signature made.
+        Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock), naming the appearance PDF it may carry as `resources: { appearance: '<key>' }`, and that PDF as the part `resource:<key>`. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is cancelled, or expires (15 minutes). A document timestamp (`kind: 'timestamp'`) may leave `field` out, since 3.3: the engine then makes a field of no size for it, under a name no other field has, and the answer names it in `field`. That needs `doc.sign` for the document. The signature is made over the layer's own base: the upload, or the version its last signature made.
 
         Parameters
         ----------
@@ -846,6 +1023,181 @@ class AsyncRawSignaturesClient:
                     DocSignaturesPrepareResponse,
                     parse_obj_as(
                         type_=DocSignaturesPrepareResponse,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return AsyncHttpResponse(response=_response, data=_data)
+            if _response.status_code == 400:
+                raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        ErrorResponse,
+                        parse_obj_as(
+                            type_=ErrorResponse,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        ErrorResponse,
+                        parse_obj_as(
+                            type_=ErrorResponse,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            if _response.status_code == 409:
+                raise ConflictError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        ErrorResponse,
+                        parse_obj_as(
+                            type_=ErrorResponse,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    async def validation_info(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> AsyncHttpResponse[DocSignaturesValidationInfoResponse]:
+        """
+        Each entry is one DER object, base64. It reads the layer as it is now, so entries stored and not yet sealed by a signature are among them. Arrived in 3.3.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        AsyncHttpResponse[DocSignaturesValidationInfoResponse]
+            OK
+        """
+        _response = await self._client_wrapper.httpx_client.request(
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/signatures/validation-info",
+            method="GET",
+            headers={
+                "X-Document-Password": str(document_password) if document_password is not None else None,
+            },
+            request_options=request_options,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocSignaturesValidationInfoResponse,
+                    parse_obj_as(
+                        type_=DocSignaturesValidationInfoResponse,  # type: ignore
+                        object_=_response.json(),
+                    ),
+                )
+                return AsyncHttpResponse(response=_response, data=_data)
+            if _response.status_code == 404:
+                raise NotFoundError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        ErrorResponse,
+                        parse_obj_as(
+                            type_=ErrorResponse,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response.text)
+        except ValidationError as e:
+            raise ParsingError(
+                status_code=_response.status_code, headers=dict(_response.headers), body=_response.json(), cause=e
+            )
+        raise ApiError(status_code=_response.status_code, headers=dict(_response.headers), body=_response_json)
+
+    async def add_validation_info(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        certificates: typing.Optional[typing.Sequence[str]] = OMIT,
+        ocsp_responses: typing.Optional[typing.Sequence[str]] = OMIT,
+        crls: typing.Optional[typing.Sequence[str]] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> AsyncHttpResponse[DocSignaturesAddValidationInfoResponse]:
+        """
+        Each entry is one DER object of at most 16 MiB, base64. An entry the file already holds, byte for byte, is not stored again: `added` counts the new ones. An entry that is not one DER object fails the request and nothing is stored; the error names it, as in `certificates[1]`. The server stores what it is given and asks no certificate authority: collect the answers first. It needs `doc.sign` for the document, not for a group of fields, and is refused after a certification that allows no changes. It cannot be undone, and it leaves undo for earlier changes as it was. Arrived in 3.3.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        certificates : typing.Optional[typing.Sequence[str]]
+
+        ocsp_responses : typing.Optional[typing.Sequence[str]]
+
+        crls : typing.Optional[typing.Sequence[str]]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        AsyncHttpResponse[DocSignaturesAddValidationInfoResponse]
+            OK
+        """
+        _response = await self._client_wrapper.httpx_client.request(
+            f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/signatures/validation-info",
+            method="POST",
+            json={
+                "certificates": certificates,
+                "ocspResponses": ocsp_responses,
+                "crls": crls,
+            },
+            headers={
+                "content-type": "application/json",
+                "X-Document-Password": str(document_password) if document_password is not None else None,
+                "Idempotency-Key": str(idempotency_key) if idempotency_key is not None else None,
+            },
+            request_options=request_options,
+            omit=OMIT,
+        )
+        try:
+            if 200 <= _response.status_code < 300:
+                _data = typing.cast(
+                    DocSignaturesAddValidationInfoResponse,
+                    parse_obj_as(
+                        type_=DocSignaturesAddValidationInfoResponse,  # type: ignore
                         object_=_response.json(),
                     ),
                 )

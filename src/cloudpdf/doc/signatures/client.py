@@ -5,11 +5,13 @@ import typing
 from ... import core
 from ...core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from ...core.request_options import RequestOptions
+from ...types.doc_signatures_add_validation_info_response import DocSignaturesAddValidationInfoResponse
 from ...types.doc_signatures_analysis_response import DocSignaturesAnalysisResponse
 from ...types.doc_signatures_cancel_response import DocSignaturesCancelResponse
 from ...types.doc_signatures_complete_response import DocSignaturesCompleteResponse
 from ...types.doc_signatures_list_response import DocSignaturesListResponse
 from ...types.doc_signatures_prepare_response import DocSignaturesPrepareResponse
+from ...types.doc_signatures_validation_info_response import DocSignaturesValidationInfoResponse
 from .raw_client import AsyncRawSignaturesClient, RawSignaturesClient
 from .types.analysis_signatures_request_level import AnalysisSignaturesRequestLevel
 from .types.doc_signatures_complete_request_expected_version import DocSignaturesCompleteRequestExpectedVersion
@@ -262,7 +264,7 @@ class SignaturesClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocSignaturesPrepareResponse:
         """
-        Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock), naming the appearance PDF it may carry as `resources: { appearance: '<key>' }`, and that PDF as the part `resource:<key>`. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is cancelled, or expires (15 minutes). The signature is made over the layer's own base: the upload, or the version its last signature made.
+        Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock), naming the appearance PDF it may carry as `resources: { appearance: '<key>' }`, and that PDF as the part `resource:<key>`. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is cancelled, or expires (15 minutes). A document timestamp (`kind: 'timestamp'`) may leave `field` out, since 3.3: the engine then makes a field of no size for it, under a name no other field has, and the answer names it in `field`. That needs `doc.sign` for the document. The signature is made over the layer's own base: the upload, or the version its last signature made.
 
         Parameters
         ----------
@@ -298,6 +300,116 @@ class SignaturesClient:
         """
         _response = self._raw_client.prepare(
             doc_id, layer_name, file=file, document_password=document_password, request_options=request_options
+        )
+        return _response.data
+
+    def validation_info(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocSignaturesValidationInfoResponse:
+        """
+        Each entry is one DER object, base64. It reads the layer as it is now, so entries stored and not yet sealed by a signature are among them. Arrived in 3.3.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocSignaturesValidationInfoResponse
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+        )
+        client.doc.signatures.validation_info(
+            doc_id="docId",
+            layer_name="layerName",
+        )
+        """
+        _response = self._raw_client.validation_info(
+            doc_id, layer_name, document_password=document_password, request_options=request_options
+        )
+        return _response.data
+
+    def add_validation_info(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        certificates: typing.Optional[typing.Sequence[str]] = OMIT,
+        ocsp_responses: typing.Optional[typing.Sequence[str]] = OMIT,
+        crls: typing.Optional[typing.Sequence[str]] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocSignaturesAddValidationInfoResponse:
+        """
+        Each entry is one DER object of at most 16 MiB, base64. An entry the file already holds, byte for byte, is not stored again: `added` counts the new ones. An entry that is not one DER object fails the request and nothing is stored; the error names it, as in `certificates[1]`. The server stores what it is given and asks no certificate authority: collect the answers first. It needs `doc.sign` for the document, not for a group of fields, and is refused after a certification that allows no changes. It cannot be undone, and it leaves undo for earlier changes as it was. Arrived in 3.3.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        certificates : typing.Optional[typing.Sequence[str]]
+
+        ocsp_responses : typing.Optional[typing.Sequence[str]]
+
+        crls : typing.Optional[typing.Sequence[str]]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocSignaturesAddValidationInfoResponse
+            OK
+
+        Examples
+        --------
+        from cloudpdf import CloudPDFClient
+
+        client = CloudPDFClient(
+            token="YOUR_TOKEN",
+        )
+        client.doc.signatures.add_validation_info(
+            doc_id="docId",
+            layer_name="layerName",
+        )
+        """
+        _response = self._raw_client.add_validation_info(
+            doc_id,
+            layer_name,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            certificates=certificates,
+            ocsp_responses=ocsp_responses,
+            crls=crls,
+            request_options=request_options,
         )
         return _response.data
 
@@ -578,7 +690,7 @@ class AsyncSignaturesClient:
         request_options: typing.Optional[RequestOptions] = None,
     ) -> DocSignaturesPrepareResponse:
         """
-        Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock), naming the appearance PDF it may carry as `resources: { appearance: '<key>' }`, and that PDF as the part `resource:<key>`. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is cancelled, or expires (15 minutes). The signature is made over the layer's own base: the upload, or the version its last signature made.
+        Multipart: a JSON `body` part (field, subFilter, digest, contentsSize, signer, certify, lock), naming the appearance PDF it may carry as `resources: { appearance: '<key>' }`, and that PDF as the part `resource:<key>`. A certification (`certify.permission`) additionally requires `doc.sign.certify`. The layer is read-only until the signing completes, is cancelled, or expires (15 minutes). A document timestamp (`kind: 'timestamp'`) may leave `field` out, since 3.3: the engine then makes a field of no size for it, under a name no other field has, and the answer names it in `field`. That needs `doc.sign` for the document. The signature is made over the layer's own base: the upload, or the version its last signature made.
 
         Parameters
         ----------
@@ -622,5 +734,131 @@ class AsyncSignaturesClient:
         """
         _response = await self._raw_client.prepare(
             doc_id, layer_name, file=file, document_password=document_password, request_options=request_options
+        )
+        return _response.data
+
+    async def validation_info(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocSignaturesValidationInfoResponse:
+        """
+        Each entry is one DER object, base64. It reads the layer as it is now, so entries stored and not yet sealed by a signature are among them. Arrived in 3.3.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocSignaturesValidationInfoResponse
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+        )
+
+
+        async def main() -> None:
+            await client.doc.signatures.validation_info(
+                doc_id="docId",
+                layer_name="layerName",
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.validation_info(
+            doc_id, layer_name, document_password=document_password, request_options=request_options
+        )
+        return _response.data
+
+    async def add_validation_info(
+        self,
+        doc_id: str,
+        layer_name: str,
+        *,
+        document_password: typing.Optional[str] = None,
+        idempotency_key: typing.Optional[str] = None,
+        certificates: typing.Optional[typing.Sequence[str]] = OMIT,
+        ocsp_responses: typing.Optional[typing.Sequence[str]] = OMIT,
+        crls: typing.Optional[typing.Sequence[str]] = OMIT,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> DocSignaturesAddValidationInfoResponse:
+        """
+        Each entry is one DER object of at most 16 MiB, base64. An entry the file already holds, byte for byte, is not stored again: `added` counts the new ones. An entry that is not one DER object fails the request and nothing is stored; the error names it, as in `certificates[1]`. The server stores what it is given and asks no certificate authority: collect the answers first. It needs `doc.sign` for the document, not for a group of fields, and is refused after a certification that allows no changes. It cannot be undone, and it leaves undo for earlier changes as it was. Arrived in 3.3.
+
+        Parameters
+        ----------
+        doc_id : str
+
+        layer_name : str
+
+        document_password : typing.Optional[str]
+            Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
+
+        idempotency_key : typing.Optional[str]
+            Names the change: 1 to 255 printable ASCII characters. A retry under the same key on the same layer answers with what the first request committed, and changes nothing.
+
+        certificates : typing.Optional[typing.Sequence[str]]
+
+        ocsp_responses : typing.Optional[typing.Sequence[str]]
+
+        crls : typing.Optional[typing.Sequence[str]]
+
+        request_options : typing.Optional[RequestOptions]
+            Request-specific configuration.
+
+        Returns
+        -------
+        DocSignaturesAddValidationInfoResponse
+            OK
+
+        Examples
+        --------
+        import asyncio
+
+        from cloudpdf import AsyncCloudPDFClient
+
+        client = AsyncCloudPDFClient(
+            token="YOUR_TOKEN",
+        )
+
+
+        async def main() -> None:
+            await client.doc.signatures.add_validation_info(
+                doc_id="docId",
+                layer_name="layerName",
+            )
+
+
+        asyncio.run(main())
+        """
+        _response = await self._raw_client.add_validation_info(
+            doc_id,
+            layer_name,
+            document_password=document_password,
+            idempotency_key=idempotency_key,
+            certificates=certificates,
+            ocsp_responses=ocsp_responses,
+            crls=crls,
+            request_options=request_options,
         )
         return _response.data

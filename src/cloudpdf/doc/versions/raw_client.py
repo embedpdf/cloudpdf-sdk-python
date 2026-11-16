@@ -102,12 +102,12 @@ class RawVersionsClient:
         since_revision: typing.Optional[int] = None,
         level: typing.Optional[AnalysisVersionsRequestLevel] = None,
         until: typing.Optional[int] = None,
-        policy: typing.Optional[int] = None,
+        engine: typing.Optional[str] = None,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocVersionsAnalysisResponse]:
         """
-        Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults to the last. The same answer for every caller.
+        Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults to the last. The same answer for every caller. A version never changes, but the rules that judge it can: with `engine`, the `analysis` value of the layer's head, a settled answer is `immutable`. Without it, or with another value, the answer is this server's own, with `no-store` and the current value in `EmbedPDF-Engine`.
 
         Parameters
         ----------
@@ -125,7 +125,8 @@ class RawVersionsClient:
 
         until : typing.Optional[int]
 
-        policy : typing.Optional[int]
+        engine : typing.Optional[str]
+            The `analysis` engine value from the layer's head (`engine.analysis`): the rules the answer is judged with. With it, a settled answer is cached.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -146,7 +147,7 @@ class RawVersionsClient:
                 "since.revision": since_revision,
                 "level": level,
                 "until": until,
-                "policy": policy,
+                "engine": engine,
             },
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -351,10 +352,13 @@ class RawVersionsClient:
         layer_name: str,
         sha256: str,
         *,
+        engine: typing.Optional[str] = None,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[DocVersionsSignaturesResponse]:
         """
+        A version never changes, but what the server reads from it can: with `engine`, the `signatures` value of the layer's head, the answer is `immutable`. Without it, or with another value, the answer is this server's own, with `no-store` and the current value in `EmbedPDF-Engine`.
+
         Parameters
         ----------
         doc_id : str
@@ -362,6 +366,9 @@ class RawVersionsClient:
         layer_name : str
 
         sha256 : str
+
+        engine : typing.Optional[str]
+            The `signatures` engine value from the layer's head (`engine.signatures`): what the answer is computed with besides the file. With it, the answer is cached.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -377,6 +384,9 @@ class RawVersionsClient:
         _response = self._client_wrapper.httpx_client.request(
             f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha256)}",
             method="GET",
+            params={
+                "engine": engine,
+            },
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
             },
@@ -392,6 +402,17 @@ class RawVersionsClient:
                     ),
                 )
                 return HttpResponse(response=_response, data=_data)
+            if _response.status_code == 400:
+                raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        ErrorResponse,
+                        parse_obj_as(
+                            type_=ErrorResponse,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
             if _response.status_code == 404:
                 raise NotFoundError(
                     headers=dict(_response.headers),
@@ -654,12 +675,12 @@ class AsyncRawVersionsClient:
         since_revision: typing.Optional[int] = None,
         level: typing.Optional[AnalysisVersionsRequestLevel] = None,
         until: typing.Optional[int] = None,
-        policy: typing.Optional[int] = None,
+        engine: typing.Optional[str] = None,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocVersionsAnalysisResponse]:
         """
-        Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults to the last. The same answer for every caller.
+        Exactly one of `since.signature` / `since.revision`; `until=<revision>` defaults to the last. The same answer for every caller. A version never changes, but the rules that judge it can: with `engine`, the `analysis` value of the layer's head, a settled answer is `immutable`. Without it, or with another value, the answer is this server's own, with `no-store` and the current value in `EmbedPDF-Engine`.
 
         Parameters
         ----------
@@ -677,7 +698,8 @@ class AsyncRawVersionsClient:
 
         until : typing.Optional[int]
 
-        policy : typing.Optional[int]
+        engine : typing.Optional[str]
+            The `analysis` engine value from the layer's head (`engine.analysis`): the rules the answer is judged with. With it, a settled answer is cached.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -698,7 +720,7 @@ class AsyncRawVersionsClient:
                 "since.revision": since_revision,
                 "level": level,
                 "until": until,
-                "policy": policy,
+                "engine": engine,
             },
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
@@ -905,10 +927,13 @@ class AsyncRawVersionsClient:
         layer_name: str,
         sha256: str,
         *,
+        engine: typing.Optional[str] = None,
         document_password: typing.Optional[str] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[DocVersionsSignaturesResponse]:
         """
+        A version never changes, but what the server reads from it can: with `engine`, the `signatures` value of the layer's head, the answer is `immutable`. Without it, or with another value, the answer is this server's own, with `no-store` and the current value in `EmbedPDF-Engine`.
+
         Parameters
         ----------
         doc_id : str
@@ -916,6 +941,9 @@ class AsyncRawVersionsClient:
         layer_name : str
 
         sha256 : str
+
+        engine : typing.Optional[str]
+            The `signatures` engine value from the layer's head (`engine.signatures`): what the answer is computed with besides the file. With it, the answer is cached.
 
         document_password : typing.Optional[str]
             Base64-encoded password for an encrypted document. Valid only with the API token (403 anywhere else). An encrypted document answers 422 DocPasswordRequired when the header is absent. Viewer doc JWTs use the SDK password-session flow instead.
@@ -931,6 +959,9 @@ class AsyncRawVersionsClient:
         _response = await self._client_wrapper.httpx_client.request(
             f"v1/docs/{encode_path_param(doc_id)}/layers/{encode_path_param(layer_name)}/versions/signatures/{encode_path_param(sha256)}",
             method="GET",
+            params={
+                "engine": engine,
+            },
             headers={
                 "X-Document-Password": str(document_password) if document_password is not None else None,
             },
@@ -946,6 +977,17 @@ class AsyncRawVersionsClient:
                     ),
                 )
                 return AsyncHttpResponse(response=_response, data=_data)
+            if _response.status_code == 400:
+                raise BadRequestError(
+                    headers=dict(_response.headers),
+                    body=typing.cast(
+                        ErrorResponse,
+                        parse_obj_as(
+                            type_=ErrorResponse,  # type: ignore
+                            object_=_response.json(),
+                        ),
+                    ),
+                )
             if _response.status_code == 404:
                 raise NotFoundError(
                     headers=dict(_response.headers),
