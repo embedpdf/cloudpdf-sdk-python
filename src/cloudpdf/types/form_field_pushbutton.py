@@ -37,6 +37,7 @@ class FormFieldPushbutton(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     created_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="createdBy"), pydantic.Field(alias="createdBy")
     ] = None

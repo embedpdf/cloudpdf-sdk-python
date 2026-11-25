@@ -29,6 +29,7 @@ class FormFieldDraftListbox(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     actions: typing.Optional[FieldActionsPatch] = None
     widgets: typing.Optional[typing.List[WidgetPlacement]] = None
     multi_select: typing_extensions.Annotated[

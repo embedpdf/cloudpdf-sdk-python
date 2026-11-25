@@ -13,6 +13,7 @@ from .form_field_checkbox_origin import FormFieldCheckboxOrigin
 from .form_field_checkbox_widgets_item import FormFieldCheckboxWidgetsItem
 from .form_field_combobox_options_item import FormFieldComboboxOptionsItem
 from .form_field_combobox_origin import FormFieldComboboxOrigin
+from .form_field_format import FormFieldFormat
 from .form_field_listbox_options_item import FormFieldListboxOptionsItem
 from .form_field_listbox_origin import FormFieldListboxOrigin
 from .form_field_pushbutton_origin import FormFieldPushbuttonOrigin
@@ -55,6 +56,7 @@ class FormField_Text(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     created_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="createdBy"), pydantic.Field(alias="createdBy")
     ] = None
@@ -84,6 +86,7 @@ class FormField_Text(UniversalBaseModel):
     multiline: bool
     password: bool
     comb: bool
+    format: typing.Optional[FormFieldFormat] = None
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
@@ -123,6 +126,7 @@ class FormField_Checkbox(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     created_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="createdBy"), pydantic.Field(alias="createdBy")
     ] = None
@@ -185,6 +189,7 @@ class FormField_Radio(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     created_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="createdBy"), pydantic.Field(alias="createdBy")
     ] = None
@@ -250,6 +255,7 @@ class FormField_Combobox(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     created_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="createdBy"), pydantic.Field(alias="createdBy")
     ] = None
@@ -275,6 +281,7 @@ class FormField_Combobox(UniversalBaseModel):
     ]
     edit: bool
     options: typing.List[FormFieldComboboxOptionsItem]
+    format: typing.Optional[FormFieldFormat] = None
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
@@ -314,6 +321,7 @@ class FormField_Listbox(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     created_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="createdBy"), pydantic.Field(alias="createdBy")
     ] = None
@@ -383,6 +391,7 @@ class FormField_Pushbutton(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     created_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="createdBy"), pydantic.Field(alias="createdBy")
     ] = None
@@ -441,6 +450,7 @@ class FormField_Signature(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     created_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="createdBy"), pydantic.Field(alias="createdBy")
     ] = None
@@ -499,6 +509,7 @@ class FormField_Unknown(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     created_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="createdBy"), pydantic.Field(alias="createdBy")
     ] = None
