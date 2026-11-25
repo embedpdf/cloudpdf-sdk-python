@@ -7,6 +7,7 @@ import typing_extensions
 from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
 from .field_actions_patch import FieldActionsPatch
+from .form_field_format_writable import FormFieldFormatWritable
 from .form_field_patch_default_value import FormFieldPatchDefaultValue
 from .form_field_patch_kind import FormFieldPatchKind
 from .form_field_patch_options_item import FormFieldPatchOptionsItem
@@ -30,6 +31,7 @@ class FormFieldPatch(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     actions: typing.Optional[FieldActionsPatch] = None
     kind: typing.Optional[FormFieldPatchKind] = None
     default_value: typing_extensions.Annotated[
@@ -54,6 +56,7 @@ class FormFieldPatch(UniversalBaseModel):
         typing.Optional[bool], FieldMetadata(alias="multiSelect"), pydantic.Field(alias="multiSelect")
     ] = None
     options: typing.Optional[typing.List[FormFieldPatchOptionsItem]] = None
+    format: typing.Optional[FormFieldFormatWritable] = None
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

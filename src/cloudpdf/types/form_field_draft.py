@@ -11,6 +11,7 @@ from ..core.serialization import FieldMetadata
 from .field_actions_patch import FieldActionsPatch
 from .form_field_draft_combobox_options_item import FormFieldDraftComboboxOptionsItem
 from .form_field_draft_listbox_options_item import FormFieldDraftListboxOptionsItem
+from .form_field_format_writable import FormFieldFormatWritable
 from .widget_placement import WidgetPlacement
 
 
@@ -33,6 +34,7 @@ class FormFieldDraft_Text(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     actions: typing.Optional[FieldActionsPatch] = None
     widgets: typing.Optional[typing.List[WidgetPlacement]] = None
     default_value: typing_extensions.Annotated[
@@ -44,6 +46,7 @@ class FormFieldDraft_Text(UniversalBaseModel):
     multiline: typing.Optional[bool] = None
     password: typing.Optional[bool] = None
     comb: typing.Optional[bool] = None
+    format: typing.Optional[FormFieldFormatWritable] = None
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
@@ -74,6 +77,7 @@ class FormFieldDraft_Checkbox(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     actions: typing.Optional[FieldActionsPatch] = None
     widgets: typing.Optional[typing.List[WidgetPlacement]] = None
 
@@ -106,6 +110,7 @@ class FormFieldDraft_Radio(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     actions: typing.Optional[FieldActionsPatch] = None
     widgets: typing.Optional[typing.List[WidgetPlacement]] = None
     radios_in_unison: typing_extensions.Annotated[
@@ -144,6 +149,7 @@ class FormFieldDraft_Combobox(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     actions: typing.Optional[FieldActionsPatch] = None
     widgets: typing.Optional[typing.List[WidgetPlacement]] = None
     edit: typing.Optional[bool] = None
@@ -151,6 +157,7 @@ class FormFieldDraft_Combobox(UniversalBaseModel):
     default_value: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="defaultValue"), pydantic.Field(alias="defaultValue")
     ] = None
+    format: typing.Optional[FormFieldFormatWritable] = None
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
@@ -181,6 +188,7 @@ class FormFieldDraft_Listbox(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     actions: typing.Optional[FieldActionsPatch] = None
     widgets: typing.Optional[typing.List[WidgetPlacement]] = None
     multi_select: typing_extensions.Annotated[
@@ -220,6 +228,7 @@ class FormFieldDraft_Pushbutton(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     actions: typing.Optional[FieldActionsPatch] = None
     widgets: typing.Optional[typing.List[WidgetPlacement]] = None
 
@@ -252,6 +261,7 @@ class FormFieldDraft_Signature(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     actions: typing.Optional[FieldActionsPatch] = None
     widgets: typing.Optional[typing.List[WidgetPlacement]] = None
 

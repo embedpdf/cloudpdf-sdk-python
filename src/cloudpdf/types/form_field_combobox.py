@@ -9,6 +9,7 @@ from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
 from .form_field_combobox_options_item import FormFieldComboboxOptionsItem
 from .form_field_combobox_origin import FormFieldComboboxOrigin
+from .form_field_format import FormFieldFormat
 from .form_field_ref import FormFieldRef
 from .form_value_entry import FormValueEntry
 from .form_widget import FormWidget
@@ -38,6 +39,7 @@ class FormFieldCombobox(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     created_by: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="createdBy"), pydantic.Field(alias="createdBy")
     ] = None
@@ -63,6 +65,10 @@ class FormFieldCombobox(UniversalBaseModel):
     ]
     edit: bool
     options: typing.List[FormFieldComboboxOptionsItem]
+    format: typing.Optional[FormFieldFormat] = pydantic.Field(default=None)
+    """
+    The shape a text field's or a dropdown's value has, by its `kind`: a date or a time with the pattern it is shown in, or `other` for a format script the engine does not recognise. A newer server can add kinds: read one your client doesn't know as `other`.
+    """
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2

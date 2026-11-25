@@ -28,6 +28,7 @@ class FormFieldDraftRadio(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     actions: typing.Optional[FieldActionsPatch] = None
     widgets: typing.Optional[typing.List[WidgetPlacement]] = None
     radios_in_unison: typing_extensions.Annotated[

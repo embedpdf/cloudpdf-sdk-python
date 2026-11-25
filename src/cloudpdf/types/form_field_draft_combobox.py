@@ -8,6 +8,7 @@ from ..core.pydantic_utilities import IS_PYDANTIC_V2, UniversalBaseModel
 from ..core.serialization import FieldMetadata
 from .field_actions_patch import FieldActionsPatch
 from .form_field_draft_combobox_options_item import FormFieldDraftComboboxOptionsItem
+from .form_field_format_writable import FormFieldFormatWritable
 from .widget_placement import WidgetPlacement
 
 
@@ -29,6 +30,7 @@ class FormFieldDraftCombobox(UniversalBaseModel):
     group_id: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="groupId"), pydantic.Field(alias="groupId")
     ] = None
+    purpose: typing.Optional[str] = None
     actions: typing.Optional[FieldActionsPatch] = None
     widgets: typing.Optional[typing.List[WidgetPlacement]] = None
     edit: typing.Optional[bool] = None
@@ -36,6 +38,7 @@ class FormFieldDraftCombobox(UniversalBaseModel):
     default_value: typing_extensions.Annotated[
         typing.Optional[str], FieldMetadata(alias="defaultValue"), pydantic.Field(alias="defaultValue")
     ] = None
+    format: typing.Optional[FormFieldFormatWritable] = None
 
     if IS_PYDANTIC_V2:
         model_config: typing.ClassVar[pydantic.ConfigDict] = pydantic.ConfigDict(extra="allow", frozen=True)  # type: ignore # Pydantic v2
